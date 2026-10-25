@@ -1,0 +1,2801 @@
+{
+  "project": "Iranian Veterinary Plumb's Clinical Formulary & Decision Support System",
+  "total_chapters": 14,
+  "total_active_drugs": 32,
+  "chapters": [
+    {
+      "id": "ch01_anesthesia_sedation",
+      "chapter_no": 1,
+      "title_fa": "فصل ۱: داروهای بیهوشی، آرام‌بخش و پیش‌بیهوشی",
+      "title_en": "Anesthetics, Sedatives & Premedications",
+      "icon": "fa-syringe",
+      "color": "#8b5cf6",
+      "description": "بیهوش‌کننده‌های تزریقی و استنشاقی، سداتیوها، شل‌کننده‌های عضلانی و رِوِرسال‌ها (آنتاگونیست‌ها)",
+      "priority": "فوق‌العاده حیاتی (بالاترین فراوانی در جراحی)",
+      "completed_count": 6,
+      "completed_drugs": [
+        {
+          "id": "ketamine",
+          "name": "Ketamine HCl",
+          "chapter": "ch01_anesthesia_sedation"
+        },
+        {
+          "id": "xylazine",
+          "name": "Xylazine HCl",
+          "chapter": "ch01_anesthesia_sedation"
+        },
+        {
+          "id": "acepromazine",
+          "name": "Acepromazine Maleate",
+          "chapter": "ch01_anesthesia_sedation"
+        },
+        {
+          "id": "propofol",
+          "name": "Propofol",
+          "chapter": "ch01_anesthesia_sedation"
+        },
+        {
+          "id": "dexmedetomidine",
+          "name": "Dexmedetomidine (Dexdomitor)",
+          "chapter": "ch01_anesthesia_sedation"
+        },
+        {
+          "id": "atipamezole",
+          "name": "Atipamezole (Antisedan)",
+          "chapter": "ch01_anesthesia_sedation"
+        }
+      ],
+      "matched_monographs_count": 24,
+      "sample_monographs": [
+        {
+          "name": "Acepromazine",
+          "printed_page": 2,
+          "pdf_page_1based": 29
+        },
+        {
+          "name": "Alfaxalone",
+          "printed_page": 29,
+          "pdf_page_1based": 56
+        },
+        {
+          "name": "Atipamezole",
+          "printed_page": 106,
+          "pdf_page_1based": 133
+        },
+        {
+          "name": "Detomidine",
+          "printed_page": 358,
+          "pdf_page_1based": 385
+        },
+        {
+          "name": "Dexmedetomidine",
+          "printed_page": 367,
+          "pdf_page_1based": 394
+        },
+        {
+          "name": "Diazepam",
+          "printed_page": 378,
+          "pdf_page_1based": 405
+        },
+        {
+          "name": "Etomidate",
+          "printed_page": 491,
+          "pdf_page_1based": 518
+        },
+        {
+          "name": "Euthanasia Agents with Pentobarbital",
+          "printed_page": 493,
+          "pdf_page_1based": 520
+        },
+        {
+          "name": "Flumazenil",
+          "printed_page": 537,
+          "pdf_page_1based": 564
+        },
+        {
+          "name": "Guaifenesin, Intravenous",
+          "printed_page": 598,
+          "pdf_page_1based": 625
+        },
+        {
+          "name": "Isoflurane",
+          "printed_page": 695,
+          "pdf_page_1based": 722
+        },
+        {
+          "name": "Ketamine",
+          "printed_page": 717,
+          "pdf_page_1based": 744
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Acepromazine",
+          "printed_page": 2,
+          "pdf_page_1based": 29
+        },
+        {
+          "name": "Alfaxalone",
+          "printed_page": 29,
+          "pdf_page_1based": 56
+        },
+        {
+          "name": "Atipamezole",
+          "printed_page": 106,
+          "pdf_page_1based": 133
+        },
+        {
+          "name": "Detomidine",
+          "printed_page": 358,
+          "pdf_page_1based": 385
+        },
+        {
+          "name": "Dexmedetomidine",
+          "printed_page": 367,
+          "pdf_page_1based": 394
+        },
+        {
+          "name": "Diazepam",
+          "printed_page": 378,
+          "pdf_page_1based": 405
+        },
+        {
+          "name": "Etomidate",
+          "printed_page": 491,
+          "pdf_page_1based": 518
+        },
+        {
+          "name": "Euthanasia Agents with Pentobarbital",
+          "printed_page": 493,
+          "pdf_page_1based": 520
+        },
+        {
+          "name": "Flumazenil",
+          "printed_page": 537,
+          "pdf_page_1based": 564
+        },
+        {
+          "name": "Guaifenesin, Intravenous",
+          "printed_page": 598,
+          "pdf_page_1based": 625
+        },
+        {
+          "name": "Isoflurane",
+          "printed_page": 695,
+          "pdf_page_1based": 722
+        },
+        {
+          "name": "Ketamine",
+          "printed_page": 717,
+          "pdf_page_1based": 744
+        },
+        {
+          "name": "Medetomidine",
+          "printed_page": 807,
+          "pdf_page_1based": 834
+        },
+        {
+          "name": "Medetomidine/Vatinoxan",
+          "printed_page": 811,
+          "pdf_page_1based": 838
+        },
+        {
+          "name": "Midazolam",
+          "printed_page": 880,
+          "pdf_page_1based": 907
+        },
+        {
+          "name": "Naloxone",
+          "printed_page": 924,
+          "pdf_page_1based": 951
+        },
+        {
+          "name": "Pentobarbital",
+          "printed_page": 998,
+          "pdf_page_1based": 1025
+        },
+        {
+          "name": "Propofol",
+          "printed_page": 1080,
+          "pdf_page_1based": 1107
+        },
+        {
+          "name": "Romifidine",
+          "printed_page": 1129,
+          "pdf_page_1based": 1156
+        },
+        {
+          "name": "Sevoflurane",
+          "printed_page": 1156,
+          "pdf_page_1based": 1183
+        },
+        {
+          "name": "Thiopental",
+          "printed_page": 1225,
+          "pdf_page_1based": 1252
+        },
+        {
+          "name": "Tiletamine/Zolazepam",
+          "printed_page": 1236,
+          "pdf_page_1based": 1263
+        },
+        {
+          "name": "Xylazine",
+          "printed_page": 1319,
+          "pdf_page_1based": 1346
+        },
+        {
+          "name": "Yohimbine",
+          "printed_page": 1324,
+          "pdf_page_1based": 1351
+        }
+      ]
+    },
+    {
+      "id": "ch02_emergency_cpr",
+      "chapter_no": 2,
+      "title_fa": "فصل ۲: اورژانس، احیای قلبی-ریوی (CPR) و شوک",
+      "title_en": "Emergency, CPR & Critical Care",
+      "icon": "fa-heart-pulse",
+      "color": "#ef4444",
+      "description": "داروهای ترالی احیا، گشادکننده‌های عروق کرونری، اینوتروپ‌های فوری و تثبیت‌کننده‌های غشای سلولی",
+      "priority": "کد قرمز (زمان اقدام زیر ۳۰ ثانیه)",
+      "completed_count": 3,
+      "completed_drugs": [
+        {
+          "id": "atropine",
+          "name": "Atropine Sulfate",
+          "chapter": "ch02_emergency_cpr"
+        },
+        {
+          "id": "epinephrine",
+          "name": "Epinephrine (Adrenaline)",
+          "chapter": "ch02_emergency_cpr"
+        },
+        {
+          "id": "lidocaine",
+          "name": "Lidocaine HCl 2%",
+          "chapter": "ch02_emergency_cpr"
+        }
+      ],
+      "matched_monographs_count": 15,
+      "sample_monographs": [
+        {
+          "name": "Atropine",
+          "printed_page": 112,
+          "pdf_page_1based": 139
+        },
+        {
+          "name": "Dextrose 50% Injection",
+          "printed_page": 376,
+          "pdf_page_1based": 403
+        },
+        {
+          "name": "Diphenoxylate/Atropine",
+          "printed_page": 412,
+          "pdf_page_1based": 439
+        },
+        {
+          "name": "Dobutamine",
+          "printed_page": 416,
+          "pdf_page_1based": 443
+        },
+        {
+          "name": "Dopamine",
+          "printed_page": 422,
+          "pdf_page_1based": 449
+        },
+        {
+          "name": "Epinephrine",
+          "printed_page": 457,
+          "pdf_page_1based": 484
+        },
+        {
+          "name": "Glycopyrrolate",
+          "printed_page": 588,
+          "pdf_page_1based": 615
+        },
+        {
+          "name": "Lidocaine, Local Anesthetic",
+          "printed_page": 752,
+          "pdf_page_1based": 779
+        },
+        {
+          "name": "Lidocaine (Intravenous; Systemic)",
+          "printed_page": 756,
+          "pdf_page_1based": 783
+        },
+        {
+          "name": "Norepinephrine",
+          "printed_page": 943,
+          "pdf_page_1based": 970
+        },
+        {
+          "name": "Sodium Bicarbonate",
+          "printed_page": 1161,
+          "pdf_page_1based": 1188
+        },
+        {
+          "name": "Vasopressin",
+          "printed_page": 1293,
+          "pdf_page_1based": 1320
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Atropine",
+          "printed_page": 112,
+          "pdf_page_1based": 139
+        },
+        {
+          "name": "Dextrose 50% Injection",
+          "printed_page": 376,
+          "pdf_page_1based": 403
+        },
+        {
+          "name": "Diphenoxylate/Atropine",
+          "printed_page": 412,
+          "pdf_page_1based": 439
+        },
+        {
+          "name": "Dobutamine",
+          "printed_page": 416,
+          "pdf_page_1based": 443
+        },
+        {
+          "name": "Dopamine",
+          "printed_page": 422,
+          "pdf_page_1based": 449
+        },
+        {
+          "name": "Epinephrine",
+          "printed_page": 457,
+          "pdf_page_1based": 484
+        },
+        {
+          "name": "Glycopyrrolate",
+          "printed_page": 588,
+          "pdf_page_1based": 615
+        },
+        {
+          "name": "Lidocaine, Local Anesthetic",
+          "printed_page": 752,
+          "pdf_page_1based": 779
+        },
+        {
+          "name": "Lidocaine (Intravenous; Systemic)",
+          "printed_page": 756,
+          "pdf_page_1based": 783
+        },
+        {
+          "name": "Norepinephrine",
+          "printed_page": 943,
+          "pdf_page_1based": 970
+        },
+        {
+          "name": "Sodium Bicarbonate",
+          "printed_page": 1161,
+          "pdf_page_1based": 1188
+        },
+        {
+          "name": "Vasopressin",
+          "printed_page": 1293,
+          "pdf_page_1based": 1320
+        },
+        {
+          "name": "Atropine Ophthalmic",
+          "printed_page": 1343,
+          "pdf_page_1based": 1370
+        },
+        {
+          "name": "Lidocaine Ophthalmic",
+          "printed_page": 1379,
+          "pdf_page_1based": 1406
+        },
+        {
+          "name": "Lidocaine/Lidocaine Combinations, Topical",
+          "printed_page": 1423,
+          "pdf_page_1based": 1450
+        }
+      ]
+    },
+    {
+      "id": "ch03_analgesia_nsaid",
+      "chapter_no": 3,
+      "title_fa": "فصل ۳: ضددردها، ضدالتهاب‌ها (NSAIDs) و مسکن‌ها",
+      "title_en": "Analgesics, NSAIDs & Pain Management",
+      "icon": "fa-pills",
+      "color": "#f59e0b",
+      "description": "مسکن‌های غیراستروئیدی، اپیوئیدها، داروهای درد مزمن و مدیریت درد مولتی‌مودال",
+      "priority": "روزمره و بسیار پرکاربرد در تمام گونه‌ها",
+      "completed_count": 5,
+      "completed_drugs": [
+        {
+          "id": "meloxicam",
+          "name": "Meloxicam",
+          "chapter": "ch03_analgesia_nsaid"
+        },
+        {
+          "id": "flunixin",
+          "name": "Flunixin Meglumine",
+          "chapter": "ch03_analgesia_nsaid"
+        },
+        {
+          "id": "tramadol",
+          "name": "Tramadol HCl",
+          "chapter": "ch03_analgesia_nsaid"
+        },
+        {
+          "id": "gabapentin",
+          "name": "Gabapentin",
+          "chapter": "ch03_analgesia_nsaid"
+        },
+        {
+          "id": "carprofen",
+          "name": "Carprofen (Rimadyl)",
+          "chapter": "ch03_analgesia_nsaid"
+        }
+      ],
+      "matched_monographs_count": 26,
+      "sample_monographs": [
+        {
+          "name": "Acetaminophen",
+          "printed_page": 7,
+          "pdf_page_1based": 34
+        },
+        {
+          "name": "Amantadine",
+          "printed_page": 45,
+          "pdf_page_1based": 72
+        },
+        {
+          "name": "Apomorphine",
+          "printed_page": 92,
+          "pdf_page_1based": 119
+        },
+        {
+          "name": "Buprenorphine",
+          "printed_page": 150,
+          "pdf_page_1based": 177
+        },
+        {
+          "name": "Carprofen",
+          "printed_page": 190,
+          "pdf_page_1based": 217
+        },
+        {
+          "name": "Codeine",
+          "printed_page": 307,
+          "pdf_page_1based": 334
+        },
+        {
+          "name": "Dipyrone",
+          "printed_page": 413,
+          "pdf_page_1based": 440
+        },
+        {
+          "name": "Fentanyl, Injection",
+          "printed_page": 512,
+          "pdf_page_1based": 539
+        },
+        {
+          "name": "Fentanyl, Transdermal Patch",
+          "printed_page": 515,
+          "pdf_page_1based": 542
+        },
+        {
+          "name": "Firocoxib",
+          "printed_page": 525,
+          "pdf_page_1based": 552
+        },
+        {
+          "name": "Flunixin",
+          "printed_page": 541,
+          "pdf_page_1based": 568
+        },
+        {
+          "name": "Gabapentin",
+          "printed_page": 568,
+          "pdf_page_1based": 595
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Acetaminophen",
+          "printed_page": 7,
+          "pdf_page_1based": 34
+        },
+        {
+          "name": "Amantadine",
+          "printed_page": 45,
+          "pdf_page_1based": 72
+        },
+        {
+          "name": "Apomorphine",
+          "printed_page": 92,
+          "pdf_page_1based": 119
+        },
+        {
+          "name": "Buprenorphine",
+          "printed_page": 150,
+          "pdf_page_1based": 177
+        },
+        {
+          "name": "Carprofen",
+          "printed_page": 190,
+          "pdf_page_1based": 217
+        },
+        {
+          "name": "Codeine",
+          "printed_page": 307,
+          "pdf_page_1based": 334
+        },
+        {
+          "name": "Dipyrone",
+          "printed_page": 413,
+          "pdf_page_1based": 440
+        },
+        {
+          "name": "Fentanyl, Injection",
+          "printed_page": 512,
+          "pdf_page_1based": 539
+        },
+        {
+          "name": "Fentanyl, Transdermal Patch",
+          "printed_page": 515,
+          "pdf_page_1based": 542
+        },
+        {
+          "name": "Firocoxib",
+          "printed_page": 525,
+          "pdf_page_1based": 552
+        },
+        {
+          "name": "Flunixin",
+          "printed_page": 541,
+          "pdf_page_1based": 568
+        },
+        {
+          "name": "Gabapentin",
+          "printed_page": 568,
+          "pdf_page_1based": 595
+        },
+        {
+          "name": "Grapiprant",
+          "printed_page": 594,
+          "pdf_page_1based": 621
+        },
+        {
+          "name": "Hydromorphone",
+          "printed_page": 619,
+          "pdf_page_1based": 646
+        },
+        {
+          "name": "Ketoprofen",
+          "printed_page": 729,
+          "pdf_page_1based": 756
+        },
+        {
+          "name": "Ketorolac",
+          "printed_page": 732,
+          "pdf_page_1based": 759
+        },
+        {
+          "name": "Meloxicam",
+          "printed_page": 825,
+          "pdf_page_1based": 852
+        },
+        {
+          "name": "Methadone",
+          "printed_page": 842,
+          "pdf_page_1based": 869
+        },
+        {
+          "name": "Morphine",
+          "printed_page": 907,
+          "pdf_page_1based": 934
+        },
+        {
+          "name": "Phenylbutazone",
+          "printed_page": 1013,
+          "pdf_page_1based": 1040
+        },
+        {
+          "name": "Pregabalin",
+          "printed_page": 1064,
+          "pdf_page_1based": 1091
+        },
+        {
+          "name": "Robenacoxib",
+          "printed_page": 1124,
+          "pdf_page_1based": 1151
+        },
+        {
+          "name": "Tolfenamic Acid",
+          "printed_page": 1254,
+          "pdf_page_1based": 1281
+        },
+        {
+          "name": "Tramadol",
+          "printed_page": 1261,
+          "pdf_page_1based": 1288
+        },
+        {
+          "name": "Ketorolac Ophthalmic",
+          "printed_page": 1375,
+          "pdf_page_1based": 1402
+        },
+        {
+          "name": "Morphine Ophthalmic",
+          "printed_page": 1384,
+          "pdf_page_1based": 1411
+        }
+      ]
+    },
+    {
+      "id": "ch04_antimicrobial",
+      "chapter_no": 4,
+      "title_fa": "فصل ۴: آنتی‌بیوتیک‌ها، ضدمیکروب‌ها و ضدقارچ‌ها",
+      "title_en": "Antimicrobials, Antibiotics & Antifungals",
+      "icon": "fa-shield-virus",
+      "color": "#10b981",
+      "description": "بتالاکتام‌ها، تتراسایکلین‌ها، فلوروکینولون‌ها، ماکرولیدها، آمینوگلیکوزیدها، سولفانامیدها و ضدقارچ‌ها",
+      "priority": "بزرگ‌ترین حجم مونوگراف‌ها با قوانین دقیق دوره پرهیز",
+      "completed_count": 4,
+      "completed_drugs": [
+        {
+          "id": "amoxicillin_clavulanate",
+          "name": "Amoxicillin / Clavulanate",
+          "chapter": "ch04_antimicrobial"
+        },
+        {
+          "id": "oxytetracycline",
+          "name": "Oxytetracycline HCl / Base",
+          "chapter": "ch04_antimicrobial"
+        },
+        {
+          "id": "enrofloxacin",
+          "name": "Enrofloxacin",
+          "chapter": "ch04_antimicrobial"
+        },
+        {
+          "id": "metronidazole",
+          "name": "Metronidazole (Flagyl)",
+          "chapter": "ch04_antimicrobial"
+        }
+      ],
+      "matched_monographs_count": 67,
+      "sample_monographs": [
+        {
+          "name": "Amikacin, Systemic",
+          "printed_page": 47,
+          "pdf_page_1based": 74
+        },
+        {
+          "name": "Amoxicillin",
+          "printed_page": 67,
+          "pdf_page_1based": 94
+        },
+        {
+          "name": "Amoxicillin/Clavulanate",
+          "printed_page": 70,
+          "pdf_page_1based": 97
+        },
+        {
+          "name": "Amphotericin B",
+          "printed_page": 74,
+          "pdf_page_1based": 101
+        },
+        {
+          "name": "Ampicillin",
+          "printed_page": 78,
+          "pdf_page_1based": 105
+        },
+        {
+          "name": "Ampicillin/Sulbactam",
+          "printed_page": 82,
+          "pdf_page_1based": 109
+        },
+        {
+          "name": "Azithromycin",
+          "printed_page": 120,
+          "pdf_page_1based": 147
+        },
+        {
+          "name": "Cefazolin",
+          "printed_page": 201,
+          "pdf_page_1based": 228
+        },
+        {
+          "name": "Cefovecin",
+          "printed_page": 210,
+          "pdf_page_1based": 237
+        },
+        {
+          "name": "Cefpodoxime",
+          "printed_page": 214,
+          "pdf_page_1based": 241
+        },
+        {
+          "name": "Ceftiofur Crystalline Free Acid",
+          "printed_page": 221,
+          "pdf_page_1based": 248
+        },
+        {
+          "name": "Ceftiofur HCl",
+          "printed_page": 224,
+          "pdf_page_1based": 251
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Amikacin, Systemic",
+          "printed_page": 47,
+          "pdf_page_1based": 74
+        },
+        {
+          "name": "Amoxicillin",
+          "printed_page": 67,
+          "pdf_page_1based": 94
+        },
+        {
+          "name": "Amoxicillin/Clavulanate",
+          "printed_page": 70,
+          "pdf_page_1based": 97
+        },
+        {
+          "name": "Amphotericin B",
+          "printed_page": 74,
+          "pdf_page_1based": 101
+        },
+        {
+          "name": "Ampicillin",
+          "printed_page": 78,
+          "pdf_page_1based": 105
+        },
+        {
+          "name": "Ampicillin/Sulbactam",
+          "printed_page": 82,
+          "pdf_page_1based": 109
+        },
+        {
+          "name": "Azithromycin",
+          "printed_page": 120,
+          "pdf_page_1based": 147
+        },
+        {
+          "name": "Cefazolin",
+          "printed_page": 201,
+          "pdf_page_1based": 228
+        },
+        {
+          "name": "Cefovecin",
+          "printed_page": 210,
+          "pdf_page_1based": 237
+        },
+        {
+          "name": "Cefpodoxime",
+          "printed_page": 214,
+          "pdf_page_1based": 241
+        },
+        {
+          "name": "Ceftiofur Crystalline Free Acid",
+          "printed_page": 221,
+          "pdf_page_1based": 248
+        },
+        {
+          "name": "Ceftiofur HCl",
+          "printed_page": 224,
+          "pdf_page_1based": 251
+        },
+        {
+          "name": "Ceftiofur Sodium",
+          "printed_page": 227,
+          "pdf_page_1based": 254
+        },
+        {
+          "name": "Ceftriaxone",
+          "printed_page": 230,
+          "pdf_page_1based": 257
+        },
+        {
+          "name": "Cephalexin",
+          "printed_page": 234,
+          "pdf_page_1based": 261
+        },
+        {
+          "name": "Chloramphenicol",
+          "printed_page": 245,
+          "pdf_page_1based": 272
+        },
+        {
+          "name": "Chlortetracycline",
+          "printed_page": 255,
+          "pdf_page_1based": 282
+        },
+        {
+          "name": "Ciprofloxacin",
+          "printed_page": 265,
+          "pdf_page_1based": 292
+        },
+        {
+          "name": "Clarithromycin",
+          "printed_page": 276,
+          "pdf_page_1based": 303
+        },
+        {
+          "name": "Clindamycin",
+          "printed_page": 282,
+          "pdf_page_1based": 309
+        },
+        {
+          "name": "Doxycycline",
+          "printed_page": 433,
+          "pdf_page_1based": 460
+        },
+        {
+          "name": "Enrofloxacin",
+          "printed_page": 450,
+          "pdf_page_1based": 477
+        },
+        {
+          "name": "Erythromycin",
+          "printed_page": 473,
+          "pdf_page_1based": 500
+        },
+        {
+          "name": "Florfenicol",
+          "printed_page": 528,
+          "pdf_page_1based": 555
+        },
+        {
+          "name": "Fluconazole",
+          "printed_page": 530,
+          "pdf_page_1based": 557
+        },
+        {
+          "name": "Gamithromycin",
+          "printed_page": 571,
+          "pdf_page_1based": 598
+        },
+        {
+          "name": "Gentamicin, Systemic",
+          "printed_page": 576,
+          "pdf_page_1based": 603
+        },
+        {
+          "name": "Itraconazole",
+          "printed_page": 704,
+          "pdf_page_1based": 731
+        },
+        {
+          "name": "Ketoconazole, Systemic",
+          "printed_page": 725,
+          "pdf_page_1based": 752
+        },
+        {
+          "name": "Lincomycin",
+          "printed_page": 760,
+          "pdf_page_1based": 787
+        },
+        {
+          "name": "Marbofloxacin",
+          "printed_page": 796,
+          "pdf_page_1based": 823
+        },
+        {
+          "name": "Metronidazole",
+          "printed_page": 873,
+          "pdf_page_1based": 900
+        },
+        {
+          "name": "Neomycin",
+          "printed_page": 928,
+          "pdf_page_1based": 955
+        },
+        {
+          "name": "Nystatin",
+          "printed_page": 946,
+          "pdf_page_1based": 973
+        },
+        {
+          "name": "Orbifloxacin",
+          "printed_page": 958,
+          "pdf_page_1based": 985
+        },
+        {
+          "name": "Oxytetracycline",
+          "printed_page": 972,
+          "pdf_page_1based": 999
+        },
+        {
+          "name": "Penicillin G",
+          "printed_page": 992,
+          "pdf_page_1based": 1019
+        },
+        {
+          "name": "Penicillin V",
+          "printed_page": 996,
+          "pdf_page_1based": 1023
+        },
+        {
+          "name": "Pradofloxacin",
+          "printed_page": 1048,
+          "pdf_page_1based": 1075
+        },
+        {
+          "name": "Pyrimethamine/Sulfadiazine",
+          "printed_page": 1101,
+          "pdf_page_1based": 1128
+        },
+        {
+          "name": "Sulfa-/Trimethoprim",
+          "printed_page": 1193,
+          "pdf_page_1based": 1220
+        },
+        {
+          "name": "Terbinafine",
+          "printed_page": 1210,
+          "pdf_page_1based": 1237
+        },
+        {
+          "name": "Tetracycline",
+          "printed_page": 1217,
+          "pdf_page_1based": 1244
+        },
+        {
+          "name": "Tilmicosin",
+          "printed_page": 1240,
+          "pdf_page_1based": 1267
+        },
+        {
+          "name": "Tobramycin, Systemic",
+          "printed_page": 1247,
+          "pdf_page_1based": 1274
+        },
+        {
+          "name": "Tulathromycin",
+          "printed_page": 1282,
+          "pdf_page_1based": 1309
+        },
+        {
+          "name": "Tylosin",
+          "printed_page": 1284,
+          "pdf_page_1based": 1311
+        },
+        {
+          "name": "Voriconazole",
+          "printed_page": 1314,
+          "pdf_page_1based": 1341
+        },
+        {
+          "name": "Amikacin Ophthalmic",
+          "printed_page": 1341,
+          "pdf_page_1based": 1368
+        },
+        {
+          "name": "Amphotericin B Ophthalmic",
+          "printed_page": 1342,
+          "pdf_page_1based": 1369
+        },
+        {
+          "name": "Azithromycin Ophthalmic",
+          "printed_page": 1345,
+          "pdf_page_1based": 1372
+        },
+        {
+          "name": "Chloramphenicol Ophthalmic",
+          "printed_page": 1353,
+          "pdf_page_1based": 1380
+        },
+        {
+          "name": "Ciprofloxacin Ophthalmic",
+          "printed_page": 1354,
+          "pdf_page_1based": 1381
+        },
+        {
+          "name": "Erythromycin Ophthalmic",
+          "printed_page": 1364,
+          "pdf_page_1based": 1391
+        },
+        {
+          "name": "Gentamicin Ophthalmic",
+          "printed_page": 1370,
+          "pdf_page_1based": 1397
+        },
+        {
+          "name": "Itraconazole Ophthalmic",
+          "printed_page": 1374,
+          "pdf_page_1based": 1401
+        },
+        {
+          "name": "Oxytetracycline/Polymyxin B Ophthalmic",
+          "printed_page": 1392,
+          "pdf_page_1based": 1419
+        },
+        {
+          "name": "Silver Sulfadiazine (SSD) Ophthalmic",
+          "printed_page": 1399,
+          "pdf_page_1based": 1426
+        },
+        {
+          "name": "Tobramycin Ophthalmic",
+          "printed_page": 1406,
+          "pdf_page_1based": 1433
+        },
+        {
+          "name": "Voriconazole Ophthalmic",
+          "printed_page": 1412,
+          "pdf_page_1based": 1439
+        },
+        {
+          "name": "Clindamycin, Topical",
+          "printed_page": 1428,
+          "pdf_page_1based": 1455
+        },
+        {
+          "name": "Gentamicin, Topical",
+          "printed_page": 1429,
+          "pdf_page_1based": 1456
+        },
+        {
+          "name": "Silver Sulfadiazine, Topical",
+          "printed_page": 1433,
+          "pdf_page_1based": 1460
+        },
+        {
+          "name": "Ketoconazole, Topical",
+          "printed_page": 1436,
+          "pdf_page_1based": 1463
+        },
+        {
+          "name": "Nystatin/Nystatin Combinations, Topical",
+          "printed_page": 1439,
+          "pdf_page_1based": 1466
+        },
+        {
+          "name": "Terbinafine, Topical",
+          "printed_page": 1441,
+          "pdf_page_1based": 1468
+        },
+        {
+          "name": "Penicillins, General Information",
+          "printed_page": 1498,
+          "pdf_page_1based": 1525
+        }
+      ]
+    },
+    {
+      "id": "ch05_gastrointestinal",
+      "chapter_no": 5,
+      "title_fa": "فصل ۵: دستگاه گوارش، کبد و ضدتهوع‌ها",
+      "title_en": "Gastrointestinal & Hepato-biliary",
+      "icon": "fa-stethoscope",
+      "color": "#06b6d4",
+      "description": "ضدتهوع‌ها، محافظت‌کننده‌های مخاط معده، مهارکننده‌های پمپ پروتون، پروکینتیک‌ها و مکمل‌های کبدی",
+      "priority": "بسیار شایع در کلینیک حیوانات خانگی و دام بزرگ",
+      "completed_count": 4,
+      "completed_drugs": [
+        {
+          "id": "metoclopramide",
+          "name": "Metoclopramide HCl",
+          "chapter": "ch05_gastrointestinal"
+        },
+        {
+          "id": "maropitant",
+          "name": "Maropitant Citrate (Cerenia)",
+          "chapter": "ch05_gastrointestinal"
+        },
+        {
+          "id": "omeprazole",
+          "name": "Omeprazole (GastroGard)",
+          "chapter": "ch05_gastrointestinal"
+        },
+        {
+          "id": "sucralfate",
+          "name": "Sucralfate (Carafate)",
+          "chapter": "ch05_gastrointestinal"
+        }
+      ],
+      "matched_monographs_count": 23,
+      "sample_monographs": [
+        {
+          "name": "Apomorphine",
+          "printed_page": 92,
+          "pdf_page_1based": 119
+        },
+        {
+          "name": "Bismuth Subsalicylate",
+          "printed_page": 133,
+          "pdf_page_1based": 160
+        },
+        {
+          "name": "Capromorelin",
+          "printed_page": 182,
+          "pdf_page_1based": 209
+        },
+        {
+          "name": "Cimetidine",
+          "printed_page": 263,
+          "pdf_page_1based": 290
+        },
+        {
+          "name": "Cisapride",
+          "printed_page": 269,
+          "pdf_page_1based": 296
+        },
+        {
+          "name": "Dolasetron",
+          "printed_page": 419,
+          "pdf_page_1based": 446
+        },
+        {
+          "name": "Esomeprazole",
+          "printed_page": 478,
+          "pdf_page_1based": 505
+        },
+        {
+          "name": "Famotidine",
+          "printed_page": 499,
+          "pdf_page_1based": 526
+        },
+        {
+          "name": "Kaolin/Pectin",
+          "printed_page": 715,
+          "pdf_page_1based": 742
+        },
+        {
+          "name": "Lactulose",
+          "printed_page": 735,
+          "pdf_page_1based": 762
+        },
+        {
+          "name": "Loperamide",
+          "printed_page": 775,
+          "pdf_page_1based": 802
+        },
+        {
+          "name": "Maropitant",
+          "printed_page": 799,
+          "pdf_page_1based": 826
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Apomorphine",
+          "printed_page": 92,
+          "pdf_page_1based": 119
+        },
+        {
+          "name": "Bismuth Subsalicylate",
+          "printed_page": 133,
+          "pdf_page_1based": 160
+        },
+        {
+          "name": "Capromorelin",
+          "printed_page": 182,
+          "pdf_page_1based": 209
+        },
+        {
+          "name": "Cimetidine",
+          "printed_page": 263,
+          "pdf_page_1based": 290
+        },
+        {
+          "name": "Cisapride",
+          "printed_page": 269,
+          "pdf_page_1based": 296
+        },
+        {
+          "name": "Dolasetron",
+          "printed_page": 419,
+          "pdf_page_1based": 446
+        },
+        {
+          "name": "Esomeprazole",
+          "printed_page": 478,
+          "pdf_page_1based": 505
+        },
+        {
+          "name": "Famotidine",
+          "printed_page": 499,
+          "pdf_page_1based": 526
+        },
+        {
+          "name": "Kaolin/Pectin",
+          "printed_page": 715,
+          "pdf_page_1based": 742
+        },
+        {
+          "name": "Lactulose",
+          "printed_page": 735,
+          "pdf_page_1based": 762
+        },
+        {
+          "name": "Loperamide",
+          "printed_page": 775,
+          "pdf_page_1based": 802
+        },
+        {
+          "name": "Maropitant",
+          "printed_page": 799,
+          "pdf_page_1based": 826
+        },
+        {
+          "name": "Metoclopramide",
+          "printed_page": 867,
+          "pdf_page_1based": 894
+        },
+        {
+          "name": "Mirtazapine",
+          "printed_page": 893,
+          "pdf_page_1based": 920
+        },
+        {
+          "name": "Misoprostol",
+          "printed_page": 896,
+          "pdf_page_1based": 923
+        },
+        {
+          "name": "Omeprazole",
+          "printed_page": 953,
+          "pdf_page_1based": 980
+        },
+        {
+          "name": "Ondansetron",
+          "printed_page": 956,
+          "pdf_page_1based": 983
+        },
+        {
+          "name": "Pantoprazole",
+          "printed_page": 983,
+          "pdf_page_1based": 1010
+        },
+        {
+          "name": "Psyllium",
+          "printed_page": 1090,
+          "pdf_page_1based": 1117
+        },
+        {
+          "name": "Ranitidine",
+          "printed_page": 1111,
+          "pdf_page_1based": 1138
+        },
+        {
+          "name": "Spectinomycin",
+          "printed_page": 1171,
+          "pdf_page_1based": 1198
+        },
+        {
+          "name": "Sucralfate",
+          "printed_page": 1189,
+          "pdf_page_1based": 1216
+        },
+        {
+          "name": "Ursodiol",
+          "printed_page": 1287,
+          "pdf_page_1based": 1314
+        }
+      ]
+    },
+    {
+      "id": "ch06_cardiovascular",
+      "chapter_no": 6,
+      "title_fa": "فصل ۶: قلب، عروق و کاهنده‌های فشار خون",
+      "title_en": "Cardiovascular & Antihypertensives",
+      "icon": "fa-heart",
+      "color": "#e11d48",
+      "description": "اینوتروپ‌ها، مهارکننده‌های ACE، مسدودکننده‌های گیرنده آنژیوتانسین، ضدآریتمی‌ها و وازودیلاتورها",
+      "priority": "تخصصی طب داخلی قلب با فرمولاسیون دقیق قرص",
+      "completed_count": 2,
+      "completed_drugs": [
+        {
+          "id": "pimobendan",
+          "name": "Pimobendan (Vetmedin)",
+          "chapter": "ch06_cardiovascular"
+        },
+        {
+          "id": "enalapril",
+          "name": "Enalapril (Enacard)",
+          "chapter": "ch06_cardiovascular"
+        }
+      ],
+      "matched_monographs_count": 24,
+      "sample_monographs": [
+        {
+          "name": "Amlodipine",
+          "printed_page": 62,
+          "pdf_page_1based": 89
+        },
+        {
+          "name": "Atenolol",
+          "printed_page": 103,
+          "pdf_page_1based": 130
+        },
+        {
+          "name": "Benazepril",
+          "printed_page": 123,
+          "pdf_page_1based": 150
+        },
+        {
+          "name": "Carvedilol",
+          "printed_page": 193,
+          "pdf_page_1based": 220
+        },
+        {
+          "name": "Digoxin",
+          "printed_page": 392,
+          "pdf_page_1based": 419
+        },
+        {
+          "name": "Diltiazem",
+          "printed_page": 396,
+          "pdf_page_1based": 423
+        },
+        {
+          "name": "Enalapril",
+          "printed_page": 445,
+          "pdf_page_1based": 472
+        },
+        {
+          "name": "Hydralazine",
+          "printed_page": 607,
+          "pdf_page_1based": 634
+        },
+        {
+          "name": "Lidocaine, Local Anesthetic",
+          "printed_page": 752,
+          "pdf_page_1based": 779
+        },
+        {
+          "name": "Lidocaine (Intravenous; Systemic)",
+          "printed_page": 756,
+          "pdf_page_1based": 783
+        },
+        {
+          "name": "Mexiletine",
+          "printed_page": 878,
+          "pdf_page_1based": 905
+        },
+        {
+          "name": "Nitroglycerin, Transdermal",
+          "printed_page": 938,
+          "pdf_page_1based": 965
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Amlodipine",
+          "printed_page": 62,
+          "pdf_page_1based": 89
+        },
+        {
+          "name": "Atenolol",
+          "printed_page": 103,
+          "pdf_page_1based": 130
+        },
+        {
+          "name": "Benazepril",
+          "printed_page": 123,
+          "pdf_page_1based": 150
+        },
+        {
+          "name": "Carvedilol",
+          "printed_page": 193,
+          "pdf_page_1based": 220
+        },
+        {
+          "name": "Digoxin",
+          "printed_page": 392,
+          "pdf_page_1based": 419
+        },
+        {
+          "name": "Diltiazem",
+          "printed_page": 396,
+          "pdf_page_1based": 423
+        },
+        {
+          "name": "Enalapril",
+          "printed_page": 445,
+          "pdf_page_1based": 472
+        },
+        {
+          "name": "Hydralazine",
+          "printed_page": 607,
+          "pdf_page_1based": 634
+        },
+        {
+          "name": "Lidocaine, Local Anesthetic",
+          "printed_page": 752,
+          "pdf_page_1based": 779
+        },
+        {
+          "name": "Lidocaine (Intravenous; Systemic)",
+          "printed_page": 756,
+          "pdf_page_1based": 783
+        },
+        {
+          "name": "Mexiletine",
+          "printed_page": 878,
+          "pdf_page_1based": 905
+        },
+        {
+          "name": "Nitroglycerin, Transdermal",
+          "printed_page": 938,
+          "pdf_page_1based": 965
+        },
+        {
+          "name": "Nitroprusside",
+          "printed_page": 939,
+          "pdf_page_1based": 966
+        },
+        {
+          "name": "Pimobendan",
+          "printed_page": 1026,
+          "pdf_page_1based": 1053
+        },
+        {
+          "name": "Procainamide",
+          "printed_page": 1068,
+          "pdf_page_1based": 1095
+        },
+        {
+          "name": "Propranolol",
+          "printed_page": 1086,
+          "pdf_page_1based": 1113
+        },
+        {
+          "name": "Quinidine",
+          "printed_page": 1104,
+          "pdf_page_1based": 1131
+        },
+        {
+          "name": "Ramipril",
+          "printed_page": 1109,
+          "pdf_page_1based": 1136
+        },
+        {
+          "name": "Sildenafil",
+          "printed_page": 1159,
+          "pdf_page_1based": 1186
+        },
+        {
+          "name": "Sotalol",
+          "printed_page": 1169,
+          "pdf_page_1based": 1196
+        },
+        {
+          "name": "Spironolactone/Benazepril",
+          "printed_page": 1177,
+          "pdf_page_1based": 1204
+        },
+        {
+          "name": "Telmisartan",
+          "printed_page": 1208,
+          "pdf_page_1based": 1235
+        },
+        {
+          "name": "Lidocaine Ophthalmic",
+          "printed_page": 1379,
+          "pdf_page_1based": 1406
+        },
+        {
+          "name": "Lidocaine/Lidocaine Combinations, Topical",
+          "printed_page": 1423,
+          "pdf_page_1based": 1450
+        }
+      ]
+    },
+    {
+      "id": "ch07_renal_urinary",
+      "chapter_no": 7,
+      "title_fa": "فصل ۷: کلیه، مجاری ادراری و دیورتیک‌ها",
+      "title_en": "Renal, Urinary & Diuretics",
+      "icon": "fa-filter",
+      "color": "#0284c7",
+      "description": "دیورتیک‌های قوس هنله و تیازیدی، تنظیم‌کننده‌های اسفنکتر مثانه، حل‌کننده‌های سنگ‌های ادراری",
+      "priority": "اورژانس انسداد ادراری و نارسایی حاد/مزمن کلیه",
+      "completed_count": 1,
+      "completed_drugs": [
+        {
+          "id": "furosemide",
+          "name": "Furosemide",
+          "chapter": "ch07_renal_urinary"
+        }
+      ],
+      "matched_monographs_count": 13,
+      "sample_monographs": [
+        {
+          "name": "Acetazolamide",
+          "printed_page": 9,
+          "pdf_page_1based": 36
+        },
+        {
+          "name": "Allopurinol",
+          "printed_page": 37,
+          "pdf_page_1based": 64
+        },
+        {
+          "name": "Ammonium Chloride",
+          "printed_page": 65,
+          "pdf_page_1based": 92
+        },
+        {
+          "name": "Bethanechol",
+          "printed_page": 130,
+          "pdf_page_1based": 157
+        },
+        {
+          "name": "Furosemide",
+          "printed_page": 563,
+          "pdf_page_1based": 590
+        },
+        {
+          "name": "Hydrochlorothiazide",
+          "printed_page": 610,
+          "pdf_page_1based": 637
+        },
+        {
+          "name": "Mannitol",
+          "printed_page": 793,
+          "pdf_page_1based": 820
+        },
+        {
+          "name": "Phenoxybenzamine",
+          "printed_page": 1011,
+          "pdf_page_1based": 1038
+        },
+        {
+          "name": "Phenylpropanolamine",
+          "printed_page": 1017,
+          "pdf_page_1based": 1044
+        },
+        {
+          "name": "Prazosin",
+          "printed_page": 1057,
+          "pdf_page_1based": 1084
+        },
+        {
+          "name": "Spironolactone",
+          "printed_page": 1175,
+          "pdf_page_1based": 1202
+        },
+        {
+          "name": "Spironolactone/Benazepril",
+          "printed_page": 1177,
+          "pdf_page_1based": 1204
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Acetazolamide",
+          "printed_page": 9,
+          "pdf_page_1based": 36
+        },
+        {
+          "name": "Allopurinol",
+          "printed_page": 37,
+          "pdf_page_1based": 64
+        },
+        {
+          "name": "Ammonium Chloride",
+          "printed_page": 65,
+          "pdf_page_1based": 92
+        },
+        {
+          "name": "Bethanechol",
+          "printed_page": 130,
+          "pdf_page_1based": 157
+        },
+        {
+          "name": "Furosemide",
+          "printed_page": 563,
+          "pdf_page_1based": 590
+        },
+        {
+          "name": "Hydrochlorothiazide",
+          "printed_page": 610,
+          "pdf_page_1based": 637
+        },
+        {
+          "name": "Mannitol",
+          "printed_page": 793,
+          "pdf_page_1based": 820
+        },
+        {
+          "name": "Phenoxybenzamine",
+          "printed_page": 1011,
+          "pdf_page_1based": 1038
+        },
+        {
+          "name": "Phenylpropanolamine",
+          "printed_page": 1017,
+          "pdf_page_1based": 1044
+        },
+        {
+          "name": "Prazosin",
+          "printed_page": 1057,
+          "pdf_page_1based": 1084
+        },
+        {
+          "name": "Spironolactone",
+          "printed_page": 1175,
+          "pdf_page_1based": 1202
+        },
+        {
+          "name": "Spironolactone/Benazepril",
+          "printed_page": 1177,
+          "pdf_page_1based": 1204
+        },
+        {
+          "name": "Torsemide",
+          "printed_page": 1259,
+          "pdf_page_1based": 1286
+        }
+      ]
+    },
+    {
+      "id": "ch08_neurology_behavior",
+      "chapter_no": 8,
+      "title_fa": "فصل ۸: مغز و اعصاب، ضدتشنج‌ها و رفتاردرمانی",
+      "title_en": "Neurology, Anticonvulsants & Behavior",
+      "icon": "fa-brain",
+      "color": "#6366f1",
+      "description": "پروتکل‌های استاتوس اپیلپتیکوس، ضدتشنج‌های نگهدارنده درازمدت و داروهای ضداضطراب رفتاری",
+      "priority": "نیاز به مانیتورینگ دقیق سطح خونی دارو",
+      "completed_count": 2,
+      "completed_drugs": [
+        {
+          "id": "phenobarbital",
+          "name": "Phenobarbital",
+          "chapter": "ch08_neurology_behavior"
+        },
+        {
+          "id": "diazepam",
+          "name": "Diazepam",
+          "chapter": "ch08_neurology_behavior"
+        }
+      ],
+      "matched_monographs_count": 12,
+      "sample_monographs": [
+        {
+          "name": "Alprazolam",
+          "printed_page": 39,
+          "pdf_page_1based": 66
+        },
+        {
+          "name": "Amitriptyline",
+          "printed_page": 58,
+          "pdf_page_1based": 85
+        },
+        {
+          "name": "Buspirone",
+          "printed_page": 155,
+          "pdf_page_1based": 182
+        },
+        {
+          "name": "Clomipramine",
+          "printed_page": 289,
+          "pdf_page_1based": 316
+        },
+        {
+          "name": "Fluoxetine",
+          "printed_page": 547,
+          "pdf_page_1based": 574
+        },
+        {
+          "name": "Levetiracetam",
+          "printed_page": 746,
+          "pdf_page_1based": 773
+        },
+        {
+          "name": "Paroxetine",
+          "printed_page": 988,
+          "pdf_page_1based": 1015
+        },
+        {
+          "name": "Phenobarbital",
+          "printed_page": 1006,
+          "pdf_page_1based": 1033
+        },
+        {
+          "name": "Selegiline",
+          "printed_page": 1151,
+          "pdf_page_1based": 1178
+        },
+        {
+          "name": "Sertraline",
+          "printed_page": 1153,
+          "pdf_page_1based": 1180
+        },
+        {
+          "name": "Trazodone",
+          "printed_page": 1266,
+          "pdf_page_1based": 1293
+        },
+        {
+          "name": "Zonisamide",
+          "printed_page": 1331,
+          "pdf_page_1based": 1358
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Alprazolam",
+          "printed_page": 39,
+          "pdf_page_1based": 66
+        },
+        {
+          "name": "Amitriptyline",
+          "printed_page": 58,
+          "pdf_page_1based": 85
+        },
+        {
+          "name": "Buspirone",
+          "printed_page": 155,
+          "pdf_page_1based": 182
+        },
+        {
+          "name": "Clomipramine",
+          "printed_page": 289,
+          "pdf_page_1based": 316
+        },
+        {
+          "name": "Fluoxetine",
+          "printed_page": 547,
+          "pdf_page_1based": 574
+        },
+        {
+          "name": "Levetiracetam",
+          "printed_page": 746,
+          "pdf_page_1based": 773
+        },
+        {
+          "name": "Paroxetine",
+          "printed_page": 988,
+          "pdf_page_1based": 1015
+        },
+        {
+          "name": "Phenobarbital",
+          "printed_page": 1006,
+          "pdf_page_1based": 1033
+        },
+        {
+          "name": "Selegiline",
+          "printed_page": 1151,
+          "pdf_page_1based": 1178
+        },
+        {
+          "name": "Sertraline",
+          "printed_page": 1153,
+          "pdf_page_1based": 1180
+        },
+        {
+          "name": "Trazodone",
+          "printed_page": 1266,
+          "pdf_page_1based": 1293
+        },
+        {
+          "name": "Zonisamide",
+          "printed_page": 1331,
+          "pdf_page_1based": 1358
+        }
+      ]
+    },
+    {
+      "id": "ch09_corticosteroids_immune",
+      "chapter_no": 9,
+      "title_fa": "فصل ۹: کورتیکواستروئیدها و سیستم ایمنی",
+      "title_en": "Corticosteroids & Immunomodulators",
+      "icon": "fa-dna",
+      "color": "#ec4899",
+      "description": "گلوکوکورتیکوئیدهای کوتاه‌اثر، میان‌اثر و انبار، آنتی‌بادی‌های مونوکلونال و سرکوب‌کننده‌های ایمنی",
+      "priority": "دوز دقیق ضدالتهاب در برابر دوز سرکوب ایمنی",
+      "completed_count": 2,
+      "completed_drugs": [
+        {
+          "id": "prednisolone",
+          "name": "Prednisolone",
+          "chapter": "ch09_corticosteroids_immune"
+        },
+        {
+          "id": "dexamethasone",
+          "name": "Dexamethasone",
+          "chapter": "ch09_corticosteroids_immune"
+        }
+      ],
+      "matched_monographs_count": 22,
+      "sample_monographs": [
+        {
+          "name": "Azathioprine",
+          "printed_page": 118,
+          "pdf_page_1based": 145
+        },
+        {
+          "name": "Budesonide",
+          "printed_page": 142,
+          "pdf_page_1based": 169
+        },
+        {
+          "name": "Chlorambucil",
+          "printed_page": 243,
+          "pdf_page_1based": 270
+        },
+        {
+          "name": "Cyclosporine (Systemic)",
+          "printed_page": 322,
+          "pdf_page_1based": 349
+        },
+        {
+          "name": "Dexamethasone",
+          "printed_page": 361,
+          "pdf_page_1based": 388
+        },
+        {
+          "name": "Fludrocortisone",
+          "printed_page": 535,
+          "pdf_page_1based": 562
+        },
+        {
+          "name": "Hydrocortisone",
+          "printed_page": 615,
+          "pdf_page_1based": 642
+        },
+        {
+          "name": "Lokivetmab",
+          "printed_page": 771,
+          "pdf_page_1based": 798
+        },
+        {
+          "name": "Methylprednisolone",
+          "printed_page": 863,
+          "pdf_page_1based": 890
+        },
+        {
+          "name": "Mycophenolate",
+          "printed_page": 920,
+          "pdf_page_1based": 947
+        },
+        {
+          "name": "Oclacitinib",
+          "printed_page": 947,
+          "pdf_page_1based": 974
+        },
+        {
+          "name": "PrednisoLONE/Prednisone/PrednisoLONE Sodium Succinate",
+          "printed_page": 1058,
+          "pdf_page_1based": 1085
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Azathioprine",
+          "printed_page": 118,
+          "pdf_page_1based": 145
+        },
+        {
+          "name": "Budesonide",
+          "printed_page": 142,
+          "pdf_page_1based": 169
+        },
+        {
+          "name": "Chlorambucil",
+          "printed_page": 243,
+          "pdf_page_1based": 270
+        },
+        {
+          "name": "Cyclosporine (Systemic)",
+          "printed_page": 322,
+          "pdf_page_1based": 349
+        },
+        {
+          "name": "Dexamethasone",
+          "printed_page": 361,
+          "pdf_page_1based": 388
+        },
+        {
+          "name": "Fludrocortisone",
+          "printed_page": 535,
+          "pdf_page_1based": 562
+        },
+        {
+          "name": "Hydrocortisone",
+          "printed_page": 615,
+          "pdf_page_1based": 642
+        },
+        {
+          "name": "Lokivetmab",
+          "printed_page": 771,
+          "pdf_page_1based": 798
+        },
+        {
+          "name": "Methylprednisolone",
+          "printed_page": 863,
+          "pdf_page_1based": 890
+        },
+        {
+          "name": "Mycophenolate",
+          "printed_page": 920,
+          "pdf_page_1based": 947
+        },
+        {
+          "name": "Oclacitinib",
+          "printed_page": 947,
+          "pdf_page_1based": 974
+        },
+        {
+          "name": "PrednisoLONE/Prednisone/PrednisoLONE Sodium Succinate",
+          "printed_page": 1058,
+          "pdf_page_1based": 1085
+        },
+        {
+          "name": "Triamcinolone",
+          "printed_page": 1269,
+          "pdf_page_1based": 1296
+        },
+        {
+          "name": "Trimeprazine/Prednisolone",
+          "printed_page": 1279,
+          "pdf_page_1based": 1306
+        },
+        {
+          "name": "Cyclosporine Ophthalmic",
+          "printed_page": 1357,
+          "pdf_page_1based": 1384
+        },
+        {
+          "name": "Dexamethasone Ophthalmic",
+          "printed_page": 1359,
+          "pdf_page_1based": 1386
+        },
+        {
+          "name": "Hydrocortisone Ophthalmic",
+          "printed_page": 1371,
+          "pdf_page_1based": 1398
+        },
+        {
+          "name": "Prednisolone Ophthalmic",
+          "printed_page": 1397,
+          "pdf_page_1based": 1424
+        },
+        {
+          "name": "Tacrolimus Ophthalmic",
+          "printed_page": 1402,
+          "pdf_page_1based": 1429
+        },
+        {
+          "name": "Hydrocortisone, Topical",
+          "printed_page": 1414,
+          "pdf_page_1based": 1441
+        },
+        {
+          "name": "Triamcinolone, Topical",
+          "printed_page": 1417,
+          "pdf_page_1based": 1444
+        },
+        {
+          "name": "Tacrolimus, Topical",
+          "printed_page": 1465,
+          "pdf_page_1based": 1492
+        }
+      ]
+    },
+    {
+      "id": "ch10_parasiticides",
+      "chapter_no": 10,
+      "title_fa": "فصل ۱۰: ضدانگل‌ها، ضدکرم‌ها و اکتوپارازیت‌ها",
+      "title_en": "Antiparasitics, Anthelmintics & Ectoparasiticides",
+      "icon": "fa-bug",
+      "color": "#84cc16",
+      "description": "ماکروسیکلیک لاکتون‌ها، ایزوکسازولین‌ها، ضدکرم‌های نواری و لوله‌ای، کوکسیدیواستات‌ها و ضدتک‌یاخته‌ها",
+      "priority": "پروتکل‌های پیشگیری ماهانه و هشدار ژن MDR1",
+      "completed_count": 1,
+      "completed_drugs": [
+        {
+          "id": "ivermectin",
+          "name": "Ivermectin",
+          "chapter": "ch10_parasiticides"
+        }
+      ],
+      "matched_monographs_count": 29,
+      "sample_monographs": [
+        {
+          "name": "Afoxolaner",
+          "printed_page": 16,
+          "pdf_page_1based": 43
+        },
+        {
+          "name": "Albendazole",
+          "printed_page": 20,
+          "pdf_page_1based": 47
+        },
+        {
+          "name": "Amprolium",
+          "printed_page": 84,
+          "pdf_page_1based": 111
+        },
+        {
+          "name": "Diminazene",
+          "printed_page": 404,
+          "pdf_page_1based": 431
+        },
+        {
+          "name": "Doramectin",
+          "printed_page": 424,
+          "pdf_page_1based": 451
+        },
+        {
+          "name": "Emodepside/Praziquantel",
+          "printed_page": 442,
+          "pdf_page_1based": 469
+        },
+        {
+          "name": "Eprinomectin/Praziquantel",
+          "printed_page": 465,
+          "pdf_page_1based": 492
+        },
+        {
+          "name": "Fenbendazole",
+          "printed_page": 505,
+          "pdf_page_1based": 532
+        },
+        {
+          "name": "Fluralaner",
+          "printed_page": 549,
+          "pdf_page_1based": 576
+        },
+        {
+          "name": "Imidacloprid, Systemic",
+          "printed_page": 639,
+          "pdf_page_1based": 666
+        },
+        {
+          "name": "Imidocarb",
+          "printed_page": 642,
+          "pdf_page_1based": 669
+        },
+        {
+          "name": "Ivermectin",
+          "printed_page": 709,
+          "pdf_page_1based": 736
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Afoxolaner",
+          "printed_page": 16,
+          "pdf_page_1based": 43
+        },
+        {
+          "name": "Albendazole",
+          "printed_page": 20,
+          "pdf_page_1based": 47
+        },
+        {
+          "name": "Amprolium",
+          "printed_page": 84,
+          "pdf_page_1based": 111
+        },
+        {
+          "name": "Diminazene",
+          "printed_page": 404,
+          "pdf_page_1based": 431
+        },
+        {
+          "name": "Doramectin",
+          "printed_page": 424,
+          "pdf_page_1based": 451
+        },
+        {
+          "name": "Emodepside/Praziquantel",
+          "printed_page": 442,
+          "pdf_page_1based": 469
+        },
+        {
+          "name": "Eprinomectin/Praziquantel",
+          "printed_page": 465,
+          "pdf_page_1based": 492
+        },
+        {
+          "name": "Fenbendazole",
+          "printed_page": 505,
+          "pdf_page_1based": 532
+        },
+        {
+          "name": "Fluralaner",
+          "printed_page": 549,
+          "pdf_page_1based": 576
+        },
+        {
+          "name": "Imidacloprid, Systemic",
+          "printed_page": 639,
+          "pdf_page_1based": 666
+        },
+        {
+          "name": "Imidocarb",
+          "printed_page": 642,
+          "pdf_page_1based": 669
+        },
+        {
+          "name": "Ivermectin",
+          "printed_page": 709,
+          "pdf_page_1based": 736
+        },
+        {
+          "name": "Ivermectin/Clorsulon",
+          "printed_page": 714,
+          "pdf_page_1based": 741
+        },
+        {
+          "name": "Levamisole",
+          "printed_page": 743,
+          "pdf_page_1based": 770
+        },
+        {
+          "name": "Lotilaner",
+          "printed_page": 783,
+          "pdf_page_1based": 810
+        },
+        {
+          "name": "Metronidazole",
+          "printed_page": 873,
+          "pdf_page_1based": 900
+        },
+        {
+          "name": "Milbemycin Oxime",
+          "printed_page": 885,
+          "pdf_page_1based": 912
+        },
+        {
+          "name": "Moxidectin/Moxidectin Combination Products",
+          "printed_page": 912,
+          "pdf_page_1based": 939
+        },
+        {
+          "name": "Oxfendazole",
+          "printed_page": 966,
+          "pdf_page_1based": 993
+        },
+        {
+          "name": "Ponazuril",
+          "printed_page": 1041,
+          "pdf_page_1based": 1068
+        },
+        {
+          "name": "Praziquantel/Praziquantel Combination Products",
+          "printed_page": 1053,
+          "pdf_page_1based": 1080
+        },
+        {
+          "name": "Pyrantel",
+          "printed_page": 1092,
+          "pdf_page_1based": 1119
+        },
+        {
+          "name": "Ronidazole",
+          "printed_page": 1131,
+          "pdf_page_1based": 1158
+        },
+        {
+          "name": "Sarolaner",
+          "printed_page": 1144,
+          "pdf_page_1based": 1171
+        },
+        {
+          "name": "Selamectin",
+          "printed_page": 1147,
+          "pdf_page_1based": 1174
+        },
+        {
+          "name": "Selamectin/Sarolaner",
+          "printed_page": 1149,
+          "pdf_page_1based": 1176
+        },
+        {
+          "name": "Toltrazuril",
+          "printed_page": 1255,
+          "pdf_page_1based": 1282
+        },
+        {
+          "name": "Fipronil/Fipronil Combinations, Topical",
+          "printed_page": 1453,
+          "pdf_page_1based": 1480
+        },
+        {
+          "name": "Permethrin/Permethrin Combinations, Topical",
+          "printed_page": 1459,
+          "pdf_page_1based": 1486
+        }
+      ]
+    },
+    {
+      "id": "ch11_endocrine_reproduction",
+      "chapter_no": 11,
+      "title_fa": "فصل ۱۱: غدد، متابولیسم و هورمون‌های تولیدمثل",
+      "title_en": "Endocrinology & Reproductive",
+      "icon": "fa-venus-mars",
+      "color": "#a855f7",
+      "description": "انسولین‌ها، داروهای تیروئید و کوشینگ، هورمون‌های همزمانی فحلی، القای زایمان و سقط درمانی",
+      "priority": "پروتکل‌های دقیق واحد بین‌المللی (IU) و میکروگرم",
+      "completed_count": 0,
+      "completed_drugs": [],
+      "matched_monographs_count": 25,
+      "sample_monographs": [
+        {
+          "name": "Aglepristone",
+          "printed_page": 18,
+          "pdf_page_1based": 45
+        },
+        {
+          "name": "Altrenogest",
+          "printed_page": 41,
+          "pdf_page_1based": 68
+        },
+        {
+          "name": "Cabergoline",
+          "printed_page": 165,
+          "pdf_page_1based": 192
+        },
+        {
+          "name": "Cloprostenol",
+          "printed_page": 299,
+          "pdf_page_1based": 326
+        },
+        {
+          "name": "Deslorelin",
+          "printed_page": 351,
+          "pdf_page_1based": 378
+        },
+        {
+          "name": "Desoxycorticosterone Pivalate (DOCP)",
+          "printed_page": 355,
+          "pdf_page_1based": 382
+        },
+        {
+          "name": "Dinoprost",
+          "printed_page": 405,
+          "pdf_page_1based": 432
+        },
+        {
+          "name": "Estradiol",
+          "printed_page": 481,
+          "pdf_page_1based": 508
+        },
+        {
+          "name": "Finasteride",
+          "printed_page": 524,
+          "pdf_page_1based": 551
+        },
+        {
+          "name": "Gonadorelin",
+          "printed_page": 591,
+          "pdf_page_1based": 618
+        },
+        {
+          "name": "Insulin, Aspart",
+          "printed_page": 651,
+          "pdf_page_1based": 678
+        },
+        {
+          "name": "Insulin, Detemir",
+          "printed_page": 655,
+          "pdf_page_1based": 682
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Aglepristone",
+          "printed_page": 18,
+          "pdf_page_1based": 45
+        },
+        {
+          "name": "Altrenogest",
+          "printed_page": 41,
+          "pdf_page_1based": 68
+        },
+        {
+          "name": "Cabergoline",
+          "printed_page": 165,
+          "pdf_page_1based": 192
+        },
+        {
+          "name": "Cloprostenol",
+          "printed_page": 299,
+          "pdf_page_1based": 326
+        },
+        {
+          "name": "Deslorelin",
+          "printed_page": 351,
+          "pdf_page_1based": 378
+        },
+        {
+          "name": "Desoxycorticosterone Pivalate (DOCP)",
+          "printed_page": 355,
+          "pdf_page_1based": 382
+        },
+        {
+          "name": "Dinoprost",
+          "printed_page": 405,
+          "pdf_page_1based": 432
+        },
+        {
+          "name": "Estradiol",
+          "printed_page": 481,
+          "pdf_page_1based": 508
+        },
+        {
+          "name": "Finasteride",
+          "printed_page": 524,
+          "pdf_page_1based": 551
+        },
+        {
+          "name": "Gonadorelin",
+          "printed_page": 591,
+          "pdf_page_1based": 618
+        },
+        {
+          "name": "Insulin, Aspart",
+          "printed_page": 651,
+          "pdf_page_1based": 678
+        },
+        {
+          "name": "Insulin, Detemir",
+          "printed_page": 655,
+          "pdf_page_1based": 682
+        },
+        {
+          "name": "Insulin, Glargine",
+          "printed_page": 658,
+          "pdf_page_1based": 685
+        },
+        {
+          "name": "Insulin, Lente",
+          "printed_page": 662,
+          "pdf_page_1based": 689
+        },
+        {
+          "name": "Insulin, Lispro",
+          "printed_page": 666,
+          "pdf_page_1based": 693
+        },
+        {
+          "name": "Insulin, NPH",
+          "printed_page": 670,
+          "pdf_page_1based": 697
+        },
+        {
+          "name": "Insulin, Protamine Zinc",
+          "printed_page": 674,
+          "pdf_page_1based": 701
+        },
+        {
+          "name": "Insulin, Regular (Crystalline Zinc)",
+          "printed_page": 677,
+          "pdf_page_1based": 704
+        },
+        {
+          "name": "Levothyroxine",
+          "printed_page": 749,
+          "pdf_page_1based": 776
+        },
+        {
+          "name": "Medroxyprogesterone",
+          "printed_page": 815,
+          "pdf_page_1based": 842
+        },
+        {
+          "name": "Methimazole",
+          "printed_page": 849,
+          "pdf_page_1based": 876
+        },
+        {
+          "name": "Mitotane",
+          "printed_page": 899,
+          "pdf_page_1based": 926
+        },
+        {
+          "name": "Oxytocin",
+          "printed_page": 977,
+          "pdf_page_1based": 1004
+        },
+        {
+          "name": "Trilostane",
+          "printed_page": 1275,
+          "pdf_page_1based": 1302
+        },
+        {
+          "name": "Insulin, General Information",
+          "printed_page": 1494,
+          "pdf_page_1based": 1521
+        }
+      ]
+    },
+    {
+      "id": "ch12_respiratory",
+      "chapter_no": 12,
+      "title_fa": "فصل ۱۲: دستگاه تنفس و راه‌های هوایی",
+      "title_en": "Respiratory Agents",
+      "icon": "fa-lungs",
+      "color": "#14b8a6",
+      "description": "برونکودیلاتورها، موکولیتیک‌ها، خلط‌آورها و سرکوب‌کننده‌های مرکزی سرفه",
+      "priority": "آسم گربه، برونشیت مزمن سگ و انقباض نایی اسب",
+      "completed_count": 0,
+      "completed_drugs": [],
+      "matched_monographs_count": 10,
+      "sample_monographs": [
+        {
+          "name": "Acetylcysteine",
+          "printed_page": 12,
+          "pdf_page_1based": 39
+        },
+        {
+          "name": "Albuterol",
+          "printed_page": 24,
+          "pdf_page_1based": 51
+        },
+        {
+          "name": "Aminophylline",
+          "printed_page": 53,
+          "pdf_page_1based": 80
+        },
+        {
+          "name": "Butorphanol",
+          "printed_page": 157,
+          "pdf_page_1based": 184
+        },
+        {
+          "name": "Dextromethorphan",
+          "printed_page": 375,
+          "pdf_page_1based": 402
+        },
+        {
+          "name": "Guaifenesin, Intravenous",
+          "printed_page": 598,
+          "pdf_page_1based": 625
+        },
+        {
+          "name": "Hydrocodone Combinations",
+          "printed_page": 612,
+          "pdf_page_1based": 639
+        },
+        {
+          "name": "Terbutaline",
+          "printed_page": 1213,
+          "pdf_page_1based": 1240
+        },
+        {
+          "name": "Theophylline",
+          "printed_page": 1220,
+          "pdf_page_1based": 1247
+        },
+        {
+          "name": "Acetylcysteine Ophthalmic",
+          "printed_page": 1339,
+          "pdf_page_1based": 1366
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Acetylcysteine",
+          "printed_page": 12,
+          "pdf_page_1based": 39
+        },
+        {
+          "name": "Albuterol",
+          "printed_page": 24,
+          "pdf_page_1based": 51
+        },
+        {
+          "name": "Aminophylline",
+          "printed_page": 53,
+          "pdf_page_1based": 80
+        },
+        {
+          "name": "Butorphanol",
+          "printed_page": 157,
+          "pdf_page_1based": 184
+        },
+        {
+          "name": "Dextromethorphan",
+          "printed_page": 375,
+          "pdf_page_1based": 402
+        },
+        {
+          "name": "Guaifenesin, Intravenous",
+          "printed_page": 598,
+          "pdf_page_1based": 625
+        },
+        {
+          "name": "Hydrocodone Combinations",
+          "printed_page": 612,
+          "pdf_page_1based": 639
+        },
+        {
+          "name": "Terbutaline",
+          "printed_page": 1213,
+          "pdf_page_1based": 1240
+        },
+        {
+          "name": "Theophylline",
+          "printed_page": 1220,
+          "pdf_page_1based": 1247
+        },
+        {
+          "name": "Acetylcysteine Ophthalmic",
+          "printed_page": 1339,
+          "pdf_page_1based": 1366
+        }
+      ]
+    },
+    {
+      "id": "ch13_ophthalmology_otic",
+      "chapter_no": 13,
+      "title_fa": "فصل ۱۳: چشم، گوش و فرآورده‌های موضعی",
+      "title_en": "Ophthalmology, Otic & Topical",
+      "icon": "fa-eye",
+      "color": "#3b82f6",
+      "description": "قطره‌ها و پمادهای چشمی (آنتی‌بیوتیک، ضدگلوکوم، اشک مصنوعی)، قطره‌های گوش و پمادهای پوستی",
+      "priority": "محلول‌ها و قطره‌های موضعی تخصصی",
+      "completed_count": 0,
+      "completed_drugs": [],
+      "matched_monographs_count": 13,
+      "sample_monographs": [
+        {
+          "name": "Orbifloxacin",
+          "printed_page": 958,
+          "pdf_page_1based": 985
+        },
+        {
+          "name": "Posaconazole",
+          "printed_page": 1043,
+          "pdf_page_1based": 1070
+        },
+        {
+          "name": "Cyclosporine Ophthalmic",
+          "printed_page": 1357,
+          "pdf_page_1based": 1384
+        },
+        {
+          "name": "Dorzolamide Ophthalmic",
+          "printed_page": 1362,
+          "pdf_page_1based": 1389
+        },
+        {
+          "name": "Flurbiprofen Ophthalmic",
+          "printed_page": 1368,
+          "pdf_page_1based": 1395
+        },
+        {
+          "name": "Latanoprost Ophthalmic",
+          "printed_page": 1376,
+          "pdf_page_1based": 1403
+        },
+        {
+          "name": "Miconazole Ophthalmic",
+          "printed_page": 1382,
+          "pdf_page_1based": 1409
+        },
+        {
+          "name": "Silver Sulfadiazine (SSD) Ophthalmic",
+          "printed_page": 1399,
+          "pdf_page_1based": 1426
+        },
+        {
+          "name": "Timolol Ophthalmic",
+          "printed_page": 1405,
+          "pdf_page_1based": 1432
+        },
+        {
+          "name": "Tropicamide Ophthalmic",
+          "printed_page": 1410,
+          "pdf_page_1based": 1437
+        },
+        {
+          "name": "Silver Sulfadiazine, Topical",
+          "printed_page": 1433,
+          "pdf_page_1based": 1460
+        },
+        {
+          "name": "Miconazole, Topical",
+          "printed_page": 1438,
+          "pdf_page_1based": 1465
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Orbifloxacin",
+          "printed_page": 958,
+          "pdf_page_1based": 985
+        },
+        {
+          "name": "Posaconazole",
+          "printed_page": 1043,
+          "pdf_page_1based": 1070
+        },
+        {
+          "name": "Cyclosporine Ophthalmic",
+          "printed_page": 1357,
+          "pdf_page_1based": 1384
+        },
+        {
+          "name": "Dorzolamide Ophthalmic",
+          "printed_page": 1362,
+          "pdf_page_1based": 1389
+        },
+        {
+          "name": "Flurbiprofen Ophthalmic",
+          "printed_page": 1368,
+          "pdf_page_1based": 1395
+        },
+        {
+          "name": "Latanoprost Ophthalmic",
+          "printed_page": 1376,
+          "pdf_page_1based": 1403
+        },
+        {
+          "name": "Miconazole Ophthalmic",
+          "printed_page": 1382,
+          "pdf_page_1based": 1409
+        },
+        {
+          "name": "Silver Sulfadiazine (SSD) Ophthalmic",
+          "printed_page": 1399,
+          "pdf_page_1based": 1426
+        },
+        {
+          "name": "Timolol Ophthalmic",
+          "printed_page": 1405,
+          "pdf_page_1based": 1432
+        },
+        {
+          "name": "Tropicamide Ophthalmic",
+          "printed_page": 1410,
+          "pdf_page_1based": 1437
+        },
+        {
+          "name": "Silver Sulfadiazine, Topical",
+          "printed_page": 1433,
+          "pdf_page_1based": 1460
+        },
+        {
+          "name": "Miconazole, Topical",
+          "printed_page": 1438,
+          "pdf_page_1based": 1465
+        },
+        {
+          "name": "Chlorhexidine, Topical",
+          "printed_page": 1442,
+          "pdf_page_1based": 1469
+        }
+      ]
+    },
+    {
+      "id": "ch14_fluids_toxicology",
+      "chapter_no": 14,
+      "title_fa": "فصل ۱۴: مایعات، الکترولیت‌ها، سم‌شناسی و پادزهرها",
+      "title_en": "Fluids, Antidotes & Toxicology",
+      "icon": "fa-flask-vial",
+      "color": "#f97316",
+      "description": "محلول‌های کریستالوئید و کلوئید، پادزهرهای اختصاصی مسمومیت‌ها و مواد جاذب گوارشی",
+      "priority": "نجات زندگی در مسمومیت‌های حاد و دهیدراتاسیون شدید",
+      "completed_count": 2,
+      "completed_drugs": [
+        {
+          "id": "vitamin_k1",
+          "name": "Phytonadione (Vitamin K1)",
+          "chapter": "ch14_fluids_toxicology"
+        },
+        {
+          "id": "acetaminophen",
+          "name": "Acetaminophen / Paracetamol",
+          "chapter": "ch14_fluids_toxicology"
+        }
+      ],
+      "matched_monographs_count": 10,
+      "sample_monographs": [
+        {
+          "name": "Dextran 70",
+          "printed_page": 373,
+          "pdf_page_1based": 400
+        },
+        {
+          "name": "Edetate Calcium Disodium (CaEDTA)",
+          "printed_page": 438,
+          "pdf_page_1based": 465
+        },
+        {
+          "name": "Fomepizole",
+          "printed_page": 558,
+          "pdf_page_1based": 585
+        },
+        {
+          "name": "Iron Dextran",
+          "printed_page": 692,
+          "pdf_page_1based": 719
+        },
+        {
+          "name": "Methylene Blue",
+          "printed_page": 859,
+          "pdf_page_1based": 886
+        },
+        {
+          "name": "Penicillamine",
+          "printed_page": 990,
+          "pdf_page_1based": 1017
+        },
+        {
+          "name": "Phytonadione",
+          "printed_page": 1024,
+          "pdf_page_1based": 1051
+        },
+        {
+          "name": "Pralidoxime (2- PAM)",
+          "printed_page": 1051,
+          "pdf_page_1based": 1078
+        },
+        {
+          "name": "Sodium Thiosulfate",
+          "printed_page": 1165,
+          "pdf_page_1based": 1192
+        },
+        {
+          "name": "Sorbitol",
+          "printed_page": 1168,
+          "pdf_page_1based": 1195
+        }
+      ],
+      "all_monographs": [
+        {
+          "name": "Dextran 70",
+          "printed_page": 373,
+          "pdf_page_1based": 400
+        },
+        {
+          "name": "Edetate Calcium Disodium (CaEDTA)",
+          "printed_page": 438,
+          "pdf_page_1based": 465
+        },
+        {
+          "name": "Fomepizole",
+          "printed_page": 558,
+          "pdf_page_1based": 585
+        },
+        {
+          "name": "Iron Dextran",
+          "printed_page": 692,
+          "pdf_page_1based": 719
+        },
+        {
+          "name": "Methylene Blue",
+          "printed_page": 859,
+          "pdf_page_1based": 886
+        },
+        {
+          "name": "Penicillamine",
+          "printed_page": 990,
+          "pdf_page_1based": 1017
+        },
+        {
+          "name": "Phytonadione",
+          "printed_page": 1024,
+          "pdf_page_1based": 1051
+        },
+        {
+          "name": "Pralidoxime (2- PAM)",
+          "printed_page": 1051,
+          "pdf_page_1based": 1078
+        },
+        {
+          "name": "Sodium Thiosulfate",
+          "printed_page": 1165,
+          "pdf_page_1based": 1192
+        },
+        {
+          "name": "Sorbitol",
+          "printed_page": 1168,
+          "pdf_page_1based": 1195
+        }
+      ]
+    }
+  ]
+}

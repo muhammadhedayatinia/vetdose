@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary-color: #0f172a;
+  --accent-teal: #0d9488;
+  --accent-blue: #2563eb;
+  --danger-rose: #e11d48;
+  --warning-amber: #d97706;
+  --success-green: #059669;
+
+  /* Google Stitch Modern Tokens */
+  --stitch-surface-ground: #f8fafc;
+  --stitch-surface-card: #ffffff;
+  --stitch-surface-overlay: rgba(15, 23, 42, 0.75);
+  --stitch-radius-lg: 24px;
+  --stitch-radius-xl: 32px;
+  --stitch-radius-full: 9999px;
+  --stitch-transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  background-color: var(--stitch-surface-ground);
+  color: #1e293b;
+  overflow-x: hidden;
+  padding-bottom: 70px; /* Space for mobile floating dock */
+}
+
+@media (min-width: 640px) {
+  body {
+    padding-bottom: 20px;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Latin number and formula styling */
+.latin-text, .dose-val, .mono-code {
+  direction: ltr !important;
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Badge colors */
+.badge-purple {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+  border: 1px solid #d8b4fe;
+}
+.badge-blue {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+.badge-green {
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+.badge-red {
+  background-color: #fff1f2;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+}
+
+/* Pulse animation for emergency button */
+@keyframes heartPulse {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.08); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.08); }
+  70% { transform: scale(1); }
+}
+
+.cpr-pulse {
+  animation: heartPulse 1.2s infinite ease-in-out;
+}
+
+/* Glassmorphism modal */
+.modal-overlay {
+  backdrop-filter: blur(12px);
+  background-color: rgba(15, 23, 42, 0.75);
+}
+
+/* =======================================================
+   Google Stitch UI & Interaction Styles
+   ======================================================= */
+
+/* Tactile Drug Card */
+.drug-card {
+  transition: all 0.22s var(--stitch-transition-smooth);
+  border-radius: var(--stitch-radius-lg);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.drug-card * {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.drug-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(13, 148, 136, 0.4);
+  box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(13, 148, 136, 0.06);
+}
+
+/* Google Stitch Glass Surfaces */
+.stitch-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.stitch-glass-dark {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Floating Bottom Dock */
+.stitch-floating-dock {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 24px);
+  max-width: 480px;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 28px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(13, 148, 136, 0.2);
+  z-index: 45;
+  transition: all 0.3s var(--stitch-transition-smooth);
+}
+
+.stitch-dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 18px;
+  transition: all 0.18s ease;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+}
+.stitch-dock-item:hover, .stitch-dock-item:active, .stitch-dock-item.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
+}
+.stitch-dock-item.active {
+  color: #2dd4bf;
+  background: rgba(13, 148, 136, 0.25);
+  box-shadow: 0 0 12px rgba(45, 212, 191, 0.3);
+}
+
+/* Keyboard shortcut badge */
+.stitch-kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Quick search chips */
+.stitch-chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.2s var(--stitch-transition-smooth);
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #475569;
+}
+.stitch-chip:hover {
+  background: #f8fafc;
+  border-color: #0d9488;
+  color: #0d9488;
+  transform: translateY(-1px);
+}
+.stitch-chip.active {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+/* Floating Scroll to Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0f172a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s var(--stitch-transition-smooth);
+}
+#scrollTopBtn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+#scrollTopBtn:hover {
+  background: #0d9488;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 14px 28px -5px rgba(13, 148, 136, 0.4);
+}
+
+@media (min-width: 640px) {
+  #scrollTopBtn {
+    bottom: 24px;
+  }
+}
+
+/* Ripple press effect */
+.stitch-btn-tactile {
+  transition: all 0.15s ease;
+}
+.stitch-btn-tactile:active {
+  transform: scale(0.96);
+}
+
+/* =======================================================
+   Official Veterinary Prescription Print Engine Stylesheet
+   ======================================================= */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 12mm 12mm 12mm;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 11pt !important;
+  }
+
+  /* Hide everything except the prescription modal & sheet */
+  header,
+  footer,
+  section,
+  main,
+  #calculatorModal,
+  #monographModal,
+  #interactionsModal,
+  #syringeCompatibilityModal,
+  #cprModal,
+  #cocktailsModal,
+  #chaptersRoadmapModal,
+  #therapeuticAtlasModal,
+  #mobileBottomDock,
+  #scrollTopBtn,
+  .no-print {
+    display: none !important;
+  }
+
+  #prescriptionPrintModal {
+    position: static !important;
+    display: block !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    overflow: visible !important;
+    backdrop-filter: none !important;
+  }
+
+  #prescriptionPrintModal > div {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+  }
+
+  #prescriptionPrintSheet {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  /* Printable borders and high-contrast tables */
+  .rx-print-border {
+    border: 1.5px solid #0f172a !important;
+  }
+  .rx-print-border-b {
+    border-bottom: 1.5px solid #0f172a !important;
+  }
+  .rx-print-border-t {
+    border-top: 1.5px solid #0f172a !important;
+  }
+  .rx-print-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+  .rx-print-table th,
+  .rx-print-table td {
+    border: 1px solid #334155 !important;
+    padding: 5px 8px !important;
+    font-size: 10pt !important;
+  }
+  .rx-print-table th {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    font-weight: 800 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .rx-watermark {
+    opacity: 0.08 !important;
+  }
+}

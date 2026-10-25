@@ -1,0 +1,238 @@
+[
+  {
+    "id": "gabapentin",
+    "generic_name_en": "Gabapentin",
+    "generic_name_fa": "گاباپنتین",
+    "drug_class_en": "Anticonvulsant / Neuropathic Analgesic / Anxiolytic",
+    "drug_class_fa": "ضدتشنج، مسکن دردهای نوروپاتیک، آرام‌بخش و ضداضطراب",
+    "category_type": "human_off_label",
+    "prescriber_highlights": [
+      "بسیار مؤثر در کنترل استرس قبل از ویزیت گربه‌ها (Pre-visit Sedation) و دردهای مزمن آرتروز.",
+      "اخطار حیاتی: شربت‌های خوراکی انسانی اغلب حاوی شیرین‌کننده زایلیتول (Xylitol) هستند که برای سگ‌ها سمیت کشنده کبدی دارد. در سگ فقط از کپسول‌های انسانی حل‌شده استفاده شود.",
+      "قطع ناگهانی در بیماران مبتلا به صرع و تشنج اکیداً منع شده است."
+    ],
+    "excipient_warnings": {
+      "has_xylitol_risk": true,
+      "has_alcohol_risk": false,
+      "notes": "شربت‌های انسانی کودکان حاوی زایلیتول است. از پودر کپسول‌های ۱۰۰، ۳۰۰ یا ۴۰۰ میلی‌گرم استفاده شود."
+    },
+    "species_dosing": {
+      "canine": [
+        {
+          "indication": "درد نوروپاتیک و دردهای مزمن (Neuropathic Pain)",
+          "dose_low": 10.0,
+          "dose_high": 20.0,
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "هر 8 الی 12 ساعت",
+          "notes": "بهتر است با دوز کم شروع و طی چند روز تیتر شود."
+        },
+        {
+          "indication": "ضدتشنج کمکی (Adjunctive Anticonvulsant)",
+          "dose_low": 10.0,
+          "dose_high": 20.0,
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "هر 8 ساعت"
+        }
+      ],
+      "feline": [
+        {
+          "indication": "کاهش استرس و پرخاشگری پیش از مراجعه به کلینیک (Pre-visit Sedation)",
+          "dose_low": 50.0,
+          "dose_high": 100.0,
+          "unit": "mg/cat",
+          "route": "PO",
+          "frequency": "یک دوز، 90 تا 120 دقیقه قبل از انتقال به کلینیک",
+          "notes": "ایجاد آرام‌بخشی بسیار مطلوب بدون دپرسیون تنفسی."
+        },
+        {
+          "indication": "درد مزمن و استئوآرتریت",
+          "dose_low": 5.0,
+          "dose_high": 10.0,
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "هر 12 ساعت"
+        }
+      ]
+    },
+    "iranian_market_products": {
+      "veterinary_brands": [],
+      "human_brands": [
+        {
+          "company": "داروسازی عبیدی / الحاوی / دانا / لقمان",
+          "brand_name": "کپسول گاباپنتین",
+          "form": "کپسول خوراکی",
+          "strength": "100 mg, 300 mg, 400 mg"
+        }
+      ]
+    },
+    "compounding_and_dilution": {
+      "instructions": "برای گربه‌ها و سگ‌های نژاد کوچک: پودر یک کپسول ۱۰۰ میلی‌گرم را در ۱۰ سی‌سی آب مقطر یا شربت ساده حل کنید (غلظت حاصل: ۱۰ میلی‌گرم در هر سی‌سی). حجم مصرفی دقیق به وسیله سرنگ انسولین یا مدرج خورانده شود.",
+      "stability": "تا ۷ روز در یخچال (۲ تا ۸ درجه سانتی‌گراد) قابل نگهداری است."
+    },
+    "adverse_effects": [
+      "خواب‌آلودگی و لتارژی (بسیار شایع)",
+      "آتاکسی و عدم تعادل خفیف عقبی در روزهای اولیه درمان"
+    ],
+    "contraindications": [
+      "حساسیت مفرط به گاباپنتین",
+      "نارسایی شدید کلیوی (نیاز به تنظیم و کاهش دوز)"
+    ]
+  },
+  {
+    "id": "meloxicam",
+    "generic_name_en": "Meloxicam",
+    "generic_name_fa": "ملوکسیکام",
+    "drug_class_en": "NSAID (Non-Steroidal Anti-Inflammatory Drug - Preferential COX-2 Inhibitor)",
+    "drug_class_fa": "داروی ضدالتهاب غیراستروئیدی (مهارکننده انتخابی COX-2)",
+    "category_type": "dual_use",
+    "prescriber_highlights": [
+      "داروی خط اول کنترل درد و التهاب پس از جراحی‌های بافت نرم و ارتوپدی.",
+      "🔴 تداخل ماژور کشنده: مصرف همزمان با کورتیکواستروئیدها (دگزامتازون، پردنیزولون) یا سایر NSAIDها به دلیل خطر خونریزی حاد و پرفوراسیون روده اکیداً ممنوع است.",
+      "در گربه‌ها به علت متابولیسم ضعیف کبدی، دوزهای مکرر باید با احتیاط فراوان و به صورت تیترشده مصرف شود."
+    ],
+    "excipient_warnings": {
+      "has_xylitol_risk": false,
+      "has_alcohol_risk": false,
+      "notes": "شربت دامی ملوکسیکام طعم‌دار است و به راحتی پذیرفته می‌شود."
+    },
+    "species_dosing": {
+      "canine": [
+        {
+          "indication": "درد و التهاب پس از جراحی",
+          "dose_low": 0.2,
+          "dose_high": 0.2,
+          "unit": "mg/kg",
+          "route": "SC / IV / PO",
+          "frequency": "روز اول یک‌بار (دوز بارگیری)، سپس 0.1 mg/kg روزانه",
+          "notes": "همراه با غذا تجویز شود."
+        }
+      ],
+      "feline": [
+        {
+          "indication": "کنترل درد بعد از جراحی (تک‌دوز)",
+          "dose_low": 0.05,
+          "dose_high": 0.1,
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "فقط یک‌بار",
+          "notes": "در صورت نیاز به مصرف مزمن خوراکی، دوز نگهدارنده بسیار پایین 0.01 - 0.03 mg/kg به صورت یک روز در میان توصیه می‌شود."
+        }
+      ],
+      "ruminant": [
+        {
+          "indication": "ورم پستان حاد، پنومونی گوساله‌ها و لنگش",
+          "dose_low": 0.5,
+          "dose_high": 0.5,
+          "unit": "mg/kg",
+          "route": "SC / IV",
+          "frequency": "تک‌دوز"
+        }
+      ]
+    },
+    "iranian_market_products": {
+      "veterinary_brands": [
+        {
+          "company": "داروسازی نصر شیراز",
+          "brand_name": "ملوکسی‌نصر (MeloxiNasr 5 mg/ml & 20 mg/ml)",
+          "form": "محلول تزریقی",
+          "strength": "5 mg/ml (دام کوچک) و 20 mg/ml (دام بزرگ)"
+        },
+        {
+          "company": "داروسازی داملران رازک",
+          "brand_name": "شربت ملوکسیکام دامی",
+          "form": "سوسپانسیون خوراکی",
+          "strength": "1.5 mg/ml"
+        }
+      ],
+      "human_brands": [
+        {
+          "company": "داروسازی فارابی / الحاوی",
+          "brand_name": "قرص ملوکسیکام (موبیک)",
+          "form": "قرص",
+          "strength": "7.5 mg, 15 mg"
+        }
+      ]
+    },
+    "compounding_and_dilution": {
+      "instructions": "در صورت عدم دسترسی به شربت دامی و استفاده از قرص انسانی ۷.۵ میلی‌گرم: قرص در ۷.۵ سی‌سی آب معلق شده و پس از تکان دادن شدید فوراً دوز مدنظر کشیده شود.",
+      "stability": "بهتر است به صورت تازه مصرف شود."
+    },
+    "adverse_effects": [
+      "استفراغ، بی‌اشتهایی و مدفوع سیاه (ملنا)",
+      "افزایش آنزیم‌های کلیوی و اوره (BUN)"
+    ],
+    "contraindications": [
+      "زخم فعال گوارشی یا خونریزی گوارشی",
+      "نارسایی کلیوی یا کبدی دهیدراتاسیون شدید",
+      "مصرف همزمان با کورتون‌ها (دگزامتازون)"
+    ],
+    "withdrawal_times": {
+      "meat_days": 15,
+      "milk_hours": 120
+    }
+  },
+  {
+    "id": "acetaminophen",
+    "generic_name_en": "Acetaminophen / Paracetamol",
+    "generic_name_fa": "استامینوفن (پاراستامول)",
+    "drug_class_en": "Analgesic / Antipyretic",
+    "drug_class_fa": "ضددرد و ضدتب انسانی",
+    "category_type": "blacklisted",
+    "prescriber_highlights": [
+      "🔴 هشدار قرمز مرگبار: در گربه به هیچ عنوان نباید استفاده شود! حتی نصف قرص استامینوفن کودکان در گربه باعث مسمومیت کشنده فوری (Cyanosis, Methemoglobinemia, Facial Edema, Death) می‌شود.",
+      "در سگ نیز سمیت کبدی بسیار بالایی دارد و به دلیل وجود داروهای جایگزین بسیار ایمن‌تر، توصیه نمی‌شود.",
+      "پادزهر اختصاصی در صورت بلع تصادفی: ان-استیل سیستئین (N-Acetylcysteine - NAC) وریدی + اسید اسکوربیک (ویتامین C)."
+    ],
+    "excipient_warnings": {
+      "has_xylitol_risk": true,
+      "has_alcohol_risk": false,
+      "notes": "شربت‌های استامینوفن اطفال علاوه بر سمیت خود دارو، دارای زایلیتول هستند."
+    },
+    "species_dosing": {
+      "feline": [
+        {
+          "indication": "❌ مطلقاً ممنوع (CONTRAINDICATED)",
+          "dose_low": 0.0,
+          "dose_high": 0.0,
+          "unit": "mg/kg",
+          "route": "هیچ",
+          "frequency": "منع مصرف قطعی",
+          "notes": "گربه‌ها فاقد آنزیم Glucuronyl Transferase کافی برای متابولیسم استامینوفن هستند و متابولیت سمی NAPQI گلبول‌های قرمز را نابود می‌کند."
+        }
+      ],
+      "canine": [
+        {
+          "indication": "به ندرت و فقط تحت شرایط خاص فوق‌العاده پایش‌شده",
+          "dose_low": 10.0,
+          "dose_high": 15.0,
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "هر 12 ساعت با احتیاط شدید",
+          "notes": "توصیه اکید: از NSAIDهای استاندارد دامی به جای استامینوفن استفاده شود."
+        }
+      ]
+    },
+    "iranian_market_products": {
+      "veterinary_brands": [],
+      "human_brands": [
+        {
+          "company": "کلیه شرکت‌های داروسازی انسانی",
+          "brand_name": "استامینوفن ۳۲۵، ۵۰۰ و کدئین، شربت ۱۲۰",
+          "form": "قرص / شربت",
+          "strength": "325 mg, 500 mg"
+        }
+      ]
+    },
+    "adverse_effects": [
+      "کبودی مخاطات (Cyanosis) و قهوه‌ای شدن رنگ خون ناشی از متهیموگلوبینمی",
+      "ادم صورت و پنجه‌ها در گربه",
+      "نکروز حاد کبدی و یرقان در سگ"
+    ],
+    "contraindications": [
+      "تمام گربه‌ها (منع ۱۰۰٪ قطعی)",
+      "سگ‌های مبتلا به بیماری کبدی یا فقر گلوتاتیون"
+    ]
+  }
+]

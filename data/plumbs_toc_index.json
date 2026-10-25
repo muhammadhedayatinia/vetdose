@@ -1,0 +1,4694 @@
+[
+  {
+    "name": "Acarbose",
+    "printed_page": 1,
+    "pdf_page_1based": 28,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Acepromazine",
+    "printed_page": 2,
+    "pdf_page_1based": 29,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Acetaminophen",
+    "printed_page": 7,
+    "pdf_page_1based": 34,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Acetazolamide",
+    "printed_page": 9,
+    "pdf_page_1based": 36,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Acetic Acid",
+    "printed_page": 11,
+    "pdf_page_1based": 38,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Acetylcysteine",
+    "printed_page": 12,
+    "pdf_page_1based": 39,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Acyclovir",
+    "printed_page": 14,
+    "pdf_page_1based": 41,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Afoxolaner",
+    "printed_page": 16,
+    "pdf_page_1based": 43,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Aglepristone",
+    "printed_page": 18,
+    "pdf_page_1based": 45,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Albendazole",
+    "printed_page": 20,
+    "pdf_page_1based": 47,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Albumin, Human",
+    "printed_page": 22,
+    "pdf_page_1based": 49,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Albuterol",
+    "printed_page": 24,
+    "pdf_page_1based": 51,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Alendronate",
+    "printed_page": 27,
+    "pdf_page_1based": 54,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Alfaxalone",
+    "printed_page": 29,
+    "pdf_page_1based": 56,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Alfentanil",
+    "printed_page": 35,
+    "pdf_page_1based": 62,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Allopurinol",
+    "printed_page": 37,
+    "pdf_page_1based": 64,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Alprazolam",
+    "printed_page": 39,
+    "pdf_page_1based": 66,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Altrenogest",
+    "printed_page": 41,
+    "pdf_page_1based": 68,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Aluminum Hydroxide",
+    "printed_page": 44,
+    "pdf_page_1based": 71,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amantadine",
+    "printed_page": 45,
+    "pdf_page_1based": 72,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amikacin, Systemic",
+    "printed_page": 47,
+    "pdf_page_1based": 74,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Aminocaproic Acid",
+    "printed_page": 51,
+    "pdf_page_1based": 78,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Aminophylline",
+    "printed_page": 53,
+    "pdf_page_1based": 80,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amiodarone",
+    "printed_page": 56,
+    "pdf_page_1based": 83,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amitriptyline",
+    "printed_page": 58,
+    "pdf_page_1based": 85,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amlodipine",
+    "printed_page": 62,
+    "pdf_page_1based": 89,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ammonium Chloride",
+    "printed_page": 65,
+    "pdf_page_1based": 92,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amoxicillin",
+    "printed_page": 67,
+    "pdf_page_1based": 94,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amoxicillin/Clavulanate",
+    "printed_page": 70,
+    "pdf_page_1based": 97,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amphotericin B",
+    "printed_page": 74,
+    "pdf_page_1based": 101,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ampicillin",
+    "printed_page": 78,
+    "pdf_page_1based": 105,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ampicillin/Sulbactam",
+    "printed_page": 82,
+    "pdf_page_1based": 109,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amprolium",
+    "printed_page": 84,
+    "pdf_page_1based": 111,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antivenom, Latrodectus mactans",
+    "printed_page": 86,
+    "pdf_page_1based": 113,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antivenom, Crotalidae",
+    "printed_page": 87,
+    "pdf_page_1based": 114,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antivenom, North American Coral Snake",
+    "printed_page": 90,
+    "pdf_page_1based": 117,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Apomorphine",
+    "printed_page": 92,
+    "pdf_page_1based": 119,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Apramycin",
+    "printed_page": 94,
+    "pdf_page_1based": 121,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ascorbic Acid",
+    "printed_page": 96,
+    "pdf_page_1based": 123,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Asparaginase",
+    "printed_page": 98,
+    "pdf_page_1based": 125,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Aspirin",
+    "printed_page": 100,
+    "pdf_page_1based": 127,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Atenolol",
+    "printed_page": 103,
+    "pdf_page_1based": 130,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Atipamezole",
+    "printed_page": 106,
+    "pdf_page_1based": 133,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Atovaquone",
+    "printed_page": 108,
+    "pdf_page_1based": 135,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Atracurium",
+    "printed_page": 109,
+    "pdf_page_1based": 136,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Atropine",
+    "printed_page": 112,
+    "pdf_page_1based": 139,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Auranofin",
+    "printed_page": 116,
+    "pdf_page_1based": 143,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Azathioprine",
+    "printed_page": 118,
+    "pdf_page_1based": 145,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Azithromycin",
+    "printed_page": 120,
+    "pdf_page_1based": 147,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Benazepril",
+    "printed_page": 123,
+    "pdf_page_1based": 150,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Betamethasone (Systemic)",
+    "printed_page": 127,
+    "pdf_page_1based": 154,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bethanechol",
+    "printed_page": 130,
+    "pdf_page_1based": 157,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bisacodyl",
+    "printed_page": 132,
+    "pdf_page_1based": 159,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bismuth Subsalicylate",
+    "printed_page": 133,
+    "pdf_page_1based": 160,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bleomycin",
+    "printed_page": 135,
+    "pdf_page_1based": 162,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bromides",
+    "printed_page": 137,
+    "pdf_page_1based": 164,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bromocriptine",
+    "printed_page": 140,
+    "pdf_page_1based": 167,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Budesonide",
+    "printed_page": 142,
+    "pdf_page_1based": 169,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bupivacaine",
+    "printed_page": 144,
+    "pdf_page_1based": 171,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bupivacaine Liposome",
+    "printed_page": 147,
+    "pdf_page_1based": 174,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Buprenorphine",
+    "printed_page": 150,
+    "pdf_page_1based": 177,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Buspirone",
+    "printed_page": 155,
+    "pdf_page_1based": 182,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Butorphanol",
+    "printed_page": 157,
+    "pdf_page_1based": 184,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Butylscopolamine",
+    "printed_page": 164,
+    "pdf_page_1based": 191,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cabergoline",
+    "printed_page": 165,
+    "pdf_page_1based": 192,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Caffeine",
+    "printed_page": 167,
+    "pdf_page_1based": 194,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Calcitonin",
+    "printed_page": 169,
+    "pdf_page_1based": 196,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Calcitriol",
+    "printed_page": 170,
+    "pdf_page_1based": 197,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Calcium Acetate",
+    "printed_page": 172,
+    "pdf_page_1based": 199,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Calcium, IV (-Borogluconate, -Chloride, -Gluconate)",
+    "printed_page": 174,
+    "pdf_page_1based": 201,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Calcium, Oral (-Carbonate, -Gluconate, -Lactate)",
+    "printed_page": 177,
+    "pdf_page_1based": 204,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cannabidiol (CBD)",
+    "printed_page": 179,
+    "pdf_page_1based": 206,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Capromorelin",
+    "printed_page": 182,
+    "pdf_page_1based": 209,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Carbimazole",
+    "printed_page": 184,
+    "pdf_page_1based": 211,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Carboplatin",
+    "printed_page": 186,
+    "pdf_page_1based": 213,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Carnitine",
+    "printed_page": 189,
+    "pdf_page_1based": 216,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Carprofen",
+    "printed_page": 190,
+    "pdf_page_1based": 217,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Carvedilol",
+    "printed_page": 193,
+    "pdf_page_1based": 220,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Caspofungin",
+    "printed_page": 195,
+    "pdf_page_1based": 222,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefaclor",
+    "printed_page": 197,
+    "pdf_page_1based": 224,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefadroxil",
+    "printed_page": 198,
+    "pdf_page_1based": 225,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefazolin",
+    "printed_page": 201,
+    "pdf_page_1based": 228,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefepime",
+    "printed_page": 203,
+    "pdf_page_1based": 230,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefixime",
+    "printed_page": 205,
+    "pdf_page_1based": 232,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefotaxime",
+    "printed_page": 206,
+    "pdf_page_1based": 233,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefotetan",
+    "printed_page": 208,
+    "pdf_page_1based": 235,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefovecin",
+    "printed_page": 210,
+    "pdf_page_1based": 237,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefoxitin",
+    "printed_page": 212,
+    "pdf_page_1based": 239,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefpodoxime",
+    "printed_page": 214,
+    "pdf_page_1based": 241,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefquinome",
+    "printed_page": 216,
+    "pdf_page_1based": 243,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ceftazidime",
+    "printed_page": 219,
+    "pdf_page_1based": 246,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ceftiofur Crystalline Free Acid",
+    "printed_page": 221,
+    "pdf_page_1based": 248,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ceftiofur HCl",
+    "printed_page": 224,
+    "pdf_page_1based": 251,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ceftiofur Sodium",
+    "printed_page": 227,
+    "pdf_page_1based": 254,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ceftriaxone",
+    "printed_page": 230,
+    "pdf_page_1based": 257,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cefuroxime",
+    "printed_page": 232,
+    "pdf_page_1based": 259,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cephalexin",
+    "printed_page": 234,
+    "pdf_page_1based": 261,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cephapirin",
+    "printed_page": 237,
+    "pdf_page_1based": 264,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cetirizine",
+    "printed_page": 238,
+    "pdf_page_1based": 265,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Charcoal, Activated",
+    "printed_page": 240,
+    "pdf_page_1based": 267,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Chlorambucil",
+    "printed_page": 243,
+    "pdf_page_1based": 270,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Chloramphenicol",
+    "printed_page": 245,
+    "pdf_page_1based": 272,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Chlorothiazide",
+    "printed_page": 249,
+    "pdf_page_1based": 276,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Chlorpheniramine",
+    "printed_page": 251,
+    "pdf_page_1based": 278,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Chlorpromazine",
+    "printed_page": 253,
+    "pdf_page_1based": 280,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Chlortetracycline",
+    "printed_page": 255,
+    "pdf_page_1based": 282,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cholestyramine",
+    "printed_page": 257,
+    "pdf_page_1based": 284,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Chorionic Gonadotropin",
+    "printed_page": 259,
+    "pdf_page_1based": 286,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ciclesonide",
+    "printed_page": 261,
+    "pdf_page_1based": 288,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cimetidine",
+    "printed_page": 263,
+    "pdf_page_1based": 290,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ciprofloxacin",
+    "printed_page": 265,
+    "pdf_page_1based": 292,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cisapride",
+    "printed_page": 269,
+    "pdf_page_1based": 296,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cisplatin",
+    "printed_page": 271,
+    "pdf_page_1based": 298,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Citrate, Potassium",
+    "printed_page": 274,
+    "pdf_page_1based": 301,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clarithromycin",
+    "printed_page": 276,
+    "pdf_page_1based": 303,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clemastine",
+    "printed_page": 279,
+    "pdf_page_1based": 306,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clenbuterol",
+    "printed_page": 280,
+    "pdf_page_1based": 307,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clindamycin",
+    "printed_page": 282,
+    "pdf_page_1based": 309,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clodronate",
+    "printed_page": 286,
+    "pdf_page_1based": 313,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clofazimine",
+    "printed_page": 288,
+    "pdf_page_1based": 315,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clomipramine",
+    "printed_page": 289,
+    "pdf_page_1based": 316,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clonazepam",
+    "printed_page": 292,
+    "pdf_page_1based": 319,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clonidine",
+    "printed_page": 294,
+    "pdf_page_1based": 321,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clopidogrel",
+    "printed_page": 297,
+    "pdf_page_1based": 324,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cloprostenol",
+    "printed_page": 299,
+    "pdf_page_1based": 326,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clorazepate",
+    "printed_page": 301,
+    "pdf_page_1based": 328,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cloxacillin",
+    "printed_page": 303,
+    "pdf_page_1based": 330,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cobalamin",
+    "printed_page": 304,
+    "pdf_page_1based": 331,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Codeine",
+    "printed_page": 307,
+    "pdf_page_1based": 334,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Colchicine",
+    "printed_page": 309,
+    "pdf_page_1based": 336,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Corticotropin",
+    "printed_page": 311,
+    "pdf_page_1based": 338,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cortisone",
+    "printed_page": 312,
+    "pdf_page_1based": 339,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cosyntropin",
+    "printed_page": 314,
+    "pdf_page_1based": 341,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Crofelemer",
+    "printed_page": 316,
+    "pdf_page_1based": 343,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cromolyn (Inhaled)",
+    "printed_page": 317,
+    "pdf_page_1based": 344,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cyclophosphamide",
+    "printed_page": 318,
+    "pdf_page_1based": 345,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cyclosporine (Systemic)",
+    "printed_page": 322,
+    "pdf_page_1based": 349,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cyproheptadine",
+    "printed_page": 327,
+    "pdf_page_1based": 354,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cytarabine",
+    "printed_page": 329,
+    "pdf_page_1based": 356,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dacarbazine (DTIC)",
+    "printed_page": 332,
+    "pdf_page_1based": 359,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dactinomycin",
+    "printed_page": 334,
+    "pdf_page_1based": 361,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dalteparin",
+    "printed_page": 335,
+    "pdf_page_1based": 362,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Danofloxacin",
+    "printed_page": 337,
+    "pdf_page_1based": 364,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dantrolene",
+    "printed_page": 339,
+    "pdf_page_1based": 366,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dapsone",
+    "printed_page": 341,
+    "pdf_page_1based": 368,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Darbepoetin Alfa",
+    "printed_page": 342,
+    "pdf_page_1based": 369,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Decoquinate",
+    "printed_page": 344,
+    "pdf_page_1based": 371,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Deferoxamine",
+    "printed_page": 346,
+    "pdf_page_1based": 373,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Deracoxib",
+    "printed_page": 347,
+    "pdf_page_1based": 374,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Desflurane",
+    "printed_page": 349,
+    "pdf_page_1based": 376,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Deslorelin",
+    "printed_page": 351,
+    "pdf_page_1based": 378,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Desmopressin",
+    "printed_page": 352,
+    "pdf_page_1based": 379,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Desoxycorticosterone Pivalate (DOCP)",
+    "printed_page": 355,
+    "pdf_page_1based": 382,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Detomidine",
+    "printed_page": 358,
+    "pdf_page_1based": 385,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dexamethasone",
+    "printed_page": 361,
+    "pdf_page_1based": 388,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dexmedetomidine",
+    "printed_page": 367,
+    "pdf_page_1based": 394,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dexrazoxane",
+    "printed_page": 372,
+    "pdf_page_1based": 399,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dextran 70",
+    "printed_page": 373,
+    "pdf_page_1based": 400,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dextromethorphan",
+    "printed_page": 375,
+    "pdf_page_1based": 402,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dextrose 50% Injection",
+    "printed_page": 376,
+    "pdf_page_1based": 403,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Diazepam",
+    "printed_page": 378,
+    "pdf_page_1based": 405,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Diazoxide",
+    "printed_page": 382,
+    "pdf_page_1based": 409,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dichlorphenamide",
+    "printed_page": 384,
+    "pdf_page_1based": 411,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Diclazuril",
+    "printed_page": 385,
+    "pdf_page_1based": 412,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Diclofenac, Topical",
+    "printed_page": 387,
+    "pdf_page_1based": 414,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dicloxacillin",
+    "printed_page": 389,
+    "pdf_page_1based": 416,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Diethylstilbestrol (DES)",
+    "printed_page": 390,
+    "pdf_page_1based": 417,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Digoxin",
+    "printed_page": 392,
+    "pdf_page_1based": 419,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Diltiazem",
+    "printed_page": 396,
+    "pdf_page_1based": 423,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dimenhydrinate",
+    "printed_page": 399,
+    "pdf_page_1based": 426,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dimercaprol (BAL)",
+    "printed_page": 400,
+    "pdf_page_1based": 427,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dimethyl Sulfoxide",
+    "printed_page": 402,
+    "pdf_page_1based": 429,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Diminazene",
+    "printed_page": 404,
+    "pdf_page_1based": 431,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dinoprost",
+    "printed_page": 405,
+    "pdf_page_1based": 432,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Diphenhydramine",
+    "printed_page": 409,
+    "pdf_page_1based": 436,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Diphenoxylate/Atropine",
+    "printed_page": 412,
+    "pdf_page_1based": 439,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dipyrone",
+    "printed_page": 413,
+    "pdf_page_1based": 440,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dobutamine",
+    "printed_page": 416,
+    "pdf_page_1based": 443,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Docusate",
+    "printed_page": 418,
+    "pdf_page_1based": 445,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dolasetron",
+    "printed_page": 419,
+    "pdf_page_1based": 446,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Domperidone",
+    "printed_page": 420,
+    "pdf_page_1based": 447,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dopamine",
+    "printed_page": 422,
+    "pdf_page_1based": 449,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Doramectin",
+    "printed_page": 424,
+    "pdf_page_1based": 451,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Doxapram",
+    "printed_page": 426,
+    "pdf_page_1based": 453,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Doxepin",
+    "printed_page": 429,
+    "pdf_page_1based": 456,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Doxorubicin",
+    "printed_page": 430,
+    "pdf_page_1based": 457,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Doxycycline",
+    "printed_page": 433,
+    "pdf_page_1based": 460,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Edetate Calcium Disodium (CaEDTA)",
+    "printed_page": 438,
+    "pdf_page_1based": 465,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Edrophonium",
+    "printed_page": 440,
+    "pdf_page_1based": 467,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Emodepside/Praziquantel",
+    "printed_page": 442,
+    "pdf_page_1based": 469,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Enalapril",
+    "printed_page": 445,
+    "pdf_page_1based": 472,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Enoxaparin",
+    "printed_page": 448,
+    "pdf_page_1based": 475,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Enrofloxacin",
+    "printed_page": 450,
+    "pdf_page_1based": 477,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ephedrine",
+    "printed_page": 455,
+    "pdf_page_1based": 482,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Epinephrine",
+    "printed_page": 457,
+    "pdf_page_1based": 484,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Epirubicin",
+    "printed_page": 460,
+    "pdf_page_1based": 487,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Epoetin Alfa",
+    "printed_page": 463,
+    "pdf_page_1based": 490,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Eprinomectin/Praziquantel",
+    "printed_page": 465,
+    "pdf_page_1based": 492,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Eprinomectin",
+    "printed_page": 467,
+    "pdf_page_1based": 494,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Epsiprantel",
+    "printed_page": 469,
+    "pdf_page_1based": 496,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ergocalciferol",
+    "printed_page": 470,
+    "pdf_page_1based": 497,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ertapenem",
+    "printed_page": 472,
+    "pdf_page_1based": 499,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Erythromycin",
+    "printed_page": 473,
+    "pdf_page_1based": 500,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Esmolol",
+    "printed_page": 477,
+    "pdf_page_1based": 504,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Esomeprazole",
+    "printed_page": 478,
+    "pdf_page_1based": 505,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Estradiol",
+    "printed_page": 481,
+    "pdf_page_1based": 508,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Estriol",
+    "printed_page": 483,
+    "pdf_page_1based": 510,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ethambutol",
+    "printed_page": 485,
+    "pdf_page_1based": 512,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ethanol",
+    "printed_page": 487,
+    "pdf_page_1based": 514,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Etodolac",
+    "printed_page": 489,
+    "pdf_page_1based": 516,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Etomidate",
+    "printed_page": 491,
+    "pdf_page_1based": 518,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Euthanasia Agents with Pentobarbital",
+    "printed_page": 493,
+    "pdf_page_1based": 520,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Exenatide",
+    "printed_page": 494,
+    "pdf_page_1based": 521,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Famciclovir",
+    "printed_page": 498,
+    "pdf_page_1based": 525,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Famotidine",
+    "printed_page": 499,
+    "pdf_page_1based": 526,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fatty Acids, Omega- 3",
+    "printed_page": 501,
+    "pdf_page_1based": 528,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Felbamate",
+    "printed_page": 503,
+    "pdf_page_1based": 530,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fenbendazole",
+    "printed_page": 505,
+    "pdf_page_1based": 532,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fenofibrate",
+    "printed_page": 508,
+    "pdf_page_1based": 535,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fenoldopam",
+    "printed_page": 510,
+    "pdf_page_1based": 537,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fentanyl, Injection",
+    "printed_page": 512,
+    "pdf_page_1based": 539,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fentanyl, Transdermal Patch",
+    "printed_page": 515,
+    "pdf_page_1based": 542,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ferrous Sulfate",
+    "printed_page": 519,
+    "pdf_page_1based": 546,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fexofenadine",
+    "printed_page": 521,
+    "pdf_page_1based": 548,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Filgrastim (Granulocyte Colony Stimulating Factor; GCSF)",
+    "printed_page": 522,
+    "pdf_page_1based": 549,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Finasteride",
+    "printed_page": 524,
+    "pdf_page_1based": 551,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Firocoxib",
+    "printed_page": 525,
+    "pdf_page_1based": 552,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Florfenicol",
+    "printed_page": 528,
+    "pdf_page_1based": 555,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fluconazole",
+    "printed_page": 530,
+    "pdf_page_1based": 557,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Flucytosine",
+    "printed_page": 534,
+    "pdf_page_1based": 561,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fludrocortisone",
+    "printed_page": 535,
+    "pdf_page_1based": 562,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Flumazenil",
+    "printed_page": 537,
+    "pdf_page_1based": 564,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Flumethasone",
+    "printed_page": 539,
+    "pdf_page_1based": 566,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Flunixin",
+    "printed_page": 541,
+    "pdf_page_1based": 568,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fluorouracil",
+    "printed_page": 544,
+    "pdf_page_1based": 571,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fluoxetine",
+    "printed_page": 547,
+    "pdf_page_1based": 574,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fluralaner",
+    "printed_page": 549,
+    "pdf_page_1based": 576,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fluticasone",
+    "printed_page": 552,
+    "pdf_page_1based": 579,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fluvoxamine",
+    "printed_page": 554,
+    "pdf_page_1based": 581,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Folic Acid",
+    "printed_page": 556,
+    "pdf_page_1based": 583,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fomepizole",
+    "printed_page": 558,
+    "pdf_page_1based": 585,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fosfomycin",
+    "printed_page": 559,
+    "pdf_page_1based": 586,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Frunevetmab",
+    "printed_page": 561,
+    "pdf_page_1based": 588,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Furazolidone",
+    "printed_page": 562,
+    "pdf_page_1based": 589,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Furosemide",
+    "printed_page": 563,
+    "pdf_page_1based": 590,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Gabapentin",
+    "printed_page": 568,
+    "pdf_page_1based": 595,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Gamithromycin",
+    "printed_page": 571,
+    "pdf_page_1based": 598,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Gemcitabine",
+    "printed_page": 572,
+    "pdf_page_1based": 599,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Gemfibrozil",
+    "printed_page": 574,
+    "pdf_page_1based": 601,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Gentamicin, Systemic",
+    "printed_page": 576,
+    "pdf_page_1based": 603,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Glipizide",
+    "printed_page": 580,
+    "pdf_page_1based": 607,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Glucagon",
+    "printed_page": 582,
+    "pdf_page_1based": 609,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Glucosamine/Chondroitin Sulfate",
+    "printed_page": 583,
+    "pdf_page_1based": 610,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Glyburide",
+    "printed_page": 585,
+    "pdf_page_1based": 612,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Glycerin, Oral",
+    "printed_page": 587,
+    "pdf_page_1based": 614,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Glycopyrrolate",
+    "printed_page": 588,
+    "pdf_page_1based": 615,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Gonadorelin",
+    "printed_page": 591,
+    "pdf_page_1based": 618,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Granisetron",
+    "printed_page": 593,
+    "pdf_page_1based": 620,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Grapiprant",
+    "printed_page": 594,
+    "pdf_page_1based": 621,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Griseofulvin",
+    "printed_page": 596,
+    "pdf_page_1based": 623,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Guaifenesin, Intravenous",
+    "printed_page": 598,
+    "pdf_page_1based": 625,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hemoglobin Glutamer- 200 (Bovine)",
+    "printed_page": 601,
+    "pdf_page_1based": 628,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Heparin",
+    "printed_page": 603,
+    "pdf_page_1based": 630,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hyaluronate",
+    "printed_page": 606,
+    "pdf_page_1based": 633,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydralazine",
+    "printed_page": 607,
+    "pdf_page_1based": 634,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydrochlorothiazide",
+    "printed_page": 610,
+    "pdf_page_1based": 637,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydrocodone Combinations",
+    "printed_page": 612,
+    "pdf_page_1based": 639,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydrocortisone",
+    "printed_page": 615,
+    "pdf_page_1based": 642,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydrogen Peroxide 3% (Oral)",
+    "printed_page": 618,
+    "pdf_page_1based": 645,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydromorphone",
+    "printed_page": 619,
+    "pdf_page_1based": 646,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydroxychloroquine",
+    "printed_page": 623,
+    "pdf_page_1based": 650,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydroxyethyl Starch (HES) Colloids",
+    "printed_page": 625,
+    "pdf_page_1based": 652,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydroxyurea",
+    "printed_page": 628,
+    "pdf_page_1based": 655,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydroxyzine",
+    "printed_page": 629,
+    "pdf_page_1based": 656,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hyoscyamine",
+    "printed_page": 632,
+    "pdf_page_1based": 659,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hypertonic Saline (7% to 7.5%)",
+    "printed_page": 633,
+    "pdf_page_1based": 660,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ifosfamide",
+    "printed_page": 635,
+    "pdf_page_1based": 662,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Imepitoin",
+    "printed_page": 637,
+    "pdf_page_1based": 664,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Imidacloprid, Systemic",
+    "printed_page": 639,
+    "pdf_page_1based": 666,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Imidapril",
+    "printed_page": 640,
+    "pdf_page_1based": 667,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Imidocarb",
+    "printed_page": 642,
+    "pdf_page_1based": 669,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Imipenem/Cilastatin Sodium",
+    "printed_page": 644,
+    "pdf_page_1based": 671,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Imipramine",
+    "printed_page": 646,
+    "pdf_page_1based": 673,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Immune Globulin (Human), Intravenous",
+    "printed_page": 649,
+    "pdf_page_1based": 676,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Insulin, Aspart",
+    "printed_page": 651,
+    "pdf_page_1based": 678,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Insulin, Detemir",
+    "printed_page": 655,
+    "pdf_page_1based": 682,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Insulin, Glargine",
+    "printed_page": 658,
+    "pdf_page_1based": 685,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Insulin, Lente",
+    "printed_page": 662,
+    "pdf_page_1based": 689,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Insulin, Lispro",
+    "printed_page": 666,
+    "pdf_page_1based": 693,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Insulin, NPH",
+    "printed_page": 670,
+    "pdf_page_1based": 697,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Insulin, Protamine Zinc",
+    "printed_page": 674,
+    "pdf_page_1based": 701,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Insulin, Regular (Crystalline Zinc)",
+    "printed_page": 677,
+    "pdf_page_1based": 704,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Interferon Alfa, Human Recombinant",
+    "printed_page": 681,
+    "pdf_page_1based": 708,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Interferon Omega, Feline Origin",
+    "printed_page": 683,
+    "pdf_page_1based": 710,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Iodide (Potassium-, Sodium-)",
+    "printed_page": 685,
+    "pdf_page_1based": 712,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Iohexol",
+    "printed_page": 687,
+    "pdf_page_1based": 714,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ipratropium",
+    "printed_page": 689,
+    "pdf_page_1based": 716,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Irbesartan",
+    "printed_page": 690,
+    "pdf_page_1based": 717,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Iron Dextran",
+    "printed_page": 692,
+    "pdf_page_1based": 719,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Isoflupredone",
+    "printed_page": 693,
+    "pdf_page_1based": 720,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Isoflurane",
+    "printed_page": 695,
+    "pdf_page_1based": 722,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Isoniazid (INH)",
+    "printed_page": 698,
+    "pdf_page_1based": 725,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Isoproterenol",
+    "printed_page": 700,
+    "pdf_page_1based": 727,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Isotretinoin",
+    "printed_page": 701,
+    "pdf_page_1based": 728,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Isoxsuprine",
+    "printed_page": 703,
+    "pdf_page_1based": 730,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Itraconazole",
+    "printed_page": 704,
+    "pdf_page_1based": 731,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ivermectin",
+    "printed_page": 709,
+    "pdf_page_1based": 736,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ivermectin/Clorsulon",
+    "printed_page": 714,
+    "pdf_page_1based": 741,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Kaolin/Pectin",
+    "printed_page": 715,
+    "pdf_page_1based": 742,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ketamine",
+    "printed_page": 717,
+    "pdf_page_1based": 744,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ketoconazole, Systemic",
+    "printed_page": 725,
+    "pdf_page_1based": 752,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ketoprofen",
+    "printed_page": 729,
+    "pdf_page_1based": 756,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ketorolac",
+    "printed_page": 732,
+    "pdf_page_1based": 759,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "L- Theanine",
+    "printed_page": 733,
+    "pdf_page_1based": 760,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lactulose",
+    "printed_page": 735,
+    "pdf_page_1based": 762,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lanthanum",
+    "printed_page": 736,
+    "pdf_page_1based": 763,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Leflunomide",
+    "printed_page": 738,
+    "pdf_page_1based": 765,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Leucovorin",
+    "printed_page": 740,
+    "pdf_page_1based": 767,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Leuprolide",
+    "printed_page": 741,
+    "pdf_page_1based": 768,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Levamisole",
+    "printed_page": 743,
+    "pdf_page_1based": 770,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Levetiracetam",
+    "printed_page": 746,
+    "pdf_page_1based": 773,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Levothyroxine",
+    "printed_page": 749,
+    "pdf_page_1based": 776,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lidocaine, Local Anesthetic",
+    "printed_page": 752,
+    "pdf_page_1based": 779,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lidocaine (Intravenous; Systemic)",
+    "printed_page": 756,
+    "pdf_page_1based": 783,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lincomycin",
+    "printed_page": 760,
+    "pdf_page_1based": 787,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Linezolid",
+    "printed_page": 762,
+    "pdf_page_1based": 789,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Liothyronine",
+    "printed_page": 764,
+    "pdf_page_1based": 791,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lipid Emulsion, Intravenous (ILE)",
+    "printed_page": 766,
+    "pdf_page_1based": 793,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lisinopril",
+    "printed_page": 769,
+    "pdf_page_1based": 796,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lokivetmab",
+    "printed_page": 771,
+    "pdf_page_1based": 798,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lomustine",
+    "printed_page": 773,
+    "pdf_page_1based": 800,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Loperamide",
+    "printed_page": 775,
+    "pdf_page_1based": 802,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Loratadine",
+    "printed_page": 777,
+    "pdf_page_1based": 804,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lorazepam",
+    "printed_page": 778,
+    "pdf_page_1based": 805,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Losartan",
+    "printed_page": 781,
+    "pdf_page_1based": 808,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lotilaner",
+    "printed_page": 783,
+    "pdf_page_1based": 810,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lufenuron/Lufenuron Combination Products",
+    "printed_page": 785,
+    "pdf_page_1based": 812,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lysine",
+    "printed_page": 788,
+    "pdf_page_1based": 815,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Magnesium Hydroxide",
+    "printed_page": 789,
+    "pdf_page_1based": 816,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Magnesium, IV",
+    "printed_page": 791,
+    "pdf_page_1based": 818,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mannitol",
+    "printed_page": 793,
+    "pdf_page_1based": 820,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Marbofloxacin",
+    "printed_page": 796,
+    "pdf_page_1based": 823,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Maropitant",
+    "printed_page": 799,
+    "pdf_page_1based": 826,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mavacoxib",
+    "printed_page": 802,
+    "pdf_page_1based": 829,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mechlorethamine",
+    "printed_page": 804,
+    "pdf_page_1based": 831,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Meclizine",
+    "printed_page": 805,
+    "pdf_page_1based": 832,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Medetomidine",
+    "printed_page": 807,
+    "pdf_page_1based": 834,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Medetomidine/Vatinoxan",
+    "printed_page": 811,
+    "pdf_page_1based": 838,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Medium Chain Triglycerides; (MCT) Oil",
+    "printed_page": 814,
+    "pdf_page_1based": 841,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Medroxyprogesterone",
+    "printed_page": 815,
+    "pdf_page_1based": 842,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Megestrol",
+    "printed_page": 817,
+    "pdf_page_1based": 844,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Meglumine Antimoniate",
+    "printed_page": 819,
+    "pdf_page_1based": 846,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Melarsomine",
+    "printed_page": 821,
+    "pdf_page_1based": 848,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Melatonin",
+    "printed_page": 823,
+    "pdf_page_1based": 850,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Meloxicam",
+    "printed_page": 825,
+    "pdf_page_1based": 852,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Melphalan",
+    "printed_page": 829,
+    "pdf_page_1based": 856,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Meperidine",
+    "printed_page": 831,
+    "pdf_page_1based": 858,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mepivacaine",
+    "printed_page": 834,
+    "pdf_page_1based": 861,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Meropenem",
+    "printed_page": 837,
+    "pdf_page_1based": 864,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Metergoline",
+    "printed_page": 839,
+    "pdf_page_1based": 866,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Metformin",
+    "printed_page": 840,
+    "pdf_page_1based": 867,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Methadone",
+    "printed_page": 842,
+    "pdf_page_1based": 869,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Methazolamide",
+    "printed_page": 846,
+    "pdf_page_1based": 873,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Methenamine",
+    "printed_page": 848,
+    "pdf_page_1based": 875,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Methimazole",
+    "printed_page": 849,
+    "pdf_page_1based": 876,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Methionine",
+    "printed_page": 852,
+    "pdf_page_1based": 879,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Methocarbamol",
+    "printed_page": 854,
+    "pdf_page_1based": 881,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Methotrexate",
+    "printed_page": 856,
+    "pdf_page_1based": 883,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Methylene Blue",
+    "printed_page": 859,
+    "pdf_page_1based": 886,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Methylphenidate",
+    "printed_page": 861,
+    "pdf_page_1based": 888,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Methylprednisolone",
+    "printed_page": 863,
+    "pdf_page_1based": 890,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Metoclopramide",
+    "printed_page": 867,
+    "pdf_page_1based": 894,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Metoprolol",
+    "printed_page": 870,
+    "pdf_page_1based": 897,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Metronidazole",
+    "printed_page": 873,
+    "pdf_page_1based": 900,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Metyrapone",
+    "printed_page": 877,
+    "pdf_page_1based": 904,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mexiletine",
+    "printed_page": 878,
+    "pdf_page_1based": 905,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Midazolam",
+    "printed_page": 880,
+    "pdf_page_1based": 907,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Milbemycin Oxime",
+    "printed_page": 885,
+    "pdf_page_1based": 912,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Miltefosine",
+    "printed_page": 887,
+    "pdf_page_1based": 914,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mineral Oil",
+    "printed_page": 889,
+    "pdf_page_1based": 916,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Minocycline",
+    "printed_page": 890,
+    "pdf_page_1based": 917,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mirtazapine",
+    "printed_page": 893,
+    "pdf_page_1based": 920,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Misoprostol",
+    "printed_page": 896,
+    "pdf_page_1based": 923,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mitotane",
+    "printed_page": 899,
+    "pdf_page_1based": 926,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mitoxantrone",
+    "printed_page": 902,
+    "pdf_page_1based": 929,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Molybdates",
+    "printed_page": 904,
+    "pdf_page_1based": 931,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Montelukast",
+    "printed_page": 905,
+    "pdf_page_1based": 932,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Morantel",
+    "printed_page": 906,
+    "pdf_page_1based": 933,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Morphine",
+    "printed_page": 907,
+    "pdf_page_1based": 934,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Moxidectin/Moxidectin Combination Products",
+    "printed_page": 912,
+    "pdf_page_1based": 939,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mycobacterial Cell Wall Fraction Immunomodulator",
+    "printed_page": 918,
+    "pdf_page_1based": 945,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mycophenolate",
+    "printed_page": 920,
+    "pdf_page_1based": 947,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nalbuphine",
+    "printed_page": 923,
+    "pdf_page_1based": 950,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Naloxone",
+    "printed_page": 924,
+    "pdf_page_1based": 951,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Naltrexone",
+    "printed_page": 926,
+    "pdf_page_1based": 953,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Neomycin",
+    "printed_page": 928,
+    "pdf_page_1based": 955,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Neostigmine",
+    "printed_page": 930,
+    "pdf_page_1based": 957,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Niacinamide",
+    "printed_page": 932,
+    "pdf_page_1based": 959,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nitazoxanide",
+    "printed_page": 933,
+    "pdf_page_1based": 960,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nitenpyram",
+    "printed_page": 935,
+    "pdf_page_1based": 962,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nitrofurantoin",
+    "printed_page": 936,
+    "pdf_page_1based": 963,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nitroglycerin, Transdermal",
+    "printed_page": 938,
+    "pdf_page_1based": 965,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nitroprusside",
+    "printed_page": 939,
+    "pdf_page_1based": 966,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nizatidine",
+    "printed_page": 941,
+    "pdf_page_1based": 968,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Norepinephrine",
+    "printed_page": 943,
+    "pdf_page_1based": 970,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Novobiocin",
+    "printed_page": 945,
+    "pdf_page_1based": 972,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nystatin",
+    "printed_page": 946,
+    "pdf_page_1based": 973,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Oclacitinib",
+    "printed_page": 947,
+    "pdf_page_1based": 974,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Octreotide",
+    "printed_page": 950,
+    "pdf_page_1based": 977,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Olsalazine",
+    "printed_page": 952,
+    "pdf_page_1based": 979,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Omeprazole",
+    "printed_page": 953,
+    "pdf_page_1based": 980,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ondansetron",
+    "printed_page": 956,
+    "pdf_page_1based": 983,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Orbifloxacin",
+    "printed_page": 958,
+    "pdf_page_1based": 985,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Osaterone",
+    "printed_page": 960,
+    "pdf_page_1based": 987,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Oseltamivir",
+    "printed_page": 961,
+    "pdf_page_1based": 988,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Oxacillin",
+    "printed_page": 963,
+    "pdf_page_1based": 990,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Oxazepam",
+    "printed_page": 964,
+    "pdf_page_1based": 991,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Oxfendazole",
+    "printed_page": 966,
+    "pdf_page_1based": 993,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Oxibendazole",
+    "printed_page": 967,
+    "pdf_page_1based": 994,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Oxybutynin",
+    "printed_page": 968,
+    "pdf_page_1based": 995,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Oxymorphone",
+    "printed_page": 969,
+    "pdf_page_1based": 996,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Oxytetracycline",
+    "printed_page": 972,
+    "pdf_page_1based": 999,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Oxytocin",
+    "printed_page": 977,
+    "pdf_page_1based": 1004,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pamidronate",
+    "printed_page": 980,
+    "pdf_page_1based": 1007,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pancrelipase",
+    "printed_page": 981,
+    "pdf_page_1based": 1008,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pantoprazole",
+    "printed_page": 983,
+    "pdf_page_1based": 1010,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Parapox Ovis Virus Immunomodulator",
+    "printed_page": 985,
+    "pdf_page_1based": 1012,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Paromomycin",
+    "printed_page": 986,
+    "pdf_page_1based": 1013,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Paroxetine",
+    "printed_page": 988,
+    "pdf_page_1based": 1015,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Penicillamine",
+    "printed_page": 990,
+    "pdf_page_1based": 1017,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Penicillin G",
+    "printed_page": 992,
+    "pdf_page_1based": 1019,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Penicillin V",
+    "printed_page": 996,
+    "pdf_page_1based": 1023,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pentobarbital",
+    "printed_page": 998,
+    "pdf_page_1based": 1025,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pentosan Polysulfate (PPS)",
+    "printed_page": 1000,
+    "pdf_page_1based": 1027,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pentoxifylline",
+    "printed_page": 1002,
+    "pdf_page_1based": 1029,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pergolide",
+    "printed_page": 1004,
+    "pdf_page_1based": 1031,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Phenobarbital",
+    "printed_page": 1006,
+    "pdf_page_1based": 1033,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Phenoxybenzamine",
+    "printed_page": 1011,
+    "pdf_page_1based": 1038,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Phenylbutazone",
+    "printed_page": 1013,
+    "pdf_page_1based": 1040,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Phenylephrine",
+    "printed_page": 1015,
+    "pdf_page_1based": 1042,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Phenylpropanolamine",
+    "printed_page": 1017,
+    "pdf_page_1based": 1044,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pheromones",
+    "printed_page": 1019,
+    "pdf_page_1based": 1046,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Phosphate (Potassium-, Sodium-), IV",
+    "printed_page": 1021,
+    "pdf_page_1based": 1048,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Physostigmine",
+    "printed_page": 1022,
+    "pdf_page_1based": 1049,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Phytonadione",
+    "printed_page": 1024,
+    "pdf_page_1based": 1051,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pimobendan",
+    "printed_page": 1026,
+    "pdf_page_1based": 1053,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Piperacillin/Tazobactam",
+    "printed_page": 1029,
+    "pdf_page_1based": 1056,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Piperazine",
+    "printed_page": 1031,
+    "pdf_page_1based": 1058,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pirlimycin",
+    "printed_page": 1032,
+    "pdf_page_1based": 1059,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Piroxicam",
+    "printed_page": 1033,
+    "pdf_page_1based": 1060,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Polyethylene Glycol 3350 (PEG 3350)",
+    "printed_page": 1035,
+    "pdf_page_1based": 1062,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Polymyxin B, Systemic",
+    "printed_page": 1037,
+    "pdf_page_1based": 1064,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Polysulfated Glycosaminoglycan",
+    "printed_page": 1039,
+    "pdf_page_1based": 1066,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ponazuril",
+    "printed_page": 1041,
+    "pdf_page_1based": 1068,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Posaconazole",
+    "printed_page": 1043,
+    "pdf_page_1based": 1070,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Potassium (-Acetate, -Chloride,-Gluconate)",
+    "printed_page": 1045,
+    "pdf_page_1based": 1072,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pradofloxacin",
+    "printed_page": 1048,
+    "pdf_page_1based": 1075,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pralidoxime (2- PAM)",
+    "printed_page": 1051,
+    "pdf_page_1based": 1078,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Praziquantel/Praziquantel Combination Products",
+    "printed_page": 1053,
+    "pdf_page_1based": 1080,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Prazosin",
+    "printed_page": 1057,
+    "pdf_page_1based": 1084,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "PrednisoLONE/Prednisone/PrednisoLONE Sodium Succinate",
+    "printed_page": 1058,
+    "pdf_page_1based": 1085,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pregabalin",
+    "printed_page": 1064,
+    "pdf_page_1based": 1091,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Primaquine",
+    "printed_page": 1065,
+    "pdf_page_1based": 1092,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Probenecid",
+    "printed_page": 1067,
+    "pdf_page_1based": 1094,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Procainamide",
+    "printed_page": 1068,
+    "pdf_page_1based": 1095,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Procarbazine",
+    "printed_page": 1071,
+    "pdf_page_1based": 1098,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Prochlorperazine",
+    "printed_page": 1073,
+    "pdf_page_1based": 1100,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Promethazine",
+    "printed_page": 1075,
+    "pdf_page_1based": 1102,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Propantheline",
+    "printed_page": 1077,
+    "pdf_page_1based": 1104,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Propionibacterium Acnes Injection",
+    "printed_page": 1079,
+    "pdf_page_1based": 1106,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Propofol",
+    "printed_page": 1080,
+    "pdf_page_1based": 1107,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Propranolol",
+    "printed_page": 1086,
+    "pdf_page_1based": 1113,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pseudoephedrine",
+    "printed_page": 1089,
+    "pdf_page_1based": 1116,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Psyllium",
+    "printed_page": 1090,
+    "pdf_page_1based": 1117,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pyrantel",
+    "printed_page": 1092,
+    "pdf_page_1based": 1119,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pyridostigmine",
+    "printed_page": 1094,
+    "pdf_page_1based": 1121,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pyridoxine",
+    "printed_page": 1096,
+    "pdf_page_1based": 1123,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pyrilamine",
+    "printed_page": 1098,
+    "pdf_page_1based": 1125,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pyrimethamine",
+    "printed_page": 1099,
+    "pdf_page_1based": 1126,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pyrimethamine/Sulfadiazine",
+    "printed_page": 1101,
+    "pdf_page_1based": 1128,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Quinacrine",
+    "printed_page": 1103,
+    "pdf_page_1based": 1130,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Quinidine",
+    "printed_page": 1104,
+    "pdf_page_1based": 1131,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Rabacfosadine",
+    "printed_page": 1107,
+    "pdf_page_1based": 1134,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ramipril",
+    "printed_page": 1109,
+    "pdf_page_1based": 1136,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ranitidine",
+    "printed_page": 1111,
+    "pdf_page_1based": 1138,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Remifentanil",
+    "printed_page": 1114,
+    "pdf_page_1based": 1141,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Reserpine",
+    "printed_page": 1116,
+    "pdf_page_1based": 1143,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Rifampin",
+    "printed_page": 1118,
+    "pdf_page_1based": 1145,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Rifaximin",
+    "printed_page": 1121,
+    "pdf_page_1based": 1148,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Rivaroxaban",
+    "printed_page": 1122,
+    "pdf_page_1based": 1149,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Robenacoxib",
+    "printed_page": 1124,
+    "pdf_page_1based": 1151,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Rocuronium",
+    "printed_page": 1127,
+    "pdf_page_1based": 1154,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Romifidine",
+    "printed_page": 1129,
+    "pdf_page_1based": 1156,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ronidazole",
+    "printed_page": 1131,
+    "pdf_page_1based": 1158,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ropinirole",
+    "printed_page": 1132,
+    "pdf_page_1based": 1159,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ropivacaine",
+    "printed_page": 1135,
+    "pdf_page_1based": 1162,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "S- Adenosyl- Methionine (SAMe)",
+    "printed_page": 1137,
+    "pdf_page_1based": 1164,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "S- Adenosyl- Methionine (SAMe)/Silybin",
+    "printed_page": 1139,
+    "pdf_page_1based": 1166,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Saline Cathartics",
+    "printed_page": 1143,
+    "pdf_page_1based": 1170,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sarolaner",
+    "printed_page": 1144,
+    "pdf_page_1based": 1171,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Selamectin",
+    "printed_page": 1147,
+    "pdf_page_1based": 1174,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Selamectin/Sarolaner",
+    "printed_page": 1149,
+    "pdf_page_1based": 1176,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Selegiline",
+    "printed_page": 1151,
+    "pdf_page_1based": 1178,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sertraline",
+    "printed_page": 1153,
+    "pdf_page_1based": 1180,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sevelamer",
+    "printed_page": 1155,
+    "pdf_page_1based": 1182,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sevoflurane",
+    "printed_page": 1156,
+    "pdf_page_1based": 1183,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sildenafil",
+    "printed_page": 1159,
+    "pdf_page_1based": 1186,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sodium Bicarbonate",
+    "printed_page": 1161,
+    "pdf_page_1based": 1188,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sodium Stibogluconate",
+    "printed_page": 1164,
+    "pdf_page_1based": 1191,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sodium Thiosulfate",
+    "printed_page": 1165,
+    "pdf_page_1based": 1192,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Somatotropin",
+    "printed_page": 1166,
+    "pdf_page_1based": 1193,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sorbitol",
+    "printed_page": 1168,
+    "pdf_page_1based": 1195,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sotalol",
+    "printed_page": 1169,
+    "pdf_page_1based": 1196,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Spectinomycin",
+    "printed_page": 1171,
+    "pdf_page_1based": 1198,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Spinosad",
+    "printed_page": 1173,
+    "pdf_page_1based": 1200,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Spironolactone",
+    "printed_page": 1175,
+    "pdf_page_1based": 1202,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Spironolactone/Benazepril",
+    "printed_page": 1177,
+    "pdf_page_1based": 1204,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Stanozolol",
+    "printed_page": 1180,
+    "pdf_page_1based": 1207,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Staphylococcus Aureus Phage Lysate",
+    "printed_page": 1182,
+    "pdf_page_1based": 1209,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Streptozocin",
+    "printed_page": 1184,
+    "pdf_page_1based": 1211,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Succimer",
+    "printed_page": 1185,
+    "pdf_page_1based": 1212,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Succinylcholine",
+    "printed_page": 1187,
+    "pdf_page_1based": 1214,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sucralfate",
+    "printed_page": 1189,
+    "pdf_page_1based": 1216,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sufentanil",
+    "printed_page": 1190,
+    "pdf_page_1based": 1217,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sulfa-/Trimethoprim",
+    "printed_page": 1193,
+    "pdf_page_1based": 1220,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sulfadimethoxine",
+    "printed_page": 1197,
+    "pdf_page_1based": 1224,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sulfadimethoxine/Ormetoprim",
+    "printed_page": 1200,
+    "pdf_page_1based": 1227,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sulfasalazine",
+    "printed_page": 1202,
+    "pdf_page_1based": 1229,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tadalafil",
+    "printed_page": 1204,
+    "pdf_page_1based": 1231,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tamsulosin",
+    "printed_page": 1205,
+    "pdf_page_1based": 1232,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Taurine",
+    "printed_page": 1207,
+    "pdf_page_1based": 1234,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Telmisartan",
+    "printed_page": 1208,
+    "pdf_page_1based": 1235,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Terbinafine",
+    "printed_page": 1210,
+    "pdf_page_1based": 1237,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Terbutaline",
+    "printed_page": 1213,
+    "pdf_page_1based": 1240,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Testosterone",
+    "printed_page": 1215,
+    "pdf_page_1based": 1242,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tetracycline",
+    "printed_page": 1217,
+    "pdf_page_1based": 1244,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Theophylline",
+    "printed_page": 1220,
+    "pdf_page_1based": 1247,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Thiamine",
+    "printed_page": 1223,
+    "pdf_page_1based": 1250,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Thiopental",
+    "printed_page": 1225,
+    "pdf_page_1based": 1252,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Thyrotropin Alfa",
+    "printed_page": 1227,
+    "pdf_page_1based": 1254,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Thyrotropin- Releasing Hormone (TRH)",
+    "printed_page": 1228,
+    "pdf_page_1based": 1255,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tiamulin",
+    "printed_page": 1230,
+    "pdf_page_1based": 1257,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tigilanol Tiglate",
+    "printed_page": 1232,
+    "pdf_page_1based": 1259,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tildipirosin",
+    "printed_page": 1235,
+    "pdf_page_1based": 1262,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tiletamine/Zolazepam",
+    "printed_page": 1236,
+    "pdf_page_1based": 1263,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tilmicosin",
+    "printed_page": 1240,
+    "pdf_page_1based": 1267,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tiludronate",
+    "printed_page": 1242,
+    "pdf_page_1based": 1269,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tinidazole",
+    "printed_page": 1244,
+    "pdf_page_1based": 1271,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tiopronin",
+    "printed_page": 1245,
+    "pdf_page_1based": 1272,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tobramycin, Systemic",
+    "printed_page": 1247,
+    "pdf_page_1based": 1274,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Toceranib",
+    "printed_page": 1249,
+    "pdf_page_1based": 1276,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tolazoline",
+    "printed_page": 1252,
+    "pdf_page_1based": 1279,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tolfenamic Acid",
+    "printed_page": 1254,
+    "pdf_page_1based": 1281,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Toltrazuril",
+    "printed_page": 1255,
+    "pdf_page_1based": 1282,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Topiramate",
+    "printed_page": 1257,
+    "pdf_page_1based": 1284,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Torsemide",
+    "printed_page": 1259,
+    "pdf_page_1based": 1286,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tramadol",
+    "printed_page": 1261,
+    "pdf_page_1based": 1288,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tranexamic Acid",
+    "printed_page": 1264,
+    "pdf_page_1based": 1291,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Trazodone",
+    "printed_page": 1266,
+    "pdf_page_1based": 1293,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Triamcinolone",
+    "printed_page": 1269,
+    "pdf_page_1based": 1296,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Triamterene",
+    "printed_page": 1273,
+    "pdf_page_1based": 1300,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Trientine",
+    "printed_page": 1274,
+    "pdf_page_1based": 1301,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Trilostane",
+    "printed_page": 1275,
+    "pdf_page_1based": 1302,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Trimeprazine/Prednisolone",
+    "printed_page": 1279,
+    "pdf_page_1based": 1306,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tripelennamine",
+    "printed_page": 1281,
+    "pdf_page_1based": 1308,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tulathromycin",
+    "printed_page": 1282,
+    "pdf_page_1based": 1309,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tylosin",
+    "printed_page": 1284,
+    "pdf_page_1based": 1311,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ursodiol",
+    "printed_page": 1287,
+    "pdf_page_1based": 1314,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Valacyclovir",
+    "printed_page": 1289,
+    "pdf_page_1based": 1316,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Vancomycin",
+    "printed_page": 1291,
+    "pdf_page_1based": 1318,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Vasopressin",
+    "printed_page": 1293,
+    "pdf_page_1based": 1320,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Vecuronium",
+    "printed_page": 1295,
+    "pdf_page_1based": 1322,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Verapamil",
+    "printed_page": 1297,
+    "pdf_page_1based": 1324,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Verdinexor",
+    "printed_page": 1300,
+    "pdf_page_1based": 1327,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Vinblastine",
+    "printed_page": 1302,
+    "pdf_page_1based": 1329,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Vincristine",
+    "printed_page": 1304,
+    "pdf_page_1based": 1331,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Vinorelbine",
+    "printed_page": 1307,
+    "pdf_page_1based": 1334,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Vitamin A",
+    "printed_page": 1310,
+    "pdf_page_1based": 1337,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Vitamin E  Selenium",
+    "printed_page": 1311,
+    "pdf_page_1based": 1338,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Voriconazole",
+    "printed_page": 1314,
+    "pdf_page_1based": 1341,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Warfarin",
+    "printed_page": 1317,
+    "pdf_page_1based": 1344,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Xylazine",
+    "printed_page": 1319,
+    "pdf_page_1based": 1346,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Yohimbine",
+    "printed_page": 1324,
+    "pdf_page_1based": 1351,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Zidovudine",
+    "printed_page": 1326,
+    "pdf_page_1based": 1353,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Zinc (Systemic)",
+    "printed_page": 1327,
+    "pdf_page_1based": 1354,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Zoledronate",
+    "printed_page": 1329,
+    "pdf_page_1based": 1356,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Zonisamide",
+    "printed_page": 1331,
+    "pdf_page_1based": 1358,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ophthalmic Agents, Topical",
+    "printed_page": 1334,
+    "pdf_page_1based": 1361,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Routes of Administration for Ophthalmic Drugs",
+    "printed_page": 1334,
+    "pdf_page_1based": 1361,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Principles of Compounding Ophthalmic Products",
+    "printed_page": 1335,
+    "pdf_page_1based": 1362,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "General Principles of Ocular Penetration",
+    "printed_page": 1337,
+    "pdf_page_1based": 1364,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Topical Ophthalmic Agents Listed by Class/Indication",
+    "printed_page": 1338,
+    "pdf_page_1based": 1365,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Acetylcysteine Ophthalmic",
+    "printed_page": 1339,
+    "pdf_page_1based": 1366,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Acyclovir Ophthalmic",
+    "printed_page": 1339,
+    "pdf_page_1based": 1366,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Alcaftadine Ophthalmic",
+    "printed_page": 1340,
+    "pdf_page_1based": 1367,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Alteplase Ophthalmic",
+    "printed_page": 1340,
+    "pdf_page_1based": 1367,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amikacin Ophthalmic",
+    "printed_page": 1341,
+    "pdf_page_1based": 1368,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amphotericin B Ophthalmic",
+    "printed_page": 1342,
+    "pdf_page_1based": 1369,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Apraclonidine Ophthalmic",
+    "printed_page": 1343,
+    "pdf_page_1based": 1370,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Atropine Ophthalmic",
+    "printed_page": 1343,
+    "pdf_page_1based": 1370,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Azelastine Ophthalmic",
+    "printed_page": 1344,
+    "pdf_page_1based": 1371,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Azithromycin Ophthalmic",
+    "printed_page": 1345,
+    "pdf_page_1based": 1372,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Benoxinate Ophthalmic",
+    "printed_page": 1345,
+    "pdf_page_1based": 1372,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bepotastine Ophthalmic",
+    "printed_page": 1346,
+    "pdf_page_1based": 1373,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Besifloxacin Ophthalmic",
+    "printed_page": 1347,
+    "pdf_page_1based": 1374,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Betaxolol Ophthalmic",
+    "printed_page": 1347,
+    "pdf_page_1based": 1374,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bimatoprost Ophthalmic",
+    "printed_page": 1348,
+    "pdf_page_1based": 1375,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Brimonidine Ophthalmic",
+    "printed_page": 1349,
+    "pdf_page_1based": 1376,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Brinzolamide Ophthalmic",
+    "printed_page": 1350,
+    "pdf_page_1based": 1377,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bromfenac Ophthalmic",
+    "printed_page": 1351,
+    "pdf_page_1based": 1378,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Carteolol Ophthalmic",
+    "printed_page": 1352,
+    "pdf_page_1based": 1379,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Chloramphenicol Ophthalmic",
+    "printed_page": 1353,
+    "pdf_page_1based": 1380,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cidofovir Ophthalmic",
+    "printed_page": 1353,
+    "pdf_page_1based": 1380,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ciprofloxacin Ophthalmic",
+    "printed_page": 1354,
+    "pdf_page_1based": 1381,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cromolyn Ophthalmic",
+    "printed_page": 1355,
+    "pdf_page_1based": 1382,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cyclopentolate Ophthalmic",
+    "printed_page": 1356,
+    "pdf_page_1based": 1383,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cyclosporine Ophthalmic",
+    "printed_page": 1357,
+    "pdf_page_1based": 1384,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Demecarium Ophthalmic",
+    "printed_page": 1358,
+    "pdf_page_1based": 1385,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dexamethasone Ophthalmic",
+    "printed_page": 1359,
+    "pdf_page_1based": 1386,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Diclofenac Ophthalmic",
+    "printed_page": 1360,
+    "pdf_page_1based": 1387,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Difluprednate Ophthalmic",
+    "printed_page": 1361,
+    "pdf_page_1based": 1388,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dorzolamide Ophthalmic",
+    "printed_page": 1362,
+    "pdf_page_1based": 1389,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Edetate Disodium Ophthalmic",
+    "printed_page": 1363,
+    "pdf_page_1based": 1390,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Epinastine Ophthalmic",
+    "printed_page": 1364,
+    "pdf_page_1based": 1391,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Erythromycin Ophthalmic",
+    "printed_page": 1364,
+    "pdf_page_1based": 1391,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fluorescein Stain Ophthalmic",
+    "printed_page": 1365,
+    "pdf_page_1based": 1392,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fluorometholone Ophthalmic",
+    "printed_page": 1366,
+    "pdf_page_1based": 1393,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fluorouracil Ophthalmic",
+    "printed_page": 1367,
+    "pdf_page_1based": 1394,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Flurbiprofen Ophthalmic",
+    "printed_page": 1368,
+    "pdf_page_1based": 1395,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ganciclovir Ophthalmic",
+    "printed_page": 1369,
+    "pdf_page_1based": 1396,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Gatifloxacin Ophthalmic",
+    "printed_page": 1370,
+    "pdf_page_1based": 1397,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Gentamicin Ophthalmic",
+    "printed_page": 1370,
+    "pdf_page_1based": 1397,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydrocortisone Ophthalmic",
+    "printed_page": 1371,
+    "pdf_page_1based": 1398,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Idoxuridine Ophthalmic",
+    "printed_page": 1372,
+    "pdf_page_1based": 1399,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Irrigating Solutions, Ophthalmic",
+    "printed_page": 1373,
+    "pdf_page_1based": 1400,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Itraconazole Ophthalmic",
+    "printed_page": 1374,
+    "pdf_page_1based": 1401,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ketorolac Ophthalmic",
+    "printed_page": 1375,
+    "pdf_page_1based": 1402,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ketotifen Ophthalmic",
+    "printed_page": 1376,
+    "pdf_page_1based": 1403,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Latanoprost Ophthalmic",
+    "printed_page": 1376,
+    "pdf_page_1based": 1403,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Levobunolol Ophthalmic",
+    "printed_page": 1377,
+    "pdf_page_1based": 1404,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Levofloxacin Ophthalmic",
+    "printed_page": 1378,
+    "pdf_page_1based": 1405,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lidocaine Ophthalmic",
+    "printed_page": 1379,
+    "pdf_page_1based": 1406,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lissamine Green Ophthalmic",
+    "printed_page": 1380,
+    "pdf_page_1based": 1407,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lodoxamide Ophthalmic",
+    "printed_page": 1380,
+    "pdf_page_1based": 1407,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Loteprednol Ophthalmic",
+    "printed_page": 1381,
+    "pdf_page_1based": 1408,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Miconazole Ophthalmic",
+    "printed_page": 1382,
+    "pdf_page_1based": 1409,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mitomycin Ophthalmic",
+    "printed_page": 1383,
+    "pdf_page_1based": 1410,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Morphine Ophthalmic",
+    "printed_page": 1384,
+    "pdf_page_1based": 1411,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Moxifloxacin Ophthalmic",
+    "printed_page": 1385,
+    "pdf_page_1based": 1412,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nalbuphine Ophthalmic",
+    "printed_page": 1385,
+    "pdf_page_1based": 1412,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Natamycin Ophthalmic",
+    "printed_page": 1386,
+    "pdf_page_1based": 1413,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nedocromil Ophthalmic",
+    "printed_page": 1387,
+    "pdf_page_1based": 1414,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nepafenac Ophthalmic",
+    "printed_page": 1387,
+    "pdf_page_1based": 1414,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ocular Lubricants",
+    "printed_page": 1388,
+    "pdf_page_1based": 1415,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ofloxacin Ophthalmic",
+    "printed_page": 1391,
+    "pdf_page_1based": 1418,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Olopatadine Ophthalmic",
+    "printed_page": 1392,
+    "pdf_page_1based": 1419,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Oxytetracycline/Polymyxin B Ophthalmic",
+    "printed_page": 1392,
+    "pdf_page_1based": 1419,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Phenylephrine Ophthalmic",
+    "printed_page": 1393,
+    "pdf_page_1based": 1420,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pilocarpine Ophthalmic",
+    "printed_page": 1394,
+    "pdf_page_1based": 1421,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pimecrolimus Ophthalmic",
+    "printed_page": 1395,
+    "pdf_page_1based": 1422,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Povidone- Iodine Ophthalmic",
+    "printed_page": 1396,
+    "pdf_page_1based": 1423,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Prednisolone Ophthalmic",
+    "printed_page": 1397,
+    "pdf_page_1based": 1424,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Proparacaine Ophthalmic",
+    "printed_page": 1398,
+    "pdf_page_1based": 1425,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Rose Bengal Stain, Ophthalmic",
+    "printed_page": 1399,
+    "pdf_page_1based": 1426,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Silver Sulfadiazine (SSD) Ophthalmic",
+    "printed_page": 1399,
+    "pdf_page_1based": 1426,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sodium Chloride (Hypertonic) Ophthalmic",
+    "printed_page": 1400,
+    "pdf_page_1based": 1427,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sulfacetamide Ophthalmic",
+    "printed_page": 1401,
+    "pdf_page_1based": 1428,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tacrolimus Ophthalmic",
+    "printed_page": 1402,
+    "pdf_page_1based": 1429,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tafluprost Ophthalmic",
+    "printed_page": 1403,
+    "pdf_page_1based": 1430,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tetracaine Ophthalmic",
+    "printed_page": 1404,
+    "pdf_page_1based": 1431,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Timolol Ophthalmic",
+    "printed_page": 1405,
+    "pdf_page_1based": 1432,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tobramycin Ophthalmic",
+    "printed_page": 1406,
+    "pdf_page_1based": 1433,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Travoprost Ophthalmic",
+    "printed_page": 1407,
+    "pdf_page_1based": 1434,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Trifluridine Ophthalmic",
+    "printed_page": 1408,
+    "pdf_page_1based": 1435,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Triple Antibiotic Ophthalmic",
+    "printed_page": 1409,
+    "pdf_page_1based": 1436,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tropicamide Ophthalmic",
+    "printed_page": 1410,
+    "pdf_page_1based": 1437,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Vancomycin Ophthalmic",
+    "printed_page": 1411,
+    "pdf_page_1based": 1438,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Voriconazole Ophthalmic",
+    "printed_page": 1412,
+    "pdf_page_1based": 1439,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dermatologic Agents, Topical",
+    "printed_page": 1413,
+    "pdf_page_1based": 1440,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Anti- inflammatory/Anti-Pruritic Agents, Topical",
+    "printed_page": 1413,
+    "pdf_page_1based": 1440,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Corticosteroid Agents, Topical",
+    "printed_page": 1413,
+    "pdf_page_1based": 1440,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Betamethasone, Topical",
+    "printed_page": 1413,
+    "pdf_page_1based": 1440,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hydrocortisone, Topical",
+    "printed_page": 1414,
+    "pdf_page_1based": 1441,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Isoflupredone Combinations, Topical",
+    "printed_page": 1416,
+    "pdf_page_1based": 1443,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mometasone, Topical",
+    "printed_page": 1416,
+    "pdf_page_1based": 1443,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Triamcinolone, Topical",
+    "printed_page": 1417,
+    "pdf_page_1based": 1444,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Non-Corticosteroid Agents, Topical",
+    "printed_page": 1419,
+    "pdf_page_1based": 1446,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Aluminum Acetate Solution, Topical Burow’s Solution",
+    "printed_page": 1419,
+    "pdf_page_1based": 1446,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Camphor/Menthol/Phenol, Topical",
+    "printed_page": 1420,
+    "pdf_page_1based": 1447,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Colloidal Oatmeal, Topical",
+    "printed_page": 1420,
+    "pdf_page_1based": 1447,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Diphenhydramine, Topical",
+    "printed_page": 1421,
+    "pdf_page_1based": 1448,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fatty Acids (Omega), Topical",
+    "printed_page": 1422,
+    "pdf_page_1based": 1449,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lidocaine/Lidocaine Combinations, Topical",
+    "printed_page": 1423,
+    "pdf_page_1based": 1450,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Phytosphingosine, Topical",
+    "printed_page": 1424,
+    "pdf_page_1based": 1451,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pramoxine, Topical",
+    "printed_page": 1425,
+    "pdf_page_1based": 1452,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Zinc Gluconate (Neutralized), Topical",
+    "printed_page": 1426,
+    "pdf_page_1based": 1453,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antimicrobial Agents, Topical",
+    "printed_page": 1427,
+    "pdf_page_1based": 1454,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antibacterial Agents, Topical",
+    "printed_page": 1427,
+    "pdf_page_1based": 1454,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Bacitracin, Topical",
+    "printed_page": 1427,
+    "pdf_page_1based": 1454,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Benzoyl Peroxide, Topical",
+    "printed_page": 1427,
+    "pdf_page_1based": 1454,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clindamycin, Topical",
+    "printed_page": 1428,
+    "pdf_page_1based": 1455,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Gentamicin, Topical",
+    "printed_page": 1429,
+    "pdf_page_1based": 1456,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Honey, Topical",
+    "printed_page": 1430,
+    "pdf_page_1based": 1457,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Mupirocin, Topical",
+    "printed_page": 1432,
+    "pdf_page_1based": 1459,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nitrofurazone, Topical",
+    "printed_page": 1433,
+    "pdf_page_1based": 1460,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Silver Sulfadiazine, Topical",
+    "printed_page": 1433,
+    "pdf_page_1based": 1460,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antifungal Agents, Topical",
+    "printed_page": 1434,
+    "pdf_page_1based": 1461,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Clotrimazole, Topical",
+    "printed_page": 1434,
+    "pdf_page_1based": 1461,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Enilconazole, Topical",
+    "printed_page": 1435,
+    "pdf_page_1based": 1462,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Ketoconazole, Topical",
+    "printed_page": 1436,
+    "pdf_page_1based": 1463,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lime Sulfur, Topical",
+    "printed_page": 1437,
+    "pdf_page_1based": 1464,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Miconazole, Topical",
+    "printed_page": 1438,
+    "pdf_page_1based": 1465,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Nystatin/Nystatin Combinations, Topical",
+    "printed_page": 1439,
+    "pdf_page_1based": 1466,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Selenium Sulfide, Topical",
+    "printed_page": 1440,
+    "pdf_page_1based": 1467,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Terbinafine, Topical",
+    "printed_page": 1441,
+    "pdf_page_1based": 1468,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antiseptic Agents, Topical",
+    "printed_page": 1441,
+    "pdf_page_1based": 1468,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Acetic Acid/Boric Acid, Topical",
+    "printed_page": 1441,
+    "pdf_page_1based": 1468,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Chlorhexidine, Topical",
+    "printed_page": 1442,
+    "pdf_page_1based": 1469,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Chloroxylenol, Topical",
+    "printed_page": 1446,
+    "pdf_page_1based": 1473,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Lactoferrin)",
+    "printed_page": 1448,
+    "pdf_page_1based": 1475,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Hypochlorous Acid, Topical",
+    "printed_page": 1449,
+    "pdf_page_1based": 1476,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Povidone Iodine, Topical",
+    "printed_page": 1449,
+    "pdf_page_1based": 1476,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antiparasitic Agents, Topical",
+    "printed_page": 1450,
+    "pdf_page_1based": 1477,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Amitraz Collar, Topical",
+    "printed_page": 1450,
+    "pdf_page_1based": 1477,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Crotamiton, Topical",
+    "printed_page": 1451,
+    "pdf_page_1based": 1478,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Topical",
+    "printed_page": 1451,
+    "pdf_page_1based": 1478,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Dinotefuran/Pyriproxyfen Combinations, Topical",
+    "printed_page": 1452,
+    "pdf_page_1based": 1479,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Fipronil/Fipronil Combinations, Topical",
+    "printed_page": 1453,
+    "pdf_page_1based": 1480,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Topical",
+    "printed_page": 1456,
+    "pdf_page_1based": 1483,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Isopropyl Myristate, Topical",
+    "printed_page": 1457,
+    "pdf_page_1based": 1484,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Methoprene/Methoprene Combinations, Topical",
+    "printed_page": 1458,
+    "pdf_page_1based": 1485,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Permethrin/Permethrin Combinations, Topical",
+    "printed_page": 1459,
+    "pdf_page_1based": 1486,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pyrethrin/Pyrethrin Combinations, Topical",
+    "printed_page": 1461,
+    "pdf_page_1based": 1488,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pyriproxyfen/Pyriproxyfen Combinations, Topical",
+    "printed_page": 1462,
+    "pdf_page_1based": 1489,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Spinetoram, Topical",
+    "printed_page": 1463,
+    "pdf_page_1based": 1490,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antiseborrheic Agents, Topical",
+    "printed_page": 1464,
+    "pdf_page_1based": 1491,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Immunomodulator Agents, Topical",
+    "printed_page": 1464,
+    "pdf_page_1based": 1491,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Imiquimod, Topical",
+    "printed_page": 1464,
+    "pdf_page_1based": 1491,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pimecrolimus, Topical",
+    "printed_page": 1465,
+    "pdf_page_1based": 1492,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tacrolimus, Topical",
+    "printed_page": 1465,
+    "pdf_page_1based": 1492,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Keratolytic Agents, Topical",
+    "printed_page": 1466,
+    "pdf_page_1based": 1493,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Coal Tar/Coal Tar Combinations, Topical",
+    "printed_page": 1466,
+    "pdf_page_1based": 1493,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Salicylic Acid, Topical",
+    "printed_page": 1467,
+    "pdf_page_1based": 1494,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Sulfur, Precipitated, Topical",
+    "printed_page": 1468,
+    "pdf_page_1based": 1495,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Retinoid Agents, Topical",
+    "printed_page": 1469,
+    "pdf_page_1based": 1496,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Tretinoin, Topical",
+    "printed_page": 1469,
+    "pdf_page_1based": 1496,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Otic Agents, Topical",
+    "printed_page": 1470,
+    "pdf_page_1based": 1497,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antibacterial Agents, Otic",
+    "printed_page": 1470,
+    "pdf_page_1based": 1497,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antibiotic- Potentiating Agents, Otic",
+    "printed_page": 1471,
+    "pdf_page_1based": 1498,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antifungal Agents, Otic",
+    "printed_page": 1471,
+    "pdf_page_1based": 1498,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antiparasitic Agents, Otic",
+    "printed_page": 1472,
+    "pdf_page_1based": 1499,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Antiseptic Cleaning Agents, Otic",
+    "printed_page": 1473,
+    "pdf_page_1based": 1500,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cerumenolytic Agents, Otic",
+    "printed_page": 1475,
+    "pdf_page_1based": 1502,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Cleaning/Drying Agents, Otic",
+    "printed_page": 1476,
+    "pdf_page_1based": 1503,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Corticosteroid Agents, Otic",
+    "printed_page": 1477,
+    "pdf_page_1based": 1504,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Corticosteroid/Antimicrobial Agents, Otic",
+    "printed_page": 1478,
+    "pdf_page_1based": 1505,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "APPENDIX",
+    "printed_page": 1480,
+    "pdf_page_1based": 1507,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Veterinarian’s Guide to Writing Prescriptions",
+    "printed_page": 1480,
+    "pdf_page_1based": 1507,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "A Whole Different Animal",
+    "printed_page": 1482,
+    "pdf_page_1based": 1509,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Important Contact Information",
+    "printed_page": 1483,
+    "pdf_page_1based": 1510,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Drug Store Toxins in Small Animal Species",
+    "printed_page": 1484,
+    "pdf_page_1based": 1511,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Guidelines",
+    "printed_page": 1487,
+    "pdf_page_1based": 1514,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "and Cats",
+    "printed_page": 1488,
+    "pdf_page_1based": 1515,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Pharmacy",
+    "printed_page": 1490,
+    "pdf_page_1based": 1517,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Glucocorticoid Agents, General Information",
+    "printed_page": 1491,
+    "pdf_page_1based": 1518,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Insulin, General Information",
+    "printed_page": 1494,
+    "pdf_page_1based": 1521,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Opioids, General Information",
+    "printed_page": 1498,
+    "pdf_page_1based": 1525,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Penicillins, General Information",
+    "printed_page": 1498,
+    "pdf_page_1based": 1525,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Classification",
+    "printed_page": 1500,
+    "pdf_page_1based": 1527,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "ARCI UCGFS Classifications",
+    "printed_page": 1503,
+    "pdf_page_1based": 1530,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Extra-Label Drug Use",
+    "printed_page": 1503,
+    "pdf_page_1based": 1530,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Veterinary Feed Directive",
+    "printed_page": 1504,
+    "pdf_page_1based": 1531,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Surface Area (m2)",
+    "printed_page": 1506,
+    "pdf_page_1based": 1533,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "SI Units",
+    "printed_page": 1507,
+    "pdf_page_1based": 1534,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Milliequivalents and Molecular Weights,",
+    "printed_page": 1507,
+    "pdf_page_1based": 1534,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Solubility Definitions",
+    "printed_page": 1508,
+    "pdf_page_1based": 1535,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Parenteral Fluids",
+    "printed_page": 1508,
+    "pdf_page_1based": 1535,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Normal Vital Signs",
+    "printed_page": 1510,
+    "pdf_page_1based": 1537,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Reference Laboratory Ranges",
+    "printed_page": 1510,
+    "pdf_page_1based": 1537,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Estrus and Gestation Periods: Dogs and Cats",
+    "printed_page": 1515,
+    "pdf_page_1based": 1542,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Indication",
+    "printed_page": 1516,
+    "pdf_page_1based": 1543,
+    "section": "SYSTEMIC MONOGRAPHS"
+  },
+  {
+    "name": "Index",
+    "printed_page": 1522,
+    "pdf_page_1based": 1549,
+    "section": "SYSTEMIC MONOGRAPHS"
+  }
+]
