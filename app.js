@@ -824,8 +824,8 @@ function renderSpeciesTabsButtons(drug, activeKey) {
     }
 
     let btnClasses = isSelected
-      ? 'bg-slate-900 text-white font-black shadow-xs ring-2 ring-slate-900/30'
-      : 'bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold';
+      ? 'bg-[#0A2447] text-white font-black shadow-xs ring-2 ring-[#00CAE0]/50'
+      : 'bg-[#F4F6FC] text-[#404961] hover:bg-[#E9EDF7] border border-[#D0D7E8] font-bold';
 
     if (isLethal && !isSelected) {
       btnClasses = 'bg-rose-50 text-rose-700 hover:bg-rose-100 border border-rose-200 font-bold';
@@ -2136,21 +2136,21 @@ function renderSingleDrugCardHtml(drug) {
   const speciesIconsPreview = getSpeciesIconsPreviewHtml(drug);
 
   return `
-    <div id="card_${drug.id}" class="drug-card bg-white rounded-3xl p-5 border ${isExpanded ? 'border-teal-500/50 shadow-md ring-2 ring-teal-500/20' : 'border-slate-200/90 shadow-2xs hover:border-teal-300 hover:shadow-sm'} transition-all duration-200 flex flex-col justify-between">
+    <div id="card_${drug.id}" class="drug-card bg-white rounded-3xl p-5 border ${isExpanded ? 'border-[#0590D5] shadow-md ring-2 ring-[#00CAE0]/20' : 'border-[#D0D7E8] shadow-2xs hover:border-[#0590D5] hover:shadow-sm'} transition-all duration-200 flex flex-col justify-between">
       <div>
         <!-- هدر کلیک‌پذیر کارت جهت باز/بسته شدن آکاردئونی -->
         <div class="cursor-pointer select-none group" onclick="toggleDrugCard('${drug.id}', event)">
           <div class="flex items-start justify-between gap-2 mb-2">
             <div class="flex-1">
               <div class="flex items-center gap-2 flex-wrap">
-                <h3 class="text-base font-black text-slate-900 group-hover:text-teal-600 transition">
+                <h3 class="text-base font-black text-[#0A2447] group-hover:text-[#0590D5] transition">
                   ${drug.generic_name_fa}
                 </h3>
                 <span class="text-[10px] px-2 py-0.5 rounded-lg font-bold whitespace-nowrap ${badgeClass}">
                   ${drug.category_badge}
                 </span>
               </div>
-              <p class="text-xs text-slate-400 latin-text font-mono mt-0.5"><bdi dir="ltr" class="latin-text">&lrm;${drug.generic_name_en || ''}&lrm;</bdi></p>
+              <p class="text-xs text-[#0590D5] latin-text font-mono mt-0.5 font-semibold"><bdi dir="ltr" class="latin-text">&lrm;${drug.generic_name_en || ''}&lrm;</bdi></p>
             </div>
 
             <div class="flex items-center gap-1.5 shrink-0 no-card-toggle">
@@ -2183,12 +2183,12 @@ function renderSingleDrugCardHtml(drug) {
           ${speciesIconsPreview}
 
           <!-- نوار کلیک برای باز کردن یا بستن دوزها و جزئیات -->
-          <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-teal-700 group-hover:text-teal-800 transition">
+          <div class="mt-3 pt-2.5 border-t border-[#E9EDF7] flex items-center justify-between text-xs font-bold text-[#0070A8] group-hover:text-[#0590D5] transition">
             <span id="card_toggle_text_${drug.id}" class="flex items-center gap-1 text-[11px]">
               <i data-lucide="layers" class="w-3.5 h-3.5 text-teal-600"></i>
               <span>${isExpanded ? 'بستن توضیحات و دوزها' : 'مشاهده دوزها، سرنگ و جزئیات'}</span>
             </span>
-            <div class="w-6 h-6 rounded-full bg-teal-50 border border-teal-200/70 flex items-center justify-center text-teal-700 transition group-hover:bg-teal-100">
+            <div class="w-6 h-6 rounded-full bg-[#E6F7FC] border border-[#B2E7F7] flex items-center justify-center text-[#0070A8] transition group-hover:bg-[#D4F2FB]">
               <i id="card_toggle_icon_${drug.id}" data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-4 h-4"></i>
             </div>
           </div>
@@ -2223,8 +2223,8 @@ function renderSingleDrugCardHtml(drug) {
 
           <!-- نکته نسخه‌نویس (خلاصه) با پرانتزهای ایمن -->
           ${drug.prescriber_highlights && (Array.isArray(drug.prescriber_highlights) ? drug.prescriber_highlights.length > 0 : !!drug.prescriber_highlights) ? `
-            <div class="bg-amber-50/60 border border-amber-200/70 p-2.5 rounded-xl text-[11px] text-amber-900 leading-relaxed mb-3">
-              <span class="font-bold">نکته کلیدی:</span> ${fixBidiParentheses(Array.isArray(drug.prescriber_highlights) ? drug.prescriber_highlights[0] : drug.prescriber_highlights)}
+            <div class="plumbs-prescriber-box mb-3 text-[11px] leading-relaxed">
+              <span class="font-bold text-[#92400E]">💡 نکته کلیدی پلامبز (Prescriber Highlight):</span> ${fixBidiParentheses(Array.isArray(drug.prescriber_highlights) ? drug.prescriber_highlights[0] : drug.prescriber_highlights)}
             </div>
           ` : ''}
         </div>
@@ -2234,12 +2234,12 @@ function renderSingleDrugCardHtml(drug) {
       <div class="pt-3 border-t border-slate-100 mt-2 space-y-1.5 w-full">
         <!-- ردیف ۱: مونوگراف کامل و محاسبه دوز -->
         <div class="grid grid-cols-2 gap-1.5 w-full">
-          <button type="button" onclick="openMonographModal('${drug.id}')" class="py-2 px-2 bg-slate-900 hover:bg-slate-800 active:scale-95 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs">
+          <button type="button" onclick="openMonographModal('${drug.id}')" class="py-2 px-2 bg-[#0A2447] hover:bg-[#17285E] active:scale-95 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs">
             <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
             <span>مونوگراف</span>
           </button>
 
-          <button type="button" onclick="quickCalculateForDrug('${drug.id}')" class="py-2 px-2 bg-teal-50 hover:bg-teal-100 active:scale-95 text-teal-800 border border-teal-200 rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs" title="محاسبه دوز برای بیمار">
+          <button type="button" onclick="quickCalculateForDrug('${drug.id}')" class="py-2 px-2 bg-[#E6F7FC] hover:bg-[#D4F2FB] active:scale-95 text-[#0070A8] border border-[#B2E7F7] rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs" title="محاسبه دوز برای بیمار">
             <i data-lucide="calculator" class="w-3.5 h-3.5 text-teal-600"></i>
             <span>محاسبه دوز</span>
           </button>
@@ -2247,13 +2247,13 @@ function renderSingleDrugCardHtml(drug) {
 
         <!-- ردیف ۲: تداخلات، کوکتل‌ها و ابزارهای تخصصی -->
         <div class="flex flex-wrap items-center gap-1.5 w-full">
-          <button type="button" onclick="openSingleDrugInteractions('${drug.id}')" class="flex-1 min-w-[70px] py-1.5 px-2 bg-amber-50 hover:bg-amber-100 active:scale-95 text-amber-900 border border-amber-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs" title="رادار تداخلات ۳۶۰ درجه این دارو">
+          <button type="button" onclick="openSingleDrugInteractions('${drug.id}')" class="flex-1 min-w-[70px] py-1.5 px-2 bg-[#FFF9E6] hover:bg-[#FFF3CC] active:scale-95 text-[#B45309] border border-[#FDE68A] rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs" title="رادار تداخلات ۳۶۰ درجه این دارو">
             <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
             <span>تداخلات</span>
           </button>
           
           ${drug.synergistic_combinations && drug.synergistic_combinations.length > 0 ? `
-            <button type="button" onclick="openCocktailsModal('${drug.id}')" class="flex-1 min-w-[70px] py-1.5 px-2 bg-indigo-50 hover:bg-indigo-100 active:scale-95 text-indigo-900 border border-indigo-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs" title="مشاهده کوکتل‌های ترکیبی و دستور اختلاط سرنگ">
+            <button type="button" onclick="openCocktailsModal('${drug.id}')" class="flex-1 min-w-[70px] py-1.5 px-2 bg-[#F3EEFB] hover:bg-[#EAE2F8] active:scale-95 text-[#5B21B6] border border-[#D8C7F8] rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs" title="مشاهده کوکتل‌های ترکیبی و دستور اختلاط سرنگ">
               <i data-lucide="flask-conical" class="w-3.5 h-3.5 text-indigo-600 shrink-0"></i>
               <span>کوکتل‌ها (${drug.synergistic_combinations.length})</span>
             </button>

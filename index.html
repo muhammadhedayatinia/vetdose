@@ -12,32 +12,32 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Custom Style -->
-  <link rel="stylesheet" href="style.css?v=3.0.0">
+  <link rel="stylesheet" href="style.css?v=3.2.0">
 
   <!-- PWA Manifest & Theme Color -->
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#0A2447">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
-<body class="bg-slate-50 min-h-screen text-slate-800 pb-16">
+<body class="bg-[#F4F6FC] min-h-screen text-[#293040] pb-16">
 
   <!-- هدر اصلی نرم‌افزار -->
-  <header class="bg-slate-900 text-white shadow-xl sticky top-0 z-30 border-b border-slate-800">
+  <header class="bg-[#0A2447] text-white shadow-xl sticky top-0 z-30 border-b border-[#0590D5]/25">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-3">
       
       <!-- برند و عنوان -->
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-500 to-emerald-400 flex items-center justify-center text-white shadow-lg shadow-teal-500/20 shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#00CAE0] to-[#0590D5] flex items-center justify-center text-white shadow-lg shadow-[#00CAE0]/25 shrink-0">
           <i data-lucide="activity" class="w-6 h-6"></i>
         </div>
         <div>
           <div class="flex items-center gap-2">
             <h1 class="text-xl font-black tracking-tight text-white flex items-center gap-1.5">
               <span>وت‌دوز</span>
-              <span class="text-sm font-mono text-teal-400 font-bold">VetDose</span>
+              <span class="text-sm font-mono text-[#00CAE0] font-black tracking-wider">VetDose</span>
             </h1>
-            <span class="text-xs bg-teal-500/20 text-teal-300 border border-teal-500/30 px-2.5 py-0.5 rounded-full font-bold">نسخه ۳.۰</span>
+            <span class="text-xs bg-[#00CAE0]/15 text-[#00CAE0] border border-[#00CAE0]/30 px-2.5 py-0.5 rounded-full font-bold">طراحی Plumb's 2026</span>
           </div>
           <p class="text-xs text-slate-400">سامانه جامع دارونامه، تطبیق با بازار دارویی ایران و تصمیم‌یار بالینی دامپزشکی</p>
         </div>
@@ -45,12 +45,12 @@
 
       <!-- ابزارهای اصلی بالای صفحه -->
       <div class="flex items-center gap-2 sm:gap-2.5 flex-wrap">
-        <button onclick="openCalculatorWithTab('dose')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-teal-800 hover:bg-teal-700 text-teal-100 text-xs sm:text-sm font-black border border-teal-500/50 shadow-sm transition cursor-pointer">
+        <button onclick="openCalculatorWithTab('dose')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#0590D5] hover:bg-[#0070A8] text-white text-xs sm:text-sm font-black border border-[#00CAE0]/40 shadow-sm shadow-[#0590D5]/25 transition cursor-pointer">
           <i data-lucide="calculator" class="w-4 h-4 text-teal-300"></i>
           <span>🎯 ماشین‌حساب دوز و فرم دارو</span>
         </button>
 
-        <button onclick="openInteractionsModal()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-bold border border-slate-700 transition cursor-pointer">
+        <button onclick="openInteractionsModal()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#17285E] hover:bg-[#214595] text-white text-xs sm:text-sm font-bold border border-[#0590D5]/35 transition cursor-pointer">
           <i data-lucide="shield-alert" class="w-4 h-4 text-amber-400"></i>
           <span>چکر تداخلات</span>
         </button>
@@ -65,7 +65,7 @@
           <span>کوکتل‌های بیهوشی</span>
         </button>
 
-        <button onclick="openCprModal()" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs sm:text-sm font-bold shadow-md shadow-rose-600/30 transition cursor-pointer">
+        <button onclick="openCprModal()" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#FF084B] hover:bg-[#CC0946] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#FF084B]/35 transition cursor-pointer">
           <i data-lucide="heart-pulse" class="w-4 h-4 cpr-pulse"></i>
           <span>اورژانس و CPR</span>
         </button>
@@ -79,7 +79,7 @@
     </div>
 
     <!-- نوار افقی یکپارچه پروتکل‌های فوق‌تخصصی و تصمیم‌یارهای بالینی در بالای صفحه -->
-    <div class="bg-slate-950/95 border-t border-slate-800/80 px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-1.5 overflow-x-auto scrollbar-none text-xs">
+    <div class="bg-[#031227] border-t border-[#0590D5]/20 px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-1.5 overflow-x-auto scrollbar-none text-xs">
       <span class="text-amber-400 font-black whitespace-nowrap flex items-center gap-1 shrink-0 ml-1">
         <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i>
         <span>تصمیم‌یار و پروتکل‌های بالینی:</span>
@@ -135,9 +135,9 @@
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-3">
     
     <!-- نوار طلایی هوشمند محاسبه آنی حجم سرنگ (Google Stitch Weight Control Center) -->
-    <div class="mb-5 bg-gradient-to-r from-emerald-950 via-teal-900 to-slate-900 text-white p-4 sm:p-5 rounded-3xl shadow-xl border border-emerald-500/40 flex flex-wrap items-center justify-between gap-4">
+    <div class="mb-5 bg-gradient-to-r from-[#0A2447] via-[#0E387A] to-[#17285E] text-white p-4 sm:p-5 rounded-3xl shadow-xl border border-[#00CAE0]/35 flex flex-wrap items-center justify-between gap-4">
       <div class="flex items-center gap-3.5">
-        <div class="w-11 h-11 rounded-2xl bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 flex items-center justify-center shrink-0 shadow-inner">
+        <div class="w-11 h-11 rounded-2xl bg-[#00CAE0]/20 text-[#00CAE0] border border-[#00CAE0]/40 flex items-center justify-center shrink-0 shadow-inner">
           <i data-lucide="syringe" class="w-6 h-6"></i>
         </div>
         <div>
@@ -145,19 +145,19 @@
             <h2 class="text-sm sm:text-base font-black text-white">
               محاسبه آنی حجم سرنگ (سی‌سی مستقیم بدون فرمول‌بازی):
             </h2>
-            <span class="text-[10px] bg-emerald-500/30 text-emerald-200 border border-emerald-400/40 px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="text-[10px] bg-[#00CAE0]/25 text-[#00CAE0] border border-[#00CAE0]/40 px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#00CAE0] animate-ping"></span>
               <span>زنده و لحظه‌ای</span>
             </span>
           </div>
-          <p class="text-xs text-emerald-200/80 mt-0.5">وزن بیمار را تغییر دهید تا حجم آماده کشیدن در سرنگ (mL) روی تمام داروها فوراً محاسبه شود.</p>
+          <p class="text-xs text-[#ABB5CD] mt-0.5">وزن بیمار را تغییر دهید تا حجم آماده کشیدن در سرنگ (mL) روی تمام داروها فوراً محاسبه شود.</p>
         </div>
       </div>
 
       <!-- کنترل تعاملی وزن با استپر لمسی + و - -->
       <div class="flex items-center gap-2 flex-wrap">
-        <div class="flex items-center bg-slate-950/90 rounded-2xl border border-emerald-500/50 p-1 shadow-inner">
-          <button type="button" onclick="stepGlobalWeight(-1)" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-emerald-500/30 active:scale-90 text-emerald-300 flex items-center justify-center font-bold text-lg transition" title="کاهش ۱ کیلوگرم">
+        <div class="flex items-center bg-[#031227] rounded-2xl border border-[#00CAE0]/50 p-1 shadow-inner">
+          <button type="button" onclick="stepGlobalWeight(-1)" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-[#00CAE0]/30 active:scale-90 text-[#00CAE0] flex items-center justify-center font-bold text-lg transition" title="کاهش ۱ کیلوگرم">
             -
           </button>
 
@@ -168,10 +168,10 @@
               value="10" 
               step="0.5" 
               min="0.1" 
-              class="w-16 bg-transparent text-emerald-300 font-mono font-black text-center text-lg outline-none latin-text" 
+              class="w-16 bg-transparent text-[#00CAE0] font-mono font-black text-center text-lg outline-none latin-text" 
               oninput="handleGlobalWeightChange(this.value)"
             >
-            <span class="text-xs text-emerald-400 font-bold mr-1">kg</span>
+            <span class="text-xs text-[#00CAE0] font-bold mr-1">kg</span>
           </div>
 
           <button type="button" onclick="stepGlobalWeight(1)" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-emerald-500/30 active:scale-90 text-emerald-300 flex items-center justify-center font-bold text-lg transition" title="افزایش ۱ کیلوگرم">
@@ -183,7 +183,7 @@
         <div class="flex items-center gap-1 text-xs" id="quickWeightPills">
           <button onclick="setGlobalWeight(3)" data-w="3" class="weight-preset px-2.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium transition active:scale-95">🐱 ۳ kg</button>
           <button onclick="setGlobalWeight(5)" data-w="5" class="weight-preset px-2.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium transition active:scale-95">🐶 ۵ kg</button>
-          <button onclick="setGlobalWeight(10)" data-w="10" class="weight-preset active px-2.5 py-1.5 rounded-xl bg-emerald-400 text-slate-950 font-black transition shadow-md active:scale-95">🐶 ۱۰ kg</button>
+          <button onclick="setGlobalWeight(10)" data-w="10" class="weight-preset active px-2.5 py-1.5 rounded-xl bg-[#00CAE0] text-[#0A2447] font-black transition shadow-md active:scale-95">🐶 ۱۰ kg</button>
           <button onclick="setGlobalWeight(25)" data-w="25" class="weight-preset px-2.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium transition active:scale-95">🐶 ۲۵ kg</button>
           <button onclick="setGlobalWeight(400)" data-w="400" class="weight-preset px-2.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium transition active:scale-95">🐄 ۴۰۰ kg</button>
         </div>
@@ -192,9 +192,9 @@
 
     <!-- نوار جستجوی پیشرفته به سبک Google Stitch Command Bar -->
     <div class="relative mb-5">
-      <div class="relative flex items-center shadow-md rounded-2xl bg-white border border-slate-300 focus-within:border-teal-500 focus-within:ring-4 focus-within:ring-teal-500/20 transition-all duration-200">
+      <div class="relative flex items-center shadow-md rounded-2xl bg-white border-2 border-[#D0D7E8] focus-within:border-[#0590D5] focus-within:ring-4 focus-within:ring-[#00CAE0]/25 transition-all duration-200">
         <div class="pr-4 pl-2 text-slate-400 flex items-center pointer-events-none">
-          <i data-lucide="search" class="w-5 h-5 text-teal-600"></i>
+          <i data-lucide="search" class="w-5 h-5 text-[#0590D5]"></i>
         </div>
         <input 
           type="text" 
@@ -245,7 +245,7 @@
     <div class="mb-3.5 bg-white p-3 sm:p-4 rounded-3xl border border-slate-200/90 shadow-sm">
       <div class="flex items-center justify-between mb-2.5 pb-2 border-b border-slate-100 flex-wrap gap-2">
         <div class="flex items-center gap-2">
-          <div class="w-7 h-7 rounded-lg bg-teal-500/10 text-teal-700 flex items-center justify-center font-black">
+          <div class="w-7 h-7 rounded-lg bg-[#0590D5]/10 text-[#0590D5] flex items-center justify-center font-black">
             <i data-lucide="layout-grid" class="w-4 h-4"></i>
           </div>
           <span class="text-xs sm:text-sm font-black text-slate-800">دسته‌بندی درمانی و فارماکولوژی (پلامبز):</span>
@@ -254,7 +254,7 @@
 
         <button 
           onclick="openTherapeuticAtlasModal()" 
-          class="text-xs font-bold text-teal-700 hover:text-teal-900 bg-teal-50 hover:bg-teal-100/80 px-3 py-1.5 rounded-xl border border-teal-200/80 flex items-center gap-1.5 transition shadow-2xs"
+          class="text-xs font-bold text-[#0070A8] hover:text-[#0A2447] bg-[#E6F7FC] hover:bg-[#D4F2FB] px-3 py-1.5 rounded-xl border border-[#B2E7F7] flex items-center gap-1.5 transition shadow-2xs font-bold"
         >
           <i data-lucide="book-marked" class="w-3.5 h-3.5"></i>
           <span>🗂️ اطلس کامل رده‌های دارویی</span>

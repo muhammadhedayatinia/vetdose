@@ -33,20 +33,58 @@
   src: url('./fonts/YekanBakh-ExtraBold.woff2') format('woff2');
 }
 
+/* =======================================================
+   سیستم طراحی اختصاصی پلامبز (Plumb's Design System 2026)
+   ======================================================= */
 :root {
-  --primary-color: #0f172a;
-  --accent-teal: #0d9488;
-  --accent-blue: #2563eb;
-  --danger-rose: #e11d48;
-  --warning-amber: #d97706;
-  --success-green: #059669;
+  /* پالت رنگی رسمی و معتبر پلامبز (Plumb's Official Tokens) */
+  --plumbs-navy: #0A2447;          /* سرمه‌ای نیمه‌شب نمادین پلامبز */
+  --plumbs-navy-dark: #031227;     /* عمیق‌ترین سرمه‌ای هدر و پاورقی */
+  --plumbs-navy-royal: #17285E;    /* سرمه‌ای سلطنتی کارت‌ها و دکمه‌ها */
+  --plumbs-blue: #0590D5;          /* آبی پرایمری بالینی پلامبز */
+  --plumbs-blue-dark: #0070A8;     /* آبی تیره برای دکمه‌های اکشن */
+  --plumbs-cyan: #00CAE0;          /* فیروزه‌ای درخشان پلامبز */
+  --plumbs-cyan-soft: #E6F7FC;     /* سطح نرم فیروزه‌ای برای کادرهای بالینی */
+  
+  --plumbs-ground: #F4F6FC;        /* پس‌زمینه شفاف، تمیز و کلینیکال وب‌سایت */
+  --plumbs-card: #FFFFFF;          /* سفید خالص کارت‌های دارویی */
+  --plumbs-border: #D0D7E8;        /* خطوط مرزی ملایم خاکستری-آبی */
+  --plumbs-border-light: #E9EDF7;  /* خطوط جداکننده فرعی */
 
-  /* Google Stitch Modern Tokens */
-  --stitch-surface-ground: #f8fafc;
-  --stitch-surface-card: #ffffff;
-  --stitch-surface-overlay: rgba(15, 23, 42, 0.75);
-  --stitch-radius-lg: 24px;
-  --stitch-radius-xl: 32px;
+  --plumbs-text-dark: #0A2447;     /* رنگ تیترهای با کنتراست بالا */
+  --plumbs-text-headings: #293040; /* رنگ عنوان‌های رده و بیماری */
+  --plumbs-text-body: #404961;     /* رنگ متن توضیحات فارماکولوژی */
+  --plumbs-text-muted: #7E8BA8;    /* رنگ متون کمکی و برچسب‌ها */
+
+  --plumbs-gold: #FFB140;          /* زرد کهربایی نکات کلیدی نسخه‌نویسی */
+  --plumbs-gold-dark: #F7941E;     /* کهربایی تیره هشدارهای احتیاط */
+  --plumbs-gold-soft: #FFFDF5;     /* پس‌زمینه کادر نکته کلیدی نسخه‌نویس */
+
+  --plumbs-red: #FF084B;           /* قرمز زنده هشدارهای مرگبار و CPR */
+  --plumbs-red-dark: #CC0946;      /* قرمز تیره تداخلات ماژور */
+  --plumbs-red-soft: #FFF0F3;      /* پس‌زمینه کادرهای اخطار کشنده */
+
+  --plumbs-green: #55983A;         /* سبز بالینی پلامبز برای تایید و ایمنی */
+  --plumbs-green-dark: #447C27;    /* سبز تیره دوزهای ایمن */
+  --plumbs-green-soft: #EDF7ED;    /* پس‌زمینه وضعیت‌های بدون خطر */
+
+  /* سایه‌های ارگونومیک پلامبز (Plumb's Ergonomic Shadows) */
+  --plumbs-shadow-card: rgba(10, 36, 71, 0.06) 0px 4px 20px, rgba(10, 36, 71, 0.02) 0px 1px 4px;
+  --plumbs-shadow-hover: rgba(10, 36, 71, 0.12) 0px 12px 30px, rgba(5, 144, 213, 0.14) 0px 0px 16px;
+  --plumbs-shadow-header: rgba(3, 18, 39, 0.25) 0px 4px 24px;
+  --plumbs-shadow-button: rgba(5, 144, 213, 0.25) 0px 3px 14px;
+
+  /* هماهنگی با توکن‌های سیستم قبلی جهت سازگاری کامل */
+  --primary-color: var(--plumbs-navy);
+  --accent-teal: var(--plumbs-cyan);
+  --accent-blue: var(--plumbs-blue);
+  --danger-rose: var(--plumbs-red);
+  --warning-amber: var(--plumbs-gold-dark);
+  --success-green: var(--plumbs-green);
+  --stitch-surface-ground: var(--plumbs-ground);
+  --stitch-surface-card: var(--plumbs-card);
+  --stitch-radius-lg: 20px;
+  --stitch-radius-xl: 28px;
   --stitch-radius-full: 9999px;
   --stitch-transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -58,7 +96,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* حل ریشه‌ای وارونگی و چرخش پرانتزها و متون ترکیبی فارسی/انگلیسی */
+/* =======================================================
+   حل ریشه‌ای وارونگی و چرخش پرانتزها و متون ترکیبی فارسی/انگلیسی (BiDi)
+   ======================================================= */
 .latin-text, [dir="ltr"] {
   direction: ltr !important;
   unicode-bidi: isolate !important;
@@ -80,64 +120,71 @@ bdi, .bdi-isolate {
 body {
   direction: rtl;
   text-align: right;
-  background-color: var(--stitch-surface-ground);
-  color: #1e293b;
+  background-color: var(--plumbs-ground);
+  color: var(--plumbs-text-headings);
   overflow-x: hidden;
-  padding-bottom: 70px; /* Space for mobile floating dock */
+  padding-bottom: 70px; /* فضای شناور ناوبری موبایل */
 }
 
 @media (min-width: 640px) {
   body {
-    padding-bottom: 20px;
+    padding-bottom: 24px;
   }
 }
 
-/* Custom scrollbars */
+/* اسکرول‌بار شیک کلینیکال */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #E9EDF7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #ABB5CD;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: var(--plumbs-blue);
 }
 
-/* Latin number and formula styling */
+/* استایل کدهای لاتین، فرمول‌ها و دوزها */
 .latin-text, .dose-val, .mono-code {
   direction: ltr !important;
   display: inline-block;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-/* Badge colors */
+/* =======================================================
+   برچسب‌ها و نشان‌های بالینی پلامبز (Plumb's Clinical Badges)
+   ======================================================= */
 .badge-purple {
-  background-color: #f3e8ff;
-  color: #7e22ce;
-  border: 1px solid #d8b4fe;
+  background-color: #F3EEFB;
+  color: #5B21B6;
+  border: 1px solid #D8C7F8;
 }
 .badge-blue {
-  background-color: #eff6ff;
-  color: #1d4ed8;
-  border: 1px solid #bfdbfe;
+  background-color: var(--plumbs-cyan-soft);
+  color: var(--plumbs-blue-dark);
+  border: 1px solid #B2E7F7;
 }
 .badge-green {
-  background-color: #ecfdf5;
-  color: #047857;
-  border: 1px solid #a7f3d0;
+  background-color: var(--plumbs-green-soft);
+  color: var(--plumbs-green-dark);
+  border: 1px solid #C7E9C7;
 }
 .badge-red {
-  background-color: #fff1f2;
-  color: #be123c;
-  border: 1px solid #fecdd3;
+  background-color: var(--plumbs-red-soft);
+  color: #C50638;
+  border: 1px solid #FFCCD6;
+}
+.badge-gold {
+  background-color: var(--plumbs-gold-soft);
+  color: #B45309;
+  border: 1px solid #FDE68A;
 }
 
-/* Pulse animation for emergency button */
+/* انیمیشن تپش نبض اورژانس و CPR */
 @keyframes heartPulse {
   0% { transform: scale(1); }
   14% { transform: scale(1.08); }
@@ -150,22 +197,21 @@ body {
   animation: heartPulse 1.2s infinite ease-in-out;
 }
 
-/* Glassmorphism modal */
+/* لایه مات پشت مودال‌های پلامبز */
 .modal-overlay {
   backdrop-filter: blur(12px);
-  background-color: rgba(15, 23, 42, 0.75);
+  background-color: rgba(10, 36, 71, 0.82);
 }
 
 /* =======================================================
-   Google Stitch UI & Interaction Styles
+   کارت‌های مونوگراف دارویی به سبک پلامبز (Plumb's Drug Cards)
    ======================================================= */
-
-/* Tactile Drug Card */
 .drug-card {
-  transition: all 0.22s var(--stitch-transition-smooth);
+  transition: all 0.24s var(--stitch-transition-smooth);
   border-radius: var(--stitch-radius-lg);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  background: #ffffff;
+  border: 1.5px solid var(--plumbs-border);
+  background: var(--plumbs-card);
+  box-shadow: var(--plumbs-shadow-card);
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -177,26 +223,47 @@ body {
 }
 .drug-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(13, 148, 136, 0.4);
-  box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(13, 148, 136, 0.06);
+  border-color: var(--plumbs-blue);
+  box-shadow: var(--plumbs-shadow-hover);
 }
 
-/* Google Stitch Glass Surfaces */
+/* کادر اختصاصی نکته کلیدی نسخه‌نویس پلامبز (Plumb's Prescriber Highlights) */
+.plumbs-prescriber-box {
+  background-color: var(--plumbs-gold-soft);
+  border: 1px solid #FDE68A;
+  border-right: 4px solid var(--plumbs-gold);
+  border-radius: 14px;
+  color: #78350F;
+  padding: 10px 14px;
+  line-height: 1.6;
+}
+
+/* کادر دوز سریع پلامبز (Plumb's Quick Dosing Box) */
+.plumbs-dosing-box {
+  background-color: var(--plumbs-ground);
+  border: 1px solid var(--plumbs-border);
+  border-radius: 16px;
+  padding: 12px 14px;
+}
+
+/* سطوح شیشه‌ای پلامبز (Plumb's Frosted Surfaces) */
 .stitch-glass {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.90);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(208, 215, 232, 0.7);
 }
 
 .stitch-glass-dark {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(10, 36, 71, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 202, 224, 0.2);
 }
 
-/* Mobile Floating Bottom Dock */
+/* =======================================================
+   ناوبری شناور پایینی موبایل به سبک پلامبز (Mobile Bottom Dock)
+   ======================================================= */
 .stitch-floating-dock {
   position: fixed;
   bottom: 12px;
@@ -204,16 +271,16 @@ body {
   transform: translateX(-50%);
   width: calc(100% - 24px);
   max-width: 480px;
-  background: rgba(15, 23, 42, 0.92);
+  background: rgba(10, 36, 71, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(0, 202, 224, 0.28);
   border-radius: 28px;
   padding: 6px 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(13, 148, 136, 0.2);
+  box-shadow: 0 20px 40px -10px rgba(3, 18, 39, 0.6), 0 0 20px 0 rgba(0, 202, 224, 0.25);
   z-index: 45;
   transition: all 0.3s var(--stitch-transition-smooth);
 }
@@ -224,7 +291,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2px;
-  color: #94a3b8;
+  color: #ABB5CD;
   font-size: 10px;
   font-weight: 700;
   padding: 6px 12px;
@@ -241,25 +308,25 @@ body {
   transform: scale(1.05);
 }
 .stitch-dock-item.active {
-  color: #2dd4bf;
-  background: rgba(13, 148, 136, 0.25);
-  box-shadow: 0 0 12px rgba(45, 212, 191, 0.3);
+  color: var(--plumbs-cyan);
+  background: rgba(0, 202, 224, 0.18);
+  box-shadow: 0 0 14px rgba(0, 202, 224, 0.35);
 }
 
-/* Keyboard shortcut badge */
+/* نشانگر میانبر کیبورد */
 .stitch-kbd {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 11px;
   font-weight: 700;
   padding: 2px 7px;
   border-radius: 8px;
-  background: #f1f5f9;
-  border: 1px solid #cbd5e1;
-  color: #64748b;
+  background: #E9EDF7;
+  border: 1px solid var(--plumbs-border);
+  color: var(--plumbs-text-body);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-/* Quick search chips */
+/* چیپ‌های فیلتر سریع به سبک پلامبز */
 .stitch-chip {
   padding: 6px 14px;
   border-radius: 20px;
@@ -268,24 +335,48 @@ body {
   white-space: nowrap;
   transition: all 0.2s var(--stitch-transition-smooth);
   cursor: pointer;
-  border: 1px solid #e2e8f0;
+  border: 1.5px solid var(--plumbs-border);
   background: #ffffff;
-  color: #475569;
+  color: var(--plumbs-text-body);
 }
 .stitch-chip:hover {
-  background: #f8fafc;
-  border-color: #0d9488;
-  color: #0d9488;
+  background: var(--plumbs-ground);
+  border-color: var(--plumbs-blue);
+  color: var(--plumbs-blue);
   transform: translateY(-1px);
 }
 .stitch-chip.active {
-  background: #0f172a;
+  background: var(--plumbs-navy);
   color: #ffffff;
-  border-color: #0f172a;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  border-color: var(--plumbs-cyan);
+  box-shadow: 0 4px 14px rgba(10, 36, 71, 0.25), 0 0 0 1px var(--plumbs-cyan);
 }
 
-/* Floating Scroll to Top Button */
+/* دکمه‌های کپسولی رده‌های درمانی */
+.thcat-pill {
+  transition: all 0.2s var(--stitch-transition-smooth);
+  border: 1.5px solid var(--plumbs-border);
+  background: #ffffff;
+  color: var(--plumbs-text-body);
+}
+.thcat-pill:hover {
+  background: var(--plumbs-ground);
+  border-color: var(--plumbs-blue);
+  color: var(--plumbs-blue);
+  transform: translateY(-1px);
+}
+.thcat-pill.active {
+  background: var(--plumbs-navy) !important;
+  color: #ffffff !important;
+  border-color: var(--plumbs-cyan) !important;
+  box-shadow: 0 4px 14px rgba(10, 36, 71, 0.25), 0 0 0 1px var(--plumbs-cyan) !important;
+}
+.thcat-pill.active .count-badge {
+  background-color: rgba(0, 202, 224, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* دکمه اسکرول به بالا */
 #scrollTopBtn {
   position: fixed;
   bottom: 80px;
@@ -293,13 +384,13 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #0f172a;
+  background: var(--plumbs-navy);
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px -5px rgba(10, 36, 71, 0.4);
+  border: 1.5px solid rgba(0, 202, 224, 0.4);
   cursor: pointer;
   z-index: 40;
   opacity: 0;
@@ -313,9 +404,10 @@ body {
   transform: translateY(0);
 }
 #scrollTopBtn:hover {
-  background: #0d9488;
+  background: var(--plumbs-blue);
+  border-color: var(--plumbs-cyan);
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 14px 28px -5px rgba(13, 148, 136, 0.4);
+  box-shadow: 0 14px 28px -5px rgba(5, 144, 213, 0.45);
 }
 
 @media (min-width: 640px) {
@@ -324,7 +416,7 @@ body {
   }
 }
 
-/* Ripple press effect */
+/* لمس و بازخورد دکمه‌ها */
 .stitch-btn-tactile {
   transition: all 0.15s ease;
 }
@@ -333,7 +425,7 @@ body {
 }
 
 /* =======================================================
-   Official Veterinary Prescription Print Engine Stylesheet
+   موتور پرینت نسخه رسمی و استاندارد دامپزشکی (Print Engine)
    ======================================================= */
 @media print {
   @page {
@@ -349,7 +441,7 @@ body {
     font-size: 11pt !important;
   }
 
-  /* Hide everything except the prescription modal & sheet */
+  /* پنهان‌سازی عناصر غیرضروری هنگام چاپ */
   header,
   footer,
   section,
@@ -404,15 +496,15 @@ body {
     page-break-inside: avoid;
   }
 
-  /* Printable borders and high-contrast tables */
+  /* خطوط و جداول با کنتراست بالا برای پرینترهای درمانگاهی */
   .rx-print-border {
-    border: 1.5px solid #0f172a !important;
+    border: 1.5px solid #0A2447 !important;
   }
   .rx-print-border-b {
-    border-bottom: 1.5px solid #0f172a !important;
+    border-bottom: 1.5px solid #0A2447 !important;
   }
   .rx-print-border-t {
-    border-top: 1.5px solid #0f172a !important;
+    border-top: 1.5px solid #0A2447 !important;
   }
   .rx-print-table {
     width: 100% !important;
@@ -426,7 +518,7 @@ body {
   }
   .rx-print-table th {
     background-color: #f1f5f9 !important;
-    color: #0f172a !important;
+    color: #0A2447 !important;
     font-weight: 800 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
