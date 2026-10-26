@@ -12,7 +12,10 @@ function closeAllModals() {
     'toxicologyModal',
     'therapeuticAtlasModal',
     'seizureFlowchartModal',
-    'prescriptionPrintModal'
+    'prescriptionPrintModal',
+    'authModal',
+    'subscriptionModal',
+    'feedbackModal'
   ];
   modalIds.forEach(id => {
     const el = document.getElementById(id);
@@ -5342,27 +5345,33 @@ function switchInteractionMode(mode) {
   currentInteractionMode = mode;
   const singleView = document.getElementById('singleDrugInteractionView');
   const multiView = document.getElementById('multiDrugInteractionView');
+  const pearlsView = document.getElementById('communityPearlsInteractionView');
   const btnSingle = document.getElementById('interactTab_single');
   const btnMulti = document.getElementById('interactTab_multi');
+  const btnPearls = document.getElementById('interactTab_pearls');
 
   if (mode === 'single') {
     if (singleView) singleView.classList.remove('hidden');
     if (multiView) multiView.classList.add('hidden');
-    if (btnSingle) {
-      btnSingle.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition flex items-center gap-1.5 bg-amber-600 text-white shadow-xs';
-    }
-    if (btnMulti) {
-      btnMulti.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-300';
-    }
-  } else {
+    if (pearlsView) pearlsView.classList.add('hidden');
+    if (btnSingle) btnSingle.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition flex items-center gap-1.5 bg-amber-600 text-white shadow-xs';
+    if (btnMulti) btnMulti.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 cursor-pointer';
+    if (btnPearls) btnPearls.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 cursor-pointer';
+  } else if (mode === 'multi') {
     if (singleView) singleView.classList.add('hidden');
     if (multiView) multiView.classList.remove('hidden');
-    if (btnSingle) {
-      btnSingle.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-300';
-    }
-    if (btnMulti) {
-      btnMulti.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition flex items-center gap-1.5 bg-amber-600 text-white shadow-xs';
-    }
+    if (pearlsView) pearlsView.classList.add('hidden');
+    if (btnSingle) btnSingle.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 cursor-pointer';
+    if (btnMulti) btnMulti.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition flex items-center gap-1.5 bg-amber-600 text-white shadow-xs';
+    if (btnPearls) btnPearls.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 cursor-pointer';
+  } else if (mode === 'pearls') {
+    if (singleView) singleView.classList.add('hidden');
+    if (multiView) multiView.classList.add('hidden');
+    if (pearlsView) pearlsView.classList.remove('hidden');
+    if (btnSingle) btnSingle.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 cursor-pointer';
+    if (btnMulti) btnMulti.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 cursor-pointer';
+    if (btnPearls) btnPearls.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition flex items-center gap-1.5 bg-indigo-700 text-white shadow-xs';
+    renderCommunityPearlsList();
   }
   safeCreateIcons();
 }
@@ -10976,5 +10985,743 @@ if (typeof window !== 'undefined') {
 if (typeof window !== 'undefined') {
   window.addEventListener('DOMContentLoaded', () => {
     safeCreateIcons();
+  });
+}
+
+
+
+// =================================================================
+// 👑 سامانه احراز هویت، عضویت بالینی و اشتراک تجاری وت‌دوز (VetDose ID & Commercial Engine)
+// =================================================================
+
+// کلیدهای ذخیره‌سازی محلی (Offline-First Local Storage Keys)
+const VETDOSE_STORAGE = {
+  USER: 'vetdose_user_profile',
+  SUBSCRIPTION: 'vetdose_subscription_info',
+  PEARLS: 'vetdose_community_clinical_pearls',
+  FEEDBACKS: 'vetdose_clinical_feedbacks',
+  COUPON_ACTIVE: 'vetdose_coupon_active'
+};
+
+// -------------------------------------------------------------
+// ۱. سیستم ورود و عضویت بالینی (Authentication & Membership)
+// -------------------------------------------------------------
+
+function openAuthModal() {
+  closeAllModals();
+  const modal = document.getElementById('authModal');
+  if (modal) {
+    modal.classList.remove('hidden');
+    safeCreateIcons();
+  }
+}
+
+function closeAuthModal() {
+  const modal = document.getElementById('authModal');
+  if (modal) modal.classList.add('hidden');
+}
+
+function switchAuthTab(tab) {
+  const loginForm = document.getElementById('authLoginForm');
+  const regForm = document.getElementById('authRegisterForm');
+  const tabLogin = document.getElementById('tabAuthLogin');
+  const tabReg = document.getElementById('tabAuthRegister');
+
+  if (tab === 'login') {
+    if (loginForm) loginForm.classList.remove('hidden');
+    if (regForm) regForm.classList.add('hidden');
+    if (tabLogin) tabLogin.className = 'flex-1 py-2.5 text-xs font-black border-b-2 border-cyan-600 text-cyan-800 transition text-center cursor-pointer';
+    if (tabReg) tabReg.className = 'flex-1 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800 transition text-center cursor-pointer';
+  } else {
+    if (loginForm) loginForm.classList.add('hidden');
+    if (regForm) regForm.classList.remove('hidden');
+    if (tabLogin) tabLogin.className = 'flex-1 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800 transition text-center cursor-pointer';
+    if (tabReg) tabReg.className = 'flex-1 py-2.5 text-xs font-black border-b-2 border-emerald-600 text-emerald-800 transition text-center cursor-pointer';
+  }
+}
+
+function getCurrentUser() {
+  try {
+    const raw = localStorage.getItem(VETDOSE_STORAGE.USER);
+    if (raw) return JSON.parse(raw);
+  } catch (e) {
+    console.error('Error reading user profile:', e);
+  }
+  return null;
+}
+
+function handleUserLogin() {
+  const identifierInput = document.getElementById('loginIdentifier');
+  const passwordInput = document.getElementById('loginPassword');
+  const identifier = identifierInput ? identifierInput.value.trim() : '';
+  const password = passwordInput ? passwordInput.value.trim() : '';
+
+  if (!identifier) {
+    alert('لطفاً شماره تلفن همراه یا شماره نظام دامپزشکی خود را وارد نمایید.');
+    return;
+  }
+
+  const user = {
+    name: identifier.startsWith('09') ? 'دکتر همکار (' + identifier.slice(-4) + ')' : 'دکتر نظام ' + identifier,
+    phone: identifier,
+    role: 'دامپزشک بالینی',
+    plan: 'VIP_ACTIVE',
+    planName: 'اشتراک فعال',
+    daysLeft: 30,
+    isVip: true,
+    lastLogin: Date.now()
+  };
+
+  localStorage.setItem(VETDOSE_STORAGE.USER, JSON.stringify(user));
+  closeAuthModal();
+  updateAuthUI();
+  alert('خوش آمدید! ورود به حساب کاربری با موفقیت انجام شد.');
+}
+
+function handleUserRegister() {
+  const nameInput = document.getElementById('regName');
+  const roleSelect = document.getElementById('regRole');
+  const vetCodeInput = document.getElementById('regVetCode');
+  const phoneInput = document.getElementById('regPhone');
+  const passwordInput = document.getElementById('regPassword');
+
+  const name = nameInput ? nameInput.value.trim() : '';
+  const role = roleSelect ? roleSelect.value : 'کلینیسین دام کوچک';
+  const vetCode = vetCodeInput ? vetCodeInput.value.trim() : '';
+  const phone = phoneInput ? phoneInput.value.trim() : '';
+
+  if (!name || !phone) {
+    alert('لطفاً نام و نام خانوادگی و شماره تلفن همراه خود را وارد فرمایید.');
+    return;
+  }
+
+  const user = {
+    name: name,
+    role: role,
+    vetCode: vetCode || 'در انتظار تایید نظام',
+    phone: phone,
+    plan: 'VIP_GOLD_TRIAL',
+    planName: 'طلایی هدیه (۷ روز)',
+    daysLeft: 7,
+    isVip: true,
+    registeredAt: Date.now()
+  };
+
+  localStorage.setItem(VETDOSE_STORAGE.USER, JSON.stringify(user));
+  closeAuthModal();
+  updateAuthUI();
+  alert('تبریک! حساب کاربری شما با ۷ روز اشتراک طلایی رایگان وت‌دوز فعال گردید.');
+}
+
+function handleDemoQuickLogin() {
+  const demoUser = {
+    name: 'دکتر علیرضا محمدی',
+    role: 'کلینیسین دام کوچک',
+    vetCode: '۱۴۰۲/۳۸۹۱',
+    phone: '۰۹۱۲۳۴۵۶۷۸۹',
+    plan: 'VIP_DIAMOND',
+    planName: 'VIP الماس ۱ ساله',
+    daysLeft: 294,
+    isVip: true,
+    isDemo: true
+  };
+
+  localStorage.setItem(VETDOSE_STORAGE.USER, JSON.stringify(demoUser));
+  closeAuthModal();
+  updateAuthUI();
+  alert('ورود سریع آزمایشی انجام شد! شما اکنون به عنوان همکار VIP (دکتر علیرضا محمدی) با دسترسی نامحدود به کلیه بخش‌ها لاگین هستید.');
+}
+
+function handleAuthActionClick() {
+  const user = getCurrentUser();
+  if (user) {
+    const confirmLogout = confirm('شما با عنوان "' + user.name + '" و پلن "' + user.planName + '" وارد شده‌اید.\nآیا مایل به خروج از حساب کاربری هستید؟');
+    if (confirmLogout) {
+      handleUserLogout();
+    }
+  } else {
+    openAuthModal();
+  }
+}
+
+function handleUserLogout() {
+  localStorage.removeItem(VETDOSE_STORAGE.USER);
+  updateAuthUI();
+  alert('شما با موفقیت از حساب کاربری خود خارج شدید.');
+}
+
+function updateAuthUI() {
+  const user = getCurrentUser();
+  
+  // ۱. نوار بالای صفحه (Header)
+  const headerContainer = document.getElementById('userAuthHeaderContainer');
+  if (headerContainer) {
+    if (user) {
+      headerContainer.innerHTML = `
+        <button type="button" onclick="handleAuthActionClick()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 hover:text-white font-bold text-xs border border-amber-500/40 transition flex items-center gap-1.5 cursor-pointer shadow-xs" title="مشاهده پروفایل یا خروج">
+          <i data-lucide="user-check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+          <span class="truncate max-w-[120px] sm:max-w-[160px]">${user.name}</span>
+          <span class="text-[9px] bg-amber-400/20 text-amber-300 border border-amber-300/30 px-1.5 py-0.2 rounded font-mono hidden sm:inline">VIP</span>
+        </button>
+      `;
+    } else {
+      headerContainer.innerHTML = `
+        <button type="button" onclick="openAuthModal()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 active:scale-95 text-cyan-300 hover:text-white font-bold text-xs border border-cyan-500/30 transition flex items-center gap-1.5 cursor-pointer">
+          <i data-lucide="user" class="w-4 h-4 text-cyan-400"></i>
+          <span>ورود / عضویت</span>
+        </button>
+      `;
+    }
+  }
+
+  // ۲. کارت وضعیت سایدبار سمت راست (Sidebar Status Card)
+  const sidebarName = document.getElementById('sidebarUserName');
+  const sidebarPlan = document.getElementById('sidebarUserPlan');
+  const sidebarBtn = document.getElementById('sidebarAuthBtn');
+  
+  if (sidebarName && sidebarPlan && sidebarBtn) {
+    if (user) {
+      sidebarName.textContent = user.name;
+      sidebarPlan.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span class="text-emerald-300 font-bold">${user.planName} (${user.daysLeft} روز)</span>`;
+      sidebarBtn.textContent = 'پروفایل / خروج';
+      sidebarBtn.className = 'px-2 py-1 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-200 border border-rose-400/40 text-[10px] font-bold transition shrink-0 cursor-pointer';
+    } else {
+      sidebarName.textContent = 'کاربر مهمان (نسخه پایه)';
+      sidebarPlan.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span><span>دسترسی استاندارد</span>`;
+      sidebarBtn.textContent = 'ورود';
+      sidebarBtn.className = 'px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-200 border border-cyan-400/40 text-[11px] font-bold transition shrink-0 cursor-pointer';
+    }
+  }
+
+  safeCreateIcons();
+}
+
+// -------------------------------------------------------------
+// ۲. سیستم فروش و مدیریت پلن‌های اشتراک تجاری (Commercial Subscriptions)
+// -------------------------------------------------------------
+
+let selectedPlanForPayment = null;
+let isSubscriptionDiscountActive = false;
+if (typeof window !== 'undefined') window.isSubscriptionDiscountActive = false;
+
+function openSubscriptionModal() {
+  closeAllModals();
+  const modal = document.getElementById('subscriptionModal');
+  if (modal) {
+    modal.classList.remove('hidden');
+    safeCreateIcons();
+  }
+}
+
+function closeSubscriptionModal() {
+  const modal = document.getElementById('subscriptionModal');
+  if (modal) modal.classList.add('hidden');
+}
+
+function applySubscriptionCoupon() {
+  const input = document.getElementById('subscriptionCouponInput');
+  const code = input ? input.value.trim().toUpperCase() : '';
+  
+  if (code === 'VETSTUDENT' || code === 'WELCOME' || code === 'IRANVET') {
+    isSubscriptionDiscountActive = true;
+    if (typeof window !== 'undefined') window.isSubscriptionDiscountActive = true;
+    localStorage.setItem(VETDOSE_STORAGE.COUPON_ACTIVE, '30');
+    alert('🎉 تبریک! کد تخفیف ' + code + ' فعال شد. ۳۰٪ تخفیف مازاد روی تمامی پلن‌ها اعمال گردید.');
+    if (selectedPlanForPayment) {
+      selectSubscriptionPlan(selectedPlanForPayment.id, selectedPlanForPayment.originalPrice, selectedPlanForPayment.title);
+    }
+  } else {
+    alert('کد تخفیف وارد شده معتبر نمی‌باشد. برای دریافت کد تخفیف دانشجویی با شماره پشتیبانی تماس حاصل فرمایید.');
+  }
+}
+
+function selectSubscriptionPlan(planId, price, title) {
+  const discountMultiplier = isSubscriptionDiscountActive ? 0.7 : 1.0;
+  const finalPrice = Math.round(price * discountMultiplier);
+  
+  selectedPlanForPayment = {
+    id: planId,
+    originalPrice: price,
+    finalPrice: finalPrice,
+    title: title
+  };
+
+  const paymentArea = document.getElementById('subscriptionPaymentArea');
+  const titleEl = document.getElementById('paySelectedPlanTitle');
+  const descEl = document.getElementById('paySelectedPlanDesc');
+  const amountEl = document.getElementById('paySelectedPlanAmount');
+
+  if (paymentArea && titleEl && descEl && amountEl) {
+    paymentArea.classList.remove('hidden');
+    titleEl.textContent = title;
+    descEl.textContent = isSubscriptionDiscountActive 
+      ? 'قیمت اصلی: ' + price.toLocaleString('fa-IR') + ' تومان (با احتساب ۳۰٪ تخفیف دانشجویی)' 
+      : 'دسترسی کامل و آنی به امکانات تجاری وت‌دوز';
+    amountEl.textContent = finalPrice.toLocaleString('fa-IR') + ' تومان';
+
+    paymentArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    safeCreateIcons();
+  }
+}
+
+function handleSimulatedOnlinePayment() {
+  if (!selectedPlanForPayment) {
+    alert('لطفاً ابتدا یکی از پلن‌های اشتراک را انتخاب فرمایید.');
+    return;
+  }
+
+  const trackingCode = 'SHP-' + Math.floor(10000000 + Math.random() * 90000000);
+  
+  // ارتقای کاربر فعلی یا ایجاد پروفایل VIP جدید
+  let user = getCurrentUser();
+  if (!user) {
+    user = {
+      name: 'دکتر همکار VIP',
+      phone: '۰۹۱۲۰۰۰۰۰۰۰',
+      role: 'کلینیسین دامپزشکی'
+    };
+  }
+
+  user.plan = selectedPlanForPayment.id;
+  user.planName = selectedPlanForPayment.title;
+  user.isVip = true;
+  user.daysLeft = selectedPlanForPayment.id === '1_year_vip' ? 365 : (selectedPlanForPayment.id === '6_months' ? 180 : (selectedPlanForPayment.id === '3_months' ? 90 : 30));
+  user.paidAmount = selectedPlanForPayment.finalPrice;
+  user.trackingCode = trackingCode;
+  user.upgradedAt = Date.now();
+
+  localStorage.setItem(VETDOSE_STORAGE.USER, JSON.stringify(user));
+  closeSubscriptionModal();
+  updateAuthUI();
+
+  alert('✅ تراکنش در درگاه پرداخت شاپرک با موفقیت انجام شد!\n\n' +
+        'کد رهگیری بانکی: ' + trackingCode + '\n' +
+        'پلن فعال شده: ' + selectedPlanForPayment.title + '\n' +
+        'اعتبار اشتراک: ' + user.daysLeft + ' روز دسترسی نامحدود.\n\n' +
+        'از اعتماد شما به سامانه دارونامه و تصمیم‌یار بالینی وت‌دوز سپاسگزاریم.');
+}
+
+function handleCardToCardPayment() {
+  if (!selectedPlanForPayment) {
+    alert('لطفاً ابتدا یکی از پلن‌های اشتراک را انتخاب فرمایید.');
+    return;
+  }
+  
+  const msg = 'جهت واریز کارت به کارت:\n\n' +
+              'شماره کارت: ۶۲۱۹-۸۶۱۰-۳۳۴۴-۵۵۶۶ (بانک سامان - به نام وت‌دوز / دکتر محمدی)\n' +
+              'مبلغ قابل پرداخت: ' + selectedPlanForPayment.finalPrice.toLocaleString('fa-IR') + ' تومان\n\n' +
+              'پس از واریز، تصویر فیش را به شماره تلگرام یا واتساپ 09120000000 ارسال فرمایید تا اشتراک شما ظرف کمتر از ۵ دقیقه فعال گردد.';
+  alert(msg);
+}
+
+// -------------------------------------------------------------
+// ۳. تالار تجارب بالینی همکاران در تداخلات دارویی (Community Clinical Pearls)
+// -------------------------------------------------------------
+
+const INITIAL_CLINICAL_PEARLS = [
+  {
+    id: 'pearl_1',
+    author: 'دکتر علیرضا کاظمی (کلینیسین دام کوچک، تهران)',
+    drug1: 'کتامین ۱۰٪',
+    drug2: 'دیازپام انسانی (آمپول ۵ میلی‌گرم/میلی‌لیتر)',
+    type: 'precipitate',
+    badgeText: '⚠️ رسوب فیزیکی در سرنگ',
+    badgeClass: 'bg-amber-100 text-amber-900 border-amber-300',
+    observation: 'در مخلوط کردن کتامین ۱۰٪ با دیازپام انسانی در یک سرنگ واحد، ظرف کمتر از ۴۰ ثانیه مایع شیری‌رنگ شد و رسوب نامحلول سفید تشکیل شد.',
+    recommendation: 'حلال پروپیلن گلیکول دیازپام با اسیدیته نمک هیدروکلراید کتامین ناسازگار است. حتماً در دو سرنگ جداگانه یا با فلش خط وریدی تجویز شود.',
+    date: '۱۴۰۴/۱۰/۱۲',
+    upvotes: 38
+  },
+  {
+    id: 'pearl_2',
+    author: 'دکتر مریم شریفی (متخصص داخلی دام بزرگ، شیراز)',
+    drug1: 'جنتامایسین ۱۰٪',
+    drug2: 'فوروزماید (لازیکس)',
+    type: 'toxicity',
+    badgeText: '🔴 ریسک حاد سمیت کلیوی (Nephrotoxicity)',
+    badgeClass: 'bg-rose-100 text-rose-900 border-rose-300',
+    observation: 'تجویز همزمان آمینوگلیکوزیدها با لوپ دیورتیک در گوساله‌های مبتلا به پنومونی توأم با دهیدراسیون، باعث اولیگوری حاد و پررنگ شدن شدید ادرار شد.',
+    recommendation: 'فوروزماید با تغلیظ دارو در لوله‌های توبولار پروگزیمال کلیه، نفروتوکسیسیته جنتامایسین را تصاعدی بالا می‌برد. ابتدا اصلاح حجم سرم و جایگزینی با بتالاکتام توصیه می‌شود.',
+    date: '۱۴۰۴/۱۱/۰۴',
+    upvotes: 29
+  },
+  {
+    id: 'pearl_3',
+    author: 'دکتر کامران نادری (جراح و بیهوشی، کرج)',
+    drug1: 'کتامین ۱۰٪',
+    drug2: 'زایلازین ۲٪',
+    type: 'synergy',
+    badgeText: '🟢 پروتکل موفق و سازگار در سرنگ',
+    badgeClass: 'bg-emerald-100 text-emerald-900 border-emerald-300',
+    observation: 'سازگاری فیزیکی ۱۰۰٪ در یک سرنگ (بدون کدورت یا تغییر pH). شل‌کنندگی عضلانی زایلازین سفت‌شدگی کاتالپسی کتامین را رفع می‌کند.',
+    recommendation: 'در سگ و گربه سالم عالی است؛ در موارد نارسایی قلبی یا انسداد ادراری گربه (FUS) به دلیل آریتمی‌زایی آلفا-۲ باید جایگزین شود.',
+    date: '۱۴۰۴/۱۱/۲۰',
+    upvotes: 45
+  },
+  {
+    id: 'pearl_4',
+    author: 'دکتر هدیه رضوانی (متخصص بیماری‌های طیور و اگزوتیک، مشهد)',
+    drug1: 'فلوکونازول سوسپانسیون',
+    drug2: 'شربت‌های طعم‌دار انسانی',
+    type: 'toxicity',
+    badgeText: '🔴 هشدار سمیت زایلیتول شربت انسانی',
+    badgeClass: 'bg-rose-100 text-rose-900 border-rose-300',
+    observation: 'استفاده از شربت‌های خوراکی اطفال انسانی جهت خوش‌طعم کردن فلوکونازول برای خرگوش و سگ؛ وجود شیرین‌کننده زایلیتول سبب هیپوگلیسمی ناگهانی و تشنج شد.',
+    recommendation: 'همواره برچسب شربت‌های انسانی را چک کنید. در صورت وجود Xylitol مطلقاً استفاده نگردد.',
+    date: '۱۴۰۴/۱۲/۰۲',
+    upvotes: 52
+  },
+  {
+    id: 'pearl_5',
+    author: 'دکتر شاهین مرادی (کلینیسین دام کوچک، اصفهان)',
+    drug1: 'ملوکسیکام تزریقی/خوراکی',
+    drug2: 'دگزامتازون',
+    type: 'toxicity',
+    badgeText: '🔴 خطر خونریزی حاد و سوراخ‌شدن گوارش',
+    badgeClass: 'bg-rose-100 text-rose-900 border-rose-300',
+    observation: 'همزمانی NSAID و کورتیکواستروئید در بیمار دیسک بین‌مهره‌ای (IVDD) منجر به ملنا (مدفوع قیرگون) و افت شدید هماتوکریت ظرف ۳ روز شد.',
+    recommendation: 'منع مصرف همزمان قطعی. حداقل زمان پاکسازی (Washout Period) ۳ الی ۵ روز بین قطع کورتون و شروع NSAID الزامی است.',
+    date: '۱۴۰۴/۱۲/۱۵',
+    upvotes: 61
+  },
+  {
+    id: 'pearl_6',
+    author: 'دکتر سارا انصاری (کلینیسین دام کوچک، ارومیه)',
+    drug1: 'آیورمکتین',
+    drug2: 'لوپرامید انسانی (ضد اسهال)',
+    type: 'toxicity',
+    badgeText: '🔴 سمیت عصبی نژادهای حساس (MDR1 / ABCB1)',
+    badgeClass: 'bg-rose-100 text-rose-900 border-rose-300',
+    observation: 'تجویز لوپرامید جهت کنترل اسهال در یک سگ نژاد کالی تحت درمان جرب، ظرف چند ساعت سبب آتاکسی، لتارژی شدید و کمای برگشت‌پذیر شد.',
+    recommendation: 'نقص پمپ پی‌گلیکوپروتئین سبب عبور نامحدود دارو از سد خونی-مغزی می‌گردد. در Collie و ژرمن شپرد لوپرامید ممنوع است.',
+    date: '۱۴۰۴/۱۲/۲۲',
+    upvotes: 41
+  }
+];
+
+let activePearlFilterType = 'all';
+let activePearlSearchQuery = '';
+
+function getCommunityPearls() {
+  try {
+    const raw = localStorage.getItem(VETDOSE_STORAGE.PEARLS);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+    }
+  } catch (e) {
+    console.error('Error loading community pearls:', e);
+  }
+  return INITIAL_CLINICAL_PEARLS;
+}
+
+function saveCommunityPearls(pearls) {
+  try {
+    localStorage.setItem(VETDOSE_STORAGE.PEARLS, JSON.stringify(pearls));
+  } catch (e) {
+    console.error('Error saving community pearls:', e);
+  }
+}
+
+function toggleNewPearlForm() {
+  const container = document.getElementById('newPearlFormContainer');
+  if (container) {
+    container.classList.toggle('hidden');
+    safeCreateIcons();
+  }
+}
+
+function renderCommunityPearlsList() {
+  const container = document.getElementById('communityPearlsList');
+  if (!container) return;
+
+  const pearls = getCommunityPearls();
+  const q = activePearlSearchQuery.toLowerCase();
+
+  const filtered = pearls.filter(p => {
+    // فیلتر دسته‌بندی
+    if (activePearlFilterType !== 'all' && p.type !== activePearlFilterType) return false;
+    // فیلتر جستجو
+    if (q) {
+      const matchDrug = (p.drug1 && p.drug1.toLowerCase().includes(q)) || 
+                        (p.drug2 && p.drug2.toLowerCase().includes(q)) ||
+                        (p.author && p.author.toLowerCase().includes(q)) ||
+                        (p.observation && p.observation.toLowerCase().includes(q));
+      if (!matchDrug) return false;
+    }
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div class="p-8 text-center bg-slate-50 border border-slate-200 rounded-2xl text-slate-500">
+        <i data-lucide="inbox" class="w-10 h-10 mx-auto text-slate-400 mb-2"></i>
+        <p class="font-bold text-xs">موردی متناسب با فیلتر یا جستجوی شما یافت نشد.</p>
+        <button type="button" onclick="toggleNewPearlForm()" class="mt-3 text-indigo-600 font-bold hover:underline text-xs">
+          اولین نفری باشید که تجربه این دارو را ثبت می‌کنید
+        </button>
+      </div>
+    `;
+    safeCreateIcons();
+    return;
+  }
+
+  container.innerHTML = filtered.map(item => {
+    return `
+      <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-indigo-300 transition space-y-3">
+        
+        <!-- هدر کارت: نویسنده، تاریخ و بج نوع پیامد -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-2.5">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-slate-100 text-indigo-900 border border-slate-200 flex items-center justify-center font-bold text-xs shrink-0">
+              <i data-lucide="user" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="font-black text-slate-800 text-xs block">${item.author}</span>
+              <span class="text-[10px] text-slate-400 font-mono">${item.date}</span>
+            </div>
+          </div>
+          <span class="px-2.5 py-1 rounded-full text-[11px] font-bold border shrink-0 inline-flex items-center gap-1.5 ${item.badgeClass || 'bg-amber-100 text-amber-900 border-amber-300'}">
+            ${item.badgeText}
+          </span>
+        </div>
+
+        <!-- داروهای مورد اشاره -->
+        <div class="flex items-center gap-2 flex-wrap text-xs">
+          <span class="px-2.5 py-1 rounded-xl bg-slate-100 text-slate-800 border border-slate-200 font-bold flex items-center gap-1">
+            <i data-lucide="pill" class="w-3.5 h-3.5 text-indigo-600"></i>
+            <span>${item.drug1}</span>
+          </span>
+          <span class="text-slate-400 font-bold">+</span>
+          <span class="px-2.5 py-1 rounded-xl bg-slate-100 text-slate-800 border border-slate-200 font-bold flex items-center gap-1">
+            <i data-lucide="pill" class="w-3.5 h-3.5 text-indigo-600"></i>
+            <span>${item.drug2}</span>
+          </span>
+        </div>
+
+        <!-- شرح مشاهده بالینی -->
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 text-xs text-slate-700 leading-relaxed">
+          <span class="font-black text-slate-900 block mb-1">🔍 مشاهده بالینی در بیمار:</span>
+          <span>${item.observation}</span>
+        </div>
+
+        <!-- توصیه و تحلیل بالینی -->
+        <div class="p-3 rounded-xl bg-indigo-50/60 border border-indigo-100 text-xs text-indigo-950 leading-relaxed">
+          <span class="font-black text-indigo-900 block mb-1">💡 راهکار و جمع‌بندی برای همکاران:</span>
+          <span>${item.recommendation}</span>
+        </div>
+
+        <!-- فوتر کارت و شمارنده لایک/مفید بودن -->
+        <div class="flex items-center justify-between pt-1">
+          <button type="button" onclick="upvoteClinicalPearl('${item.id}')" class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 text-slate-600 font-bold text-xs transition flex items-center gap-1.5 cursor-pointer border border-slate-200">
+            <i data-lucide="thumbs-up" class="w-3.5 h-3.5 text-indigo-600"></i>
+            <span>این تجربه برایم مفید بود (${item.upvotes || 0})</span>
+          </button>
+          <span class="text-[10px] text-slate-400">تایید شده توسط جامعه همکاران</span>
+        </div>
+
+      </div>
+    `;
+  }).join('');
+
+  safeCreateIcons();
+}
+
+function filterClinicalPearls() {
+  const input = document.getElementById('searchPearlsInput');
+  activePearlSearchQuery = input ? input.value : '';
+  renderCommunityPearlsList();
+}
+
+function filterPearlsByType(type) {
+  activePearlFilterType = type;
+  
+  const buttons = ['all', 'precipitate', 'toxicity', 'synergy'];
+  buttons.forEach(b => {
+    const btn = document.getElementById('pearlFilter_' + b);
+    if (btn) {
+      if (b === type) {
+        btn.className = 'px-2.5 py-1 rounded-lg text-[11px] font-bold bg-indigo-600 text-white transition cursor-pointer whitespace-nowrap';
+      } else {
+        btn.className = 'px-2.5 py-1 rounded-lg text-[11px] font-bold bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition cursor-pointer whitespace-nowrap';
+      }
+    }
+  });
+
+  renderCommunityPearlsList();
+}
+
+function submitNewClinicalPearl() {
+  const authorInput = document.getElementById('pearlAuthorInput');
+  const typeSelect = document.getElementById('pearlTypeInput');
+  const drug1Input = document.getElementById('pearlDrug1Input');
+  const drug2Input = document.getElementById('pearlDrug2Input');
+  const obsInput = document.getElementById('pearlObservationInput');
+  const recInput = document.getElementById('pearlRecommendationInput');
+
+  const author = authorInput ? authorInput.value.trim() : '';
+  const type = typeSelect ? typeSelect.value : 'precipitate';
+  const drug1 = drug1Input ? drug1Input.value.trim() : '';
+  const drug2 = drug2Input ? drug2Input.value.trim() : '';
+  const obs = obsInput ? obsInput.value.trim() : '';
+  const rec = recInput ? recInput.value.trim() : '';
+
+  if (!author || !drug1 || !obs) {
+    alert('لطفاً نام همکار، داروی اول و شرح مشاهده را تکمیل فرمایید.');
+    return;
+  }
+
+  let badgeText = '⚠️ رسوب فیزیکی در سرنگ';
+  let badgeClass = 'bg-amber-100 text-amber-900 border-amber-300';
+  if (type === 'toxicity') {
+    badgeText = '🔴 سمیت و عارضه بالینی';
+    badgeClass = 'bg-rose-100 text-rose-900 border-rose-300';
+  } else if (type === 'synergy') {
+    badgeText = '🟢 پروتکل موفق و هم‌افزا';
+    badgeClass = 'bg-emerald-100 text-emerald-900 border-emerald-300';
+  }
+
+  const newPearl = {
+    id: 'pearl_' + Date.now(),
+    author: author,
+    drug1: drug1,
+    drug2: drug2 || 'سرم زمینه / حلال',
+    type: type,
+    badgeText: badgeText,
+    badgeClass: badgeClass,
+    observation: obs,
+    recommendation: rec || 'مستلزم دقت بالینی و نظارت علائم حیاتی.',
+    date: 'امروز (تازه)',
+    upvotes: 1
+  };
+
+  const pearls = getCommunityPearls();
+  pearls.unshift(newPearl);
+  saveCommunityPearls(pearls);
+
+  // پاک کردن فرم
+  if (authorInput) authorInput.value = '';
+  if (drug1Input) drug1Input.value = '';
+  if (drug2Input) drug2Input.value = '';
+  if (obsInput) obsInput.value = '';
+  if (recInput) recInput.value = '';
+
+  toggleNewPearlForm();
+  renderCommunityPearlsList();
+  alert('سپاسگزاریم! تجربه بالینی شما با موفقیت ثبت شد و به تالار اشتراک همکاران وت‌دوز افزوده گردید.');
+}
+
+function upvoteClinicalPearl(pearlId) {
+  const pearls = getCommunityPearls();
+  const target = pearls.find(p => p.id === pearlId);
+  if (target) {
+    target.upvotes = (target.upvotes || 0) + 1;
+    saveCommunityPearls(pearls);
+    renderCommunityPearlsList();
+  }
+}
+
+// -------------------------------------------------------------
+// ۴. سامانه ثبت انتقادات، پیشنهادات و گزارش بالینی (Clinical Feedback)
+// -------------------------------------------------------------
+
+function openFeedbackModal() {
+  closeAllModals();
+  const modal = document.getElementById('feedbackModal');
+  if (modal) {
+    modal.classList.remove('hidden');
+    safeCreateIcons();
+  }
+}
+
+function closeFeedbackModal() {
+  const modal = document.getElementById('feedbackModal');
+  if (modal) modal.classList.add('hidden');
+}
+
+function submitClinicalFeedback() {
+  const catSelect = document.getElementById('feedbackCategory');
+  const authorInput = document.getElementById('feedbackAuthor');
+  const contactInput = document.getElementById('feedbackContact');
+  const drugInput = document.getElementById('feedbackDrugTarget');
+  const msgInput = document.getElementById('feedbackMessage');
+
+  const cat = catSelect ? catSelect.value : 'سایر نظرات';
+  const author = authorInput ? authorInput.value.trim() : 'همکار گرامی';
+  const contact = contactInput ? contactInput.value.trim() : '';
+  const drug = drugInput ? drugInput.value.trim() : '';
+  const msg = msgInput ? msgInput.value.trim() : '';
+
+  if (!msg) {
+    alert('لطفاً متن بازخورد یا پیشنهاد خود را وارد فرمایید.');
+    return;
+  }
+
+  const feedbackObj = {
+    id: 'FB-' + Date.now().toString().slice(-6),
+    category: cat,
+    author: author,
+    contact: contact,
+    drugTarget: drug,
+    message: msg,
+    timestamp: Date.now()
+  };
+
+  try {
+    let list = [];
+    const raw = localStorage.getItem(VETDOSE_STORAGE.FEEDBACKS);
+    if (raw) list = JSON.parse(raw);
+    list.unshift(feedbackObj);
+    localStorage.setItem(VETDOSE_STORAGE.FEEDBACKS, JSON.stringify(list));
+  } catch (e) {
+    console.error('Error saving feedback:', e);
+  }
+
+  // پاک کردن فرم
+  if (authorInput) authorInput.value = '';
+  if (contactInput) contactInput.value = '';
+  if (drugInput) drugInput.value = '';
+  if (msgInput) msgInput.value = '';
+
+  closeFeedbackModal();
+  alert('بازخورد ارزشمند شما با شماره پیگیری ' + feedbackObj.id + ' ثبت گردید.\nتیم هیئت تحریریه و داروسازان بالینی وت‌دوز آن را به سرعت بررسی خواهند نمود.\nاز همراهی و دقت نظر شما صمیمانه سپاسگزاریم.');
+}
+
+
+
+// =================================================================
+// 🌐 اتصالات سراسری متغیرها به شیء Window
+// =================================================================
+if (typeof window !== 'undefined') {
+  window.openAuthModal = openAuthModal;
+  window.closeAuthModal = closeAuthModal;
+  window.switchAuthTab = switchAuthTab;
+  window.handleUserLogin = handleUserLogin;
+  window.handleUserRegister = handleUserRegister;
+  window.handleDemoQuickLogin = handleDemoQuickLogin;
+  window.handleAuthActionClick = handleAuthActionClick;
+  window.handleUserLogout = handleUserLogout;
+  window.updateAuthUI = updateAuthUI;
+  
+  window.openSubscriptionModal = openSubscriptionModal;
+  window.closeSubscriptionModal = closeSubscriptionModal;
+  window.applySubscriptionCoupon = applySubscriptionCoupon;
+  window.selectSubscriptionPlan = selectSubscriptionPlan;
+  window.handleSimulatedOnlinePayment = handleSimulatedOnlinePayment;
+  window.handleCardToCardPayment = handleCardToCardPayment;
+
+  window.toggleNewPearlForm = toggleNewPearlForm;
+  window.renderCommunityPearlsList = renderCommunityPearlsList;
+  window.filterClinicalPearls = filterClinicalPearls;
+  window.filterPearlsByType = filterPearlsByType;
+  window.submitNewClinicalPearl = submitNewClinicalPearl;
+  window.upvoteClinicalPearl = upvoteClinicalPearl;
+
+  window.openFeedbackModal = openFeedbackModal;
+  window.closeFeedbackModal = closeFeedbackModal;
+  window.submitClinicalFeedback = submitClinicalFeedback;
+
+  window.addEventListener('DOMContentLoaded', () => {
+    updateAuthUI();
   });
 }

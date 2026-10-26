@@ -55,12 +55,27 @@
           </div>
         </div>
 
-        <!-- سمت چپ هدر (خلوت و بدون دکمه‌های شلوغ) -->
-        <div class="flex items-center gap-2.5">
-          <span class="text-[11px] bg-[#00CAE0]/15 text-[#00CAE0] border border-[#00CAE0]/30 px-3 py-1 rounded-full font-bold hidden sm:inline-flex items-center gap-1.5">
+        <!-- سمت چپ هدر: وضعیت، ارتقای VIP و ورود/عضویت -->
+        <div class="flex items-center gap-2 sm:gap-2.5">
+          <span class="text-[11px] bg-[#00CAE0]/15 text-[#00CAE0] border border-[#00CAE0]/30 px-2.5 py-1 rounded-full font-bold hidden md:inline-flex items-center gap-1.5">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>نسخه آفلاین و آنلاین فعال</span>
+            <span>نسخه فعال بالینی</span>
           </span>
+
+          <!-- دکمه خرید و ارتقای اشتراک VIP -->
+          <button type="button" onclick="openSubscriptionModal()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:brightness-110 active:scale-95 text-slate-950 font-black text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer border border-amber-300">
+            <i data-lucide="crown" class="w-4 h-4 fill-slate-950 text-slate-950"></i>
+            <span class="hidden sm:inline">ارتقای اشتراک VIP</span>
+            <span class="sm:hidden font-black">VIP</span>
+          </button>
+
+          <!-- دکمه ورود / عضویت یا پروفایل کاربر -->
+          <div id="userAuthHeaderContainer" class="flex items-center">
+            <button type="button" onclick="openAuthModal()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 active:scale-95 text-cyan-300 hover:text-white font-bold text-xs border border-cyan-500/30 transition flex items-center gap-1.5 cursor-pointer">
+              <i data-lucide="user" class="w-4 h-4 text-cyan-400"></i>
+              <span>ورود / عضویت</span>
+            </button>
+          </div>
         </div>
 
       </div>
@@ -139,6 +154,27 @@
       <button onclick="closeClinicalSidebar()" class="lg:hidden w-7 h-7 rounded-lg bg-white/10 hover:bg-white/20 text-[#ABB5CD] hover:text-white flex items-center justify-center transition cursor-pointer">
         <i data-lucide="x" class="w-4 h-4"></i>
       </button>
+    </div>
+
+    <!-- کارت وضعیت اشتراک و هویت بالینی همکار -->
+    <div id="sidebarUserStatusCard" class="mx-3 mt-3 p-3 rounded-2xl bg-gradient-to-br from-slate-900 to-indigo-950/80 border border-cyan-500/30 text-xs shadow-inner shrink-0">
+      <div class="flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2 overflow-hidden">
+          <div class="w-8 h-8 rounded-xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 flex items-center justify-center font-bold text-xs shrink-0" id="sidebarUserAvatar">
+            <i data-lucide="user" class="w-4 h-4"></i>
+          </div>
+          <div class="overflow-hidden">
+            <div class="font-black text-white text-xs truncate" id="sidebarUserName">کاربر مهمان (نسخه پایه)</div>
+            <div class="text-[10px] text-cyan-300 flex items-center gap-1" id="sidebarUserPlan">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+              <span>دسترسی استاندارد</span>
+            </div>
+          </div>
+        </div>
+        <button type="button" onclick="handleAuthActionClick()" id="sidebarAuthBtn" class="px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-200 border border-cyan-400/40 text-[11px] font-bold transition shrink-0 cursor-pointer">
+          ورود
+        </button>
+      </div>
     </div>
 
     <!-- بدنه اسکرول‌خور منوی سمت راست -->
@@ -429,6 +465,35 @@
             <div>
               <span class="font-bold text-white block">نقشه راه و اطلس ۱۶ رده فارماکولوژی</span>
               <span class="text-[10px] text-[#ABB5CD]">مرور ساختار درمانی تمام فصول دارونامه</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-slate-400"></i>
+        </button>
+      </div>
+
+      <!-- گروه ۶: اشتراک تجاری و انتقادات و پیشنهادات بالینی -->
+      <div class="space-y-1.5 pt-2 border-t border-[#0590D5]/20">
+        <button onclick="closeClinicalSidebar(); openSubscriptionModal();" class="w-full p-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:brightness-110 text-slate-950 font-black border border-amber-300 flex items-center justify-between transition cursor-pointer text-right shadow-sm group">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-slate-950/20 text-slate-950 flex items-center justify-center shrink-0">
+              <i data-lucide="crown" class="w-4 h-4 fill-slate-950 text-slate-950"></i>
+            </div>
+            <div>
+              <span class="font-black text-slate-950 text-xs block">پلن‌های اشتراک تجاری وت‌دوز</span>
+              <span class="text-[10px] text-slate-900 font-bold">۱، ۳، ۶ ماهه و یکساله VIP</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-slate-950"></i>
+        </button>
+
+        <button onclick="closeClinicalSidebar(); openFeedbackModal();" class="w-full p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-white border border-slate-700 flex items-center justify-between transition cursor-pointer text-right group">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center shrink-0">
+              <i data-lucide="message-square-plus" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="font-bold text-white block">انتقادات و پیشنهادات بالینی</span>
+              <span class="text-[10px] text-[#ABB5CD]">گزارش اشکال در دوز، درخواست داروی جدید</span>
             </div>
           </div>
           <i data-lucide="chevron-left" class="w-4 h-4 text-slate-400"></i>
@@ -2213,9 +2278,13 @@
             <i data-lucide="zap" class="w-4 h-4"></i>
             <span>⚡ رادار ۳۶۰ درجه تداخلات یک داروی خاص (دسترسی فوری)</span>
           </button>
-          <button type="button" onclick="switchInteractionMode('multi')" id="interactTab_multi" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-300">
+          <button type="button" onclick="switchInteractionMode('multi')" id="interactTab_multi" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 cursor-pointer">
             <i data-lucide="layers" class="w-4 h-4"></i>
-            <span>📋 چکر چنددارویی همزمان (نسخه و بستری)</span>
+            <span>📋 چکر چنددارویی همزمان</span>
+          </button>
+          <button type="button" onclick="switchInteractionMode('pearls')" id="interactTab_pearls" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 cursor-pointer">
+            <i data-lucide="message-circle" class="w-4 h-4 text-indigo-600"></i>
+            <span>💬 تجارب بالینی همکاران (Field Notes)</span>
           </button>
         </div>
         <div class="text-[11px] text-slate-500 font-bold hidden sm:block">
@@ -2395,6 +2464,108 @@
         <button onclick="closeInteractionsModal()" class="px-5 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition shadow-xs">
           بستن رادار
         </button>
+      </div>
+
+
+      <!-- ============================================== -->
+      <!-- حالت سوم: تجارب بالینی همکاران و گزارش‌های صحرایی (Community Clinical Pearls) -->
+      <!-- ============================================== -->
+      <div id="communityPearlsInteractionView" class="hidden p-5 sm:p-6 overflow-y-auto space-y-4">
+        
+        <!-- بنر تالار تجربیات بالینی -->
+        <div class="p-4 rounded-2xl bg-gradient-to-r from-indigo-950 via-slate-900 to-indigo-950 text-white border border-indigo-800/40 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 flex items-center justify-center shrink-0">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-black text-white flex items-center gap-2">
+                <span>تالار تجارب بالینی همکاران در تداخلات و ترسیب دارویی</span>
+                <span class="text-[10px] bg-indigo-400/20 text-indigo-300 border border-indigo-300/30 px-2 py-0.5 rounded-full font-mono">VetDose Peer Network</span>
+              </h4>
+              <p class="text-[11px] text-slate-300 mt-0.5">مشاهدات عینی بالین‌کاران، موارد رسوب در سرنگ، ناسازگاری فیزیکی و تجربیات خط اول درمانگاه‌های دامپزشکی ایران</p>
+            </div>
+          </div>
+          <button type="button" onclick="toggleNewPearlForm()" class="px-4 py-2 bg-gradient-to-r from-indigo-500 to-cyan-600 hover:brightness-110 active:scale-95 text-white font-bold rounded-xl text-xs transition flex items-center gap-1.5 cursor-pointer shrink-0 shadow">
+            <i data-lucide="plus-circle" class="w-4 h-4"></i>
+            <span>ثبت تجربه بالینی شما</span>
+          </button>
+        </div>
+
+        <!-- فرم ثبت تجربه جدید (به صورت پیش‌فرض مخفی) -->
+        <div id="newPearlFormContainer" class="hidden p-4 rounded-2xl bg-slate-50 border-2 border-indigo-200 space-y-3 transition-all">
+          <div class="flex items-center justify-between border-b border-indigo-100 pb-2">
+            <div class="flex items-center gap-2 text-indigo-950 font-black text-xs">
+              <i data-lucide="edit-3" class="w-4 h-4 text-indigo-600"></i>
+              <span>ثبت مشاهده بالینی جدید در تداخل / رسوب داروها</span>
+            </div>
+            <button type="button" onclick="toggleNewPearlForm()" class="text-slate-400 hover:text-slate-700 p-1">
+              <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">نام و عنوان شما (همراه با شهر):</label>
+              <input type="text" id="pearlAuthorInput" placeholder="مثلاً: دکتر احسان قاسمی - کلینیسین دام کوچک، اصفهان" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-indigo-500 outline-none text-slate-800 text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">نوع مشاهده بالینی:</label>
+              <select id="pearlTypeInput" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-indigo-500 outline-none text-slate-800 text-xs bg-white">
+                <option value="precipitate">⚠️ رسوب فیزیکی یا تغییر رنگ در سرنگ / سرم</option>
+                <option value="toxicity">🔴 سمیت حاد، عارضه جانبی یا تداخل دارویی نامطلوب</option>
+                <option value="synergy">🟢 پروتکل موفق، هم‌افزا و سازگار در درمانگاه</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">داروی اول (نام ژنریک یا تجاری):</label>
+              <input type="text" id="pearlDrug1Input" placeholder="مثلاً: کتامین ۱۰٪" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-indigo-500 outline-none text-slate-800 text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">داروی دوم یا سرم زمینه:</label>
+              <input type="text" id="pearlDrug2Input" placeholder="مثلاً: دیازپام انسانی ۵mg/ml" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-indigo-500 outline-none text-slate-800 text-xs">
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block font-bold text-slate-700 mb-1">شرح عینی مشاهده در کیس بالینی (چه اتفاقی افتاد؟):</label>
+              <textarea id="pearlObservationInput" rows="2" placeholder="مثال: در ترکیب این دو دارو در یک سرنگ ۵ سی‌سی، بلافاصله مایع کدر شده و رسوب سفید پنیرکی ایجاد گردید..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-indigo-500 outline-none text-slate-800 text-xs"></textarea>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block font-bold text-slate-700 mb-1">توصیه یا راهکار شما برای سایر همکاران:</label>
+              <textarea id="pearlRecommendationInput" rows="2" placeholder="مثال: این دو دارو هرگز در یک سرنگ مخلوط نشوند یا خط وریدی بین دو تزریق با نرمال سالین شستشو داده شود." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-indigo-500 outline-none text-slate-800 text-xs"></textarea>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-end gap-2 pt-1">
+            <button type="button" onclick="toggleNewPearlForm()" class="px-3.5 py-1.5 rounded-xl border border-slate-300 text-slate-600 hover:bg-slate-200 text-xs font-bold transition cursor-pointer">
+              انصراف
+            </button>
+            <button type="button" onclick="submitNewClinicalPearl()" class="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-black rounded-xl transition flex items-center gap-1.5 cursor-pointer shadow">
+              <i data-lucide="check" class="w-4 h-4"></i>
+              <span>ثبت و انتشار تجربه برای همکاران</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- فیلتر و جستجوی تجربیات -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-2.5 bg-slate-100 p-2.5 rounded-2xl border border-slate-200 text-xs">
+          <div class="relative w-full sm:w-72">
+            <input type="text" id="searchPearlsInput" oninput="filterClinicalPearls()" placeholder="جستجو بر اساس نام دارو (کتامین، دیازپام، ملوکسیکام...)" class="w-full pr-8 pl-3 py-1.5 rounded-xl border border-slate-300 bg-white text-xs text-slate-800 outline-none focus:border-indigo-500">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute right-2.5 top-2"></i>
+          </div>
+          
+          <div class="flex items-center gap-1.5 w-full sm:w-auto overflow-x-auto pb-1 sm:pb-0">
+            <button type="button" onclick="filterPearlsByType('all')" id="pearlFilter_all" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-indigo-600 text-white transition cursor-pointer whitespace-nowrap">همه موارد</button>
+            <button type="button" onclick="filterPearlsByType('precipitate')" id="pearlFilter_precipitate" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition cursor-pointer whitespace-nowrap">⚠️ رسوب در سرنگ</button>
+            <button type="button" onclick="filterPearlsByType('toxicity')" id="pearlFilter_toxicity" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition cursor-pointer whitespace-nowrap">🔴 سمیت و عارضه</button>
+            <button type="button" onclick="filterPearlsByType('synergy')" id="pearlFilter_synergy" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition cursor-pointer whitespace-nowrap">🟢 پروتکل هم‌افزا</button>
+          </div>
+        </div>
+
+        <!-- لیست کارت‌های تجارب بالینی همکاران -->
+        <div id="communityPearlsList" class="space-y-3">
+          <!-- کارت‌ها توسط JS رندر می‌شوند -->
+        </div>
+
       </div>
 
     </div>
@@ -3390,13 +3561,465 @@
     </div>
   </div>
 
+  
+  <!-- ============================================== -->
+  <!-- MODAL: ورود و ثبت‌نام اعضا و همکاران (Auth & Registration Modal) -->
+  <!-- ============================================== -->
+  <div id="authModal" onclick="if (event.target === this) closeAuthModal();" class="fixed inset-0 z-50 hidden overflow-y-auto modal-overlay flex items-center justify-center p-3 sm:p-5">
+    <div class="bg-white rounded-3xl max-w-md w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden transform transition-all">
+      
+      <!-- هدر مودال ورود و عضویت -->
+      <div class="px-6 py-4 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white flex items-center justify-between border-b border-indigo-900/40 shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 flex items-center justify-center shrink-0">
+            <i data-lucide="user-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <span>ورود و ثبت‌نام در وت‌دوز</span>
+              <span class="text-[10px] bg-cyan-400/20 text-cyan-200 border border-cyan-300/30 px-2 py-0.5 rounded-full font-mono">VetDose ID</span>
+            </h3>
+            <p class="text-[11px] text-slate-300 mt-0.5">پروفایل بالینی دامپزشکان، رزیدنت‌ها و دانشجویان</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeAuthModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- تب‌های تغییر وضعیت: ورود / ثبت‌نام -->
+      <div class="px-6 pt-3 bg-slate-50 border-b border-slate-200 flex gap-2 shrink-0">
+        <button type="button" id="tabAuthLogin" onclick="switchAuthTab('login')" class="flex-1 py-2.5 text-xs font-black border-b-2 border-cyan-600 text-cyan-800 transition text-center cursor-pointer">
+          ورود به حساب
+        </button>
+        <button type="button" id="tabAuthRegister" onclick="switchAuthTab('register')" class="flex-1 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800 transition text-center cursor-pointer">
+          ثبت‌نام دامپزشک / دانشجو
+        </button>
+      </div>
+
+      <!-- فرم‌های ورود و ثبت‌نام -->
+      <div class="p-6 overflow-y-auto space-y-4 text-xs">
+        
+        <!-- فرم ورود -->
+        <div id="authLoginForm" class="space-y-3.5">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">شماره همراه یا شماره نظام دامپزشکی:</label>
+            <input type="text" id="loginIdentifier" placeholder="مثلاً: ۰۹۱۲۳۴۵۶۷۸۹ یا ۱۴۰۱/۵۴۳۲" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-slate-800 text-xs">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">رمز عبور:</label>
+            <input type="password" id="loginPassword" placeholder="••••••••" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-slate-800 text-xs">
+          </div>
+          
+          <button type="button" onclick="handleUserLogin()" class="w-full py-3 bg-gradient-to-r from-[#0A2447] to-[#17285E] hover:brightness-110 active:scale-95 text-white font-black rounded-xl text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="log-in" class="w-4 h-4 text-cyan-400"></i>
+            <span>ورود به حساب کاربری</span>
+          </button>
+
+          <div class="pt-3 border-t border-slate-200/80">
+            <button type="button" onclick="handleDemoQuickLogin()" class="w-full py-2 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 font-bold rounded-xl text-[11px] transition flex items-center justify-center gap-1.5 cursor-pointer">
+              <span>⚡ ورود سریع آزمایشی به عنوان همکار VIP (دکتر محمدی)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- فرم ثبت‌نام -->
+        <div id="authRegisterForm" class="hidden space-y-3.5">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">نام و نام خانوادگی:</label>
+            <input type="text" id="regName" placeholder="مثلاً: دکتر آیدین باقری" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-slate-800 text-xs">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">نقش بالینی:</label>
+              <select id="regRole" class="w-full px-2.5 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 outline-none text-slate-800 text-xs bg-white">
+                <option value="کلینیسین دام کوچک">کلینیسین دام کوچک</option>
+                <option value="دامپزشک دام بزرگ / فارم">دامپزشک دام بزرگ</option>
+                <option value="متخصص جراحی و بیهوشی">متخصص جراحی</option>
+                <option value="متخصص بیماری‌های داخلی">متخصص داخلی</option>
+                <option value="دامپزشک طیور و آبزیان">دامپزشک طیور / آبزیان</option>
+                <option value="کلینیسین اگزوتیک و پرندگان">پرندگان و اگزوتیک</option>
+                <option value="دانشجوی دکتری دامپزشکی">دانشجوی دامپزشکی</option>
+                <option value="داروخانه و پخش دارویی">داروخانه دامپزشکی</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">شماره نظام / دانشجویی:</label>
+              <input type="text" id="regVetCode" placeholder="مثلاً: ۱۴۰۲/۹۸۷۶" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 outline-none text-slate-800 text-xs">
+            </div>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">شماره تلفن همراه:</label>
+            <input type="tel" id="regPhone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 outline-none text-slate-800 text-xs text-left" dir="ltr">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">تعیین رمز عبور:</label>
+            <input type="password" id="regPassword" placeholder="حداقل ۶ کاراکتر" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 outline-none text-slate-800 text-xs">
+          </div>
+
+          <div class="p-2.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 text-[11px] flex items-center gap-2">
+            <i data-lucide="gift" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+            <span>هدیه عضویت: ۷ روز دسترسی رایگان طلایی به تمامی بخش‌های وت‌دوز</span>
+          </div>
+
+          <button type="button" onclick="handleUserRegister()" class="w-full py-3 bg-gradient-to-r from-emerald-600 to-teal-700 hover:brightness-110 active:scale-95 text-white font-black rounded-xl text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            <span>تکمیل عضویت و فعال‌سازی حساب</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- فوتر -->
+      <div class="p-3 bg-slate-50 border-t border-slate-200 text-center text-[11px] text-slate-500">
+        پشتیبانی سامانه و فعال‌سازی اشتراک سازمانی: <span class="font-mono font-bold text-slate-700">021-88990011</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  
+  <!-- ============================================== -->
+  <!-- MODAL: پلن‌های تجاری و فروش اشتراک (Subscription Pricing Modal) -->
+  <!-- ============================================== -->
+  <div id="subscriptionModal" onclick="if (event.target === this) closeSubscriptionModal();" class="fixed inset-0 z-50 hidden overflow-y-auto modal-overlay flex items-center justify-center p-3 sm:p-5">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden transform transition-all">
+      
+      <!-- هدر شیک طلایی-نیلی پلن‌ها -->
+      <div class="px-6 py-4 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white flex items-center justify-between border-b border-amber-500/30 shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-600 text-slate-950 flex items-center justify-center font-black shadow-lg shrink-0">
+            <i data-lucide="crown" class="w-5 h-5 fill-slate-950"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-base sm:text-lg font-black text-white">پلن‌های اشتراک تجاری و حرفه‌ای وت‌دوز</h3>
+              <span class="text-[10px] bg-amber-400/20 text-amber-300 border border-amber-300/30 px-2 py-0.5 rounded-full font-bold">نسخه جامع بالینی ۱۴۰۴</span>
+            </div>
+            <p class="text-[11px] text-slate-300">دسترسی نامحدود آنلاین و آفلاین به کامل‌ترین فارماکوپه دامپزشکی، تداخلات و ماشین‌حساب‌های بالینی</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeSubscriptionModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- محتوای اسکرول‌خور پلن‌ها -->
+      <div class="p-5 sm:p-6 overflow-y-auto space-y-6 text-xs">
+        
+        <!-- پیام تبلیغاتی و کد تخفیف -->
+        <div class="p-3.5 bg-gradient-to-r from-amber-50 via-yellow-50 to-amber-50 border border-amber-200 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3 text-amber-900">
+          <div class="flex items-center gap-2 text-xs">
+            <span class="w-7 h-7 rounded-xl bg-amber-200/80 text-amber-900 flex items-center justify-center shrink-0">
+              <i data-lucide="tag" class="w-4 h-4"></i>
+            </span>
+            <div>
+              <span class="font-black block">جشنواره راه‌اندازی سراسری وت‌دوز:</span>
+              <span class="text-[11px] text-amber-800">کد تخفیف دانشجویان و رزیدنت‌های دامپزشکی: <code class="font-mono font-bold bg-white px-1.5 py-0.5 rounded border border-amber-300 text-amber-950">VETSTUDENT</code> (۳۰٪ تخفیف مازاد)</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 w-full sm:w-auto">
+            <input type="text" id="subscriptionCouponInput" placeholder="کد تخفیف..." class="px-3 py-1.5 rounded-xl border border-amber-300 bg-white text-xs text-slate-800 outline-none w-28">
+            <button type="button" onclick="applySubscriptionCoupon()" class="px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl text-xs transition cursor-pointer">
+              اعمال کد
+            </button>
+          </div>
+        </div>
+
+        <!-- کارت‌های ۴ پلن اشتراک -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+          
+          <!-- ۱. پلن ۱ ماهه برنزی -->
+          <div class="border border-slate-200 rounded-2xl p-4 bg-slate-50/50 hover:border-slate-300 transition flex flex-col justify-between space-y-3 relative">
+            <div>
+              <div class="text-[11px] font-bold text-slate-500 mb-1">پلن برنزی مقطعی</div>
+              <h4 class="text-base font-black text-slate-800">۱ ماهه</h4>
+              <div class="mt-2 mb-3">
+                <span class="text-xl font-black text-slate-900">۲۴۹,۰۰۰</span>
+                <span class="text-[10px] text-slate-500">تومان</span>
+              </div>
+              <ul class="space-y-1.5 text-[11px] text-slate-600 border-t border-slate-200/80 pt-2.5">
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                  <span>دسترسی به تمام ۵۰۷ داروی فارماکوپه</span>
+                </li>
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                  <span>ماشین‌حساب‌های پایه (دوز و سرم)</span>
+                </li>
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                  <span>استفاده روی ۱ دستگاه</span>
+                </li>
+              </ul>
+            </div>
+            <button type="button" onclick="selectSubscriptionPlan('1_month', 249000, 'پلن ۱ ماهه برنزی')" class="w-full py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-xl text-xs transition cursor-pointer">
+              انتخاب پلن ۱ ماهه
+            </button>
+          </div>
+
+          <!-- ۲. پلن ۳ ماهه نقره‌ای (محبوب‌ترین) -->
+          <div class="border-2 border-indigo-500 rounded-2xl p-4 bg-indigo-50/30 hover:border-indigo-600 transition flex flex-col justify-between space-y-3 relative shadow-md">
+            <span class="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full bg-indigo-600 text-white font-black text-[10px] shadow">
+              🔥 محبوب‌ترین (۲۱٪ تخفیف)
+            </span>
+            <div>
+              <div class="text-[11px] font-bold text-indigo-700 mb-1">پلن نقره‌ای فصلی</div>
+              <h4 class="text-base font-black text-indigo-950">۳ ماهه</h4>
+              <div class="mt-2 mb-3">
+                <span class="text-xl font-black text-indigo-950">۵۹۰,۰۰۰</span>
+                <span class="text-[10px] text-slate-500">تومان</span>
+                <div class="text-[10px] text-emerald-700 font-bold">ماهی ۱۹۶ هزار تومان</div>
+              </div>
+              <ul class="space-y-1.5 text-[11px] text-slate-700 border-t border-indigo-200/60 pt-2.5">
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                  <span>کلیه ۱۵ محاسبه‌گر بالینی و CRI</span>
+                </li>
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                  <span>رادار هوشمند تداخلات دارویی</span>
+                </li>
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                  <span>استفاده همزمان روی ۲ دستگاه</span>
+                </li>
+              </ul>
+            </div>
+            <button type="button" onclick="selectSubscriptionPlan('3_months', 590000, 'پلن ۳ ماهه نقره‌ای')" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-xl text-xs transition cursor-pointer shadow">
+              انتخاب پلن ۳ ماهه
+            </button>
+          </div>
+
+          <!-- ۳. پلن ۶ ماهه طلایی -->
+          <div class="border border-slate-200 rounded-2xl p-4 bg-slate-50/50 hover:border-amber-400 transition flex flex-col justify-between space-y-3 relative">
+            <span class="absolute -top-3 right-4 px-2 py-0.5 rounded-full bg-amber-500 text-slate-950 font-bold text-[10px]">
+              ۳۴٪ صرفه‌جویی
+            </span>
+            <div>
+              <div class="text-[11px] font-bold text-slate-500 mb-1">پلن طلایی نیم‌ساله</div>
+              <h4 class="text-base font-black text-slate-800">۶ ماهه</h4>
+              <div class="mt-2 mb-3">
+                <span class="text-xl font-black text-slate-900">۹۹۰,۰۰۰</span>
+                <span class="text-[10px] text-slate-500">تومان</span>
+                <div class="text-[10px] text-emerald-700 font-bold">ماهی ۱۶۵ هزار تومان</div>
+              </div>
+              <ul class="space-y-1.5 text-[11px] text-slate-600 border-t border-slate-200/80 pt-2.5">
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                  <span>پروتکل‌های بیهوشی و کوکتل‌ها</span>
+                </li>
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                  <span>جدول سازگاری داروها در سرنگ</span>
+                </li>
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                  <span>رقیق‌سازی داروهای انسانی برای حیوانات</span>
+                </li>
+              </ul>
+            </div>
+            <button type="button" onclick="selectSubscriptionPlan('6_months', 990000, 'پلن ۶ ماهه طلایی')" class="w-full py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-xl text-xs transition cursor-pointer">
+              انتخاب پلن ۶ ماهه
+            </button>
+          </div>
+
+          <!-- ۴. پلن ۱ ساله VIP الماس (بهترین ارزش) -->
+          <div class="border-2 border-amber-500 rounded-2xl p-4 bg-gradient-to-b from-amber-500/10 via-yellow-500/5 to-white hover:border-amber-600 transition flex flex-col justify-between space-y-3 relative shadow-lg">
+            <span class="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 text-slate-950 font-black text-[10px] shadow">
+              👑 بهترین ارزش (VIP الماس)
+            </span>
+            <div>
+              <div class="text-[11px] font-bold text-amber-700 mb-1">پلن سالانه کلینیک‌ها</div>
+              <h4 class="text-base font-black text-slate-900">۱ ساله (۱۲ ماه)</h4>
+              <div class="mt-2 mb-3">
+                <span class="text-xl font-black text-amber-950">۱,۵۹۰,۰۰۰</span>
+                <span class="text-[10px] text-slate-500">تومان</span>
+                <div class="text-[10px] text-emerald-700 font-black">ماهی ۱۳۲ هزار تومان (۴۷٪ تخفیف)</div>
+              </div>
+              <ul class="space-y-1.5 text-[11px] text-slate-800 border-t border-amber-200 pt-2.5 font-medium">
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+                  <span>کلیه امکانات نامحدود بدون قفل</span>
+                </li>
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+                  <span>مشاهده و ثبت تجربیات بالینی همکاران</span>
+                </li>
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+                  <span>نرم‌افزار آفلاین روی ۳ دستگاه مستقل</span>
+                </li>
+                <li class="flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+                  <span>پشتیبانی تلفنی مستقیم با تیم داروسازی</span>
+                </li>
+              </ul>
+            </div>
+            <button type="button" onclick="selectSubscriptionPlan('1_year_vip', 1590000, 'پلن ۱ ساله VIP الماس')" class="w-full py-2.5 bg-gradient-to-r from-amber-500 to-yellow-500 hover:brightness-110 active:scale-95 text-slate-950 font-black rounded-xl text-xs transition cursor-pointer shadow-md">
+              👑 فعال‌سازی اشتراک ۱ ساله VIP
+            </button>
+          </div>
+
+        </div>
+
+        <!-- کارت شبیه‌ساز پرداخت و پرداخت آنلاین -->
+        <div id="subscriptionPaymentArea" class="hidden p-5 rounded-2xl bg-indigo-50/70 border border-indigo-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <h5 class="font-black text-indigo-950 text-sm" id="paySelectedPlanTitle">پلن انتخاب‌شده</h5>
+              <p class="text-[11px] text-indigo-800" id="paySelectedPlanDesc">مبلغ نهایی با احتساب تخفیف</p>
+            </div>
+            <div class="text-left font-black text-indigo-950 text-base" id="paySelectedPlanAmount">۰ تومان</div>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <button type="button" onclick="handleSimulatedOnlinePayment()" class="py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl text-xs transition flex items-center justify-center gap-2 cursor-pointer shadow">
+              <i data-lucide="credit-card" class="w-4 h-4"></i>
+              <span>پرداخت آنلاین با کلیه کارت‌های شتاب (شاپرک)</span>
+            </button>
+            <button type="button" onclick="handleCardToCardPayment()" class="py-3 px-4 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl text-xs transition flex items-center justify-center gap-2 cursor-pointer">
+              <i data-lucide="receipt" class="w-4 h-4 text-slate-600"></i>
+              <span>کارت به کارت و ارسال فیش</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- جدول مقایسه امکانات نسخه رایگان با پرمیوم -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden">
+          <div class="bg-slate-100 p-3 font-black text-slate-800 text-xs flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-cyan-600"></i>
+            <span>جدول تمایز نسخه رایگان و نسخه ویژه پرمیوم وت‌دوز:</span>
+          </div>
+          <div class="divide-y divide-slate-100 text-[11px]">
+            <div class="p-2.5 flex items-center justify-between bg-white">
+              <span class="text-slate-700">دسترسی به مونوگراف کامل ۵۰۷ داروی ایران</span>
+              <div class="flex items-center gap-6">
+                <span class="text-emerald-600 font-bold">نسخه رایگان: ✅</span>
+                <span class="text-emerald-600 font-bold">نسخه VIP: ✅</span>
+              </div>
+            </div>
+            <div class="p-2.5 flex items-center justify-between bg-slate-50/50">
+              <span class="text-slate-700">رادار تداخلات همزمان دارویی و هشدارها</span>
+              <div class="flex items-center gap-6">
+                <span class="text-slate-400">نسخه رایگان: ۲ دارو</span>
+                <span class="text-indigo-600 font-black">نسخه VIP: نامحدود</span>
+              </div>
+            </div>
+            <div class="p-2.5 flex items-center justify-between bg-white">
+              <span class="text-slate-700">مشاهده تجربیات بالینی همکاران درباره رسوب در سرنگ</span>
+              <div class="flex items-center gap-6">
+                <span class="text-slate-400">نسخه رایگان: محدود</span>
+                <span class="text-indigo-600 font-black">نسخه VIP: کامل + ثبت نظر</span>
+              </div>
+            </div>
+            <div class="p-2.5 flex items-center justify-between bg-slate-50/50">
+              <span class="text-slate-700">کوکتل‌های تخصصی بیهوشی، سزارین و ارتوپدی</span>
+              <div class="flex items-center gap-6">
+                <span class="text-slate-400">نسخه رایگان: ❌</span>
+                <span class="text-indigo-600 font-black">نسخه VIP: ✅ کامل</span>
+              </div>
+            </div>
+            <div class="p-2.5 flex items-center justify-between bg-white">
+              <span class="text-slate-700">فرمولاسیون‌های ایرانی، برندها و کارخانجات</span>
+              <div class="flex items-center gap-6">
+                <span class="text-slate-400">نسخه رایگان: پایه</span>
+                <span class="text-indigo-600 font-black">نسخه VIP: جامع + دوز انسان به دام</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- فوتر -->
+      <div class="p-3 bg-slate-50 border-t border-slate-200 text-center text-[11px] text-slate-500">
+        مشاوره خرید و پشتیبانی فروش: <span class="font-mono font-bold text-slate-700">09120000000</span> | درگاه پرداخت امن زرین‌پال / شاپرک
+      </div>
+
+    </div>
+  </div>
+
+
+  
+  <!-- ============================================== -->
+  <!-- MODAL: انتقادات، پیشنهادات و گزارش اشکال بالینی (Feedback Modal) -->
+  <!-- ============================================== -->
+  <div id="feedbackModal" onclick="if (event.target === this) closeFeedbackModal();" class="fixed inset-0 z-50 hidden overflow-y-auto modal-overlay flex items-center justify-center p-3 sm:p-5">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden transform transition-all">
+      
+      <!-- هدر -->
+      <div class="px-6 py-4 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white flex items-center justify-between border-b border-slate-700 shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 flex items-center justify-center shrink-0">
+            <i data-lucide="message-square" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white">انتقادات، پیشنهادات و گزارش بالینی</h3>
+            <p class="text-[11px] text-slate-300">ارتباط مستقیم با هیئت تحریریه و داروسازان وت‌دوز</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeFeedbackModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- فرم -->
+      <div class="p-6 overflow-y-auto space-y-4 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">موضوع بازخورد:</label>
+          <select id="feedbackCategory" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 outline-none text-slate-800 text-xs bg-white">
+            <option value="گزارش اشکال در دوز یا واحد دارویی">🔴 گزارش اشکال در دوز یا واحد دارویی</option>
+            <option value="درخواست افزودن داروی جدید یا برند ایرانی">💊 درخواست افزودن داروی جدید یا برند ایرانی</option>
+            <option value="پیشنهاد بهبود رابط کاربری و عملکرد">💡 پیشنهاد بهبود رابط کاربری و عملکرد سایت</option>
+            <option value="گزارش تداخل دارویی یا رسوب جدید">⚠️ گزارش تداخل دارویی یا رسوب جدید</option>
+            <option value="سایر نظرات و بازخوردها">💬 سایر نظرات و انتقادات</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">نام و نام خانوادگی / تخصص همکار:</label>
+          <input type="text" id="feedbackAuthor" placeholder="مثلاً: دکتر علی فیروزی - کلینیسین دام کوچک" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 outline-none text-slate-800 text-xs">
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">شماره همراه یا ایمیل جهت پاسخ‌گویی (اختیاری):</label>
+          <input type="text" id="feedbackContact" placeholder="۰۹۱۲۳۴۵۶۷۸۹" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 outline-none text-slate-800 text-xs text-left" dir="ltr">
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">نام دارو یا بخش مربوطه (در صورت ارتباط):</label>
+          <input type="text" id="feedbackDrugTarget" placeholder="مثلاً: کتامین، ملوکسیکام، ماشین‌حساب CRI..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 outline-none text-slate-800 text-xs">
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">متن تفصیلی نظر یا گزارش شما:</label>
+          <textarea id="feedbackMessage" rows="4" placeholder="توضیحات دقیق خود را اینجا بنویسید..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-cyan-500 outline-none text-slate-800 text-xs"></textarea>
+        </div>
+
+        <button type="button" onclick="submitClinicalFeedback()" class="w-full py-3 bg-gradient-to-r from-slate-900 to-indigo-950 hover:brightness-110 active:scale-95 text-white font-black rounded-xl text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer">
+          <i data-lucide="send" class="w-4 h-4 text-cyan-400"></i>
+          <span>ارسال بازخورد به تیم علمی وت‌دوز</span>
+        </button>
+      </div>
+
+      <!-- فوتر -->
+      <div class="p-3 bg-slate-50 border-t border-slate-200 text-center text-[11px] text-slate-500">
+        تمامی گزارش‌های اصلاح دوز ظرف حداکثر ۲۴ ساعت بازبینی و در فارماکوپه تصحیح می‌شوند.
+      </div>
+
+    </div>
+  </div>
+
+
   <!-- اسکریپت دیتابیس و لاجیک اپلیکیشن -->
   <script src="data/drugs.js?v=3.5.0"></script>
   <script src="data/plumbs_interaction_matrix.js?v=3.5.0"></script>
   <script src="data/pharmacology_depth.js?v=3.5.0"></script>
   <script src="data/specialty_protocols.js?v=3.5.0"></script>
   <script src="data/clinical_vault.js?v=3.8.0"></script>
-  <script src="app.js?v=3.10.2"></script>
+  <script src="app.js?v=3.11.0"></script>
 
   <!-- نوار ناوبری شناور شیشه‌ای در موبایل (Google Stitch Mobile Dock) -->
   <nav id="mobileBottomDock" class="stitch-floating-dock sm:hidden">

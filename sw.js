@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین وت‌دوز (VetDose PWA Offline Engine)
- * نسخه ۳.۱۰.۰ - فعال‌سازی اکشن‌های درجا (Inline) دوز، کوکتل و تداخلات + خلوت‌سازی هدر و سرچ
+ * نسخه ۳.۱۱.۰ - سیستم اشتراک تجاری VIP، ثبت‌نام اعضا، تالار تجارب بالینی در تداخلات و ثبت انتقادات
  */
-const CACHE_NAME = 'vetdose-cache-v3.10.2-panes-fixed';
+const CACHE_NAME = 'vetdose-cache-v3.11.0-commercial-auth-pearls';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
