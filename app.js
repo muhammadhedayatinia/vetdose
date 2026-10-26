@@ -1704,16 +1704,16 @@ function renderDrugSpecialtyPillsHtml(drug) {
   const pills = [];
 
   if (p.isOnco) {
-    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 transition shadow-2xs" title="محاسبه‌گر مساحت سطح بدن (BSA) درون این دارو"><i data-lucide="scan" class="w-3.5 h-3.5 text-purple-600 inline-block align-middle shrink-0"></i> <span>شیمی‌درمانی (BSA)</span></button>`);
+    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}', event)" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 transition shadow-2xs" title="محاسبه‌گر مساحت سطح بدن (BSA) درون این دارو"><i data-lucide="scan" class="w-3.5 h-3.5 text-purple-600 inline-block align-middle shrink-0"></i> <span>شیمی‌درمانی (BSA)</span></button>`);
   }
   if (p.isAnesthCri) {
-    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-teal-50 text-teal-800 border border-teal-200 hover:bg-teal-100 transition shadow-2xs" title="موتور محاسباتی CRI درون این دارو"><i data-lucide="syringe" class="w-3.5 h-3.5 text-teal-600 inline-block align-middle shrink-0"></i> <span>انفوزیون CRI</span></button>`);
+    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}', event)" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-teal-50 text-teal-800 border border-teal-200 hover:bg-teal-100 transition shadow-2xs" title="موتور محاسباتی CRI درون این دارو"><i data-lucide="syringe" class="w-3.5 h-3.5 text-teal-600 inline-block align-middle shrink-0"></i> <span>انفوزیون CRI</span></button>`);
   }
   if (p.isOpht) {
-    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-cyan-50 text-cyan-800 border border-cyan-200 hover:bg-cyan-100 transition shadow-2xs" title="بررسی خروجی برهم‌کنش قطره‌ها درون این دارو"><i data-lucide="eye" class="w-3.5 h-3.5 text-cyan-600 inline-block align-middle shrink-0"></i> <span>قطره‌های چشمی</span></button>`);
+    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}', event)" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-cyan-50 text-cyan-800 border border-cyan-200 hover:bg-cyan-100 transition shadow-2xs" title="بررسی خروجی برهم‌کنش قطره‌ها درون این دارو"><i data-lucide="eye" class="w-3.5 h-3.5 text-cyan-600 inline-block align-middle shrink-0"></i> <span>قطره‌های چشمی</span></button>`);
   }
   if (p.isIcu) {
-    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-red-50 text-red-800 border border-red-200 hover:bg-red-100 transition shadow-2xs" title="پروتکل احیا و مراقبت ویژه ICU درون این دارو"><i data-lucide="heart-pulse" class="w-3.5 h-3.5 text-rose-600 inline-block align-middle shrink-0"></i> <span>مراقبت ویژه ICU</span></button>`);
+    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}', event)" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-red-50 text-red-800 border border-red-200 hover:bg-red-100 transition shadow-2xs" title="پروتکل احیا و مراقبت ویژه ICU درون این دارو"><i data-lucide="heart-pulse" class="w-3.5 h-3.5 text-rose-600 inline-block align-middle shrink-0"></i> <span>مراقبت ویژه ICU</span></button>`);
   }
   if (p.isCamelidFatal) {
     pills.push(`<span class="inline-flex items-center gap-1 text-[10px] font-black px-2 py-0.5 rounded-lg bg-rose-100 text-rose-950 border border-rose-300"><i data-lucide="alert-octagon" class="w-3.5 h-3.5 text-rose-600 inline-block align-middle shrink-0"></i> <span>منع در شترسانان</span></span>`);
@@ -1727,28 +1727,28 @@ function renderDrugSpecialtyCardButtonHtml(drug) {
   const p = getDrugSpecialtyProfile(drug);
   if (p.isOnco) {
     return `
-      <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-rose-50 hover:bg-rose-100 active:scale-95 text-rose-900 border border-rose-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده ماشین‌حساب انکولوژی درون این دارو">
+      <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}', event)" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-rose-50 hover:bg-rose-100 active:scale-95 text-rose-900 border border-rose-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده ماشین‌حساب انکولوژی درون این دارو">
         <i data-lucide="scan" class="w-3.5 h-3.5 text-purple-600 inline-block align-middle shrink-0"></i> <span>انکولوژی</span>
       </button>
     `;
   }
   if (p.isAnesthCri) {
     return `
-      <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-teal-50 hover:bg-teal-100 active:scale-95 text-teal-900 border border-teal-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده موتور CRI درون این دارو">
+      <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}', event)" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-teal-50 hover:bg-teal-100 active:scale-95 text-teal-900 border border-teal-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده موتور CRI درون این دارو">
         <i data-lucide="syringe" class="w-3.5 h-3.5 text-teal-600 inline-block align-middle shrink-0"></i> <span>CRI</span>
       </button>
     `;
   }
   if (p.isOpht) {
     return `
-      <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-cyan-50 hover:bg-cyan-100 active:scale-95 text-cyan-900 border border-cyan-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="بررسی خروجی قطره‌ها درون این دارو">
+      <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}', event)" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-cyan-50 hover:bg-cyan-100 active:scale-95 text-cyan-900 border border-cyan-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="بررسی خروجی قطره‌ها درون این دارو">
         <i data-lucide="eye" class="w-3.5 h-3.5 text-cyan-600 inline-block align-middle shrink-0"></i> <span>قطره‌ها</span>
       </button>
     `;
   }
   if (p.isIcu) {
     return `
-      <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-red-50 hover:bg-red-100 active:scale-95 text-red-900 border border-red-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="پروتکل احیا و مراقبت ویژه ICU درون این دارو">
+      <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}', event)" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-red-50 hover:bg-red-100 active:scale-95 text-red-900 border border-red-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="پروتکل احیا و مراقبت ویژه ICU درون این دارو">
         <i data-lucide="heart-pulse" class="w-3.5 h-3.5 text-rose-600 inline-block align-middle shrink-0"></i> <span>ICU</span>
       </button>
     `;
@@ -1773,14 +1773,19 @@ function openDrugSpeciesTab(drugId, speciesKey) {
 }
 
 // تابع تاگل باز/بسته کردن ماشین‌حساب و تصمیم‌یار فوق‌تخصصی درون کارت بر اساس کلیک دکمه
-function toggleDrugSpecialtySection(drugId) {
-  if (typeof expandedCards !== 'undefined' && !expandedCards.has(drugId)) {
+function toggleDrugSpecialtySection(drugId, event) {
+  if (event) event.stopPropagation();
+  const detailsEl = document.getElementById('card_details_' + drugId);
+  if (detailsEl && detailsEl.classList.contains('hidden')) {
     toggleDrugCard(drugId);
   }
   setTimeout(() => {
-    const el = document.getElementById(`card_specialty_${drugId}`);
-    const btn = document.getElementById(`btn_specialty_${drugId}`);
-    if (!el) return;
+    const el = document.getElementById('card_specialty_' + drugId);
+    const btn = document.getElementById('btn_specialty_' + drugId);
+    if (!el) {
+      if (typeof openSpecialtyProtocolsModal === 'function') openSpecialtyProtocolsModal('anesthesia_cri');
+      return;
+    }
 
     const isHidden = el.classList.contains('hidden');
     if (isHidden) {
@@ -1793,7 +1798,8 @@ function toggleDrugSpecialtySection(drugId) {
       el.classList.add('hidden');
       if (btn) btn.classList.remove('ring-2', 'ring-teal-500', 'font-black');
     }
-  }, 100);
+    safeCreateIcons();
+  }, 50);
 }
 
 const openDrugSpecialtySection = toggleDrugSpecialtySection;
@@ -2134,7 +2140,7 @@ function renderDrugSpecialtySuiteHtml(drug, isMonograph = false) {
           <span>سامانه تصمیم‌یار بالینی و پروتکل‌های تخصصی</span>
         </span>
         ${!isMonograph ? `
-          <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="text-[10px] bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-2 py-0.5 rounded-md cursor-pointer transition">
+          <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}', event)" class="text-[10px] bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-2 py-0.5 rounded-md cursor-pointer transition">
             بستن ✕
           </button>
         ` : `
@@ -2460,30 +2466,32 @@ function renderDrugInlineInteractionsHtml(drug) {
 function toggleCardDoseInline(drugId, event) {
   if (event) event.stopPropagation();
   const detailsEl = document.getElementById('card_details_' + drugId);
-  if (!detailsEl) return;
-  const isHidden = detailsEl.classList.contains('hidden');
-  if (isHidden) {
+  if (detailsEl && detailsEl.classList.contains('hidden')) {
     toggleDrugCard(drugId);
   }
   setTimeout(() => {
-    const spBox = document.getElementById('spContent_' + drugId);
+    const spBox = document.getElementById('spContent_' + drugId) || document.getElementById('spTabs_' + drugId);
     if (spBox) {
       spBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       spBox.classList.add('ring-2', 'ring-cyan-500');
       setTimeout(() => spBox.classList.remove('ring-2', 'ring-cyan-500'), 1500);
     }
-  }, 100);
+  }, 50);
 }
 
 function toggleDrugCocktailsSection(drugId, event) {
   if (event) event.stopPropagation();
-  if (typeof expandedCards !== 'undefined' && !expandedCards.has(drugId)) {
+  const detailsEl = document.getElementById('card_details_' + drugId);
+  if (detailsEl && detailsEl.classList.contains('hidden')) {
     toggleDrugCard(drugId);
   }
   setTimeout(() => {
     const el = document.getElementById('card_cocktails_' + drugId);
     const btn = document.getElementById('btn_cocktail_' + drugId);
-    if (!el) return;
+    if (!el) {
+      if (typeof openCocktailsModal === 'function') openCocktailsModal(drugId);
+      return;
+    }
 
     const isHidden = el.classList.contains('hidden');
     if (isHidden) {
@@ -2497,18 +2505,22 @@ function toggleDrugCocktailsSection(drugId, event) {
       if (btn) btn.classList.remove('ring-2', 'ring-indigo-500', 'font-black');
     }
     safeCreateIcons();
-  }, 100);
+  }, 50);
 }
 
 function toggleDrugInteractionsSection(drugId, event) {
   if (event) event.stopPropagation();
-  if (typeof expandedCards !== 'undefined' && !expandedCards.has(drugId)) {
+  const detailsEl = document.getElementById('card_details_' + drugId);
+  if (detailsEl && detailsEl.classList.contains('hidden')) {
     toggleDrugCard(drugId);
   }
   setTimeout(() => {
     const el = document.getElementById('card_interactions_' + drugId);
     const btn = document.getElementById('btn_interact_' + drugId);
-    if (!el) return;
+    if (!el) {
+      if (typeof openSingleDrugInteractions === 'function') openSingleDrugInteractions(drugId);
+      return;
+    }
 
     const isHidden = el.classList.contains('hidden');
     if (isHidden) {
@@ -2522,7 +2534,7 @@ function toggleDrugInteractionsSection(drugId, event) {
       if (btn) btn.classList.remove('ring-2', 'ring-amber-500', 'font-black');
     }
     safeCreateIcons();
-  }, 100);
+  }, 50);
 }
 
 if (typeof window !== 'undefined') {
@@ -4064,30 +4076,60 @@ function runChocolateCalculation() {
   if (!wEl || !tEl || !gEl) return;
 
   const weight = parseFloat(wEl.value) || 10;
-  const chocType = tEl.value;
+  const chocType = tEl.value || 'milk';
   const grams = parseFloat(gEl.value) || 100;
 
-  const toxFn = (typeof calculateChocolateToxicity === 'function')
-    ? calculateChocolateToxicity
-    : (typeof window !== 'undefined' && typeof window.calculateChocolateToxicity === 'function' ? window.calculateChocolateToxicity : null);
+  // نرخ میلی‌گرم تئوبرومین بر حسب هر گرم شکلات
+  const rates = {
+    white: 0.1,
+    milk: 2.1,
+    dark_low: 5.0,
+    dark_med: 8.5,
+    baking: 16.0,
+    cocoa_powder: 26.0
+  };
 
-  if (!toxFn) return;
-  const res = toxFn(weight, chocType, grams);
+  const rate = rates[chocType] || rates.milk;
+  const totalTheobromine = Math.round(grams * rate);
+  const mgPerKg = (totalTheobromine / weight).toFixed(1);
+
+  let severity = 'خفیف';
+  let badgeColor = 'bg-emerald-100 text-emerald-800 border-emerald-300';
+  let advice = 'پایش بیمار؛ بدون نیاز به بستری.';
+
+  const val = parseFloat(mgPerKg);
+  if (val < 20) {
+    severity = '🟢 خفیف (< 20 mg/kg)';
+    badgeColor = 'bg-emerald-100 text-emerald-800 border-emerald-300';
+    advice = 'علائم گوارشی گذرا. درمان حمایتی و پایش خانگی برای ۱۲ تا ۲۴ ساعت.';
+  } else if (val < 40) {
+    severity = '🟡 متوسط (۲۰ - ۴۰ mg/kg)';
+    badgeColor = 'bg-amber-100 text-amber-800 border-amber-300';
+    advice = 'خطر تاکی‌کاردی و بی‌قراری. القای استفراغ در صورت بلع زیر ۲ ساعت (آپومورفین در سگ) و زغال فعال.';
+  } else if (val < 60) {
+    severity = '🟠 شدید (۴۰ - ۶۰ mg/kg)';
+    badgeColor = 'bg-orange-100 text-orange-800 border-orange-300';
+    advice = 'خطر آریتمی قلبی و تشنج. بستری فوری، مایع‌درمانی و پایش ECG پیوسته.';
+  } else {
+    severity = '🔴 بالقوه کشنده (> ۶۰ mg/kg)';
+    badgeColor = 'bg-rose-100 text-rose-800 border-rose-300';
+    advice = 'اورژانس حیاتی! خطر ایست قلبی و مرگ. بستری ICU، کنترل تشنج، پایش قلبی و تجویز مکرر زغال فعال.';
+  }
 
   const totEl = document.getElementById('toxChocTotalMg');
-  if (totEl) totEl.textContent = `${res.totalMg} mg`;
+  if (totEl) totEl.textContent = `${totalTheobromine} mg`;
 
   const mgKgEl = document.getElementById('toxChocMgKg');
-  if (mgKgEl) mgKgEl.textContent = `${res.mgPerKg} mg/kg`;
+  if (mgKgEl) mgKgEl.textContent = `${mgPerKg} mg/kg`;
 
   const badge = document.getElementById('toxChocBadge');
   if (badge) {
-    badge.className = `text-xs font-black px-2.5 py-0.5 rounded-full border ${res.badgeColor}`;
-    badge.textContent = res.severity;
+    badge.className = `text-xs font-black px-2.5 py-0.5 rounded-full border ${badgeColor}`;
+    badge.textContent = severity;
   }
 
   const adviceEl = document.getElementById('toxChocAdvice');
-  if (adviceEl) adviceEl.textContent = res.advice;
+  if (adviceEl) adviceEl.textContent = advice;
 }
 
 // ۲. جداول مقادیر مرجع آزمایشگاهی CBC، بیوشیمی و گازهای خون
@@ -5567,36 +5609,68 @@ function checkClassLevelInteraction(d1, d2) {
   return null;
 }
 
+// Fast Indexed Maps for Zero-Lag Lookups
+let DRUG_LOOKUP_MAP = null;
+let INTERACTION_INDEX_MAP = null;
+
+function getDrugLookupMap() {
+  if (!DRUG_LOOKUP_MAP && typeof DRUGS_DATA !== 'undefined' && Array.isArray(DRUGS_DATA)) {
+    DRUG_LOOKUP_MAP = new Map();
+    DRUGS_DATA.forEach(d => {
+      if (d && d.id) DRUG_LOOKUP_MAP.set(d.id, d);
+    });
+  }
+  return DRUG_LOOKUP_MAP;
+}
+
+function getInteractionIndexMap() {
+  if (!INTERACTION_INDEX_MAP && typeof PLUMBS_INTERACTION_MATRIX !== 'undefined' && Array.isArray(PLUMBS_INTERACTION_MATRIX)) {
+    INTERACTION_INDEX_MAP = new Map();
+    PLUMBS_INTERACTION_MATRIX.forEach(m => {
+      if (m && Array.isArray(m.drugs)) {
+        m.drugs.forEach(dId => {
+          if (!INTERACTION_INDEX_MAP.has(dId)) {
+            INTERACTION_INDEX_MAP.set(dId, []);
+          }
+          INTERACTION_INDEX_MAP.get(dId).push(m);
+        });
+      }
+    });
+  }
+  return INTERACTION_INDEX_MAP;
+}
+
 function getSingleDrugAllInteractions(drugId) {
-  const target = DRUGS_DATA.find(d => d.id === drugId);
+  const drugMap = getDrugLookupMap();
+  const target = drugMap ? drugMap.get(drugId) : (typeof DRUGS_DATA !== 'undefined' ? DRUGS_DATA.find(d => d.id === drugId) : null);
   if (!target) return null;
 
   const results = [];
   const seenPartners = new Set();
+  const interMap = getInteractionIndexMap();
+  const matches = interMap ? (interMap.get(drugId) || []) : [];
 
-  if (typeof PLUMBS_INTERACTION_MATRIX !== 'undefined' && Array.isArray(PLUMBS_INTERACTION_MATRIX)) {
-    PLUMBS_INTERACTION_MATRIX.forEach(m => {
-      if (m.drugs && m.drugs.includes(drugId)) {
-        const partnerId = m.drugs.find(id => id !== drugId);
-        if (partnerId && !seenPartners.has(partnerId)) {
-          seenPartners.add(partnerId);
-          const partner = DRUGS_DATA.find(d => d.id === partnerId);
-          results.push({
-            partnerId,
-            partnerNameFa: partner ? (partner.generic_name_fa || partner.name_fa) : partnerId,
-            partnerNameEn: partner ? (partner.generic_name_en || partner.name_en) : partnerId,
-            partnerClass: partner ? (partner.drug_class_fa || partner.therapeutic_category_fa || '') : '',
-            severity: m.severity || 'moderate',
-            title: m.title || (m.severity === 'major' ? `🔴 تداخل با ${partner ? partner.generic_name_fa : partnerId}` : `🟡 احتیاط و پایش در مصرف همزمان`),
-            mechanism: m.mechanism || 'تداخل فارماکوکینتیک یا فارماکودینامیک متقابل.',
-            clinical_effect: m.clinical_effect || 'پایش دقیق بالینی و رعایت فاصله زمانی یا تعدیل دوز.',
-            sources: m.sources || ["فارماکوپه جامع بالینی دامپزشکی", "راهنمای تخصصی فارماکولوژی بالینی"],
-            source: 'matrix'
-          });
-        }
+  matches.forEach(m => {
+    if (m.drugs && m.drugs.includes(drugId)) {
+      const partnerId = m.drugs.find(id => id !== drugId);
+      if (partnerId && !seenPartners.has(partnerId)) {
+        seenPartners.add(partnerId);
+        const partner = drugMap ? drugMap.get(partnerId) : null;
+        results.push({
+          partnerId,
+          partnerNameFa: partner ? (partner.generic_name_fa || partner.name_fa) : partnerId,
+          partnerNameEn: partner ? (partner.generic_name_en || partner.name_en) : partnerId,
+          partnerClass: partner ? (partner.drug_class_fa || partner.therapeutic_category_fa || '') : '',
+          severity: m.severity || 'moderate',
+          title: m.title || (m.severity === 'major' ? `🔴 تداخل با ${partner ? partner.generic_name_fa : partnerId}` : `🟡 احتیاط و پایش در مصرف همزمان`),
+          mechanism: m.mechanism || 'تداخل فارماکوکینتیک یا فارماکودینامیک متقابل.',
+          clinical_effect: m.clinical_effect || 'پایش دقیق بالینی و رعایت فاصله زمانی یا تعدیل دوز.',
+          sources: m.sources || ["فارماکوپه جامع بالینی دامپزشکی", "راهنمای تخصصی فارماکولوژی بالینی"],
+          source: 'matrix'
+        });
       }
-    });
-  }
+    }
+  });
 
   const monographInteractions = target.interactions || target.drug_interactions || [];
   monographInteractions.forEach(it => {
@@ -5604,7 +5678,7 @@ function getSingleDrugAllInteractions(drugId) {
     if (!pName) return;
 
     const isAlreadyCovered = Array.from(seenPartners).some(pid => {
-      const p = DRUGS_DATA.find(x => x.id === pid);
+      const p = drugMap ? drugMap.get(pid) : null;
       if (!p) return false;
       const fa = (p.generic_name_fa || '').toLowerCase();
       const en = (p.generic_name_en || '').toLowerCase();

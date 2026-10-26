@@ -2,7 +2,7 @@
  * Service Worker: سامانه آفلاین وت‌دوز (VetDose PWA Offline Engine)
  * نسخه ۳.۱۰.۰ - فعال‌سازی اکشن‌های درجا (Inline) دوز، کوکتل و تداخلات + خلوت‌سازی هدر و سرچ
  */
-const CACHE_NAME = 'vetdose-cache-v3.10.0-inline-actions';
+const CACHE_NAME = 'vetdose-cache-v3.10.1-perf-fix';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

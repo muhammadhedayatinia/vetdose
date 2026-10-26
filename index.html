@@ -742,7 +742,6 @@
 
       <!-- بدنه ماشین‌حساب -->
       <div class="p-6 overflow-y-auto space-y-5" id="calcContent">
-        <!-- فرم ۱: ماشین‌حساب جامع بالینی چندگونه‌ای و چندفرمی -->
         <div id="calcPaneDose" class="space-y-4">
           <div class="p-3 bg-teal-50 border border-teal-200 rounded-2xl flex items-center justify-between text-xs text-teal-900">
             <span class="font-bold flex items-center gap-1.5">
@@ -941,665 +940,237 @@
           </div>
         </div>
 
-        <div id="calcPaneWildlifeSafety" class="space-y-4 hidden text-xs">
+        <div id="calcPanePill" class="space-y-4 hidden text-xs">
+          <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl text-amber-900 flex items-start gap-2">
+            <i data-lucide="pill" class="w-4 h-4 text-amber-600 mt-0.5 shrink-0"></i>
+            <span>محاسبه دقیق تعداد قرص در هر وعده (کسر عملی مانند نصف قرص، ۱ قرص، ۲ قرص)، فاصله مصرف (هر ۸ یا ۱۲ ساعت)، شرایط خورانیدن (همراه غذا یا معده خالی)، تعداد کل قرص نسخه و تولید و چاپ نسخه رسمی جهت تحویل به مراجعه‌کننده.</span>
+          </div>
 
+          <!-- بخش مشخصات بیمار و سرپرست (جهت چاپ نسخه رسمی) -->
+          <div class="p-3 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+            <div class="flex items-center justify-between text-xs font-bold text-slate-700">
+              <span class="flex items-center gap-1.5 text-teal-800">
+                <i data-lucide="user-check" class="w-4 h-4 text-teal-600"></i>
+                <span>مشخصات بیمار و سرپرست (جهت درج در نسخه رسمی و واتساپ):</span>
+              </span>
+              <span class="text-[10px] text-slate-500 font-normal">اختیاری اما الزامی برای چاپ نسخه رسمی</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
+              <div>
+                <label class="block font-medium text-slate-600 mb-0.5 text-[11px]">نام بیمار (کیس):</label>
+                <input type="text" id="pillPatientName" placeholder="مثلاً: مکس، تدی، پشمک..." class="w-full p-2 bg-white border border-slate-200 rounded-lg font-bold text-slate-800 text-xs" oninput="runPillCalculation()">
+              </div>
+              <div>
+                <label class="block font-medium text-slate-600 mb-0.5 text-[11px]">گونه بیمار:</label>
+                <select id="pillPatientSpecies" class="w-full p-2 bg-white border border-slate-200 rounded-lg font-bold text-slate-800 text-xs" onchange="runPillCalculation()">
+                  <option value="سگ (Canine)" selected>🐶 سگ (Canine)</option>
+                  <option value="گربه (Feline)">🐱 گربه (Feline)</option>
+                  <option value="اسب (Equine)">🐎 اسب (Equine)</option>
+                  <option value="نشخوارکننده">🐄 نشخوارکننده</option>
+                  <option value="پرنده / اگزوتیک">🦜 پرنده / اگزوتیک</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-medium text-slate-600 mb-0.5 text-[11px]">نام سرپرست (صاحب):</label>
+                <input type="text" id="pillClientName" placeholder="نام و نام خانوادگی سرپرست" class="w-full p-2 bg-white border border-slate-200 rounded-lg font-medium text-slate-800 text-xs" oninput="runPillCalculation()">
+              </div>
+              <div>
+                <label class="block font-medium text-slate-600 mb-0.5 text-[11px]">شماره تماس سرپرست (جهت واتساپ):</label>
+                <input type="text" id="pillClientPhone" placeholder="۰۹۱۲... یا پرونده" class="w-full p-2 bg-white border border-slate-200 rounded-lg font-mono text-slate-800 text-xs latin-text" oninput="runPillCalculation()">
+              </div>
+            </div>
+          </div>
 
-"}
-{"step_index":3636,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:15:07Z","input_tokens":2407,"cache_read_tokens":70234,"output_tokens":101,"tool_calls":[{"name":"run_command","args":{"CommandLine":"Get-Content app.js | Select-String -Pattern "switchCalcTab" -Context 2,25","WaitMsBeforeAsync":5000,"toolSummary":"Inspect switchCalcTab in app.js"}}]}
-{"step_index":3637,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T12:15:12Z","content":"Created At: 2026-10-26T15:45:12+03:30
-Completed At: 2026-10-26T15:45:14+03:30
-The tool's output was truncated due to being too long. You can find the full output in a file at file:///C:/Users/mohammad%20hedayatinia/.gemini/antigravity/brain/7dae33e9-d2cf-4d14-9a21-1a610e19d3b0/.system_generated/steps/3637/output.txt.
+          <!-- انتخاب داروی آماده یا دستی -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">انتخاب داروی خوراکی رایج:</label>
+              <select id="pillPresetSelect" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-bold text-slate-800" onchange="onPillPresetChange()">
+                <option value="custom">✏️ داروی سفارشی (وارد کردن دستی دوز)</option>
+                <option value="amox_clav" selected>💊 کوآموکسی‌کلاو (13.75 mg/kg - هر ۱۲ ساعت با غذا)</option>
+                <option value="metronidazole">💊 مترونیدازول (15 mg/kg - هر ۱۲ ساعت با غذا)</option>
+                <option value="gabapentin">💊 گاباپنتین (10 mg/kg - هر ۱۲ ساعت)</option>
+                <option value="meloxicam">💊 ملوکسیکام (0.1 mg/kg - روزانه با غذا)</option>
+                <option value="tramadol">💊 ترامادول (3 mg/kg - هر ۸ الی ۱۲ ساعت)</option>
+                <option value="oxytetracycline_po">💊 اکسی‌تتراسایکلین (20 mg/kg - هر ۸ ساعت با معده خالی)</option>
+                <option value="enrofloxacin_po">💊 انروفلوکساسین (5 mg/kg - روزانه)</option>
+                <option value="prednisolone">💊 پردنیزولون (1 mg/kg - هر ۱۲ ساعت با غذا)</option>
+                <option value="furosemide_po">💊 فوروزماید (2.5 mg/kg - هر ۱۲ ساعت)</option>
+                <option value="cephalexin">💊 سفالکسین (25 mg/kg - هر ۱۲ ساعت با غذا)</option>
+                <option value="fenbendazole">💊 فنبندازول / پانباکور (50 mg/kg - روزانه ۳ روز با غذا)</option>
+                <option value="praziquantel">💊 پرازیکوانتل / درونسید (5 mg/kg - تک‌دوز کرم‌های نواری)</option>
+                <option value="levothyroxine">💊 لووتیروکسین سدیم (0.02 mg/kg - هر ۱۲ ساعت ناشتا)</option>
+                <option value="methimazole">💊 متی‌مازول / فیلی‌مازول (0.5 mg/kg - هر ۱۲ ساعت با غذا)</option>
+                <option value="prazosin">💊 پرازوسین (0.05 mg/kg - شل‌کننده پیشابراه گربه نری و سگ)</option>
+                <option value="famotidine">💊 فاموتیدین (0.5 mg/kg - محافظ مخاط معده و CKD)</option>
+                <option value="butorphanol_po">💊 بوتورفانول (0.08 mg/kg - ضدسرفه کلاپس نای سگ)</option>
+                <option value="spironolactone">💊 اسپیرونولاکتون (2 mg/kg - نارسایی احتقانی قلب و آسیت)</option>
+                <option value="doxycycline">💊 داکسی‌سایکلین (10 mg/kg - ارلیشیوزیس، کرم قلب، FIA)</option>
+                <option value="ciprofloxacin_po">💊 سیپروفلوکساسین (20 mg/kg - عفونت ادراری و پروستاتیت)</option>
+                <option value="loperamide">💊 لوپرامید (0.1 mg/kg - ضداسهال غیراختصاصی سگ)</option>
+                <option value="marbofloxacin">💊 ماربوفلوکساسین (2.75 mg/kg - پیودرمای عمقی و بافت نرم)</option>
+                <option value="terbinafine">💊 تربینافین (35 mg/kg - کچلی قارچی و رینگ‌ورم)</option>
+                <option value="methocarbamol">💊 متوکاربامول (30 mg/kg - شل‌کننده عضلات و IVDD)</option>
+                <option value="misoprostol">💊 میزوپروستول (3 mcg/kg - پیشگیری و درمان اولسر NSAID)</option>
+                <option value="clopidogrel">💊 کلوپیدوگرل (18.75 mg گربه / 1 mg/kg سگ - پیشگیری لخته ATE)</option>
+                <option value="trilostane">💊 تریلوستان (1.5 mg/kg - کوشینگ سگ هر ۱۲ ساعت با غذا)</option>
+                <option value="levetiracetam">💊 لوتیراستام / کپرا (20 mg/kg - ضدتشنج صرع و نارسایی کبد q8h)</option>
+                <option value="potassium_bromide">💊 پتاسیم بروماید KBr (30 mg/kg/day - صرع سگ با غذا | منع در گربه)</option>
+                <option value="cyclosporine_systemic">💊 سیکلوسپورین سیستمیک / آتوپیکا (5 mg/kg - درماتیت آتوپیک)</option>
+                <option value="benazepril">💊 بنازپریل / فورتیکور (0.5 mg/kg - نارسایی قلبی و پروتئینوری CKD)</option>
+                <option value="sildenafil">💊 سیلدنافیل / ویاگرا (1 mg/kg - پرفشاری خون ریوی و مگاازوفاگوس)</option>
+                <option value="oxybutynin">💊 اکسی‌بوتینین / دیتروپان (0.2 mg/kg - بی‌اختیاری ادراری اسپاستیک)</option>
+                <option value="apoquel">💊 اوکلاسیتینیب / آپوکوئل (0.5 mg/kg - ضدخارش و درماتیت آتوپیک سگ)</option>
+                <option value="trimethoprim_sulfa">💊 کو-تریموکسازول (20 mg/kg - عفونت گوارشی و کوکسیدیوز خرگوش و جوندگان)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">دوز دارویی هدف (mg/kg در هر وعده):</label>
+              <input type="number" step="0.1" id="pillDoseRate" value="13.75" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono latin-text font-bold" oninput="runPillCalculation()">
+            </div>
+          </div>
 
-Here is a preview with the middle of the output truncated:
-Command exited with code 0.
+          <!-- وزن و دوز قرص و تکرار -->
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">وزن بیمار (kg):</label>
+              <input type="number" step="0.1" id="pillWeight" value="10" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono latin-text font-bold" oninput="runPillCalculation()">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">دوز قرص در داروخانه (mg):</label>
+              <select id="pillStrengthSelect" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-bold font-mono latin-text text-slate-800" onchange="onPillStrengthSelectChange()">
+                <option value="62.5">62.5 mg (قرص کوچک دامی)</option>
+                <option value="100">100 mg</option>
+                <option value="125">125 mg</option>
+                <option value="250" selected>250 mg (استاندارد)</option>
+                <option value="300">300 mg</option>
+                <option value="375">375 mg (انسانی فاراموکس)</option>
+                <option value="400">400 mg</option>
+                <option value="500">500 mg</option>
+                <option value="625">625 mg (انسانی کلاویسیل)</option>
+                <option value="custom_mg">سایر (دستی)...</option>
+              </select>
+              <input type="number" id="pillCustomStrength" value="250" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono latin-text font-bold mt-1.5 hidden" placeholder="میلی‌گرم قرص" oninput="runPillCalculation()">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">فاصله مصرف (Interval):</label>
+              <select id="pillInterval" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-bold" onchange="runPillCalculation()">
+                <option value="q12h" selected>هر ۱۲ ساعت (۲ بار در روز)</option>
+                <option value="q8h">هر ۸ ساعت (۳ بار در روز)</option>
+                <option value="q24h">هر ۲۴ ساعت (۱ بار در روز)</option>
+                <option value="q6h">هر ۶ ساعت (۴ بار در روز)</option>
+              </select>
+</div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">طول دوره درمان (روز):</label>
+              <input type="number" id="pillDays" value="7" min="1" max="60" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono latin-text font-bold" oninput="runPillCalculation()">
+            </div>
+          </div>
 
-Command output:
+          <!-- نتیجه دوز قرص و تعداد -->
+          <div class="p-4 bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl space-y-3">
+            <div class="flex items-center justify-between flex-wrap gap-2">
+              <div>
+                <span class="text-xs text-amber-800 font-bold block">دوز محاسبه‌شده هر وعده:</span>
+                <span class="text-xl font-mono font-black text-amber-950 latin-text" id="pillResMgPerDose">137.5 mg</span>
+              </div>
+              <div class="text-left bg-white px-3.5 py-2 rounded-xl border border-amber-300 shadow-2xs">
+                <span class="text-[11px] text-slate-500 font-bold block">دستور مصرف در هر وعده:</span>
+                <span class="text-lg font-black text-amber-900" id="pillResDoseText">نصف قرص (۱/۲ قرص)</span>
+              </div>
+            </div>
 
-    // O\u0015U_O� O_O\u0015O�U^UO O\u0015U+UcU^U,U^U~UO UOO\u0015 O"O� U_O\u0015UOU� O3O�O O"O_U+ O"O\u0015O'O_OO U.O3O�U,UOU.O\u0015U< U.O\u0015O'UOU+�?OO
-O3O\u0015O" O_U^O� O�O\u0015 O_O� OO\u0015U,O� BSA U,O�O\u0015O� U.UO�?OO_U�UOU.
-    if (isBsaDrug) {
->     switchCalcTab('dose');
-      setUniversalDoseBasis('bsa', false);
-      const drugNameInput = document.getElementById('univDrugName');
-      if (drugNameInput) drugNameInput.value = `${drug.generic_name_fa} (${drug.generic_name_en || ''})`;
-  
-      // O\u0015O3O�OrO�O\u0015O� U�U^O'U.U+O_ O_U^O� O1O_O_UO O"O� O-O3O" mg/mA�
-      let bsaRate = 20;
-      if (drug.id === 'doxorubicin') bsaRate = 30;
-      else if (drug.id === 'vincristine') bsaRate = 0.7;
-      else if (drug.id === 'cyclophosphamide') bsaRate = 250;
-      else if (drug.id === 'carboplatin') bsaRate = 300;
-      else if (drug.quick_dose) {
-        const match = drug.quick_dose.match(/([\d\.]+)\s*(?:mg\/m)/i);
-        if (match) bsaRate = parseFloat(match[1]);
-      }
-      const rateInput = document.getElementById('univDoseRate');
-      if (rateInput) rateInput.value = bsaRate;
-  
-      const concInput = document.getElementById('univConc');
-      if (concInput) {
-        if (drug.id === 'doxorubicin') concInput.value = 2.0;
-        else if (drug.id === 'vincristine') concInput.value = 1.0;
-        else if (drug.id === 'cyclophosphamide') concInput.value = 20.0;
-        else if (drug.id === 'carboplatin') concInput.value = 10.0;
-      }
-      runUniversalCalculation();
-      return;
-    } else if (profile.isAnesthCri && ['lidocaine', 'ketamine', 'metoclopramide', 'propofol', 'fentanyl', 'dopamine', 
-'dobutamine'].includes(drug.id)) {
->     switchCalcTab('cri');
-      const select = document.getElementById('criPresetSelect');
-      if (select && select.querySelector(`option[value="${drug.id}"]`)) {
-        select.value = drug.id;
-        onCriPresetChange();
-      } else {
-        runCriCalculation();
-      }
-    } else if (drug.compounding_and_dilution?.has_calculator) {
->     switchCalcTab('dilution');
-      document.getElementById('dilPillMg').value = drug.compounding_and_dilution.default_pill_mg || 100;
-      document.getElementById('dilVolumeMl').value = drug.compounding_and_dilution.default_diluent_ml || 10;
-      runDilutionCalculation();
-    } else if (drug.tablet_dispensing_guide) {
-      // O�O" U.O-O\u0015O3O"U� O_U^O� U,O�O� U^ U+O3OrU�
->     switchCalcTab('pill');
-      const selectEl = document.getElementById('pillPresetSelect');
-      if (selectEl) {
-        if (drug.id === 'amoxicillin_clavulanate') selectEl.value = 'amox_clav';
-        else if (drug.id === 'gabapentin') selectEl.value = 'gabapentin';
-        else if (drug.id === 'meloxicam') selectEl.value = 'meloxicam';
-        else if (drug.id === 'tramadol') selectEl.value = 'tramadol';
-        else if (drug.id === 'oxytetracycline') selectEl.value = 'oxytetracycline_po';
-        else if (drug.id === 'enrofloxacin') selectEl.value = 'enrofloxacin_po';
-        else if (drug.id === 'prazosin') selectEl.value = 'prazosin';
-        else if (drug.id === 'famotidine') selectEl.value = 'famotidine';
-        else if (drug.id === 'butorphanol') selectEl.value = 'butorphanol_po';
-        else if (drug.id === 'fenbendazole') selectEl.value = 'fenbendazole';
-        else if (drug.id === 'praziquantel') selectEl.value = 'praziquantel';
-        else if (drug.id === 'levothyroxine') selectEl.value = 'levothyroxine';
-        else if (drug.id === 'methimazole') selectEl.value = 'methimazole';
-        else if (drug.id === 'spironolactone') selectEl.value = 'spironolactone';
-        else if (drug.id === 'doxycycline') selectEl.value = 'doxycycline';
-        else if (drug.id === 'cephalexin') selectEl.value = 'cephalexin';
-        else if (drug.id === 'ciprofloxacin') selectEl.value = 'ciprofloxacin_po';
-        else if (drug.id === 'loperamide') selectEl.value = 'loperamide';
-        else if (drug.id === 'marbofloxacin') selectEl.value = 'marbofloxacin';
-        else if (drug.id === 'terbinafine') selectEl.value = 'terbinafine';
-        else if (drug.id === 'apoquel') selectEl.value = 'apoquel';
-        else if (drug.id === 'trimethoprim_sulfa') selectEl.value = 'trimethoprim_sulfa';
-        else selectEl.value = 'custom';
-    } else {
-      // O�O" O_U^O� O\u0015O3O�O\u0015U+O_O\u0015O�O_
->     switchCalcTab('dose');
-      // U_O� UcO�O_U+ O_U^O� O3U_ O"U� O1U+U^O\u0015U+ U+U.U^U+U� O\u0015U^U,UOU�
-      let canineDose = 0.2;
-      if (drug.species_dosing?.canine) {
-        if (Array.isArray(drug.species_dosing.canine) && drug.species_dosing.canine[0]) {
-          canineDose = drug.species_dosing.canine[0].dose_low || drug.species_dosing.canine[0].dose || 0.2;
-        } else if (typeof drug.species_dosing.canine === 'object') {
-          const raw = drug.species_dosing
-<truncated 6599 of 16473 bytes from the middle of the output>
-     const select = document.getElementById('oncoDrugPresetSelect');
-      if (select) {
-        if (select.querySelector(`option[value="${drugId}"]`)) {
-          select.value = drugId;
-          onOncologyPresetChange();
-        } else {
-          runOncologyBsaCalculation();
-        }
-      }
-    } else if (specialtyType === 'cri') {
->     switchCalcTab('cri');
-      const select = document.getElementById('criPresetSelect');
-      if (select) {
-        if (select.querySelector(`option[value="${drugId}"]`)) {
-          select.value = drugId;
-          onCriPresetChange();
-        } else {
-          runCriCalculation();
-        }
-      }
-    } else if (specialtyType === 'ophthalmology') {
->     switchCalcTab('ophthalmology');
-      const drop1 = document.getElementById('ophtDrop1Select');
-      if (drop1 && drop1.querySelector(`option[value="${drugId}"]`)) {
-        drop1.value = drugId;
-      }
-      runOphthalmicOutcomeCalculation();
-    } else if (specialtyType === 'aquatics') {
->     switchCalcTab('aquatics');
-      const aquaSelect = document.getElementById('aquaDrugSelect');
-      if (aquaSelect) {
-        if (aquaSelect.querySelector(`option[value="${drugId}"]`)) {
-          aquaSelect.value = drugId;
-          onAquaticsPresetChange();
-        } else {
-          runAquaticsCalculation();
-        }
-      }
-    } else if (specialtyType === 'camelids') {
->     switchCalcTab('camelids');
-      const camSelect = document.getElementById('camDrugSelect');
-      if (camSelect) {
-        if (camSelect.querySelector(`option[value="${drugId}"]`)) {
-          camSelect.value = drugId;
-          onCamelidDrugChange();
-        } else {
-          runCamelidCalculation();
-        }
-      }
-    }
-  }
-  
-  if (typeof window !== 'undefined') {
-    window.toggleDrugSpecialtySection = toggleDrugSpecialtySection;
-    window.openDrugSpecialtySection = openDrugSpecialtySection;
-    window.handleInlineOphtChange = handleInlineOphtChange;
-    window.getOphtPairOutcome = getOphtPairOutcome;
-    window.openSpecialtyCalculatorForDrug = openSpecialtyCalculatorForDrug;
-    window.runOphthalmicOutcomeCalculation = runOphthalmicOutcomeCalculation;
-    window.onAquaticsPresetChange = onAquaticsPresetChange;
-    window.runAquaticsCalculation = runAquaticsCalculation;
-    window.onCamelidDrugChange = onCamelidDrugChange;
-    window.runCamelidCalculation = runCamelidCalculation;
-    window.getDrugSpecialtyProfile = getDrugSpecialtyProfile;
-    window.getSpecialtyProtocolsForDrug = getSpecialtyProtocolsForDrug;
-  
-  if (typeof window !== 'undefined') {
->   window.switchCalcTab = switchCalcTab;
-    window.initUniversalCalculator = initUniversalCalculator;
-    window.setUniversalSpecies = setUniversalSpecies;
-    window.setUniversalFormRoute = setUniversalFormRoute;
-    window.populateUniversalDrugSelect = populateUniversalDrugSelect;
-    window.onUniversalDrugChange = onUniversalDrugChange;
-    window.runUniversalCalculation = runUniversalCalculation;
-    window.runChocolateCalculation = runChocolateCalculation;
-    window.renderLabRefTable = renderLabRefTable;
-    window.runOphthalmologyDiag = runOphthalmologyDiag;
-    window.runIrisCalculation = runIrisCalculation;
-    window.runAnesthesiaCalculation = runAnesthesiaCalculation;
-    window.runNutritionCalculation = runNutritionCalculation;
-    window.openCalculatorModal = openCalculatorModal;
-    window.closeCalculatorModal = closeCalculatorModal;
-    window.openCalculatorWithTab = openCalculatorWithTab;
-  }
-  
-  
-  // ==============================================
-  // U.U^O�U^O� O"O�O�O3UO O3O\u0015O�U_O\u0015O�UO O3O�U.UO U^ O\u0015OrO�U,O\u0015O� O_O� O3O�U+U_ (Y-Site & Syringe Admixture Matrix)
-  // ==============================================
-  let currentSyringeDrug1 = 'ketamine';
-  let currentSyringeDrug2 = 'xylazine';
-  
-  function openSyringeCompatibilityModal(focusDrugId = null) {
-      runAquaticsCalculation,
-      runCamelidCalculation,
->     switchCalcTab,
-      quickCalculateForDrug,
-      initUniversalCalculator,
-      setUniversalSpecies,
-      setUniversalFormRoute,
-      populateUniversalDrugSelect,
-      onUniversalDrugChange,
-      runUniversalCalculation,
-      runChocolateCalculation,
-      renderLabRefTable,
-      runOphthalmologyDiag,
-      runIrisCalculation,
-      runAnesthesiaCalculation,
-      runNutritionCalculation,
-      openCalculatorWithTab
-    };
-  }
-  
-  // U,UOO3U+O�U�O\u0015UO U+O\u0015U^O"O�UO U.O_O�U+ U^ U.UOO\u0015U+O"O�U�O\u0015UO UcUOO"U^O�O_ (Google Stitch Shortcuts & Scroll)
-  if (typeof window !== 'undefined') {
-    window.addEventListener('keydown', (e) => {
-      if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 
-'TEXTAREA') {
-        e.preventDefault();
-        scrollToSearchAndFocus();
-      }
-    });
+            <!-- نحوه تقسیم قرص و احتیاط بالینی -->
+            <div class="p-2.5 bg-white/90 rounded-xl border border-amber-200/80 text-xs space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-700">تعداد کل قرص نسخه جهت تحویل:</span>
+                <span class="font-black text-base text-emerald-800 font-mono" id="pillResTotalTablets">۷ عدد قرص</span>
+              </div>
+              <p class="text-slate-600 text-[11px] pt-1 border-t border-slate-100" id="pillResPracticalAdvice">
+                قرص خط‌دار است؛ نصف قرص را همراه غذا به حیوان بخورانید.
+              </p>
+            </div>
 
+            <!-- کادر متن رسمی نسخه و جعبه ابزار صدور و چاپ -->
+            <div class="bg-slate-900 text-white p-3.5 rounded-2xl space-y-3 border border-slate-800 shadow-lg">
+              <div class="flex items-center justify-between flex-wrap gap-2">
+                <span class="text-xs font-bold text-amber-400 flex items-center gap-1.5">
+                  <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+                  <span>متن و صدور نسخه رسمی تحویل به مراجعه‌کننده:</span>
+                </span>
+                
+                <!-- دکمه‌های عملیاتی نسخه -->
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <button type="button" onclick="openPrintPrescriptionModal()" class="px-3 py-1 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-400 hover:to-emerald-400 text-slate-950 font-black rounded-lg text-[11px] transition flex items-center gap-1.5 shadow-md shadow-teal-500/20">
+                    <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+                    <span>🖨️ چاپ نسخه رسمی (Print / PDF)</span>
+                  </button>
+                  <button type="button" onclick="sharePrescriptionWhatsApp()" class="px-2.5 py-1 bg-emerald-700 hover:bg-emerald-600 text-white rounded-lg text-[11px] font-bold transition flex items-center gap-1">
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                    <span>واتساپ</span>
+                  </button>
+                  <button type="button" onclick="copyPillPrescriptionText()" class="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-[11px] font-bold transition flex items-center gap-1 border border-slate-700">
+                    <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                    <span id="copyPillBtnText">کپی متن</span>
+                  </button>
+                </div>
+              </div>
 
-"}
-{"step_index":3638,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:15:14Z","input_tokens":27168,"cache_read_tokens":48833,"output_tokens":98,"tool_calls":[{"name":"run_command","args":{"CommandLine":"Get-Content app.js | Select-String -Pattern "function switchCalcTab\(" -Context 2,30","WaitMsBeforeAsync":5000,"toolSummary":"Find function switchCalcTab definition"}}]}
-{"step_index":3639,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T12:15:22Z","content":"Created At: 2026-10-26T15:45:22+03:30
-Completed At: 2026-10-26T15:45:23+03:30
-Command exited with code 0.
+              <pre id="pillPrescriptionBox" class="text-[11px] font-sans whitespace-pre-wrap leading-relaxed text-slate-200 bg-slate-950/70 p-3 rounded-xl border border-slate-800 select-all"></pre>
 
-Command output:
-
-  
-  // O3U^O�UOU+ O�O"�?OU�O\u0015UO U.O\u0015O'UOU+�?OO-O3O\u0015O" O�O\u0015U.O1 U^ O\u0015O"O�O\u0015O�U�O\u0015UO U�U\u0014 UcO�O\u0015O" U.O�O�O1
-> function switchCalcTab(tab) {
-    const tabsConfig = [
-      { id: 'dose', paneId: 'calcPaneDose', tabId: 'calcTabDose', onSelect: () => runUniversalCalculation() },
-      { id: 'pill', paneId: 'calcPanePill', tabId: 'calcTabPill', onSelect: () => runPillCalculation() },
-      { id: 'dilution', paneId: 'calcPaneDilution', tabId: 'calcTabDilution', onSelect: () => typeof 
-runDilutionCalculation === 'function' && runDilutionCalculation() },
-      { id: 'fluid', paneId: 'calcPaneFluid', tabId: 'calcTabFluid', onSelect: () => typeof runFluidCalculation === 
-'function' && runFluidCalculation() },
-      { id: 'cri', paneId: 'calcPaneCri', tabId: 'calcTabCri', onSelect: () => runCriCalculation() },
-      { id: 'toxicology', paneId: 'calcPaneToxicology', tabId: 'calcTabToxicology', onSelect: () => 
-runChocolateCalculation() },
-      { id: 'labref', paneId: 'calcPaneLabRef', tabId: 'calcTabLabRef', onSelect: () => renderLabRefTable('canine') },
-      { id: 'transfusion', paneId: 'calcPaneTransfusion', tabId: 'calcTabTransfusion', onSelect: () => 
-runTransfusionCalculation() },
-      { id: 'ophthalmology', paneId: 'calcPaneOphthalmology', tabId: 'calcTabOphthalmology', onSelect: () => 
-runOphthalmologyDiag() },
-      { id: 'oncology', paneId: 'calcPaneOncology', tabId: 'calcTabOncology', onSelect: () => 
-runOncologyBsaCalculation() },
-      { id: 'iris', paneId: 'calcPaneIris', tabId: 'calcTabIris', onSelect: () => runIrisCalculation() },
-      { id: 'anesthesia', paneId: 'calcPaneAnesthesia', tabId: 'calcTabAnesthesia', onSelect: () => 
-runAnesthesiaCalculation() },
-      { id: 'nutrition', paneId: 'calcPaneNutrition', tabId: 'calcTabNutrition', onSelect: () => 
-runNutritionCalculation() },
-      { id: 'wildlife_safety', paneId: 'calcPaneWildlifeSafety', tabId: 'calcTabWildlifeSafety' },
-      { id: 'withdrawal', paneId: 'calcPaneWithdrawal', tabId: 'calcTabWithdrawal', onSelect: () => 
-runWithdrawalCalculation() }
-    ];
-  
-    tabsConfig.forEach(cfg => {
-      const pane = document.getElementById(cfg.paneId);
-      const tabEl = document.getElementById(cfg.tabId);
-      if (pane) pane.classList.add('hidden');
-      if (tabEl) {
-        tabEl.classList.remove('border', 'border-teal-600', 'text-teal-900', 'bg-white', 'shadow-2xs', 'border-b-2', 
-'text-teal-800');
-        tabEl.classList.add('text-slate-600');
-      }
-    });
-  
-    const selected = tabsConfig.find(c => c.id === tab);
-    if (selected) {
-
-
-"}
-{"step_index":3640,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:15:23Z","input_tokens":27592,"cache_read_tokens":49458,"output_tokens":194,"tool_calls":[{"name":"run_command","args":{"CommandLine":"Select-String -Path index.html -Pattern "calcPanePill|calcPaneDilution|calcPaneFluid|calcPaneCri|calcPaneToxicology"","WaitMsBeforeAsync":5000,"toolSummary":"Search for missing calcPanes in index.html"}}]}
-{"step_index":3641,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T12:15:37Z","content":"Created At: 2026-10-26T15:45:37+03:30
-Completed At: 2026-10-26T15:45:38+03:30
-Command exited with code 0.
-
-No output from the command."}
-{"step_index":3642,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:15:38Z","input_tokens":2332,"cache_read_tokens":74999,"output_tokens":153,"tool_calls":[{"name":"run_command","args":{"CommandLine":"Get-ChildItem -Recurse -File | Select-String -Pattern "calcPanePill" | Select-Object Path, LineNumber","WaitMsBeforeAsync":5000,"toolSummary":"Search all files for calcPanePill"}}]}
-{"step_index":3643,"source":"MODEL","type":"GENERIC","status":"RUNNING","created_at":"2026-10-26T12:15:48Z","content":"Created At: 2026-10-26T15:45:48+03:30
-Tool is running as a background task with task id: 7dae33e9-d2cf-4d14-9a21-1a610e19d3b0/task-3643
-Task Description: Get-ChildItem -Recurse -File | Select-String -Pattern "calcPanePill" | Select-Object Path, LineNumber
-Task logs are available at: file:///C:/Users/mohammad%20hedayatinia/.gemini/antigravity/brain/7dae33e9-d2cf-4d14-9a21-1a610e19d3b0/.system_generated/tasks/task-3643.log
-Log output:
-
-
-YOU MUST TAKE ONE OF THE FOLLOWING TWO ACTIONS: A) either proceed to other relevant work (if any) or, B) simply update the user with a short message (that you have launched the command and will wait for it to finish) and end the turn.
- DO NOTHING ELSE."}
-{"step_index":3644,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:15:54Z","input_tokens":2444,"cache_read_tokens":75281,"output_tokens":82,"tool_calls":[{"name":"manage_task","args":{"Action":"status","TaskId":"7dae33e9-d2cf-4d14-9a21-1a610e19d3b0/task-3643"}}]}
-{"step_index":3645,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T12:16:06Z","content":"Created At: 2026-10-26T15:46:06+03:30
-Completed At: 2026-10-26T15:46:07+03:30
-Task: 7dae33e9-d2cf-4d14-9a21-1a610e19d3b0/task-3643
-Status: DONE
-Log: file:///C:/Users/mohammad%20hedayatinia/.gemini/antigravity/brain/7dae33e9-d2cf-4d14-9a21-1a610e19d3b0/.system_generated/tasks/task-3643.log
-Log output:
-
-Path                                                                                         LineNumber
-----                                                                                         ----------
-C:\Users\mohammad hedayatinia\Desktop\?????? ?????? ??????\app.js                                  3319
-C:\Users\mohammad hedayatinia\Desktop\?????? ?????? ??????\scripts\inspect_full_pane_dose.js          5
-C:\Users\mohammad hedayatinia\Desktop\?????? ?????? ??????\VetDose_Files_For_GitHub\app.js         3319
-
-
-
-Last progress: 3s ago
-"}
-{"step_index":3646,"source":"SYSTEM","type":"SYSTEM_MESSAGE","status":"DONE","created_at":"2026-10-26T12:16:07Z","content":"The following is a <SYSTEM_MESSAGE> not actually sent by the user. It is provided by the system as important information to pay attention to.
-
-<SYSTEM_MESSAGE>
-[Message] timestamp=2026-10-26T12:16:03Z sender=7dae33e9-d2cf-4d14-9a21-1a610e19d3b0/task-3643 priority=MESSAGE_PRIORITY_HIGH content=Task id "7dae33e9-d2cf-4d14-9a21-1a610e19d3b0/task-3643" finished with result:
-Command exited with code 0.
-
-Command output:
-
-Path                                                                                         LineNumber
-----                                                                                         ----------
-C:\Users\mohammad hedayatinia\Desktop\?????? ?????? ??????\app.js                                  3319
-C:\Users\mohammad hedayatinia\Desktop\?????? ?????? ??????\scripts\inspect_full_pane_dose.js          5
-C:\Users\mohammad hedayatinia\Desktop\?????? ?????? ??????\VetDose_Files_For_GitHub\app.js         3319
-
-
-
-Log: file:///C:/Users/mohammad%20hedayatinia/.gemini/antigravity/brain/7dae33e9-d2cf-4d14-9a21-1a610e19d3b0/.system_generated/tasks/task-3643.log
-</SYSTEM_MESSAGE>"}
-{"step_index":3647,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:16:07Z","input_tokens":2832,"cache_read_tokens":75677,"output_tokens":82,"tool_calls":[{"name":"read_file","args":{"Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\inspect_full_pane_dose.js"}}]}
-{"step_index":3648,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T12:16:13Z","content":"Created At: 2026-10-26T15:46:13+03:30
-Completed At: 2026-10-26T15:46:14+03:30
-Showing lines 1-7 of 7
-const fs = require('fs');
-const html = fs.readFileSync('index.html', 'utf8');
-
-const s = html.indexOf('id="calcPaneDose"');
-const e = html.indexOf('id="calcPanePill"', s);
-console.log('calcPaneDose length:', e - s);
-console.log(html.substring(s, e));"}
-{"step_index":3649,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:16:14Z","input_tokens":2315,"cache_read_tokens":76459,"output_tokens":91,"tool_calls":[{"name":"run_command","args":{"CommandLine":"Get-ChildItem scripts | Select-Object Name","WaitMsBeforeAsync":5000,"toolSummary":"List scripts directory"}}]}
-{"step_index":3650,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T12:16:17Z","content":"Created At: 2026-10-26T15:46:17+03:30
-Completed At: 2026-10-26T15:46:19+03:30
-The tool's output was truncated due to being too long. You can find the full output in a file at file:///C:/Users/mohammad%20hedayatinia/.gemini/antigravity/brain/7dae33e9-d2cf-4d14-9a21-1a610e19d3b0/.system_generated/steps/3650/output.txt.
-
-Here is a preview with the middle of the output truncated:
-Command exited with code 0.
-
-Command output:
-
-Name                               
-----                               
-accurate_plumbs_catalog.py         
-add_aquaculture_protocols.js       
-add_bsa_test.js                    
-add_formulations_and_oxytet.py     
-add_phase5_drugs.js                
-add_phase6_drugs.js                
-add_wave2_drugs.js                 
-add_wave3_drugs.js                 
-add_wave4_drugs.js                 
-analyze_9_books.js                 
-analyze_all_catalogs.py            
-analyze_plumbs.js                  
-analyze_plumbs_tokens.js           
-append_icon_frame_css.js           
-append_oncology_engine.js          
-append_toxicology_engine.js        
-append_wave17.py                   
-append_wave18.js                   
-append_wave19.js                   
-append_wave20.js                   
-append_wave21.js                   
-append_wave22.js                   
-append_wave23.js                   
-append_wave24.js                   
-append_wave25.js                   
-append_wave26.js                   
-append_wave27.js                   
-append_wave28.js                   
-append_wave29.js                   
-append_wave30.js                   
-append_wave31.js                   
-append_wave32.js                   
-append_wave33.js                   
-append_wave34.js                   
-append_wave35.js                   
-append_wave36.js                   
-append_wave37.js                   
-append_wave38.js                   
-append_wave39.js                   
-append_wave40.js                   
-append_wave41.js                   
-append_wave42.js                   
-append_wave43.js                   
-append_wave44.js                   
-append_wave45.js                   
-append_wave46.js                   
-append_wave47.js                   
-append_wave48.js                   
-append_wave49.js                   
-apply_all_3d_icons.js              
-apply_app_bsa.js                   
-apply_app_updates.js               
-apply_declutter_index.js           
-apply_fluent_3d_icons.js           
-apply_fluent_organic_style.js      
-apply_font_bidi_and_lazy_load.js   
-apply_index_bsa.js                 
-apply_index_enhancements.js        
-apply_plumbs_minimalist_redesign.js
-apply_specialty_integration.js     
-apply_wave31.js                    
-auto_deploy_github.js              
-build_cocktails_data.js            
-build_pharmacology_depth.js        
-build_super_specialty_suite.js     
-bump_bsa_version.js                
-bump_version.js                    
-bump_version_37.js                 
-bump_version_38.js                 
-calculate_unique_molecules.py      
-calculators.py                     
-check_actions.js                   
-check_github_status.js             
-check_ovine.js                     
-check_ovine2.js                    
-check_pages.js                     
-check_props.js                     
-check_univ_select_refs.js          
-clean_all_remaining_plumbs.js      
-count_total_plumbs_drugs.py        
-download_fluent_3d_icons.js        
-embed_interaction_matrix.py        
-enable_gh_pages.js                 
-enhance_app_js_stitch.js           
-enhance_google_stitch_ui.js        
-enrich_aquatic_drugs.js            
-enrich_interaction_matrix.py       
-enrich_tablet_and_strengths.py     
-enrich_wave11_13_features.js       
-enrich_wave30.js                   
-exact_plumbs_count.py              
-expand_wave10.js                   
-expand_wave11.js                   
-expand_wave12.js                   
-expand_wave13_bicentennial.js      
-expand_wave16_to_220.js            
-expand_wave7.js                    
-expand_wave8.js                    
-expand_wave9.js                    
-extract.js                         
-extract_batch_drugs.py             
-fetch_plumbs_css.js                
-find_490.js                        
-find_all_interaction_arrays.js     
-find_book_icons.js                 
-find_boundaries.js                 
-find_boundaries2.js                
-find_candidates.js                 
-find_drugs.py                      
-find_early_interactions.js         
-find_emojis.js                     
-find_get_started.js                
-find_line_2380.js                  
-find_lucide_calls.js               
-find_matrix_full.js                
-find_missing_plumbs.py             
-find_modal_end.js                  
-find_render_code.js                
-find_script_lines.js               
-find_sp_meta_usage.js              
-find_style_blocks.js               
-find_univ_calc.js                  
-find_univ_drug_select.js           
-find_vault_species.js              
-fix_duplicate_roadmap.py           
-fix_index.js                       
-fix_wave17_categories.py           
-generate_chapters_roadmap.py       
-generate_cocktails_js.js           
-generate_full_catalog.py           
-get_cs
-<truncated 2572 of 12446 bytes from the middle of the output>
-          
-read_app_lines.js                  
-read_bovine_exact.js               
-read_card_func.js                  
-read_card_func_part2.js            
-read_card_func_part3.js            
-read_carpenter_toc.js              
-read_catalog_1050.js               
-read_catalog_card.js               
-read_catalog_ui.js                 
-read_css_tail.js                   
-read_current_layout.js             
-read_deployer_api.js               
-read_deployer_icons.js             
-read_deploy_lines.js               
-read_exact_lines.js                
-read_fluent_list.js                
-read_header_full.js                
-read_header_html.js                
-read_index_head.js                 
-read_index_search.js               
-read_lines_580.js                  
-read_line_1442.js                  
-read_open_calc_tab.js              
-read_pane_dose_body.js             
-read_pane_dose_tail.js             
-read_populate_univ.js              
-read_pop_univ.js                   
-read_qtag_sp.js                    
-read_quick_calc_full.js            
-read_render_labref.js              
-read_run_univ.js                   
-read_run_univ2.js                  
-read_sp_box.js                     
-read_sp_meta.js                    
-read_sp_pills.js                   
-read_sp_preview.js                 
-read_test_vault.js                 
-read_univ_sp_func.js               
-read_vault_580.js                  
-read_vault_bovine.js               
-read_vault_calc.js                 
-read_vault_head.js                 
-read_vault_return.js               
-read_vault_snippet.js              
-rebuild_and_reconcile_matrix.js    
-reclassify_all_200_drugs.js        
-reconcile_all_books_interactions.js
-redesign_plumbs_style.js           
-replace_render_cocktails.js        
-run_fix.js                         
-scan_app_plumb.js                  
-scan_plumb_words.js                
-scan_vault_plumb.js                
-search_all_files.js                
-search_bsava_drugs.js              
-search_thermometry.js              
-show_roadmap.py                    
-switch_to_matte_icons.js           
-sync_to_github_dir.js              
-test_accordion.js                  
-test_bidi_and_batch.js             
-test_clinical_vault_live.js        
-test_depth_and_cocktails.js        
-test_monographs.js                 
-test_reconciled_checker.js         
-test_render_all.js                 
-test_single_drug_interactions.js   
-test_single_interaction_ui.js      
-test_specialty_live.js             
-test_specialty_protocols.js        
-test_unified_card.js               
-test_unified_species.js            
-update_app_clean.js                
-update_app_plumbs.js               
-update_categories_and_roadmap.py   
-update_cocktail_filters.js         
-update_css_3d.js                   
-update_index_clean.js              
-update_index_html.js               
-update_index_plumbs.js             
-update_style_css.js                
-update_vault.js                    
-update_vault_bsa.js                
-verify_features.js                 
-verify_live.js                     
-wave22_drugs_a.js                  
-wave22_drugs_b.js                  
-wave23_drugs_a.js                  
-wave23_drugs_b.js                  
-wave24_drugs_a.js                  
-wave24_drugs_b.js                  
-wave25_drugs_a.js                  
-wave25_drugs_b.js                  
-wave26_drugs_a.js                  
-wave26_drugs_b.js                  
-wave26_drugs_b_remaining.js        
-wave27_drugs_a.js                  
-wave27_drugs_a_part1.js            
-wave27_drugs_a_part2.js            
-wave27_drugs_b.js                  
-wave27_drugs_b_part1.js            
-wave27_drugs_b_part2.js            
-wave28_drugs_a.js                  
-wave28_drugs_a_part1.js            
-wave28_drugs_a_part2.js            
-wave28_drugs_b.js                  
-wave28_drugs_b_part1.js            
-wave28_drugs_b_part2.js            
-wave28_drugs_b_part3.js            
-wave28_drugs_b_part4.js            
-wave29_drugs.js                    
-wave29_drugs_part1.js              
-wave29_drugs_part2.js              
-wave30_data.js                     
-wave31_data.js                     
-wave32_data.js                     
-wave33_data.js                     
-wave34_data.js                     
-wave35_data.js                     
-wave36_data.js                     
-wave37_data.js                     
-wave38_data.js                     
-wave39_data.js                     
-wave40_data.js                     
-wave41_data.js                     
-wave42_data.js                     
-wave43_data.js                     
-wave44_data.js                     
-wave45_data.js                     
-wave46_data.js                     
-wave47_data.js                     
-wave48_data.js                     
-wave49_data.js                     
-
-
-"}
-{"step_index":3651,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:16:19Z","input_tokens":2913,"cache_read_tokens":78777,"output_tokens":92,"tool_calls":[{"name":"read_file","args":{"Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\ead_pane_dose_body.js"}}]}
-{"step_index":3652,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T12:16:22Z","content":"Created At: 2026-10-26T15:46:22+03:30
-Completed At: 2026-10-26T15:46:22+03:30
-Showing lines 1-7 of 7
-const fs = require('fs');
-const html = fs.readFileSync('index.html', 'utf8');
-
-const s = html.indexOf('
+              <!-- نوار ابزار صف چنددارویی -->
+              <div class="flex items-center justify-between pt-1 border-t border-slate-800 text-[11px] text-slate-400">
+                <button type="button" onclick="addCurrentPillToPrescriptionQueue()" class="text-teal-400 hover:text-teal-300 font-bold flex items-center gap-1 transition">
+                  <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i>
+                  <span>➕ افزودن این دارو به سربرگ نسخه چنددارویی</span>
+                </button>
+                <div class="flex items-center gap-2">
+                  <span id="pillRxQueueStatus" class="text-slate-400 text-[10px]">آماده صدور تک‌دارویی</span>
+                  <button type="button" onclick="clearPrescriptionItems()" class="text-slate-500 hover:text-rose-400 transition" title="پاک کردن صف نسخه">
+                    <i data-lucide="trash" class="w-3 h-3"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div id="calcPaneDilution" class="space-y-4 hidden">
-556:           <div class="p-3 bg-purple-50 border border-purple-200 rounded-xl text-xs text-purple-900 flex items-start gap-2">
-557:             <i data-lucide="info" class="w-4 h-4 text-purple-600 mt-0.5 shrink-0"></i>
-558:             <span>این ماشین‌حساب برای خرد کردن یا حل کردن کپسول‌ها و قرص‌های دوز بالای انسانی و تبدیل آن به مایع دوز پایین برای گربه‌ها و سگ‌های کوچک کاربرد دارد.</span>
-559:           </div>
-560: 
-561:           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-562:             <div>
-563:               <label class="block text-xs font-medium text-slate-600 mb-1">دوز کپسول/قرص انسانی (mg):</label>
-564:               <input type="number" id="dilPillMg" value="100" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono latin-text" oninput="runDilutionCalculation()">
-565:             </div>
-566:             <div>
-567:               <label class="block text-xs font-medium text-slate-600 mb-1">حجم حلال / آب مقطر (mL):</label>
-568:               <input type="number" id="dilVolumeMl" value="10" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono latin-text" oninput="runDilutionCalculation()">
-569:             </div>
-570:             <div>"}
-{"step_index":1282,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-25T14:56:36Z","input_tokens":2649,"cache_read_tokens":155288,"output_tokens":243,"thinking":"The calculator modal contains several tabs, each likely corresponding to a different calculation type. These include injection volume/dosage, pill dosage and prescription instructions, human drug dilution, 24-hour fluid therapy, continuous rate infusion (CRI), and body surface area (BSA) for oncology calculations.
+          <div class="p-3 bg-purple-50 border border-purple-200 rounded-xl text-xs text-purple-900 flex items-start gap-2">
+            <i data-lucide="info" class="w-4 h-4 text-purple-600 mt-0.5 shrink-0"></i>
+            <span>این ماشین‌حساب برای خرد کردن یا حل کردن کپسول‌ها و قرص‌های دوز بالای انسانی و تبدیل آن به مایع دوز پایین برای گربه‌ها و سگ‌های کوچک کاربرد دارد.</span>
+          </div>
 
-"}
-{"step_index":3733,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:21:18Z","input_tokens":3122,"cache_read_tokens":112380,"output_tokens":819,"thinking":"Initial assessment indicates the presence of individual calculation panels, each dedicated to a specific clinical area like dosage, dilution, fluid management, and others. The structure appears designed for modularity, with dedicated components for different calculation types. The organization of these components enables focused access to necessary parameters for each calculation type.
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-xs font-medium text-slate-600 mb-1">دوز کپسول/قرص انسانی (mg):</label>
+              <input type="number" id="dilPillMg" value="100" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono latin-text" oninput="runDilutionCalculation()">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-600 mb-1">حجم حلال / آب مقطر (mL):</label>
+              <input type="number" id="dilVolumeMl" value="10" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono latin-text" oninput="runDilutionCalculation()">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-600 mb-1">دوز مورد نیاز بیمار (mg):</label>
+              <input type="number" step="0.5" id="dilPatientMg" value="15" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono latin-text" oninput="runDilutionCalculation()">
+            </div>
+          </div>
 
-
-Examining the existing calculation panels, the system's modular design could accommodate a new body-surface-area (BSA) based dosage calculation component. Considering user feedback, the "default medications" panel requires evaluation. The goal is to simplify the user interface by removing potential unnecessary features, reducing cognitive load. Assessing the icon design, the user desires 3D-style icons to avoid an AI-generated aesthetic.
-
-
-","tool_calls":[{"name":"run_command","args":{"CommandLine":"node -e "
-const fs = require('fs');
-const html = fs.readFileSync('index.html', 'utf8');
-const s = html.indexOf('id=\"calculatorModal\"');
-const e = html.indexOf('
+          <!-- نتیجه رقیق‌سازی -->
+          <div class="p-4 bg-purple-50 border border-purple-200 rounded-2xl space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-purple-800 font-medium">غلظت سوسپانسیون حاصل:</span>
+              <span class="text-sm font-bold text-purple-900 font-mono"><span id="dilResConc">10.0</span> mg/mL</span>
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t border-purple-200">
+              <span class="text-sm text-purple-900 font-bold">حجم خورانده‌شده به حیوان:</span>
+              <span class="text-2xl font-black text-purple-900 font-mono"><span id="dilResGive">1.50</span> mL</span>
+            </div>
+            <p id="dilGuidanceText" class="text-xs text-purple-700 bg-white/70 p-2.5 rounded-lg border border-purple-100 mt-2">
+              پودر کپسول ۱۰۰ میلی‌گرمی را در ۱۰ سی‌سی آب مقطر حل کرده و ۱.۵ سی‌سی از این مایع را با سرنگ به حیوان بخورانید.
+            </p>
+          </div>
+        </div>
 
         <div id="calcPaneFluid" class="space-y-4 hidden text-xs">
           <div class="p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-900 flex items-start gap-2">
@@ -1710,43 +1281,7 @@ const e = html.indexOf('
               </div>
             </div>
             <p class="text-[11px] text-rose-800 leading-snug">
-              ⚠️ ابتدا یک‌چهارم دوز شوک را سریع تزریق کرده و بیمار را از نظر بهبود نبض و CRT ارزیابی مجدد کنید؛ در گربه با احتیاط شدید تزریق شود (خطر ادم حاد ریه)."}
-{"step_index":498,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-25T12:16:26Z","input_tokens":7908,"cache_read_tokens":140673,"output_tokens":92,"tool_calls":[{"name":"read_file","args":{"ByteOffset":0,"EndLine":800,"Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\index.html","StartLine":650}}]}
-{"step_index":499,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-25T12:16:30Z","content":"Created At: 2026-10-25T15:46:30+03:30
-Completed At: 2026-10-25T15:46:30+03:30
-Showing lines 650-800 of 2456
               ⚠️ ابتدا یک‌چهارم دوز شوک را سریع تزریق کرده و بیمار را از نظر بهبود نبض و CRT ارزیابی مجدد کنید؛ در گربه با احتیاط شدید تزریق شود (خطر ادم حاد ریه).
-            </p>
-          </div>
-
-          <!-- راهنمای انتخاب نوع سرم -->
-          <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl space-y-2">
-            <span class="font-bold text-slate-800 block text-xs">📋 راهنمای انتخاب سرم بر اساس دارونامه بالینی:</span>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
-              <div class="bg-white p-2 rounded-lg border border-slate-200">
-                <strong class="text-emerald-800 block">رینگر لاکتات (LRS):</strong>
-                دهیدراتاسیون، اسهال، جراحی و اسیدوز (انتخاب اول اکثر بیماران).
-              </div>
-              <div class="bg-white p-2 rounded-lg border border-slate-200">
-                <strong class="text-blue-800 block">نرمال سالین ۰.۹٪:</strong>
-                استفراغ شدید (آلکالوز)، بیماری آدیسون و هیپرکالمی.
-              </div>
-              <div class="bg-white p-2 rounded-lg border border-slate-200">
-                <strong class="text-amber-800 block">دکستروز ۵٪ (D5W):</strong>
-                هیپوگلیسمی نوزادان، کتوز گاو و حامل داروهای CRI.
-              </div>
-              <div class="bg-white p-2 rounded-lg border border-slate-200">
-                <strong class="text-purple-800 block">سالین هیپرتونیک ۷.۲٪:</strong>
-                شوک تروماتیک و تروما سر (4 mL/kg ظرف ۵ دقیقه).
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-        <!-- فرم ۴: محاسبه دوز قرص و دستور نسخه (Tablet & Rx Dispenser) -->
-        <div
 
         <div id="calcPaneCri" class="space-y-4 hidden text-xs">
           <div class="p-3 bg-teal-50 border border-teal-200 rounded-xl text-teal-950 flex items-start gap-2">
@@ -1754,7 +1289,7 @@ Showing lines 650-800 of 2456
             <div>
               <span class="font-bold block">موتور محاسباتی انفوزیون مداوم (CRI):</span>
               <span class="text-teal-800 leading-relaxed">
-                تجویز پیوسته دارو با غلظت ثابت در پلاسما (بدون نوسانات اوج و فرود دوزهای منقطع) جهت مدیریت پیشرفته دردهای حاد، بی‌قراری ICU، آریتمی قلبی و تهوع پایدار مطابق استاندارد رفرنس دارونامه بالینی.
+                تجویز پیوسته دارو با غلظت ثابت در پلاسما (بدون نوسانات اوج و فرود دوزهای منقطع) جهت مدیریت پیشرفته دردهای حاد، بی‌قراری ICU، آریتمی قلبی و تهوع پایدار مطابق استاندارد رفرنس پلامبز.
               </span>
             </div>
           </div>
@@ -1869,11 +1404,6 @@ Showing lines 650-800 of 2456
               </div>
             </div>
 
-            <!-- بخش ۲: سرعت پمپ سرنگ مستقیم (Syringe Pump) -->"}
-{"step_index":502,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-25T12:16:34Z","input_tokens":5481,"cache_read_tokens":153215,"output_tokens":164,"tool_calls":[{"name":"read_file","args":{"ByteOffset":0,"EndLine":1150,"Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\index.html","StartLine":1000}}]}
-{"step_index":503,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-25T12:16:38Z","content":"Created At: 2026-10-25T15:46:38+03:30
-Completed At: 2026-10-25T15:46:39+03:30
-Showing lines 1000-1150 of 2456
             <!-- بخش ۲: سرعت پمپ سرنگ مستقیم (Syringe Pump) -->
             <div class="p-3 bg-white/90 rounded-xl border border-teal-200 flex items-center justify-between">
               <div>
@@ -1899,9 +1429,6 @@ Showing lines 1000-1150 of 2456
 
           </div>
         </div>
-
-        <!-- فرم ۶: مساحت سطح بدن (BSA) و شیمی‌درمانی انکولوژی (Veterinary Oncology & Chemotherapy Engine) -->
-        <div
 
         <div id="calcPaneToxicology" class="space-y-4 hidden text-xs">
           <div class="p-3 bg-rose-50 border border-rose-200 rounded-2xl flex items-center justify-between text-rose-950">
@@ -2030,35 +1557,7 @@ Showing lines 1000-1150 of 2456
           </div>
         </div>
 
-        <div class="flex items-center gap-2 flex-wrap pb-2 border-b border-slate-200">
-            <span class="font-bold text-slate-700">انتخاب گونه:</span>
-            <button type="button" onclick="renderLabRefTable('canine')" id="labBtn_canine" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-slate-900 text-white border-slate-900">🐶 سگ</button>
-            <button type="button" onclick="renderLabRefTable('feline')" id="labBtn_feline" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100">🐱 گربه</button>
-            <butt
-"}
-{"step_index":3194,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T11:05:26Z","input_tokens":2580,"cache_read_tokens":38111,"output_tokens":145,"tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-const index = fs.readFileSync('index.html', 'utf8');
-const start = index.indexOf('id="calcPaneLabRef"');
-console.log(index.slice(start, start + 2500));
-","Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\inspect_pane.js"}}]}
-{"step_index":3195,"source":"MODEL","type":"GENERIC","status":"ERROR","error":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\inspect_pane.js already exists. To overwrite it, retry with Overwrite=true. To edit it, view its contents first and use a code edit tool. Otherwise, choose a different file name","created_at":"2026-10-26T11:05:37Z","content":"Created At: 2026-10-26T14:35:37+03:30
-Completed At: 2026-10-26T14:35:37+03:30
-Encountered error in step execution: c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\inspect_pane.js already exists. To overwrite it, retry with Overwrite=true. To edit it, view its contents first and use a code edit tool. Otherwise, choose a different file name"}
-{"step_index":3196,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T11:05:37Z","input_tokens":2344,"cache_read_tokens":38637,"output_tokens":124,"tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-const index = fs.readFileSync('index.html', 'utf8');
-const start = index.indexOf('id="calcPaneLabRef"');
-console.log(index.slice(start, start + 2500));
-","Overwrite":true,"Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\inspect_pane.js"}}]}
-{"step_index":3197,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T11:05:40Z","content":"Created At: 2026-10-26T14:35:40+03:30
-Completed At: 2026-10-26T14:35:40+03:30
-Created file."}
-{"step_index":3198,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T11:05:40Z","input_tokens":2254,"cache_read_tokens":38927,"output_tokens":48,"tool_calls":[{"name":"run_command","args":{"CommandLine":"node scripts/inspect_pane.js","WaitMsBeforeAsync":5000,"toolSummary":"Run inspect pane"}}]}
-{"step_index":3199,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T11:05:42Z","content":"Created At: 2026-10-26T14:35:42+03:30
-Completed At: 2026-10-26T14:35:43+03:30
-Command exited with code 0.
-
-Command output:
-id="calcPaneLabRef" class="space-y-4 hidden text-xs">
+        <div id="calcPaneLabRef" class="space-y-4 hidden text-xs">
           <div class="p-3 bg-blue-50 border border-blue-200 rounded-2xl flex items-center justify-between text-blue-950">
             <span class="font-bold flex items-center gap-1.5">
               <span class="text-base">🩸</span>
@@ -2084,141 +1583,128 @@ id="calcPaneLabRef" class="space-y-4 hidden text-xs">
           </div>
         </div>
 
-        <div id="calcPaneTransfusion" class="space-y-4 hidden">
-        <div id="calcPaneWithdrawal" class="space-y-4 hidden">
-        <div id="calcPaneToxicology" class="space-y-4 hidden text-xs">
-        <div id="calcPaneLabRef" class="space-y-4 hidden text-xs">
-        <div id="calcPaneOphthalmology" class="space-y-4 hidden text-xs">
-        <div id="calcPaneIris" class="space-y-4 hidden text-xs">
-        <div id="calcPaneAnesthesia" class="space-y-4 hidden text-xs">
-        <div id="calcPaneNutrition" class="space-y-4 hidden text-xs">
-        <div id="calcPaneWildlifeSafety" class="space-y-4 hidden text-xs">
+        <!-- ============================================== -->
+        <!-- فرم ۸: راهنمای تشخیصی چشم‌پزشکی (Ophthalmology Diagnostics) -->
 
+        <!-- ============================================== -->
+        <!-- فرم ۷: انتقال خون، فرآورده‌ها و کراس‌مچ (Transfusion & Crossmatch) -->
+        <!-- ============================================== -->
+        <div id="calcPaneTransfusion" class="space-y-4 hidden text-xs">
+          <div class="p-3.5 bg-gradient-to-r from-red-900 to-rose-950 text-white rounded-2xl flex items-center justify-between border border-red-800 shadow-md">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-red-600/30 text-rose-300 border border-red-500/40 flex items-center justify-center shrink-0">
+                <i data-lucide="droplet" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-black text-sm text-white">سامانه جامع ترانسفیوژن خون، فرآورده‌ها و کراس‌مچ (Transfusion Decision Support)</h4>
+                <p class="text-[11px] text-rose-200">فرمول دقیق حجم خون کامل (WB)، گلبول قرمز متراکم (pRBC)، پلاسما (FFP)، سرعت تزریق و هشدارهای گروه خونی</p>
+              </div>
+            </div>
+            <span class="text-[10px] bg-red-500/20 text-rose-300 border border-red-500/30 px-2 py-0.5 rounded-full font-bold whitespace-nowrap hidden sm:inline-block">استاندارد ACVIM / BSAVA</span>
+          </div>
 
-"}
-{"step_index":1357,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-25T15:09:32Z","input_tokens":2537,"cache_read_tokens":28398,"output_tokens":250,"tool_calls":[{"name":"run_command","args":{"CommandLine":"Get-Content index.html | Select-String "switchCalcTab\("","WaitMsBeforeAsync":5000,"toolSummary":"Find switchCalcTab calls in index.html"}}]}
-{"step_index":1358,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-25T15:09:37Z","content":"Created At: 2026-10-25T18:39:37+03:30
-Completed At: 2026-10-25T18:39:39+03:30
-Command exited with code 0.
+          <!-- ورودی‌های ترانسفیوژن -->
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 bg-slate-50 p-3.5 rounded-2xl border border-slate-200 text-xs">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">گونه بیمار:</label>
+              <select id="transfusionSpecies" class="w-full p-2.5 bg-white border border-slate-200 rounded-xl font-bold text-slate-800" onchange="runTransfusionCalculation()">
+                <option value="canine" selected>🐶 سگ (Canine - ضریب حجم خون 90 mL/kg)</option>
+                <option value="feline">🐱 گربه (Feline - ضریب حجم خون 60 mL/kg)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">وزن بیمار (kg):</label>
+              <input type="number" step="0.1" id="transfusionWeight" value="10" class="w-full p-2.5 bg-white border border-slate-200 rounded-xl font-mono latin-text font-bold" oninput="runTransfusionCalculation()">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">هماتوکریت فعلی بیمار (PCV %):</label>
+              <input type="number" step="1" min="1" max="60" id="transfusionRecipientPcv" value="12" class="w-full p-2.5 bg-white border border-slate-200 rounded-xl font-mono latin-text font-bold text-rose-700" oninput="runTransfusionCalculation()">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">هماتوکریت هدف (Target PCV %):</label>
+              <input type="number" step="1" min="10" max="45" id="transfusionTargetPcv" value="25" class="w-full p-2.5 bg-white border border-slate-200 rounded-xl font-mono latin-text font-bold text-emerald-700" oninput="runTransfusionCalculation()">
+            </div>
+          </div>
 
-Command output:
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-slate-50 p-3.5 rounded-2xl border border-slate-200 text-xs">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">نوع فرآورده خونی:</label>
+              <select id="transfusionProduct" class="w-full p-2.5 bg-white border border-slate-200 rounded-xl font-bold text-slate-800" onchange="runTransfusionCalculation()">
+                <option value="wb" selected>🩸 خون کامل تازه/ذخیره (Whole Blood - WB)</option>
+                <option value="prbc">🔴 گلبول قرمز فشرده (Packed RBC - pRBC)</option>
+                <option value="ffp">🟡 پلاسما منجمد تازه (Fresh Frozen Plasma - FFP)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">هماتوکریت خون دهنده (Donor PCV %):</label>
+              <input type="number" step="1" min="20" max="80" id="transfusionDonorPcv" value="40" class="w-full p-2.5 bg-white border border-slate-200 rounded-xl font-mono latin-text font-bold" oninput="runTransfusionCalculation()">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">مد سرعت تزریق:</label>
+              <select id="transfusionRateMode" class="w-full p-2.5 bg-white border border-slate-200 rounded-xl font-bold text-slate-800" onchange="runTransfusionCalculation()">
+                <option value="standard" selected>استاندارد (4 تا 5 mL/kg/hr)</option>
+                <option value="cardiac">بیمار قلبی / کلیوی محتاط (1 تا 2 mL/kg/hr)</option>
+                <option value="emergency">شوک خونریزی حاد / اورژانس (10 تا 20 mL/kg/hr)</option>
+              </select>
+            </div>
+          </div>
 
-        <button onclick="switchCalcTab('dose')" id="calcTabDose" class="py-2 px-3 rounded-xl border border-teal-600 
-text-teal-900 bg-white shadow-2xs transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('pill')" id="calcTabPill" class="py-2 px-3 rounded-xl text-slate-600 
-hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('dilution')" id="calcTabDilution" class="py-2 px-3 rounded-xl text-slate-600 
-hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('fluid')" id="calcTabFluid" class="py-2 px-3 rounded-xl text-slate-600 
-hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('cri')" id="calcTabCri" class="py-2 px-3 rounded-xl text-slate-600 
-hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('toxicology')" id="calcTabToxicology" class="py-2 px-3 rounded-xl 
-text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('labref')" id="calcTabLabRef" class="py-2 px-3 rounded-xl text-slate-600 
-hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('transfusion')" id="calcTabTransfusion" class="py-2 px-3 rounded-xl 
-text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('ophthalmology')" id="calcTabOphthalmology" class="py-2 px-3 rounded-xl 
-text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('oncology')" id="calcTabOncology" class="py-2 px-3 rounded-xl text-slate-600 
-hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('iris')" id="calcTabIris" class="py-2 px-3 rounded-xl text-slate-600 
-hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('anesthesia')" id="calcTabAnesthesia" class="py-2 px-3 rounded-xl 
-text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('nutrition')" id="calcTabNutrition" class="py-2 px-3 rounded-xl text-slate-600 
-hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('wildlife_safety')" id="calcTabWildlifeSafety" class="py-2 px-3 rounded-xl 
-text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
-        <button onclick="switchCalcTab('withdrawal')" id="calcTabWithdrawal" class="py-2 px-3 rounded-xl 
-text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-1">
+          <!-- پنل محاسباتی ترانسفیوژن -->
+          <div class="p-4 bg-gradient-to-br from-red-50 to-rose-50 border border-red-200 rounded-2xl space-y-3">
+            <div class="flex items-center justify-between flex-wrap gap-2 pb-2.5 border-b border-red-200/70">
+              <span class="font-bold text-xs text-red-950 flex items-center gap-1.5">
+                <i data-lucide="activity" class="w-4 h-4 text-rose-600"></i>
+                <span>نتیجه محاسبات ترانسفیوژن و سرعت تزریق:</span>
+              </span>
+              <span id="transfusionSpeciesBadge" class="px-3 py-1 rounded-xl font-bold text-xs bg-red-100 text-rose-900 border border-red-300">
+                🐶 گونه سگ (سیستم DEA 1.1)
+              </span>
+            </div>
 
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="bg-white/80 p-3 rounded-xl border border-red-200/60">
+                <span class="block text-[11px] text-slate-500 mb-1 font-bold">حجم کل فرآورده مورد نیاز:</span>
+                <span id="transfusionResVolume" class="text-xl font-black text-rose-900 font-mono latin-text">292.5 mL</span>
+                <span id="transfusionResRuleOfThumb" class="block text-[10px] text-slate-500 mt-1">معادل 29.3 mL/kg</span>
+              </div>
+              <div class="bg-white/80 p-3 rounded-xl border border-red-200/60">
+                <span class="block text-[11px] text-slate-500 mb-1 font-bold">سرعت آزمایشی (۱۵ تا ۳۰ دقیقه اول):</span>
+                <span id="transfusionResTestRate" class="text-base font-black text-slate-800 font-mono latin-text">2.5 - 5.0 mL/hr</span>
+                <span id="transfusionResTestDrops" class="block text-[10px] text-rose-700 mt-1 font-bold">معادل 1 تا 1 قطره در دقیقه (ست خون ۱۵ قطره)</span>
+              </div>
+            </div>
 
-"}
-{"step_index":1359,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-25T15:09:39Z","input_tokens":3436,"cache_read_tokens":28889,"output_tokens":101,"tool_calls":[{"name":"run_command","args":{"CommandLine":"Get-Content app.js | Select-String -Pattern "function switchCalcTab" -Context 0, 30","WaitMsBeforeAsync":5000,"toolSummary":"Inspect switchCalcTab in app.js"}}]}
-{"step_index":1360,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-25T15:09:42Z","content":"Created At: 2026-10-25T18:39:42+03:30
-Completed At: 2026-10-25T18:39:45+03:30
-Command exited with code 0.
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="bg-white/80 p-3 rounded-xl border border-red-200/60">
+                <span class="block text-[11px] text-slate-500 mb-1 font-bold">سرعت اصلی پس از تأیید عدم واکنش:</span>
+                <span id="transfusionResMainRate" class="text-base font-black text-slate-800 font-mono latin-text">40.0 - 50.0 mL/hr</span>
+                <span id="transfusionResMainDrops" class="block text-[10px] text-slate-600 mt-1 font-bold">معادل 10 تا 13 قطره در دقیقه</span>
+              </div>
+              <div class="bg-white/80 p-3 rounded-xl border border-red-200/60">
+                <span class="block text-[11px] text-slate-500 mb-1 font-bold">حداکثر زمان مجاز تزریق:</span>
+                <span class="text-sm font-black text-amber-900">حداکثر ۴ ساعت (جلوگیری از رشد باکتری در کیسه خون)</span>
+              </div>
+            </div>
 
-Command output:
+            <!-- نکات بالینی و کراس‌مچ -->
+            <div id="transfusionClinicalNotes" class="p-3 bg-red-100/60 rounded-xl border border-red-300/60 text-[11px] text-red-950 space-y-1.5 leading-relaxed">
+              <p>• <strong>سیستم آنتی‌ژن اریتروسیت سگ (DEA 1.1):</strong> سگ‌های DEA 1.1 منفی دهنده عمومی جهانی (Universal Donor) هستند.</p>
+              <p>• <strong>قانون اولین ترانسفیوژن سگ:</strong> سگ‌ها فاقد آنتی‌بادی‌های طبیعی ضد DEA 1.1 قبل از اولین ترانسفیوژن هستند؛ لذا در شرایط اورژانس نجات حیات، اولین انتقال خون معمولاً بدون واکنش حاد انجام می‌شود.</p>
+            </div>
+          </div>
+        </div>
 
-> function switchCalcTab(tab) {
-    const paneDose = document.getElementById('calcPaneDose');
-    const panePill = document.getElementById('calcPanePill');
-    const paneDil = document.getElementById('calcPaneDilution');
-    const paneFluid = document.getElementById('calcPaneFluid');
-    const paneCri = document.getElementById('calcPaneCri');
-    const paneOncology = document.getElementById('calcPaneOncology');
-    const paneTransfusion = document.getElementById('calcPaneTransfusion');
-    const paneWithdrawal = document.getElementById('calcPaneWithdrawal');
-  
-    const tabDose = document.getElementById('calcTabDose');
-    const tabPill = document.getElementById('calcTabPill');
-    const tabDil = document.getElementById('calcTabDilution');
-    const tabFluid = document.getElementById('calcTabFluid');
-    const tabCri = document.getElementById('calcTabCri');
-    const tabOncology = document.getElementById('calcTabOncology');
-    const tabTransfusion = document.getElementById('calcTabTransfusion');
-    const tabWithdrawal = document.getElementById('calcTabWithdrawal');
-  
-    if (paneDose) paneDose.classList.add('hidden');
-    if (panePill) panePill.classList.add('hidden');"}
-{"step_index":3811,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:25:50Z","input_tokens":2508,"cache_read_tokens":151344,"output_tokens":416,"tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-const content = fs.readFileSync('C:\\Users\\mohammad hedayatinia\\.gemini\\antigravity\\brain\\7dae33e9-d2cf-4d14-9a21-1a610e19d3b0\\.system_generated\\logs\\transcript_full.jsonl', 'utf8');
-
-const target = 'id=\\"transfusionRecipientPcv\\"';
-let idx = content.indexOf(target);
-console.log('Index of input id="transfusionRecipientPcv":', idx);
-if (idx !== -1) {
-  const start = content.lastIndexOf('<div id=\\"calcPaneTransfusion\\"', idx);
-  console.log('start:', start);
-  const end = content.indexOf('</div>\\
-        </div>', idx);
-  console.log('end:', end);
-  let slice = content.substring(start, end + 20);
-  slice = slice.replace(/\\/g, '').replace(/\\
-/g, '\
-').replace(/\\"/g, '"').replace(/\\\\/g, '\\').replace(/^[0-9]+:\s?/gm, '');
-  fs.writeFileSync('scripts/recovered_transfusion_exact.html', slice, 'utf8');
-  console.log('Saved recovered_transfusion_exact.html, len:', slice.length);
-}
-","Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\find_exact_transfusion.js"}}]}
-{"step_index":3812,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T12:25:56Z","content":"Created At: 2026-10-26T15:55:56+03:30
-Completed At: 2026-10-26T15:55:56+03:30
-Created file."}
-{"step_index":3813,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:25:56Z","input_tokens":2533,"cache_read_tokens":151811,"output_tokens":68,"tool_calls":[{"name":"run_command","args":{"CommandLine":"node scripts/find_exact_transfusion.js","WaitMsBeforeAsync":5000,"toolSummary":"Run find_exact_transfusion.js"}}]}
-{"step_index":3814,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T12:26:00Z","content":"Created At: 2026-10-26T15:56:00+03:30
-Completed At: 2026-10-26T15:56:01+03:30
-Command exited with code 0.
-
-Command output:
-Index of input id="transfusionRecipientPcv": 6782577
-start: 6775076
-end: -1
-Saved recovered_transfusion_exact.html, len: 6475044
-"}
-{"step_index":3815,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T12:26:01Z","input_tokens":2253,"cache_read_tokens":152301,"output_tokens":529,"tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-const content = fs.readFileSync('C:\\Users\\mohammad hedayatinia\\.gemini\\antigravity\\brain\\7dae33e9-d2cf-4d14-9a21-1a610e19d3b0\\.system_generated\\logs\\transcript_full.jsonl', 'utf8');
-
-const target = 'id=\\"transfusionRecipientPcv\\"';
-let idx = 6782577;
-const start = content.lastIndexOf('<div id=\\"calcPaneTransfusion\\"', idx);
-console.log('start:', start);
-
-const nextComment = content.indexOf('
-
-        <!-- فرم ۹: راهنمای تشخیصی چشم‌پزشکی -->
         <div id="calcPaneOphthalmology" class="space-y-4 hidden text-xs">
           <div class="p-3 bg-cyan-50 border border-cyan-200 rounded-2xl flex items-center justify-between text-cyan-950">
             <span class="font-bold flex items-center gap-1.5">
-              <i data-lucide="eye" class="w-4 h-4 text-cyan-600"></i>
+              <span class="text-base">👁️</span>
               <span>راهنمای تشخیصی چشم‌پزشکی، تست اشک شیرمر، تونومتری فشار چشم و اولسر ذوب‌شونده</span>
             </span>
-            <span class="text-[10px] bg-cyan-200 font-bold px-2 py-0.5 rounded-md">استاندارد مرجع چشم‌پزشکی</span>
+            <span class="text-[10px] bg-cyan-200 font-bold px-2 py-0.5 rounded-md">Slatter's & Gelatt 6th</span>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <!-- تست شیرمر -->
             <div class="p-4 bg-white border border-slate-200 rounded-2xl space-y-3">
               <span class="font-black text-cyan-950 block text-xs">💧 تفسیرگر تست اشک شیرمر (Schirmer Tear Test - STT):</span>
               <div>
@@ -2230,6 +1716,7 @@ const nextComment = content.indexOf('
               </div>
             </div>
 
+            <!-- تونومتری IOP -->
             <div class="p-4 bg-white border border-slate-200 rounded-2xl space-y-3">
               <span class="font-black text-cyan-950 block text-xs">🎯 ارزیابی فشار داخل کره چشم (IOP Tonometry):</span>
               <div>
@@ -2242,6 +1729,7 @@ const nextComment = content.indexOf('
             </div>
           </div>
 
+          <!-- پروتکل نجات اولسر ذوب‌شونده -->
           <div class="p-4 bg-slate-900 text-white rounded-2xl space-y-2 border border-slate-800">
             <div class="flex items-center justify-between pb-2 border-b border-slate-800">
               <span class="font-bold text-amber-400 text-xs">🧪 پروتکل نجات اولسر ذوب‌شونده قرنیه (Melting Ulcer):</span>
@@ -2255,147 +1743,10 @@ const nextComment = content.indexOf('
           </div>
         </div>
 
-        <div>
-              <label class="block text-slate-600 font-bold mb-1" id="univConcLabel">غلظت دارو (mg/mL):</label>
-     
-"}
-{"step_index":2639,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:49:10Z","input_tokens":3705,"cache_read_tokens":124792,"output_tokens":2085,"thinking":"The code snippet within `calcPaneDose` reveals a section for selecting either a default or custom medication entry. This suggests an interactive component for user input concerning drug selection, which is a core step in dose calculation. The HTML structure likely defines a user interface element allowing the selection between predefined drug options or the manual input of drug details.
+        <!-- ============================================== -->
+        <!-- فرم ۹: مرحله‌بندی نارسایی کلیه IRIS و تعدیل دوز (IRIS Renal Staging) -->
 
-
-The current UI presents a potential usability issue with the excessive number of default drug selections. The user's feedback highlights that such extensive lists can overwhelm and hinder effective interaction. Prioritizing streamlined input is key to a functional clinical tool. Exploring simplification strategies for the drug selection process is necessary, likely focusing on removing the default options.
-
-
-The goal is to streamline dose calculation by prioritizing direct input and automated filling from drug cards, minimizing cognitive load. The existing approach should be updated to also support Body Surface Area (BSA) based dosing commonly used in veterinary medicine, particularly for critical drugs. A new calculation pathway must be incorporated to calculate BSA from weight and then the final dose volume, including both weight-based (mg/kg) and BSA-based (mg/m²) options.
-
-
-The formula for Body Surface Area (BSA) calculation requires the animal's weight, with different constants for cats and dogs. The Meeh formula, along with the correct constant, will be implemented for BSA calculation. A user-selectable toggle will be introduced to switch between weight-based (mg/kg) and BSA-based (mg/m²) dosing methods within the dose calculator interface.
-
-
-","tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-const app = fs.readFileSync('app.js', 'utf8');
-
-const s1 = app.indexOf('function switchCalcTab(');
-if (s1 !== -1) {
-  console.log('switchCalcTab snippet:');
-  console.log(app.substring(s1, s1 + 1800));
-}
-
-const s2 = app.indexOf('function runUniversalCalculation(');
-if (s2 !== -1) {
-  console.log('runUniversalCalculation snippet:');
-  console.log(app.substring(s2, s2 + 2500));
-}
-","Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\inspect_calc_js.js"}}]}
-{"step_index":2640,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:49:27Z","content":"Created At: 2026-10-26T13:19:27+03:30
-Completed At: 2026-10-26T13:19:27+03:30
-Created file."}
-{"step_index":2641,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:49:27Z","input_tokens":2157,"cache_read_tokens":128501,"output_tokens":61,"tool_calls":[{"name":"run_command","args":{"CommandLine":"node scripts/inspect_calc_js.js","WaitMsBeforeAsync":5000,"toolSummary":"Inspect calculator logic in app.js"}}]}
-{"step_index":2642,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:49:33Z","content":"Created At: 2026-10-26T13:19:33+03:30
-Completed At: 2026-10-26T13:19:35+03:30
-Command exited with code 0.
-
-Command output:
-switchCalcTab snippet:
-function switchCalcTab(tab) {
-  const tabsConfig = [
-    { id: 'dose', paneId: 'calcPaneDose', tabId: 'calcTabDose', onSelect: () => runUniversalCalculation() },
-    { id: 'pill', paneId: 'calcPanePill', tabId: 'calcTabPill', onSelect: () => runPillCalculation() },
-    { id: 'dilution', paneId: 'calcPaneDilution', tabId: 'calcTabDilution', onSelect: () => typeof runDilutionCalculation === 'function' && runDilutionCalculation() },
-    { id: 'fluid', paneId: 'calcPaneFluid', tabId: 'calcTabFluid', onSelect: () => typeof runFluidCalculation === 'function' && runFluidCalculation() },
-    { id: 'cri', paneId: 'calcPaneCri', tabId: 'calcTabCri', onSelect: () => runCriCalculation() },
-    { id: 'toxicology', paneId: 'calcPaneToxicology', tabId: 'calcTabToxicology', onSelect: () => runChocolateCalculation() },
-    { id: 'labref', paneId: 'calcPaneLabRef', tabId: 'calcTabLabRef', onSelect: () => renderLabRefTable('canine') },
-    { id: 'transfusion', paneId: 'calcPaneTransfusion', tabId: 'calcTabTransfusion', onSelect: () => runTransfusionCalculation() },
-    { id: 'ophthalmology', paneId: 'calcPaneOphthalmology', tabId: 'calcTabOphthalmology', onSelect: () => runOphthalmologyDiag() },
-    { id: 'oncology', paneId: 'calcPaneOncology', tabId: 'calcTabOncology', onSelect: () => runOncologyBsaCalculation() },
-    { id: 'iris', paneId: 'calcPaneIris', tabId: 'calcTabIris', onSelect: () => runIrisCalculation() },
-    { id: 'anesthesia', paneId: 'calcPaneAnesthesia', tabId: 'calcTabAnesthesia', onSelect: () => runAnesthesiaCalculation() },
-    { id: 'nutrition', paneId: 'calcPaneNutrition', tabId: 'calcTabNutrition', onSelect: () => runNutritionCalculation() },
-    { id: 'wildlife_safety', paneId: 'calcPaneWildlifeSafety', tabId: 'calcTabWildlifeSafety' },
-    { id: 'withdrawal', pane
-runUniversalCalculation snippet:
-function runUniversalCalculation() {
-  const weightInput = document.getElementById('univWeight');
-  const rateInput = document.getElementById('univDoseRate');
-  const concInput = document.getElementById('univConc');
-  const intervalSelect = document.getElementById('univInterval');
-  const daysInput = document.getElementById('univDays');
-  const bottleInput = document.getElementById('univBottleMl');
-  const formInput = document.getElementById('univFormRoute');
-  const spInput = document.getElementById('univSpecies');
-  const select = document.getElementById('univDrugSelect');
-
-  const weight = parseFloat(weightInput ? weightInput.value : 0) || 0;
-  const rate = parseFloat(rateInput ? rateInput.value : 0) || 0;
-  const conc = parseFloat(concInput ? concInput.value : 0) || 0;
-  const interval = intervalSelect ? intervalSelect.value : 'q12h';
-  const days = parseInt(daysInput ? daysInput.value : 1) || 1;
-  const bottleMl = parseFloat(bottleInput ? bottleInput.value : 100) || 100;
-  const formRoute = formInput ? formInput.value : 'injectable';
-  const species = spInput ? spInput.value : 'canine';
-  const drugId = select ? select.value : '';
-
-  const calcFn = (typeof calculateUniversalDoseDispensing === 'function') 
-    ? calculateUniversalDoseDispensing 
-    : (typeof window !== 'undefined' && typeof window.calculateUniversalDoseDispensing === 'function' ? window.calculateUniversalDoseDispensing : null);
-
-  if (!calcFn) return;
-
-  const res = calcFn({
-    weight,
-    rate,
-    conc,
-    formRoute,
-    species,
-    interval,
-    days,
-    bottleMl,
-    drugId
-  });
-
-  const doseMgEl = document.getElementById('univDoseMgRes');
-  if (doseMgEl) doseMgEl.textContent = `${res.mgPerDose} mg`;
-
-  const volEl = document.getElementById('univVolRes');
-  if (volEl) {
-    if (formRoute === 'oral_pill') {
-      volEl.innerHTML = `${res.tabletFractionFa} <span class="text-xs font-normal" id="univVolUnit">(${res.volPerDose} قرص)</span>`;
-    } else {
-      volEl.innerHTML = `${res.volPerDose} <span class="text-xs font-normal" id="univVolUnit">${res.unitTextFa}</span>`;
-    }
-  }
-
-  const syringeEl = document.getElementById('univSyringeRes');
-  if (syringeEl) syringeEl.textContent = res.syringeAdvice;
-
-  const totalEl = document.getElementById('univTotalDispenseRes');
-  if (totalEl) totalEl.textContent = res.totalDispenseText;
-
-  const countEl = document.getElementById('univDosesCountRes');
-  if (countEl) countEl.textContent = `تعداد کل وعده‌ها: ${res.totalDosesCount} نوبت`;
-
- 
-"}
-{"step_index":2643,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:49:35Z","input_tokens":3471,"cache_read_tokens":128621,"output_tokens":178,"tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-const html = fs.readFileSync('index.html', 'utf8');
-
-const s = html.indexOf('id="calcPaneOncology"');
-console.log('calcPaneOncology at:', s);
-if (s !== -1) {
-  console.log(html.substring(s, s + 2000));
-}
-","Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\inspect_oncology.js"}}]}
-{"step_index":2644,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:49:40Z","content":"Created At: 2026-10-26T13:19:40+03:30
-Completed At: 2026-10-26T13:19:40+03:30
-Created file."}
-{"step_index":2645,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:49:40Z","input_tokens":2299,"cache_read_tokens":130047,"output_tokens":61,"tool_calls":[{"name":"run_command","args":{"CommandLine":"node scripts/inspect_oncology.js","WaitMsBeforeAsync":5000,"toolSummary":"Inspect calcPaneOncology in index.html"}}]}
-{"step_index":2646,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:49:45Z","content":"Created At: 2026-10-26T13:19:45+03:30
-Completed At: 2026-10-26T13:19:47+03:30
-Command exited with code 0.
-
-Command output:
-calcPaneOncology at: 93159
-id="calcPaneOncology" class="space-y-4 hidden text-xs">
+        <div id="calcPaneOncology" class="space-y-4 hidden text-xs">
           <div class="p-3 bg-purple-50 border border-purple-200 rounded-xl text-purple-950 flex items-start gap-2">
             <i data-lucide="dna" class="w-4 h-4 text-purple-600 mt-0.5 shrink-0"></i>
             <div>
@@ -2421,439 +1772,93 @@ id="calcPaneOncology" class="space-y-4 hidden text-xs">
             </div>
             <div>
               <label class="block font-bold text-slate-700 mb-1">پروتکل / داروی انکولوژی آماده:</label>
-              <select id="oncoDrugPresetSelect" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-bold text-slate-800" onchange="onOncoDrugPresetChange()
-"}
-{"step_index":2647,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:49:47Z","input_tokens":2846,"cache_read_tokens":130305,"output_tokens":1714,"thinking":"The calculator modal has two distinct elements. The first is found within the `calcPaneDose` tab, specifically a dropdown menu labeled "۳. انتخاب داروی پیش‌فرض یا داروی دلخواه" (`univDrugSelect`) containing a list of preset drugs, which the user referenced.
+              <select id="oncoDrugPresetSelect" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-bold text-slate-800" onchange="onOncoDrugPresetChange()">
+                <option value="vincristine" selected>🎗️ وینکریستین (0.7 mg/m² - لنفوم CHOP و TVT)</option>
+                <option value="doxorubicin">🎗️ دوکسوروبیسین (30 mg/m² سگ بزرگ / 1 mg/kg سگ کوچک)</option>
+                <option value="cyclophosphamide_inj">🎗️ سیکلوفسفامید تزریقی (200 mg/m² - لنفوم CHOP)</option>
+                <option value="cyclophosphamide_po">🎗️ سیکلوفسفامید خوراکی (50 mg/m² - قرص ۵۰ میلی‌گرم)</option>
+                <option value="carboplatin">🎗️ کربوپلاتین (300 mg/m² سگ / 200 mg/m² گربه - استئوسارکوم)</option>
+                <option value="lomustine">🎗️ لوموستین خوراکی (60 mg/m² - تومور ماست‌سل MCT و مغز)</option>
+                <option value="custom">✏️ دوز سفارشی (بر حسب mg/m² یا mg/kg)</option>
+              </select>
+            </div>
+          </div>
 
+          <!-- دوز هدف، واحد و غلظت ویال -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">دوز دارویی هدف:</label>
+              <div class="flex gap-2">
+                <input type="number" step="0.01" id="oncoDoseRate" value="0.7" class="w-1/2 p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono latin-text font-bold" oninput="runOncologyBsaCalculation()">
+                <select id="oncoDoseUnit" class="w-1/2 p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-bold text-xs" onchange="runOncologyBsaCalculation()">
+                  <option value="mg_m2" selected>mg / m²</option>
+                  <option value="mg_kg">mg / kg</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">غلظت ویال استوک (mg/mL) یا قرص:</label>
+              <input type="number" step="0.1" id="oncoStockConc" value="1.0" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono latin-text font-bold" oninput="runOncologyBsaCalculation()">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">مساحت سطح بدن محاسبه‌شده (BSA):</label>
+              <div class="p-2 bg-purple-100/70 border border-purple-200 rounded-xl flex items-center justify-between">
+                <span class="text-xs text-purple-900 font-bold">BSA:</span>
+                <span class="text-base font-black font-mono text-purple-950 latin-text" id="oncoBsaDisplay">0.469 m²</span>
+              </div>
+            </div>
+          </div>
 
-Adding more options, while seemingly helpful, could overcomplicate the user interface. The request to incorporate body surface area-based drug calculations implies a new feature addition within the calculator's functionalities, not necessarily a change in the pre-selected drug list. Reviewing the calculator's tab structure helps understand how this new feature would best integrate.
+          <!-- کارد نتایج خروجی دوز و حجم سرنگ شیمی‌درمانی -->
+          <div class="p-4 bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-purple-300 rounded-2xl space-y-3">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="bg-white p-3 rounded-xl border border-purple-200">
+                <span class="text-[11px] text-purple-800 font-bold block mb-0.5">کل دوز فعال شیمی‌درمانی:</span>
+                <div class="flex items-baseline gap-1.5">
+                  <span class="text-2xl font-black text-purple-950 font-mono" id="oncoResTotalMg">0.33</span>
+                  <span class="text-xs font-bold text-purple-800">میلی‌گرم (mg)</span>
+                </div>
+                <span class="text-[10px] text-purple-700 block mt-0.5" id="oncoFormulaBadge">بر اساس 0.7 mg/m² × 0.469 m²</span>
+              </div>
 
+              <div class="bg-white p-3 rounded-xl border border-purple-200">
+                <span class="text-[11px] text-purple-800 font-bold block mb-0.5">حجم دقیق کشیدن در سرنگ (mL):</span>
+                <div class="flex items-baseline gap-1.5">
+                  <span class="text-2xl font-black text-indigo-950 font-mono" id="oncoResSyringeVol">0.33</span>
+                  <span class="text-xs font-bold text-indigo-800">سی‌سی (mL)</span>
+                </div>
+                <span class="text-[10px] text-indigo-600 block mt-0.5" id="oncoSyringeTypeBadge">تزریق با سرنگ ۱ یا ۲.۵ سی‌سی</span>
+              </div>
 
-The current design hides a critical feature: body surface area (BSA) dosing is inaccessible within the primary dose calculator tab. Removing the drug selection dropdown ("انتخاب داروی پیش‌فرض یا داروی دلخواه") from the main calculator would simplify the interface. This allows for a dedicated field for drug entry and avoids unnecessary clutter, which directly addresses the user's feedback about an overly complex interface.
+              <div class="bg-white p-3 rounded-xl border border-purple-200">
+                <span class="text-[11px] text-purple-800 font-bold block mb-0.5">قانون طلایی پلامبز برای سگ‌های کوچک:</span>
+                <span class="text-[11px] text-slate-700 block leading-tight mt-1" id="oncoSmallDogRuleText">
+                  در سگ‌های زیر ۱۰ کیلوگرم، دوزهای mg/m² ممکن است میلوتوکسیک باشد؛ تبدیل به mg/kg طبق جدول رفرنس بررسی شود.
+                </span>
+              </div>
+            </div>
 
+            <!-- هشدارهای بالینی و گیت‌وی ایمنی انکولوژی -->
+            <div class="p-3.5 bg-amber-50/90 border border-amber-200 rounded-xl space-y-2 text-[11px]">
+              <span class="font-bold text-amber-950 block flex items-center gap-1.5">
+                <i data-lucide="shield-alert" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                <span>گیت‌وی ایمنی و چک‌لیست حیاتی قبل از تزریق (Pre-Chemo Safety Gateway):</span>
+              </span>
+              <p id="oncoSafetyAdvice" class="text-amber-900 leading-relaxed">
+                • <strong>شمارش مطلق نوتروفیل‌ها (ANC):</strong> باید بالای ۳۰۰۰ در میکرولیتر باشد (زیر ۱۵۰۰ تا ۲۰۰۰ = تعویق شیمی‌درمانی).
+                <br>• <strong>شمارش پلاکت:</strong> باید بالای ۱۰۰,۰۰۰ در میکرولیتر باشد.
+                <br>• <strong>نشت خارج عروقی وزیکانت (Extravasation):</strong> نشت زیرجلدی مساوی با اسلافینگ پوست و کاندید قطع عضو است؛ تزریق فقط از طریق آنژیوکت تازه و بدون نشت با بازگشت خون قطعی.
+              </p>
+            </div>
+          </div>
+        </div>
 
-Adding the BSA dosing mode introduces UI complexity; more options could confuse users. A segmented switcher should allow users to toggle between weight-based and BSA-based dosing within the calculator. Real-time BSA calculation will update dynamically based on the input weight.
+        <!-- فرم ۷: انتقال خون، فرآورده‌ها و کراس‌مچ (Blood Transfusion & Crossmatch Engine) -->
 
-
-","tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-
-function searchFile(file, term) {
-  if (!fs.existsSync(file)) return;
-  const content = fs.readFileSync(file, 'utf8');
-  let idx = 0;
-  while ((idx = content.indexOf(term, idx)) !== -1) {
-    console.log(`Found in ${file} at ${idx}:`);
-    console.log(content.substring(Math.max(0, idx - 100), Math.min(content.length, idx + 400)));
-    idx += term.length;
-    break;
-  }
-}
-
-searchFile('app.js', 'calculateUniversalDoseDispensing');
-searchFile('data/clinical_vault.js', 'calculateUniversalDoseDispensing');
-","Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\find_univ_calc.js"}}]}
-{"step_index":2648,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:50:02Z","content":"Created At: 2026-10-26T13:20:02+03:30
-Completed At: 2026-10-26T13:20:02+03:30
-Created file."}
-{"step_index":2649,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:50:02Z","input_tokens":2531,"cache_read_tokens":132410,"output_tokens":62,"tool_calls":[{"name":"run_command","args":{"CommandLine":"node scripts/find_univ_calc.js","WaitMsBeforeAsync":5000,"toolSummary":"Locate calculateUniversalDoseDispensing"}}]}
-{"step_index":2650,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:50:08Z","content":"Created At: 2026-10-26T13:20:08+03:30
-Completed At: 2026-10-26T13:20:09+03:30
-Command exited with code 0.
-
-Command output:
-Found in app.js at 172281:
- ? spInput.value : 'canine';
-  const drugId = select ? select.value : '';
-
-  const calcFn = (typeof calculateUniversalDoseDispensing === 'function') 
-    ? calculateUniversalDoseDispensing 
-    : (typeof window !== 'undefined' && typeof window.calculateUniversalDoseDispensing === 'function' ? window.calculateUniversalDoseDispensing : null);
-
-  if (!calcFn) return;
-
-  const res = calcFn({
-    weight,
-    rate,
-    conc,
-    formRoute,
-    species,
-    interval,
-    days,
-    bottleMl,
-    drugId
-
-Found in data/clinical_vault.js at 43507:
-.' }
-  ]
-};
-
-// موتور اصلی محاسبات بالینی چندگونه‌ای و نسخه (Universal Calculation Engine)
-function calculateUniversalDoseDispensing(params) {
-  const weight = parseFloat(params.weight) || 0;
-  const rate = parseFloat(params.rate) || 0;
-  const conc = parseFloat(params.conc) || 0;
-  const formRoute = params.formRoute || 'injectable';
-  const species = params.species || 'canine';
-  const intervalCode = params.interval || 'q12h';
-  const days = parseInt(params.days) || 1;
-  const bottleMl = parseF
-"}
-{"step_index":2651,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:50:09Z","input_tokens":2517,"cache_read_tokens":132898,"output_tokens":178,"tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-const code = fs.readFileSync('data/clinical_vault.js', 'utf8');
-
-const s = code.indexOf('function calculateUniversalDoseDispensing(');
-if (s !== -1) {
-  console.log(code.substring(s, s + 3500));
-}
-","Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\ead_vault_calc.js"}}]}
-{"step_index":2652,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:50:15Z","content":"Created At: 2026-10-26T13:20:15+03:30
-Completed At: 2026-10-26T13:20:15+03:30
-Created file."}
-{"step_index":2653,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:50:15Z","input_tokens":2298,"cache_read_tokens":133371,"output_tokens":62,"tool_calls":[{"name":"run_command","args":{"CommandLine":"node scripts/read_vault_calc.js","WaitMsBeforeAsync":5000,"toolSummary":"Read calculateUniversalDoseDispensing function"}}]}
-{"step_index":2654,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:50:21Z","content":"Created At: 2026-10-26T13:20:21+03:30
-Completed At: 2026-10-26T13:20:23+03:30
-Command exited with code 0.
-
-Command output:
-function calculateUniversalDoseDispensing(params) {
-  const weight = parseFloat(params.weight) || 0;
-  const rate = parseFloat(params.rate) || 0;
-  const conc = parseFloat(params.conc) || 0;
-  const formRoute = params.formRoute || 'injectable';
-  const species = params.species || 'canine';
-  const intervalCode = params.interval || 'q12h';
-  const days = parseInt(params.days) || 1;
-  const bottleMl = parseFloat(params.bottleMl) || 100;
-  const drugId = params.drugId || '';
-
-  // ۱. محاسبه دوز تام هر وعده بر حسب میلی‌گرم
-  let mgPerDose = weight * rate;
-  if (params.doseUnit === 'mcg/kg') {
-    mgPerDose = (weight * rate) / 1000.0;
-  }
-
-  // ۲. محاسبه حجم یا کسر قرص در هر وعده
-  let volOrUnitPerDose = conc > 0 ? (mgPerDose / conc) : 0;
-  let unitTextFa = 'میلی‌لیتر (سی‌سی)';
-  let syringeAdvice = '';
-  let tabletFractionFa = '';
-
-  if (formRoute === 'oral_pill') {
-    unitTextFa = 'عدد قرص';
-    if (volOrUnitPerDose < 0.2) {
-      tabletFractionFa = 'کمتر از ۱/۴ قرص (نیاز به سوسپانسیون یا حل کردن در سرنگ)';
-    } else if (volOrUnitPerDose < 0.38) {
-      tabletFractionFa = '۱/۴ قرص (یک‌چهارم قرص)';
-    } else if (volOrUnitPerDose < 0.68) {
-      tabletFractionFa = '۱/۲ قرص (نصف قرص)';
-    } else if (volOrUnitPerDose < 0.88) {
-      tabletFractionFa = '۳/۴ قرص (سه‌چهارم قرص)';
-    } else if (volOrUnitPerDose < 1.35) {
-      tabletFractionFa = '۱ قرص کامل';
-    } else if (volOrUnitPerDose < 1.7) {
-      tabletFractionFa = '۱.۵ قرص (یک و نیم قرص)';
-    } else if (volOrUnitPerDose < 2.35) {
-      tabletFractionFa = '۲ قرص کامل';
-    } else {
-      tabletFractionFa = `${volOrUnitPerDose.toFixed(1)} عدد قرص`;
-    }
-  } else if (formRoute === 'injectable') {
-    unitTextFa = 'میلی‌لیتر (سی‌سی)';
-    if (volOrUnitPerDose <= 0.5) {
-      syringeAdvice = '💉 سرنگ انسولین ۱۰۰ واحدی (0.5 یا 1 mL) جهت دقت میکرولیتری';
-    } else if (volOrUnitPerDose <= 2.5) {
-      syringeAdvice = '💉 سرنگ ۲ یا ۲.۵ سی‌سی استاندارد';
-    } else if (volOrUnitPerDose <= 5.0) {
-      syringeAdvice = '💉 سرنگ ۵ سی‌سی';
-    } else if (volOrUnitPerDose <= 10.0) {
-      syringeAdvice = '💉 سرنگ ۱۰ سی‌سی';
-    } else {
-      syringeAdvice = '💉 سرنگ ۲۰ سی‌سی (توجه: تقسیم حجم در ۲ یا چند موضع تزریق مختلف)';
-    }
-  } else if (formRoute === 'oral_liquid') {
-    unitTextFa = 'میلی‌لیتر (سی‌سی)';
-    if (volOrUnitPerDose < 5) {
-      syringeAdvice = '🥄 با سرنگ خوراکی مدرج بدون سوزن خورانده شود';
-    } else {
-      const spoons = (volOrUnitPerDose / 5).toFixed(1);
-      syringeAdvice = `🥄 معادل تقریبی ${spoons} قاشق مرباخوری (هر قاشق ۵ سی‌سی)`;
-    }
-  } else if (formRoute === 'aquatic_powder') {
-    unitTextFa = 'گرم در متر مکعب (ppm)';
-  }
-
-  // ۳. محاسبه تعداد دفعات مصرف در روز بر اساس کد فاصله
-  let dosesPerDay = 2; // q12h
-  let intervalLabelFa = 'هر ۱۲ ساعت (۲ بار در روز)';
-  if (intervalCode === 'q6h') { dosesPerDay = 4; intervalLabelFa = 'هر ۶ ساعت (۴ بار در روز)'; }
-  else if (intervalCode === 'q8h') { dosesPerDay = 3; intervalLabelFa = 'هر ۸ ساعت (۳ بار در روز)'; }
-  else if (intervalCode === 'q12h') { dosesPerDay = 2; intervalLabelFa = 'هر ۱۲ ساعت (۲ بار در روز)'; }
-  else if (intervalCode === 'q24h') { dosesPerDay = 1; intervalLabelFa = 'هر ۲۴ ساعت (۱ بار در روز)'; }
-  else if (intervalCode === 'q48h') { dosesPerDay = 0.5; intervalLabelFa = 'هر ۴۸ ساعت یک‌بار'; }
-  else if (intervalCode === 'single') { dosesPerDay = 1; intervalLabelFa = 'تک‌دوز (Single Dose)'; }
-
-  // ۴. تعداد کل مصرفی دوره نسخه
-  const totalDosesCount = intervalCode === 'single' ? 1 : Math.ceil(doses
-"}
-{"step_index":2655,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:50:23Z","input_tokens":2127,"cache_read_tokens":134993,"output_tokens":534,"thinking":"Analyzing how to incorporate `doseBasis` ('weight' vs 'bsa') into the dispensing calculation. Considering the scenario where `doseBasis` is 'bsa'. This requires converting weight in kg to Body Surface Area (BSA) in $m^2$, using specific formulas for dogs and cats.
-Calculating BSA for dogs and cats using provided formulas.
-```
-
-","tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-const app = fs.readFileSync('app.js', 'utf8');
-
-const s = app.indexOf('function quickCalculateForDrug(');
-if (s !== -1) {
-  console.log(app.substring(s, s + 2000));
-}
-","Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\inspect_quick_calc.js"}}]}
-{"step_index":2656,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:50:29Z","content":"Created At: 2026-10-26T13:20:29+03:30
-Completed At: 2026-10-26T13:20:29+03:30
-Created file."}
-{"step_index":2657,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:50:29Z","input_tokens":2652,"cache_read_tokens":135078,"output_tokens":63,"tool_calls":[{"name":"run_command","args":{"CommandLine":"node scripts/inspect_quick_calc.js","WaitMsBeforeAsync":5000,"toolSummary":"Inspect quickCalculateForDrug in app.js"}}]}
-{"step_index":2658,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:50:36Z","content":"Created At: 2026-10-26T13:20:36+03:30
-Completed At: 2026-10-26T13:20:37+03:30
-Command exited with code 0.
-
-Command output:
-function quickCalculateForDrug(drugId) {
-  const drug = DRUGS_DATA.find(d => d.id === drugId);
-  if (!drug) return;
-
-  const profile = getDrugSpecialtyProfile(drug);
-
-  openCalculatorModal();
-
-  if (profile.isOnco) {
-    switchCalcTab('oncology');
-    const select = document.getElementById('oncoDrugPresetSelect');
-    if (select && select.querySelector(`option[value="${drug.id}"]`)) {
-      select.value = drug.id;
-      onOncologyPresetChange();
-    } else {
-      runOncologyBsaCalculation();
-    }
-  } else if (profile.isAnesthCri && ['lidocaine', 'ketamine', 'metoclopramide', 'propofol', 'fentanyl', 'dopamine', 'dobutamine'].includes(drug.id)) {
-    switchCalcTab('cri');
-    const select = document.getElementById('criPresetSelect');
-    if (select && select.querySelector(`option[value="${drug.id}"]`)) {
-      select.value = drug.id;
-      onCriPresetChange();
-    } else {
-      runCriCalculation();
-    }
-  } else if (drug.compounding_and_dilution?.has_calculator) {
-    switchCalcTab('dilution');
-    document.getElementById('dilPillMg').value = drug.compounding_and_dilution.default_pill_mg || 100;
-    document.getElementById('dilVolumeMl').value = drug.compounding_and_dilution.default_diluent_ml || 10;
-    runDilutionCalculation();
-  } else if (drug.tablet_dispensing_guide) {
-    // تب محاسبه دوز قرص و نسخه
-    switchCalcTab('pill');
-    const selectEl = document.getElementById('pillPresetSelect');
-    if (selectEl) {
-      if (drug.id === 'amoxicillin_clavulanate') selectEl.value = 'amox_clav';
-      else if (drug.id === 'gabapentin') selectEl.value = 'gabapentin';
-      else if (drug.id === 'meloxicam') selectEl.value = 'meloxicam';
-      else if (drug.id === 'tramadol') selectEl.value = 'tramadol';
-      else if (drug.id === 'oxytetracycline') selectEl.value = 'oxytetracycline_po';
-      else if (drug.id === 'enrofloxacin') selectEl.value = 'enrofloxacin_po';
-      else if (drug.id === 'prazosin') selectEl.value = 'prazosin';
-      else if (drug.id === 'famotidin
-"}
-{"step_index":2659,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:50:37Z","input_tokens":2816,"cache_read_tokens":135689,"output_tokens":212,"tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-const app = fs.readFileSync('app.js', 'utf8');
-
-let idx = 0;
-while ((idx = app.indexOf('univDrugSelect', idx)) !== -1) {
-  console.log(`univDrugSelect at ${idx}:`);
-  console.log(app.substring(Math.max(0, idx - 100), Math.min(app.length, idx + 300)));
-  idx += 14;
-}
-","Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\find_univ_drug_select.js"}}]}
-{"step_index":2660,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:50:43Z","content":"Created At: 2026-10-26T13:20:43+03:30
-Completed At: 2026-10-26T13:20:43+03:30
-Created file."}
-{"step_index":2661,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:50:43Z","input_tokens":2332,"cache_read_tokens":136461,"output_tokens":66,"tool_calls":[{"name":"run_command","args":{"CommandLine":"node scripts/find_univ_drug_select.js","WaitMsBeforeAsync":5000,"toolSummary":"Find univDrugSelect in app.js"}}]}
-{"step_index":2662,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:50:57Z","content":"Created At: 2026-10-26T13:20:57+03:30
-Completed At: 2026-10-26T13:20:59+03:30
-Command exited with code 0.
-
-Command output:
-univDrugSelect at 166734:
-alculation();
-}
-
-function populateUniversalDrugSelect() {
-  const select = document.getElementById('univDrugSelect');
-  if (!select) return;
-
-  const spInput = document.getElementById('univSpecies');
-  const formInput = document.getElementById('univFormRoute');
-  const sp = spInput ? spInput.value : 'canine';
-  const form = formInput ? formInput.value : 'injectable';
-
-  select.innerHTML = '';
-
-  c
-univDrugSelect at 169355:
-orms[form] || form;
-}
-
-function onUniversalDrugChange() {
-  const select = document.getElementById('univDrugSelect');
-  if (!select) return;
-  const val = select.value;
-
-  const spInput = document.getElementById('univSpecies');
-  const sp = spInput ? spInput.value : 'canine';
-
-  const presetsObj = (typeof UNIVERSAL_CALC_PRESETS !== 'undefined') ? UNIVERSAL_CALC_PRESETS : (typeof window !== 'undefi
-univDrugSelect at 171665:
-  const spInput = document.getElementById('univSpecies');
-  const select = document.getElementById('univDrugSelect');
-
-  const weight = parseFloat(weightInput ? weightInput.value : 0) || 0;
-  const rate = parseFloat(rateInput ? rateInput.value : 0) || 0;
-  const conc = parseFloat(concInput ? concInput.value : 0) || 0;
-  const interval = intervalSelect ? intervalSelect.value : 'q12h';
-  const days 
-"}
-{"step_index":2663,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:50:59Z","input_tokens":2570,"cache_read_tokens":136751,"output_tokens":151,"tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-const app = fs.readFileSync('app.js', 'utf8');
-
-const s = app.indexOf('function populateUniversalDrugSelect(');
-if (s !== -1) {
-  console.log(app.substring(s, s + 3500));
-}
-","Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\scripts\ead_populate_univ.js"}}]}
-{"step_index":2664,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:51:08Z","content":"Created At: 2026-10-26T13:21:08+03:30
-Completed At: 2026-10-26T13:21:09+03:30
-Created file."}
-{"step_index":2665,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:51:09Z","input_tokens":2271,"cache_read_tokens":137277,"output_tokens":63,"tool_calls":[{"name":"run_command","args":{"CommandLine":"node scripts/read_populate_univ.js","WaitMsBeforeAsync":5000,"toolSummary":"Read populateUniversalDrugSelect in app.js"}}]}
-{"step_index":2666,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-26T09:51:14Z","content":"Created At: 2026-10-26T13:21:14+03:30
-Completed At: 2026-10-26T13:21:15+03:30
-Command exited with code 0.
-
-Command output:
-function populateUniversalDrugSelect() {
-  const select = document.getElementById('univDrugSelect');
-  if (!select) return;
-
-  const spInput = document.getElementById('univSpecies');
-  const formInput = document.getElementById('univFormRoute');
-  const sp = spInput ? spInput.value : 'canine';
-  const form = formInput ? formInput.value : 'injectable';
-
-  select.innerHTML = '';
-
-  const presetsObj = (typeof UNIVERSAL_CALC_PRESETS !== 'undefined') ? UNIVERSAL_CALC_PRESETS : (typeof window !== 'undefined' ? window.UNIVERSAL_CALC_PRESETS : null);
-  const speciesList = (presetsObj && presetsObj[sp]) ? presetsObj[sp] : [];
-
-  const matched = speciesList.filter(item => item.formRoute === form);
-  const otherMatches = speciesList.filter(item => item.formRoute !== form);
-
-  if (matched.length > 0) {
-    const group = document.createElement('optgroup');
-    group.label = `داروهای آماده ${getSpeciesFaName(sp)} [فرم ${getFormFaName(form)}]`;
-    matched.forEach(p => {
-      const opt = document.createElement('option');
-      opt.value = p.id;
-      opt.textContent = `${p.name} (${p.defaultRate} mg/kg - ${p.defaultConc} mg/${form === 'oral_pill' ? 'قرص' : 'mL'})`;
-      group.appendChild(opt);
-    });
-    select.appendChild(group);
-  }
-
-  if (otherMatches.length > 0) {
-    const otherGroup = document.createElement('optgroup');
-    otherGroup.label = `سایر فرم‌های دارویی ${getSpeciesFaName(sp)}`;
-    otherMatches.forEach(p => {
-      const opt = document.createElement('option');
-      opt.value = p.id;
-      opt.textContent = `${p.name} [${getFormFaName(p.formRoute)}]`;
-      otherGroup.appendChild(opt);
-    });
-    select.appendChild(otherGroup);
-  }
-
-  const customOpt = document.createElement('option');
-  customOpt.value = 'custom';
-  customOpt.textContent = '✏️ داروی سفارشی (وارد کردن دستی دوز، غلظت و فاصله)';
-  select.appendChild(customOpt);
-
-  if (matched.length > 0) {
-    select.value = matched[0].id;
-  } else if (otherMatches.length > 0) {
-    select.value = otherMatches[0].id;
-  } else {
-    select.value = 'custom';
-  }
-
-  onUniversalDrugChange();
-}
-
-function getSpeciesFaName(sp) {
-  const names = {
-    canine: 'سگ',
-    feline: 'گربه',
-    equine: 'اسب',
-    bovine: 'گاو',
-    ovine_caprine: 'گوسفند و بز',
-    poultry: 'طیور',
-    camelids: 'شترسانان',
-    aquatics: 'آبزیان',
-    wildlife: 'حیات‌وحش'
-  };
-  return names[sp] || sp;
-}
-
-function getFormFaName(form) {
-  const forms = {
-    injectable: 'تزریقی',
-    oral_liquid: 'شربت / مایع خوراکی',
-    oral_pill: 'قرص / کپسول',
-    topical_drop: 'قطره موضعی',
-    aquatic_powder: 'پودر / حمام غوطه‌وری'
-  };
-  return forms[form] || form;
-}
-
-function onUniversalDrugChange() {
-  const select = document.getElementById('univDrugSelect');
-  if (!select) return;
-  const val = select.value;
-
-  const spInput = document.getElementById('univSpecies');
-  const sp = spInput ? spInput.value : 'canine';
-
-  const presetsObj = (typeof UNIVERSAL_CALC_PRESETS !== 'undefined') ? UNIVERSAL_CALC_PRESETS : (typeof window !== 'undefined' ? window.UNIVERSAL_CALC_PRESETS : null);
-  const speciesList = (presetsObj && presetsObj[sp]) ? presetsObj[sp] : [];
-  const preset = speciesList.find(item => item.id === val);
-
-  const doseRateInput = document.getElementById('univDoseRate');
-  const concInput = document.getElementById('univConc');
-  const intervalSelect = document.getElementById('univInterval');
-  const daysInput = document.getElementById('univDays');
-  const bottleInput = document.getElementById('univBottleMl');
-  con
-"}
-{"step_index":2667,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-26T09:51:15Z","input_tokens":3274,"cache_read_tokens":137511,"output_tokens":978,"thinking":"The calculator modal's structure revealed a rigid workflow. Species and form selection precede any calculation, then a potentially overwhelming preset dropdown appears to dominate the interface. Weight input follows this prescribed, potentially inflexible path.
-
-
-Adding a new calculation method based on body surface area is necessary. The existing presets section introduces unnecessary complexity; simplifying the interface will improve usability. Removing the preset dropdown and streamlining input fields will provide a more focused and intuitive calculation experience, especially for methods based on weight or body surface area, and then providing the immediate results.
-
-
-","tool_calls":[{"name":"write_file","args":{"Content":"const fs = require('fs');
-const html = fs.readFileSync('index.html', 'utf8');
-
-const s = html.indexOf('
-
-        <!-- فرم ۱۱: مرحله‌بندی نارسایی کلیه IRIS -->
         <div id="calcPaneIris" class="space-y-4 hidden text-xs">
           <div class="p-3 bg-indigo-50 border border-indigo-200 rounded-2xl flex items-center justify-between text-indigo-950">
             <span class="font-bold flex items-center gap-1.5">
-              <i data-lucide="stethoscope" class="w-4 h-4 text-indigo-600"></i>
+              <span class="text-base">🩺</span>
               <span>مرحله‌بندی نارسایی مزمن کلیه IRIS و جدول تعدیل دوز داروهای دفع کلیوی</span>
             </span>
             <span class="text-[10px] bg-indigo-200 font-bold px-2 py-0.5 rounded-md">International Renal Interest Society</span>
@@ -2863,8 +1868,8 @@ const s = html.indexOf('
             <div>
               <label class="block font-bold text-slate-700 mb-1">گونه بیمار:</label>
               <select id="irisSpecies" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-bold" onchange="runIrisCalculation()">
-                <option value="dog" selected>سگ (Canine IRIS)</option>
-                <option value="cat">گربه (Feline IRIS)</option>
+                <option value="dog" selected>🐶 سگ (Canine IRIS)</option>
+                <option value="cat">🐱 گربه (Feline IRIS)</option>
               </select>
             </div>
             <div>
@@ -2873,6 +1878,7 @@ const s = html.indexOf('
             </div>
           </div>
 
+          <!-- نتیجه استیجینگ IRIS -->
           <div id="irisResultBox" class="p-4 bg-white border-2 border-indigo-200 rounded-2xl space-y-2">
             <div class="flex items-center justify-between">
               <span class="font-black text-sm text-indigo-950" id="irisStageTitle">Stage 2 (ازوتمی خفیف کلیوی)</span>
@@ -2882,18 +1888,31 @@ const s = html.indexOf('
               کاهش ۲۵٪ دوز یا افزایش فواصل مصرف داروهای دفع کلیوی؛ پرهیز کامل از مصرف داروهای ضدالتهاب غیراستروئیدی (NSAIDs).
             </p>
           </div>
+
+          <!-- جدول راهنمای تعدیل داروهای رایج -->
+          <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-800 block text-xs">📋 راهنمای مداخله در داروهای کلیوی:</span>
+            <div class="space-y-1 text-[11px] text-slate-700">
+              <p>• <strong>آمپی‌سیلین / سفازولین:</strong> در مرحله ۳ و ۴ فواصل مصرف از q8h به q12h افزایش یابد.</p>
+              <p>• <strong>انروفلوکساسین:</strong> در استیج ۳ و ۴ دوز ۲۵ تا ۵۰ درصد کاهش یابد.</p>
+              <p>• <strong>آمیکاسین و جنتامایسین:</strong> در استیج ۲ به بالا به دلیل سمیت حاد توبولار ممنوعیت مصرف دارند.</p>
+            </div>
+          </div>
         </div>
 
-        <!-- فرم ۱۲: ماشین بیهوشی و ونتیلاتور -->
+        <!-- ============================================== -->
+        <!-- فرم ۱۰: ماشین بیهوشی و ونتیلاتور (Anesthesia & Ventilator) -->
+
         <div id="calcPaneAnesthesia" class="space-y-4 hidden text-xs">
           <div class="p-3 bg-teal-50 border border-teal-200 rounded-2xl flex items-center justify-between text-teal-950">
             <span class="font-bold flex items-center gap-1.5">
-              <i data-lucide="wind" class="w-4 h-4 text-teal-600"></i>
+              <span class="text-base">🫁</span>
               <span>پارامترهای ماشین بیهوشی، مقادیر MAC گازهای ایزوفلوران/سووفلوران و تنظیمات ونتیلاتور</span>
             </span>
-            <span class="text-[10px] bg-teal-200 font-bold px-2 py-0.5 rounded-md">استاندارد فارماکولوژی بیهوشی</span>
+            <span class="text-[10px] bg-teal-200 font-bold px-2 py-0.5 rounded-md">Lumb & Jones 6th Ed</span>
           </div>
 
+          <!-- محاسبه جریان اکسیژن و ونتیلاتور بر اساس وزن -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label class="block font-bold text-slate-700 mb-1">وزن بیمار (kg):</label>
@@ -2908,6 +1927,7 @@ const s = html.indexOf('
             </div>
           </div>
 
+          <!-- خروجی تنظیمات اکسیژن و ونتیلاتور -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-center">
             <div class="p-3 bg-white border border-teal-200 rounded-2xl shadow-2xs">
               <span class="text-slate-500 block text-[11px] mb-1">جریان اکسیژن پیشنهادی (FGF):</span>
@@ -2921,20 +1941,37 @@ const s = html.indexOf('
             </div>
             <div class="p-3 bg-white border border-teal-200 rounded-2xl shadow-2xs">
               <span class="text-slate-500 block text-[11px] mb-1">سقف فشار دمی (PIP):</span>
-              <p class="text-xl font-black text-rose-950 font-mono">&lt; 20 cmH2O</p>
+              <p class="text-xl font-black text-rose-950 font-mono">< 20 cmH2O</p>
               <span class="text-[10px] text-slate-400 mt-0.5 block">پیشگیری از باروتروما</span>
+            </div>
+          </div>
+
+          <!-- جدول MAC گازها -->
+          <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-800 block text-xs">📊 غلظت حداقل آلوئولی (MAC) جهت بیهوشی جراحی (1.3 تا 1.5 برابر MAC):</span>
+            <div class="grid grid-cols-2 gap-2 text-[11px]">
+              <div class="bg-white p-2.5 rounded-xl border border-slate-200">
+                <strong>ایزوفلوران (Isoflurane):</strong>
+                <p class="text-slate-600 mt-0.5">سگ: 1.30٪ | گربه: 1.63٪ | اسب: 1.31٪</p>
+              </div>
+              <div class="bg-white p-2.5 rounded-xl border border-slate-200">
+                <strong>سووفلوران (Sevoflurane):</strong>
+                <p class="text-slate-600 mt-0.5">سگ: 2.36٪ | گربه: 2.58٪ | اسب: 2.31٪</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- فرم ۱۳: تغذیه بالینی و کالری RER -->
+        <!-- ============================================== -->
+        <!-- فرم ۱۱: تغذیه بالینی و کالری RER (Clinical Nutrition) -->
+
         <div id="calcPaneNutrition" class="space-y-4 hidden text-xs">
           <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-2xl flex items-center justify-between text-emerald-950">
             <span class="font-bold flex items-center gap-1.5">
-              <i data-lucide="apple" class="w-4 h-4 text-emerald-600"></i>
+              <span class="text-base">🥗</span>
               <span>محاسبه‌گر کالری انرژی پایه استراحت (RER) و برنامه گاواژ لوله‌های تغذیه</span>
             </span>
-            <span class="text-[10px] bg-emerald-200 font-bold px-2 py-0.5 rounded-md">استاندارد تغذیه بالینی</span>
+            <span class="text-[10px] bg-emerald-200 font-bold px-2 py-0.5 rounded-md">AAHA & Plumb's Clinical Nutrition</span>
           </div>
 
           <div>
@@ -2942,6 +1979,7 @@ const s = html.indexOf('
             <input type="number" step="0.5" id="nutrWeight" value="10" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-mono latin-text font-bold" oninput="runNutritionCalculation()">
           </div>
 
+          <!-- خروجی کالری RER و برنامه ۳ روزه -->
           <div class="p-4 bg-white border border-emerald-200 rounded-2xl space-y-3 shadow-2xs">
             <div class="flex items-center justify-between pb-2 border-b border-emerald-100">
               <span class="text-xs font-black text-slate-800">کل نیاز انرژی پایه استراحت (100% RER):</span>
@@ -2969,19 +2007,21 @@ const s = html.indexOf('
           </div>
         </div>
 
-        <!-- فرم ۱۴: ایمنی دارتینگ حیات‌وحش -->
+        <!-- ============================================== -->
+        <!-- فرم ۱۲: ایمنی دارتینگ حیات‌وحش (Wildlife Human Safety) -->
+
         <div id="calcPaneWildlifeSafety" class="space-y-4 hidden text-xs">
           <div class="p-3 bg-red-50 border border-red-200 rounded-2xl flex items-center justify-between text-red-950">
             <span class="font-bold flex items-center gap-1.5">
-              <i data-lucide="shield" class="w-4 h-4 text-red-600"></i>
+              <span class="text-base">🦁</span>
               <span>پروتکل ایمنی اپراتور انسانی در دارتینگ حیات‌وحش و مواجهه تصادفی با اوپیوئیدهای مرگبار</span>
             </span>
-            <span class="text-[10px] bg-red-200 font-bold px-2 py-0.5 rounded-md">استاندارد ایمنی حیات‌وحش</span>
+            <span class="text-[10px] bg-red-200 font-bold px-2 py-0.5 rounded-md">Zoo & Wildlife 3rd Ed</span>
           </div>
 
           <div class="p-4 bg-white border border-red-200 rounded-2xl space-y-3">
             <div class="flex items-center gap-2 text-rose-900 font-black text-sm">
-              <i data-lucide="alert-octagon" class="w-5 h-5 text-rose-600 shrink-0"></i>
+              <span class="text-xl">🚨</span>
               <span>خطر مرگ آنی انسان ناشی از جذب حتی ۱ قطره اتورفین (M99) یا کارفنتانیل:</span>
             </div>
             <p class="text-slate-700 leading-relaxed">
@@ -2998,12 +2038,43 @@ const s = html.indexOf('
           </div>
         </div>
 
-        <div id="calcPaneWithdrawal" class="space-y-4 hidden">
-"}
-{"step_index":528,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-25T12:20:54Z","input_tokens":2684,"cache_read_tokens":192347,"output_tokens":88,"tool_calls":[{"name":"read_file","args":{"ByteOffset":0,"EndLine":1340,"Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\index.html","StartLine":1300}}]}
-{"step_index":529,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-25T12:20:58Z","content":"Created At: 2026-10-25T15:50:58+03:30
-Completed At: 2026-10-25T15:50:59+03:30
-Showing lines 1300-1340 of 2456
+        <!-- ============================================== -->
+        <!-- فرم ۸: تقویم شمسی پرهیز از مصرف گوشت، شیر و تخم‌مرغ (Withdrawal Times) -->
+        <!-- ============================================== -->
+        <div id="calcPaneWithdrawal" class="space-y-4 hidden text-xs">
+          <div class="p-3.5 bg-gradient-to-r from-emerald-800 to-teal-900 text-white rounded-2xl flex items-center justify-between border border-emerald-700 shadow-md">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 flex items-center justify-center shrink-0">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-black text-sm text-white">سامانه هوشمند پایش زمان پرهیز دارویی (IVO Withdrawal & Residue Engine)</h4>
+                <p class="text-[11px] text-emerald-200">محاسبه دقیق پایان دوره منع مصرف گوشت، شیر و تخم‌مرغ بر اساس استاندارد سازمان دامپزشکی ایران و فارماکوپه</p>
+              </div>
+            </div>
+            <span class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold whitespace-nowrap hidden sm:inline-block">استاندارد ملی IVO & FARAD</span>
+          </div>
+
+          <!-- انتخاب دارو و بافت هدف -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-slate-50 p-3.5 rounded-2xl border border-slate-200 text-xs">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">فرآورده و بافت هدف مصرف انسانی:</label>
+              <select id="wdrMatrix" class="w-full p-2.5 bg-white border border-slate-200 rounded-xl font-bold text-slate-800" onchange="runWithdrawalCalculation()">
+                <option value="milk" selected>🥛 شیر خوراکی (Milk - ساعت/دوشش)</option>
+                <option value="meat">🥩 گوشت و احشاء خوراکی (Meat - روز)</option>
+                <option value="egg">🥚 تخم‌مرغ خوراکی طیور (Egg - روز)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">داروی مصرفی تجاری در ایران:</label>
+              <select id="wdrDrugPresetSelect" class="w-full p-2.5 bg-white border border-slate-200 rounded-xl font-bold text-slate-800 text-[11px]" onchange="applyWithdrawalDrugPreset()">
+                <option value="ceftiofur" selected>سفتیوفور (Ceftiofur) — پرهیز شیر: ۰ روز | گوشت: ۴ روز</option>
+                <option value="oxytetracycline_la">اکسی‌تتراسایکلین طولانی‌اثر ۲۰٪ (LA) — شیر: ۷ روز | گوشت: ۲۸ روز</option>
+                <option value="penicillin_streptomycin">پنی‌سیلین + استرپتومایسین (Pen-Strep) — شیر: ۳ روز | گوشت: ۱۴ روز</option>
+                <option value="enrofloxacin">انروفلوکساسین ۱۰٪ تزریقی — منع در شیر | گوشت: ۱۴ روز</option>
+                <option value="flunixin">فلونیکسین مگلومین دامی — شیر: ۱.۵ روز (۳۶ ساعت) | گوشت: ۴ روز</option>
+                <option value="ketoprofen">کتوپروفن ۱۰٪ تزریقی — پرهیز شیر: ۰ روز | گوشت: ۱ الی ۴ روز</option>
+                <option value="ivermectin">آیورمکتین ۱٪ تزریقی — منع در شیر | گوشت: ۲۸ تا ۳۵ روز</option>
                 <option value="tylosin_tartrate">تایلوزین تارتارات طیور — پرهیز گوشت: ۱ روز | منع در تخم‌مرغ خوراکی</option>
                 <option value="tilmicosin">⛔ تایلمیکوزین ۳۰۰ دامی (مایکوتیک) — منع شیر | گوشت: ۲۸ روز</option>
                 <option value="phenylbutazone">⛔ فنیل‌بوتازون دامی (بیوت) — منع مطلق در تمام دام‌های گوشتی و شیری</option>
@@ -3044,26 +2115,58 @@ Showing lines 1300-1340 of 2456
               <div>
                 <label class="block text-[11px] text-slate-500 mb-0.5">روز ماه (۱ تا ۳۱):</label>
                 <input type="number" id="wdrDay" value="28" min="1" max="31" class="w-full p-2 bg-white border border-slate-200 rounded-xl font-mono latin-text font-bold text-center" oninput="runWithdrawalCalculation()">
-              </div>"}
-{"step_index":530,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-25T12:20:59Z","input_tokens":3381,"cache_read_tokens":192985,"output_tokens":87,"tool_calls":[{"name":"read_file","args":{"ByteOffset":0,"EndLine":1420,"Path":"c:\Users\mohammad hedayatinia\Desktop\برنامه دارونامه بالینی ایرانی\index.html","StartLine":1390}}]}
-{"step_index":531,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-10-25T12:21:02Z","content":"Created At: 2026-10-25T15:51:02+03:30
-Completed At: 2026-10-25T15:51:02+03:30
-Showing lines 1390-1420 of 2456
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-500 mb-0.5">ساعت تزریق (۰ تا ۲۳):</label>
+                <input type="number" id="wdrHour" value="12" min="0" max="23" class="w-full p-2 bg-white border border-slate-200 rounded-xl font-mono latin-text font-bold text-center" oninput="runWithdrawalCalculation()">
+              </div>
+            </div>
+          </div>
 
+          <!-- نتیجه نهایی ترخیص و زمانبندی -->
+          <div class="p-4 bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 rounded-2xl space-y-3">
+            <div class="flex items-center justify-between flex-wrap gap-2 pb-2.5 border-b border-emerald-200/70">
+              <span class="font-bold text-xs text-emerald-950 flex items-center gap-1.5">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                <span>وضعیت سلامت و رعایت دوره پرهیز مصرف:</span>
+              </span>
+              <span id="wdrResStatusBadge" class="px-3.5 py-1.5 rounded-xl font-black text-xs bg-emerald-100 text-emerald-900 border border-emerald-300">
+                ✅ پایان دوره پرهیز (Clear)
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="bg-white/80 p-3 rounded-xl border border-emerald-200/60">
+                <span class="block text-[11px] text-slate-500 mb-1 font-bold">تاریخ و ساعت دقیق پایان دوره پرهیز و مجاز بودن تحویل:</span>
+                <span id="wdrResClearanceDate" class="text-base sm:text-lg font-black text-emerald-950 font-mono latin-text">۱۴۰۵/۰۷/۲۸ ۱۲:۰۰</span>
+              </div>
+              <div class="bg-white/80 p-3 rounded-xl border border-emerald-200/60">
+                <span class="block text-[11px] text-slate-500 mb-1 font-bold">مدت زمان باقیمانده:</span>
+                <span id="wdrResCountdown" class="text-base sm:text-lg font-black text-teal-900">بدون باقیمانده دارویی (صفر روز)</span>
+              </div>
+            </div>
+
+            <!-- توصیه فارماکولوژیک و قانونی -->
+            <div class="p-3 bg-emerald-100/60 rounded-xl border border-emerald-300/60 text-xs text-emerald-950 flex items-start gap-2">
+              <i data-lucide="info" class="w-4 h-4 text-emerald-700 shrink-0 mt-0.5"></i>
+              <p id="wdrResLegalAdvice" class="leading-relaxed font-medium">
+                🌟 ویژگی استثنایی: زمان پرهیز شیر صفر روز (Zero Milk Discard) است. شیر تولیدی بدون توقف قابل تحویل به کارخانه است.
+              </p>
+            </div>
+
+            <!-- دکمه صدور گواهی رسمی چاپ -->
+            <div class="pt-1 flex justify-end">
+              <button onclick="printWithdrawalCertificate()" class="px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-black flex items-center gap-2 transition shadow-sm">
+                <i data-lucide="printer" class="w-4 h-4"></i>
+                <span>🖨️ چاپ فرم رسمی ترخیص دام و تأییدیه پرهیز دارویی (IVO Certificate)</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="px-6 py-3.5 bg-slate-50 border-t border-slate-200 flex justify-end">
-        <button onclick="closeCalculatorModal()" class="px-5 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-xs font-bold transition">
-          متوجه شدم
-        </button>
-      </div>
-
-    </div>
-  </div>
-      </div>
-
-      <div class="px-6 py-3.5 bg-slate-50 border-t border-slate-200 flex justify-end">
-        <button onclick="closeCalculatorModal()" class="px-5 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-xs font-bold transition">
+        <button onclick="closeCalculatorModal()" class="px-5 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-xs font-bold transition cursor-pointer">
           بستن ماشین‌حساب
         </button>
       </div>
@@ -3071,7 +2174,10 @@ Showing lines 1390-1420 of 2456
     </div>
   </div>
 
-id="interactionsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-overlay flex items-center justify-center p-3 sm:p-5">
+  <!-- ============================================== -->
+  <!-- MODAL: رادار هوشمند تداخلات همزمان دارویی (Polypharmacy Interaction Radar) -->
+  <!-- ============================================== -->
+  <div id="interactionsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-overlay flex items-center justify-center p-3 sm:p-5">
     <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
       
       <!-- هدر رادار تداخلات -->
@@ -4286,7 +3392,7 @@ id="interactionsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-ov
   <script src="data/pharmacology_depth.js?v=3.5.0"></script>
   <script src="data/specialty_protocols.js?v=3.5.0"></script>
   <script src="data/clinical_vault.js?v=3.8.0"></script>
-  <script src="app.js?v=3.10.0"></script>
+  <script src="app.js?v=3.10.1"></script>
 
   <!-- نوار ناوبری شناور شیشه‌ای در موبایل (Google Stitch Mobile Dock) -->
   <nav id="mobileBottomDock" class="stitch-floating-dock sm:hidden">
