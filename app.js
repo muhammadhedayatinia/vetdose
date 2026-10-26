@@ -66,7 +66,7 @@ function getSpecies3dIconHtml(spKey, sizeClass = 'w-5 h-5') {
 }
 
 // =================================================================
-// 🔬 پایگاه دانش و تصمیم‌یار بالینی پروتکل‌های فوق‌تخصصی پلامبز (۷ حوزه درون‌دارویی)
+// 🔬 پایگاه دانش و تصمیم‌یار بالینی پروتکل‌های فوق‌تخصصی دارونامه بالینی (۷ حوزه درون‌دارویی)
 // =================================================================
 const DRUG_SPECIALTY_KNOWLEDGE = {
   // ۱. انکولوژی و شیمی‌درمانی (Oncology & BSA)
@@ -194,7 +194,7 @@ function getDrugSpecialtyProfile(drug) {
   return { isOnco, isAnesthCri, isOpht, isIcu, hasCamelidUse, isCamelidFatal, hasAquaticsUse, hasWildlifeUse };
 }
 
-// استخراج گونه‌های تحت پوشش این دارو بر اساس دوز و شواهد بالینی پلامبز
+// استخراج گونه‌های تحت پوشش این دارو بر اساس دوز و شواهد بالینی دارونامه بالینی
 function getSpeciesForDrug(drug) {
   if (!drug) return ['canine', 'feline'];
   const p = getDrugSpecialtyProfile(drug);
@@ -399,7 +399,7 @@ function copyCardTabletPrescription(drugId) {
   });
 }
 
-// تولید HTML کادر بزرگ و خوانای بالینی پلامبز برای یک گونه مشخص
+// تولید HTML کادر بزرگ و خوانای بالینی دارونامه بالینی برای یک گونه مشخص
 function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
   let guide = drug.species_guide ? (drug.species_guide[speciesKey] || (speciesKey === 'aquatics' ? (drug.species_guide.aquatics || drug.species_guide.aquatic) : null)) : null;
   const spMeta = CARD_SPECIES_META[speciesKey] || { label: speciesKey, icon: '🐾' };
@@ -808,7 +808,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
       <!-- کادر انتخاب غلظت ویال تزریقی (در صورت وجود چند غلظت) -->
       ${formulationSwitcherHtml}
 
-      <!-- مقادیر مرجع پلامبز و فرمولاسیون دارویی در ایران -->
+      <!-- مقادیر مرجع دارونامه بالینی و فرمولاسیون دارویی در ایران -->
       <div class="grid grid-cols-2 gap-2 text-xs bg-white/85 p-2.5 rounded-xl border border-slate-200/80">
         <div>
           <span class="text-[11px] text-slate-500 block font-medium">دوز مرجع استاندارد بالینی:</span>
@@ -836,7 +836,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
         </div>
       ` : ''}
 
-      <!-- مروارید بالینی پلامبز -->
+      <!-- مروارید بالینی دارونامه بالینی -->
       ${guide.pearl ? `
         <div class="text-xs leading-relaxed text-slate-700 bg-white/80 p-2.5 rounded-xl border border-slate-200/60">
           <span class="font-black text-teal-800">💡 نکته کلیدی بالینی:</span>
@@ -902,7 +902,7 @@ function selectCardSpecies(drugId, speciesKey) {
   const drug = DRUGS_DATA.find(d => d.id === drugId);
   if (!drug) return;
 
-  // ۱. به‌روزرسانی محتوای کادر پلامبز
+  // ۱. به‌روزرسانی محتوای کادر دارونامه بالینی
   const contentEl = document.getElementById(`spContent_${drugId}`);
   if (contentEl) {
     contentEl.innerHTML = getPlumbsSpeciesBoxHtml(drug, speciesKey);
@@ -1064,12 +1064,12 @@ function filterByQuickTag(tag) {
     setSpeciesFilter('equine');
   } else if (tag === 'ruminant' || tag === 'large_animal') {
     currentSpecies = 'ruminant';
-    document.querySelectorAll('.species-pill').forEach(btn => {
+    document.querySelectorAll('.species-tab').forEach(btn => {
       btn.classList.remove('active', 'bg-slate-900', 'text-white', 'border-slate-900');
       btn.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200');
     });
-    const bovBtn = document.querySelector('[data-species="bovine"]');
-    const ocBtn = document.querySelector('[data-species="ovine_caprine"]');
+    const bovBtn = document.querySelector('.species-tab[data-species="bovine"]');
+    const ocBtn = document.querySelector('.species-tab[data-species="ovine_caprine"]');
     if (bovBtn) {
       bovBtn.classList.add('active', 'bg-slate-900', 'text-white', 'border-slate-900');
       bovBtn.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
@@ -1148,12 +1148,12 @@ function updateTherapeuticCategoryCounts() {
   });
 }
 
-// دکمه میانبر نقشه راه ۱۴ فصل پلامبز
+// دکمه میانبر نقشه راه ۱۴ فصل دارونامه بالینی
 function openChaptersRoadmapModal() {
   openTherapeuticAtlasModal();
 }
 
-// باز کردن مودال اطلس و نقشه راه ۱۴ فصل بالینی پلامبز
+// باز کردن مودال اطلس و نقشه راه ۱۴ فصل بالینی دارونامه بالینی
 function openTherapeuticAtlasModal() {
   const modal = document.getElementById('therapeuticAtlasModal');
   const container = document.getElementById('therapeuticAtlasContainer');
@@ -1163,7 +1163,7 @@ function openTherapeuticAtlasModal() {
   const totalTargetCore = DRUGS_DATA.length;
   const overallPercent = 100;
 
-  // هدر آماری نقشه راه پلامبز
+  // هدر آماری نقشه راه دارونامه بالینی
   let overviewHtml = `
     <div class="mb-4 p-4 rounded-2xl bg-gradient-to-r from-teal-900 via-slate-900 to-indigo-950 text-white border border-teal-500/30 flex flex-wrap items-center justify-between gap-3 shadow-md">
       <div>
@@ -1202,7 +1202,7 @@ function openTherapeuticAtlasModal() {
       const chData = PLUMBS_CHAPTERS_ROADMAP_DATA.chapters.find(c => c.id === cat.id || c.title_fa.includes(cat.name_fa.split(' ')[0]));
       if (chData && chData.sample_monographs) {
         sampleMngHtml = chData.sample_monographs.slice(0, 6).map(m => `
-          <span class="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md font-mono border border-slate-200" title="صفحه ${m.printed_page} در پلامبز">
+          <span class="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md font-mono border border-slate-200" title="صفحه ${m.printed_page} در دارونامه بالینی">
             ${m.name}
           </span>
         `).join(' ');
@@ -1310,13 +1310,13 @@ function setCategoryFilter(cat) {
 // تغییر فیلتر گونه
 function setSpeciesFilter(species) {
   currentSpecies = species;
-  document.querySelectorAll('.species-pill').forEach(btn => {
+  document.querySelectorAll('.species-tab').forEach(btn => {
     if (btn.getAttribute('data-species') === species) {
-      btn.classList.add('bg-slate-900', 'text-white', 'border-slate-900', 'shadow-sm');
-      btn.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
+      btn.classList.add('active', 'font-bold', 'text-cyan-800', 'border-b-2', 'border-cyan-600', 'bg-cyan-50/70');
+      btn.classList.remove('font-medium', 'text-slate-600', 'border-transparent', 'hover:bg-slate-50');
     } else {
-      btn.classList.remove('bg-slate-900', 'text-white', 'border-slate-900', 'shadow-sm');
-      btn.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200');
+      btn.classList.remove('active', 'font-bold', 'text-cyan-800', 'border-b-2', 'border-cyan-600', 'bg-cyan-50/70');
+      btn.classList.add('font-medium', 'text-slate-600', 'border-transparent', 'hover:bg-slate-50');
     }
   });
 
@@ -2006,7 +2006,7 @@ function renderDrugs(reset = true) {
         return false;
       }
 
-      // ۱. فیلتر رده درمانی و فارماکولوژی (پلامبز)
+      // ۱. فیلتر رده درمانی و فارماکولوژی (دارونامه بالینی)
       if (currentTherapeuticCategory !== 'all') {
         const isMatchPrimary = drug.therapeutic_category === currentTherapeuticCategory;
         const isMatchSecondary = drug.secondary_categories && drug.secondary_categories.includes(currentTherapeuticCategory);
@@ -2237,7 +2237,7 @@ function renderSingleDrugCardHtml(drug) {
             </div>
           </div>
 
-          <!-- برچسب‌های تفکیک رده درمانی و سیستم اندام پلامبز -->
+          <!-- برچسب‌های تفکیک رده درمانی و سیستم اندام دارونامه بالینی -->
           <div class="flex items-center gap-1.5 flex-wrap mb-1.5">
             <span class="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80">
               <i data-lucide="${drug.therapeutic_icon || 'pill'}" class="w-3.5 h-3.5 text-teal-600"></i>
@@ -2253,7 +2253,7 @@ function renderSingleDrugCardHtml(drug) {
           <!-- رده فارماکولوژی تفصیلی با پرانتزهای ایزوله‌شده -->
           <p class="text-xs text-slate-500 line-clamp-1 mb-2">${fixBidiParentheses(drug.drug_class_fa)}</p>
 
-          <!-- برچسب‌های سریع فوق‌تخصصی پلامبز -->
+          <!-- برچسب‌های سریع فوق‌تخصصی دارونامه بالینی -->
           ${renderDrugSpecialtyPillsHtml(drug)}
 
           <!-- پیش‌نمایش گونه‌های حیوانی تحت پوشش در حالت فشرده -->
@@ -2287,12 +2287,12 @@ function renderSingleDrugCardHtml(drug) {
             </div>
           </div>
 
-          <!-- 💉 کادر بزرگ، خوانا و اختصاصی بالینی پلامبز -->
+          <!-- 💉 کادر بزرگ، خوانا و اختصاصی بالینی دارونامه بالینی -->
           <div id="spContent_${drug.id}" class="mb-3">
             ${speciesBoxHtml}
           </div>
 
-          <!-- 🔬 تصمیم‌یار بالینی و پروتکل‌های فوق‌تخصصی پلامبز -->
+          <!-- 🔬 تصمیم‌یار بالینی و پروتکل‌های فوق‌تخصصی دارونامه بالینی -->
           ${renderDrugSpecialtySuiteHtml(drug, false)}
 
           <!-- هشدارهای مهم و زایلیتول -->
@@ -2668,7 +2668,7 @@ function openMonographModal(drugId) {
     <!-- 🧪 کوکتل‌های ترکیبی و سینرژی در مونوگراف -->
     ${monoSynergyHtml}
 
-    <!-- 🔬 تصمیم‌یار بالینی و پروتکل‌های فوق‌تخصصی پلامبز در مونوگراف کامل -->
+    <!-- 🔬 تصمیم‌یار بالینی و پروتکل‌های فوق‌تخصصی دارونامه بالینی در مونوگراف کامل -->
     ${renderDrugSpecialtySuiteHtml(drug, true)}
 
     <!-- 🔬 ۴ بعد فوق‌تخصصی فارماکولوژی: سازگاری سرنگ، پایداری BUD، ایمنی USP 800 و فارماکوکینتیک CYP450 -->
@@ -4509,7 +4509,7 @@ function runFluidCalculation() {
   const ongoingLosses = parseFloat(document.getElementById('flLosses').value) || 0;
   const dripSetFactor = parseFloat(document.getElementById('flDripSet').value) || 20;
 
-  // نرخ نگهداری گونه‌ها بر اساس رفرنس پلامبز
+  // نرخ نگهداری گونه‌ها بر اساس رفرنس دارونامه بالینی
   let maintRate = 60.0; // سگ
   if (species === 'feline') maintRate = 45.0; // گربه
   else if (species === 'equine') maintRate = 50.0; // اسب
@@ -9252,7 +9252,7 @@ function printWithdrawalCertificate() {
       <div class="cert-box">
         <div class="header">
           <div class="title">گواهی رسمی سلامت و اتمام دوره پرهیز از مصرف دارویی (Withdrawal Certificate)</div>
-          <div style="font-size: 12px; color: #64748b; margin-top: 5px;">مطابق با ضوابط سازمان دامپزشکی کشور و فارماکوپه پلامبز ایران</div>
+          <div style="font-size: 12px; color: #64748b; margin-top: 5px;">مطابق با ضوابط سازمان دامپزشکی کشور و فارماکوپه دارونامه بالینی ایران</div>
         </div>
         <div class="field"><span class="label">نام واحد تولیدی / دامداری / مرغداری:</span> <span class="val">${farm}</span></div>
         <div class="field"><span class="label">مشخصات و شماره پلاک دام / گله:</span> <span class="val">${tag}</span></div>
@@ -10502,4 +10502,12 @@ if (typeof window !== 'undefined') {
   window.openClinicalSidebar = openClinicalSidebar;
   window.closeClinicalSidebar = closeClinicalSidebar;
   window.getSpecies3dIconHtml = getSpecies3dIconHtml;
+}
+
+
+// Auto-refresh Lucide icons
+if (typeof window !== 'undefined') {
+  window.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  });
 }

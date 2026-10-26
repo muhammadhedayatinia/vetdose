@@ -2,7 +2,7 @@
  * Service Worker: سامانه آفلاین وت‌دوز (VetDose PWA Offline Engine)
  * نسخه ۳.۱ - فونت یکان‌بخ آفلاین، ایزولاسیون کامل پرانتزها، و سیستم بارگذاری فوق‌سریع موبایل
  */
-const CACHE_NAME = 'vetdose-cache-v3.8.0-fluent-organic-drop-shadow';
+const CACHE_NAME = 'vetdose-cache-v3.9.0-plumbs-minimalist';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
