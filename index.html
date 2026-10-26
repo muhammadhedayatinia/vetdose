@@ -12,7 +12,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Custom Style -->
-  <link rel="stylesheet" href="style.css?v=3.5.0">
+  <link rel="stylesheet" href="style.css?v=3.6.0">
 
   <!-- PWA Manifest & Theme Color -->
   <link rel="manifest" href="manifest.json">
@@ -37,7 +37,7 @@
               <span>وت‌دوز</span>
               <span class="text-sm font-mono text-[#00CAE0] font-black tracking-wider">VetDose</span>
             </h1>
-            <span class="text-[11px] bg-[#00CAE0]/15 text-[#00CAE0] border border-[#00CAE0]/30 px-2.5 py-0.5 rounded-full font-bold">طراحی بالینی Plumb's</span>
+            <span class="text-[11px] bg-[#00CAE0]/15 text-[#00CAE0] border border-[#00CAE0]/30 px-2.5 py-0.5 rounded-full font-bold">سامانه تصمیم‌یار بالینی دامپزشکی</span>
           </div>
           <p class="text-[11px] text-[#ABB5CD] hidden sm:block">دارونامه جامع و سامانه تصمیم‌یار بالینی دامپزشکی ایران</p>
         </div>
@@ -47,28 +47,28 @@
       <div class="flex items-center gap-2 sm:gap-2.5">
         <!-- دکمه ماشین‌حساب دوز -->
         <button onclick="openCalculatorWithTab('dose')" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0590D5] hover:bg-[#0070A8] text-white text-xs sm:text-sm font-black border border-[#00CAE0]/40 shadow-sm shadow-[#0590D5]/25 transition cursor-pointer group">
-          <img src="assets/icons_3d/calculator.png" alt="ماشین‌حساب" class="w-4 h-4 sm:w-5 sm:h-5 object-contain drop-shadow group-hover:scale-110 transition-transform">
+          <span class="icon-frame icon-frame-sm bg-white/20 border-white/30"><img src="assets/icons_3d/calculator.png" alt="ماشین‌حساب" class="w-3.5 h-3.5 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
           <span class="hidden sm:inline">ماشین‌حساب دوز</span>
           <span class="sm:hidden">دوز</span>
         </button>
 
         <!-- دکمه چکر تداخلات -->
         <button onclick="openInteractionsModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#17285E] hover:bg-[#214595] text-white text-xs sm:text-sm font-bold border border-[#0590D5]/35 transition cursor-pointer group">
-          <img src="assets/icons_3d/shield.png" alt="تداخلات" class="w-4 h-4 sm:w-5 sm:h-5 object-contain drop-shadow group-hover:scale-110 transition-transform">
+          <span class="icon-frame icon-frame-sm bg-white/15 border-white/25"><img src="assets/icons_3d/shield.png" alt="تداخلات" class="w-3.5 h-3.5 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
           <span class="hidden sm:inline">چکر تداخلات</span>
           <span class="sm:hidden">تداخلات</span>
         </button>
 
         <!-- دکمه اورژانس و احیا CPR -->
         <button onclick="openCprModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#FF084B] hover:bg-[#CC0946] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#FF084B]/35 transition cursor-pointer group">
-          <img src="assets/icons_3d/heart.png" alt="اورژانس CPR" class="w-4 h-4 sm:w-5 sm:h-5 object-contain drop-shadow cpr-pulse group-hover:scale-110 transition-transform">
+          <span class="icon-frame icon-frame-sm bg-white/20 border-white/30"><img src="assets/icons_3d/heart.png" alt="اورژانس CPR" class="w-3.5 h-3.5 object-contain drop-shadow cpr-pulse group-hover:scale-110 transition-transform"></span>
           <span class="hidden sm:inline">اورژانس CPR</span>
           <span class="sm:hidden">CPR</span>
         </button>
 
         <!-- دکمه منوی حاشیه‌ای ابزارها (مشابه سایدبار VetCalculators) -->
         <button onclick="openClinicalSidebar()" class="flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-[#00CAE0]/20 via-[#0590D5]/20 to-[#17285E]/40 hover:from-[#00CAE0]/30 hover:to-[#0590D5]/30 text-white border border-[#00CAE0]/40 text-xs sm:text-sm font-black shadow-sm transition cursor-pointer group" title="گشودن نوار حاشیه ابزارها و پروتکل‌های فوق‌تخصصی">
-          <img src="assets/icons_3d/ui_folder.png" alt="ابزارها" class="w-4 h-4 sm:w-5 sm:h-5 object-contain drop-shadow group-hover:scale-110 transition-transform">
+          <span class="icon-frame icon-frame-sm bg-white/20 border-white/30"><img src="assets/icons_3d/ui_folder.png" alt="ابزارها" class="w-3.5 h-3.5 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
           <span class="hidden md:inline">ابزارها و پروتکل‌ها</span>
           <span class="md:hidden">ابزارها</span>
           <span class="text-[10px] bg-[#00CAE0] text-[#0A2447] px-1.5 py-0.2 rounded-full font-mono font-black">12</span>
@@ -105,7 +105,7 @@
       <!-- گروه ۱: اورژانس، شوک و مراقبت ویژه -->
       <div class="space-y-2">
         <div class="flex items-center gap-2 text-[11px] font-black text-[#FFB140]">
-          <img src="assets/icons_3d/heart.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/heart.png" class="w-4 h-4 object-contain"></span>
           <span>اورژانس، شوک و مراقبت‌های ویژه (ICU):</span>
         </div>
         <div class="space-y-1.5">
@@ -147,7 +147,7 @@
       <!-- گروه ۲: بیهوشی، دارورفت و تزریقات -->
       <div class="space-y-2">
         <div class="flex items-center gap-2 text-[11px] font-black text-[#00CAE0]">
-          <img src="assets/icons_3d/syringe.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/syringe.png" class="w-4 h-4 object-contain"></span>
           <span>بیهوشی، انفوزیون و دارورفت:</span>
         </div>
         <div class="space-y-1.5">
@@ -200,7 +200,7 @@
       <!-- گروه ۳: فوق‌تخصصی، انکولوژی و اندام‌ها -->
       <div class="space-y-2">
         <div class="flex items-center gap-2 text-[11px] font-black text-[#A78BFA]">
-          <img src="assets/icons_3d/dna.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/dna.png" class="w-4 h-4 object-contain"></span>
           <span>پروتکل‌های فوق‌تخصصی و اندام‌ها:</span>
         </div>
         <div class="space-y-1.5">
@@ -292,16 +292,16 @@
         </div>
       </div>
 
-      <!-- گروه ۵: دانشنامه و اطلس پلامبز -->
+      <!-- گروه ۵: دانشنامه و اطلس جامع بالینی -->
       <div class="space-y-2 pt-1 border-t border-[#0590D5]/20">
         <div class="flex items-center gap-2 text-[11px] font-black text-[#FFB140]">
           <img src="assets/icons_3d/ui_crown.png" class="w-4 h-4 object-contain">
-          <span>دانشنامه و اطلس مرجع پلامبز:</span>
+          <span>دانشنامه و اطلس جامع بالینی:</span>
         </div>
         <div class="grid grid-cols-2 gap-2">
           <button onclick="closeClinicalSidebar(); openChaptersRoadmapModal();" class="p-2.5 rounded-xl bg-[#17285E]/60 hover:bg-[#214595] border border-[#FFB140]/30 flex flex-col items-center justify-center gap-1.5 text-center transition cursor-pointer group">
-            <img src="assets/icons_3d/all.png" class="w-8 h-8 object-contain drop-shadow group-hover:scale-110 transition-transform">
-            <span class="font-bold text-white text-[11px]">۱۴ فصل پلامبز</span>
+            <span class="icon-frame-xl bg-slate-800/90 border border-slate-700"><img src="assets/icons_3d/physiology-pharmacology.png" class="w-7 h-7 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
+            <span class="font-bold text-white text-[11px]">اطلس رده‌های دارویی</span>
           </button>
 
           <button onclick="closeClinicalSidebar(); openTherapeuticAtlasModal();" class="p-2.5 rounded-xl bg-[#17285E]/60 hover:bg-[#214595] border border-[#00CAE0]/30 flex flex-col items-center justify-center gap-1.5 text-center transition cursor-pointer group">
@@ -409,7 +409,7 @@
       <div class="flex items-center gap-1.5 overflow-x-auto pt-2.5 pb-1 scrollbar-none text-xs" id="quickSearchChips">
         <span class="text-slate-400 text-[11px] font-bold shrink-0 ml-1">دسترسی سریع:</span>
         <button onclick="filterByQuickTag('all')" data-qtag="all" class="stitch-chip active flex items-center gap-1.5">
-          <img src="assets/icons_3d/all.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame icon-frame-sm"><img src="assets/icons_3d/pill.png" class="w-3.5 h-3.5 object-contain"></span>
           <span>همه داروها</span>
         </button>
         <button onclick="filterByQuickTag('emergency')" data-qtag="emergency" class="stitch-chip flex items-center gap-1.5">
@@ -417,7 +417,7 @@
           <span>اورژانس و CPR</span>
         </button>
         <button onclick="filterByQuickTag('antibiotic')" data-qtag="antibiotic" class="stitch-chip flex items-center gap-1.5">
-          <img src="assets/icons_3d/shield.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/shield.png" class="w-4 h-4 object-contain"></span>
           <span>آنتی‌بیوتیک‌ها</span>
         </button>
         <button onclick="filterByQuickTag('analgesic')" data-qtag="analgesic" class="stitch-chip flex items-center gap-1.5">
@@ -425,7 +425,7 @@
           <span>ضددرد و مسکن</span>
         </button>
         <button onclick="filterByQuickTag('anesthetic')" data-qtag="anesthetic" class="stitch-chip flex items-center gap-1.5">
-          <img src="assets/icons_3d/syringe.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/syringe.png" class="w-4 h-4 object-contain"></span>
           <span>بیهوشی و آرام‌بخش</span>
         </button>
         <button onclick="filterByQuickTag('cardio_renal')" data-qtag="cardio_renal" class="stitch-chip flex items-center gap-1.5">
@@ -464,7 +464,7 @@
           <div class="w-7 h-7 rounded-lg bg-[#0590D5]/10 text-[#0590D5] flex items-center justify-center font-black">
             <i data-lucide="layout-grid" class="w-4 h-4"></i>
           </div>
-          <span class="text-xs sm:text-sm font-black text-slate-800">دسته‌بندی درمانی و فارماکولوژی (پلامبز):</span>
+          <span class="text-xs sm:text-sm font-black text-slate-800">دسته‌بندی درمانی و فارماکولوژی بالینی:</span>
           <span class="text-[11px] text-slate-400 font-medium hidden sm:inline">تفکیک بر اساس اثر فارماکولوژیک و سیستم اندام</span>
         </div>
 
@@ -591,36 +591,36 @@
           <img src="assets/icons_3d/ui_paw.png" class="w-4 h-4 object-contain">
           <span>گونه بیمار:</span>
         </span>
-        <button onclick="setSpeciesFilter('all')" data-species="all" class="species-pill active px-3 py-1.5 rounded-xl border bg-slate-900 text-white border-slate-900 font-bold whitespace-nowrap flex items-center gap-1.5 transition">
-          <img src="assets/icons_3d/ui_paw.png" class="w-4 h-4 object-contain">
+        <button onclick="setSpeciesFilter('all')" data-species="all" class="species-pill active bg-slate-900 text-white border-slate-900 px-3 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-1.5 transition">
+          <span class="icon-frame"><img src="assets/icons_3d/ui_paw.png" class="w-3.5 h-3.5 object-contain"></span>
           <span>همه گونه‌ها</span>
         </button>
-        <button onclick="setSpeciesFilter('canine')" data-species="canine" class="species-pill px-3 py-1.5 rounded-xl border bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 font-bold whitespace-nowrap flex items-center gap-1.5 transition">
-          <img src="assets/icons_3d/dog.png" class="w-4 h-4 object-contain">
+        <button onclick="setSpeciesFilter('canine')" data-species="canine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-1.5 transition">
+          <span class="icon-frame"><img src="assets/icons_3d/dog.png" class="w-3.5 h-3.5 object-contain"></span>
           <span>سگ</span>
         </button>
-        <button onclick="setSpeciesFilter('feline')" data-species="feline" class="species-pill px-3 py-1.5 rounded-xl border bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 font-bold whitespace-nowrap flex items-center gap-1.5 transition">
-          <img src="assets/icons_3d/cat.png" class="w-4 h-4 object-contain">
+        <button onclick="setSpeciesFilter('feline')" data-species="feline" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-1.5 transition">
+          <span class="icon-frame"><img src="assets/icons_3d/cat.png" class="w-3.5 h-3.5 object-contain"></span>
           <span>گربه</span>
         </button>
-        <button onclick="setSpeciesFilter('equine')" data-species="equine" class="species-pill px-3 py-1.5 rounded-xl border bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 font-bold whitespace-nowrap flex items-center gap-1.5 transition">
-          <img src="assets/icons_3d/horse.png" class="w-4 h-4 object-contain">
+        <button onclick="setSpeciesFilter('equine')" data-species="equine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-1.5 transition">
+          <span class="icon-frame"><img src="assets/icons_3d/horse.png" class="w-3.5 h-3.5 object-contain"></span>
           <span>اسب</span>
         </button>
-        <button onclick="setSpeciesFilter('bovine')" data-species="bovine" class="species-pill px-3 py-1.5 rounded-xl border bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 font-bold whitespace-nowrap flex items-center gap-1.5 transition">
-          <img src="assets/icons_3d/cow.png" class="w-4 h-4 object-contain">
+        <button onclick="setSpeciesFilter('bovine')" data-species="bovine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-1.5 transition">
+          <span class="icon-frame"><img src="assets/icons_3d/cow.png" class="w-3.5 h-3.5 object-contain"></span>
           <span>گاو</span>
         </button>
-        <button onclick="setSpeciesFilter('ovine_caprine')" data-species="ovine_caprine" class="species-pill px-3 py-1.5 rounded-xl border bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 font-bold whitespace-nowrap flex items-center gap-1.5 transition">
-          <img src="assets/icons_3d/sheep.png" class="w-4 h-4 object-contain">
+        <button onclick="setSpeciesFilter('ovine_caprine')" data-species="ovine_caprine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-1.5 transition">
+          <span class="icon-frame"><img src="assets/icons_3d/sheep.png" class="w-3.5 h-3.5 object-contain"></span>
           <span>گوسفند و بز</span>
         </button>
-        <button onclick="setSpeciesFilter('poultry')" data-species="poultry" class="species-pill px-3 py-1.5 rounded-xl border bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 font-bold whitespace-nowrap flex items-center gap-1.5 transition">
-          <img src="assets/icons_3d/poultry.png" class="w-4 h-4 object-contain">
+        <button onclick="setSpeciesFilter('poultry')" data-species="poultry" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-1.5 transition">
+          <span class="icon-frame"><img src="assets/icons_3d/poultry.png" class="w-3.5 h-3.5 object-contain"></span>
           <span>طیور</span>
         </button>
-        <button onclick="setSpeciesFilter('aquatics')" data-species="aquatics" class="species-pill px-3 py-1.5 rounded-xl border bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 font-bold whitespace-nowrap flex items-center gap-1.5 transition">
-          <img src="assets/icons_3d/fish.png" class="w-4 h-4 object-contain">
+        <button onclick="setSpeciesFilter('aquatics')" data-species="aquatics" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-1.5 transition">
+          <span class="icon-frame"><img src="assets/icons_3d/fish.png" class="w-3.5 h-3.5 object-contain"></span>
           <span>آبزیان و ماهیان</span>
         </button>
       </div>
@@ -631,12 +631,12 @@
           <img src="assets/icons_3d/physiology-pharmacology.png" class="w-4 h-4 object-contain">
           <span>منبع و بازار ایران:</span>
         </span>
-        <button onclick="setCategoryFilter('all')" data-cat="all" class="cat-pill active px-3 py-1.5 rounded-xl font-bold border transition bg-slate-900 text-white border-slate-900 whitespace-nowrap flex items-center gap-1.5">
-          <img src="assets/icons_3d/all.png" class="w-4 h-4 object-contain">
+        <button onclick="setCategoryFilter('all')" data-cat="all" class="cat-pill active bg-slate-900 text-white border-slate-900 px-3 py-1.5 rounded-xl font-bold border transition whitespace-nowrap flex items-center gap-1.5">
+          <span class="icon-frame"><img src="assets/icons_3d/physiology-pharmacology.png" class="w-3.5 h-3.5 object-contain"></span>
           <span>همه منابع</span>
         </button>
-        <button onclick="setCategoryFilter('vet_only')" data-cat="vet_only" class="cat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-emerald-800 border-emerald-200 hover:bg-emerald-50 whitespace-nowrap flex items-center gap-1.5">
-          <img src="assets/icons_3d/check.png" class="w-4 h-4 object-contain">
+        <button onclick="setCategoryFilter('vet_only')" data-cat="vet_only" class="cat-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1.5 rounded-xl font-bold border transition whitespace-nowrap flex items-center gap-1.5">
+          <span class="icon-frame"><img src="assets/icons_3d/check.png" class="w-3.5 h-3.5 object-contain"></span>
           <span>اختصاصی دامی</span>
         </button>
         <button onclick="setCategoryFilter('dual_use')" data-cat="dual_use" class="cat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-blue-800 border-blue-200 hover:bg-blue-50 whitespace-nowrap flex items-center gap-1.5">
@@ -648,7 +648,7 @@
           <span>انسانی در دامپزشکی</span>
         </button>
         <button onclick="setCategoryFilter('blacklisted')" data-cat="blacklisted" class="cat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-rose-800 border-rose-200 hover:bg-rose-50 whitespace-nowrap flex items-center gap-1.5">
-          <img src="assets/icons_3d/skull.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/skull.png" class="w-4 h-4 object-contain"></span>
           <span>خط قرمز (سمی)</span>
         </button>
         <div class="h-4 w-px bg-slate-200 shrink-0 mx-1"></div>
@@ -736,7 +736,7 @@
       <div class="px-6 py-3.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
         <div class="text-xs text-slate-500 flex items-center gap-1.5">
           <i data-lucide="shield-check" class="w-4 h-4 text-teal-600"></i>
-          <span>منبع: Plumb's 9th/10th Ed + فارماکوپه دامپزشکی ایران</span>
+          <span>مرجع: فارماکوپه رسمی دامپزشکی ایران و استانداردهای بالینی بین‌المللی</span>
         </div>
         <div class="flex items-center gap-2">
           <button id="monoPrescribeBtn" class="flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 rounded-xl text-xs font-black transition shadow-sm">
@@ -767,7 +767,7 @@
         <div class="flex items-center gap-2">
           <i data-lucide="calculator" class="w-5 h-5 text-teal-400"></i>
           <div>
-            <h3 class="text-base font-bold">ماشین‌حساب بالینی و گنجینه تصمیم‌یار ۱۶ کتاب مرجع</h3>
+            <h3 class="text-base font-bold">ماشین‌حساب‌های بالینی و سامانه تصمیم‌یار تخصصی</h3>
             <p class="text-[11px] text-teal-300 font-normal">تعیین گونه، شکل دارویی (شربت، تزریقی، قرص، قطره، پودر) و پروتکل‌های تخصصی</p>
           </div>
         </div>
@@ -776,10 +776,10 @@
         </button>
       </div>
 
-      <!-- انتخاب نوع ماشین‌حساب و ابزارهای ۱۶ کتاب مرجع -->
+      <!-- انتخاب نوع ماشین‌حساب و ابزارهای تصمیم‌یار بالینی -->
       <div class="flex border-b border-slate-200 bg-slate-100 text-xs font-bold overflow-x-auto p-1.5 gap-1 shadow-inner">
         <button onclick="switchCalcTab('dose')" id="calcTabDose" class="py-2 px-3 rounded-xl border border-teal-600 text-teal-900 bg-white shadow-2xs transition whitespace-nowrap flex items-center gap-2">
-          <img src="assets/icons_3d/calculator.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/calculator.png" class="w-4 h-4 object-contain"></span>
           <span>دوز و نسخه چندگونه‌ای</span>
         </button>
         <button onclick="switchCalcTab('pill')" id="calcTabPill" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
@@ -787,19 +787,19 @@
           <span>قرص و نسخه</span>
         </button>
         <button onclick="switchCalcTab('dilution')" id="calcTabDilution" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
-          <img src="assets/icons_3d/test_tube.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/test_tube.png" class="w-4 h-4 object-contain"></span>
           <span>رقیق‌سازی</span>
         </button>
         <button onclick="switchCalcTab('fluid')" id="calcTabFluid" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
-          <img src="assets/icons_3d/droplet.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/droplet.png" class="w-4 h-4 object-contain"></span>
           <span>مایع‌درمانی و الکترولیت‌ها</span>
         </button>
         <button onclick="switchCalcTab('cri')" id="calcTabCri" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
-          <img src="assets/icons_3d/syringe.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/syringe.png" class="w-4 h-4 object-contain"></span>
           <span>انفوزیون CRI</span>
         </button>
         <button onclick="switchCalcTab('toxicology')" id="calcTabToxicology" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
-          <img src="assets/icons_3d/warning.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/warning.png" class="w-4 h-4 object-contain"></span>
           <span>سم‌شناسی و پادزهرها</span>
         </button>
         <button onclick="switchCalcTab('labref')" id="calcTabLabRef" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
@@ -807,15 +807,15 @@
           <span>مقادیر مرجع CBC و بیوشیمی</span>
         </button>
         <button onclick="switchCalcTab('transfusion')" id="calcTabTransfusion" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
-          <img src="assets/icons_3d/droplet.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/droplet.png" class="w-4 h-4 object-contain"></span>
           <span>انتقال خون و کراس‌مچ</span>
         </button>
         <button onclick="switchCalcTab('ophthalmology')" id="calcTabOphthalmology" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
-          <img src="assets/icons_3d/eye.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/eye.png" class="w-4 h-4 object-contain"></span>
           <span>تشخیصی چشم</span>
         </button>
         <button onclick="switchCalcTab('oncology')" id="calcTabOncology" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
-          <img src="assets/icons_3d/dna.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/dna.png" class="w-4 h-4 object-contain"></span>
           <span>انکولوژی و BSA</span>
         </button>
         <button onclick="switchCalcTab('iris')" id="calcTabIris" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
@@ -827,7 +827,7 @@
           <span>ماشین بیهوشی و ونتیلاتور</span>
         </button>
         <button onclick="switchCalcTab('nutrition')" id="calcTabNutrition" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
-          <img src="assets/icons_3d/apple.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/apple.png" class="w-4 h-4 object-contain"></span>
           <span>تغذیه و کالری RER</span>
         </button>
         <button onclick="switchCalcTab('wildlife_safety')" id="calcTabWildlifeSafety" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
@@ -835,7 +835,7 @@
           <span>ایمنی دارتینگ حیات‌وحش</span>
         </button>
         <button onclick="switchCalcTab('withdrawal')" id="calcTabWithdrawal" class="py-2 px-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition whitespace-nowrap flex items-center gap-2">
-          <img src="assets/icons_3d/calendar.png" class="w-4 h-4 object-contain">
+          <span class="icon-frame"><img src="assets/icons_3d/calendar.png" class="w-4 h-4 object-contain"></span>
           <span>تقویم پرهیز شمسی</span>
         </button>
       </div>
@@ -843,14 +843,14 @@
       <!-- بدنه ماشین‌حساب -->
       <div class="p-6 overflow-y-auto space-y-5" id="calcContent">
         
-        <!-- فرم ۱: ماشین‌حساب جامع بالینی چندگونه‌ای و چندفرمی پلامبز -->
+        <!-- فرم ۱: ماشین‌حساب جامع بالینی چندگونه‌ای و چندفرمی -->
         <div id="calcPaneDose" class="space-y-4">
           <div class="p-3 bg-teal-50 border border-teal-200 rounded-2xl flex items-center justify-between text-xs text-teal-900">
             <span class="font-bold flex items-center gap-1.5">
               <i data-lucide="sparkles" class="w-4 h-4 text-teal-600"></i>
               <span>محاسبه‌گر جامع دوز بالینی، حجم سرنگ، شربت، کسر قرص و نسخه بر اساس گونه و فرم دارو</span>
             </span>
-            <span class="text-[10px] bg-teal-200/80 font-mono font-bold px-2 py-0.5 rounded-md">استاندارد ۱۶ کتاب مرجع</span>
+            <span class="text-[10px] bg-teal-200/80 font-mono font-bold px-2 py-0.5 rounded-md">استاندارد فارماکوپه بالینی</span>
           </div>
 
           <!-- انتخاب گونه بیمار -->
@@ -862,35 +862,35 @@
                 <span class="text-[11px]">سگ</span>
               </button>
               <button type="button" onclick="setUniversalSpecies('feline')" id="btnSp_feline" class="univ-sp-btn py-2 px-1 rounded-xl text-center border font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border-slate-200 transition flex flex-col items-center group">
-                <img src="assets/icons_3d/cat.png" alt="گربه" class="w-7 h-7 object-contain mb-1 drop-shadow group-hover:scale-110 transition-transform">
+                <span class="icon-frame-md mb-1"><img src="assets/icons_3d/cat.png" alt="گربه" class="w-5 h-5 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
                 <span class="text-[11px]">گربه</span>
               </button>
               <button type="button" onclick="setUniversalSpecies('equine')" id="btnSp_equine" class="univ-sp-btn py-2 px-1 rounded-xl text-center border font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border-slate-200 transition flex flex-col items-center group">
-                <img src="assets/icons_3d/horse.png" alt="اسب" class="w-7 h-7 object-contain mb-1 drop-shadow group-hover:scale-110 transition-transform">
+                <span class="icon-frame-md mb-1"><img src="assets/icons_3d/horse.png" alt="اسب" class="w-5 h-5 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
                 <span class="text-[11px]">اسب</span>
               </button>
               <button type="button" onclick="setUniversalSpecies('bovine')" id="btnSp_bovine" class="univ-sp-btn py-2 px-1 rounded-xl text-center border font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border-slate-200 transition flex flex-col items-center group">
-                <img src="assets/icons_3d/cow.png" alt="گاو" class="w-7 h-7 object-contain mb-1 drop-shadow group-hover:scale-110 transition-transform">
+                <span class="icon-frame-md mb-1"><img src="assets/icons_3d/cow.png" alt="گاو" class="w-5 h-5 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
                 <span class="text-[11px]">گاو</span>
               </button>
               <button type="button" onclick="setUniversalSpecies('ovine_caprine')" id="btnSp_ovine_caprine" class="univ-sp-btn py-2 px-1 rounded-xl text-center border font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border-slate-200 transition flex flex-col items-center group">
-                <img src="assets/icons_3d/sheep.png" alt="گوسفند" class="w-7 h-7 object-contain mb-1 drop-shadow group-hover:scale-110 transition-transform">
+                <span class="icon-frame-md mb-1"><img src="assets/icons_3d/sheep.png" alt="گوسفند/بز" class="w-5 h-5 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
                 <span class="text-[11px]">گوسفند/بز</span>
               </button>
               <button type="button" onclick="setUniversalSpecies('poultry')" id="btnSp_poultry" class="univ-sp-btn py-2 px-1 rounded-xl text-center border font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border-slate-200 transition flex flex-col items-center group">
-                <img src="assets/icons_3d/poultry.png" alt="طیور" class="w-7 h-7 object-contain mb-1 drop-shadow group-hover:scale-110 transition-transform">
+                <span class="icon-frame-md mb-1"><img src="assets/icons_3d/poultry.png" alt="طیور" class="w-5 h-5 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
                 <span class="text-[11px]">طیور</span>
               </button>
               <button type="button" onclick="setUniversalSpecies('camelids')" id="btnSp_camelids" class="univ-sp-btn py-2 px-1 rounded-xl text-center border font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border-slate-200 transition flex flex-col items-center group">
-                <img src="assets/icons_3d/camel.png" alt="شتر" class="w-7 h-7 object-contain mb-1 drop-shadow group-hover:scale-110 transition-transform">
+                <span class="icon-frame-md mb-1"><img src="assets/icons_3d/camel.png" alt="شترسانان" class="w-5 h-5 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
                 <span class="text-[11px]">شترسانان</span>
               </button>
               <button type="button" onclick="setUniversalSpecies('aquatics')" id="btnSp_aquatics" class="univ-sp-btn py-2 px-1 rounded-xl text-center border font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border-slate-200 transition flex flex-col items-center group">
-                <img src="assets/icons_3d/fish.png" alt="آبزیان" class="w-7 h-7 object-contain mb-1 drop-shadow group-hover:scale-110 transition-transform">
+                <span class="icon-frame-md mb-1"><img src="assets/icons_3d/fish.png" alt="آبزیان" class="w-5 h-5 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
                 <span class="text-[11px]">آبزیان</span>
               </button>
               <button type="button" onclick="setUniversalSpecies('wildlife')" id="btnSp_wildlife" class="univ-sp-btn py-2 px-1 rounded-xl text-center border font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border-slate-200 transition flex flex-col items-center group">
-                <img src="assets/icons_3d/lion.png" alt="حیات وحش" class="w-7 h-7 object-contain mb-1 drop-shadow group-hover:scale-110 transition-transform">
+                <span class="icon-frame-md mb-1"><img src="assets/icons_3d/lion.png" alt="حیات‌وحش" class="w-5 h-5 object-contain drop-shadow group-hover:scale-110 transition-transform"></span>
                 <span class="text-[11px]">حیات‌وحش</span>
               </button>
             </div>
@@ -1092,7 +1092,7 @@
         <div id="calcPaneFluid" class="space-y-4 hidden text-xs">
           <div class="p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-900 flex items-start gap-2">
             <i data-lucide="droplets" class="w-4 h-4 text-blue-600 mt-0.5 shrink-0"></i>
-            <span>محاسبه استاندارد حجم کل سرم (کمبود آب + نگهداری ۲۴ ساعته + تلفات مداوم)، سرعت قطره، دوز شوک و راهنمای انتخاب نوع سرم بر اساس استاندارد Plumb's و AAHA.</span>
+            <span>محاسبه استاندارد حجم کل سرم (کمبود آب + نگهداری ۲۴ ساعته + تلفات مداوم)، سرعت قطره، دوز شوک و راهنمای انتخاب نوع سرم بر اساس استانداردهای معتبر بالینی و AAHA.</span>
           </div>
 
           <!-- ورودی‌های بالینی مایع‌درمانی -->
@@ -1204,7 +1204,7 @@
 
           <!-- راهنمای انتخاب نوع سرم -->
           <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl space-y-2">
-            <span class="font-bold text-slate-800 block text-xs">📋 راهنمای انتخاب سرم بر اساس پلامبز:</span>
+            <span class="font-bold text-slate-800 block text-xs">📋 راهنمای استاندارد انتخاب مایعات درمانی:</span>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
               <div class="bg-white p-2 rounded-lg border border-slate-200">
                 <strong class="text-emerald-800 block">رینگر لاکتات (LRS):</strong>
@@ -1439,7 +1439,7 @@
             <div>
               <span class="font-bold block">موتور محاسباتی انفوزیون مداوم (CRI):</span>
               <span class="text-teal-800 leading-relaxed">
-                تجویز پیوسته دارو با غلظت ثابت در پلاسما (بدون نوسانات اوج و فرود دوزهای منقطع) جهت مدیریت پیشرفته دردهای حاد، بی‌قراری ICU، آریتمی قلبی و تهوع پایدار مطابق استاندارد رفرنس پلامبز.
+                تجویز پیوسته دارو با غلظت ثابت در پلاسما (بدون نوسانات اوج و فرود دوزهای منقطع) جهت مدیریت پیشرفته دردهای حاد، بی‌قراری ICU، آریتمی قلبی و تهوع پایدار مطابق استانداردهای پیشرفته بالینی فارماکوپه دامپزشکی.
               </span>
             </div>
           </div>
@@ -1449,7 +1449,7 @@
             <div>
               <label class="block font-bold text-slate-700 mb-1">پروتکل بالینی آماده CRI:</label>
                             <select id="criPresetSelect" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-bold text-slate-800" onchange="onCriPresetChange()">
-                <optgroup label="🐶 سگ و گربه (Plumb's & ICU)">
+                <optgroup label="🐶 سگ و گربه (استاندارد بخش ICU)">
                   <option value="lidocaine" selected>💉 لیدوکائین ۲٪ (30 mcg/kg/min - ضد درد احشایی و ضد آریتمی سگ)</option>
                   <option value="ketamine">💉 کتامین ساب‌آنستتیک (5 mcg/kg/min - مهار گیرنده NMDA و ضد درد)</option>
                   <option value="metoclopramide">💉 متوکلوپرامید (1.5 mg/kg/day - ضد استفراغ و محرک پروکینتیک)</option>
@@ -1669,7 +1669,7 @@
               </div>
 
               <div class="bg-white p-3 rounded-xl border border-purple-200">
-                <span class="text-[11px] text-purple-800 font-bold block mb-0.5">قانون طلایی پلامبز برای سگ‌های کوچک:</span>
+                <span class="text-[11px] text-purple-800 font-bold block mb-0.5">نکته کلیدی بالینی برای سگ‌های کوچک:</span>
                 <span class="text-[11px] text-slate-700 block leading-tight mt-1" id="oncoSmallDogRuleText">
                   در سگ‌های زیر ۱۰ کیلوگرم، دوزهای mg/m² ممکن است میلوتوکسیک باشد؛ تبدیل به mg/kg طبق جدول رفرنس بررسی شود.
                 </span>
@@ -1961,7 +1961,7 @@
               <span class="text-base">☠️</span>
               <span>اورژانس سم‌شناسی درمانگاهی، مسمومیت شکلات، ضدیخ، مرگ‌موش و پادزهرها</span>
             </span>
-            <span class="text-[10px] bg-rose-200/80 font-bold px-2 py-0.5 rounded-md">استاندارد Plumb's & Toxicology</span>
+            <span class="text-[10px] bg-rose-200/80 font-bold px-2 py-0.5 rounded-md">استاندارد راهنمای جامع سم‌شناسی</span>
           </div>
 
           <!-- بخش ۱: محاسبه‌گر مسمومیت شکلات -->
@@ -2089,20 +2089,31 @@
           <div class="p-3 bg-blue-50 border border-blue-200 rounded-2xl flex items-center justify-between text-blue-950">
             <span class="font-bold flex items-center gap-1.5">
               <span class="text-base">🩸</span>
-              <span>جداول مقادیر مرجع آزمایشگاهی CBC، بیوشیمی سرم و گازهای خون ۹ گونه جانوری</span>
+              <span>جداول مقادیر مرجع آزمایشگاهی CBC، بیوشیمی سرم، گازهای خون و علائم حیاتی نشخوارکنندگان (گاو، گوسفند، بز) و سایر گونه‌ها</span>
             </span>
-            <span class="text-[10px] bg-blue-200 font-bold px-2 py-0.5 rounded-md">Carpenter & Plumb's Clinical Lab</span>
+            <span class="text-[10px] bg-blue-200 font-bold px-2 py-0.5 rounded-md">مقادیر مرجع آزمایشگاهی و علائم حیاتی</span>
           </div>
 
           <!-- انتخاب گونه آزمایشگاهی -->
           <div class="flex items-center gap-2 flex-wrap pb-2 border-b border-slate-200">
             <span class="font-bold text-slate-700">انتخاب گونه:</span>
-            <button type="button" onclick="renderLabRefTable('canine')" id="labBtn_canine" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-slate-900 text-white border-slate-900">🐶 سگ</button>
-            <button type="button" onclick="renderLabRefTable('feline')" id="labBtn_feline" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100">🐱 گربه</button>
-            <button type="button" onclick="renderLabRefTable('equine')" id="labBtn_equine" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100">🐎 اسب</button>
-            <button type="button" onclick="renderLabRefTable('bovine')" id="labBtn_bovine" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100">🐄 گاو</button>
-            <button type="button" onclick="renderLabRefTable('camelids')" id="labBtn_camelids" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100">🐪 شترسانان</button>
-            <button type="button" onclick="renderLabRefTable('exotics_avian')" id="labBtn_exotics_avian" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100">🦜 پرندگان و اگزوتیک</button>
+            <button type="button" onclick="renderLabRefTable('canine')" id="labBtn_canine" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-slate-900 text-white border-slate-900 flex items-center gap-1.5"><span class="icon-frame"><img src="assets/icons_3d/dog.png" class="w-3.5 h-3.5 object-contain"></span><span>سگ</span></button>
+            <button type="button" onclick="renderLabRefTable('feline')" id="labBtn_feline" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100 flex items-center gap-1.5"><span class="icon-frame"><img src="assets/icons_3d/cat.png" class="w-3.5 h-3.5 object-contain"></span><span>گربه</span></button>
+            <button type="button" onclick="renderLabRefTable('equine')" id="labBtn_equine" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100 flex items-center gap-1.5"><span class="icon-frame"><img src="assets/icons_3d/horse.png" class="w-3.5 h-3.5 object-contain"></span><span>اسب</span></button>
+            <button type="button" onclick="renderLabRefTable('bovine')" id="labBtn_bovine" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100 flex items-center gap-1.5">
+              <span class="icon-frame"><img src="assets/icons_3d/cow.png" class="w-3.5 h-3.5 object-contain"></span>
+              <span>گاو</span>
+            </button>
+            <button type="button" onclick="renderLabRefTable('ovine')" id="labBtn_ovine" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100 flex items-center gap-1.5">
+              <span class="icon-frame"><img src="assets/icons_3d/sheep.png" class="w-3.5 h-3.5 object-contain"></span>
+              <span>گوسفند</span>
+            </button>
+            <button type="button" onclick="renderLabRefTable('caprine')" id="labBtn_caprine" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100 flex items-center gap-1.5">
+              <span class="icon-frame"><img src="assets/icons_3d/goat.png" class="w-3.5 h-3.5 object-contain"></span>
+              <span>بز</span>
+            </button>
+            <button type="button" onclick="renderLabRefTable('camelids')" id="labBtn_camelids" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100 flex items-center gap-1.5"><span class="icon-frame"><img src="assets/icons_3d/camel.png" class="w-3.5 h-3.5 object-contain"></span><span>شترسانان</span></button>
+            <button type="button" onclick="renderLabRefTable('exotics_avian')" id="labBtn_exotics_avian" class="lab-sp-btn px-3 py-1.5 rounded-xl font-bold border bg-white text-slate-700 border-slate-200 hover:bg-slate-100 flex items-center gap-1.5"><span class="icon-frame"><img src="assets/icons_3d/avian-poultry.png" class="w-3.5 h-3.5 object-contain"></span><span>پرندگان و اگزوتیک</span></button>
           </div>
 
           <!-- محتوای جدول آزمایشگاهی -->
@@ -2282,7 +2293,7 @@
               <span class="text-base">🥗</span>
               <span>محاسبه‌گر کالری انرژی پایه استراحت (RER) و برنامه گاواژ لوله‌های تغذیه</span>
             </span>
-            <span class="text-[10px] bg-emerald-200 font-bold px-2 py-0.5 rounded-md">AAHA & Plumb's Clinical Nutrition</span>
+            <span class="text-[10px] bg-emerald-200 font-bold px-2 py-0.5 rounded-md">استاندارد تغذیه بالینی و انرژی</span>
           </div>
 
           <div>
@@ -2380,7 +2391,7 @@
               <h3 class="text-base sm:text-lg font-bold text-white">رادار هوشمند تداخلات همزمان دارویی (Polypharmacy Radar)</h3>
               <span class="text-[10px] bg-amber-400/20 text-amber-300 border border-amber-400/30 px-2 py-0.5 rounded-full font-bold">تطبیق جامع با ۱۶ مرجع دارویی بین‌المللی و ملی</span>
             </div>
-            <p class="text-xs text-amber-200/80">بررسی بی‌درنگ تداخلات چنددارویی بر اساس ۱۶ مرجع جامع (پلامبز ۱۰، پاپیچ ۵، BSAVA ۱۲، بیهوشی لامب اند جونز، انکولوژی ویترو، اگزوتیک کارپنتر، چشم‌پزشکی اسلاتر و ژلات، شترسانان و فارماکوپه ایران)</p>
+            <p class="text-xs text-amber-200/80">بررسی بی‌درنگ تداخلات چنددارویی بر اساس فارماکوپه رسمی دامپزشکی ایران، مراجع بین‌المللی و استاندارد تصمیم‌یار بالینی</p>
           </div>
         </div>
 
@@ -2404,7 +2415,7 @@
           </button>
         </div>
         <div class="text-[11px] text-slate-500 font-bold hidden sm:block">
-          <span>رادار یکپارچه تداخلات دارویی (۵۰۷+ قانون بالینی و تطبیق هوشمند رده‌ها بر اساس ۱۶ کتاب)</span>
+          <span>رادار یکپارچه تداخلات دارویی (۵۰۷+ قانون بالینی و تطبیق هوشمند رده‌ها)</span>
         </div>
       </div>
 
@@ -2487,7 +2498,7 @@
         <!-- نوار کلیدهای آماده نسخه‌های شایع کلینیکی (Quick Presets) -->
         <div class="p-3.5 bg-amber-50/60 border-b border-amber-100 flex flex-wrap items-center justify-between gap-2 text-xs">
           <div class="flex items-center gap-1.5 flex-wrap">
-            <span class="font-bold text-amber-950 text-[11px] ml-1">⚡ نسخه‌ها و تست‌های تخصصی ۱۶ کتاب:</span>
+            <span class="font-bold text-amber-950 text-[11px] ml-1">⚡ نسخه‌ها و آزمون‌های تخصصی بالینی:</span>
             <button type="button" onclick="loadInteractionPreset(['carprofen', 'prednisolone'])" class="px-2.5 py-1 rounded-xl bg-rose-100 hover:bg-rose-200 text-rose-900 border border-rose-300 font-bold transition">
               ⛔ خط قرمز: کارپروفن + پردنیزولون
             </button>
@@ -2576,7 +2587,7 @@
 
       <!-- فوتر -->
       <div class="px-6 py-3.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
-        <span class="text-[11px]">تطبیق جامع تداخلات بر اساس ۱۶ مرجع معتبر: Plumb's 10e، Papich 5e، BSAVA 12e، Lumb & Jones 6e، Pain Mgmt 3e، Withrow Oncology 5e، Carpenter Exotics 6e، Slatter & Gelatt Ophthalmology 6e، Medicine of Camelids 4e، Zoo Animal 3e، Refresher Guide و سازمان دامپزشکی کشور.</span>
+        <span class="text-[11px]">تطبیق جامع تداخلات بر اساس مراجع فارماکولوژی بالینی، راهنماهای درمانی و استانداردهای سازمان دامپزشکی کشور.</span>
         <button onclick="closeInteractionsModal()" class="px-5 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition shadow-xs">
           بستن رادار
         </button>
@@ -2597,7 +2608,7 @@
           <i data-lucide="heart-pulse" class="w-6 h-6 cpr-pulse"></i>
           <div>
             <h3 class="text-base font-black tracking-wide">مرکز اورژانس و احیای قلبی‌ریوی (CPR Resuscitation Center)</h3>
-            <p class="text-xs text-rose-100">بر اساس استاندارد بین‌المللی RECOVER 2024 و رفرنس دارونامه پلامبز (Plumb's 10th Ed)</p>
+            <p class="text-xs text-rose-100">بر اساس راهنمای بین‌المللی احیای قلبی ریوی RECOVER 2024 و فارماکوپه بالینی دامپزشکی</p>
           </div>
         </div>
 
@@ -2655,7 +2666,7 @@
               <thead class="bg-slate-800 text-slate-300">
                 <tr>
                   <th class="p-2.5">داروی احیا</th>
-                  <th class="p-2.5">دوز پلامبز</th>
+                  <th class="p-2.5">دوز استاندارد بالینی</th>
                   <th class="p-2.5">غلظت ویال</th>
                   <th class="p-2.5 text-center text-rose-400 font-bold">حجم سرنگ (سی‌سی)</th>
                   <th class="p-2.5">مسیر و نوبت مصرف</th>
@@ -2719,7 +2730,7 @@
           <div class="p-3.5 bg-rose-950/40 border border-rose-800/50 rounded-2xl text-[11px] space-y-1">
             <span class="font-bold text-rose-300 block flex items-center gap-1">
               <i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-rose-400"></i>
-              <span>نکات طلایی RECOVER & Plumb's:</span>
+              <span>نکات طلایی راهنمای احیا و فارماکولوژی:</span>
             </span>
             <p class="text-rose-200/90 leading-relaxed">
               • <strong>سرم‌تراپی روتین حین CPR ممنوع است</strong> (مگر در ایست ناشی از شوک هیپوولمیک حاد).
@@ -2762,7 +2773,7 @@
           <div>
             <div class="flex items-center gap-2 flex-wrap">
               <h3 class="text-base sm:text-lg font-black text-white">اورژانس مسمومیت‌ها و پادزهرها (Veterinary Acute Toxicology)</h3>
-              <span class="text-[10px] bg-amber-500/30 text-amber-300 border border-amber-400/40 px-2.5 py-0.5 rounded-full font-bold">پروتکل‌های بالینی پلامبز</span>
+              <span class="text-[10px] bg-amber-500/30 text-amber-300 border border-amber-400/40 px-2.5 py-0.5 rounded-full font-bold">پروتکل‌های استاندارد سم‌شناسی بالینی</span>
             </div>
             <p class="text-xs text-amber-200/80 mt-0.5">محاسبه‌گر سمیت، الگوریتم‌های تریاژ، دکونتامیناسیون و دوز دقیق پادزهرها در سگ و گربه و دام</p>
           </div>
@@ -2830,7 +2841,7 @@
       <div class="px-6 py-3.5 bg-slate-900 text-slate-400 border-t border-slate-800 flex items-center justify-between flex-wrap gap-2 text-xs">
         <div class="flex items-center gap-2 text-amber-300/90">
           <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400"></i>
-          <span>الگوریتم‌های مسمومیت پلامبز: القای استفراغ در سموم سوزاننده (اسید/قلیا)، مواد هیدروکربنی/نفتی، یا بیمار دچار کاهش هوشیاری و تشنج اکیداً ممنوع است.</span>
+          <span>الگوریتم‌های استاندارد سم‌شناسی بالینی: القای استفراغ در سموم سوزاننده (اسید/قلیا)، مواد هیدروکربنی/نفتی، یا بیمار دچار کاهش هوشیاری و تشنج اکیداً ممنوع است.</span>
         </div>
         <button onclick="closeToxicologyModal()" class="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-xl font-bold transition">
           بستن بخش مسمومیت‌ها
@@ -2910,7 +2921,7 @@
   </div>
 
   <!-- ============================================== -->
-  <!-- MODAL: اطلس جامع دسته‌بندی‌های درمانی پلامبز -->
+  <!-- MODAL: اطلس جامع دسته‌بندی‌های درمانی -->
   <!-- ============================================== -->
   
   <!-- ============================================== -->
@@ -3580,8 +3591,8 @@
   <script src="data/plumbs_interaction_matrix.js?v=3.5.0"></script>
   <script src="data/pharmacology_depth.js?v=3.5.0"></script>
   <script src="data/specialty_protocols.js?v=3.5.0"></script>
-  <script src="data/clinical_vault.js?v=3.5.0"></script>
-  <script src="app.js?v=3.5.0"></script>
+  <script src="data/clinical_vault.js?v=3.6.0"></script>
+  <script src="app.js?v=3.6.0"></script>
 
   <!-- نوار ناوبری شناور شیشه‌ای در موبایل (Google Stitch Mobile Dock) -->
   <nav id="mobileBottomDock" class="stitch-floating-dock sm:hidden">

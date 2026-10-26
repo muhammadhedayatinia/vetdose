@@ -1,24 +1,8 @@
 /**
- * پایگاه دانش جامع و تصمیم‌یار بالینی ۱۶ کتاب مرجع پلامبز ایرانی
- * Iranian Veterinary Plumb's 16-Reference Clinical Decision & Diagnostic Vault
+ * پایگاه دانش جامع و سامانه تصمیم‌یار بالینی وت‌دوز
+ * VetDose Clinical Decision & Diagnostic Vault
  * 
- * مراجع ۱۶ گانه:
- * ۱. Plumb's Veterinary Drug Handbook (10th Ed)
- * ۲. Papich Handbook of Veterinary Drugs (5th Ed)
- * ۳. BSAVA Small Animal Formulary Part A (Canine & Feline - 12th Ed)
- * ۴. BSAVA Small Animal Formulary Part B (Exotic Pets - 12th Ed)
- * ۵. BSAVA Small Animal Formulary Part A (11th Ed)
- * ۶. BSAVA Small Animal Formulary Part B (11th Ed)
- * ۷. Blackwell's Five-Minute Veterinary Consult Clinical Companion
- * ۸. Veterinary Anesthesia and Analgesia (Lumb & Jones - 6th Ed)
- * ۹. Handbook of Veterinary Pain Management (Gaynor & Muir - 3rd Ed)
- * ۱۰. Withrow & MacEwen's Small Animal Clinical Oncology (5th/6th Ed)
- * ۱۱. Carpenter's Exotic Animal Formulary (6th Ed)
- * ۱۲. Slatter's Fundamentals of Veterinary Ophthalmology (6th Ed)
- * ۱۳. Veterinary Ophthalmology (Gelatt - 6th Ed)
- * ۱۴. Medicine and Surgery of Camelids (Fowler & Cebra - 4th Ed)
- * ۱۵. Zoo Animal and Wildlife Immobilization and Anesthesia (West & Caulkett - 3rd Ed)
- * ۱۶. فارماکوپه و راهنمای سم‌شناسی درمانگاهی سازمان دامپزشکی ایران (IVO)
+ * استانداردهای بالینی فارماکوپه و مراجع جامع دارویی دامپزشکی
  */
 
 // =====================================================================
@@ -129,6 +113,78 @@ const LAB_REFERENCE_INTERVALS = {
     bloodGas: [
       { param: 'pH ورید و شریان', range: '7.35 - 7.45', unit: '', note: 'اسیدوز شدید در اسهال گوساله ناشی از از دست رفتن بیکربنات' },
       { param: 'HCO3 (بی‌کربنات)', range: '20 - 30', unit: 'mEq/L', note: 'در اسهال گوساله ممکن است به زیر ۱۰ سقوط کند' }
+    ]
+  },
+
+  ovine: {
+    speciesFa: 'گوسفند (Ovine)',
+    icon: '🐑',
+    cbc: [
+      { param: 'PCV / HCT (هماتوکریت)', range: '27 - 45', unit: '%', note: 'زیر ۲۰ آنمی شدید؛ پایش بار انگل همونکوس با کارت فاماچا (FAMACHA)' },
+      { param: 'RBC (تعداد گلبول‌های قرمز)', range: '9.0 - 15.0', unit: 'M/uL', note: 'گلبول‌های کوچک میکروستیک؛ آنمی همولیتیک در مسمومیت با مس و آناپلاسموز' },
+      { param: 'HGB (هموگلوبین)', range: '9.0 - 15.0', unit: 'g/dL', note: 'کاهش ظرفیت اکسیژن‌رسانی در پنومونی‌های باکتریایی و پاستورلوز' },
+      { param: 'WBC (کل گلبول‌های سفید)', range: '4,000 - 12,000', unit: '/uL', note: 'نسبت لنفوسیت به نوتروفیل معمولاً ۲ به ۱ است' },
+      { param: 'Neutrophils (نوتروفیل‌ها)', range: '1,000 - 5,000', unit: '/uL', note: 'انحراف به چپ نشان‌دهنده سپسیس، آنتروتوکسمی یا ماستیت قانقریایی' },
+      { param: 'Lymphocytes (لنفوسیت‌ها)', range: '2,000 - 9,000', unit: '/uL', note: 'جمعیت اصلی لوکوسیت‌های خون محیطی گوسفند' },
+      { param: 'Platelets (پلاکت‌ها)', range: '250,000 - 750,000', unit: '/uL', note: 'ترومبوسیتوپنی در کواگولوپاتی مصرفی (DIC)' },
+      { param: 'Fibrinogen (فیبرینوژن)', range: '100 - 500', unit: 'mg/dL', note: 'بالای ۶۰۰ شاخص حساس التهاب فعال، پنومونی یا لنفادنیت کازئوس (CLA)' }
+    ],
+    biochem: [
+      { param: 'Total Protein (پروتئین تام)', range: '6.0 - 7.9', unit: 'g/dL', note: 'کاهش در هایپوپروتئینمی ناشی از همونکوزیس یا اسهال نوزادان' },
+      { param: 'Albumin (آلبومین)', range: '2.4 - 3.8', unit: 'g/dL', note: 'زیر ۲.۰ همراه با ادم زیرفکی (Bottle Jaw) در آلودگی شدید انگلی' },
+      { param: 'BUN (نیتروژن اوره خون)', range: '8 - 28', unit: 'mg/dL', note: 'افزایش در آزوتمی کم‌آبی یا انسداد ادراری ناشی از سنگ‌های مجاری ادرار' },
+      { param: 'Creatinine (کراتینین)', range: '1.2 - 1.9', unit: 'mg/dL', note: 'شاخص دقیق فیلتراسیون گلومرولی' },
+      { param: 'Calcium (کلسیم سرم)', range: '8.5 - 12.5', unit: 'mg/dL', note: 'افت شدید در هیپوکلسمی میش‌های آبستن سنگین (تب شیر آبستنی)' },
+      { param: 'Phosphorus (فسفر)', range: '4.5 - 8.0', unit: 'mg/dL', note: 'حفظ نسبت کلسیم به فسفر ۲ به ۱ جهت پیشگیری از سنگ ادراری در قوچ‌ها' },
+      { param: 'Magnesium (منیزیم)', range: '2.2 - 3.2', unit: 'mg/dL', note: 'افت زیر ۱.۴ در کزاز علفی میش‌ها با علائم هایپراکسیتیبیلیتی' },
+      { param: 'Blood Glucose (گلوکز)', range: '50 - 80', unit: 'mg/dL', note: 'قند فیزیولوژیک نشخوارکنندگان کمتر از سگ و گربه است' },
+      { param: 'BHB (بتا-هیدروکسی بوتیرات)', range: '< 0.8', unit: 'mmol/L', note: 'بالای ۱.۶ نشان‌دهنده مسمومیت آبستنی میش‌ها (Pregnancy Toxemia / Twin Lamb Disease)' },
+      { param: 'AST (آسپارتات آمینوترانسفراز)', range: '60 - 280', unit: 'U/L', note: 'صدمه عضلانی در بیماری عضله سفید (کمبود سلنیوم/ویتامین E) و آسیب کبد' },
+      { param: 'GGT (گاما گلوتامیل ترانسفراز)', range: '20 - 52', unit: 'U/L', note: 'شاخص کلستاز و آسیب صفراوی در فاسیولیازیس و مسمومیت با مس' }
+    ],
+    bloodGas: [
+      { param: 'دمای طبیعی مقعدی (Rectal Temp)', range: '38.5 - 39.5', unit: '°C', note: 'بالای ۴۰.۰ تب با منشأ عفونی یا استرس گرمایی شدید' },
+      { param: 'ضربان قلب (Heart Rate)', range: '70 - 90', unit: 'bpm', note: 'در بره‌ها تا ۱۲۰ ضربان در دقیقه طبیعی است' },
+      { param: 'تعداد تنفس (Respiratory Rate)', range: '12 - 20', unit: 'brpm', note: 'تا ۴۰ در استرس گرمایی و پنومونی‌های انزوتیک' },
+      { param: 'pH ورید و شریان', range: '7.35 - 7.50', unit: '', note: 'اسیدوز شدید در پرخوری دان و اسیدوز لاکتیک حاد شکمبه' },
+      { param: 'HCO3 (بی‌کربنات)', range: '20 - 28', unit: 'mEq/L', note: 'کاهش شدید در اسیدوز متابولیک' },
+      { param: 'انقباضات شکمبه (Rumen Motility)', range: '2 - 3', unit: 'در ۲ دقیقه', note: 'سمع در فرورفتگی تهیگاه چپ؛ توقف در آتونی شکمبه و نفخ' }
+    ]
+  },
+
+  caprine: {
+    speciesFa: 'بز (Caprine)',
+    icon: '🐐',
+    cbc: [
+      { param: 'PCV / HCT (هماتوکریت)', range: '22 - 38', unit: '%', note: 'کوچک‌ترین اریتروسیت‌های پستانداران (۲.۵ تا ۳.۵ میکرومتر)' },
+      { param: 'RBC (تعداد گلبول‌های قرمز)', range: '8.0 - 18.0', unit: 'M/uL', note: 'شمارش بالای گلبول‌ها به دلیل اندازه بسیار ریز آن‌ها است' },
+      { param: 'HGB (هموگلوبین)', range: '8.0 - 14.0', unit: 'g/dL', note: 'پایش ظرفیت اکسیژن‌گیری در بیماری‌های تنفسی' },
+      { param: 'WBC (کل گلبول‌های سفید)', range: '4,000 - 13,000', unit: '/uL', note: 'پاسخ لکوسیتوزی با نوتروفیلی در انتریت و پنومونی بز' },
+      { param: 'Neutrophils (نوتروفیل‌ها)', range: '1,200 - 7,200', unit: '/uL', note: 'انحراف به چپ نشان‌دهنده پنومونی شدید یا پریتونیت حاد' },
+      { param: 'Lymphocytes (لنفوسیت‌ها)', range: '2,000 - 9,000', unit: '/uL', note: 'غالب‌ترین جمعیت سلول‌های ایمنی خون محیطی' },
+      { param: 'Platelets (پلاکت‌ها)', range: '300,000 - 800,000', unit: '/uL', note: 'پلاکت‌های متعدد و فعال خون محیطی بز' },
+      { param: 'Fibrinogen (فیبرینوژن)', range: '100 - 400', unit: 'mg/dL', note: 'بالای ۵۰۰ پروتئین فاز حاد التهاب و آبسه‌های پنیری CLA' }
+    ],
+    biochem: [
+      { param: 'Total Protein (پروتئین تام)', range: '6.4 - 7.8', unit: 'g/dL', note: 'ارزیابی وضعیت هیدراتاسیون و کم‌آبی' },
+      { param: 'Albumin (آلبومین)', range: '2.7 - 3.9', unit: 'g/dL', note: 'افت در بیماری‌های کبدی، روده‌ای و فاسیولیازیس شدید' },
+      { param: 'BUN (نیتروژن اوره خون)', range: '10 - 26', unit: 'mg/dL', note: 'افزایش در آزوتمی کلیوی یا پارگی مثانه بر اثر سنگ مجرا در نرها' },
+      { param: 'Creatinine (کراتینین)', range: '0.9 - 1.8', unit: 'mg/dL', note: 'شاخص اختصاصی نارسایی کلیوی' },
+      { param: 'Calcium (کلسیم سرم)', range: '8.9 - 11.7', unit: 'mg/dL', note: 'پایش کلسیم پیش و پس از زایمان در بزهای پرتولید شیری' },
+      { param: 'Phosphorus (فسفر)', range: '4.2 - 8.2', unit: 'mg/dL', note: 'حفظ نسبت کلسیم به فسفر ۲ به ۱ برای ممانعت از سنگ ادراری' },
+      { param: 'Magnesium (منیزیم)', range: '2.0 - 3.1', unit: 'mg/dL', note: 'افت زیر ۱.۴ در کزاز علفی بزها' },
+      { param: 'Blood Glucose (گلوکز)', range: '50 - 75', unit: 'mg/dL', note: 'سطح گلوکز پایه فیزیولوژیک نشخوارکنندگان' },
+      { param: 'BHB (بتا-هیدروکسی بوتیرات)', range: '< 0.8', unit: 'mmol/L', note: 'بالای ۱.۶ شاخص توکسمی آبستنی بزهای چندقلوزا' },
+      { param: 'AST (آسپارتات آمینوترانسفراز)', range: '65 - 280', unit: 'U/L', note: 'آسیب هپاتوسلولار یا بیماری عضله سفید ناشی از کمبود سلنیوم' },
+      { param: 'GGT (گاما گلوتامیل ترانسفراز)', range: '20 - 55', unit: 'U/L', note: 'شاخص حساس بیماری‌های کلستاتیک کبد و انگل‌های کبد' }
+    ],
+    bloodGas: [
+      { param: 'دمای طبیعی مقعدی (Rectal Temp)', range: '38.5 - 40.0', unit: '°C', note: 'دمای طبیعی بز تا ۴۰.۰ طبیعی است؛ بالای ۴۰.۵ نشانه تب است' },
+      { param: 'ضربان قلب (Heart Rate)', range: '70 - 95', unit: 'bpm', note: 'در بزغاله‌ها تا ۱۴۰ ضربان در دقیقه طبیعی است' },
+      { param: 'تعداد تنفس (Respiratory Rate)', range: '15 - 30', unit: 'brpm', note: 'تنفس سریع در استرس گرمایی و ذات‌الریه' },
+      { param: 'pH ورید و شریان', range: '7.35 - 7.50', unit: '', note: 'اسیدوز در نفخ کف‌آلود و اسیدوز حاد شکمبه' },
+      { param: 'HCO3 (بی‌کربنات)', range: '20 - 28', unit: 'mEq/L', note: 'بافر اسید و باز بدن' },
+      { param: 'انقباضات شکمبه (Rumen Motility)', range: '2 - 3', unit: 'در ۲ دقیقه', note: 'سمع در تهیگاه چپ؛ توقف در نفخ و اسیدوز' }
     ]
   },
 
@@ -582,6 +638,12 @@ const UNIVERSAL_CALC_PRESETS = {
     { id: 'oxytet_la_bov', name: 'اکسی‌تتراسایکلین طولانی‌اثر ۲۰٪ (Oxytetracycline LA 200 mg/mL)', formRoute: 'injectable', defaultRate: 20.0, defaultConc: 200.0, unit: 'mg/kg', interval: 'q72h', days: 3, route: 'عضلانی عمیق (IM) یا زیرجلدی (SC)', notes: 'حداکثر حجم تزریق در یک موضع ۱۵ سی‌سی در گاو بالغ است. دوره پرهیز گوشت ۲۸ روز و شیر ۷ روز.' },
     { id: 'florfenicol_bov', name: 'فلورفنیکل ۳۰٪ گاو (Florfenicol 300 mg/mL)', formRoute: 'injectable', defaultRate: 20.0, defaultConc: 300.0, unit: 'mg/kg', interval: 'q48h', days: 2, route: 'عضلانی (IM) - دو تزریق به فاصله ۴۸ ساعت', notes: 'درمان مجتمع تنفسی گاو (BRD) ناشی از مانهیمیا همولیتیکا. دوره پرهیز گوشت ۲۸ روز.' },
     { id: 'tulatromycin_bov', name: 'تولاترومایسین دراکسین (Tulathromycin 100 mg/mL)', formRoute: 'injectable', defaultRate: 2.5, defaultConc: 100.0, unit: 'mg/kg', interval: 'single', days: 1, route: 'زیرجلدی (SC) تک‌دوز', notes: 'تک‌دوز نجات‌بخش با نفوذ عالی در ریه گاو.' }
+  ],
+
+  ovine_caprine: [
+    { id: 'oxytet_la_sheep', name: 'اکسی‌تتراسایکلین طولانی‌اثر ۲۰٪ (Oxytetracycline LA 200 mg/mL)', formRoute: 'injectable', defaultRate: 20.0, defaultConc: 200.0, unit: 'mg/kg', interval: 'q72h', days: 3, route: 'عضلانی عمیق (IM)', notes: 'درمان آگالاکسی واگیر، پنومونی پاستورلایی و پلوروپنومونی بز (CCPP). حداکثر ۵ سی‌سی در یک موضع تزریق شود.' },
+    { id: 'flunixin_sheep', name: 'فلونیکسین مگلومین ۵٪ (Flunixin Meglumine 50 mg/mL)', formRoute: 'injectable', defaultRate: 2.2, defaultConc: 50.0, unit: 'mg/kg', interval: 'q24h', days: 3, route: 'وریدی (IV) یا عضلانی (IM)', notes: 'ضدالتهاب و مسکن قوی تب در پنومونی، ماستیت حاد و آندوتوکسمی.' },
+    { id: 'albendazole_sheep', name: 'سوسپانسیون خوراکی آلبندازول ۲.۵٪ (Albendazole 25 mg/mL)', formRoute: 'oral_liquid', defaultRate: 7.5, defaultConc: 25.0, unit: 'mg/kg', interval: 'single', days: 1, bottleMl: 1000, notes: 'ضدانگل وسیع‌الطیف علیه نماتودها، سستودها و فاسیولا هپاتیکا بالغ. در ۴۵ روز اول آبستنی منع مصرف دارد.' }
   ],
 
   camelids: [

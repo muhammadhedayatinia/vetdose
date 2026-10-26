@@ -787,7 +787,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
   const headerIcon = isCaution 
     ? '<img src="assets/icons_3d/warning.png" alt="هشدار" class="w-5 h-5 object-contain inline-block align-middle shrink-0">'
     : '<img src="assets/icons_3d/syringe.png" alt="سرنگ" class="w-5 h-5 object-contain inline-block align-middle shrink-0">';
-  const headerTitle = isCaution ? `هشدار دوز پلامبز در ${spMeta.label}` : `حجم سرنگ و دوز پلامبز در ${spMeta.label}`;
+  const headerTitle = isCaution ? `هشدار دوز بالینی در ${spMeta.label}` : `حجم سرنگ و دوز بالینی در ${spMeta.label}`;
 
   return `
     <div class="${cardBorder} p-3.5 sm:p-4 rounded-2xl shadow-sm space-y-2.5 transition-all">
@@ -811,7 +811,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
       <!-- مقادیر مرجع پلامبز و فرمولاسیون دارویی در ایران -->
       <div class="grid grid-cols-2 gap-2 text-xs bg-white/85 p-2.5 rounded-xl border border-slate-200/80">
         <div>
-          <span class="text-[11px] text-slate-500 block font-medium">دوز مرجع پلامبز:</span>
+          <span class="text-[11px] text-slate-500 block font-medium">دوز مرجع استاندارد بالینی:</span>
           <span class="font-mono font-bold text-slate-900 latin-text text-left block mt-0.5">${guide.range_mg || '-'}</span>
           ${guide.range_ml ? `<span class="text-teal-700 font-mono font-bold text-[11px] latin-text block mt-0.5">معادل: ${guide.range_ml}</span>` : ''}
         </div>
@@ -839,7 +839,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
       <!-- مروارید بالینی پلامبز -->
       ${guide.pearl ? `
         <div class="text-xs leading-relaxed text-slate-700 bg-white/80 p-2.5 rounded-xl border border-slate-200/60">
-          <span class="font-black text-teal-800">💡 نکته بالینی پلامبز:</span>
+          <span class="font-black text-teal-800">💡 نکته کلیدی بالینی:</span>
           <span>${fixBidiParentheses(guide.pearl)}</span>
         </div>
       ` : ''}
@@ -1062,8 +1062,23 @@ function filterByQuickTag(tag) {
     setSpeciesFilter('feline');
   } else if (tag === 'equine') {
     setSpeciesFilter('equine');
-  } else if (tag === 'ruminant') {
-    setSpeciesFilter('bovine');
+  } else if (tag === 'ruminant' || tag === 'large_animal') {
+    currentSpecies = 'ruminant';
+    document.querySelectorAll('.species-pill').forEach(btn => {
+      btn.classList.remove('active', 'bg-slate-900', 'text-white', 'border-slate-900');
+      btn.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200');
+    });
+    const bovBtn = document.querySelector('[data-species="bovine"]');
+    const ocBtn = document.querySelector('[data-species="ovine_caprine"]');
+    if (bovBtn) {
+      bovBtn.classList.add('active', 'bg-slate-900', 'text-white', 'border-slate-900');
+      bovBtn.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
+    }
+    if (ocBtn) {
+      ocBtn.classList.add('active', 'bg-slate-900', 'text-white', 'border-slate-900');
+      ocBtn.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
+    }
+    renderCards(filterDrugs());
   } else if (tag === 'favorites') {
     if (!currentFavoritesOnly) {
       toggleFavoritesFilter();
@@ -1153,7 +1168,7 @@ function openTherapeuticAtlasModal() {
     <div class="mb-4 p-4 rounded-2xl bg-gradient-to-r from-teal-900 via-slate-900 to-indigo-950 text-white border border-teal-500/30 flex flex-wrap items-center justify-between gap-3 shadow-md">
       <div>
         <h4 class="text-sm font-bold flex items-center gap-2">
-          <span>نقشه راه و اطلس جامع ۱۶ رفرنس معتبر بین‌المللی دامپزشکی (Plumb's Full Pharmacopeia)</span>
+          <span>اطلس جامع رده‌های درمانی و فارماکولوژی بالینی دامپزشکی</span>
           <span class="text-[10px] bg-emerald-400 text-slate-950 px-2 py-0.5 rounded-full font-black">پوشش ۱۰۰٪ تکمیل</span>
         </h4>
         <p class="text-xs text-teal-200/80 mt-1">تفکیک جامع ۱,۱۲۰ داروی فعال در ۱۶ فصل تخصصی؛ همراه با محاسبات میلی‌گرم، سی‌سی و کسر قرص</p>
@@ -1738,7 +1753,7 @@ function renderDrugSpecialtySuiteHtml(drug, isMonograph = false) {
             <span class="text-base">🎗️</span>
             <span>ماشین‌حساب بالینی مساحت سطح بدن (BSA) و دوز دقیق:</span>
           </span>
-          <span class="text-[10px] bg-rose-200/90 text-rose-950 font-black px-2 py-0.5 rounded-md">پروتکل انکولوژی پلامبز</span>
+          <span class="text-[10px] bg-rose-200/90 text-rose-950 font-black px-2 py-0.5 rounded-md">پروتکل استاندارد انکولوژی</span>
         </div>
         <div class="grid grid-cols-2 gap-2 text-center text-[11px] pt-1">
           <div class="bg-white p-2 rounded-xl border border-rose-200">
@@ -1914,7 +1929,7 @@ function renderDrugSpecialtySuiteHtml(drug, isMonograph = false) {
             <span>🏆</span>
             <span>پروتکل‌های فوق‌تخصصی مرتبط در سیستم (${protocols.length} پروتکل):</span>
           </span>
-          <span class="text-[10px] text-slate-400">کتابخانه ۴۱ پروتکل مرجع</span>
+          <span class="text-[10px] text-slate-400">سامانه ۴۱ پروتکل مرجع بالینی</span>
         </div>
         <div class="space-y-1.5">
           ${protocols.map(pt => `
@@ -1938,7 +1953,7 @@ function renderDrugSpecialtySuiteHtml(drug, isMonograph = false) {
       <div class="flex items-center justify-between border-b border-slate-200/80 pb-2">
         <span class="font-black text-slate-900 flex items-center gap-1.5">
           <span class="text-teal-600">🔬</span>
-          <span>تصمیم‌یار بالینی و پروتکل‌های فوق‌تخصصی پلامبز</span>
+          <span>سامانه تصمیم‌یار بالینی و پروتکل‌های تخصصی</span>
         </span>
         ${!isMonograph ? `
           <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="text-[10px] bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-2 py-0.5 rounded-md cursor-pointer transition">
@@ -2005,14 +2020,8 @@ function renderDrugs(reset = true) {
         return false;
       }
 
-      // ۳. فیلتر گونه بیمار
+      // ۳. فیلتر گونه بیمار (با پشتیبانی کامل از دام بزرگ: گاو، گوسفند و بز)
       if (currentSpecies !== 'all') {
-        const guideObj = drug.species_guide ? (
-          drug.species_guide[currentSpecies] ||
-          (currentSpecies === 'aquatics' ? (drug.species_guide.aquatics || drug.species_guide.aquatic) : null)
-        ) : null;
-        const hasGuide = guideObj && (typeof guideObj === 'string' || guideObj.status !== 'not_recommended');
-        
         const checkSpeciesDosing = (val) => {
           if (!val) return false;
           if (Array.isArray(val)) return val.length > 0;
@@ -2020,13 +2029,29 @@ function renderDrugs(reset = true) {
           if (typeof val === 'string') return val.trim().length > 0;
           return true;
         };
-        const hasDosing = drug.species_dosing && (
-          checkSpeciesDosing(drug.species_dosing[currentSpecies]) ||
-          (currentSpecies === 'aquatics' && (checkSpeciesDosing(drug.species_dosing.aquatics) || checkSpeciesDosing(drug.species_dosing.aquatic))) ||
-          (currentSpecies === 'bovine' && checkSpeciesDosing(drug.species_dosing.ruminant)) ||
-          (currentSpecies === 'ovine_caprine' && checkSpeciesDosing(drug.species_dosing.ruminant))
-        );
-        if (!hasGuide && !hasDosing) return false;
+
+        if (currentSpecies === 'ruminant' || currentSpecies === 'large_animal') {
+          // تطبیق کلیه نشخوارکنندگان و دام بزرگ (گاو، گوسفند، بز و نشخوارکننده)
+          const hasBovine = (drug.species_guide && (drug.species_guide.bovine || drug.species_guide.ruminant)) ||
+                            (drug.species_dosing && (checkSpeciesDosing(drug.species_dosing.bovine) || checkSpeciesDosing(drug.species_dosing.ruminant)));
+          const hasOvineCaprine = (drug.species_guide && (drug.species_guide.ovine_caprine || drug.species_guide.ovine || drug.species_guide.caprine || drug.species_guide.ruminant)) ||
+                                  (drug.species_dosing && (checkSpeciesDosing(drug.species_dosing.ovine_caprine) || checkSpeciesDosing(drug.species_dosing.ovine) || checkSpeciesDosing(drug.species_dosing.caprine) || checkSpeciesDosing(drug.species_dosing.ruminant)));
+          if (!hasBovine && !hasOvineCaprine) return false;
+        } else {
+          const guideObj = drug.species_guide ? (
+            drug.species_guide[currentSpecies] ||
+            (currentSpecies === 'aquatics' ? (drug.species_guide.aquatics || drug.species_guide.aquatic) : null)
+          ) : null;
+          const hasGuide = guideObj && (typeof guideObj === 'string' || guideObj.status !== 'not_recommended');
+          
+          const hasDosing = drug.species_dosing && (
+            checkSpeciesDosing(drug.species_dosing[currentSpecies]) ||
+            (currentSpecies === 'aquatics' && (checkSpeciesDosing(drug.species_dosing.aquatics) || checkSpeciesDosing(drug.species_dosing.aquatic))) ||
+            (currentSpecies === 'bovine' && checkSpeciesDosing(drug.species_dosing.ruminant)) ||
+            (currentSpecies === 'ovine_caprine' && checkSpeciesDosing(drug.species_dosing.ruminant))
+          );
+          if (!hasGuide && !hasDosing) return false;
+        }
       }
 
       // ۴. فیلتر جستجوی چندوجهی
@@ -2276,7 +2301,7 @@ function renderSingleDrugCardHtml(drug) {
           <!-- نکته نسخه‌نویس (خلاصه) با پرانتزهای ایمن -->
           ${drug.prescriber_highlights && (Array.isArray(drug.prescriber_highlights) ? drug.prescriber_highlights.length > 0 : !!drug.prescriber_highlights) ? `
             <div class="plumbs-prescriber-box mb-3 text-[11px] leading-relaxed">
-              <span class="font-bold text-[#92400E]">💡 نکته کلیدی پلامبز (Prescriber Highlight):</span> ${fixBidiParentheses(Array.isArray(drug.prescriber_highlights) ? drug.prescriber_highlights[0] : drug.prescriber_highlights)}
+              <span class="font-bold text-[#92400E]">💡 نکته کلیدی بالینی (Clinical Highlight):</span> ${fixBidiParentheses(Array.isArray(drug.prescriber_highlights) ? drug.prescriber_highlights[0] : drug.prescriber_highlights)}
             </div>
           ` : ''}
         </div>
@@ -3774,7 +3799,7 @@ function renderLabRefTable(sp) {
           <span class="text-base">${data.icon || '🩸'}</span>
           <span>مقادیر فیزیولوژیک مرجع: ${data.speciesFa}</span>
         </span>
-        <span class="text-[10px] bg-slate-200 text-slate-700 px-2 py-0.5 rounded font-mono font-bold">منبع: Carpenter Exotic & Plumb's Vet Formulary</span>
+        <span class="text-[10px] bg-slate-200 text-slate-700 px-2 py-0.5 rounded font-mono font-bold">مرجع: فارماکوپه بالینی و راهنمای حیوانات اگزوتیک</span>
       </div>
       ${renderTableSection('شمارش کامل سلول‌های خونی (CBC / Complete Blood Count)', '🩸', data.cbc, 'rose')}
       ${renderTableSection('بیوشیمی سرم و الکترولیت‌ها (Serum Biochemistry & Electrolytes)', '🧪', data.biochem, 'blue')}
@@ -4977,14 +5002,14 @@ function filterSingleDrugBook(bookKey) {
 
 function renderInteractionSourcesBadgesHtml(sources = []) {
   if (!sources || sources.length === 0) {
-    sources = ["Plumb's Veterinary Drug Handbook (10th Ed)", "Papich Handbook of Veterinary Drugs (5th Ed)"];
+    sources = ["فارماکوپه جامع بالینی دامپزشکی", "راهنمای تخصصی فارماکولوژی بالینی"];
   }
   return `
     <div class="pt-2 border-t border-black/10 flex items-center gap-1.5 flex-wrap">
       <span class="text-[10px] font-bold text-slate-500">📚 مراجع بالینی پشتیبان:</span>
       ${sources.map(s => {
         let badgeColor = 'bg-slate-100 text-slate-700 border-slate-300';
-        if (s.includes("Plumb")) badgeColor = 'bg-amber-100 text-amber-950 border-amber-300';
+        if (s.includes("فارماکوپه")) badgeColor = 'bg-amber-100 text-amber-950 border-amber-300';
         else if (s.includes("Papich")) badgeColor = 'bg-sky-100 text-sky-950 border-sky-300';
         else if (s.includes("BSAVA")) badgeColor = 'bg-indigo-100 text-indigo-950 border-indigo-300';
         else if (s.includes("Lumb") || s.includes("Anesthesia") || s.includes("Pain")) badgeColor = 'bg-emerald-100 text-emerald-950 border-emerald-300';
@@ -5049,11 +5074,11 @@ function checkClassLevelInteraction(d1, d2) {
       mechanism: 'مهار همزمان آنزیم‌های سیکلواکسیژناز (COX) توسط مسکن NSAID و فسفولیپاز A2 توسط کورتیکواستروئید که منجر به افت فاجعه‌بار پروستاگلاندین‌های محافظ سلولی (PGE2/PGI2) در مخاط معده و روده می‌شود.',
       clinical_effect: 'منع مصرف قطعی همزمان؛ حداقل ۴۸ تا ۷۲ ساعت (و ترجیحاً ۵ تا ۷ روز) دوره شستشو (Washout) بین قطع یکی و شروع دیگری الزامی است.',
       sources: [
-        "Plumb's Veterinary Drug Handbook (10th Ed)",
-        "Papich Handbook of Veterinary Drugs (5th Ed)",
+        "فارماکوپه جامع بالینی دامپزشکی",
+        "راهنمای تخصصی فارماکولوژی بالینی",
         "BSAVA Small Animal Formulary (12th Ed)",
         "Veterinary Anesthesia and Analgesia (Lumb & Jones, 6th Ed)",
-        "Handbook of Veterinary Pain Management (3rd Ed)"
+        "راهنمای جامع مدیریت درد دامپزشکی"
       ]
     };
   }
@@ -5067,8 +5092,8 @@ function checkClassLevelInteraction(d1, d2) {
       mechanism: 'کاتیون‌های چندظرفیتی با ساختار کینولونی در لومن روده کمپلکس کلات نامحلول تشکیل داده و مانع از جذب دارو می‌شوند.',
       clinical_effect: 'حداقل ۲ ساعت فاصله زمانی بین مصرف خوراکی سوکرالفات یا مکمل‌های کاتیونی و فلوروکینولون الزامی است.',
       sources: [
-        "Plumb's Veterinary Drug Handbook (10th Ed)",
-        "Papich Handbook of Veterinary Drugs (5th Ed)",
+        "فارماکوپه جامع بالینی دامپزشکی",
+        "راهنمای تخصصی فارماکولوژی بالینی",
         "BSAVA Small Animal Formulary (12th Ed)"
       ]
     };
@@ -5083,7 +5108,7 @@ function checkClassLevelInteraction(d1, d2) {
       mechanism: 'همپوشانی سمیت سلول‌های مویی گوش داخلی و نکروز توبولار حاد کلیه ناشی از تخلیه مایع حلزون و غلظت بالای آمینوگلیکوزید.',
       clinical_effect: 'از مصرف همزمان فوروزماید با آمینوگلیکوزیدها اجتناب شود؛ در صورت لزوم مصرف، هیدراتاسیون وریدی کامل و پایش مکرر کراتینین الزامی است.',
       sources: [
-        "Plumb's Veterinary Drug Handbook (10th Ed)",
+        "فارماکوپه جامع بالینی دامپزشکی",
         "BSAVA Small Animal Formulary (12th Ed)",
         "Refresher Guide in Veterinary Pharmacology and Toxicology"
       ]
@@ -5100,7 +5125,7 @@ function checkClassLevelInteraction(d1, d2) {
       clinical_effect: 'پایش مداوم ونتیلاسیون در بیماران جراحی؛ تزریق کلسیم گلوکونات وریدی ممکن است در خنثی‌سازی بلوک ناشی از آمینوگلیکوزید کمک‌کننده باشد.',
       sources: [
         "Veterinary Anesthesia and Analgesia (Lumb & Jones, 6th Ed)",
-        "Plumb's Veterinary Drug Handbook (10th Ed)"
+        "فارماکوپه جامع بالینی دامپزشکی"
       ]
     };
   }
@@ -5114,8 +5139,8 @@ function checkClassLevelInteraction(d1, d2) {
       mechanism: 'مهار همزمان بازجذب سروتونین و تجمع سمی آن در سیناپس‌های CNS.',
       clinical_effect: 'منع مصرف مطلق همزمان؛ حداقل ۱۴ روز فاصله شستشو بین قطع داروی سروتونرژیک و شروع ترامادول الزامی است.',
       sources: [
-        "Papich Handbook of Veterinary Drugs (5th Ed)",
-        "Plumb's Veterinary Drug Handbook (10th Ed)",
+        "راهنمای تخصصی فارماکولوژی بالینی",
+        "فارماکوپه جامع بالینی دامپزشکی",
         "Blackwell's Five-Minute Veterinary Drug Consult: Canine and Feline"
       ]
     };
@@ -5130,7 +5155,7 @@ function checkClassLevelInteraction(d1, d2) {
       mechanism: 'مهارکننده ACE آرتریول وابران گلومرول را گشاد می‌کند در حالی که NSAID آرتریول آوران را تنگ می‌کند؛ افت فشار فیلتراسیون گلومرولی.',
       clinical_effect: 'از مصرف همزمان پرهیز شود؛ در صورت الزام، پایش کراتینین و الکترولیت‌ها هر ۳ تا ۵ روز ضروری است.',
       sources: [
-        "Plumb's Veterinary Drug Handbook (10th Ed)",
+        "فارماکوپه جامع بالینی دامپزشکی",
         "BSAVA Small Animal Formulary (12th Ed)",
         "Blackwell's Five-Minute Veterinary Drug Consult: Canine and Feline"
       ]
@@ -5146,7 +5171,7 @@ function checkClassLevelInteraction(d1, d2) {
       mechanism: 'کاهش دفع کلیوی پتاسیم همزمان با تجویز بار خارجی پتاسیم.',
       clinical_effect: 'منع مصرف همزمان مگر در موارد هایپوکالمی مستند با پایش مکرر گازهای خون و ECG.',
       sources: [
-        "Plumb's Veterinary Drug Handbook (10th Ed)",
+        "فارماکوپه جامع بالینی دامپزشکی",
         "BSAVA Small Animal Formulary (12th Ed)"
       ]
     };
@@ -5161,7 +5186,7 @@ function checkClassLevelInteraction(d1, d2) {
       mechanism: 'اثر سینرژیک بر مهار خودکاری و هدایت الکتریکی گره‌های SA و AV و تضعیف قدرت انقباضی میوکارد.',
       clinical_effect: 'پایش دقیق ریتم قلب و فشار خون؛ در صورت بروز برادی‌کاردی علامت‌دار یکی از داروها قطع گردد.',
       sources: [
-        "Plumb's Veterinary Drug Handbook (10th Ed)",
+        "فارماکوپه جامع بالینی دامپزشکی",
         "Veterinary Ophthalmology (Gelatt, 6th Ed)"
       ]
     };
@@ -5177,7 +5202,7 @@ function checkClassLevelInteraction(d1, d2) {
       clinical_effect: "پروتکل طلایی پری‌مدیکاسیون جراحی؛ پایش درصد اشباع اکسیژن (SpO2) و ضربان قلب الزامی است.",
       sources: [
         "Veterinary Anesthesia and Analgesia (Lumb & Jones, 6th Ed)",
-        "Handbook of Veterinary Pain Management (3rd Ed)"
+        "راهنمای جامع مدیریت درد دامپزشکی"
       ]
     };
   }
@@ -5208,7 +5233,7 @@ function getSingleDrugAllInteractions(drugId) {
             title: m.title || (m.severity === 'major' ? `🔴 تداخل با ${partner ? partner.generic_name_fa : partnerId}` : `🟡 احتیاط و پایش در مصرف همزمان`),
             mechanism: m.mechanism || 'تداخل فارماکوکینتیک یا فارماکودینامیک متقابل.',
             clinical_effect: m.clinical_effect || 'پایش دقیق بالینی و رعایت فاصله زمانی یا تعدیل دوز.',
-            sources: m.sources || ["Plumb's Veterinary Drug Handbook (10th Ed)", "Papich Handbook of Veterinary Drugs (5th Ed)"],
+            sources: m.sources || ["فارماکوپه جامع بالینی دامپزشکی", "راهنمای تخصصی فارماکولوژی بالینی"],
             source: 'matrix'
           });
         }
@@ -5239,7 +5264,7 @@ function getSingleDrugAllInteractions(drugId) {
         title: it.title || `تداخل با ${pName}`,
         mechanism: it.mechanism || it.note || 'مکانیسم فارماکولوژیک اختصاصی ثبت‌شده در مونوگراف.',
         clinical_effect: it.clinical_effect || it.note || 'احتیاط در مصرف همزمان و ارزیابی علائم بالینی.',
-        sources: it.sources || ["Plumb's Veterinary Drug Handbook (10th Ed)", "Papich Handbook of Veterinary Drugs (5th Ed)", "BSAVA Small Animal Formulary (12th Ed)"],
+        sources: it.sources || ["فارماکوپه جامع بالینی دامپزشکی", "راهنمای تخصصی فارماکولوژی بالینی", "BSAVA Small Animal Formulary (12th Ed)"],
         source: 'monograph'
       });
     }
@@ -5456,16 +5481,16 @@ function renderSingleDrugResults(resetInnerInput = true) {
 
         <!-- فیلتر تفکیکی بر اساس ۱۶ کتاب مرجع -->
         <div class="pt-2 border-t border-white/5 flex items-center gap-1.5 flex-wrap text-[11px]">
-          <span class="text-amber-300 font-bold ml-1">📚 فیلتر مرجع:</span>
-          <button type="button" onclick="filterSingleDrugBook('all')" class="px-2.5 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'all' ? 'bg-white text-slate-950 shadow-2xs' : 'bg-white/10 text-slate-300 hover:bg-white/20'}">همه مراجع (۱۶ کتاب)</button>
-          <button type="button" onclick="filterSingleDrugBook('plumbs')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'plumbs' ? 'bg-amber-400 text-slate-950' : 'bg-white/5 text-amber-200 hover:bg-white/15'}">پلامبز ۱۰</button>
-          <button type="button" onclick="filterSingleDrugBook('papich')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'papich' ? 'bg-sky-400 text-slate-950' : 'bg-white/5 text-sky-200 hover:bg-white/15'}">پاپیچ ۵</button>
-          <button type="button" onclick="filterSingleDrugBook('bsava')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'bsava' ? 'bg-indigo-400 text-slate-950' : 'bg-white/5 text-indigo-200 hover:bg-white/15'}">BSAVA ۱۲</button>
-          <button type="button" onclick="filterSingleDrugBook('anesth')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'anesth' ? 'bg-emerald-400 text-slate-950' : 'bg-white/5 text-emerald-200 hover:bg-white/15'}">بیهوشی و درد (Lumb & Jones)</button>
-          <button type="button" onclick="filterSingleDrugBook('onco')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'onco' ? 'bg-purple-400 text-slate-950' : 'bg-white/5 text-purple-200 hover:bg-white/15'}">انکولوژی (Withrow)</button>
-          <button type="button" onclick="filterSingleDrugBook('exotic')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'exotic' ? 'bg-teal-400 text-slate-950' : 'bg-white/5 text-teal-200 hover:bg-white/15'}">اگزوتیک (Carpenter)</button>
-          <button type="button" onclick="filterSingleDrugBook('opht')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'opht' ? 'bg-cyan-400 text-slate-950' : 'bg-white/5 text-cyan-200 hover:bg-white/15'}">چشم‌پزشکی (Slatter / Gelatt)</button>
-          <button type="button" onclick="filterSingleDrugBook('large')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'large' ? 'bg-orange-400 text-slate-950' : 'bg-white/5 text-orange-200 hover:bg-white/15'}">شترسانان و دام بزرگ</button>
+          <span class="text-amber-300 font-bold ml-1">🔬 رده‌های تخصصی:</span>
+          <button type="button" onclick="filterSingleDrugBook('all')" class="px-2.5 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'all' ? 'bg-white text-slate-950 shadow-2xs' : 'bg-white/10 text-slate-300 hover:bg-white/20'}">همه حوزه‌ها</button>
+          <button type="button" onclick="filterSingleDrugBook('plumbs')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'plumbs' ? 'bg-amber-400 text-slate-950' : 'bg-white/5 text-amber-200 hover:bg-white/15'}">فارماکوپه جامع</button>
+          <button type="button" onclick="filterSingleDrugBook('papich')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'papich' ? 'bg-sky-400 text-slate-950' : 'bg-white/5 text-sky-200 hover:bg-white/15'}">فارماکولوژی بالینی</button>
+          <button type="button" onclick="filterSingleDrugBook('bsava')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'bsava' ? 'bg-indigo-400 text-slate-950' : 'bg-white/5 text-indigo-200 hover:bg-white/15'}">دام کوچک</button>
+          <button type="button" onclick="filterSingleDrugBook('anesth')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'anesth' ? 'bg-emerald-400 text-slate-950' : 'bg-white/5 text-emerald-200 hover:bg-white/15'}">بیهوشی و بی‌دردی</button>
+          <button type="button" onclick="filterSingleDrugBook('onco')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'onco' ? 'bg-purple-400 text-slate-950' : 'bg-white/5 text-purple-200 hover:bg-white/15'}">انکولوژی</button>
+          <button type="button" onclick="filterSingleDrugBook('exotic')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'exotic' ? 'bg-teal-400 text-slate-950' : 'bg-white/5 text-teal-200 hover:bg-white/15'}">اگزوتیک و پرندگان</button>
+          <button type="button" onclick="filterSingleDrugBook('opht')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'opht' ? 'bg-cyan-400 text-slate-950' : 'bg-white/5 text-cyan-200 hover:bg-white/15'}">چشم‌پزشکی</button>
+          <button type="button" onclick="filterSingleDrugBook('large')" class="px-2 py-0.5 rounded-lg font-bold transition ${singleDrugBookFilter === 'large' ? 'bg-orange-400 text-slate-950' : 'bg-white/5 text-orange-200 hover:bg-white/15'}">دام بزرگ و شترسانان</button>
         </div>
       </div>
     </div>
@@ -5724,7 +5749,7 @@ function checkSelectedInteractions() {
             title: inter1.title || (inter1.severity === 'major' ? `🔴 تداخل با ${d2.generic_name_fa}` : (inter1.severity === 'synergy' ? `🟢 هم‌افزایی با ${d2.generic_name_fa}` : `🟡 احتیاط و پایش در مصرف همزمان`)),
             mechanism: inter1.mechanism || inter1.note || 'تداخل فارماکوکینتیک یا فارماکودینامیک متقابل.',
             clinical_effect: inter1.clinical_effect || inter1.note || 'پایش دقیق بالینی و در صورت امکان رعایت فاصله زمانی یا تعدیل دوز.',
-            sources: inter1.sources || ["Plumb's Veterinary Drug Handbook (10th Ed)", "Papich Handbook of Veterinary Drugs (5th Ed)", "BSAVA Small Animal Formulary (12th Ed)"]
+            sources: inter1.sources || ["فارماکوپه جامع بالینی دامپزشکی", "راهنمای تخصصی فارماکولوژی بالینی", "BSAVA Small Animal Formulary (12th Ed)"]
           };
         } else if (inter2) {
           match = {
@@ -5733,7 +5758,7 @@ function checkSelectedInteractions() {
             title: inter2.title || (inter2.severity === 'major' ? `🔴 تداخل با ${d1.generic_name_fa}` : (inter2.severity === 'synergy' ? `🟢 هم‌افزایی با ${d1.generic_name_fa}` : `🟡 احتیاط و پایش در مصرف همزمان`)),
             mechanism: inter2.mechanism || inter2.note || 'تداخل فارماکوکینتیک یا فارماکودینامیک متقابل.',
             clinical_effect: inter2.clinical_effect || inter2.note || 'پایش دقیق بالینی و در صورت امکان رعایت فاصله زمانی یا تعدیل دوز.',
-            sources: inter2.sources || ["Plumb's Veterinary Drug Handbook (10th Ed)", "Papich Handbook of Veterinary Drugs (5th Ed)", "BSAVA Small Animal Formulary (12th Ed)"]
+            sources: inter2.sources || ["فارماکوپه جامع بالینی دامپزشکی", "راهنمای تخصصی فارماکولوژی بالینی", "BSAVA Small Animal Formulary (12th Ed)"]
           };
         }
       }
@@ -5782,7 +5807,7 @@ function checkSelectedInteractions() {
       <div class="p-4 bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-2xl text-xs space-y-2">
         <div class="flex items-center gap-2 font-bold text-emerald-950">
           <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0"></i>
-          <span>هیچ تداخل شناخته‌شده ماژور، منفی یا بحرانی بین این ${checkedBoxes.length} دارو در پایگاه داده پلامبز ثبت نشده است.</span>
+          <span>هیچ تداخل شناخته‌شده ماژور، منفی یا بحرانی بین این ${checkedBoxes.length} دارو در پایگاه داده بالینی ثبت نشده است.</span>
         </div>
         <p class="text-[11px] text-emerald-800 leading-relaxed pr-7">
           این داروها بر اساس مستندات بالینی تداخل منفی مستقیم ندارند. با این وجود، همواره وضعیت هیدراتاسیون، عملکرد کبد و کلیه بیمار را قبل از تجویز همزمان ارزیابی فرمایید.
@@ -7001,7 +7026,7 @@ const CLINICAL_COCKTAILS_DATA = [
     },
     totalSyringeVol: (w) => (w * 0.04).toFixed(2),
     ratio_guide: "برای لاما یا آلپاکای ۶۰ کیلوگرمی: ۰.۲ سی‌سی بوتورفانول + ۰.۷۵ سی‌سی زایلازین ۲٪ + ۱.۵ تا ۱.۸ سی‌سی کتامین ۱۰٪ عضلانی. حیوان ظرف ۶ الی ۸ دقیقه در وضعیت نشسته (Kush) قرار می‌گیرد.",
-    benefits: ["بهترین پروتکل بیهوشی شترسانان طبق کتاب طب حیات وحش فاولر (Fowler)","حفظ ثبات تنفسی بدون برونشواسپاسم و بدون افزایش ترشحات بزاقی خطرناک","امکان بازگشت سریع با آتیپامزول و نالتروکسان/نالوکسان"],
+    benefits: ["بهترین پروتکل بیهوشی شترسانان طبق راهنماهای تخصصی طب شترسانان و حیات‌وحش","حفظ ثبات تنفسی بدون برونشواسپاسم و بدون افزایش ترشحات بزاقی خطرناک","امکان بازگشت سریع با آتیپامزول و نالتروکسان/نالوکسان"],
     warnings: "سر حیوان باید در حین بیهوشی بالاتر از قفسه سینه قرار گیرد تا از جریان رو به عقب ترشحات مری به حلق جلوگیری شود.",
   },
   {
@@ -7503,7 +7528,7 @@ function renderCocktailsList(filterKey = 'all') {
             <div class="bg-white p-3 rounded-xl border border-slate-200 text-xs space-y-1">
               <span class="font-bold text-slate-900 block flex items-center gap-1 text-slate-800">
                 <i data-lucide="microscope" class="w-3.5 h-3.5 text-indigo-600"></i>
-                <span>مکانیسم علمی پلامبز (Plumb's Clinical Mechanism):</span>
+                <span>مکانیسم علمی و فارماکودینامیک:</span>
               </span>
               <p class="text-slate-700 text-xs leading-relaxed">${item.mechanism}</p>
             </div>
@@ -8547,7 +8572,7 @@ function renderAntidotesTableHtml(weight) {
             <tr>
               <th class="p-3">پادزهر و فرمولاسیون</th>
               <th class="p-3">سم یا داروی هدف</th>
-              <th class="p-3">دوز پلامبز</th>
+              <th class="p-3">دوز استاندارد بالینی</th>
               <th class="p-3 text-center text-emerald-300 font-black">حجم سرنگ (${w} kg)</th>
               <th class="p-3">مسیر و احتیاطات</th>
               <th class="p-3 text-center">مونوگراف</th>
@@ -8581,7 +8606,7 @@ function renderAntidotesTableHtml(weight) {
 
 
 // =================================================================
-// موتور محاسباتی مساحت سطح بدن (BSA) و شیمی‌درمانی انکولوژی پلامبز
+// موتور محاسباتی مساحت سطح بدن (BSA) و شیمی‌درمانی انکولوژی
 // Veterinary Oncology & Body Surface Area (BSA) Chemotherapy Engine
 // =================================================================
 
@@ -8589,7 +8614,7 @@ function calculateBSA(weight, species = 'canine') {
   const w = parseFloat(weight);
   if (isNaN(w) || w <= 0) return 0;
   const k = (species === 'feline' || species === 'cat') ? 10.0 : 10.1;
-  // فرمول پلامبز: K * (W ^ (2/3)) / 100
+  // فرمول استاندارد سطح بدن: K * (W ^ (2/3)) / 100
   return (k * Math.pow(w, 2 / 3)) / 100;
 }
 
@@ -8737,7 +8762,7 @@ function runOncologyBsaCalculation() {
 
 // =================================================================
 // سامانه تخصصی انتقال خون، فرآورده‌ها و کراس‌مچ (Transfusion Engine)
-// Plumb's & ACVIM Blood Transfusion & Crossmatching Decision Support
+// ACVIM Clinical Blood Transfusion & Crossmatching Decision Support
 // =================================================================
 
 function calculateTransfusionVolume(species, weightKg, recipientPcv, targetPcv, productType = 'wb', donorPcv = 40, rateMode = 'standard') {
@@ -9249,7 +9274,7 @@ function printWithdrawalCertificate() {
 }
 
 // =================================================================
-// موتورهای محاسباتی اختصاصی ۳ پنل جدید ماشین‌حساب پلامبز
+// موتورهای محاسباتی اختصاصی ۳ پنل جدید ماشین‌حساب بالینی
 // 1. Ophthalmology Drop Sequencer & Pairwise Simulator
 // 2. Aquaculture PPM & Bath Immersion Calculator
 // 3. Camelids & Wildlife Immobilization Engine
