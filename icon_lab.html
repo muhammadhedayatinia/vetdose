@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آزمایشگاه انتخاب سبک آیکون‌های وت‌دوز | VetDose Icon Lab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css?v=3.7.0">
+  <style>
+    body {
+      font-family: 'Yekan Bakh', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0B132B;
+      color: #F8FAFC;
+    }
+    .style-card {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .style-card:hover {
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8">
+
+  <div class="max-w-5xl mx-auto space-y-8">
+
+    <!-- هدر آزمایشگاه -->
+    <header class="text-center space-y-3 pb-6 border-b border-slate-800">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold">
+        <span>🧪 آزمایشگاه زنده طراحی آیکونوگرافی</span>
+        <span>•</span>
+        <span>انتخاب سبک واحد برای تمام سامانه</span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-black text-white">مقایسه زنده ۴ سبک طراحی آیکون (برای نماد سگ X و ماشین‌حساب Y)</h1>
+      <p class="text-sm text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        برای اینکه آیکون‌ها دقیقاً ۱۰۰٪ باب میل شما باشند، نماد سگ (X) و ماشین‌حساب بالینی (Y) را در ۴ سبک شاخص دنیا در کنار هم قرار دادیم تا مقایسه کنید.
+      </p>
+    </header>
+
+    <!-- ۴ سبک در کنار هم -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- ============================================== -->
+      <!-- سبک ۱: سبک ارجینال مینی‌اپ ربات تلگرام شما (Fluent 3D شناور با Drop-Shadow) -->
+      <!-- ============================================== -->
+      <div class="style-card bg-slate-900/90 rounded-3xl p-6 border-2 border-cyan-500/40 shadow-xl space-y-5 relative overflow-hidden">
+        <div class="absolute top-3 left-3 bg-cyan-500 text-slate-950 font-black text-[11px] px-2.5 py-0.5 rounded-full">
+          سبک ربات شما (پیشنهادی)
+        </div>
+        
+        <div>
+          <h2 class="text-lg font-black text-white flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+            <span>سبک ۱: سه‌بعدی ارگانیک ربات تلگرام (Fluent 3D Floating)</span>
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">
+            دقیقاً همان آیکون‌های خوشگل، مینیمال و سه‌بعدی پروژه ربات شما، با سایز نرم ۲۴px، سایه طبیعی (drop-shadow) و بدون خطوط کادر اضافی.
+          </p>
+        </div>
+
+        <!-- نمونه در دکمه‌ها و پیل‌ها -->
+        <div class="space-y-3 p-4 bg-slate-950/60 rounded-2xl border border-slate-800">
+          <div class="text-[11px] font-bold text-slate-400">نمایش نمونه در نوار گونه‌ها و دکمه‌ها:</div>
+          
+          <div class="flex items-center gap-2 flex-wrap">
+            <!-- سگ -->
+            <button class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center gap-2 border border-slate-700 transition">
+              <img src="assets/icons_3d/dog.png" class="w-6 h-6 object-contain drop-shadow select-none">
+              <span>سگ (Canine)</span>
+            </button>
+            <!-- گربه -->
+            <button class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center gap-2 border border-slate-700 transition">
+              <img src="assets/icons_3d/cat.png" class="w-6 h-6 object-contain drop-shadow select-none">
+              <span>گربه (Feline)</span>
+            </button>
+            <!-- دام بزرگ -->
+            <button class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center gap-2 border border-slate-700 transition">
+              <img src="assets/icons_3d/cow.png" class="w-6 h-6 object-contain drop-shadow select-none">
+              <span>دام بزرگ</span>
+            </button>
+          </div>
+
+          <!-- ابزارها -->
+          <div class="flex items-center gap-2 flex-wrap pt-2">
+            <button class="px-3 py-1.5 rounded-xl bg-blue-600 text-white font-black text-xs flex items-center gap-2 shadow-md">
+              <img src="assets/icons_3d/calculator.png" class="w-5 h-5 object-contain drop-shadow">
+              <span>ماشین‌حساب دوز</span>
+            </button>
+            <button class="px-3 py-1.5 rounded-xl bg-rose-600 text-white font-bold text-xs flex items-center gap-2 shadow-md">
+              <img src="assets/icons_3d/heart.png" class="w-5 h-5 object-contain drop-shadow">
+              <span>اورژانس CPR</span>
+            </button>
+            <button class="px-3 py-1.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-md">
+              <img src="assets/icons_3d/warning.png" class="w-5 h-5 object-contain drop-shadow">
+              <span>تداخلات</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- سبک ۲: سبک وکتور دو رنگ پزشکی (Medical Duotone SVG - استایل Plumb's و Apple Health) -->
+      <!-- ============================================== -->
+      <div class="style-card bg-slate-900/90 rounded-3xl p-6 border border-slate-800 shadow-xl space-y-5 relative overflow-hidden">
+        <div class="absolute top-3 left-3 bg-emerald-500 text-slate-950 font-black text-[11px] px-2.5 py-0.5 rounded-full">
+          سبک دارونامه بین‌المللی Plumb's
+        </div>
+
+        <div>
+          <h2 class="text-lg font-black text-white flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            <span>سبک ۲: وکتور دو رنگ بالینی (Medical Duotone Vector)</span>
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">
+            خطوط استروک فوق‌العاده شارپ برداری + رنگ محو درونی با تفکیک رنگی تایل‌ها. کاملاً تخصصی و بدون تغییر کیفیت در موبایل.
+          </p>
+        </div>
+
+        <div class="space-y-3 p-4 bg-slate-950/60 rounded-2xl border border-slate-800">
+          <div class="text-[11px] font-bold text-slate-400">نمایش نمونه در نوار گونه‌ها و دکمه‌ها:</div>
+
+          <div class="flex items-center gap-2 flex-wrap">
+            <!-- سگ Duotone -->
+            <button class="px-3 py-1.5 rounded-xl bg-slate-800 text-white font-bold text-xs flex items-center gap-2 border border-slate-700">
+              <span class="w-6 h-6 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center">
+                <svg class="w-4 h-4 fill-current opacity-80" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+              </span>
+              <span>سگ (Canine)</span>
+            </button>
+
+            <!-- گربه Duotone -->
+            <button class="px-3 py-1.5 rounded-xl bg-slate-800 text-white font-bold text-xs flex items-center gap-2 border border-slate-700">
+              <span class="w-6 h-6 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center font-black text-xs">🐱</span>
+              <span>گربه (Feline)</span>
+            </button>
+
+            <!-- ماشین‌حساب Duotone -->
+            <button class="px-3 py-1.5 rounded-xl bg-slate-800 text-white font-bold text-xs flex items-center gap-2 border border-slate-700">
+              <span class="w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+              </span>
+              <span>ماشین‌حساب</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- سبک ۳: سبک سه‌بعدی مات استودیویی (Studio 3D Matte Clay) -->
+      <!-- ============================================== -->
+      <div class="style-card bg-slate-900/90 rounded-3xl p-6 border border-slate-800 shadow-xl space-y-5 relative overflow-hidden">
+        <div class="absolute top-3 left-3 bg-purple-500 text-white font-black text-[11px] px-2.5 py-0.5 rounded-full">
+          سبک مات مینیمال (Clay)
+        </div>
+
+        <div>
+          <h2 class="text-lg font-black text-white flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-purple-400"></span>
+            <span>سبک ۳: سه‌بعدی مَت و سرامیکی (Studio 3D Matte Clay)</span>
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">
+            رندرهای سه‌بعدی با بافت سرامیک و خاک رس مَت، بدون برق ناخواسته، نور استودیو و پس‌زمینه شفاف.
+          </p>
+        </div>
+
+        <div class="space-y-3 p-4 bg-slate-950/60 rounded-2xl border border-slate-800">
+          <div class="text-[11px] font-bold text-slate-400">نمایش نمونه در نوار گونه‌ها و دکمه‌ها:</div>
+
+          <div class="flex items-center gap-2 flex-wrap">
+            <!-- سگ Matte 3D -->
+            <button class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center gap-2 border border-slate-700 transition">
+              <img src="assets/icons_matte_3d/dog.png" class="w-6 h-6 object-contain drop-shadow select-none">
+              <span>سگ (Canine)</span>
+            </button>
+            <!-- گربه Matte 3D -->
+            <button class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center gap-2 border border-slate-700 transition">
+              <img src="assets/icons_matte_3d/cat.png" class="w-6 h-6 object-contain drop-shadow select-none">
+              <span>گربه (Feline)</span>
+            </button>
+            <!-- اسب Matte 3D -->
+            <button class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center gap-2 border border-slate-700 transition">
+              <img src="assets/icons_matte_3d/horse.png" class="w-6 h-6 object-contain drop-shadow select-none">
+              <span>اسب (Equine)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- سبک ۴: سبک تایل‌های شیشه‌ای و کادر مات مدرن (Glassmorphic Tiles) -->
+      <!-- ============================================== -->
+      <div class="style-card bg-slate-900/90 rounded-3xl p-6 border border-slate-800 shadow-xl space-y-5 relative overflow-hidden">
+        <div class="absolute top-3 left-3 bg-amber-500 text-slate-950 font-black text-[11px] px-2.5 py-0.5 rounded-full">
+          سبک تایل شیشه‌ای (iOS/Telegram)
+        </div>
+
+        <div>
+          <h2 class="text-lg font-black text-white flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+            <span>سبک ۴: تایل‌های مات شیشه‌ای کادردار (Glassmorphic Icon Frame)</span>
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">
+            آیکون‌های سه‌بعدی درون یک تایل شیشه‌ای نیمه‌شفاف با حاشیه مویرگی براق، شبیه اپلیکیشن‌های برتر iOS و تلگرام مینی‌اپ.
+          </p>
+        </div>
+
+        <div class="space-y-3 p-4 bg-slate-950/60 rounded-2xl border border-slate-800">
+          <div class="text-[11px] font-bold text-slate-400">نمایش نمونه در نوار گونه‌ها و دکمه‌ها:</div>
+
+          <div class="flex items-center gap-2 flex-wrap">
+            <!-- سگ با تایل شیشه‌ای -->
+            <button class="px-3 py-1.5 rounded-xl bg-slate-800 text-white font-bold text-xs flex items-center gap-2 border border-slate-700">
+              <span class="w-7 h-7 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center p-1">
+                <img src="assets/icons_3d/dog.png" class="w-5 h-5 object-contain">
+              </span>
+              <span>سگ (Canine)</span>
+            </button>
+
+            <!-- ماشین‌حساب با تایل شیشه‌ای -->
+            <button class="px-3 py-1.5 rounded-xl bg-slate-800 text-white font-bold text-xs flex items-center gap-2 border border-slate-700">
+              <span class="w-7 h-7 rounded-xl bg-cyan-500/20 border border-cyan-400/30 flex items-center justify-center p-1">
+                <img src="assets/icons_3d/calculator.png" class="w-5 h-5 object-contain">
+              </span>
+              <span>ماشین‌حساب</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- دکمه بازگشت به صفحه اصلی -->
+    <div class="text-center pt-4">
+      <a href="index.html" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black text-sm shadow-lg transition">
+        <span>بازگشت به سامانه اصلی دارونامه وت‌دوز</span>
+        <span>←</span>
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
