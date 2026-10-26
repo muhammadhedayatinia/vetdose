@@ -317,266 +317,87 @@
   <!-- بخش جستجو و فیلترهای بالینی -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-3">
     
-    <!-- نوار طلایی هوشمند محاسبه آنی حجم سرنگ (Google Stitch Weight Control Center) -->
-    <div class="mb-5 bg-gradient-to-r from-[#0A2447] via-[#0E387A] to-[#17285E] text-white p-4 sm:p-5 rounded-3xl shadow-xl border border-[#00CAE0]/35 flex flex-wrap items-center justify-between gap-4">
-      <div class="flex items-center gap-3.5">
-        <div class="w-11 h-11 rounded-2xl bg-[#00CAE0]/20 text-[#00CAE0] border border-[#00CAE0]/40 flex items-center justify-center shrink-0 shadow-inner">
-          <i data-lucide="syringe" class="w-6 h-6"></i>
-        </div>
-        <div>
-          <div class="flex items-center gap-2 flex-wrap">
-            <h2 class="text-sm sm:text-base font-black text-white">
-              محاسبه آنی حجم سرنگ (سی‌سی مستقیم بدون فرمول‌بازی):
-            </h2>
-            <span class="text-[10px] bg-[#00CAE0]/25 text-[#00CAE0] border border-[#00CAE0]/40 px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#00CAE0] animate-ping"></span>
-              <span>زنده و لحظه‌ای</span>
-            </span>
-          </div>
-          <p class="text-xs text-[#ABB5CD] mt-0.5">وزن بیمار را تغییر دهید تا حجم آماده کشیدن در سرنگ (mL) روی تمام داروها فوراً محاسبه شود.</p>
-        </div>
-      </div>
+    <!-- کادر جستجوی یکپارچه با کنترل زنده وزن بیمار (Plumb's Unified Command Bar) -->
+    <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-cyan-600 focus-within:border-cyan-600 focus-within:ring-3 focus-within:ring-cyan-500/15 transition-all mb-3">
+      <div class="flex items-center px-4 py-3 gap-3 flex-wrap sm:flex-nowrap">
+        <i data-lucide="search" class="w-5 h-5 text-cyan-600 shrink-0"></i>
+        
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="جستجوی آنی دارو، نام تجاری، رده فارماکولوژی یا کاربرد (مثلاً: گاباپنتین، Meloxicam، سگ)..." 
+          class="w-full bg-transparent text-slate-800 text-sm sm:text-base outline-none placeholder:text-slate-400 font-medium"
+          oninput="handleSearch()"
+        >
 
-      <!-- کنترل تعاملی وزن با استپر لمسی + و - -->
-      <div class="flex items-center gap-2 flex-wrap">
-        <div class="flex items-center bg-[#031227] rounded-2xl border border-[#00CAE0]/50 p-1 shadow-inner">
-          <button type="button" onclick="stepGlobalWeight(-1)" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-[#00CAE0]/30 active:scale-90 text-[#00CAE0] flex items-center justify-center font-bold text-lg transition" title="کاهش ۱ کیلوگرم">
+        <button 
+          type="button" 
+          id="searchClearBtn" 
+          onclick="clearSearchInput()" 
+          class="hidden w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center text-xs font-bold transition shrink-0"
+          title="پاک کردن متن جستجو"
+        >
+          ✕
+        </button>
+
+        <div class="h-6 w-px bg-slate-200 shrink-0 hidden sm:block"></div>
+
+        <!-- کنترل یکپارچه و ظریف وزن بیمار جهت محاسبه زنده حجم سرنگ تمام داروها -->
+        <div class="flex items-center gap-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-xl shrink-0 transition" title="تنظیم وزن بیمار جهت محاسبه آنی دوز و حجم سرنگ روی تمام داروها">
+          <i data-lucide="scale" class="w-3.5 h-3.5 text-cyan-700 shrink-0"></i>
+          <span class="text-[11px] font-bold text-slate-600 hidden md:inline">وزن بیمار:</span>
+          
+          <button type="button" onclick="stepGlobalWeight(-1)" class="w-5 h-5 rounded-md bg-white hover:bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-xs transition" title="کاهش ۱ کیلوگرم">
             -
           </button>
-
-          <div class="flex items-center px-2">
+          
+          <div class="flex items-center font-mono font-bold text-xs text-cyan-900 px-1">
             <input 
               type="number" 
               id="globalPatientWeight" 
               value="10" 
               step="0.5" 
               min="0.1" 
-              class="w-16 bg-transparent text-[#00CAE0] font-mono font-black text-center text-lg outline-none latin-text" 
+              class="w-10 bg-transparent text-center outline-none latin-text font-mono font-black" 
               oninput="handleGlobalWeightChange(this.value)"
             >
-            <span class="text-xs text-[#00CAE0] font-bold mr-1">kg</span>
+            <span class="text-[10px] text-slate-400 font-sans">kg</span>
           </div>
 
-          <button type="button" onclick="stepGlobalWeight(1)" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-emerald-500/30 active:scale-90 text-emerald-300 flex items-center justify-center font-bold text-lg transition" title="افزایش ۱ کیلوگرم">
+          <button type="button" onclick="stepGlobalWeight(1)" class="w-5 h-5 rounded-md bg-white hover:bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-xs transition" title="افزایش ۱ کیلوگرم">
             +
           </button>
         </div>
-
-        <!-- دکمه‌های وزن سریع گونه‌ها -->
-        <div class="flex items-center gap-1 text-xs" id="quickWeightPills">
-          <button onclick="setGlobalWeight(3)" data-w="3" class="weight-preset px-2.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium transition active:scale-95 flex items-center gap-1"><span class="icon-3d icon-3d-cyan w-4 h-4"><i data-lucide="cat" class="w-2.5 h-2.5"></i></span> ۳ kg</button>
-          <button onclick="setGlobalWeight(5)" data-w="5" class="weight-preset px-2.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium transition active:scale-95 flex items-center gap-1"><span class="icon-3d icon-3d-blue w-4 h-4"><i data-lucide="dog" class="w-2.5 h-2.5"></i></span> ۵ kg</button>
-          <button onclick="setGlobalWeight(10)" data-w="10" class="weight-preset active px-2.5 py-1.5 rounded-xl bg-[#00CAE0] text-[#0A2447] font-black transition shadow-md active:scale-95 flex items-center gap-1"><span class="icon-3d icon-3d-navy w-4 h-4"><i data-lucide="dog" class="w-2.5 h-2.5 text-[#00CAE0]"></i></span> ۱۰ kg</button>
-          <button onclick="setGlobalWeight(25)" data-w="25" class="weight-preset px-2.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium transition active:scale-95 flex items-center gap-1"><span class="icon-3d icon-3d-blue w-4 h-4"><i data-lucide="dog" class="w-2.5 h-2.5"></i></span> ۲۵ kg</button>
-          <button onclick="setGlobalWeight(400)" data-w="400" class="weight-preset px-2.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium transition active:scale-95 flex items-center gap-1"><span class="icon-3d icon-3d-emerald w-4 h-4"><i data-lucide="shield" class="w-2.5 h-2.5"></i></span> ۴۰۰ kg</button>
-        </div>
       </div>
     </div>
-
-    <!-- نوار جستجوی پیشرفته به سبک Google Stitch Command Bar -->
-    <div class="relative mb-5">
-      <div class="relative flex items-center shadow-md rounded-2xl bg-white border-2 border-[#D0D7E8] focus-within:border-[#0590D5] focus-within:ring-4 focus-within:ring-[#00CAE0]/25 transition-all duration-200">
-        <div class="pr-4 pl-2 text-slate-400 flex items-center pointer-events-none">
-          <i data-lucide="search" class="w-5 h-5 text-[#0590D5]"></i>
-        </div>
-        <input 
-          type="text" 
-          id="searchInput" 
-          placeholder="جستجوی آنی دارو با نام فارسی، انگلیسی یا فینگلیش (مثلاً: گاباپنتین، Meloxicam، انروین)..." 
-          class="w-full py-3.5 pl-28 bg-transparent text-slate-900 text-sm sm:text-base outline-none placeholder-slate-400 font-medium"
-          oninput="handleSearch()"
-        >
-        
-        <!-- دکمه پاک کردن و نشانگر میانبر -->
-        <div class="pl-3 flex items-center gap-2 shrink-0">
-          <button 
-            type="button" 
-            id="searchClearBtn" 
-            onclick="clearSearchInput()" 
-            class="hidden w-6 h-6 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-600 flex items-center justify-center text-xs font-bold transition"
-            title="پاک کردن متن جستجو"
-          >
-            ✕
-          </button>
-          <div id="searchCountBadge" class="text-xs text-slate-500 font-bold hidden sm:block">
-            <!-- تعداد نتایج -->
-          </div>
-          <span class="stitch-kbd hidden sm:inline-block" title="کلید میانبر جستجو">/</span>
-        </div>
-      </div>
-
-      <!-- تگ‌های فیلتر سریع به سبک Google Stitch Chips -->
-      <div class="flex items-center gap-1.5 overflow-x-auto pt-2.5 pb-1 scrollbar-none text-xs" id="quickSearchChips">
-        <span class="text-slate-400 text-[11px] font-bold shrink-0 ml-1">دسترسی سریع:</span>
-        <button onclick="filterByQuickTag('all')" data-qtag="all" class="stitch-chip active flex items-center gap-1.5 group">
-          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-          <span>همه داروها</span>
-        </button>
-        <button onclick="filterByQuickTag('emergency')" data-qtag="emergency" class="stitch-chip flex items-center gap-1.5">
-          <i data-lucide="heart-pulse" class="w-3.5 h-3.5 text-rose-500"></i>
-          <span>اورژانس و CPR</span>
-        </button>
-        <button onclick="filterByQuickTag('antibiotic')" data-qtag="antibiotic" class="stitch-chip flex items-center gap-1.5">
-          <i data-lucide="shield" class="w-3.5 h-3.5 text-orange-500"></i>
-          <span>آنتی‌بیوتیک‌ها</span>
-        </button>
-        <button onclick="filterByQuickTag('analgesic')" data-qtag="analgesic" class="stitch-chip flex items-center gap-1.5">
-          <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-500"></i>
-          <span>ضددرد و مسکن</span>
-        </button>
-        <button onclick="filterByQuickTag('anesthetic')" data-qtag="anesthetic" class="stitch-chip flex items-center gap-1.5">
-          <i data-lucide="activity" class="w-3.5 h-3.5 text-teal-500"></i>
-          <span>بیهوشی و آرام‌بخش</span>
-        </button>
-        <button onclick="filterByQuickTag('cardio_renal')" data-qtag="cardio_renal" class="stitch-chip flex items-center gap-1.5">
-          <i data-lucide="heart" class="w-3.5 h-3.5 text-rose-500"></i>
-          <span>قلب و کلیه</span>
-        </button>
-        <button onclick="filterByQuickTag('canine')" data-qtag="canine" class="stitch-chip flex items-center gap-1.5">
-          <span>سگ</span>
-        </button>
-        <button onclick="filterByQuickTag('feline')" data-qtag="feline" class="stitch-chip flex items-center gap-1.5">
-          <span>گربه</span>
-        </button>
-        <button onclick="filterByQuickTag('equine')" data-qtag="equine" class="stitch-chip flex items-center gap-1.5">
-          <span>اسب</span>
-        </button>
-        <button onclick="filterByQuickTag('ruminant')" data-qtag="ruminant" class="stitch-chip flex items-center gap-1.5">
-          <span>دام بزرگ</span>
-        </button>
-        <button onclick="filterByQuickTag('favorites')" data-qtag="favorites" class="stitch-chip flex items-center gap-1.5">
-          <i data-lucide="star" class="w-3.5 h-3.5 text-amber-500"></i>
-          <span>نشان‌شده‌ها</span>
-        </button>
-      </div></div>
-    </div>
-
-    <!-- ======================================================== -->
-    <!-- ردیف ۱: دسته‌بندی تخصصی درمانی و فارماکولوژی (Therapeutic Categories) -->
-    <!-- ======================================================== -->
-    <div class="mb-3.5 bg-white p-3 sm:p-4 rounded-3xl border border-slate-200/90 shadow-sm">
-      <div class="flex items-center justify-between mb-2.5 pb-2 border-b border-slate-100 flex-wrap gap-2">
-        <div class="flex items-center gap-2">
-          <div class="w-7 h-7 rounded-lg bg-[#0590D5]/10 text-[#0590D5] flex items-center justify-center font-black">
-            <i data-lucide="layout-grid" class="w-4 h-4"></i>
-          </div>
-          <span class="text-xs sm:text-sm font-black text-slate-800">دسته‌بندی درمانی و فارماکولوژی بالینی:</span>
-          <span class="text-[11px] text-slate-400 font-medium hidden sm:inline">تفکیک بر اساس اثر فارماکولوژیک و سیستم اندام</span>
-        </div>
-
-        <button 
-          onclick="openTherapeuticAtlasModal()" 
-          class="text-xs font-bold text-[#0070A8] hover:text-[#0A2447] bg-[#E6F7FC] hover:bg-[#D4F2FB] px-3 py-1.5 rounded-xl border border-[#B2E7F7] flex items-center gap-1.5 transition shadow-2xs font-bold"
-        >
-          <i data-lucide="book-marked" class="w-3.5 h-3.5"></i>
-          <span class="flex items-center gap-1.5"><span class="icon-3d icon-3d-cyan w-4 h-4"><i data-lucide="layers" class="w-2.5 h-2.5"></i></span> <span>اطلس کامل رده‌های دارویی</span></span>
-        </button>
-      </div>
-
-      <!-- دکمه‌های کپسولی رده‌های درمانی -->
-      <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none text-xs" id="therapeuticCategoryPills">
-        <button onclick="setTherapeuticCategoryFilter('all')" data-thcat="all" class="thcat-pill active px-3 py-1.5 rounded-xl font-bold border transition bg-slate-900 text-white border-slate-900 shadow-sm flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-          <span>همه رده‌ها</span>
-          <span class="count-badge text-[10px] bg-white/20 text-white px-1.5 py-0.2 rounded-full font-mono" id="cnt_all">1120</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('anesthesia_sedation')" data-thcat="anesthesia_sedation" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-teal-800 border-slate-200 hover:bg-teal-50 hover:border-teal-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="syringe" class="w-3.5 h-3.5 text-teal-600"></i>
-          <span>بیهوشی و آرام‌بخش</span>
-          <span class="count-badge text-[10px] bg-teal-100 text-teal-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_anesthesia_sedation">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('analgesia_nsaid')" data-thcat="analgesia_nsaid" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-indigo-800 border-slate-200 hover:bg-indigo-50 hover:border-indigo-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="shield" class="w-3.5 h-3.5 text-indigo-600"></i>
-          <span>ضددرد و مسکن (NSAID/اوپیوئید)</span>
-          <span class="count-badge text-[10px] bg-indigo-100 text-indigo-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_analgesia_nsaid">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('antimicrobial')" data-thcat="antimicrobial" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-purple-800 border-slate-200 hover:bg-purple-50 hover:border-purple-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-purple-600"></i>
-          <span>آنتی‌بیوتیک و ضدمیکروب</span>
-          <span class="count-badge text-[10px] bg-purple-100 text-purple-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_antimicrobial">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('emergency_cpr')" data-thcat="emergency_cpr" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-rose-800 border-slate-200 hover:bg-rose-50 hover:border-rose-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="zap" class="w-3.5 h-3.5 text-rose-600"></i>
-          <span>اورژانس، احیا و شوک</span>
-          <span class="count-badge text-[10px] bg-rose-100 text-rose-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_emergency_cpr">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('gastrointestinal')" data-thcat="gastrointestinal" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-amber-800 border-slate-200 hover:bg-amber-50 hover:border-amber-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="utensils" class="w-3.5 h-3.5 text-amber-600"></i>
-          <span>دستگاه گوارش، کبد و ضدتهوع</span>
-          <span class="count-badge text-[10px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_gastrointestinal">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('cardiovascular')" data-thcat="cardiovascular" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-pink-800 border-slate-200 hover:bg-pink-50 hover:border-pink-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="heart-pulse" class="w-3.5 h-3.5 text-pink-600"></i>
-          <span>قلب، عروق و فشار خون</span>
-          <span class="count-badge text-[10px] bg-pink-100 text-pink-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_cardiovascular">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('renal_urinary')" data-thcat="renal_urinary" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-cyan-800 border-slate-200 hover:bg-cyan-50 hover:border-cyan-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="droplet" class="w-3.5 h-3.5 text-cyan-600"></i>
-          <span>کلیه، مجاری ادراری و دیورتیک‌ها</span>
-          <span class="count-badge text-[10px] bg-cyan-100 text-cyan-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_renal_urinary">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('neurology_anticonvulsant')" data-thcat="neurology_anticonvulsant" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-violet-800 border-slate-200 hover:bg-violet-50 hover:border-violet-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="brain" class="w-3.5 h-3.5 text-violet-600"></i>
-          <span>مغز، اعصاب، ضدتشنج و رفتار</span>
-          <span class="count-badge text-[10px] bg-violet-100 text-violet-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_neurology_anticonvulsant">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('endocrine_steroid')" data-thcat="endocrine_steroid" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-amber-800 border-slate-200 hover:bg-amber-50 hover:border-amber-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="dna" class="w-3.5 h-3.5 text-amber-600"></i>
-          <span>کورتیکواستروئیدها، ایمونولوژی و غدد</span>
-          <span class="count-badge text-[10px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_endocrine_steroid">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('parasiticide')" data-thcat="parasiticide" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-emerald-800 border-slate-200 hover:bg-emerald-50 hover:border-emerald-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="bug" class="w-3.5 h-3.5 text-emerald-600"></i>
-          <span>ضدانگل، ضدکرم و اندکتوسیدها</span>
-          <span class="count-badge text-[10px] bg-emerald-100 text-emerald-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_parasiticide">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('respiratory')" data-thcat="respiratory" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-sky-800 border-slate-200 hover:bg-sky-50 hover:border-sky-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="wind" class="w-3.5 h-3.5 text-sky-600"></i>
-          <span>دستگاه تنفس و راه‌های هوایی</span>
-          <span class="count-badge text-[10px] bg-sky-100 text-sky-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_respiratory">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('ophthalmology_otic')" data-thcat="ophthalmology_otic" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-blue-800 border-slate-200 hover:bg-blue-50 hover:border-blue-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="eye" class="w-3.5 h-3.5 text-blue-600"></i>
-          <span>چشم‌پزشکی، گوش و فرآورده‌های موضعی</span>
-          <span class="count-badge text-[10px] bg-blue-100 text-blue-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_ophthalmology_otic">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('dermatology')" data-thcat="dermatology" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-rose-800 border-slate-200 hover:bg-rose-50 hover:border-rose-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="activity" class="w-3.5 h-3.5 text-rose-600"></i>
-          <span>پوست، آلرژی و درماتولوژی</span>
-          <span class="count-badge text-[10px] bg-rose-100 text-rose-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_dermatology">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('reproduction')" data-thcat="reproduction" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-fuchsia-800 border-slate-200 hover:bg-fuchsia-50 hover:border-fuchsia-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-fuchsia-600"></i>
-          <span>هورمون‌های تولیدمثل و مامایی</span>
-          <span class="count-badge text-[10px] bg-fuchsia-100 text-fuchsia-900 px-1.5 py-0.2 rounded-full font-mono" id="cnt_reproduction">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('toxicology_fluids')" data-thcat="toxicology_fluids" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-teal-900 border-slate-200 hover:bg-teal-50 hover:border-teal-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="skull" class="w-3.5 h-3.5 text-teal-700"></i>
-          <span>پادزهرها، سم‌شناسی و سرم</span>
-          <span class="count-badge text-[10px] bg-teal-100 text-teal-950 px-1.5 py-0.2 rounded-full font-mono" id="cnt_toxicology_fluids">0</span>
-        </button>
-
-        <button onclick="setTherapeuticCategoryFilter('oncology_chemo')" data-thcat="oncology_chemo" class="thcat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-indigo-950 border-slate-200 hover:bg-indigo-50 hover:border-indigo-300 flex items-center gap-1.5 whitespace-nowrap">
-          <i data-lucide="crosshair" class="w-3.5 h-3.5 text-indigo-700"></i>
-          <span>شیمی‌درمانی و انکولوژی</span>
-          <span class="count-badge text-[10px] bg-indigo-100 text-indigo-950 px-1.5 py-0.2 rounded-full font-mono" id="cnt_oncology_chemo">0</span>
-        </button>
-      </div>
+    
+    <!-- دسترسی سریع کلینیکی (فقط در یک ردیف خلوت و مینیمال) -->
+    <div class="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none text-xs mb-1" id="quickSearchChips">
+      <span class="text-slate-400 text-[11px] font-bold shrink-0 ml-1">میانبر بالینی:</span>
+      <button onclick="filterByQuickTag('all')" data-qtag="all" class="stitch-chip active flex items-center gap-1.5">
+        <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+        <span>همه داروها</span>
+      </button>
+      <button onclick="filterByQuickTag('emergency')" data-qtag="emergency" class="stitch-chip flex items-center gap-1.5">
+        <i data-lucide="heart-pulse" class="w-3.5 h-3.5 text-rose-500"></i>
+        <span>اورژانس و احیا</span>
+      </button>
+      <button onclick="filterByQuickTag('antibiotic')" data-qtag="antibiotic" class="stitch-chip flex items-center gap-1.5">
+        <i data-lucide="shield" class="w-3.5 h-3.5 text-orange-500"></i>
+        <span>آنتی‌بیوتیک‌ها</span>
+      </button>
+      <button onclick="filterByQuickTag('analgesic')" data-qtag="analgesic" class="stitch-chip flex items-center gap-1.5">
+        <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-500"></i>
+        <span>ضددرد و مسکن</span>
+      </button>
+      <button onclick="filterByQuickTag('anesthetic')" data-qtag="anesthetic" class="stitch-chip flex items-center gap-1.5">
+        <i data-lucide="activity" class="w-3.5 h-3.5 text-teal-500"></i>
+        <span>بیهوشی و سدیشن</span>
+      </button>
+      <button onclick="openTherapeuticAtlasModal()" class="stitch-chip flex items-center gap-1.5 bg-cyan-50 text-cyan-800 border-cyan-200 hover:bg-cyan-100">
+        <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-cyan-600"></i>
+        <span>اطلس ۱۶ رده دارویی ↗</span>
+      </button>
     </div>
 
     <!-- فیلترهای تکمیلی (گونه بیمار + وضعیت بازار دارویی ایران) -->
