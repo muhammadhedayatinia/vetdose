@@ -1,0 +1,4 @@
+node_modules/
+scripts/github_config.json
+.DS_Store
+*.zip

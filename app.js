@@ -754,7 +754,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
             <span>${headerTitle}:</span>
           </div>
           <p class="text-xs font-bold text-slate-800 mt-0.5 leading-snug truncate" title="${guide.indication || ''}">
-            ${guide.indication || 'تسکین و درمان بالینی'}
+            ${fixBidiParentheses(guide.indication) || 'تسکین و درمان بالینی'}
           </p>
         </div>
         ${volDisplayHtml}
@@ -773,7 +773,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
         <div>
           <span class="text-[11px] text-slate-500 block font-medium">فرم دارویی در ایران:</span>
           <span class="font-bold text-slate-900 block mt-0.5 leading-snug">${selectedForm ? selectedForm.name : (guide.formulation || '-')}</span>
-          ${guide.route ? `<span class="text-indigo-800 font-bold text-[11px] block mt-0.5">مسیر: ${guide.route}</span>` : ''}
+          ${guide.route ? `<span class="text-indigo-800 font-bold text-[11px] block mt-0.5">مسیر: ${fixBidiParentheses(guide.route)}</span>` : ''}
         </div>
       </div>
 
@@ -787,7 +787,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
             <span>📌</span>
             <span>فرمول سرانگشتی:</span>
           </span>
-          <span class="text-left font-bold text-amber-900 latin-text text-xs">${guide.rule_of_thumb}</span>
+          <span class="text-left font-bold text-amber-900 latin-text text-xs">${fixBidiParentheses(guide.rule_of_thumb)}</span>
         </div>
       ` : ''}
 
@@ -795,7 +795,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
       ${guide.pearl ? `
         <div class="text-xs leading-relaxed text-slate-700 bg-white/80 p-2.5 rounded-xl border border-slate-200/60">
           <span class="font-black text-teal-800">💡 نکته بالینی پلامبز:</span>
-          <span>${guide.pearl}</span>
+          <span>${fixBidiParentheses(guide.pearl)}</span>
         </div>
       ` : ''}
     </div>
@@ -1911,8 +1911,19 @@ function renderDrugSpecialtySuiteHtml(drug, isMonograph = false) {
   `;
 }
 
+// تابع پیشرفته ایزولاسیون پرانتزها و عبارات انگلیسی در متون فارسی (حل قطعی باگ BiDi در تمام موبایل‌ها و مرورگرها)
+function fixBidiParentheses(str) {
+  if (!str || typeof str !== 'string') return str;
+  return str.replace(/\(([^)]*[a-zA-Z0-9][^)]*)\)/g, '<bdi dir="ltr" class="latin-text">&lrm;($1)&lrm;</bdi>');
+}
+
+let currentFilteredDrugs = [];
+let renderedBatchCount = 30;
+const BATCH_SIZE = 30;
+let isInfiniteScrollAttached = false;
+
 // رندر کارت‌های داروها در صفحه
-function renderDrugs() {
+function renderDrugs(reset = true) {
   const container = document.getElementById('drugsGrid');
   const noResults = document.getElementById('noResults');
   const countBadge = document.getElementById('searchCountBadge');
@@ -1923,84 +1934,89 @@ function renderDrugs() {
   if (favBadge) favBadge.textContent = getFavoriteDrugs().length;
   if (!container) return;
 
-  const filtered = DRUGS_DATA.filter(drug => {
-    // ۰. فیلتر نشان‌شده‌ها (علاقه‌مندی‌ها)
-    if (currentFavoritesOnly && !isFavoriteDrug(drug.id)) {
-      return false;
-    }
-
-    // ۱. فیلتر رده درمانی و فارماکولوژی (پلامبز)
-    if (currentTherapeuticCategory !== 'all') {
-      const isMatchPrimary = drug.therapeutic_category === currentTherapeuticCategory;
-      const isMatchSecondary = drug.secondary_categories && drug.secondary_categories.includes(currentTherapeuticCategory);
-      if (!isMatchPrimary && !isMatchSecondary) {
+  if (reset) {
+    currentFilteredDrugs = DRUGS_DATA.filter(drug => {
+      // ۰. فیلتر نشان‌شده‌ها (علاقه‌مندی‌ها)
+      if (currentFavoritesOnly && !isFavoriteDrug(drug.id)) {
         return false;
       }
-    }
 
-    // ۲. فیلتر وضعیت بازار و منبع دارو
-    if (currentCategory !== 'all' && drug.category_type !== currentCategory) {
-      return false;
-    }
-
-    // ۳. فیلتر گونه بیمار
-    if (currentSpecies !== 'all') {
-      const guideObj = drug.species_guide ? (
-        drug.species_guide[currentSpecies] ||
-        (currentSpecies === 'aquatics' ? (drug.species_guide.aquatics || drug.species_guide.aquatic) : null)
-      ) : null;
-      const hasGuide = guideObj && (typeof guideObj === 'string' || guideObj.status !== 'not_recommended');
-      
-      const checkSpeciesDosing = (val) => {
-        if (!val) return false;
-        if (Array.isArray(val)) return val.length > 0;
-        if (typeof val === 'object') return Object.keys(val).length > 0;
-        if (typeof val === 'string') return val.trim().length > 0;
-        return true;
-      };
-      const hasDosing = drug.species_dosing && (
-        checkSpeciesDosing(drug.species_dosing[currentSpecies]) ||
-        (currentSpecies === 'aquatics' && (checkSpeciesDosing(drug.species_dosing.aquatics) || checkSpeciesDosing(drug.species_dosing.aquatic))) ||
-        (currentSpecies === 'bovine' && checkSpeciesDosing(drug.species_dosing.ruminant)) ||
-        (currentSpecies === 'ovine_caprine' && checkSpeciesDosing(drug.species_dosing.ruminant))
-      );
-      if (!hasGuide && !hasDosing) return false;
-    }
-
-    // ۴. فیلتر جستجوی چندوجهی
-    if (searchQuery) {
-      const matchEn = (drug.generic_name_en || drug.name_en || '').toLowerCase().includes(searchQuery);
-      const matchFa = (drug.generic_name_fa || drug.name_fa || '').includes(searchQuery);
-      const matchClass = ((drug.drug_class_fa || '') + ' ' + (drug.drug_class_en || '')).toLowerCase().includes(searchQuery);
-      const matchCategory = (drug.therapeutic_category_fa || '').toLowerCase().includes(searchQuery);
-      const matchOrgan = (drug.organ_system_fa || '').toLowerCase().includes(searchQuery);
-      const matchTags = (drug.clinical_tags || []).join(' ').toLowerCase().includes(searchQuery);
-      
-      // جستجو در برندهای ایران
-      let matchBrand = false;
-      if (drug.iranian_market_products) {
-        if (Array.isArray(drug.iranian_market_products)) {
-          matchBrand = drug.iranian_market_products.join(' ').toLowerCase().includes(searchQuery);
-        } else {
-          const vetB = (drug.iranian_market_products.veterinary_brands || []).map(b => b.brand_name).join(' ');
-          const humB = (drug.iranian_market_products.human_brands || []).map(b => b.brand_name).join(' ');
-          matchBrand = (vetB + ' ' + humB).toLowerCase().includes(searchQuery);
+      // ۱. فیلتر رده درمانی و فارماکولوژی (پلامبز)
+      if (currentTherapeuticCategory !== 'all') {
+        const isMatchPrimary = drug.therapeutic_category === currentTherapeuticCategory;
+        const isMatchSecondary = drug.secondary_categories && drug.secondary_categories.includes(currentTherapeuticCategory);
+        if (!isMatchPrimary && !isMatchSecondary) {
+          return false;
         }
       }
 
-      if (!matchEn && !matchFa && !matchClass && !matchBrand && !matchCategory && !matchOrgan && !matchTags) {
+      // ۲. فیلتر وضعیت بازار و منبع دارو
+      if (currentCategory !== 'all' && drug.category_type !== currentCategory) {
         return false;
       }
-    }
 
-    return true;
-  });
+      // ۳. فیلتر گونه بیمار
+      if (currentSpecies !== 'all') {
+        const guideObj = drug.species_guide ? (
+          drug.species_guide[currentSpecies] ||
+          (currentSpecies === 'aquatics' ? (drug.species_guide.aquatics || drug.species_guide.aquatic) : null)
+        ) : null;
+        const hasGuide = guideObj && (typeof guideObj === 'string' || guideObj.status !== 'not_recommended');
+        
+        const checkSpeciesDosing = (val) => {
+          if (!val) return false;
+          if (Array.isArray(val)) return val.length > 0;
+          if (typeof val === 'object') return Object.keys(val).length > 0;
+          if (typeof val === 'string') return val.trim().length > 0;
+          return true;
+        };
+        const hasDosing = drug.species_dosing && (
+          checkSpeciesDosing(drug.species_dosing[currentSpecies]) ||
+          (currentSpecies === 'aquatics' && (checkSpeciesDosing(drug.species_dosing.aquatics) || checkSpeciesDosing(drug.species_dosing.aquatic))) ||
+          (currentSpecies === 'bovine' && checkSpeciesDosing(drug.species_dosing.ruminant)) ||
+          (currentSpecies === 'ovine_caprine' && checkSpeciesDosing(drug.species_dosing.ruminant))
+        );
+        if (!hasGuide && !hasDosing) return false;
+      }
 
-  if (drugsCountDisplay) drugsCountDisplay.textContent = `${filtered.length} دارو`;
+      // ۴. فیلتر جستجوی چندوجهی
+      if (searchQuery) {
+        const matchEn = (drug.generic_name_en || drug.name_en || '').toLowerCase().includes(searchQuery);
+        const matchFa = (drug.generic_name_fa || drug.name_fa || '').includes(searchQuery);
+        const matchClass = ((drug.drug_class_fa || '') + ' ' + (drug.drug_class_en || '')).toLowerCase().includes(searchQuery);
+        const matchCategory = (drug.therapeutic_category_fa || '').toLowerCase().includes(searchQuery);
+        const matchOrgan = (drug.organ_system_fa || '').toLowerCase().includes(searchQuery);
+        const matchTags = (drug.clinical_tags || []).join(' ').toLowerCase().includes(searchQuery);
+        
+        // جستجو در برندهای ایران
+        let matchBrand = false;
+        if (drug.iranian_market_products) {
+          if (Array.isArray(drug.iranian_market_products)) {
+            matchBrand = drug.iranian_market_products.join(' ').toLowerCase().includes(searchQuery);
+          } else {
+            const vetB = (drug.iranian_market_products.veterinary_brands || []).map(b => b.brand_name).join(' ');
+            const humB = (drug.iranian_market_products.human_brands || []).map(b => b.brand_name).join(' ');
+            matchBrand = (vetB + ' ' + humB).toLowerCase().includes(searchQuery);
+          }
+        }
+
+        if (!matchEn && !matchFa && !matchClass && !matchBrand && !matchCategory && !matchOrgan && !matchTags) {
+          return false;
+        }
+      }
+
+      return true;
+    });
+
+    // در حالت جستجوی مستقیم، نتایج تا ۶۰ عدد یک‌جا نمایش یابند؛ در حالت عادی بسته‌های ۳۰ تایی فوق‌سریع
+    renderedBatchCount = searchQuery ? Math.min(60, currentFilteredDrugs.length) : BATCH_SIZE;
+  }
+
+  if (drugsCountDisplay) drugsCountDisplay.textContent = `${currentFilteredDrugs.length} دارو`;
   if (btnToggleAllText) btnToggleAllText.textContent = isAllCardsExpanded ? 'بستن همه دوزها' : 'باز کردن همه دوزها';
-  if (countBadge) countBadge.textContent = `${filtered.length} دارو یافت شد`;
+  if (countBadge) countBadge.textContent = `${currentFilteredDrugs.length} دارو یافت شد`;
 
-  if (filtered.length === 0) {
+  if (currentFilteredDrugs.length === 0) {
     container.innerHTML = '';
     if (noResults) noResults.classList.remove('hidden');
     return;
@@ -2008,177 +2024,246 @@ function renderDrugs() {
 
   if (noResults) noResults.classList.add('hidden');
 
-  // در صورت جستجوی خاص با نتایج کم (۱ تا ۳ دارو)، برای سهولت بالینی خودکار باز شوند
-  if (searchQuery && filtered.length > 0 && filtered.length <= 3) {
-    filtered.forEach(d => expandedCards.add(d.id));
+  // در صورت جستجوی خاص با نتایج کم (۱ تا ۳ دارو)، خودکار باز شوند
+  if (searchQuery && currentFilteredDrugs.length > 0 && currentFilteredDrugs.length <= 3) {
+    currentFilteredDrugs.forEach(d => expandedCards.add(d.id));
   }
 
-  container.innerHTML = filtered.map(drug => {
-    // تعیین کلاس رنگ بج
-    let badgeClass = 'badge-blue';
-    if (drug.badge_color === 'purple') badgeClass = 'badge-purple';
-    if (drug.badge_color === 'green') badgeClass = 'badge-green';
-    if (drug.badge_color === 'red') badgeClass = 'badge-red';
+  // رندر بخش قابل نمایش (Batch)
+  const visibleDrugs = currentFilteredDrugs.slice(0, renderedBatchCount);
+  container.innerHTML = visibleDrugs.map(drug => renderSingleDrugCardHtml(drug)).join('');
 
-    // هشدار زایلیتول
-    const xylitolBadge = drug.excipient_warnings?.has_xylitol_risk ? `
-      <span class="inline-flex items-center gap-1 text-[10px] px-2 py-0.5 rounded-md bg-amber-50 text-amber-800 border border-amber-200 font-bold">
-        ⚠️ هشدار زایلیتول شربت انسانی
-      </span>
-    ` : '';
-
-    // تعیین گونه فعال کارت دارویی بر اساس گونه‌های تحت پوشش این داروی مشخص
-    const drugSpeciesList = getSpeciesForDrug(drug);
-    let currentCardSp = activeCardSpecies[drug.id];
-    if (!currentCardSp) {
-      if (currentSpecies !== 'all' && drugSpeciesList.includes(currentSpecies)) {
-        currentCardSp = currentSpecies;
-      } else if (drugSpeciesList.includes('canine')) {
-        currentCardSp = 'canine';
-      } else {
-        currentCardSp = drugSpeciesList[0] || 'canine';
-      }
-    }
-    const speciesTabsHtml = renderSpeciesTabsButtons(drug, currentCardSp);
-    const speciesBoxHtml = getPlumbsSpeciesBoxHtml(drug, currentCardSp);
-
-    const isExpanded = expandedCards.has(drug.id);
-    const speciesIconsPreview = getSpeciesIconsPreviewHtml(drug);
-
-    return `
-      <div id="card_${drug.id}" class="drug-card bg-white rounded-3xl p-5 border ${isExpanded ? 'border-teal-500/50 shadow-md ring-2 ring-teal-500/20' : 'border-slate-200/90 shadow-2xs hover:border-teal-300 hover:shadow-sm'} transition-all duration-200 flex flex-col justify-between">
-        <div>
-          <!-- هدر کلیک‌پذیر کارت جهت باز/بسته شدن آکاردئونی -->
-          <div class="cursor-pointer select-none group" onclick="toggleDrugCard('${drug.id}', event)">
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <div class="flex-1">
-                <div class="flex items-center gap-2 flex-wrap">
-                  <h3 class="text-base font-black text-slate-900 group-hover:text-teal-600 transition">
-                    ${drug.generic_name_fa}
-                  </h3>
-                  <span class="text-[10px] px-2 py-0.5 rounded-lg font-bold whitespace-nowrap ${badgeClass}">
-                    ${drug.category_badge}
-                  </span>
-                </div>
-                <p class="text-xs text-slate-400 latin-text font-mono mt-0.5">${drug.generic_name_en}</p>
-              </div>
-
-              <div class="flex items-center gap-1.5 shrink-0 no-card-toggle">
-                <button type="button" onclick="toggleFavoriteDrug('${drug.id}', event)" class="p-1 rounded-xl hover:bg-amber-50 text-base transition" title="نشان کردن در علاقه‌مندی‌ها">
-                  ${isFavoriteDrug(drug.id) ? '⭐' : '☆'}
-                </button>
-              </div>
-            </div>
-
-            <!-- برچسب‌های تفکیک رده درمانی و سیستم اندام پلامبز -->
-            <div class="flex items-center gap-1.5 flex-wrap mb-1.5">
-              <span class="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80">
-                <i data-lucide="${drug.therapeutic_icon || 'pill'}" class="w-3.5 h-3.5 text-teal-600"></i>
-                <span>${drug.therapeutic_category_fa || drug.drug_class_fa}</span>
-              </span>
-              ${drug.organ_system_fa ? `
-                <span class="text-[10px] font-medium px-2 py-0.5 rounded-lg bg-teal-50/80 text-teal-900 border border-teal-200/50">
-                  🎯 ${drug.organ_system_fa}
-                </span>
-              ` : ''}
-            </div>
-
-            <!-- رده فارماکولوژی تفصیلی -->
-            <p class="text-xs text-slate-500 line-clamp-1 mb-2">${drug.drug_class_fa}</p>
-
-            <!-- برچسب‌های سریع فوق‌تخصصی پلامبز -->
-            ${renderDrugSpecialtyPillsHtml(drug)}
-
-            <!-- پیش‌نمایش گونه‌های حیوانی تحت پوشش در حالت فشرده -->
-            ${speciesIconsPreview}
-
-            <!-- نوار کلیک برای باز کردن یا بستن دوزها و جزئیات -->
-            <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-teal-700 group-hover:text-teal-800 transition">
-              <span id="card_toggle_text_${drug.id}" class="flex items-center gap-1 text-[11px]">
-                <i data-lucide="layers" class="w-3.5 h-3.5 text-teal-600"></i>
-                <span>${isExpanded ? 'بستن توضیحات و دوزها' : 'مشاهده دوزها، سرنگ و جزئیات'}</span>
-              </span>
-              <div class="w-6 h-6 rounded-full bg-teal-50 border border-teal-200/70 flex items-center justify-center text-teal-700 transition group-hover:bg-teal-100">
-                <i id="card_toggle_icon_${drug.id}" data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-4 h-4"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- بخش جزئیات قابل باز و بسته شدن (Accordion Details) -->
-          <div id="card_details_${drug.id}" class="${isExpanded ? '' : 'hidden'} mt-3 pt-3 border-t border-slate-100/80 transition-all">
-            <!-- 🐾 نوار انتخاب حیوان با آیکون و تب مستقیم زیر نام دارو -->
-            <div class="mb-3">
-              <div class="flex items-center justify-between mb-1.5">
-                <span class="text-[11px] font-black text-slate-700 flex items-center gap-1">
-                  <i data-lucide="paw-print" class="w-3.5 h-3.5 text-teal-600"></i>
-                  <span>انتخاب حیوان برای دوز و حجم سرنگ:</span>
-                </span>
-                <span class="text-[10px] text-slate-400 font-medium">کلیک کنید</span>
-              </div>
-              <div class="flex flex-wrap gap-1.5" id="spTabs_${drug.id}">
-                ${speciesTabsHtml}
-              </div>
-            </div>
-
-            <!-- 💉 کادر بزرگ، خوانا و اختصاصی بالینی پلامبز -->
-            <div id="spContent_${drug.id}" class="mb-3">
-              ${speciesBoxHtml}
-            </div>
-
-            <!-- 🔬 تصمیم‌یار بالینی و پروتکل‌های فوق‌تخصصی پلامبز (تاگل شونده با دکمه اختصاصی) -->
-            ${renderDrugSpecialtySuiteHtml(drug, false)}
-
-            <!-- هشدارهای مهم و زایلیتول -->
-            ${xylitolBadge ? `<div class="mb-3">${xylitolBadge}</div>` : ''}
-
-            <!-- نکته نسخه‌نویس (خلاصه) -->
-            ${drug.prescriber_highlights && (Array.isArray(drug.prescriber_highlights) ? drug.prescriber_highlights.length > 0 : !!drug.prescriber_highlights) ? `
-              <div class="bg-amber-50/60 border border-amber-200/70 p-2.5 rounded-xl text-[11px] text-amber-900 leading-relaxed mb-3">
-                <span class="font-bold">نکته کلیدی:</span> ${Array.isArray(drug.prescriber_highlights) ? drug.prescriber_highlights[0] : drug.prescriber_highlights}
-              </div>
-            ` : ''}
-          </div>
-        </div>
-
-        <!-- دکمه‌های اکشن پایین کارت با ساختار دو ردیفه منظم و بدون بیرون‌زدگی -->
-        <div class="pt-3 border-t border-slate-100 mt-2 space-y-1.5 w-full">
-          <!-- ردیف ۱: مونوگراف کامل و محاسبه دوز -->
-          <div class="grid grid-cols-2 gap-1.5 w-full">
-            <button type="button" onclick="openMonographModal('${drug.id}')" class="py-2 px-2 bg-slate-900 hover:bg-slate-800 active:scale-95 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs">
-              <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
-              <span>مونوگراف</span>
-            </button>
-
-            <button type="button" onclick="quickCalculateForDrug('${drug.id}')" class="py-2 px-2 bg-teal-50 hover:bg-teal-100 active:scale-95 text-teal-800 border border-teal-200 rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs" title="محاسبه دوز برای بیمار">
-              <i data-lucide="calculator" class="w-3.5 h-3.5 text-teal-600"></i>
-              <span>محاسبه دوز</span>
-            </button>
-          </div>
-
-          <!-- ردیف ۲: تداخلات، کوکتل‌ها و ابزارهای تخصصی -->
-          <div class="flex flex-wrap items-center gap-1.5 w-full">
-            <button type="button" onclick="openSingleDrugInteractions('${drug.id}')" class="flex-1 min-w-[70px] py-1.5 px-2 bg-amber-50 hover:bg-amber-100 active:scale-95 text-amber-900 border border-amber-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs" title="رادار تداخلات ۳۶۰ درجه این دارو">
-              <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
-              <span>تداخلات</span>
-            </button>
-            
-            ${drug.synergistic_combinations && drug.synergistic_combinations.length > 0 ? `
-              <button type="button" onclick="openCocktailsModal('${drug.id}')" class="flex-1 min-w-[70px] py-1.5 px-2 bg-indigo-50 hover:bg-indigo-100 active:scale-95 text-indigo-900 border border-indigo-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs" title="مشاهده کوکتل‌های ترکیبی و دستور اختلاط سرنگ">
-                <i data-lucide="flask-conical" class="w-3.5 h-3.5 text-indigo-600 shrink-0"></i>
-                <span>کوکتل‌ها (${drug.synergistic_combinations.length})</span>
-              </button>
-            ` : ''}
-
-            ${renderDrugSpecialtyCardButtonHtml(drug)}
-          </div>
-        </div>
-      </div>
+  // اگر داروی دیگری باقی مانده، نگهبان لود تنبل را اضافه کن
+  if (renderedBatchCount < currentFilteredDrugs.length) {
+    const remaining = currentFilteredDrugs.length - renderedBatchCount;
+    const loadMoreDiv = document.createElement('div');
+    loadMoreDiv.id = 'lazyLoadMoreSentinel';
+    loadMoreDiv.className = 'col-span-full py-6 flex flex-col items-center justify-center gap-2';
+    loadMoreDiv.innerHTML = `
+      <button type="button" onclick="loadMoreBatchDrugs()" class="px-6 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-md flex items-center gap-2 transition active:scale-95 cursor-pointer">
+        <i data-lucide="chevrons-down" class="w-4 h-4 text-teal-400"></i>
+        <span>نمایش ${Math.min(BATCH_SIZE, remaining)} داروی بعدی (${remaining} داروی دیگر)</span>
+      </button>
+      <span class="text-[11px] text-slate-400">یا برای مشاهده ادامه داروها به پایین اسکرول کنید</span>
     `;
-  }).join('');
+    container.appendChild(loadMoreDiv);
+  }
 
   if (window.lucide) {
     lucide.createIcons();
   }
+}
+
+// بارگذاری دسته بعدی داروها به صورت آنی بدون رفرش کل صفحه
+function loadMoreBatchDrugs() {
+  if (renderedBatchCount >= currentFilteredDrugs.length) return;
+  const oldBatch = renderedBatchCount;
+  renderedBatchCount = Math.min(renderedBatchCount + BATCH_SIZE, currentFilteredDrugs.length);
+
+  const container = document.getElementById('drugsGrid');
+  const sentinel = document.getElementById('lazyLoadMoreSentinel');
+  if (sentinel) sentinel.remove();
+
+  const newSlice = currentFilteredDrugs.slice(oldBatch, renderedBatchCount);
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = newSlice.map(drug => renderSingleDrugCardHtml(drug)).join('');
+
+  while (tempDiv.firstChild) {
+    container.appendChild(tempDiv.firstChild);
+  }
+
+  if (renderedBatchCount < currentFilteredDrugs.length) {
+    const remaining = currentFilteredDrugs.length - renderedBatchCount;
+    const loadMoreDiv = document.createElement('div');
+    loadMoreDiv.id = 'lazyLoadMoreSentinel';
+    loadMoreDiv.className = 'col-span-full py-6 flex flex-col items-center justify-center gap-2';
+    loadMoreDiv.innerHTML = `
+      <button type="button" onclick="loadMoreBatchDrugs()" class="px-6 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-md flex items-center gap-2 transition active:scale-95 cursor-pointer">
+        <i data-lucide="chevrons-down" class="w-4 h-4 text-teal-400"></i>
+        <span>نمایش ${Math.min(BATCH_SIZE, remaining)} داروی بعدی (${remaining} داروی دیگر)</span>
+      </button>
+      <span class="text-[11px] text-slate-400">یا برای مشاهده ادامه داروها به پایین اسکرول کنید</span>
+    `;
+    container.appendChild(loadMoreDiv);
+  }
+
+  if (window.lucide) {
+    lucide.createIcons();
+  }
+}
+
+// اسکرول خودکار بی‌نهایت (Auto Infinite Scroll)
+if (typeof window !== 'undefined' && !isInfiniteScrollAttached) {
+  isInfiniteScrollAttached = true;
+  window.addEventListener('scroll', () => {
+    if (renderedBatchCount >= currentFilteredDrugs.length) return;
+    const scrollPos = window.innerHeight + window.scrollY;
+    const threshold = document.body.offsetHeight - 700;
+    if (scrollPos >= threshold) {
+      loadMoreBatchDrugs();
+    }
+  }, { passive: true });
+}
+
+// تولید HTML یک کارت تکی دارو با حفاظت کامل پرانتزها
+function renderSingleDrugCardHtml(drug) {
+  let badgeClass = 'badge-blue';
+  if (drug.badge_color === 'purple') badgeClass = 'badge-purple';
+  if (drug.badge_color === 'green') badgeClass = 'badge-green';
+  if (drug.badge_color === 'red') badgeClass = 'badge-red';
+
+  const xylitolBadge = drug.excipient_warnings?.has_xylitol_risk ? `
+    <span class="inline-flex items-center gap-1 text-[10px] px-2 py-0.5 rounded-md bg-amber-50 text-amber-800 border border-amber-200 font-bold">
+      ⚠️ هشدار زایلیتول شربت انسانی
+    </span>
+  ` : '';
+
+  const drugSpeciesList = getSpeciesForDrug(drug);
+  let currentCardSp = activeCardSpecies[drug.id];
+  if (!currentCardSp) {
+    if (currentSpecies !== 'all' && drugSpeciesList.includes(currentSpecies)) {
+      currentCardSp = currentSpecies;
+    } else if (drugSpeciesList.includes('canine')) {
+      currentCardSp = 'canine';
+    } else {
+      currentCardSp = drugSpeciesList[0] || 'canine';
+    }
+  }
+  const speciesTabsHtml = renderSpeciesTabsButtons(drug, currentCardSp);
+  const speciesBoxHtml = getPlumbsSpeciesBoxHtml(drug, currentCardSp);
+
+  const isExpanded = expandedCards.has(drug.id);
+  const speciesIconsPreview = getSpeciesIconsPreviewHtml(drug);
+
+  return `
+    <div id="card_${drug.id}" class="drug-card bg-white rounded-3xl p-5 border ${isExpanded ? 'border-teal-500/50 shadow-md ring-2 ring-teal-500/20' : 'border-slate-200/90 shadow-2xs hover:border-teal-300 hover:shadow-sm'} transition-all duration-200 flex flex-col justify-between">
+      <div>
+        <!-- هدر کلیک‌پذیر کارت جهت باز/بسته شدن آکاردئونی -->
+        <div class="cursor-pointer select-none group" onclick="toggleDrugCard('${drug.id}', event)">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <div class="flex-1">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 class="text-base font-black text-slate-900 group-hover:text-teal-600 transition">
+                  ${drug.generic_name_fa}
+                </h3>
+                <span class="text-[10px] px-2 py-0.5 rounded-lg font-bold whitespace-nowrap ${badgeClass}">
+                  ${drug.category_badge}
+                </span>
+              </div>
+              <p class="text-xs text-slate-400 latin-text font-mono mt-0.5"><bdi dir="ltr" class="latin-text">&lrm;${drug.generic_name_en || ''}&lrm;</bdi></p>
+            </div>
+
+            <div class="flex items-center gap-1.5 shrink-0 no-card-toggle">
+              <button type="button" onclick="toggleFavoriteDrug('${drug.id}', event)" class="p-1 rounded-xl hover:bg-amber-50 text-base transition" title="نشان کردن در علاقه‌مندی‌ها">
+                ${isFavoriteDrug(drug.id) ? '⭐' : '☆'}
+              </button>
+            </div>
+          </div>
+
+          <!-- برچسب‌های تفکیک رده درمانی و سیستم اندام پلامبز -->
+          <div class="flex items-center gap-1.5 flex-wrap mb-1.5">
+            <span class="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80">
+              <i data-lucide="${drug.therapeutic_icon || 'pill'}" class="w-3.5 h-3.5 text-teal-600"></i>
+              <span>${drug.therapeutic_category_fa || drug.drug_class_fa}</span>
+            </span>
+            ${drug.organ_system_fa ? `
+              <span class="text-[10px] font-medium px-2 py-0.5 rounded-lg bg-teal-50/80 text-teal-900 border border-teal-200/50">
+                🎯 ${drug.organ_system_fa}
+              </span>
+            ` : ''}
+          </div>
+
+          <!-- رده فارماکولوژی تفصیلی با پرانتزهای ایزوله‌شده -->
+          <p class="text-xs text-slate-500 line-clamp-1 mb-2">${fixBidiParentheses(drug.drug_class_fa)}</p>
+
+          <!-- برچسب‌های سریع فوق‌تخصصی پلامبز -->
+          ${renderDrugSpecialtyPillsHtml(drug)}
+
+          <!-- پیش‌نمایش گونه‌های حیوانی تحت پوشش در حالت فشرده -->
+          ${speciesIconsPreview}
+
+          <!-- نوار کلیک برای باز کردن یا بستن دوزها و جزئیات -->
+          <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-teal-700 group-hover:text-teal-800 transition">
+            <span id="card_toggle_text_${drug.id}" class="flex items-center gap-1 text-[11px]">
+              <i data-lucide="layers" class="w-3.5 h-3.5 text-teal-600"></i>
+              <span>${isExpanded ? 'بستن توضیحات و دوزها' : 'مشاهده دوزها، سرنگ و جزئیات'}</span>
+            </span>
+            <div class="w-6 h-6 rounded-full bg-teal-50 border border-teal-200/70 flex items-center justify-center text-teal-700 transition group-hover:bg-teal-100">
+              <i id="card_toggle_icon_${drug.id}" data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-4 h-4"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- بخش جزئیات قابل باز و بسته شدن (Accordion Details) -->
+        <div id="card_details_${drug.id}" class="${isExpanded ? '' : 'hidden'} mt-3 pt-3 border-t border-slate-100/80 transition-all">
+          <!-- 🐾 نوار انتخاب حیوان با آیکون و تب مستقیم زیر نام دارو -->
+          <div class="mb-3">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-black text-slate-700 flex items-center gap-1">
+                <i data-lucide="paw-print" class="w-3.5 h-3.5 text-teal-600"></i>
+                <span>انتخاب حیوان برای دوز و حجم سرنگ:</span>
+              </span>
+              <span class="text-[10px] text-slate-400 font-medium">کلیک کنید</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5" id="spTabs_${drug.id}">
+              ${speciesTabsHtml}
+            </div>
+          </div>
+
+          <!-- 💉 کادر بزرگ، خوانا و اختصاصی بالینی پلامبز -->
+          <div id="spContent_${drug.id}" class="mb-3">
+            ${speciesBoxHtml}
+          </div>
+
+          <!-- 🔬 تصمیم‌یار بالینی و پروتکل‌های فوق‌تخصصی پلامبز -->
+          ${renderDrugSpecialtySuiteHtml(drug, false)}
+
+          <!-- هشدارهای مهم و زایلیتول -->
+          ${xylitolBadge ? `<div class="mb-3">${xylitolBadge}</div>` : ''}
+
+          <!-- نکته نسخه‌نویس (خلاصه) با پرانتزهای ایمن -->
+          ${drug.prescriber_highlights && (Array.isArray(drug.prescriber_highlights) ? drug.prescriber_highlights.length > 0 : !!drug.prescriber_highlights) ? `
+            <div class="bg-amber-50/60 border border-amber-200/70 p-2.5 rounded-xl text-[11px] text-amber-900 leading-relaxed mb-3">
+              <span class="font-bold">نکته کلیدی:</span> ${fixBidiParentheses(Array.isArray(drug.prescriber_highlights) ? drug.prescriber_highlights[0] : drug.prescriber_highlights)}
+            </div>
+          ` : ''}
+        </div>
+      </div>
+
+      <!-- دکمه‌های اکشن پایین کارت با ساختار دو ردیفه منظم و بدون بیرون‌زدگی -->
+      <div class="pt-3 border-t border-slate-100 mt-2 space-y-1.5 w-full">
+        <!-- ردیف ۱: مونوگراف کامل و محاسبه دوز -->
+        <div class="grid grid-cols-2 gap-1.5 w-full">
+          <button type="button" onclick="openMonographModal('${drug.id}')" class="py-2 px-2 bg-slate-900 hover:bg-slate-800 active:scale-95 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs">
+            <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+            <span>مونوگراف</span>
+          </button>
+
+          <button type="button" onclick="quickCalculateForDrug('${drug.id}')" class="py-2 px-2 bg-teal-50 hover:bg-teal-100 active:scale-95 text-teal-800 border border-teal-200 rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs" title="محاسبه دوز برای بیمار">
+            <i data-lucide="calculator" class="w-3.5 h-3.5 text-teal-600"></i>
+            <span>محاسبه دوز</span>
+          </button>
+        </div>
+
+        <!-- ردیف ۲: تداخلات، کوکتل‌ها و ابزارهای تخصصی -->
+        <div class="flex flex-wrap items-center gap-1.5 w-full">
+          <button type="button" onclick="openSingleDrugInteractions('${drug.id}')" class="flex-1 min-w-[70px] py-1.5 px-2 bg-amber-50 hover:bg-amber-100 active:scale-95 text-amber-900 border border-amber-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs" title="رادار تداخلات ۳۶۰ درجه این دارو">
+            <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+            <span>تداخلات</span>
+          </button>
+          
+          ${drug.synergistic_combinations && drug.synergistic_combinations.length > 0 ? `
+            <button type="button" onclick="openCocktailsModal('${drug.id}')" class="flex-1 min-w-[70px] py-1.5 px-2 bg-indigo-50 hover:bg-indigo-100 active:scale-95 text-indigo-900 border border-indigo-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs" title="مشاهده کوکتل‌های ترکیبی و دستور اختلاط سرنگ">
+              <i data-lucide="flask-conical" class="w-3.5 h-3.5 text-indigo-600 shrink-0"></i>
+              <span>کوکتل‌ها (${drug.synergistic_combinations.length})</span>
+            </button>
+          ` : ''}
+
+          ${renderDrugSpecialtyCardButtonHtml(drug)}
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 // باز کردن مودال مونوگراف کامل

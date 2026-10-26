@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "deploy": "node scripts/auto_deploy_github.js",
     "test": "node scripts/test_depth_and_cocktails.js && node scripts/test_clinical_vault_live.js"
   },
   "dependencies": {

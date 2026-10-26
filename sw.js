@@ -1,13 +1,17 @@
 /**
  * Service Worker: سامانه آفلاین وت‌دوز (VetDose PWA Offline Engine)
- * نسخه ۳.۰ - برندینگ مستقل VetDose، ناوبری ارگونومیک، استپرهای وزن و ۴ بعد فوق‌تخصصی فارماکولوژی
+ * نسخه ۳.۱ - فونت یکان‌بخ آفلاین، ایزولاسیون کامل پرانتزها، و سیستم بارگذاری فوق‌سریع موبایل
  */
-const CACHE_NAME = 'vetdose-cache-v3.0.0';
+const CACHE_NAME = 'vetdose-cache-v3.1.0';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './style.css',
   './app.js',
+  './fonts/YekanBakh-Regular.woff2',
+  './fonts/YekanBakh-SemiBold.woff2',
+  './fonts/YekanBakh-Bold.woff2',
+  './fonts/YekanBakh-ExtraBold.woff2',
   './data/drugs.js',
   './data/plumbs_interaction_matrix.js',
   './data/pharmacology_depth.js',
