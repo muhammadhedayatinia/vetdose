@@ -527,3 +527,78 @@ body {
     opacity: 0.08 !important;
   }
 }
+
+
+/* =======================================================
+   سیستم نمادها و آیکون‌های سه‌بعدی بالینی (3D Tactile Icons System)
+   جایگزین دائمی استیکرهای ساده متنی با عمق، گرادیان و هایلایت نوری
+   ======================================================= */
+.icon-3d {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.22s var(--stitch-transition-smooth);
+  box-shadow: 0 4px 10px -2px rgba(10, 36, 71, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.6), inset 0 -1.5px 2px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.icon-3d:hover {
+  transform: translateY(-1.5px) scale(1.06);
+  box-shadow: 0 8px 16px -2px rgba(10, 36, 71, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.7);
+}
+
+.icon-3d-cyan {
+  background: linear-gradient(135deg, #00E5FF 0%, #00A3AD 60%, #0070A8 100%);
+  box-shadow: 0 4px 12px rgba(0, 202, 224, 0.45), inset 0 1px 1.5px rgba(255, 255, 255, 0.75);
+}
+.icon-3d-blue {
+  background: linear-gradient(135deg, #38BDF8 0%, #0590D5 60%, #0284C7 100%);
+  box-shadow: 0 4px 12px rgba(5, 144, 213, 0.4), inset 0 1px 1.5px rgba(255, 255, 255, 0.7);
+}
+.icon-3d-navy {
+  background: linear-gradient(135deg, #214595 0%, #17285E 60%, #0A2447 100%);
+  box-shadow: 0 4px 12px rgba(10, 36, 71, 0.4), inset 0 1px 1.5px rgba(255, 255, 255, 0.4);
+}
+.icon-3d-rose {
+  background: linear-gradient(135deg, #FF3366 0%, #FF084B 60%, #CC0946 100%);
+  box-shadow: 0 4px 12px rgba(255, 8, 75, 0.45), inset 0 1px 1.5px rgba(255, 255, 255, 0.7);
+}
+.icon-3d-amber {
+  background: linear-gradient(135deg, #FFB140 0%, #F7941E 60%, #D97706 100%);
+  box-shadow: 0 4px 12px rgba(247, 148, 30, 0.45), inset 0 1px 1.5px rgba(255, 255, 255, 0.75);
+}
+.icon-3d-emerald {
+  background: linear-gradient(135deg, #34D399 0%, #10B981 60%, #059669 100%);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.45), inset 0 1px 1.5px rgba(255, 255, 255, 0.7);
+}
+.icon-3d-purple {
+  background: linear-gradient(135deg, #C084FC 0%, #9333EA 60%, #6B21A8 100%);
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.45), inset 0 1px 1.5px rgba(255, 255, 255, 0.7);
+}
+.icon-3d-indigo {
+  background: linear-gradient(135deg, #818CF8 0%, #6366F1 60%, #4338CA 100%);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.45), inset 0 1px 1.5px rgba(255, 255, 255, 0.7);
+}
+
+/* =======================================================
+   منوی حاشیه‌ای ابزارهای بالینی (Clinical Margin Side Drawer)
+   به سبک ناوبری حاشیه‌ای VetCalculators
+   ======================================================= */
+#clinicalSidebarDrawer {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+#clinicalSidebarDrawer.open {
+  transform: translateX(0) !important;
+}
+#clinicalSidebarBackdrop {
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+#clinicalSidebarBackdrop.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
