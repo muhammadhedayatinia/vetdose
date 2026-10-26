@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین وت‌دوز (VetDose PWA Offline Engine)
- * نسخه ۳.۹.۶ - طراحی کاملاً مینیمال، حذف دایره‌ها و ادغام میانبرها در نوار ابزار حاشیه‌ای
+ * نسخه ۳.۹.۷ - سایدبار کشویی رده‌های درمانی سمت چپ (مشابه VetCalculators)
  */
-const CACHE_NAME = 'vetdose-cache-v3.9.6-minimal-zen';
+const CACHE_NAME = 'vetdose-cache-v3.9.7-left-categories-drawer';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

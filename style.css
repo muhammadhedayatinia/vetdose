@@ -604,6 +604,25 @@ body {
 }
 
 /* =======================================================
+   سایدبار کشویی رده‌های درمانی سمت چپ (Left Categories Drawer)
+   طراحی شده بر اساس الگوی سایدبار سریع VetCalculators
+   ======================================================= */
+#categoriesSidebarDrawer {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+#categoriesSidebarDrawer.open {
+  transform: translateX(0) !important;
+}
+#categoriesSidebarBackdrop {
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+#categoriesSidebarBackdrop.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* =======================================================
    کادر آیکون‌های سه‌بعدی و المان‌های ناوبری (3D Icon Tiles & Frames)
    قاب شکیل، مینیمال و سه‌بعدی برای جلوگیری از پخش‌بودن آیکون‌ها
    ======================================================= */

@@ -12,7 +12,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Custom Style -->
-  <link rel="stylesheet" href="style.css?v=3.9.6">
+  <link rel="stylesheet" href="style.css?v=3.9.7">
 
   <!-- PWA Manifest & Theme Color -->
   <link rel="manifest" href="manifest.json">
@@ -45,6 +45,14 @@
 
       <!-- ابزارهای اصلی و خلوت بالای صفحه (وکتورهای شارپ و مینیمال بالینی) -->
       <div class="flex items-center gap-2 sm:gap-2.5">
+        <!-- دکمه سایدبار رده‌های درمانی سمت چپ -->
+        <button onclick="openCategoriesSidebar()" class="flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-[#17285E] hover:bg-[#214595] text-white text-xs sm:text-sm font-bold border border-[#0590D5]/40 shadow-xs transition cursor-pointer" title="گشودن سایدبار رده‌های درمانی و دارویی (۱۶ رده)">
+          <i data-lucide="layers" class="w-4 h-4 text-cyan-300"></i>
+          <span class="hidden md:inline">رده‌های درمانی</span>
+          <span class="md:hidden">رده‌ها</span>
+          <span class="text-[10px] bg-cyan-400 text-slate-950 px-1.5 py-0.2 rounded-full font-mono font-black">16</span>
+        </button>
+
         <!-- دکمه ماشین‌حساب دوز -->
         <button onclick="openCalculatorWithTab('dose')" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0590D5] hover:bg-[#0070A8] text-white text-xs sm:text-sm font-bold border border-[#00CAE0]/30 shadow-xs transition cursor-pointer">
           <i data-lucide="calculator" class="w-4 h-4 text-cyan-200"></i>
@@ -77,6 +85,57 @@
 
     </div>
   </header>
+
+  <!-- =======================================================
+       سایدبار کشویی رده‌های درمانی سمت چپ (Left Categories Drawer)
+       طراحی شده بر اساس الگوی سایدبار سریع VetCalculators
+       ======================================================= -->
+  <div id="categoriesSidebarBackdrop" onclick="closeCategoriesSidebar()" class="fixed inset-0 z-50 bg-[#031227]/75 backdrop-blur-sm opacity-0 invisible pointer-events-none transition-all duration-300"></div>
+
+  <aside id="categoriesSidebarDrawer" class="fixed inset-y-0 left-0 z-50 w-full sm:w-96 max-w-[90vw] bg-[#0A2447] text-white shadow-2xl border-r border-[#00CAE0]/30 flex flex-col transform -translate-x-full transition-transform duration-300 ease-out overflow-hidden">
+    <!-- هدر سایدبار چپ -->
+    <div class="p-4 bg-[#031227] border-b border-[#0590D5]/25 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center shrink-0">
+          <i data-lucide="layers" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="text-sm font-black text-white">رده‌های درمانی و دارویی</h3>
+          <p class="text-[11px] text-[#ABB5CD]">دسته‌بندی نظام‌مند ۱۶ رده فارماکولوژی</p>
+        </div>
+      </div>
+      <button onclick="closeCategoriesSidebar()" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 text-[#ABB5CD] hover:text-white flex items-center justify-center transition cursor-pointer">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- کادر جستجوی سریع رده‌ها داخل سایدبار -->
+    <div class="p-3 bg-[#071933] border-b border-[#0590D5]/20">
+      <div class="relative">
+        <i data-lucide="search" class="w-4 h-4 text-cyan-400 absolute right-3 top-2.5"></i>
+        <input 
+          type="text" 
+          id="categorySidebarSearch" 
+          placeholder="جستجوی سریع در ۱۶ رده (مثلاً: قلب، بیهوشی)..." 
+          class="w-full bg-[#0A2447] text-white text-xs pr-9 pl-3 py-2 rounded-xl border border-slate-700 focus:border-cyan-400 focus:outline-none placeholder:text-slate-400"
+          oninput="handleCategorySidebarSearch(this.value)"
+        >
+      </div>
+    </div>
+
+    <!-- فهرست ۱۶ رده درمانی -->
+    <div class="flex-1 overflow-y-auto p-3 space-y-1.5 text-xs" id="categoriesSidebarList">
+      <!-- به صورت پویا با جاوااسکریپت تزریق می‌شود -->
+    </div>
+
+    <!-- فوتر سایدبار چپ: دکمه بستن و نمایش تعداد رده‌ها -->
+    <div class="p-3 bg-[#031227] border-t border-[#0590D5]/25 flex items-center justify-between text-xs">
+      <span class="text-slate-400 text-[11px] font-medium">۱۶ رده تخصصی فارماکولوژی</span>
+      <button onclick="closeCategoriesSidebar()" class="px-4 py-1.5 bg-[#0590D5] hover:bg-[#0070A8] text-white rounded-xl font-bold transition cursor-pointer">
+        مشاهده داروها
+      </button>
+    </div>
+  </aside>
 
   <!-- =======================================================
        نوار حاشیه‌ای ابزارهای بالینی (Clinical Side Drawer)
@@ -132,9 +191,9 @@
             <i data-lucide="activity" class="w-4 h-4 text-teal-400 shrink-0"></i>
             <span class="text-white font-bold text-xs">بیهوشی و سدیشن</span>
           </button>
-          <button onclick="closeClinicalSidebar(); openTherapeuticAtlasModal();" class="p-2.5 rounded-xl bg-[#0590D5]/25 hover:bg-[#0590D5]/45 border border-[#00CAE0]/50 flex items-center gap-2 text-right transition cursor-pointer">
-            <i data-lucide="layout-grid" class="w-4 h-4 text-[#00CAE0] shrink-0"></i>
-            <span class="text-[#00CAE0] font-bold text-xs">اطلس ۱۶ رده ↗</span>
+          <button onclick="closeClinicalSidebar(); openCategoriesSidebar();" class="p-2.5 rounded-xl bg-[#0590D5]/25 hover:bg-[#0590D5]/45 border border-[#00CAE0]/50 flex items-center gap-2 text-right transition cursor-pointer">
+            <i data-lucide="layers" class="w-4 h-4 text-[#00CAE0] shrink-0"></i>
+            <span class="text-[#00CAE0] font-bold text-xs">سایدبار ۱۶ رده ↗</span>
           </button>
         </div>
       </div>
@@ -341,9 +400,9 @@
             <span class="font-bold text-white text-[11px]">اطلس رده‌های دارویی</span>
           </button>
 
-          <button onclick="closeClinicalSidebar(); openTherapeuticAtlasModal();" class="p-2.5 rounded-xl bg-[#17285E]/60 hover:bg-[#214595] border border-[#00CAE0]/30 flex flex-col items-center justify-center gap-1.5 text-center transition cursor-pointer group">
+          <button onclick="closeClinicalSidebar(); openCategoriesSidebar();" class="p-2.5 rounded-xl bg-[#17285E]/60 hover:bg-[#214595] border border-[#00CAE0]/30 flex flex-col items-center justify-center gap-1.5 text-center transition cursor-pointer group">
             <i data-lucide="layers" class="w-6 h-6 text-cyan-400"></i>
-            <span class="font-bold text-white text-[11px]">اطلس رده‌های دارو</span>
+            <span class="font-bold text-white text-[11px]">سایدبار رده‌های درمانی</span>
           </button>
         </div>
       </div>
@@ -405,6 +464,12 @@
             +
           </button>
         </div>
+
+        <!-- دکمه سایدبار رده‌های درمانی داخل کادر سرچ -->
+        <button type="button" onclick="openCategoriesSidebar()" class="flex items-center gap-1.5 bg-[#17285E]/10 hover:bg-[#17285E]/20 text-[#17285E] border border-[#17285E]/20 px-2.5 py-1 rounded-xl text-xs font-bold transition shrink-0 cursor-pointer" title="گشودن سایدبار ۱۶ رده درمانی">
+          <i data-lucide="layers" class="w-3.5 h-3.5 text-cyan-700"></i>
+          <span class="hidden sm:inline">رده‌های درمانی</span>
+        </button>
 
         <!-- دکمه دسترسی سریع به منوی ابزارها و میانبرها -->
         <button type="button" onclick="openClinicalSidebar()" class="flex items-center gap-1.5 bg-cyan-50 hover:bg-cyan-100 text-cyan-800 border border-cyan-200 px-2.5 py-1 rounded-xl text-xs font-bold transition shrink-0 cursor-pointer" title="مشاهده لیست میانبرهای بالینی و ابزارهای تصمیم‌یار">
@@ -496,6 +561,9 @@
         </button>
       </div>
     </div>
+
+    <!-- بنر اطلاع‌رسانی رده درمانی فیلترشده با قابلیت حذف آنی -->
+    <div id="activeCategoryBanner" class="hidden mb-3"></div>
 
     <div id="drugsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       <!-- کارت‌ها به صورت پویا با جاوااسکریپت تزریق می‌شوند -->
@@ -4200,7 +4268,7 @@ id="interactionsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-ov
   <script src="data/pharmacology_depth.js?v=3.5.0"></script>
   <script src="data/specialty_protocols.js?v=3.5.0"></script>
   <script src="data/clinical_vault.js?v=3.8.0"></script>
-  <script src="app.js?v=3.9.6"></script>
+  <script src="app.js?v=3.9.7"></script>
 
   <!-- نوار ناوبری شناور شیشه‌ای در موبایل (Google Stitch Mobile Dock) -->
   <nav id="mobileBottomDock" class="stitch-floating-dock sm:hidden">

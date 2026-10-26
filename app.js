@@ -28,9 +28,189 @@ function closeClinicalSidebar() {
   }
 }
 
+// =================================================================
+// 🗂️ کنترلگر سایدبار کشویی رده‌های درمانی سمت چپ (Left Categories Drawer)
+// انتخابی سریع و بدون دردسر از میان ۱۶ رده دارویی، مشابه سایدبار VetCalculators
+// =================================================================
+function openCategoriesSidebar() {
+  const drawer = document.getElementById('categoriesSidebarDrawer');
+  const backdrop = document.getElementById('categoriesSidebarBackdrop');
+  if (drawer && backdrop) {
+    drawer.classList.add('open');
+    drawer.classList.remove('-translate-x-full');
+    backdrop.classList.add('open');
+    backdrop.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+    document.body.style.overflow = 'hidden';
+    renderCategoriesSidebarList();
+    if (window.lucide) lucide.createIcons();
+  }
+}
+
+function closeCategoriesSidebar() {
+  const drawer = document.getElementById('categoriesSidebarDrawer');
+  const backdrop = document.getElementById('categoriesSidebarBackdrop');
+  if (drawer && backdrop) {
+    drawer.classList.remove('open');
+    drawer.classList.add('-translate-x-full');
+    backdrop.classList.remove('open');
+    backdrop.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+    document.body.style.overflow = '';
+  }
+}
+
+// رندر فهرست ۱۶ رده دارویی در سایدبار سمت چپ
+function renderCategoriesSidebarList(filterText = '') {
+  const container = document.getElementById('categoriesSidebarList');
+  if (!container || typeof THERAPEUTIC_CATEGORIES_DATA === 'undefined') return;
+
+  const q = (filterText || '').trim().toLowerCase();
+  const allCategories = Object.values(THERAPEUTIC_CATEGORIES_DATA).filter(c => c.id !== 'all');
+
+  // شمارش داروها در هر رده
+  const counts = { all: (typeof DRUGS_DATA !== 'undefined' ? DRUGS_DATA.length : 0) };
+  if (typeof DRUGS_DATA !== 'undefined') {
+    DRUGS_DATA.forEach(d => {
+      if (d.therapeutic_category) {
+        counts[d.therapeutic_category] = (counts[d.therapeutic_category] || 0) + 1;
+      }
+      (d.secondary_categories || []).forEach(sec => {
+        counts[sec] = (counts[sec] || 0) + 1;
+      });
+    });
+  }
+
+  const isAllActive = currentTherapeuticCategory === 'all';
+
+  let html = `
+    <button type="button" 
+            onclick="selectCategoryFromSidebar('all')" 
+            class="w-full p-2.5 rounded-xl border transition cursor-pointer text-right flex items-center justify-between ${isAllActive ? 'bg-cyan-500/25 border-cyan-400 text-white font-black shadow-xs' : 'bg-[#17285E]/50 hover:bg-[#214595] border-white/10 text-slate-200'}">
+      <div class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg ${isAllActive ? 'bg-cyan-400 text-slate-950 font-bold' : 'bg-cyan-500/15 text-cyan-300'} flex items-center justify-center shrink-0">
+          <i data-lucide="layers" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="block text-xs font-bold ${isAllActive ? 'text-cyan-300' : 'text-white'}">همه داروها (تمام رده‌ها)</span>
+          <span class="block text-[10px] text-slate-400 font-mono">All Categories</span>
+        </div>
+      </div>
+      <span class="text-[11px] font-mono px-2 py-0.5 rounded-full ${isAllActive ? 'bg-cyan-400 text-slate-950 font-black' : 'bg-white/10 text-slate-300 font-bold'}">
+        ${counts.all || 0}
+      </span>
+    </button>
+  `;
+
+  const catIcons = {
+    anesthesia_sedation: 'syringe',
+    emergency_cpr: 'zap',
+    analgesia_nsaid: 'shield',
+    antimicrobial: 'shield-check',
+    gastrointestinal: 'activity',
+    cardiovascular: 'heart',
+    renal_urinary: 'droplet',
+    neurology_anticonvulsant: 'activity',
+    endocrine_steroid: 'sparkles',
+    reproduction: 'heart-pulse',
+    parasiticide: 'shield-alert',
+    respiratory: 'wind',
+    ophthalmology_otic: 'eye',
+    dermatology: 'flower-2',
+    toxicology_fluids: 'flask-conical',
+    oncology_chemo: 'cross'
+  };
+
+  allCategories.forEach(cat => {
+    const nameFa = cat.name_fa || cat.fa || '';
+    const nameEn = cat.name_en || cat.en || '';
+    if (q && !nameFa.toLowerCase().includes(q) && !nameEn.toLowerCase().includes(q) && !(cat.description || '').toLowerCase().includes(q)) {
+      return;
+    }
+
+    const isActive = currentTherapeuticCategory === cat.id;
+    const catCount = counts[cat.id] || 0;
+    const iconName = catIcons[cat.id] || cat.icon || 'folder';
+
+    html += `
+      <button type="button" 
+              onclick="selectCategoryFromSidebar('${cat.id}')" 
+              class="w-full p-2.5 rounded-xl border transition cursor-pointer text-right flex items-center justify-between ${isActive ? 'bg-cyan-500/25 border-cyan-400 text-white font-black shadow-xs' : 'bg-[#17285E]/50 hover:bg-[#214595] border-white/10 text-slate-200'}">
+        <div class="flex items-center gap-2.5">
+          <div class="w-7 h-7 rounded-lg ${isActive ? 'bg-cyan-400 text-slate-950 font-bold' : 'bg-slate-800 text-cyan-300 border border-slate-700'} flex items-center justify-center shrink-0">
+            <i data-lucide="${iconName}" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <span class="block text-xs font-bold ${isActive ? 'text-cyan-300' : 'text-white'}">${nameFa}</span>
+            <span class="block text-[10px] text-slate-400 font-mono">${nameEn}</span>
+          </div>
+        </div>
+        <span class="text-[11px] font-mono px-2 py-0.5 rounded-full ${isActive ? 'bg-cyan-400 text-slate-950 font-black' : 'bg-white/10 text-slate-300 font-bold'}">
+          ${catCount}
+        </span>
+      </button>
+    `;
+  });
+
+  container.innerHTML = html;
+  if (window.lucide) lucide.createIcons();
+}
+
+function selectCategoryFromSidebar(catId) {
+  setTherapeuticCategoryFilter(catId);
+  renderCategoriesSidebarList();
+  updateActiveCategoryBanner();
+
+  const drugsMain = document.getElementById('drugsGrid');
+  if (drugsMain) {
+    drugsMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // روی موبایل بعد از انتخاب می‌بندیم، اما روی تبلت و دسکتاپ باز می‌ماند تا سوییچ سریع ممکن باشد
+  if (window.innerWidth < 768) {
+    closeCategoriesSidebar();
+  }
+}
+
+function handleCategorySidebarSearch(val) {
+  renderCategoriesSidebarList(val);
+}
+
+// به‌روزرسانی بنر رده درمانی فیلترشده در بالای فهرست داروها
+function updateActiveCategoryBanner() {
+  const banner = document.getElementById('activeCategoryBanner');
+  if (!banner) return;
+
+  if (currentTherapeuticCategory === 'all') {
+    banner.classList.add('hidden');
+    banner.innerHTML = '';
+    return;
+  }
+
+  const cat = (typeof THERAPEUTIC_CATEGORIES_DATA !== 'undefined') ? THERAPEUTIC_CATEGORIES_DATA[currentTherapeuticCategory] : null;
+  const catName = cat ? (cat.name_fa || cat.fa || cat.id) : currentTherapeuticCategory;
+
+  banner.classList.remove('hidden');
+  banner.innerHTML = `
+    <div class="flex items-center justify-between bg-cyan-50 border border-cyan-200/90 text-cyan-950 px-3.5 py-2 rounded-xl text-xs font-bold shadow-2xs">
+      <div class="flex items-center gap-2 flex-wrap">
+        <i data-lucide="layers" class="w-4 h-4 text-cyan-700 shrink-0"></i>
+        <span>در حال نمایش داروها بر اساس رده:</span>
+        <span class="bg-[#0A2447] text-white px-2 py-0.5 rounded-lg font-black text-xs">${catName}</span>
+      </div>
+      <button type="button" onclick="selectCategoryFromSidebar('all')" class="text-xs text-rose-600 hover:text-rose-800 flex items-center gap-1 font-bold cursor-pointer transition">
+        <i data-lucide="x" class="w-3.5 h-3.5"></i>
+        <span>حذف فیلتر و نمایش همه</span>
+      </button>
+    </div>
+  `;
+  if (window.lucide) lucide.createIcons();
+}
+
 if (typeof document !== 'undefined') {
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeClinicalSidebar();
+    if (e.key === 'Escape') {
+      closeClinicalSidebar();
+      closeCategoriesSidebar();
+    }
   });
 }
 
@@ -971,6 +1151,7 @@ function updateWeightPresetPills(w) {
 if (typeof document !== 'undefined') {
   document.addEventListener('DOMContentLoaded', () => {
     updateTherapeuticCategoryCounts();
+    renderCategoriesSidebarList();
     renderDrugs();
     setupInteractionsCheckboxes();
     runDoseCalculation();
@@ -1100,6 +1281,7 @@ function setTherapeuticCategoryFilter(thcat) {
     }
   });
   renderDrugs();
+  updateActiveCategoryBanner();
 }
 
 // محاسبه و به‌روزرسانی شمارنده‌های دسته‌ها
@@ -10478,6 +10660,12 @@ if (typeof window !== 'undefined') {
 if (typeof window !== 'undefined') {
   window.openClinicalSidebar = openClinicalSidebar;
   window.closeClinicalSidebar = closeClinicalSidebar;
+  window.openCategoriesSidebar = openCategoriesSidebar;
+  window.closeCategoriesSidebar = closeCategoriesSidebar;
+  window.selectCategoryFromSidebar = selectCategoryFromSidebar;
+  window.handleCategorySidebarSearch = handleCategorySidebarSearch;
+  window.renderCategoriesSidebarList = renderCategoriesSidebarList;
+  window.updateActiveCategoryBanner = updateActiveCategoryBanner;
   window.getSpecies3dIconHtml = getSpecies3dIconHtml;
 }
 
