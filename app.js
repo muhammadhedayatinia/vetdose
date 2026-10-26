@@ -1,3 +1,19 @@
+// =================================================================
+// 🛡️ تابع سراسری امن جهت رندر آیکون‌های Lucide بدون کرش
+// =================================================================
+function safeCreateIcons() {
+  try {
+    if (typeof window !== 'undefined' && window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons();
+    } else if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+      lucide.createIcons();
+    }
+  } catch (e) {
+    // خطای احتمالی آیکون روند بالینی را متوقف نمی‌کند
+  }
+}
+if (typeof window !== 'undefined') window.safeCreateIcons = safeCreateIcons;
+
 
 // =================================================================
 // 📱 کنترلگر نوار حاشیه‌ای ابزارهای بالینی (Clinical Margin Side Drawer)
@@ -14,7 +30,7 @@ function openClinicalSidebar() {
       backdrop.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
       document.body.style.overflow = 'hidden';
     }
-    if (window.lucide) lucide.createIcons();
+    safeCreateIcons();
   }
 }
 
@@ -45,7 +61,7 @@ function openCategoriesSidebar() {
     backdrop.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
     document.body.style.overflow = 'hidden';
     renderCategoriesSidebarList();
-    if (window.lucide) lucide.createIcons();
+    safeCreateIcons();
   }
 }
 
@@ -154,7 +170,7 @@ function renderCategoriesSidebarList(filterText = '') {
   });
 
   container.innerHTML = html;
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function selectCategoryFromSidebar(catId) {
@@ -205,7 +221,7 @@ function updateActiveCategoryBanner() {
       </button>
     </div>
   `;
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 if (typeof document !== 'undefined') {
@@ -536,7 +552,7 @@ function selectCardFormulation(drugId, formId) {
   const currentCardSp = activeCardSpecies[drugId] || (currentSpecies !== 'all' ? currentSpecies : 'canine');
   if (contentEl && drug) {
     contentEl.innerHTML = getPlumbsSpeciesBoxHtml(drug, currentCardSp);
-    if (window.lucide) lucide.createIcons();
+    safeCreateIcons();
   }
 }
 
@@ -548,7 +564,7 @@ function selectCardTabletStrength(drugId, strengthMg) {
   const currentCardSp = activeCardSpecies[drugId] || (currentSpecies !== 'all' ? currentSpecies : 'canine');
   if (contentEl && drug) {
     contentEl.innerHTML = getPlumbsSpeciesBoxHtml(drug, currentCardSp);
-    if (window.lucide) lucide.createIcons();
+    safeCreateIcons();
   }
 }
 
@@ -1607,7 +1623,7 @@ function getSpeciesIconsPreviewHtml(drug) {
 function toggleDrugCard(drugId, event) {
   if (event) {
     const target = event.target;
-    if (target.closest('.no-card-toggle') || target.closest('button[onclick*="openMonographModal"]') || target.closest('button[onclick*="toggleFavoriteDrug"]') || target.closest('button[onclick*="openCocktailsModal"]') || target.closest('button[onclick*="quickCalculateForDrug"]') || target.closest('button[onclick*="openSingleDrugInteractions"]')) {
+    if (target.closest('.no-card-toggle') || target.closest('button[onclick*="openMonographModal"]') || target.closest('button[onclick*="toggleFavoriteDrug"]') || target.closest('button[onclick*="openCocktailsModal"]') || target.closest('button[onclick*="quickCalculateForDrug"]') || target.closest('button[onclick*="toggleCardDoseInline"]') || target.closest('button[onclick*="toggleDrugCocktailsSection"]') || target.closest('button[onclick*="toggleDrugInteractionsSection"]') || target.closest('button[onclick*="toggleDrugSpecialtySection"]') || target.closest('button[onclick*="openSingleDrugInteractions"]')) {
       return;
     }
   }
@@ -2343,6 +2359,178 @@ if (typeof window !== 'undefined' && !isInfiniteScrollAttached) {
 }
 
 // تولید HTML یک کارت تکی دارو با حفاظت کامل پرانتزها
+
+// =================================================================
+// 🧪 موتورهای اکشن و نمایش درجا (Inline Action Engines) زیر کارت دارو
+// =================================================================
+function renderDrugInlineCocktailsHtml(drug) {
+  if (!drug || !drug.synergistic_combinations || drug.synergistic_combinations.length === 0) return '';
+  
+  return `
+    <div id="card_cocktails_${drug.id}" class="hidden my-3 p-3.5 bg-gradient-to-br from-indigo-50/90 via-purple-50/80 to-slate-50 border-2 border-indigo-200 rounded-2xl text-xs space-y-3 transition-all shadow-2xs">
+      <div class="flex items-center justify-between border-b border-indigo-100 pb-2">
+        <div class="flex items-center gap-1.5">
+          <span class="text-base">🧪</span>
+          <h4 class="font-black text-indigo-950 text-xs">کوکتل‌های ترکیبی و سینرژی در سرنگ (${drug.synergistic_combinations.length} ترکیب):</h4>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <button type="button" onclick="openCocktailsModal('${drug.id}')" class="text-[10px] bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-2 py-0.5 rounded-md cursor-pointer transition">
+            رادار کامل کوکتل‌ها ↗
+          </button>
+          <button type="button" onclick="toggleDrugCocktailsSection('${drug.id}')" class="text-[10px] bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-1.5 py-0.5 rounded-md cursor-pointer transition">
+            ✕
+          </button>
+        </div>
+      </div>
+      <div class="space-y-2.5">
+        ${drug.synergistic_combinations.map(combo => `
+          <div class="bg-white p-3 rounded-xl border border-indigo-200/80 shadow-2xs space-y-1.5">
+            <div class="flex items-center justify-between gap-1 flex-wrap">
+              <span class="font-black text-indigo-900 text-xs">${combo.cocktail_title || combo.partner_name}</span>
+              <span class="text-[10px] font-bold text-teal-800 bg-teal-50 border border-teal-200 px-2 py-0.5 rounded-md">${combo.mixing_in_syringe || 'سازگار در سرنگ'}</span>
+            </div>
+            <p class="text-[11px] text-slate-700 font-medium leading-relaxed bg-indigo-50/50 p-2 rounded-lg border border-indigo-100">
+              <strong>💉 نسبت و دستور مصرف:</strong> ${combo.ratio_guide}
+            </p>
+            ${combo.clinical_benefits && combo.clinical_benefits.length > 0 ? `
+              <div class="text-[10px] text-emerald-900 space-y-0.5">
+                <span class="font-bold">مزایای هم‌افزایی:</span>
+                <ul class="list-disc list-inside space-y-0.5 text-slate-600">
+                  ${combo.clinical_benefits.map(b => `<li>${b}</li>`).join('')}
+                </ul>
+              </div>
+            ` : ''}
+            ${combo.drawbacks_warnings ? `
+              <p class="text-[10px] text-rose-800 bg-rose-50 p-1.5 rounded-md border border-rose-200 font-bold">
+                ⚠️ احتیاط: ${combo.drawbacks_warnings}
+              </p>
+            ` : ''}
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderDrugInlineInteractionsHtml(drug) {
+  if (!drug) return '';
+  const data = (typeof getSingleDrugAllInteractions === 'function') ? getSingleDrugAllInteractions(drug.id) : null;
+  if (!data || !data.interactions || data.interactions.length === 0) return '';
+
+  const items = data.interactions.slice(0, 5);
+  return `
+    <div id="card_interactions_${drug.id}" class="hidden my-3 p-3.5 bg-gradient-to-br from-amber-50/90 via-orange-50/80 to-slate-50 border-2 border-amber-200 rounded-2xl text-xs space-y-3 transition-all shadow-2xs">
+      <div class="flex items-center justify-between border-b border-amber-100 pb-2">
+        <div class="flex items-center gap-1.5">
+          <span class="text-base">🛡️</span>
+          <h4 class="font-black text-amber-950 text-xs">تداخلات دارویی و هم‌افزایی‌های بالینی (${data.interactions.length} تداخل):</h4>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <button type="button" onclick="openSingleDrugInteractions('${drug.id}')" class="text-[10px] bg-amber-600 hover:bg-amber-700 text-white font-bold px-2 py-0.5 rounded-md cursor-pointer transition">
+            رادار کامل ۳۶۰ درجه ↗
+          </button>
+          <button type="button" onclick="toggleDrugInteractionsSection('${drug.id}')" class="text-[10px] bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-1.5 py-0.5 rounded-md cursor-pointer transition">
+            ✕
+          </button>
+        </div>
+      </div>
+      <div class="space-y-2">
+        ${items.map(it => {
+          let badge = '<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-emerald-100 text-emerald-800 border border-emerald-300">هم‌افزایی بالینی</span>';
+          if (it.severity === 'major') badge = '<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-rose-100 text-rose-800 border border-rose-300">🔴 ماژور / خطرناک</span>';
+          if (it.severity === 'moderate') badge = '<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-amber-100 text-amber-800 border border-amber-300">🟡 متوسط / پایش</span>';
+
+          return `
+            <div class="bg-white p-2.5 rounded-xl border border-amber-200/80 shadow-2xs space-y-1">
+              <div class="flex items-center justify-between gap-1 flex-wrap">
+                <span class="font-black text-slate-900 text-xs">${it.partnerNameFa || it.partnerId}</span>
+                ${badge}
+              </div>
+              <p class="text-[11px] font-bold text-indigo-950 leading-relaxed">${it.title}</p>
+              ${it.mechanism ? `<p class="text-[10px] text-slate-600 leading-relaxed">${it.mechanism}</p>` : ''}
+              ${it.clinical_effect ? `<p class="text-[10px] text-teal-900 font-medium leading-relaxed bg-teal-50/60 p-1.5 rounded-md border border-teal-100">📌 <strong>اثر بالینی:</strong> ${it.clinical_effect}</p>` : ''}
+            </div>
+          `;
+        }).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function toggleCardDoseInline(drugId, event) {
+  if (event) event.stopPropagation();
+  const detailsEl = document.getElementById('card_details_' + drugId);
+  if (!detailsEl) return;
+  const isHidden = detailsEl.classList.contains('hidden');
+  if (isHidden) {
+    toggleDrugCard(drugId);
+  }
+  setTimeout(() => {
+    const spBox = document.getElementById('spContent_' + drugId);
+    if (spBox) {
+      spBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      spBox.classList.add('ring-2', 'ring-cyan-500');
+      setTimeout(() => spBox.classList.remove('ring-2', 'ring-cyan-500'), 1500);
+    }
+  }, 100);
+}
+
+function toggleDrugCocktailsSection(drugId, event) {
+  if (event) event.stopPropagation();
+  if (typeof expandedCards !== 'undefined' && !expandedCards.has(drugId)) {
+    toggleDrugCard(drugId);
+  }
+  setTimeout(() => {
+    const el = document.getElementById('card_cocktails_' + drugId);
+    const btn = document.getElementById('btn_cocktail_' + drugId);
+    if (!el) return;
+
+    const isHidden = el.classList.contains('hidden');
+    if (isHidden) {
+      el.classList.remove('hidden');
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      el.classList.add('ring-2', 'ring-indigo-500');
+      setTimeout(() => el.classList.remove('ring-2', 'ring-indigo-500'), 1500);
+      if (btn) btn.classList.add('ring-2', 'ring-indigo-500', 'font-black');
+    } else {
+      el.classList.add('hidden');
+      if (btn) btn.classList.remove('ring-2', 'ring-indigo-500', 'font-black');
+    }
+    safeCreateIcons();
+  }, 100);
+}
+
+function toggleDrugInteractionsSection(drugId, event) {
+  if (event) event.stopPropagation();
+  if (typeof expandedCards !== 'undefined' && !expandedCards.has(drugId)) {
+    toggleDrugCard(drugId);
+  }
+  setTimeout(() => {
+    const el = document.getElementById('card_interactions_' + drugId);
+    const btn = document.getElementById('btn_interact_' + drugId);
+    if (!el) return;
+
+    const isHidden = el.classList.contains('hidden');
+    if (isHidden) {
+      el.classList.remove('hidden');
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      el.classList.add('ring-2', 'ring-amber-500');
+      setTimeout(() => el.classList.remove('ring-2', 'ring-amber-500'), 1500);
+      if (btn) btn.classList.add('ring-2', 'ring-amber-500', 'font-black');
+    } else {
+      el.classList.add('hidden');
+      if (btn) btn.classList.remove('ring-2', 'ring-amber-500', 'font-black');
+    }
+    safeCreateIcons();
+  }, 100);
+}
+
+if (typeof window !== 'undefined') {
+  window.toggleCardDoseInline = toggleCardDoseInline;
+  window.toggleDrugCocktailsSection = toggleDrugCocktailsSection;
+  window.toggleDrugInteractionsSection = toggleDrugInteractionsSection;
+}
+
 function renderSingleDrugCardHtml(drug) {
   let badgeClass = 'badge-blue';
   if (drug.badge_color === 'purple') badgeClass = 'badge-purple';
@@ -2454,6 +2642,12 @@ function renderSingleDrugCardHtml(drug) {
             ${speciesBoxHtml}
           </div>
 
+          <!-- 🧪 بخش کوکتل‌ها و سینرژی درون‌کارت (Inline Cocktails) -->
+          ${renderDrugInlineCocktailsHtml(drug)}
+
+          <!-- 🛡️ بخش تداخلات مهم بالینی درون‌کارت (Inline Interactions) -->
+          ${renderDrugInlineInteractionsHtml(drug)}
+
           <!-- 🔬 تصمیم‌یار بالینی و پروتکل‌های فوق‌تخصصی دارونامه بالینی -->
           ${renderDrugSpecialtySuiteHtml(drug, false)}
 
@@ -2471,28 +2665,28 @@ function renderSingleDrugCardHtml(drug) {
 
       <!-- دکمه‌های اکشن پایین کارت با ساختار دو ردیفه منظم و بدون بیرون‌زدگی -->
       <div class="pt-3 border-t border-slate-100 mt-2 space-y-1.5 w-full">
-        <!-- ردیف ۱: مونوگراف کامل و محاسبه دوز -->
+        <!-- ردیف ۱: مونوگراف کامل و دوز و سرنگ (درجا زیر نام دارو) -->
         <div class="grid grid-cols-2 gap-1.5 w-full">
-          <button type="button" onclick="openMonographModal('${drug.id}')" class="py-2 px-2 bg-[#0A2447] hover:bg-[#17285E] active:scale-95 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs">
+          <button type="button" onclick="openMonographModal('${drug.id}')" class="py-2 px-2 bg-[#0A2447] hover:bg-[#17285E] active:scale-95 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer">
             <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyan-300"></i>
             <span>مونوگراف</span>
           </button>
 
-          <button type="button" onclick="quickCalculateForDrug('${drug.id}')" class="py-2 px-2 bg-[#E6F7FC] hover:bg-[#D4F2FB] active:scale-95 text-[#0070A8] border border-[#B2E7F7] rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs" title="محاسبه دوز برای بیمار">
+          <button type="button" onclick="toggleCardDoseInline('${drug.id}', event)" class="py-2 px-2 bg-[#E6F7FC] hover:bg-[#D4F2FB] active:scale-95 text-[#0070A8] border border-[#B2E7F7] rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer" title="مشاهده دوزها و حجم سرنگ درجا زیر نام دارو">
             <i data-lucide="calculator" class="w-3.5 h-3.5 text-teal-600"></i>
-            <span>محاسبه دوز</span>
+            <span>دوز و حجم سرنگ</span>
           </button>
         </div>
 
-        <!-- ردیف ۲: تداخلات، کوکتل‌ها و ابزارهای تخصصی -->
+        <!-- ردیف ۲: تداخلات، کوکتل‌ها و ابزارهای تخصصی درون‌کارت -->
         <div class="flex flex-wrap items-center gap-1.5 w-full">
-          <button type="button" onclick="openSingleDrugInteractions('${drug.id}')" class="flex-1 min-w-[70px] py-1.5 px-2 bg-[#FFF9E6] hover:bg-[#FFF3CC] active:scale-95 text-[#B45309] border border-[#FDE68A] rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs" title="رادار تداخلات ۳۶۰ درجه این دارو">
+          <button type="button" onclick="toggleDrugInteractionsSection('${drug.id}', event)" id="btn_interact_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-[#FFF9E6] hover:bg-[#FFF3CC] active:scale-95 text-[#B45309] border border-[#FDE68A] rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده تداخلات دارویی درجا">
             <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
             <span>تداخلات</span>
           </button>
           
           ${drug.synergistic_combinations && drug.synergistic_combinations.length > 0 ? `
-            <button type="button" onclick="openCocktailsModal('${drug.id}')" class="flex-1 min-w-[70px] py-1.5 px-2 bg-[#F3EEFB] hover:bg-[#EAE2F8] active:scale-95 text-[#5B21B6] border border-[#D8C7F8] rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs" title="مشاهده کوکتل‌های ترکیبی و دستور اختلاط سرنگ">
+            <button type="button" onclick="toggleDrugCocktailsSection('${drug.id}', event)" id="btn_cocktail_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-[#F3EEFB] hover:bg-[#EAE2F8] active:scale-95 text-[#5B21B6] border border-[#D8C7F8] rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده کوکتل‌های ترکیبی درجا">
               <i data-lucide="flask-conical" class="w-3.5 h-3.5 text-indigo-600 shrink-0"></i>
               <span>کوکتل‌ها (${drug.synergistic_combinations.length})</span>
             </button>
@@ -2988,7 +3182,7 @@ function openMonographModal(drugId) {
   }
 
   document.getElementById('monographModal').classList.remove('hidden');
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function closeMonographModal() {
@@ -4509,7 +4703,7 @@ function openPrintPrescriptionModal(drugId) {
   const modal = document.getElementById('prescriptionPrintModal');
   if (modal) {
     modal.classList.remove('hidden');
-    if (window.lucide) lucide.createIcons();
+    safeCreateIcons();
   }
 }
 
@@ -5056,7 +5250,8 @@ var singleDrugSeverityFilter = 'all';
 var singleDrugInnerQuery = '';
 
 function openInteractionsModal(targetDrugId = null) {
-  document.getElementById('interactionsModal').classList.remove('hidden');
+  const modal = document.getElementById('interactionsModal');
+  if (modal) modal.classList.remove('hidden');
   if (targetDrugId) {
     switchInteractionMode('single');
     selectSingleDrugForInteractions(targetDrugId);
@@ -5065,7 +5260,7 @@ function openInteractionsModal(targetDrugId = null) {
       selectSingleDrugForInteractions('enrofloxacin');
     }
   }
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function closeInteractionsModal() {
@@ -5102,7 +5297,7 @@ function switchInteractionMode(mode) {
       btnMulti.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition flex items-center gap-1.5 bg-amber-600 text-white shadow-xs';
     }
   }
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function handleSingleDrugSearchInput(query) {
@@ -5525,7 +5720,7 @@ function renderSingleDrugResults(resetInnerInput = true) {
         </p>
       </div>
     `;
-    if (window.lucide) lucide.createIcons();
+    safeCreateIcons();
     return;
   }
 
@@ -5737,7 +5932,7 @@ function renderSingleDrugResults(resetInnerInput = true) {
     </div>
   `;
 
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 // ساخت چک‌باکس‌های داروها
@@ -5854,7 +6049,7 @@ function checkSelectedInteractions() {
         </div>
       `;
     }
-    if (window.lucide) lucide.createIcons();
+    safeCreateIcons();
     return;
   }
 
@@ -6031,7 +6226,7 @@ function checkSelectedInteractions() {
     }).join('');
   }
 
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 // بخش اورژانس و CPR
@@ -7614,16 +7809,17 @@ function openCocktailsModal(focusDrugId = null) {
   const modal = document.getElementById('cocktailsModal');
   if (!modal) return;
 
+  modal.classList.remove('hidden');
+
   activeCocktailsFilter = focusDrugId || 'all';
 
   const wDisp = document.getElementById('cocktailActiveWeightDisplay');
-  if (wDisp) wDisp.textContent = `${currentPatientWeight} kg`;
+  if (wDisp) wDisp.textContent = `${(typeof currentPatientWeight !== 'undefined' && currentPatientWeight > 0) ? currentPatientWeight : 10} kg`;
 
   updateCocktailFilterPills(activeCocktailsFilter);
   renderCocktailsList(activeCocktailsFilter);
 
-  modal.classList.remove('hidden');
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function closeCocktailsModal() {
@@ -7702,7 +7898,7 @@ function renderCocktailsList(filterKey = 'all') {
         `).join('')}
       </div>
     `;
-    if (window.lucide) lucide.createIcons();
+    safeCreateIcons();
     return;
   }
 
@@ -7736,7 +7932,7 @@ function renderCocktailsList(filterKey = 'all') {
         <button onclick="filterCocktails('all')" class="mt-3 px-3.5 py-1.5 bg-indigo-600 text-white rounded-xl text-xs font-bold">نمایش همه کوکتل‌ها</button>
       </div>
     `;
-    if (window.lucide) lucide.createIcons();
+    safeCreateIcons();
     return;
   }
 
@@ -7910,7 +8106,7 @@ function renderCocktailsList(filterKey = 'all') {
     `;
   }).join('');
 
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 
@@ -8092,7 +8288,7 @@ function calculateChocolateToxicity() {
     </div>
   `;
 
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function renderToxicologyTab(tabName, weight) {
@@ -8568,7 +8764,7 @@ function renderToxicologyTab(tabName, weight) {
     container.innerHTML = renderAntidotesTableHtml(w);
   }
 
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function renderAntidotesTableHtml(weight) {
@@ -9758,7 +9954,7 @@ function openSeizureFlowchartModal() {
   modal.classList.remove('hidden');
   if (document.body) document.body.style.overflow = 'hidden';
   runSeizureCalculation();
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function closeSeizureFlowchartModal() {
@@ -9874,7 +10070,7 @@ function handleSpecialtyWeightChange(val) {
   const w = parseFloat(val) || 10;
   updateSpecialtyWeightUI(w);
   renderSpecialtyProtocolsList();
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function setSpecialtyWeight(val) {
@@ -9908,7 +10104,7 @@ function openSpecialtyProtocolsModal(tab = 'oncology') {
 
   modal.classList.remove('hidden');
   if (document.body) document.body.style.overflow = 'hidden';
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function closeSpecialtyProtocolsModal() {
@@ -9922,7 +10118,7 @@ function switchSpecialtyTab(tab) {
   currentSpecialtyTab = tab;
   updateSpecialtyTabButtons();
   renderSpecialtyProtocolsList();
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function updateSpecialtyTabButtons() {
@@ -9950,7 +10146,7 @@ function handleSpecialtySearch() {
   const searchInp = document.getElementById('specialtySearchInput');
   specialtySearchTerm = (searchInp ? searchInp.value : '').trim().toLowerCase();
   renderSpecialtyProtocolsList();
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function getSpecialtyDataByTab(tab) {
@@ -10425,7 +10621,7 @@ function openSyringeCompatibilityModal(focusDrugId = null) {
   runSyringeCompatibilityCheck();
 
   modal.classList.remove('hidden');
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 function closeSyringeCompatibilityModal() {
@@ -10504,7 +10700,7 @@ function runSyringeCompatibilityCheck() {
         <p class="text-xs text-slate-600 font-bold">لطفاً دو داروی متفاوت یا یک دارو و یک سرم را برای بررسی انتخاب کنید.</p>
       </div>
     `;
-    if (window.lucide) lucide.createIcons();
+    safeCreateIcons();
     return;
   }
 
@@ -10589,7 +10785,7 @@ function runSyringeCompatibilityCheck() {
     `;
   }
 
-  if (window.lucide) lucide.createIcons();
+  safeCreateIcons();
 }
 
 if (typeof window !== 'undefined') {
@@ -10676,6 +10872,6 @@ if (typeof window !== 'undefined') {
 // Auto-refresh Lucide icons
 if (typeof window !== 'undefined') {
   window.addEventListener('DOMContentLoaded', () => {
-    if (typeof lucide !== 'undefined') lucide.createIcons();
+    safeCreateIcons();
   });
 }

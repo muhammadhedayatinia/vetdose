@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین وت‌دوز (VetDose PWA Offline Engine)
- * نسخه ۳.۹.۹ - بهینه‌سازی و حذف موارد تکراری سایدبار سمت راست
+ * نسخه ۳.۱۰.۰ - فعال‌سازی اکشن‌های درجا (Inline) دوز، کوکتل و تداخلات + خلوت‌سازی هدر و سرچ
  */
-const CACHE_NAME = 'vetdose-cache-v3.9.9-cleaned-sidebar';
+const CACHE_NAME = 'vetdose-cache-v3.10.0-inline-actions';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
