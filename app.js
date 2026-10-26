@@ -1,3 +1,26 @@
+
+// بستن فوری تمام مودال‌های باز جهت جلوگیری از تداخل و مسدود شدن صفحه
+function closeAllModals() {
+  const modalIds = [
+    'calculatorModal',
+    'specialtyProtocolsModal',
+    'syringeCompatibilityModal',
+    'cprModal',
+    'interactionsModal',
+    'monographModal',
+    'cocktailsModal',
+    'toxicologyModal',
+    'therapeuticAtlasModal',
+    'seizureFlowchartModal',
+    'prescriptionPrintModal'
+  ];
+  modalIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add('hidden');
+  });
+  if (document.body) document.body.style.overflow = '';
+}
+
 // =================================================================
 // 🛡️ تابع سراسری امن جهت رندر آیکون‌های Lucide بدون کرش
 // =================================================================
@@ -2713,6 +2736,7 @@ function renderSingleDrugCardHtml(drug) {
 
 // باز کردن مودال مونوگراف کامل
 function openMonographModal(drugId) {
+  closeAllModals();
   const drug = DRUGS_DATA.find(d => d.id === drugId);
   if (!drug) return;
 
@@ -3308,6 +3332,7 @@ function quickCalculateForDrug(drugId) {
 
 // باز و بستن مودال ماشین‌حساب
 function openCalculatorModal() {
+  closeAllModals();
   const modal = document.getElementById('calculatorModal');
   if (modal) modal.classList.remove('hidden');
   if (typeof initUniversalCalculator === 'function') {
@@ -6305,6 +6330,7 @@ function checkSelectedInteractions() {
 
 // بخش اورژانس و CPR
 function openCprModal() {
+  closeAllModals();
   document.getElementById('cprModal').classList.remove('hidden');
   runCprCalculation();
 }
@@ -7880,6 +7906,7 @@ const INCOMPATIBLE_COMBINATIONS_DATA = [
 
 // باز کردن مودال کوکتل‌ها
 function openCocktailsModal(focusDrugId = null) {
+  closeAllModals();
   const modal = document.getElementById('cocktailsModal');
   if (!modal) return;
 
@@ -10154,6 +10181,7 @@ function setSpecialtyWeight(val) {
 }
 
 function openSpecialtyProtocolsModal(tab = 'oncology') {
+  closeAllModals();
   const modal = document.getElementById('specialtyProtocolsModal');
   if (!modal) return;
   currentSpecialtyTab = tab;
@@ -10681,6 +10709,7 @@ let currentSyringeDrug1 = 'ketamine';
 let currentSyringeDrug2 = 'xylazine';
 
 function openSyringeCompatibilityModal(focusDrugId = null) {
+  closeAllModals();
   const modal = document.getElementById('syringeCompatibilityModal');
   if (!modal) return;
 
