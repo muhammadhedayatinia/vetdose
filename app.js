@@ -47,14 +47,14 @@ let currentPatientWeight = 10; // پیش‌فرض وزن بیمار: ۱۰ کیل
 
 // فراداده جامع ۹ گونه جانوری در کارت بالینی وت‌دوز (VetDose)
 const CARD_SPECIES_META = {
-  canine: { key: 'canine', label: 'سگ', icon3d: 'assets/icons_matte_3d/dog.png', icon: '🐶' },
-  feline: { key: 'feline', label: 'گربه', icon3d: 'assets/icons_matte_3d/cat.png', icon: '🐱' },
-  equine: { key: 'equine', label: 'اسب', icon3d: 'assets/icons_matte_3d/horse.png', icon: '🐎' },
-  bovine: { key: 'bovine', label: 'گاو', icon3d: 'assets/icons_matte_3d/cow.png', icon: '🐄' },
-  ovine_caprine: { key: 'ovine_caprine', label: 'گوسفند/بز', icon3d: 'assets/icons_matte_3d/sheep.png', icon: '🐑' },
-  poultry: { key: 'poultry', label: 'طیور', icon3d: 'assets/icons_matte_3d/poultry.png', icon: '🐔' },
-  camelids: { key: 'camelids', label: 'شترسانان', icon3d: 'assets/icons_matte_3d/camel.png', icon: '🐪' },
-  aquatics: { key: 'aquatics', label: 'آبزیان', icon3d: 'assets/icons_matte_3d/fish.png', icon: '🐟' },
+  canine: { key: 'canine', label: 'سگ', icon3d: 'assets/icons_3d/dog.png', icon: '🐶' },
+  feline: { key: 'feline', label: 'گربه', icon3d: 'assets/icons_3d/cat.png', icon: '🐱' },
+  equine: { key: 'equine', label: 'اسب', icon3d: 'assets/icons_3d/horse.png', icon: '🐎' },
+  bovine: { key: 'bovine', label: 'گاو', icon3d: 'assets/icons_3d/cow.png', icon: '🐄' },
+  ovine_caprine: { key: 'ovine_caprine', label: 'گوسفند/بز', icon3d: 'assets/icons_3d/sheep.png', icon: '🐑' },
+  poultry: { key: 'poultry', label: 'طیور', icon3d: 'assets/icons_3d/poultry.png', icon: '🐔' },
+  camelids: { key: 'camelids', label: 'شترسانان', icon3d: 'assets/icons_3d/camel.png', icon: '🐪' },
+  aquatics: { key: 'aquatics', label: 'آبزیان', icon3d: 'assets/icons_3d/fish.png', icon: '🐟' },
   wildlife: { key: 'wildlife', label: 'حیات وحش', icon3d: 'assets/icons_3d/lion.png', icon: '🦁' }
 };
 
