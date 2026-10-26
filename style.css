@@ -656,8 +656,6 @@ body {
 .active .icon-frame,
 button.active .icon-frame,
 .stitch-chip.active .icon-frame,
-.species-pill.active .icon-frame,
-.cat-pill.active .icon-frame,
 .univ-sp-btn.active .icon-frame,
 .bg-slate-900 .icon-frame,
 .bg-teal-600 .icon-frame,
@@ -674,4 +672,21 @@ a:hover .icon-frame {
   transform: scale(1.06);
   border-color: rgba(203, 213, 225, 1);
   box-shadow: 0 2px 5px rgba(15, 23, 42, 0.08);
+}
+
+/* فیلترهای کاملاً تایپوگرافیک و مینیمال گونه‌ها و منبع دارو (بدون استیکر و بدون دایره) */
+.species-pill, .cat-pill {
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  font-family: inherit;
+}
+.species-pill:hover, .cat-pill:hover {
+  border-color: #94a3b8;
+}
+.species-pill.active, .cat-pill.active {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #0f172a !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.2) !important;
 }

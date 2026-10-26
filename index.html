@@ -12,7 +12,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Custom Style -->
-  <link rel="stylesheet" href="style.css?v=3.9.0">
+  <link rel="stylesheet" href="style.css?v=3.9.6">
 
   <!-- PWA Manifest & Theme Color -->
   <link rel="manifest" href="manifest.json">
@@ -66,10 +66,10 @@
           <span class="sm:hidden">CPR</span>
         </button>
 
-        <!-- دکمه منوی حاشیه‌ای ابزارها (مشابه سایدبار VetCalculators) -->
-        <button onclick="openClinicalSidebar()" class="flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-white border border-slate-700 text-xs sm:text-sm font-bold transition cursor-pointer" title="گشودن نوار حاشیه ابزارها و پروتکل‌های فوق‌تخصصی">
+        <!-- دکمه منوی حاشیه‌ای ابزارها و میانبرها -->
+        <button onclick="openClinicalSidebar()" class="flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-white border border-slate-700 text-xs sm:text-sm font-bold transition cursor-pointer" title="گشودن نوار حاشیه ابزارها و میانبرهای بالینی">
           <i data-lucide="layout-grid" class="w-4 h-4 text-cyan-400"></i>
-          <span class="hidden md:inline">ابزارها و پروتکل‌ها</span>
+          <span class="hidden md:inline">ابزارها و میانبرها</span>
           <span class="md:hidden">ابزارها</span>
           <span class="text-[10px] bg-cyan-400 text-slate-950 px-1.5 py-0.2 rounded-full font-mono font-black">12</span>
         </button>
@@ -88,10 +88,10 @@
     <!-- هدر نوار حاشیه -->
     <div class="p-4 bg-[#031227] border-b border-[#0590D5]/25 flex items-center justify-between">
       <div class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center"><i data-lucide="folder" class="w-5 h-5"></i></div>
+        <div class="w-8 h-8 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center"><i data-lucide="layout-grid" class="w-5 h-5"></i></div>
         <div>
-          <h3 class="text-sm font-black text-white">ابزارها و تصمیم‌یارهای بالینی</h3>
-          <p class="text-[11px] text-[#ABB5CD]">دسته‌بندی تخصصی ۱۲ پروتکل مرجع دامپزشکی</p>
+          <h3 class="text-sm font-black text-white">ابزارها و میانبرهای بالینی</h3>
+          <p class="text-[11px] text-[#ABB5CD]">میانبرها، ابزارها و ۱۲ پروتکل مرجع بالینی</p>
         </div>
       </div>
       <button onclick="closeClinicalSidebar()" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 text-[#ABB5CD] hover:text-white flex items-center justify-center transition cursor-pointer">
@@ -101,6 +101,43 @@
 
     <!-- بدنه اسکرول‌خور نوار حاشیه -->
     <div class="flex-1 overflow-y-auto p-4 space-y-5 text-xs">
+      
+      <!-- بخش صفر: میانبرهای بالینی داروها (Quick Clinical Category Shortcuts) -->
+      <div class="space-y-2 pb-3 border-b border-[#0590D5]/20">
+        <div class="flex items-center justify-between text-[11px] font-black text-[#00CAE0]">
+          <div class="flex items-center gap-2">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
+            <span>میانبرهای بالینی داروها:</span>
+          </div>
+          <span class="text-[10px] text-slate-400 font-normal">فیلتر سریع</span>
+        </div>
+        <div class="grid grid-cols-2 gap-1.5">
+          <button onclick="closeClinicalSidebar(); filterByQuickTag('all');" class="p-2.5 rounded-xl bg-[#17285E]/70 hover:bg-[#214595] border border-[#D0D7E8]/20 flex items-center gap-2 text-right transition cursor-pointer">
+            <i data-lucide="layers" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+            <span class="text-white font-bold text-xs">همه داروها</span>
+          </button>
+          <button onclick="closeClinicalSidebar(); filterByQuickTag('emergency');" class="p-2.5 rounded-xl bg-[#17285E]/70 hover:bg-[#214595] border border-rose-500/30 flex items-center gap-2 text-right transition cursor-pointer">
+            <i data-lucide="heart-pulse" class="w-4 h-4 text-rose-400 shrink-0"></i>
+            <span class="text-white font-bold text-xs">اورژانس و احیا</span>
+          </button>
+          <button onclick="closeClinicalSidebar(); filterByQuickTag('antibiotic');" class="p-2.5 rounded-xl bg-[#17285E]/70 hover:bg-[#214595] border border-amber-500/30 flex items-center gap-2 text-right transition cursor-pointer">
+            <i data-lucide="shield" class="w-4 h-4 text-amber-400 shrink-0"></i>
+            <span class="text-white font-bold text-xs">آنتی‌بیوتیک‌ها</span>
+          </button>
+          <button onclick="closeClinicalSidebar(); filterByQuickTag('analgesic');" class="p-2.5 rounded-xl bg-[#17285E]/70 hover:bg-[#214595] border border-amber-500/30 flex items-center gap-2 text-right transition cursor-pointer">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300 shrink-0"></i>
+            <span class="text-white font-bold text-xs">ضددرد و مسکن</span>
+          </button>
+          <button onclick="closeClinicalSidebar(); filterByQuickTag('anesthetic');" class="p-2.5 rounded-xl bg-[#17285E]/70 hover:bg-[#214595] border border-teal-500/30 flex items-center gap-2 text-right transition cursor-pointer">
+            <i data-lucide="activity" class="w-4 h-4 text-teal-400 shrink-0"></i>
+            <span class="text-white font-bold text-xs">بیهوشی و سدیشن</span>
+          </button>
+          <button onclick="closeClinicalSidebar(); openTherapeuticAtlasModal();" class="p-2.5 rounded-xl bg-[#0590D5]/25 hover:bg-[#0590D5]/45 border border-[#00CAE0]/50 flex items-center gap-2 text-right transition cursor-pointer">
+            <i data-lucide="layout-grid" class="w-4 h-4 text-[#00CAE0] shrink-0"></i>
+            <span class="text-[#00CAE0] font-bold text-xs">اطلس ۱۶ رده ↗</span>
+          </button>
+        </div>
+      </div>
       
       <!-- گروه ۱: اورژانس، شوک و مراقبت ویژه -->
       <div class="space-y-2">
@@ -259,7 +296,7 @@
 
           <button onclick="closeClinicalSidebar(); openCalculatorWithTab('transfusion');" class="w-full p-2.5 rounded-xl bg-[#17285E]/60 hover:bg-[#214595] border border-[#D0D7E8]/20 flex items-center justify-between transition cursor-pointer text-right group">
             <div class="flex items-center gap-2.5">
-              <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
+              <div class="w-7 h-7 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0"><i data-lucide="droplet" class="w-4 h-4"></i></div>
               <div>
                 <span class="font-bold text-white block">انتقال خون و کراس‌مچ</span>
                 <span class="text-[10px] text-[#ABB5CD]">محاسبه حجم خون کامل و گلبول قرمز فشرده</span>
@@ -295,7 +332,7 @@
       <!-- گروه ۵: دانشنامه و اطلس جامع بالینی -->
       <div class="space-y-2 pt-1 border-t border-[#0590D5]/20">
         <div class="flex items-center gap-2 text-[11px] font-black text-[#FFB140]">
-          <i data-lucide="book-marked" class="w-4 h-4 text-amber-400"></i>
+          <i data-lucide="layers" class="w-4 h-4 text-amber-400"></i>
           <span>دانشنامه و اطلس جامع بالینی:</span>
         </div>
         <div class="grid grid-cols-2 gap-2">
@@ -368,109 +405,67 @@
             +
           </button>
         </div>
+
+        <!-- دکمه دسترسی سریع به منوی ابزارها و میانبرها -->
+        <button type="button" onclick="openClinicalSidebar()" class="flex items-center gap-1.5 bg-cyan-50 hover:bg-cyan-100 text-cyan-800 border border-cyan-200 px-2.5 py-1 rounded-xl text-xs font-bold transition shrink-0 cursor-pointer" title="مشاهده لیست میانبرهای بالینی و ابزارهای تصمیم‌یار">
+          <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-cyan-700"></i>
+          <span class="hidden sm:inline">ابزارها و میانبرها</span>
+        </button>
       </div>
     </div>
-    
-    <!-- دسترسی سریع کلینیکی (فقط در یک ردیف خلوت و مینیمال) -->
-    <div class="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none text-xs mb-1" id="quickSearchChips">
-      <span class="text-slate-400 text-[11px] font-bold shrink-0 ml-1">میانبر بالینی:</span>
-      <button onclick="filterByQuickTag('all')" data-qtag="all" class="stitch-chip active flex items-center gap-1.5">
-        <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-        <span>همه داروها</span>
-      </button>
-      <button onclick="filterByQuickTag('emergency')" data-qtag="emergency" class="stitch-chip flex items-center gap-1.5">
-        <i data-lucide="heart-pulse" class="w-3.5 h-3.5 text-rose-500"></i>
-        <span>اورژانس و احیا</span>
-      </button>
-      <button onclick="filterByQuickTag('antibiotic')" data-qtag="antibiotic" class="stitch-chip flex items-center gap-1.5">
-        <i data-lucide="shield" class="w-3.5 h-3.5 text-orange-500"></i>
-        <span>آنتی‌بیوتیک‌ها</span>
-      </button>
-      <button onclick="filterByQuickTag('analgesic')" data-qtag="analgesic" class="stitch-chip flex items-center gap-1.5">
-        <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-500"></i>
-        <span>ضددرد و مسکن</span>
-      </button>
-      <button onclick="filterByQuickTag('anesthetic')" data-qtag="anesthetic" class="stitch-chip flex items-center gap-1.5">
-        <i data-lucide="activity" class="w-3.5 h-3.5 text-teal-500"></i>
-        <span>بیهوشی و سدیشن</span>
-      </button>
-      <button onclick="openTherapeuticAtlasModal()" class="stitch-chip flex items-center gap-1.5 bg-cyan-50 text-cyan-800 border-cyan-200 hover:bg-cyan-100">
-        <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-cyan-600"></i>
-        <span>اطلس ۱۶ رده دارویی ↗</span>
-      </button>
-    </div>
 
-    <!-- فیلترهای تکمیلی (گونه بیمار + وضعیت بازار دارویی ایران) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 mb-3">
+    <!-- فیلترهای تکمیلی (گونه بیمار + وضعیت بازار دارویی ایران) - طراحی ۱۰۰٪ تایپوگرافیک مینیمال -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
       <!-- فیلتر گونه‌ها -->
-      <div class="bg-white px-3 py-2.5 rounded-2xl border border-slate-200 flex items-center gap-2 overflow-x-auto text-xs scrollbar-none shadow-2xs">
-        <span class="text-slate-500 font-bold whitespace-nowrap shrink-0 flex items-center gap-1.5">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>گونه بیمار:</span>
-        </span>
-        <button onclick="setSpeciesFilter('all')" data-species="all" class="species-pill active bg-slate-900 text-white border-slate-900 px-3.5 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-2 transition group">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>همه گونه‌ها</span>
+      <div class="bg-white px-3 py-2 rounded-xl border border-slate-200/90 flex items-center gap-1.5 overflow-x-auto text-xs scrollbar-none shadow-2xs">
+        <span class="text-slate-400 font-bold whitespace-nowrap shrink-0 ml-1">گونه بیمار:</span>
+        <button onclick="setSpeciesFilter('all')" data-species="all" class="species-pill active bg-slate-900 text-white border-slate-900 px-3 py-1 rounded-lg border font-bold whitespace-nowrap transition">
+          همه گونه‌ها
         </button>
-        <button onclick="setSpeciesFilter('canine')" data-species="canine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3.5 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-2 transition group">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>سگ</span>
+        <button onclick="setSpeciesFilter('canine')" data-species="canine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1 rounded-lg border font-bold whitespace-nowrap transition">
+          سگ
         </button>
-        <button onclick="setSpeciesFilter('feline')" data-species="feline" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3.5 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-2 transition group">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>گربه</span>
+        <button onclick="setSpeciesFilter('feline')" data-species="feline" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1 rounded-lg border font-bold whitespace-nowrap transition">
+          گربه
         </button>
-        <button onclick="setSpeciesFilter('equine')" data-species="equine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3.5 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-2 transition group">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>اسب</span>
+        <button onclick="setSpeciesFilter('equine')" data-species="equine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1 rounded-lg border font-bold whitespace-nowrap transition">
+          اسب
         </button>
-        <button onclick="setSpeciesFilter('bovine')" data-species="bovine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3.5 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-2 transition group">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>گاو</span>
+        <button onclick="setSpeciesFilter('bovine')" data-species="bovine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1 rounded-lg border font-bold whitespace-nowrap transition">
+          گاو
         </button>
-        <button onclick="setSpeciesFilter('ovine_caprine')" data-species="ovine_caprine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3.5 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-2 transition group">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>گوسفند و بز</span>
+        <button onclick="setSpeciesFilter('ovine_caprine')" data-species="ovine_caprine" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1 rounded-lg border font-bold whitespace-nowrap transition">
+          گوسفند و بز
         </button>
-        <button onclick="setSpeciesFilter('poultry')" data-species="poultry" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3.5 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-2 transition group">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>طیور</span>
+        <button onclick="setSpeciesFilter('poultry')" data-species="poultry" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1 rounded-lg border font-bold whitespace-nowrap transition">
+          طیور
         </button>
-        <button onclick="setSpeciesFilter('aquatics')" data-species="aquatics" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3.5 py-1.5 rounded-xl border font-bold whitespace-nowrap flex items-center gap-2 transition group">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>آبزیان و ماهیان</span>
+        <button onclick="setSpeciesFilter('aquatics')" data-species="aquatics" class="species-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1 rounded-lg border font-bold whitespace-nowrap transition">
+          آبزیان
         </button>
       </div>
 
       <!-- فیلتر وضعیت بازار و منبع دارو -->
-      <div class="bg-white px-3 py-2.5 rounded-2xl border border-slate-200 flex items-center gap-2 overflow-x-auto text-xs scrollbar-none shadow-2xs">
-        <span class="text-slate-500 font-bold whitespace-nowrap shrink-0 flex items-center gap-1.5">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>منبع و بازار ایران:</span>
-        </span>
-        <button onclick="setCategoryFilter('all')" data-cat="all" class="cat-pill active bg-slate-900 text-white border-slate-900 px-3.5 py-1.5 rounded-xl font-bold border transition whitespace-nowrap flex items-center gap-2 group">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>همه منابع</span>
+      <div class="bg-white px-3 py-2 rounded-xl border border-slate-200/90 flex items-center gap-1.5 overflow-x-auto text-xs scrollbar-none shadow-2xs">
+        <span class="text-slate-400 font-bold whitespace-nowrap shrink-0 ml-1">منبع دارو:</span>
+        <button onclick="setCategoryFilter('all')" data-cat="all" class="cat-pill active bg-slate-900 text-white border-slate-900 px-3 py-1 rounded-lg font-bold border transition whitespace-nowrap">
+          همه منابع
         </button>
-        <button onclick="setCategoryFilter('vet_only')" data-cat="vet_only" class="cat-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3.5 py-1.5 rounded-xl font-bold border transition whitespace-nowrap flex items-center gap-2 group">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>اختصاصی دامی</span>
+        <button onclick="setCategoryFilter('vet_only')" data-cat="vet_only" class="cat-pill bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 px-3 py-1 rounded-lg font-bold border transition whitespace-nowrap">
+          اختصاصی دامی
         </button>
-        <button onclick="setCategoryFilter('dual_use')" data-cat="dual_use" class="cat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-blue-800 border-blue-200 hover:bg-blue-50 whitespace-nowrap flex items-center gap-1.5">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
-          <span>داروی مشترک</span>
+        <button onclick="setCategoryFilter('dual_use')" data-cat="dual_use" class="cat-pill px-3 py-1 rounded-lg font-bold border transition bg-slate-50 text-blue-800 border-blue-200 hover:bg-blue-50 whitespace-nowrap">
+          مشترک
         </button>
-        <button onclick="setCategoryFilter('human_off_label')" data-cat="human_off_label" class="cat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-purple-800 border-purple-200 hover:bg-purple-50 whitespace-nowrap flex items-center gap-1.5">
-          <i data-lucide="book-open" class="w-4 h-4 text-cyan-400"></i>
-          <span>انسانی در دامپزشکی</span>
+        <button onclick="setCategoryFilter('human_off_label')" data-cat="human_off_label" class="cat-pill px-3 py-1 rounded-lg font-bold border transition bg-slate-50 text-purple-800 border-purple-200 hover:bg-purple-50 whitespace-nowrap">
+          انسانی در دامپزشکی
         </button>
-        <button onclick="setCategoryFilter('blacklisted')" data-cat="blacklisted" class="cat-pill px-3 py-1.5 rounded-xl font-bold border transition bg-slate-50 text-rose-800 border-rose-200 hover:bg-rose-50 whitespace-nowrap flex items-center gap-1.5">
-          <i data-lucide="alert-octagon" class="w-4 h-4 text-rose-400"></i>
-          <span>خط قرمز (سمی)</span>
+        <button onclick="setCategoryFilter('blacklisted')" data-cat="blacklisted" class="cat-pill px-3 py-1 rounded-lg font-bold border transition bg-slate-50 text-rose-800 border-rose-200 hover:bg-rose-50 whitespace-nowrap">
+          خط قرمز
         </button>
-        <div class="h-4 w-px bg-slate-200 shrink-0 mx-1"></div>
-        <button id="btnFilterFavorites" onclick="toggleFavoritesFilter()" class="px-3 py-1.5 rounded-xl font-bold border transition bg-amber-50 text-amber-800 border-amber-300 hover:bg-amber-100 flex items-center gap-1.5 whitespace-nowrap shrink-0 shadow-2xs">
-          <i data-lucide="circle-dot" class="w-4 h-4 text-slate-400"></i>
+        <div class="h-4 w-px bg-slate-200 shrink-0 mx-0.5"></div>
+        <button id="btnFilterFavorites" onclick="toggleFavoritesFilter()" class="px-2.5 py-1 rounded-lg font-bold border transition bg-amber-50 text-amber-800 border-amber-300 hover:bg-amber-100 flex items-center gap-1 whitespace-nowrap shrink-0">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-500"></i>
           <span>نشان‌شده‌ها</span>
           <span id="favCountBadge" class="text-[10px] bg-amber-200 text-amber-950 px-1.5 py-0.2 rounded-full font-mono font-bold">0</span>
         </button>
@@ -3633,7 +3628,7 @@ id="interactionsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-ov
       <!-- فوتر مودال -->
       <div class="px-6 py-3 bg-white border-t border-slate-200 flex items-center justify-between text-xs text-slate-600 shrink-0 flex-wrap gap-2">
         <div class="flex items-center gap-1.5 font-bold text-purple-950">
-          <i data-lucide="book-open" class="w-4 h-4 text-purple-600"></i>
+          <i data-lucide="shield-check" class="w-4 h-4 text-purple-600"></i>
           <span>منطبق بر استانداردهای جهانی ASHP Injectable Drug Information & King Guide</span>
         </div>
         <button onclick="closeSyringeCompatibilityModal()" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl font-bold transition">
@@ -3651,7 +3646,7 @@ id="interactionsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-ov
       <div class="px-6 py-4 bg-gradient-to-r from-slate-900 via-teal-950 to-slate-900 text-white flex items-center justify-between border-b border-teal-800/40">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-2xl bg-teal-500/20 text-teal-300 border border-teal-500/30 flex items-center justify-center shrink-0">
-            <i data-lucide="book-open" class="w-6 h-6"></i>
+            <i data-lucide="layers" class="w-6 h-6"></i>
           </div>
           <div>
             <div class="flex items-center gap-2">
@@ -4205,7 +4200,7 @@ id="interactionsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-ov
   <script src="data/pharmacology_depth.js?v=3.5.0"></script>
   <script src="data/specialty_protocols.js?v=3.5.0"></script>
   <script src="data/clinical_vault.js?v=3.8.0"></script>
-  <script src="app.js?v=3.9.0"></script>
+  <script src="app.js?v=3.9.6"></script>
 
   <!-- نوار ناوبری شناور شیشه‌ای در موبایل (Google Stitch Mobile Dock) -->
   <nav id="mobileBottomDock" class="stitch-floating-dock sm:hidden">

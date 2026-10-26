@@ -1019,16 +1019,8 @@ function clearSearchInput() {
   renderDrugs();
 }
 
-// فیلتر تگ‌های سریع Google Stitch Chips
+// فیلتر تگ‌های سریع بالینی
 function filterByQuickTag(tag) {
-  document.querySelectorAll('#quickSearchChips .stitch-chip').forEach(chip => {
-    if (chip.getAttribute('data-qtag') === tag) {
-      chip.classList.add('active');
-    } else {
-      chip.classList.remove('active');
-    }
-  });
-
   if (tag === 'all') {
     currentSpecies = 'all';
     currentCategory = 'all';
@@ -1052,8 +1044,10 @@ function filterByQuickTag(tag) {
     setTherapeuticCategoryFilter('analgesia_nsaid');
   } else if (tag === 'anesthetic') {
     setTherapeuticCategoryFilter('anesthesia_sedation');
-  } else if (tag === 'cardio_renal') {
+  } else if (tag === 'cardio' || tag === 'cardio_renal') {
     setTherapeuticCategoryFilter('cardiovascular');
+  } else if (tag === 'gi') {
+    setTherapeuticCategoryFilter('gastrointestinal');
   } else if (tag === 'canine') {
     setSpeciesFilter('canine');
   } else if (tag === 'feline') {
@@ -1061,22 +1055,7 @@ function filterByQuickTag(tag) {
   } else if (tag === 'equine') {
     setSpeciesFilter('equine');
   } else if (tag === 'ruminant' || tag === 'large_animal') {
-    currentSpecies = 'ruminant';
-    document.querySelectorAll('.species-tab').forEach(btn => {
-      btn.classList.remove('active', 'bg-slate-900', 'text-white', 'border-slate-900');
-      btn.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200');
-    });
-    const bovBtn = document.querySelector('.species-tab[data-species="bovine"]');
-    const ocBtn = document.querySelector('.species-tab[data-species="ovine_caprine"]');
-    if (bovBtn) {
-      bovBtn.classList.add('active', 'bg-slate-900', 'text-white', 'border-slate-900');
-      bovBtn.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
-    }
-    if (ocBtn) {
-      ocBtn.classList.add('active', 'bg-slate-900', 'text-white', 'border-slate-900');
-      ocBtn.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
-    }
-    renderCards(filterDrugs());
+    setSpeciesFilter('bovine');
   } else if (tag === 'favorites') {
     if (!currentFavoritesOnly) {
       toggleFavoritesFilter();
@@ -1295,26 +1274,26 @@ function setCategoryFilter(cat) {
   currentCategory = cat;
   document.querySelectorAll('.cat-pill').forEach(btn => {
     if (btn.getAttribute('data-cat') === cat) {
-      btn.classList.add('bg-slate-900', 'text-white', 'border-slate-900', 'shadow-sm');
-      btn.classList.remove('bg-slate-50');
+      btn.classList.add('active', 'bg-slate-900', 'text-white', 'border-slate-900', 'shadow-xs');
+      btn.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
     } else {
-      btn.classList.remove('bg-slate-900', 'text-white', 'border-slate-900', 'shadow-sm');
-      btn.classList.add('bg-slate-50');
+      btn.classList.remove('active', 'bg-slate-900', 'text-white', 'border-slate-900', 'shadow-xs');
+      btn.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200');
     }
   });
   renderDrugs();
 }
 
-// تغییر فیلتر گونه
+// تغییر فیلتر گونه بیمار
 function setSpeciesFilter(species) {
   currentSpecies = species;
-  document.querySelectorAll('.species-tab').forEach(btn => {
+  document.querySelectorAll('.species-pill').forEach(btn => {
     if (btn.getAttribute('data-species') === species) {
-      btn.classList.add('active', 'font-bold', 'text-cyan-800', 'border-b-2', 'border-cyan-600', 'bg-cyan-50/70');
-      btn.classList.remove('font-medium', 'text-slate-600', 'border-transparent', 'hover:bg-slate-50');
+      btn.classList.add('active', 'bg-slate-900', 'text-white', 'border-slate-900', 'shadow-xs');
+      btn.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
     } else {
-      btn.classList.remove('active', 'font-bold', 'text-cyan-800', 'border-b-2', 'border-cyan-600', 'bg-cyan-50/70');
-      btn.classList.add('font-medium', 'text-slate-600', 'border-transparent', 'hover:bg-slate-50');
+      btn.classList.remove('active', 'bg-slate-900', 'text-white', 'border-slate-900', 'shadow-xs');
+      btn.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200');
     }
   });
 
@@ -2310,7 +2289,7 @@ function renderSingleDrugCardHtml(drug) {
         <!-- ردیف ۱: مونوگراف کامل و محاسبه دوز -->
         <div class="grid grid-cols-2 gap-1.5 w-full">
           <button type="button" onclick="openMonographModal('${drug.id}')" class="py-2 px-2 bg-[#0A2447] hover:bg-[#17285E] active:scale-95 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs">
-            <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+            <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyan-300"></i>
             <span>مونوگراف</span>
           </button>
 
@@ -5437,7 +5416,7 @@ function renderSingleDrugResults(resetInnerInput = true) {
 
         <div class="flex items-center gap-2">
           <button type="button" onclick="closeInteractionsModal(); openMonographModal('${target.id}')" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition flex items-center gap-1 border border-white/20">
-            <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+            <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
             <span>مونوگراف کامل</span>
           </button>
           <button type="button" onclick="loadDrugIntoMultiInteraction('${target.id}')" class="px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-black transition flex items-center gap-1 shadow-xs">
@@ -10105,7 +10084,7 @@ function renderUnifiedSpecialtyProtocolCard(p, weight, bsa) {
       <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs transition">
         <summary class="px-4 py-3 bg-slate-50 hover:bg-slate-100 cursor-pointer text-xs font-bold text-slate-800 flex items-center justify-between select-none">
           <span class="flex items-center gap-2">
-            <i data-lucide="book-open" class="w-4 h-4 text-indigo-600"></i>
+            <i data-lucide="file-text" class="w-4 h-4 text-indigo-600"></i>
             <span>مطالعه عمیق بالینی، جدول زمان‌بندی پروتکل و نکات پاتوفیزیولوژی</span>
           </span>
           <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
