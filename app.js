@@ -47,23 +47,22 @@ let currentPatientWeight = 10; // پیش‌فرض وزن بیمار: ۱۰ کیل
 
 // فراداده جامع ۹ گونه جانوری در کارت بالینی وت‌دوز (VetDose)
 const CARD_SPECIES_META = {
-  canine: { key: 'canine', label: 'سگ', icon: '🐶', lucide: 'dog', theme: 'icon-3d-blue' },
-  feline: { key: 'feline', label: 'گربه', icon: '🐱', lucide: 'cat', theme: 'icon-3d-cyan' },
-  equine: { key: 'equine', label: 'اسب', icon: '🐎', lucide: 'activity', theme: 'icon-3d-amber' },
-  bovine: { key: 'bovine', label: 'گاو', icon: '🐄', lucide: 'shield', theme: 'icon-3d-emerald' },
-  ovine_caprine: { key: 'ovine_caprine', label: 'گوسفند/بز', icon: '🐑', lucide: 'layers', theme: 'icon-3d-purple' },
-  poultry: { key: 'poultry', label: 'طیور', icon: '🐔', lucide: 'feather', theme: 'icon-3d-amber' },
-  camelids: { key: 'camelids', label: 'شترسانان', icon: '🐪', lucide: 'sun', theme: 'icon-3d-amber' },
-  aquatics: { key: 'aquatics', label: 'آبزیان', icon: '🐟', lucide: 'waves', theme: 'icon-3d-cyan' },
-  wildlife: { key: 'wildlife', label: 'حیات وحش', icon: '🦁', lucide: 'compass', theme: 'icon-3d-rose' }
+  canine: { key: 'canine', label: 'سگ', icon3d: 'assets/icons_3d/dog.png', icon: '🐶' },
+  feline: { key: 'feline', label: 'گربه', icon3d: 'assets/icons_3d/cat.png', icon: '🐱' },
+  equine: { key: 'equine', label: 'اسب', icon3d: 'assets/icons_3d/horse.png', icon: '🐎' },
+  bovine: { key: 'bovine', label: 'گاو', icon3d: 'assets/icons_3d/cow.png', icon: '🐄' },
+  ovine_caprine: { key: 'ovine_caprine', label: 'گوسفند/بز', icon3d: 'assets/icons_3d/sheep.png', icon: '🐑' },
+  poultry: { key: 'poultry', label: 'طیور', icon3d: 'assets/icons_3d/poultry.png', icon: '🐔' },
+  camelids: { key: 'camelids', label: 'شترسانان', icon3d: 'assets/icons_3d/camel.png', icon: '🐪' },
+  aquatics: { key: 'aquatics', label: 'آبزیان', icon3d: 'assets/icons_3d/fish.png', icon: '🐟' },
+  wildlife: { key: 'wildlife', label: 'حیات وحش', icon3d: 'assets/icons_3d/lion.png', icon: '🦁' }
 };
 
-// تولید نشانه و آیکون سه‌بعدی متالیک گونه‌های جانوری (جایگزین دائمی استیکر)
-function getSpecies3dIconHtml(spKey, sizeClass = 'w-5 h-5', iconSizeClass = 'w-3 h-3') {
-  const meta = CARD_SPECIES_META[spKey] || { lucide: 'paw-print', theme: 'icon-3d-cyan' };
-  const lucideIcon = meta.lucide || 'paw-print';
-  const theme = meta.theme || 'icon-3d-cyan';
-  return `<span class="icon-3d ${theme} ${sizeClass} inline-flex items-center justify-center shrink-0 shadow-xs"><i data-lucide="${lucideIcon}" class="${iconSizeClass}"></i></span>`;
+// تولید نشانه و آیکون سه‌بعدی ارگانیک گونه‌های جانوری (آیکون‌های سه‌بعدی دست‌ساز مشابه مینی‌اپ ربات)
+function getSpecies3dIconHtml(spKey, sizeClass = 'w-5 h-5') {
+  const meta = CARD_SPECIES_META[spKey] || { icon3d: 'assets/icons_3d/ui_paw.png', label: spKey };
+  const iconSrc = meta.icon3d || 'assets/icons_3d/ui_paw.png';
+  return `<img src="${iconSrc}" alt="${meta.label}" class="${sizeClass} object-contain flex-shrink-0 drop-shadow-xs select-none pointer-events-none inline-block align-middle">`;
 }
 
 // =================================================================
@@ -591,7 +590,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
     return `
       <div class="bg-rose-50/95 border-2 border-rose-500 p-4 rounded-2xl text-rose-950 shadow-sm transition-all">
         <div class="flex items-center gap-2 mb-2 pb-2 border-b border-rose-200">
-          <span class="icon-3d icon-3d-rose w-9 h-9 inline-flex items-center justify-center shrink-0 shadow-sm"><i data-lucide="skull" class="w-5 h-5"></i></span>
+          <img src="assets/icons_3d/skull.png" alt="منع مصرف" class="w-9 h-9 object-contain drop-shadow shrink-0">
           <div>
             <h4 class="font-black text-sm text-rose-700 leading-snug">${guide.warning_title || `منع مصرف مطلق در ${spMeta.label}`}</h4>
             <span class="text-[10px] font-bold text-rose-800 bg-rose-200/80 px-2 py-0.5 rounded-md inline-block mt-0.5">خط قرمز ایمنی بالینی (Lethal Risk)</span>
@@ -609,7 +608,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
     return `
       <div class="bg-slate-100/90 border border-slate-300 p-3.5 rounded-2xl text-slate-800 shadow-2xs">
         <div class="flex items-center gap-2 mb-1.5">
-          <span class="icon-3d icon-3d-navy w-7 h-7 inline-flex items-center justify-center shrink-0 shadow-sm"><i data-lucide="slash" class="w-4 h-4 text-rose-400"></i></span>
+          <img src="assets/icons_3d/warning.png" alt="هشدار" class="w-7 h-7 object-contain drop-shadow shrink-0">
           <h4 class="font-black text-xs text-slate-700">${guide.warning_title || `کاربرد غیرمعمول در ${spMeta.label}`}</h4>
         </div>
         <p class="text-xs text-slate-600 leading-relaxed font-medium">
@@ -745,7 +744,7 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
       <div class="mt-2.5 bg-gradient-to-br from-amber-50 to-orange-50/70 border-2 border-amber-300 p-3.5 rounded-2xl shadow-2xs space-y-2">
         <div class="flex items-center justify-between">
           <span class="text-xs font-black text-amber-950 flex items-center gap-1.5">
-            <span class="icon-3d icon-3d-purple w-5 h-5"><i data-lucide="pill" class="w-3 h-3"></i></span>
+            <img src="assets/icons_3d/pill.png" alt="قرص" class="w-5 h-5 object-contain inline-block align-middle shrink-0">
             <span>راهنمای دوز قرص برای وزن ${currentPatientWeight} kg:</span>
           </span>
           <button type="button" onclick="copyCardTabletPrescription('${drug.id}')" class="px-2.5 py-1 rounded-xl bg-white border border-amber-300 text-amber-900 hover:bg-amber-100 text-[11px] font-black shadow-2xs transition flex items-center gap-1">
@@ -786,8 +785,8 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
   const isCaution = guide.status === 'caution';
   const cardBorder = isCaution ? 'border-2 border-amber-400 bg-amber-50/70' : 'border-2 border-emerald-400/80 bg-gradient-to-br from-emerald-50/90 via-teal-50/50 to-emerald-50/80';
   const headerIcon = isCaution 
-    ? '<span class="icon-3d icon-3d-amber w-5 h-5 inline-flex items-center justify-center shrink-0"><i data-lucide="alert-triangle" class="w-3 h-3"></i></span>'
-    : '<span class="icon-3d icon-3d-cyan w-5 h-5 inline-flex items-center justify-center shrink-0"><i data-lucide="syringe" class="w-3 h-3"></i></span>';
+    ? '<img src="assets/icons_3d/warning.png" alt="هشدار" class="w-5 h-5 object-contain inline-block align-middle shrink-0">'
+    : '<img src="assets/icons_3d/syringe.png" alt="سرنگ" class="w-5 h-5 object-contain inline-block align-middle shrink-0">';
   const headerTitle = isCaution ? `هشدار دوز پلامبز در ${spMeta.label}` : `حجم سرنگ و دوز پلامبز در ${spMeta.label}`;
 
   return `
@@ -879,10 +878,10 @@ function renderSpeciesTabsButtons(drug, activeKey) {
       btnClasses = 'bg-amber-50 text-amber-800 hover:bg-amber-100 border border-amber-200 font-bold';
     }
 
-    const icon3d = getSpecies3dIconHtml(spKey, 'w-5 h-5', 'w-3 h-3');
+    const icon3d = getSpecies3dIconHtml(spKey, 'w-4 h-4 sm:w-4.5 sm:h-4.5');
     const status3d = isLethal 
-      ? '<span class="icon-3d icon-3d-rose w-4 h-4 inline-flex items-center justify-center shrink-0" title="منع مصرف"><i data-lucide="skull" class="w-2.5 h-2.5"></i></span>'
-      : (isCaution ? '<span class="icon-3d icon-3d-amber w-4 h-4 inline-flex items-center justify-center shrink-0" title="احتیاط"><i data-lucide="alert-triangle" class="w-2.5 h-2.5"></i></span>' : '');
+      ? '<img src="assets/icons_3d/skull.png" class="w-3.5 h-3.5 object-contain inline-block align-middle" title="منع مصرف مطلق">'
+      : (isCaution ? '<img src="assets/icons_3d/warning.png" class="w-3.5 h-3.5 object-contain inline-block align-middle" title="احتیاط">' : '');
 
     return `
       <button type="button"
@@ -1409,12 +1408,12 @@ function getSpeciesIconsPreviewHtml(drug) {
       ? 'bg-rose-50 text-rose-800 border-rose-300 font-bold' 
       : 'bg-slate-100 text-slate-700 border-slate-200/80 font-medium';
 
-    const icon3d = getSpecies3dIconHtml(spKey, 'w-4 h-4', 'w-2.5 h-2.5');
+    const icon3d = getSpecies3dIconHtml(spKey, 'w-3.5 h-3.5');
     return `
       <span class="inline-flex items-center gap-1 text-[10px] ${badgeStyle} px-2 py-0.5 rounded-lg border shadow-2xs">
         ${icon3d}
         <span>${sp.label}</span>
-        ${isFatal ? '<span class="icon-3d icon-3d-rose w-3.5 h-3.5 inline-flex items-center justify-center shrink-0" title="منع مصرف"><i data-lucide="skull" class="w-2 h-2"></i></span>' : ''}
+        ${isFatal ? '<img src="assets/icons_3d/skull.png" class="w-3 h-3 object-contain inline-block align-middle" title="منع مصرف">' : ''}
       </span>
     `;
   }).join(' ');
@@ -1512,19 +1511,19 @@ function renderDrugSpecialtyPillsHtml(drug) {
   const pills = [];
 
   if (p.isOnco) {
-    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 transition shadow-2xs" title="محاسبه‌گر مساحت سطح بدن (BSA) درون این دارو"><span class="icon-3d icon-3d-indigo w-4 h-4"><i data-lucide="dna" class="w-2.5 h-2.5"></i></span> <span>شیمی‌درمانی (BSA)</span></button>`);
+    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 transition shadow-2xs" title="محاسبه‌گر مساحت سطح بدن (BSA) درون این دارو"><img src="assets/icons_3d/dna.png" class="w-4 h-4 object-contain inline-block align-middle"> <span>شیمی‌درمانی (BSA)</span></button>`);
   }
   if (p.isAnesthCri) {
-    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-teal-50 text-teal-800 border border-teal-200 hover:bg-teal-100 transition shadow-2xs" title="موتور محاسباتی CRI درون این دارو"><span class="icon-3d icon-3d-cyan w-4 h-4"><i data-lucide="syringe" class="w-2.5 h-2.5"></i></span> <span>انفوزیون CRI</span></button>`);
+    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-teal-50 text-teal-800 border border-teal-200 hover:bg-teal-100 transition shadow-2xs" title="موتور محاسباتی CRI درون این دارو"><img src="assets/icons_3d/syringe.png" class="w-4 h-4 object-contain inline-block align-middle"> <span>انفوزیون CRI</span></button>`);
   }
   if (p.isOpht) {
-    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-cyan-50 text-cyan-800 border border-cyan-200 hover:bg-cyan-100 transition shadow-2xs" title="بررسی خروجی برهم‌کنش قطره‌ها درون این دارو"><span class="icon-3d icon-3d-blue w-4 h-4"><i data-lucide="eye" class="w-2.5 h-2.5"></i></span> <span>قطره‌های چشمی</span></button>`);
+    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-cyan-50 text-cyan-800 border border-cyan-200 hover:bg-cyan-100 transition shadow-2xs" title="بررسی خروجی برهم‌کنش قطره‌ها درون این دارو"><img src="assets/icons_3d/eye.png" class="w-4 h-4 object-contain inline-block align-middle"> <span>قطره‌های چشمی</span></button>`);
   }
   if (p.isIcu) {
-    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-red-50 text-red-800 border border-red-200 hover:bg-red-100 transition shadow-2xs" title="پروتکل احیا و مراقبت ویژه ICU درون این دارو"><span class="icon-3d icon-3d-rose w-4 h-4"><i data-lucide="heart-pulse" class="w-2.5 h-2.5"></i></span> <span>مراقبت ویژه ICU</span></button>`);
+    pills.push(`<button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" class="no-card-toggle inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-lg bg-red-50 text-red-800 border border-red-200 hover:bg-red-100 transition shadow-2xs" title="پروتکل احیا و مراقبت ویژه ICU درون این دارو"><img src="assets/icons_3d/heart.png" class="w-4 h-4 object-contain inline-block align-middle"> <span>مراقبت ویژه ICU</span></button>`);
   }
   if (p.isCamelidFatal) {
-    pills.push(`<span class="inline-flex items-center gap-1 text-[10px] font-black px-2 py-0.5 rounded-lg bg-rose-100 text-rose-950 border border-rose-300"><span class="icon-3d icon-3d-rose w-4 h-4"><i data-lucide="skull" class="w-2.5 h-2.5"></i></span> <span>منع در شترسانان</span></span>`);
+    pills.push(`<span class="inline-flex items-center gap-1 text-[10px] font-black px-2 py-0.5 rounded-lg bg-rose-100 text-rose-950 border border-rose-300"><img src="assets/icons_3d/skull.png" class="w-4 h-4 object-contain inline-block align-middle"> <span>منع در شترسانان</span></span>`);
   }
 
   return pills.length > 0 ? `<div class="flex items-center gap-1.5 flex-wrap my-1.5">${pills.join(' ')}</div>` : '';
@@ -1536,28 +1535,28 @@ function renderDrugSpecialtyCardButtonHtml(drug) {
   if (p.isOnco) {
     return `
       <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-rose-50 hover:bg-rose-100 active:scale-95 text-rose-900 border border-rose-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده ماشین‌حساب انکولوژی درون این دارو">
-        <span class="icon-3d icon-3d-indigo w-4 h-4"><i data-lucide="dna" class="w-2.5 h-2.5"></i></span> <span>انکولوژی</span>
+        <img src="assets/icons_3d/dna.png" class="w-3.5 h-3.5 object-contain inline-block"> <span>انکولوژی</span>
       </button>
     `;
   }
   if (p.isAnesthCri) {
     return `
       <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-teal-50 hover:bg-teal-100 active:scale-95 text-teal-900 border border-teal-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده موتور CRI درون این دارو">
-        <span class="icon-3d icon-3d-cyan w-4 h-4"><i data-lucide="syringe" class="w-2.5 h-2.5"></i></span> <span>CRI</span>
+        <img src="assets/icons_3d/syringe.png" class="w-3.5 h-3.5 object-contain inline-block"> <span>CRI</span>
       </button>
     `;
   }
   if (p.isOpht) {
     return `
       <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-cyan-50 hover:bg-cyan-100 active:scale-95 text-cyan-900 border border-cyan-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="بررسی خروجی قطره‌ها درون این دارو">
-        <span class="icon-3d icon-3d-blue w-4 h-4"><i data-lucide="eye" class="w-2.5 h-2.5"></i></span> <span>قطره‌ها</span>
+        <img src="assets/icons_3d/eye.png" class="w-3.5 h-3.5 object-contain inline-block"> <span>قطره‌ها</span>
       </button>
     `;
   }
   if (p.isIcu) {
     return `
       <button type="button" onclick="toggleDrugSpecialtySection('${drug.id}')" id="btn_specialty_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-red-50 hover:bg-red-100 active:scale-95 text-red-900 border border-red-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="پروتکل احیا و مراقبت ویژه ICU درون این دارو">
-        <span class="icon-3d icon-3d-rose w-4 h-4"><i data-lucide="heart-pulse" class="w-2.5 h-2.5"></i></span> <span>ICU</span>
+        <img src="assets/icons_3d/heart.png" class="w-3.5 h-3.5 object-contain inline-block"> <span>ICU</span>
       </button>
     `;
   }
@@ -2207,8 +2206,8 @@ function renderSingleDrugCardHtml(drug) {
             <div class="flex items-center gap-1.5 shrink-0 no-card-toggle">
               <button type="button" onclick="toggleFavoriteDrug('${drug.id}', event)" class="p-1 rounded-xl hover:bg-amber-50 transition" title="نشان کردن در علاقه‌مندی‌ها">
                 ${isFavoriteDrug(drug.id) 
-                  ? '<span class="icon-3d icon-3d-amber w-6 h-6 inline-flex"><i data-lucide="star" class="w-3.5 h-3.5 fill-[#FFB140] text-[#FFB140]"></i></span>' 
-                  : '<span class="w-6 h-6 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 inline-flex items-center justify-center text-slate-400 transition"><i data-lucide="star" class="w-3.5 h-3.5"></i></span>'}
+                  ? '<img src="assets/icons_3d/star.png" alt="نشان شده" class="w-5 h-5 object-contain drop-shadow transition-transform hover:scale-125">' 
+                  : '<img src="assets/icons_3d/star_plain.png" alt="نشان نشده" class="w-5 h-5 object-contain opacity-35 hover:opacity-100 transition-opacity">'}
               </button>
             </div>
           </div>
