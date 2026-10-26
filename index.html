@@ -12,7 +12,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Custom Style -->
-  <link rel="stylesheet" href="style.css?v=3.9.8">
+  <link rel="stylesheet" href="style.css?v=3.9.9">
 
   <!-- PWA Manifest & Theme Color -->
   <link rel="manifest" href="manifest.json">
@@ -236,9 +236,9 @@
             <i data-lucide="activity" class="w-4 h-4 text-teal-400 shrink-0"></i>
             <span class="text-white font-bold text-xs">بیهوشی و سدیشن</span>
           </button>
-          <button onclick="closeClinicalSidebar(); openCategoriesSidebar();" class="p-2.5 rounded-xl bg-[#0590D5]/25 hover:bg-[#0590D5]/45 border border-[#00CAE0]/50 flex items-center gap-2 text-right transition cursor-pointer">
-            <i data-lucide="layers" class="w-4 h-4 text-[#00CAE0] shrink-0"></i>
-            <span class="text-[#00CAE0] font-bold text-xs">سایدبار ۱۶ رده ↗</span>
+          <button onclick="closeClinicalSidebar(); filterByQuickTag('gi');" class="p-2.5 rounded-xl bg-[#17285E]/70 hover:bg-[#214595] border border-cyan-500/30 flex items-center gap-2 text-right transition cursor-pointer">
+            <i data-lucide="shield" class="w-4 h-4 text-cyan-300 shrink-0"></i>
+            <span class="text-white font-bold text-xs">گوارش و ضدتهوع</span>
           </button>
         </div>
       </div>
@@ -250,17 +250,6 @@
           <span>اورژانس، شوک و مراقبت‌های ویژه (ICU):</span>
         </div>
         <div class="space-y-1.5">
-          <button onclick="closeClinicalSidebar(); openCprModal();" class="w-full p-2.5 rounded-xl bg-[#17285E]/80 hover:bg-[#214595] border border-[#FF084B]/40 flex items-center justify-between transition cursor-pointer text-right group">
-            <div class="flex items-center gap-2.5">
-              <div class="w-7 h-7 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0"><i data-lucide="heart-pulse" class="w-4 h-4 cpr-pulse"></i></div>
-              <div>
-                <span class="font-bold text-white block">احیا و CPR (راهنمای RECOVER)</span>
-                <span class="text-[10px] text-[#ABB5CD]">دوزهای استاپ قلبی، تایمر و آدرنالین</span>
-              </div>
-            </div>
-            <i data-lucide="chevron-left" class="w-4 h-4 text-slate-400"></i>
-          </button>
-
           <button onclick="closeClinicalSidebar(); openSpecialtyProtocolsModal('critical_care_icu');" class="w-full p-2.5 rounded-xl bg-[#17285E]/60 hover:bg-[#214595] border border-[#D0D7E8]/20 flex items-center justify-between transition cursor-pointer text-right group">
             <div class="flex items-center gap-2.5">
               <div class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i data-lucide="alert-triangle" class="w-4 h-4"></i></div>
@@ -436,20 +425,21 @@
       <!-- گروه ۵: دانشنامه و اطلس جامع بالینی -->
       <div class="space-y-2 pt-1 border-t border-[#0590D5]/20">
         <div class="flex items-center gap-2 text-[11px] font-black text-[#FFB140]">
-          <i data-lucide="layers" class="w-4 h-4 text-amber-400"></i>
-          <span>دانشنامه و اطلس جامع بالینی:</span>
+          <i data-lucide="book-open" class="w-4 h-4 text-amber-400"></i>
+          <span>دانشنامه و اطلس ۱۶ رده دارویی:</span>
         </div>
-        <div class="grid grid-cols-2 gap-2">
-          <button onclick="closeClinicalSidebar(); openChaptersRoadmapModal();" class="p-2.5 rounded-xl bg-[#17285E]/60 hover:bg-[#214595] border border-[#FFB140]/30 flex flex-col items-center justify-center gap-1.5 text-center transition cursor-pointer group">
-            <i data-lucide="layers" class="w-6 h-6 text-amber-400"></i>
-            <span class="font-bold text-white text-[11px]">اطلس رده‌های دارویی</span>
-          </button>
-
-          <button onclick="closeClinicalSidebar(); openCategoriesSidebar();" class="p-2.5 rounded-xl bg-[#17285E]/60 hover:bg-[#214595] border border-[#00CAE0]/30 flex flex-col items-center justify-center gap-1.5 text-center transition cursor-pointer group">
-            <i data-lucide="layers" class="w-6 h-6 text-cyan-400"></i>
-            <span class="font-bold text-white text-[11px]">سایدبار رده‌های درمانی</span>
-          </button>
-        </div>
+        <button onclick="closeClinicalSidebar(); openChaptersRoadmapModal();" class="w-full p-2.5 rounded-xl bg-[#17285E]/60 hover:bg-[#214595] border border-[#FFB140]/30 flex items-center justify-between transition cursor-pointer text-right group">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+              <i data-lucide="layers" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="font-bold text-white block">نقشه راه و اطلس ۱۶ رده فارماکولوژی</span>
+              <span class="text-[10px] text-[#ABB5CD]">مرور ساختار درمانی تمام فصول دارونامه</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-slate-400"></i>
+        </button>
       </div>
 
     </div>
@@ -4315,7 +4305,7 @@ id="interactionsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-ov
   <script src="data/pharmacology_depth.js?v=3.5.0"></script>
   <script src="data/specialty_protocols.js?v=3.5.0"></script>
   <script src="data/clinical_vault.js?v=3.8.0"></script>
-  <script src="app.js?v=3.9.8"></script>
+  <script src="app.js?v=3.9.9"></script>
 
   <!-- نوار ناوبری شناور شیشه‌ای در موبایل (Google Stitch Mobile Dock) -->
   <nav id="mobileBottomDock" class="stitch-floating-dock sm:hidden">

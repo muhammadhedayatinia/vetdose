@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین وت‌دوز (VetDose PWA Offline Engine)
- * نسخه ۳.۹.۸ - منوی دائمی سمت راست (Permanent Right Clinical Sidebar) و نوار بالای خلوت
+ * نسخه ۳.۹.۹ - بهینه‌سازی و حذف موارد تکراری سایدبار سمت راست
  */
-const CACHE_NAME = 'vetdose-cache-v3.9.8-permanent-right-sidebar';
+const CACHE_NAME = 'vetdose-cache-v3.9.9-cleaned-sidebar';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
