@@ -2762,18 +2762,39 @@ function quickCalculateForDrug(drugId) {
   if (!drug) return;
 
   const profile = getDrugSpecialtyProfile(drug);
+  const isBsaDrug = profile.isOnco || (drug.quick_dose && (drug.quick_dose.includes('m²') || drug.quick_dose.includes('m2')));
 
   openCalculatorModal();
 
-  if (profile.isOnco) {
-    switchCalcTab('oncology');
-    const select = document.getElementById('oncoDrugPresetSelect');
-    if (select && select.querySelector(`option[value="${drug.id}"]`)) {
-      select.value = drug.id;
-      onOncologyPresetChange();
-    } else {
-      runOncologyBsaCalculation();
+  // اگر داروی انکولوژی یا بر پایه سطح بدن باشد، مستقیماً ماشین‌حساب دوز را در حالت BSA قرار می‌دهیم
+  if (isBsaDrug) {
+    switchCalcTab('dose');
+    setUniversalDoseBasis('bsa', false);
+    const drugNameInput = document.getElementById('univDrugName');
+    if (drugNameInput) drugNameInput.value = `${drug.generic_name_fa} (${drug.generic_name_en || ''})`;
+
+    // استخراج هوشمند دوز عددی بر حسب mg/m²
+    let bsaRate = 20;
+    if (drug.id === 'doxorubicin') bsaRate = 30;
+    else if (drug.id === 'vincristine') bsaRate = 0.7;
+    else if (drug.id === 'cyclophosphamide') bsaRate = 250;
+    else if (drug.id === 'carboplatin') bsaRate = 300;
+    else if (drug.quick_dose) {
+      const match = drug.quick_dose.match(/([\d\.]+)\s*(?:mg\/m)/i);
+      if (match) bsaRate = parseFloat(match[1]);
     }
+    const rateInput = document.getElementById('univDoseRate');
+    if (rateInput) rateInput.value = bsaRate;
+
+    const concInput = document.getElementById('univConc');
+    if (concInput) {
+      if (drug.id === 'doxorubicin') concInput.value = 2.0;
+      else if (drug.id === 'vincristine') concInput.value = 1.0;
+      else if (drug.id === 'cyclophosphamide') concInput.value = 20.0;
+      else if (drug.id === 'carboplatin') concInput.value = 10.0;
+    }
+    runUniversalCalculation();
+    return;
   } else if (profile.isAnesthCri && ['lidocaine', 'ketamine', 'metoclopramide', 'propofol', 'fentanyl', 'dopamine', 'dobutamine'].includes(drug.id)) {
     switchCalcTab('cri');
     const select = document.getElementById('criPresetSelect');
@@ -3274,8 +3295,65 @@ function initUniversalCalculator() {
   const currentForm = formInput ? formInput.value || 'injectable' : 'injectable';
   setUniversalSpecies(currentSp, false);
   setUniversalFormRoute(currentForm, false);
-  populateUniversalDrugSelect();
+  const basisInput = document.getElementById('univDoseBasis');
+  const currentBasis = basisInput ? basisInput.value || 'weight' : 'weight';
+  setUniversalDoseBasis(currentBasis, false);
   runUniversalCalculation();
+}
+
+function setUniversalDoseBasis(basis, shouldCalc = true) {
+  const basisInput = document.getElementById('univDoseBasis');
+  if (basisInput) basisInput.value = basis;
+
+  const btnWeight = document.getElementById('btnBasis_weight');
+  const btnBsa = document.getElementById('btnBasis_bsa');
+  const bsaBadge = document.getElementById('univBsaBadge');
+  const rateLabel = document.getElementById('univDoseRateLabel');
+  const formRoute = document.getElementById('univFormRoute')?.value || 'injectable';
+
+  if (basis === 'bsa') {
+    if (btnBsa) {
+      btnBsa.className = 'basis-btn p-2.5 rounded-xl font-bold border-2 transition flex items-center justify-center gap-2 bg-[#0A2447] text-white border-[#0A2447] shadow-sm';
+    }
+    if (btnWeight) {
+      btnWeight.className = 'basis-btn p-2.5 rounded-xl font-bold border-2 transition flex items-center justify-center gap-2 bg-[#F4F6FC] text-[#404961] hover:bg-[#E9EDF7] border-[#D0D7E8]';
+    }
+    if (bsaBadge) bsaBadge.classList.remove('hidden');
+    if (rateLabel) rateLabel.textContent = 'دوز بر اساس سطح مقطع بدن (mg/m²):';
+  } else {
+    if (btnWeight) {
+      btnWeight.className = 'basis-btn p-2.5 rounded-xl font-bold border-2 transition flex items-center justify-center gap-2 bg-[#0A2447] text-white border-[#0A2447] shadow-sm';
+    }
+    if (btnBsa) {
+      btnBsa.className = 'basis-btn p-2.5 rounded-xl font-bold border-2 transition flex items-center justify-center gap-2 bg-[#F4F6FC] text-[#404961] hover:bg-[#E9EDF7] border-[#D0D7E8]';
+    }
+    if (bsaBadge) bsaBadge.classList.add('hidden');
+    if (rateLabel) {
+      if (formRoute === 'aquatic_powder') rateLabel.textContent = 'دوز حمام یا آب (ppm یا mg/L):';
+      else rateLabel.textContent = 'دوز هدف (mg/kg):';
+    }
+  }
+
+  updateUniversalBsaDisplay();
+  if (shouldCalc) runUniversalCalculation();
+}
+
+function updateUniversalBsaDisplay() {
+  const weightInput = document.getElementById('univWeight');
+  const spInput = document.getElementById('univSpecies');
+  const bsaValEl = document.getElementById('univBsaValue');
+  if (!weightInput || !bsaValEl) return;
+
+  const weight = parseFloat(weightInput.value) || 0;
+  const species = spInput ? spInput.value : 'canine';
+
+  let bsa = 0;
+  if (weight > 0) {
+    const weightInGrams = weight * 1000.0;
+    const kFactor = (species === 'canine') ? 10.1 : 10.0;
+    bsa = (kFactor * Math.pow(weightInGrams, 2.0 / 3.0)) / 10000.0;
+  }
+  bsaValEl.textContent = bsa.toFixed(2);
 }
 
 function setUniversalSpecies(sp, shouldCalc = true) {
@@ -3292,6 +3370,7 @@ function setUniversalSpecies(sp, shouldCalc = true) {
     activeBtn.classList.add('bg-slate-900', 'text-white', 'border-slate-900');
   }
 
+  updateUniversalBsaDisplay();
   populateUniversalDrugSelect();
   if (shouldCalc) runUniversalCalculation();
 }
@@ -3462,6 +3541,8 @@ function runUniversalCalculation() {
   const bottleInput = document.getElementById('univBottleMl');
   const formInput = document.getElementById('univFormRoute');
   const spInput = document.getElementById('univSpecies');
+  const basisInput = document.getElementById('univDoseBasis');
+  const drugNameInput = document.getElementById('univDrugName');
   const select = document.getElementById('univDrugSelect');
 
   const weight = parseFloat(weightInput ? weightInput.value : 0) || 0;
@@ -3472,7 +3553,10 @@ function runUniversalCalculation() {
   const bottleMl = parseFloat(bottleInput ? bottleInput.value : 100) || 100;
   const formRoute = formInput ? formInput.value : 'injectable';
   const species = spInput ? spInput.value : 'canine';
-  const drugId = select ? select.value : '';
+  const doseBasis = basisInput ? basisInput.value : 'weight';
+  const drugId = (drugNameInput && drugNameInput.value.trim()) ? drugNameInput.value.trim() : (select ? select.value : '');
+
+  updateUniversalBsaDisplay();
 
   const calcFn = (typeof calculateUniversalDoseDispensing === 'function') 
     ? calculateUniversalDoseDispensing 
@@ -3489,11 +3573,18 @@ function runUniversalCalculation() {
     interval,
     days,
     bottleMl,
-    drugId
+    drugId,
+    doseBasis
   });
 
   const doseMgEl = document.getElementById('univDoseMgRes');
-  if (doseMgEl) doseMgEl.textContent = `${res.mgPerDose} mg`;
+  if (doseMgEl) {
+    if (doseBasis === 'bsa') {
+      doseMgEl.innerHTML = `${res.mgPerDose} mg <span class="text-[10px] text-[#0070A8] font-black mr-1">(BSA: ${res.bsa} m²)</span>`;
+    } else {
+      doseMgEl.textContent = `${res.mgPerDose} mg`;
+    }
+  }
 
   const volEl = document.getElementById('univVolRes');
   if (volEl) {

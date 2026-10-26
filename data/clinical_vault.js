@@ -614,11 +614,28 @@ function calculateUniversalDoseDispensing(params) {
   const days = parseInt(params.days) || 1;
   const bottleMl = parseFloat(params.bottleMl) || 100;
   const drugId = params.drugId || '';
+  const doseBasis = params.doseBasis || 'weight'; // 'weight' (mg/kg) یا 'bsa' (mg/m²)
+
+  // محاسبه دقیق مساحت سطح بدن (BSA) بر اساس فرمول استاندارد میه (Meeh's formula)
+  let bsa = 0;
+  if (weight > 0) {
+    const weightInGrams = weight * 1000.0;
+    const kFactor = (species === 'canine') ? 10.1 : 10.0;
+    bsa = (kFactor * Math.pow(weightInGrams, 2.0 / 3.0)) / 10000.0;
+  }
 
   // ۱. محاسبه دوز تام هر وعده بر حسب میلی‌گرم
-  let mgPerDose = weight * rate;
-  if (params.doseUnit === 'mcg/kg') {
-    mgPerDose = (weight * rate) / 1000.0;
+  let mgPerDose = 0;
+  if (doseBasis === 'bsa') {
+    mgPerDose = bsa * rate; // دوز بر اساس میلی‌گرم بر متر مربع سطح مقطع بدن (mg/m²)
+    if (params.doseUnit === 'mcg/m2') {
+      mgPerDose = (bsa * rate) / 1000.0;
+    }
+  } else {
+    mgPerDose = weight * rate; // دوز بر اساس میلی‌گرم بر کیلوگرم وزن (mg/kg)
+    if (params.doseUnit === 'mcg/kg') {
+      mgPerDose = (weight * rate) / 1000.0;
+    }
   }
 
   // ۲. محاسبه حجم یا کسر قرص در هر وعده
@@ -734,8 +751,13 @@ function calculateUniversalDoseDispensing(params) {
     totalDosesCount,
     totalDispenseText,
     rxLabel,
-    safetyAlert,
-    intervalLabelFa
+    safetyAlert: doseBasis === 'bsa' 
+      ? (safetyAlert ? safetyAlert + ' | ⚠️ پروتکل انکولوژی (BSA): تزریق دقیق با کاتتر وریدی سالم جهت پیشگیری از اکستراوازیشن.' : '⚠️ داروی شیمی‌درمانی/انکولوژی بر پایه مساحت سطح بدن (BSA): استفاده از دستکش دوبل، ماسک محافظ و تزریق با کاتتر وریدی سالم الزامی است.') 
+      : safetyAlert,
+    intervalLabelFa,
+    bsa: bsa.toFixed(2),
+    bsaExact: bsa.toFixed(3),
+    doseBasis
   };
 }
 
