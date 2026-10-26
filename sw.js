@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین وت‌دوز (VetDose PWA Offline Engine)
- * نسخه ۳.۹.۷ - سایدبار کشویی رده‌های درمانی سمت چپ (مشابه VetCalculators)
+ * نسخه ۳.۹.۸ - منوی دائمی سمت راست (Permanent Right Clinical Sidebar) و نوار بالای خلوت
  */
-const CACHE_NAME = 'vetdose-cache-v3.9.7-left-categories-drawer';
+const CACHE_NAME = 'vetdose-cache-v3.9.8-permanent-right-sidebar';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

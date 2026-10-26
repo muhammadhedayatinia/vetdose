@@ -12,7 +12,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Custom Style -->
-  <link rel="stylesheet" href="style.css?v=3.9.7">
+  <link rel="stylesheet" href="style.css?v=3.9.8">
 
   <!-- PWA Manifest & Theme Color -->
   <link rel="manifest" href="manifest.json">
@@ -22,69 +22,56 @@
 </head>
 <body class="bg-[#F4F6FC] min-h-screen text-[#293040] pb-16">
 
-  <!-- هدر اصلی نرم‌افزار -->
-  <header class="bg-[#0A2447] text-white shadow-xl sticky top-0 z-30 border-b border-[#0590D5]/25">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between gap-3">
-      
-      <!-- برند و عنوان با آیکون سه‌بعدی دست‌ساز بالینی -->
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl bg-[#031227] border border-[#00CAE0]/30 flex items-center justify-center shadow-lg shrink-0">
-          <i data-lucide="stethoscope" class="w-6 h-6 text-[#00CAE0]"></i>
-        </div>
-        <div>
-          <div class="flex items-center gap-2">
-            <h1 class="text-xl font-black tracking-tight text-white flex items-center gap-1.5">
-              <span>وت‌دوز</span>
-              <span class="text-sm font-mono text-[#00CAE0] font-black tracking-wider">VetDose</span>
-            </h1>
-            <span class="text-[11px] bg-[#00CAE0]/15 text-[#00CAE0] border border-[#00CAE0]/30 px-2.5 py-0.5 rounded-full font-bold">سامانه تصمیم‌یار بالینی دامپزشکی</span>
+  <!-- =======================================================
+       ساختار صفحه با منوی دائمی سمت راست (SaaS Dashboard Medical Layout)
+       ======================================================= -->
+  <div id="mainContentWrapper" class="lg:mr-72 min-h-screen flex flex-col transition-all duration-300">
+
+    <!-- هدر اصلی نرم‌افزار (کاملاً خلوت، آرامش‌بخش و شیک) -->
+    <header class="bg-[#0A2447] text-white shadow-md sticky top-0 z-20 border-b border-[#0590D5]/20">
+      <div class="px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-3">
+        
+        <!-- سمت راست: دکمه منوی موبایل + عنوان سامانه -->
+        <div class="flex items-center gap-3">
+          <!-- دکمه همبرگری فقط در موبایل و تبلت (در دسکتاپ منوی سمت راست دائمی پین شده است) -->
+          <button onclick="openClinicalSidebar()" class="lg:hidden w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 flex items-center justify-center border border-slate-700 transition cursor-pointer" title="منوی ابزارهای بالینی">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-[#031227] border border-[#00CAE0]/30 flex items-center justify-center shadow-md shrink-0">
+              <i data-lucide="stethoscope" class="w-5 h-5 text-[#00CAE0]"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h1 class="text-base sm:text-lg font-black tracking-tight text-white flex items-center gap-1.5">
+                  <span>وت‌دوز</span>
+                  <span class="text-xs font-mono text-[#00CAE0] font-black tracking-wider">VetDose</span>
+                </h1>
+                <span class="text-[10px] bg-[#00CAE0]/15 text-[#00CAE0] border border-[#00CAE0]/30 px-2 py-0.5 rounded-full font-bold hidden sm:inline">تصمیم‌یار بالینی</span>
+              </div>
+              <p class="text-[11px] text-[#ABB5CD] hidden md:block">دارونامه جامع و سامانه تصمیم‌یار بالینی دامپزشکی ایران</p>
+            </div>
           </div>
-          <p class="text-[11px] text-[#ABB5CD] hidden sm:block">دارونامه جامع و سامانه تصمیم‌یار بالینی دامپزشکی ایران</p>
         </div>
+
+        <!-- سمت چپ هدر (خلوت و بدون دکمه‌های شلوغ) -->
+        <div class="flex items-center gap-2.5">
+          <span class="text-[11px] bg-[#00CAE0]/15 text-[#00CAE0] border border-[#00CAE0]/30 px-3 py-1 rounded-full font-bold hidden sm:inline-flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>نسخه آفلاین و آنلاین فعال</span>
+          </span>
+
+          <!-- دکمه سایدبار رده‌های درمانی (سمت چپ) -->
+          <button onclick="openCategoriesSidebar()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#17285E] hover:bg-[#214595] text-white text-xs font-bold border border-[#0590D5]/35 transition cursor-pointer" title="گشودن سایدبار رده‌های درمانی">
+            <i data-lucide="layers" class="w-4 h-4 text-cyan-300"></i>
+            <span>رده‌های درمانی</span>
+            <span class="text-[10px] bg-cyan-400 text-slate-950 px-1.5 py-0.2 rounded-full font-mono font-black">16</span>
+          </button>
+        </div>
+
       </div>
-
-      <!-- ابزارهای اصلی و خلوت بالای صفحه (وکتورهای شارپ و مینیمال بالینی) -->
-      <div class="flex items-center gap-2 sm:gap-2.5">
-        <!-- دکمه سایدبار رده‌های درمانی سمت چپ -->
-        <button onclick="openCategoriesSidebar()" class="flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-[#17285E] hover:bg-[#214595] text-white text-xs sm:text-sm font-bold border border-[#0590D5]/40 shadow-xs transition cursor-pointer" title="گشودن سایدبار رده‌های درمانی و دارویی (۱۶ رده)">
-          <i data-lucide="layers" class="w-4 h-4 text-cyan-300"></i>
-          <span class="hidden md:inline">رده‌های درمانی</span>
-          <span class="md:hidden">رده‌ها</span>
-          <span class="text-[10px] bg-cyan-400 text-slate-950 px-1.5 py-0.2 rounded-full font-mono font-black">16</span>
-        </button>
-
-        <!-- دکمه ماشین‌حساب دوز -->
-        <button onclick="openCalculatorWithTab('dose')" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0590D5] hover:bg-[#0070A8] text-white text-xs sm:text-sm font-bold border border-[#00CAE0]/30 shadow-xs transition cursor-pointer">
-          <i data-lucide="calculator" class="w-4 h-4 text-cyan-200"></i>
-          <span class="hidden sm:inline">ماشین‌حساب دوز</span>
-          <span class="sm:hidden">دوز</span>
-        </button>
-
-        <!-- دکمه چکر تداخلات -->
-        <button onclick="openInteractionsModal()" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#17285E] hover:bg-[#214595] text-white text-xs sm:text-sm font-bold border border-[#0590D5]/35 transition cursor-pointer">
-          <i data-lucide="shield-alert" class="w-4 h-4 text-amber-300"></i>
-          <span class="hidden sm:inline">چکر تداخلات</span>
-          <span class="sm:hidden">تداخلات</span>
-        </button>
-
-        <!-- دکمه اورژانس و احیا CPR -->
-        <button onclick="openCprModal()" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#FF084B] hover:bg-[#CC0946] text-white text-xs sm:text-sm font-bold shadow-xs transition cursor-pointer">
-          <i data-lucide="activity" class="w-4 h-4 text-rose-200"></i>
-          <span class="hidden sm:inline">اورژانس CPR</span>
-          <span class="sm:hidden">CPR</span>
-        </button>
-
-        <!-- دکمه منوی حاشیه‌ای ابزارها و میانبرها -->
-        <button onclick="openClinicalSidebar()" class="flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-white border border-slate-700 text-xs sm:text-sm font-bold transition cursor-pointer" title="گشودن نوار حاشیه ابزارها و میانبرهای بالینی">
-          <i data-lucide="layout-grid" class="w-4 h-4 text-cyan-400"></i>
-          <span class="hidden md:inline">ابزارها و میانبرها</span>
-          <span class="md:hidden">ابزارها</span>
-          <span class="text-[10px] bg-cyan-400 text-slate-950 px-1.5 py-0.2 rounded-full font-mono font-black">12</span>
-        </button>
-      </div>
-
-    </div>
-  </header>
+    </header>
 
   <!-- =======================================================
        سایدبار کشویی رده‌های درمانی سمت چپ (Left Categories Drawer)
@@ -138,28 +125,86 @@
   </aside>
 
   <!-- =======================================================
-       نوار حاشیه‌ای ابزارهای بالینی (Clinical Side Drawer)
-       طراحی شده بر اساس ساختار ناوبری حاشیه‌ای VetCalculators
+       منوی دائمی سمت راست (Permanent Right Clinical Navigation Sidebar)
+       در دسکتاپ به صورت دائمی در سمت راست صفحه پین شده و در موبایل به صورت کشویی باز می‌شود
        ======================================================= -->
-  <div id="clinicalSidebarBackdrop" onclick="closeClinicalSidebar()" class="fixed inset-0 z-50 bg-[#031227]/75 backdrop-blur-sm opacity-0 invisible pointer-events-none transition-all duration-300"></div>
+  <div id="clinicalSidebarBackdrop" onclick="closeClinicalSidebar()" class="fixed inset-0 z-30 bg-[#031227]/75 backdrop-blur-sm opacity-0 invisible lg:hidden transition-all duration-300"></div>
 
-  <aside id="clinicalSidebarDrawer" class="fixed inset-y-0 right-0 z-50 w-full sm:w-96 max-w-[90vw] bg-[#0A2447] text-white shadow-2xl border-l border-[#00CAE0]/30 flex flex-col transform translate-x-full transition-transform duration-300 ease-out overflow-hidden">
-    <!-- هدر نوار حاشیه -->
-    <div class="p-4 bg-[#031227] border-b border-[#0590D5]/25 flex items-center justify-between">
+  <aside id="clinicalSidebarDrawer" class="fixed inset-y-0 right-0 z-40 w-72 bg-[#0A2447] text-white shadow-2xl border-l border-[#00CAE0]/20 flex flex-col transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-out overflow-hidden">
+    <!-- هدر منوی سمت راست -->
+    <div class="p-3.5 bg-[#031227] border-b border-[#0590D5]/25 flex items-center justify-between shrink-0">
       <div class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center"><i data-lucide="layout-grid" class="w-5 h-5"></i></div>
+        <div class="w-8 h-8 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0">
+          <i data-lucide="layout-grid" class="w-4 h-4"></i>
+        </div>
         <div>
-          <h3 class="text-sm font-black text-white">ابزارها و میانبرهای بالینی</h3>
-          <p class="text-[11px] text-[#ABB5CD]">میانبرها، ابزارها و ۱۲ پروتکل مرجع بالینی</p>
+          <h3 class="text-xs sm:text-sm font-black text-white">منوی ابزارها و تصمیم‌یارها</h3>
+          <p class="text-[10px] text-[#ABB5CD]">دسته‌بندی دائمی ابزارها و پروتکل‌ها</p>
         </div>
       </div>
-      <button onclick="closeClinicalSidebar()" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 text-[#ABB5CD] hover:text-white flex items-center justify-center transition cursor-pointer">
+      <!-- دکمه بستن فقط در موبایل -->
+      <button onclick="closeClinicalSidebar()" class="lg:hidden w-7 h-7 rounded-lg bg-white/10 hover:bg-white/20 text-[#ABB5CD] hover:text-white flex items-center justify-center transition cursor-pointer">
         <i data-lucide="x" class="w-4 h-4"></i>
       </button>
     </div>
 
-    <!-- بدنه اسکرول‌خور نوار حاشیه -->
-    <div class="flex-1 overflow-y-auto p-4 space-y-5 text-xs">
+    <!-- بدنه اسکرول‌خور منوی سمت راست -->
+    <div class="flex-1 overflow-y-auto p-3 space-y-4 text-xs scrollbar-thin">
+      
+      <!-- ۱. ابزارهای کلیدی و اورژانس (Core Action Tools) -->
+      <div class="space-y-1.5 pb-3 border-b border-[#0590D5]/20">
+        <button onclick="closeClinicalSidebar(); openCprModal();" class="w-full p-2.5 rounded-xl bg-gradient-to-r from-[#FF084B] to-[#C9073A] hover:brightness-110 text-white border border-rose-400/40 flex items-center justify-between transition cursor-pointer text-right shadow-sm group">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-white/20 text-white flex items-center justify-center shrink-0">
+              <i data-lucide="activity" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="font-black text-white text-xs block">اورژانس و احیا CPR</span>
+              <span class="text-[10px] text-rose-100">راهنمای RECOVER و دوزهای استاپ</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-white/70"></i>
+        </button>
+
+        <button onclick="closeClinicalSidebar(); openCalculatorWithTab('dose');" class="w-full p-2.5 rounded-xl bg-gradient-to-r from-[#0590D5] to-[#0070A8] hover:brightness-110 text-white border border-cyan-400/40 flex items-center justify-between transition cursor-pointer text-right shadow-sm group">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-white/20 text-white flex items-center justify-center shrink-0">
+              <i data-lucide="calculator" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="font-black text-white text-xs block">ماشین‌حساب دوز و سرنگ</span>
+              <span class="text-[10px] text-cyan-100">محاسبه بر اساس وزن و غلظت</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-white/70"></i>
+        </button>
+
+        <button onclick="closeClinicalSidebar(); openInteractionsModal();" class="w-full p-2.5 rounded-xl bg-[#17285E] hover:bg-[#214595] text-white border border-[#0590D5]/40 flex items-center justify-between transition cursor-pointer text-right shadow-xs group">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0">
+              <i data-lucide="shield-alert" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="font-black text-white text-xs block">چکر تداخلات دارویی</span>
+              <span class="text-[10px] text-slate-300">ماتریس تداخل ۲ تا ۵ دارو</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-slate-400"></i>
+        </button>
+
+        <button onclick="closeClinicalSidebar(); openCategoriesSidebar();" class="w-full p-2.5 rounded-xl bg-[#031227] hover:bg-[#071D3F] text-white border border-[#00CAE0]/30 flex items-center justify-between transition cursor-pointer text-right shadow-xs group">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-cyan-500/20 text-cyan-300 flex items-center justify-center shrink-0">
+              <i data-lucide="layers" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="font-black text-white text-xs block">رده‌های درمانی داروها</span>
+              <span class="text-[10px] text-cyan-200">سایدبار ۱۶ رده تخصصی</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-slate-400"></i>
+        </button>
+      </div>
       
       <!-- بخش صفر: میانبرهای بالینی داروها (Quick Clinical Category Shortcuts) -->
       <div class="space-y-2 pb-3 border-b border-[#0590D5]/20">
@@ -578,6 +623,8 @@
       <p class="text-xs text-slate-500 mt-1">املا یا فیلترهای انتخابی را تغییر دهید.</p>
     </div>
   </main>
+
+  </div> <!-- /#mainContentWrapper (پایان ساختار صفحه در کنار منوی دائمی راست) -->
 
   <!-- ============================================== -->
   <!-- MODAL: نمایش مونوگراف کامل دارو -->
@@ -4268,7 +4315,7 @@ id="interactionsModal" class="fixed inset-0 z-50 hidden overflow-y-auto modal-ov
   <script src="data/pharmacology_depth.js?v=3.5.0"></script>
   <script src="data/specialty_protocols.js?v=3.5.0"></script>
   <script src="data/clinical_vault.js?v=3.8.0"></script>
-  <script src="app.js?v=3.9.7"></script>
+  <script src="app.js?v=3.9.8"></script>
 
   <!-- نوار ناوبری شناور شیشه‌ای در موبایل (Google Stitch Mobile Dock) -->
   <nav id="mobileBottomDock" class="stitch-floating-dock sm:hidden">

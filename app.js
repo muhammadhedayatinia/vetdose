@@ -9,14 +9,17 @@ function openClinicalSidebar() {
   if (drawer && backdrop) {
     drawer.classList.add('open');
     drawer.classList.remove('translate-x-full');
-    backdrop.classList.add('open');
-    backdrop.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
-    document.body.style.overflow = 'hidden';
+    if (window.innerWidth < 1024) {
+      backdrop.classList.add('open');
+      backdrop.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+      document.body.style.overflow = 'hidden';
+    }
     if (window.lucide) lucide.createIcons();
   }
 }
 
 function closeClinicalSidebar() {
+  if (typeof window !== 'undefined' && window.innerWidth >= 1024) return;
   const drawer = document.getElementById('clinicalSidebarDrawer');
   const backdrop = document.getElementById('clinicalSidebarBackdrop');
   if (drawer && backdrop) {

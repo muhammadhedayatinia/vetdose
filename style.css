@@ -588,8 +588,13 @@ body {
    منوی حاشیه‌ای ابزارهای بالینی (Clinical Margin Side Drawer)
    به سبک ناوبری حاشیه‌ای VetCalculators
    ======================================================= */
+/* =======================================================
+   منوی دائمی سمت راست (Permanent Right Clinical Navigation Sidebar)
+   طراحی مدرن بالینی بر اساس استانداردهای نرم‌افزارهای دسکتاپ و VetCalculators
+   ======================================================= */
 #clinicalSidebarDrawer {
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  width: 18rem; /* 288px */
 }
 #clinicalSidebarDrawer.open {
   transform: translateX(0) !important;
@@ -601,6 +606,15 @@ body {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
+}
+
+@media (min-width: 1024px) {
+  #clinicalSidebarDrawer {
+    transform: translateX(0) !important;
+  }
+  #mainContentWrapper {
+    margin-right: 18rem !important; /* 288px */
+  }
 }
 
 /* =======================================================
