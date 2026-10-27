@@ -261,7 +261,7 @@ if (typeof document !== 'undefined') {
 }
 
 /**
- * لاجیک برنامه وت‌دوز (VetDose Veterinary Clinical Formulary & Decision Support Logic)
+ * لاجیک برنامه وت‌دوز (LibDose Veterinary Clinical Formulary (LibVet) & Decision Support Logic)
  */
 
 let currentCategory = 'all';
@@ -271,7 +271,7 @@ let searchQuery = '';
 let activeMonographDrug = null;
 let currentPatientWeight = 10; // پیش‌فرض وزن بیمار: ۱۰ کیلوگرم
 
-// فراداده جامع ۹ گونه جانوری در کارت بالینی وت‌دوز (VetDose)
+// فراداده جامع ۹ گونه جانوری در کارت بالینی لیب‌دوز (LibDose)
 const CARD_SPECIES_META = {
   canine: { key: 'canine', label: 'سگ', enLabel: 'Canine' },
   feline: { key: 'feline', label: 'گربه', enLabel: 'Feline' },
@@ -4756,7 +4756,7 @@ function renderPrescriptionSheet() {
 
     <!-- واترمارک و ارجاع سامانه -->
     <div class="text-center text-[10px] text-slate-400 pt-2 border-t border-slate-200 font-mono">
-      نسخه رسمی صادره توسط سامانه جامع دارونامه و تصمیم‌یار بالینی دامپزشکی وت‌دوز (VetDose) • شناسه اعتبارسنجی: ${serialNo}
+      نسخه رسمی صادره توسط سامانه جامع دارونامه و تصمیم‌یار بالینی دامپزشکی لیب‌دوز (LibDose) • شناسه اعتبارسنجی: ${serialNo}
     </div>
   `;
 
@@ -10684,7 +10684,7 @@ if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('sw.js?v=2.10.0').then((reg) => {
       reg.update();
-      console.log('✅ وت‌دوز (VetDose): سرویس ورکر PWA v3.0 با موفقیت به‌روزرسانی شد:', reg.scope);
+      console.log('✅ لیب‌دوز (LibDose): سرویس ورکر PWA v3.0 با موفقیت به‌روزرسانی شد:', reg.scope);
     }).catch((err) => {
       console.log('⚠️ خطا در ثبت سرویس ورکر PWA:', err);
     });
@@ -10993,7 +10993,7 @@ if (typeof window !== 'undefined') {
 
 
 // =================================================================
-// 👑 سامانه احراز هویت، عضویت بالینی و اشتراک تجاری وت‌دوز (VetDose ID & Commercial Engine)
+// 👑 سامانه احراز هویت، عضویت بالینی و اشتراک تجاری لیب‌دوز (LibDose ID & Commercial Engine)
 // =================================================================
 
 // کلیدهای ذخیره‌سازی محلی (Offline-First Local Storage Keys)
@@ -11112,7 +11112,7 @@ function handleUserRegister() {
   localStorage.setItem(VETDOSE_STORAGE.USER, JSON.stringify(user));
   closeAuthModal();
   updateAuthUI();
-  alert('تبریک! حساب کاربری شما با ۷ روز اشتراک طلایی رایگان وت‌دوز فعال گردید.');
+  alert('تبریک! حساب کاربری شما با ۷ روز اشتراک طلایی رایگان لیب‌دوز فعال گردید.');
 }
 
 function handleDemoQuickLogin() {
@@ -11258,7 +11258,7 @@ function selectSubscriptionPlan(planId, price, title) {
     titleEl.textContent = title;
     descEl.textContent = isSubscriptionDiscountActive 
       ? 'قیمت اصلی: ' + price.toLocaleString('fa-IR') + ' تومان (با احتساب ۳۰٪ تخفیف دانشجویی)' 
-      : 'دسترسی کامل و آنی به امکانات تجاری وت‌دوز';
+      : 'دسترسی کامل و آنی به امکانات تجاری لیب‌دوز';
     amountEl.textContent = finalPrice.toLocaleString('fa-IR') + ' تومان';
 
     paymentArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -11300,7 +11300,7 @@ function handleSimulatedOnlinePayment() {
         'کد رهگیری بانکی: ' + trackingCode + '\n' +
         'پلن فعال شده: ' + selectedPlanForPayment.title + '\n' +
         'اعتبار اشتراک: ' + user.daysLeft + ' روز دسترسی نامحدود.\n\n' +
-        'از اعتماد شما به سامانه دارونامه و تصمیم‌یار بالینی وت‌دوز سپاسگزاریم.');
+        'از اعتماد شما به سامانه دارونامه و تصمیم‌یار بالینی لیب‌دوز سپاسگزاریم.');
 }
 
 function handleCardToCardPayment() {
@@ -11310,7 +11310,7 @@ function handleCardToCardPayment() {
   }
   
   const msg = 'جهت واریز کارت به کارت:\n\n' +
-              'شماره کارت: ۶۲۱۹-۸۶۱۰-۳۳۴۴-۵۵۶۶ (بانک سامان - به نام وت‌دوز / دکتر محمدی)\n' +
+              'شماره کارت: ۶۲۱۹-۸۶۱۰-۳۳۴۴-۵۵۶۶ (بانک سامان - به نام لیب‌دوز / دکتر محمدی)\n' +
               'مبلغ قابل پرداخت: ' + selectedPlanForPayment.finalPrice.toLocaleString('fa-IR') + ' تومان\n\n' +
               'پس از واریز، تصویر فیش را به شماره تلگرام یا واتساپ 09120000000 ارسال فرمایید تا اشتراک شما ظرف کمتر از ۵ دقیقه فعال گردد.';
   alert(msg);
@@ -11427,7 +11427,7 @@ function saveCommunityPearls(pearls) {
 
 function toggleNewPearlForm() {
   if (!isUserVip()) {
-    showPaywallModal('ثبت تجربه بالینی در تالار همکاران', 'ثبت و انتشار مشاهدات بالینی مستلزم عضویت تاییدشده در جامعه بالین‌کاران وت‌دوز است.');
+    showPaywallModal('ثبت تجربه بالینی در تالار همکاران', 'ثبت و انتشار مشاهدات بالینی مستلزم عضویت تاییدشده در جامعه بالین‌کاران لیب‌دوز است.');
     return;
   }
   const container = document.getElementById('newPearlFormContainer');
@@ -11614,7 +11614,7 @@ function submitNewClinicalPearl() {
 
   toggleNewPearlForm();
   renderCommunityPearlsList();
-  alert('سپاسگزاریم! تجربه بالینی شما با موفقیت ثبت شد و به تالار اشتراک همکاران وت‌دوز افزوده گردید.');
+  alert('سپاسگزاریم! تجربه بالینی شما با موفقیت ثبت شد و به تالار اشتراک همکاران لیب‌دوز افزوده گردید.');
 }
 
 function upvoteClinicalPearl(pearlId) {
@@ -11690,7 +11690,7 @@ function submitClinicalFeedback() {
   if (msgInput) msgInput.value = '';
 
   closeFeedbackModal();
-  alert('بازخورد ارزشمند شما با شماره پیگیری ' + feedbackObj.id + ' ثبت گردید.\nتیم هیئت تحریریه و داروسازان بالینی وت‌دوز آن را به سرعت بررسی خواهند نمود.\nاز همراهی و دقت نظر شما صمیمانه سپاسگزاریم.');
+  alert('بازخورد ارزشمند شما با شماره پیگیری ' + feedbackObj.id + ' ثبت گردید.\nتیم هیئت تحریریه و داروسازان بالینی لیب‌دوز آن را به سرعت بررسی خواهند نمود.\nاز همراهی و دقت نظر شما صمیمانه سپاسگزاریم.');
 }
 
 
@@ -11750,7 +11750,7 @@ function isUserVip() {
   }
 }
 
-function showPaywallModal(title = 'دسترسی ویژه اعضای VIP وت‌دوز', subtitle = 'این قابلیت تشخیصی و محاسباتی نیازمند اشتراک بالینی است') {
+function showPaywallModal(title = 'دسترسی ویژه اعضای VIP لیب‌دوز', subtitle = 'این قابلیت تشخیصی و محاسباتی نیازمند اشتراک بالینی است') {
   closeAllModals();
   const modal = document.getElementById('paywallModal');
   const tEl = document.getElementById('paywallTitle');

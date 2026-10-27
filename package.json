@@ -1,7 +1,7 @@
 {
-  "name": "vetdose",
+  "name": "libdose",
   "version": "3.0.0",
-  "description": "VetDose - Iranian Veterinary Clinical Formulary & Decision Support System",
+  "description": "LibDose - Iranian Veterinary Clinical Formulary & Decision Support System (LibVet)",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
