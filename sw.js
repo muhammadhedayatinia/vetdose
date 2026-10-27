@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین لیب‌دوز (LibDose PWA Offline Engine - LibVet)
- * نسخه ۳.۱۲.۰ - قفل هوشمند دسترسی اعضای VIP و پلن‌های پرمیوم تجاری (Smart Paywall)
+ * نسخه ۳.۱۴.۰ - آیکون رسمی و نشان وکتوری LibDose (کانسپت برگزیده ۱)
  */
-const CACHE_NAME = 'libdose-cache-v3.13.0-rebrand';
+const CACHE_NAME = 'libdose-cache-v3.14.0-logo-applied';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
