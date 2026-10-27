@@ -15,7 +15,8 @@ function closeAllModals() {
     'prescriptionPrintModal',
     'authModal',
     'subscriptionModal',
-    'feedbackModal'
+    'feedbackModal',
+    'paywallModal'
   ];
   modalIds.forEach(id => {
     const el = document.getElementById(id);
@@ -8046,7 +8047,8 @@ function renderCocktailsList(filterKey = 'all') {
     return;
   }
 
-  container.innerHTML = filtered.map(item => {
+  container.innerHTML = filtered.map((item, index) => {
+    const isLockedForNonVip = (!isUserVip() && index >= 2);
     const isCompatible = item.mix_status === 'compatible';
     const statusPill = isCompatible ? `
       <span class="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
@@ -11424,6 +11426,10 @@ function saveCommunityPearls(pearls) {
 }
 
 function toggleNewPearlForm() {
+  if (!isUserVip()) {
+    showPaywallModal('ثبت تجربه بالینی در تالار همکاران', 'ثبت و انتشار مشاهدات بالینی مستلزم عضویت تاییدشده در جامعه بالین‌کاران وت‌دوز است.');
+    return;
+  }
   const container = document.getElementById('newPearlFormContainer');
   if (container) {
     container.classList.toggle('hidden');
@@ -11720,8 +11726,44 @@ if (typeof window !== 'undefined') {
   window.openFeedbackModal = openFeedbackModal;
   window.closeFeedbackModal = closeFeedbackModal;
   window.submitClinicalFeedback = submitClinicalFeedback;
+  window.isUserVip = isUserVip;
+  window.showPaywallModal = showPaywallModal;
+  window.closePaywallModal = closePaywallModal;
 
   window.addEventListener('DOMContentLoaded', () => {
     updateAuthUI();
   });
+}
+
+
+
+// =================================================================
+// 👑 قفل هوشمند دسترسی اعضای VIP و پلن‌های پرمیوم (Smart Paywall Engine)
+// =================================================================
+
+function isUserVip() {
+  try {
+    const user = getCurrentUser();
+    return !!(user && user.isVip);
+  } catch (e) {
+    return false;
+  }
+}
+
+function showPaywallModal(title = 'دسترسی ویژه اعضای VIP وت‌دوز', subtitle = 'این قابلیت تشخیصی و محاسباتی نیازمند اشتراک بالینی است') {
+  closeAllModals();
+  const modal = document.getElementById('paywallModal');
+  const tEl = document.getElementById('paywallTitle');
+  const sEl = document.getElementById('paywallSubtitle');
+  if (tEl) tEl.textContent = title;
+  if (sEl) sEl.textContent = subtitle;
+  if (modal) {
+    modal.classList.remove('hidden');
+    safeCreateIcons();
+  }
+}
+
+function closePaywallModal() {
+  const modal = document.getElementById('paywallModal');
+  if (modal) modal.classList.add('hidden');
 }

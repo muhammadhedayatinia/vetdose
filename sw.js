@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین وت‌دوز (VetDose PWA Offline Engine)
- * نسخه ۳.۱۱.۰ - سیستم اشتراک تجاری VIP، ثبت‌نام اعضا، تالار تجارب بالینی در تداخلات و ثبت انتقادات
+ * نسخه ۳.۱۲.۰ - قفل هوشمند دسترسی اعضای VIP و پلن‌های پرمیوم تجاری (Smart Paywall)
  */
-const CACHE_NAME = 'vetdose-cache-v3.11.0-commercial-auth-pearls';
+const CACHE_NAME = 'vetdose-cache-v3.12.0-smart-paywall';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
