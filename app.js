@@ -2600,33 +2600,33 @@ function renderSingleDrugCardHtml(drug) {
   const speciesIconsPreview = getSpeciesIconsPreviewHtml(drug);
 
   return `
-    <div id="card_${drug.id}" class="drug-card bg-white rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 border ${isExpanded ? 'border-[#0590D5] shadow-md ring-2 ring-[#00CAE0]/20' : 'border-[#D0D7E8] shadow-2xs hover:border-[#0590D5] hover:shadow-sm'} transition-all duration-200 flex flex-col justify-between">
+    <div id="card_${drug.id}" class="drug-card bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-5 border ${isExpanded ? 'border-[#0590D5] shadow-md ring-2 ring-[#00CAE0]/20' : 'border-[#D0D7E8] shadow-2xs hover:border-[#0590D5] hover:shadow-sm'} transition-all duration-200 flex flex-col justify-between">
       <div>
         <!-- هدر کلیک‌پذیر کارت: در موبایل یک ردیف خلوت و خوانا، در دسکتاپ کامل -->
         <div class="cursor-pointer select-none group" onclick="toggleDrugCard('${drug.id}', event)">
           
-          <!-- ردیف اصلی عنوان و اطلاعات کلیدی دارو -->
-          <div class="flex items-center justify-between gap-2.5">
+          <!-- ردیف اصلی عنوان و اطلاعات کلیدی دارو (تک‌ردیف خلوت و باوقار) -->
+          <div class="flex items-center justify-between gap-2">
             <div class="flex-1 min-w-0">
-              <div class="flex items-center gap-2 flex-wrap sm:flex-nowrap">
-                <h3 class="text-base sm:text-lg font-black text-[#0A2447] group-hover:text-[#0590D5] transition truncate">
+              <div class="flex items-center gap-1.5 sm:gap-2 flex-nowrap">
+                <h3 class="text-sm sm:text-base md:text-lg font-black text-[#0A2447] group-hover:text-[#0590D5] transition truncate">
                   ${drug.generic_name_fa}
                 </h3>
-                <span class="text-[10px] sm:text-xs px-2 py-0.5 rounded-lg font-bold whitespace-nowrap ${badgeClass}">
+                <span class="text-[9px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-lg font-bold whitespace-nowrap shrink-0 ${badgeClass}">
                   ${drug.category_badge}
                 </span>
                 ${xylitolBadge}
               </div>
-              <div class="flex items-center gap-1.5 sm:gap-2 text-xs text-slate-500 mt-0.5">
-                <span class="text-[#0590D5] latin-text font-mono font-bold truncate"><bdi dir="ltr">&lrm;${drug.generic_name_en || ''}&lrm;</bdi></span>
-                <span class="text-slate-300">•</span>
+              <div class="flex items-center gap-1.5 text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">
+                <span class="text-[#0590D5] latin-text font-mono font-bold truncate shrink-0"><bdi dir="ltr">&lrm;${drug.generic_name_en || ''}&lrm;</bdi></span>
+                <span class="text-slate-300 shrink-0">•</span>
                 <span class="text-[11px] text-slate-600 font-medium truncate">${drug.therapeutic_category_fa || drug.drug_class_fa}</span>
               </div>
             </div>
 
             <!-- سمت چپ: ستاره نشان + دکمه باز کردن -->
-            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0 no-card-toggle">
-              <button type="button" onclick="toggleFavoriteDrug('${drug.id}', event)" class="p-1.5 rounded-xl hover:bg-amber-50 transition" title="نشان کردن در علاقه‌مندی‌ها">
+            <div class="flex items-center gap-1 sm:gap-2 shrink-0 no-card-toggle">
+              <button type="button" onclick="toggleFavoriteDrug('${drug.id}', event)" class="p-1 sm:p-1.5 rounded-xl hover:bg-amber-50 transition" title="نشان کردن در علاقه‌مندی‌ها">
                 ${isFavoriteDrug(drug.id) 
                   ? '<i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-400 transition-transform hover:scale-110"></i>' 
                   : '<i data-lucide="star" class="w-4 h-4 text-slate-300 hover:text-amber-500 transition-colors"></i>'}
@@ -2655,18 +2655,45 @@ function renderSingleDrugCardHtml(drug) {
             ${speciesIconsPreview}
           </div>
 
-          <!-- نوار لمسی باز و بسته کردن دوزها -->
-          <div class="mt-2 pt-1.5 border-t border-[#E9EDF7] flex items-center justify-between text-xs font-bold text-[#0070A8]">
+          <!-- نوار لمسی باز و بسته کردن دوزها (فقط در تبلت و دسکتاپ) -->
+          <div class="hidden sm:flex mt-2 pt-1.5 border-t border-[#E9EDF7] items-center justify-between text-xs font-bold text-[#0070A8]">
             <span id="card_toggle_text_${drug.id}" class="flex items-center gap-1 text-[11px] sm:text-xs">
               <i data-lucide="layers" class="w-3.5 h-3.5 text-teal-600"></i>
               <span>${isExpanded ? 'بستن دوزها و سرنگ' : 'مشاهده دوزها و حجم سرنگ'}</span>
             </span>
-            <span class="text-[10px] text-slate-400 font-normal sm:hidden">لمس برای جزئیات ▾</span>
           </div>
         </div>
 
         <!-- بخش جزئیات قابل باز و بسته شدن (Accordion Details) -->
         <div id="card_details_${drug.id}" class="${isExpanded ? '' : 'hidden'} mt-3 pt-3 border-t border-slate-100/80 transition-all">
+          
+          <!-- دکمه‌های اکشن درون آکاردئون: مونوگراف کامل، تداخلات و کوکتل‌ها -->
+          <div class="mb-3 pb-3 border-b border-slate-100 space-y-1.5 w-full">
+            <div class="grid grid-cols-2 gap-1.5 w-full">
+              <button type="button" onclick="openMonographModal('${drug.id}')" class="py-2 px-2 bg-[#0A2447] hover:bg-[#17285E] active:scale-95 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyan-300"></i>
+                <span>مونوگراف جامع</span>
+              </button>
+
+              <button type="button" onclick="toggleDrugInteractionsSection('${drug.id}', event)" id="btn_interact_${drug.id}" class="py-2 px-2 bg-[#FFF9E6] hover:bg-[#FFF3CC] active:scale-95 text-[#B45309] border border-[#FDE68A] rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده تداخلات دارویی درجا">
+                <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+                <span>تداخلات دارویی</span>
+              </button>
+            </div>
+
+            ${(drug.synergistic_combinations && drug.synergistic_combinations.length > 0) || renderDrugSpecialtyCardButtonHtml(drug) ? `
+              <div class="flex flex-wrap items-center gap-1.5 w-full">
+                ${drug.synergistic_combinations && drug.synergistic_combinations.length > 0 ? `
+                  <button type="button" onclick="toggleDrugCocktailsSection('${drug.id}', event)" id="btn_cocktail_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-[#F3EEFB] hover:bg-[#EAE2F8] active:scale-95 text-[#5B21B6] border border-[#D8C7F8] rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده کوکتل‌های ترکیبی درجا">
+                    <i data-lucide="flask-conical" class="w-3.5 h-3.5 text-indigo-600 shrink-0"></i>
+                    <span>کوکتل‌ها (${drug.synergistic_combinations.length})</span>
+                  </button>
+                ` : ''}
+                ${renderDrugSpecialtyCardButtonHtml(drug)}
+              </div>
+            ` : ''}
+          </div>
+
           <!-- 🐾 نوار انتخاب حیوان با آیکون و تب مستقیم زیر نام دارو -->
           <div class="mb-3">
             <div class="flex items-center justify-between mb-1.5">
@@ -2704,39 +2731,6 @@ function renderSingleDrugCardHtml(drug) {
               <span class="font-bold text-[#92400E]">💡 نکته کلیدی بالینی (Clinical Highlight):</span> ${fixBidiParentheses(Array.isArray(drug.prescriber_highlights) ? drug.prescriber_highlights[0] : drug.prescriber_highlights)}
             </div>
           ` : ''}
-        </div>
-      </div>
-
-      <!-- دکمه‌های اکشن پایین کارت با ساختار دو ردیفه منظم و بدون بیرون‌زدگی -->
-      <div class="pt-3 border-t border-slate-100 mt-2 space-y-1.5 w-full">
-        <!-- ردیف ۱: مونوگراف کامل و دوز و سرنگ (درجا زیر نام دارو) -->
-        <div class="grid grid-cols-2 gap-1.5 w-full">
-          <button type="button" onclick="openMonographModal('${drug.id}')" class="py-2 px-2 bg-[#0A2447] hover:bg-[#17285E] active:scale-95 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer">
-            <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyan-300"></i>
-            <span>مونوگراف</span>
-          </button>
-
-          <button type="button" onclick="toggleCardDoseInline('${drug.id}', event)" class="py-2 px-2 bg-[#E6F7FC] hover:bg-[#D4F2FB] active:scale-95 text-[#0070A8] border border-[#B2E7F7] rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer" title="مشاهده دوزها و حجم سرنگ درجا زیر نام دارو">
-            <i data-lucide="calculator" class="w-3.5 h-3.5 text-teal-600"></i>
-            <span>دوز و حجم سرنگ</span>
-          </button>
-        </div>
-
-        <!-- ردیف ۲: تداخلات، کوکتل‌ها و ابزارهای تخصصی درون‌کارت -->
-        <div class="flex flex-wrap items-center gap-1.5 w-full">
-          <button type="button" onclick="toggleDrugInteractionsSection('${drug.id}', event)" id="btn_interact_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-[#FFF9E6] hover:bg-[#FFF3CC] active:scale-95 text-[#B45309] border border-[#FDE68A] rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده تداخلات دارویی درجا">
-            <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
-            <span>تداخلات</span>
-          </button>
-          
-          ${drug.synergistic_combinations && drug.synergistic_combinations.length > 0 ? `
-            <button type="button" onclick="toggleDrugCocktailsSection('${drug.id}', event)" id="btn_cocktail_${drug.id}" class="flex-1 min-w-[70px] py-1.5 px-2 bg-[#F3EEFB] hover:bg-[#EAE2F8] active:scale-95 text-[#5B21B6] border border-[#D8C7F8] rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs cursor-pointer" title="مشاهده کوکتل‌های ترکیبی درجا">
-              <i data-lucide="flask-conical" class="w-3.5 h-3.5 text-indigo-600 shrink-0"></i>
-              <span>کوکتل‌ها (${drug.synergistic_combinations.length})</span>
-            </button>
-          ` : ''}
-
-          ${renderDrugSpecialtyCardButtonHtml(drug)}
         </div>
       </div>
     </div>
@@ -11302,17 +11296,17 @@ function updateAuthUI() {
   if (headerContainer) {
     if (user) {
       headerContainer.innerHTML = `
-        <button type="button" onclick="handleAuthActionClick()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 hover:text-white font-bold text-xs border border-amber-500/40 transition flex items-center gap-1.5 cursor-pointer shadow-xs" title="مشاهده پروفایل یا خروج">
+        <button type="button" onclick="handleAuthActionClick()" class="p-1.5 sm:px-3 sm:py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 hover:text-white font-bold text-xs border border-amber-500/40 transition flex items-center gap-1.5 cursor-pointer shadow-xs" title="مشاهده پروفایل یا خروج">
           <i data-lucide="user-check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
-          <span class="truncate max-w-[120px] sm:max-w-[160px]">${user.name}</span>
+          <span class="truncate max-w-[85px] sm:max-w-[160px]">${user.name}</span>
           <span class="text-[9px] bg-amber-400/20 text-amber-300 border border-amber-300/30 px-1.5 py-0.2 rounded font-mono hidden sm:inline">VIP</span>
         </button>
       `;
     } else {
       headerContainer.innerHTML = `
-        <button type="button" onclick="openAuthModal()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 active:scale-95 text-cyan-300 hover:text-white font-bold text-xs border border-cyan-500/30 transition flex items-center gap-1.5 cursor-pointer">
+        <button type="button" onclick="openAuthModal()" class="p-1.5 sm:px-3 sm:py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 active:scale-95 text-cyan-300 hover:text-white font-bold text-xs border border-cyan-500/30 transition flex items-center gap-1.5 cursor-pointer" title="ورود یا ثبت‌نام همکاران">
           <i data-lucide="user" class="w-4 h-4 text-cyan-400"></i>
-          <span>ورود / عضویت</span>
+          <span class="hidden sm:inline">ورود / عضویت</span>
         </button>
       `;
     }

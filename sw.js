@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین لیب‌دوز (LibDose PWA Offline Engine - LibVet)
- * نسخه ۳.۱۷.۰ - هدر عریض بدون کادر و نشان شفاف با ابعاد بزرگ و باوقار
+ * نسخه ۳.۲۱.۰ - بهینه‌سازی لوکس تک‌ردیفی کارت‌ها و هدر موبایل بدون بهم‌ریختگی
  */
-const CACHE_NAME = 'libdose-cache-v3.20.0-user-official-master-app-icon';
+const CACHE_NAME = 'libdose-cache-v3.21.0-mobile-single-row-clean-layout';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

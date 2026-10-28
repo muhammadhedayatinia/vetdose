@@ -53,12 +53,12 @@
 
     <!-- هدر اصلی نرم‌افزار (نوار باوقار، کلفت و با نمایش کامل لوگوی اصلی) -->
     <header class="bg-[#061937] text-white shadow-xl sticky top-0 z-20 border-b border-[#19F7FC]/30 backdrop-blur-md">
-      <div class="px-4 sm:px-6 lg:px-8 py-3.5 sm:py-4 md:py-5 flex items-center justify-between gap-4">
+      <div class="px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3.5 md:py-4 flex items-center justify-between gap-2 sm:gap-4">
         
         <!-- سمت راست: دکمه منوی موبایل + لوگوی عریض و رسمی سامانه -->
-        <div class="flex items-center gap-3 sm:gap-4">
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
           <!-- دکمه همبرگری فقط در موبایل و تبلت -->
-          <button onclick="openClinicalSidebar()" class="lg:hidden w-10 h-10 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 flex items-center justify-center border border-slate-700 transition cursor-pointer shrink-0" title="منوی ابزارهای بالینی">
+          <button onclick="openClinicalSidebar()" class="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 flex items-center justify-center border border-slate-700 transition cursor-pointer shrink-0" title="منوی ابزارهای بالینی">
             <i data-lucide="menu" class="w-5 h-5"></i>
           </button>
 
@@ -66,36 +66,36 @@
           <a href="./" class="flex items-center group cursor-pointer" title="لوگوی رسمی LibDose (خانواده LibVet)">
             <img src="assets/logos/libdose_brand_header.png" 
                  alt="LibDose Veterinary Clinical Decision Support" 
-                 class="h-12 sm:h-16 md:h-20 lg:h-24 w-auto max-w-[240px] sm:max-w-[360px] md:max-w-[480px] object-contain drop-shadow-[0_4px_22px_rgba(25,247,252,0.35)] group-hover:drop-shadow-[0_6px_30px_rgba(25,247,252,0.6)] group-hover:scale-[1.02] transition-all duration-300" />
+                 class="h-8 sm:h-11 md:h-16 lg:h-20 w-auto max-w-[125px] sm:max-w-[240px] md:max-w-[360px] object-contain drop-shadow-[0_4px_22px_rgba(25,247,252,0.35)] group-hover:drop-shadow-[0_6px_30px_rgba(25,247,252,0.6)] group-hover:scale-[1.02] transition-all duration-300" />
           </a>
         </div>
 
         <!-- سمت چپ هدر: وضعیت، ارتقای VIP و ورود/عضویت -->
-        <div class="flex items-center gap-2 sm:gap-3">
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
           <span class="text-xs bg-[#19F7FC]/15 text-[#19F7FC] border border-[#19F7FC]/40 px-3 py-1.5 rounded-full font-bold hidden lg:inline-flex items-center gap-2 shadow-[0_0_12px_rgba(25,247,252,0.2)]">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>نسخه فعال بالینی ۱۴۰۴</span>
           </span>
 
           <!-- دکمه مستقیم نصب وب‌اپلیکیشن روی گوشی و دسکتاپ -->
-          <button type="button" id="pwaInstallHeaderBtn" onclick="triggerPwaInstall()" class="px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#19F7FC] to-cyan-400 hover:brightness-110 active:scale-95 text-[#061937] font-black text-xs sm:text-sm shadow-[0_0_15px_rgba(25,247,252,0.35)] transition flex items-center gap-1.5 cursor-pointer border border-[#19F7FC]" title="نصب اپلیکیشن روی گوشی یا رایانه">
+          <button type="button" id="pwaInstallHeaderBtn" onclick="triggerPwaInstall()" class="px-2 sm:px-3 py-1.5 sm:py-2 rounded-xl bg-gradient-to-r from-[#19F7FC] to-cyan-400 hover:brightness-110 active:scale-95 text-[#061937] font-black text-xs sm:text-sm shadow-[0_0_15px_rgba(25,247,252,0.35)] transition flex items-center gap-1 cursor-pointer border border-[#19F7FC] shrink-0" title="نصب اپلیکیشن روی گوشی یا رایانه">
             <i data-lucide="download-cloud" class="w-4 h-4 text-[#061937]"></i>
             <span class="hidden sm:inline">نصب اپلیکیشن</span>
-            <span class="sm:hidden">نصب</span>
+            <span class="sm:hidden text-[11px]">نصب</span>
           </button>
 
           <!-- دکمه خرید و ارتقای اشتراک VIP -->
-          <button type="button" onclick="openSubscriptionModal()" class="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:brightness-110 active:scale-95 text-slate-950 font-black text-xs sm:text-sm shadow-lg transition flex items-center gap-2 cursor-pointer border border-amber-300">
+          <button type="button" onclick="openSubscriptionModal()" class="px-2 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:brightness-110 active:scale-95 text-slate-950 font-black text-xs sm:text-sm shadow-lg transition flex items-center gap-1 cursor-pointer border border-amber-300 shrink-0">
             <i data-lucide="crown" class="w-4 h-4 fill-slate-950 text-slate-950"></i>
-            <span class="hidden sm:inline">ارتقای اشتراک VIP</span>
-            <span class="sm:hidden font-black">VIP</span>
+            <span class="hidden sm:inline">ارتقای VIP</span>
+            <span class="sm:hidden text-[11px] font-black">VIP</span>
           </button>
 
           <!-- دکمه ورود / عضویت یا پروفایل کاربر -->
-          <div id="userAuthHeaderContainer" class="flex items-center">
-            <button type="button" onclick="openAuthModal()" class="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 active:scale-95 text-cyan-300 hover:text-white font-bold text-xs sm:text-sm border border-cyan-500/40 transition flex items-center gap-2 cursor-pointer shadow-md">
+          <div id="userAuthHeaderContainer" class="flex items-center shrink-0">
+            <button type="button" onclick="openAuthModal()" class="p-1.5 sm:px-3 sm:py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 active:scale-95 text-cyan-300 hover:text-white font-bold text-xs sm:text-sm border border-cyan-500/40 transition flex items-center gap-1.5 cursor-pointer shadow-md" title="ورود یا ثبت‌نام همکاران">
               <i data-lucide="user" class="w-4 h-4 text-cyan-400"></i>
-              <span>ورود / عضویت</span>
+              <span class="hidden sm:inline">ورود / عضویت</span>
             </button>
           </div>
         </div>
@@ -529,15 +529,15 @@
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-3">
     
     <!-- کادر جستجوی یکپارچه با کنترل زنده وزن بیمار (Plumb's Unified Command Bar) -->
-    <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-cyan-600 focus-within:border-cyan-600 focus-within:ring-3 focus-within:ring-cyan-500/15 transition-all mb-3">
-      <div class="flex items-center px-4 py-3 gap-3 flex-wrap sm:flex-nowrap">
-        <i data-lucide="search" class="w-5 h-5 text-cyan-600 shrink-0"></i>
+    <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-cyan-600 focus-within:border-cyan-600 focus-within:ring-2 focus-within:ring-cyan-500/15 transition-all mb-3">
+      <div class="flex items-center px-3 sm:px-4 py-2 sm:py-2.5 gap-2 sm:gap-3">
+        <i data-lucide="search" class="w-4 sm:w-5 h-4 sm:h-5 text-cyan-600 shrink-0"></i>
         
         <input 
           type="text" 
           id="searchInput" 
           placeholder="جستجوی آنی دارو، نام تجاری، رده فارماکولوژی یا کاربرد (مثلاً: گاباپنتین، Meloxicam، سگ)..." 
-          class="w-full bg-transparent text-slate-800 text-sm sm:text-base outline-none placeholder:text-slate-400 font-medium"
+          class="flex-1 min-w-0 bg-transparent text-slate-800 text-xs sm:text-base outline-none placeholder:text-slate-400 font-medium"
           oninput="handleSearch()"
         >
 
@@ -545,31 +545,31 @@
           type="button" 
           id="searchClearBtn" 
           onclick="clearSearchInput()" 
-          class="hidden w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center text-xs font-bold transition shrink-0"
+          class="hidden w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center text-xs font-bold transition shrink-0"
           title="پاک کردن متن جستجو"
         >
           ✕
         </button>
 
-        <div class="h-6 w-px bg-slate-200 shrink-0 hidden sm:block"></div>
+        <div class="h-5 sm:h-6 w-px bg-slate-200 shrink-0"></div>
 
         <!-- کنترل یکپارچه و ظریف وزن بیمار جهت محاسبه زنده حجم سرنگ تمام داروها -->
-        <div class="flex items-center gap-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-xl shrink-0 transition" title="تنظیم وزن بیمار جهت محاسبه آنی دوز و حجم سرنگ روی تمام داروها">
-          <i data-lucide="scale" class="w-3.5 h-3.5 text-cyan-700 shrink-0"></i>
+        <div class="flex items-center gap-1 sm:gap-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-2 sm:px-2.5 py-1 rounded-xl shrink-0 transition" title="تنظیم وزن بیمار جهت محاسبه آنی دوز و حجم سرنگ روی تمام داروها">
+          <i data-lucide="scale" class="w-3.5 h-3.5 text-cyan-700 shrink-0 hidden xs:inline-block"></i>
           <span class="text-[11px] font-bold text-slate-600 hidden md:inline">وزن بیمار:</span>
           
           <button type="button" onclick="stepGlobalWeight(-1)" class="w-5 h-5 rounded-md bg-white hover:bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-xs transition" title="کاهش ۱ کیلوگرم">
             -
           </button>
           
-          <div class="flex items-center font-mono font-bold text-xs text-cyan-900 px-1">
+          <div class="flex items-center font-mono font-bold text-xs text-cyan-900 px-0.5 sm:px-1">
             <input 
               type="number" 
               id="globalPatientWeight" 
               value="10" 
               step="0.5" 
               min="0.1" 
-              class="w-10 bg-transparent text-center outline-none latin-text font-mono font-black" 
+              class="w-8 sm:w-10 bg-transparent text-center outline-none latin-text font-mono font-black" 
               oninput="handleGlobalWeightChange(this.value)"
             >
             <span class="text-[10px] text-slate-400 font-sans">kg</span>
@@ -645,21 +645,21 @@
   <!-- فهرست داروها (شبکه کارت‌ها) -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-2">
     <!-- نوار وضعیت و ابزار باز/بسته کردن همه کارت‌ها -->
-    <div class="flex items-center justify-between gap-3 mb-4 pb-2.5 border-b border-slate-200/80 bg-slate-50/70 p-3 rounded-2xl">
-      <div class="flex items-center gap-2 flex-wrap">
-        <span class="text-xs font-black text-slate-800 flex items-center gap-1.5">
-          <i data-lucide="layers" class="w-4 h-4 text-teal-600"></i>
+    <div class="flex items-center justify-between gap-2 sm:gap-3 mb-3 pb-2 border-b border-slate-200/80 bg-slate-50/70 p-2.5 sm:p-3 rounded-2xl">
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <span class="text-xs font-black text-slate-800 flex items-center gap-1">
+          <i data-lucide="layers" class="w-3.5 sm:w-4 h-3.5 sm:h-4 text-teal-600"></i>
           <span>فهرست داروها:</span>
         </span>
-        <span id="drugsCountDisplay" class="text-xs font-mono font-black text-teal-800 bg-teal-100/80 px-2.5 py-0.5 rounded-lg border border-teal-200">۲۴۵ دارو</span>
-        <span class="text-[11px] text-slate-500 font-medium">
+        <span id="drugsCountDisplay" class="text-xs font-mono font-black text-teal-800 bg-teal-100/80 px-2 py-0.5 rounded-lg border border-teal-200">۲۴۵ دارو</span>
+        <span class="text-[11px] text-slate-500 font-medium hidden md:inline">
           💡 برای مشاهده سریع دوزها و حجم سرنگ هر دارو، روی کادر آن کلیک کنید.
         </span>
       </div>
 
       <div class="flex items-center gap-2 shrink-0">
-        <button id="btnToggleAllCards" onclick="toggleAllDrugCards()" class="text-xs font-bold px-3 py-1.5 rounded-xl bg-white hover:bg-teal-50 text-slate-700 hover:text-teal-900 border border-slate-200 shadow-2xs hover:border-teal-300 transition flex items-center gap-1.5">
-          <i data-lucide="chevrons-up-down" class="w-4 h-4 text-teal-600"></i>
+        <button id="btnToggleAllCards" onclick="toggleAllDrugCards()" class="text-xs font-bold px-2.5 sm:px-3 py-1.5 rounded-xl bg-white hover:bg-teal-50 text-slate-700 hover:text-teal-900 border border-slate-200 shadow-2xs hover:border-teal-300 transition flex items-center gap-1">
+          <i data-lucide="chevrons-up-down" class="w-3.5 sm:w-4 h-3.5 sm:h-4 text-teal-600"></i>
           <span id="btnToggleAllText">باز کردن همه دوزها</span>
         </button>
       </div>
@@ -668,7 +668,7 @@
     <!-- بنر اطلاع‌رسانی رده درمانی فیلترشده با قابلیت حذف آنی -->
     <div id="activeCategoryBanner" class="hidden mb-3"></div>
 
-    <div id="drugsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div id="drugsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-4 md:gap-5">
       <!-- کارت‌ها به صورت پویا با جاوااسکریپت تزریق می‌شوند -->
     </div>
 
