@@ -2,7 +2,7 @@
  * Service Worker: سامانه آفلاین لیب‌دوز (LibDose PWA Offline Engine - LibVet)
  * نسخه ۳.۱۴.۰ - آیکون رسمی و نشان وکتوری LibDose (کانسپت برگزیده ۱)
  */
-const CACHE_NAME = 'libdose-cache-v3.14.0-logo-applied';
+const CACHE_NAME = 'libdose-cache-v3.15.0-neon-cyan-palette';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -17,7 +17,9 @@ const ASSETS_TO_CACHE = [
   './data/pharmacology_depth.js',
   './data/specialty_protocols.js',
   './data/clinical_vault.js',
-  './manifest.json'
+  './manifest.json',
+  './favicon.svg',
+  './assets/logos/libdose_1a_app_icon.jpg'
 ];
 
 self.addEventListener('install', (event) => {
