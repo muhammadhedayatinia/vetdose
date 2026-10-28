@@ -2,7 +2,7 @@
  * Service Worker: سامانه آفلاین لیب‌دوز (LibDose PWA Offline Engine - LibVet)
  * نسخه ۳.۱۷.۰ - هدر عریض بدون کادر و نشان شفاف با ابعاد بزرگ و باوقار
  */
-const CACHE_NAME = 'libdose-cache-v3.18.0-transparent-brand-logo';
+const CACHE_NAME = 'libdose-cache-v3.19.0-real-master-pwa-app-icon';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -19,9 +19,13 @@ const ASSETS_TO_CACHE = [
   './data/clinical_vault.js',
   './manifest.json',
   './favicon.svg',
+  './favicon.png',
   './assets/logos/libdose_1a_app_icon.jpg',
   './assets/logos/libdose_brand_header.jpg',
-  './assets/logos/libdose_brand_header.png'
+  './assets/logos/libdose_brand_header.png',
+  './assets/logos/libdose_pwa_icon_512.png',
+  './assets/logos/libdose_pwa_icon_192.png',
+  './assets/logos/libdose_apple_touch_icon.png'
 ];
 
 self.addEventListener('install', (event) => {
