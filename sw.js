@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین لیب‌دوز (LibDose PWA Offline Engine - LibVet)
- * نسخه ۳.۱۴.۰ - آیکون رسمی و نشان وکتوری LibDose (کانسپت برگزیده ۱)
+ * نسخه ۳.۱۷.۰ - هدر عریض بدون کادر و نشان شفاف با ابعاد بزرگ و باوقار
  */
-const CACHE_NAME = 'libdose-cache-v3.15.0-neon-cyan-palette';
+const CACHE_NAME = 'libdose-cache-v3.17.0-master-cropped-banner';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -19,7 +19,8 @@ const ASSETS_TO_CACHE = [
   './data/clinical_vault.js',
   './manifest.json',
   './favicon.svg',
-  './assets/logos/libdose_1a_app_icon.jpg'
+  './assets/logos/libdose_1a_app_icon.jpg',
+  './assets/logos/libdose_brand_header.jpg'
 ];
 
 self.addEventListener('install', (event) => {

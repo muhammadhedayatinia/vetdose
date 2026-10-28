@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%">
+  <!-- Exact LibVet Solid Navy Canvas (Zero complex textures/3D) -->
+  <rect width="1024" height="1024" fill="#07153D"/>
+
+  <!-- Master Monoline Vector Group in Exact LibVet Warm Golden Amber -->
+  <g fill="none" stroke="#FA9F0A" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- 1. The Signature LibVet Geometric Animal Head (Ears, Open Book & Chin) -->
+    <!-- Center X: 512 -->
+    <!-- Left Ear Peak: (416, 275), Right Ear Peak: (608, 275) -->
+    <!-- Cheeks attach to the rectangular frame at Y: 416 -->
+    
+    <!-- Outer Ear & Head Silhouette -->
+    <path d="M 392 416 L 416 275 L 472 360 L 512 435 L 552 360 L 608 275 L 632 416"/>
+
+    <!-- Inner Ear Contour Lines -->
+    <path d="M 416 275 L 452 400"/>
+    <path d="M 608 275 L 572 400"/>
+
+    <!-- Central Open Book / Forehead Arcs -->
+    <path d="M 452 400 Q 482 355 512 390 Q 542 355 572 400"/>
+
+    <!-- The Symmetrical Chin (Dipping gracefully into the central anchor) -->
+    <path d="M 392 416 L 512 565 L 632 416"/>
+
+    <!-- 2. The Architectural Rectangular Frame -->
+    <!-- Top Left Bar -->
+    <line x1="74" y1="416" x2="392" y2="416"/>
+    <!-- Top Right Bar -->
+    <line x1="632" y1="416" x2="950" y2="416"/>
+    
+    <!-- Left Vertical Wall -->
+    <line x1="74" y1="416" x2="74" y2="675"/>
+    <!-- Right Vertical Wall -->
+    <line x1="950" y1="416" x2="950" y2="675"/>
+
+    <!-- Bottom Left Bar (with gap for Persian typography) -->
+    <line x1="74" y1="675" x2="250" y2="675"/>
+    <!-- Bottom Right Bar -->
+    <line x1="774" y1="675" x2="950" y2="675"/>
+
+    <!-- 3. Typography Inside Frame: "LIB" on Left, "DOSE" on Right (Balanced around central Chin) -->
+    <!-- Font Height: Y: 495 to 585 (H: 90px) -->
+
+    <!-- "LIB" Group (Left of center) -->
+    <!-- L -->
+    <path d="M 125 495 L 125 585 L 210 585"/>
+    
+    <!-- I -->
+    <line x1="250" y1="495" x2="250" y2="585"/>
+    
+    <!-- B (Exact LibVet Monoline Style) -->
+    <path d="M 295 495 L 295 585 L 350 585 C 380 585 390 562 390 545 C 390 532 378 528 355 528 L 295 528"/>
+    <path d="M 350 528 C 375 528 385 515 385 507 C 385 495 375 495 350 495 L 295 495"/>
+
+    <!-- "DOSE" Group (Right of center) -->
+    <!-- D -->
+    <path d="M 645 495 L 645 585 L 675 585 C 715 585 735 560 735 540 C 735 520 715 495 675 495 Z"/>
+
+    <!-- O (Pure Geometric with rounded rectangular pill proportion) -->
+    <path d="M 770 515 C 770 500 782 495 798 495 L 808 495 C 824 495 836 500 836 515 L 836 565 C 836 580 824 585 808 585 L 798 585 C 782 585 770 580 770 565 Z"/>
+
+    <!-- S -->
+    <path d="M 900 512 C 895 498 875 495 862 495 C 848 495 842 505 842 516 C 842 534 902 536 902 562 C 902 580 885 585 865 585 C 848 585 840 575 840 565"/>
+
+    <!-- E -->
+    <path d="M 945 495 L 910 495 L 910 585 L 945 585 M 910 540 L 938 540"/>
+
+  </g>
+
+  <!-- 4. Persian Typography: "دارونامه دامپزشکی" (Centered in bottom frame gap) -->
+  <g fill="#FA9F0A" stroke="#FA9F0A" stroke-width="2" text-anchor="middle">
+    <text x="512" y="692" font-family="'Vazirmatn', 'Dana', 'Peyda', 'Tahoma', sans-serif" font-weight="900" font-size="42" letter-spacing="1">دارونامه دامپزشکی</text>
+  </g>
+
+</svg>

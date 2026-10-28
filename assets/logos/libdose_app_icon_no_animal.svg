@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="iconCanvas" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#092557"/>
+      <stop offset="70%" stop-color="#05122E"/>
+      <stop offset="100%" stop-color="#020817"/>
+    </radialGradient>
+    <linearGradient id="cyanStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38E1FF"/>
+      <stop offset="100%" stop-color="#00AEEF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle App Icon Container (iOS/Android Standard) -->
+  <rect x="16" y="16" width="480" height="480" rx="115" fill="url(#iconCanvas)" stroke="url(#cyanStroke)" stroke-width="7"/>
+
+  <!-- Clean Medical Open Book + Precision Capsule Mark (Zero Animals) -->
+  <g transform="translate(0, -10)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Open Book Pages (Electric Cyan & Pure White) -->
+    <!-- Left Page -->
+    <path d="M 256 345 C 220 345 160 325 125 270 C 125 235 145 205 190 220 C 225 232 248 275 256 310" 
+          stroke="url(#cyanStroke)" stroke-width="11"/>
+    <!-- Right Page -->
+    <path d="M 256 345 C 292 345 352 325 387 270 C 387 235 367 205 322 220 C 287 232 264 275 256 310" 
+          stroke="url(#cyanStroke)" stroke-width="11"/>
+
+    <!-- Inner White Book Accent Curves -->
+    <path d="M 256 325 C 225 325 180 305 152 265" stroke="#FFFFFF" stroke-width="8"/>
+    <path d="M 256 325 C 287 325 332 305 360 265" stroke="#FFFFFF" stroke-width="8"/>
+
+    <!-- Precision Medicine Capsule Rising Upright (Center: X: 256, W: 64, H: 140, Y: 135 to 275) -->
+    <rect x="224" y="135" width="64" height="140" rx="32" stroke="url(#cyanStroke)" stroke-width="11" fill="#06163D"/>
+
+    <!-- Top Half of Capsule (Filled with Cyan) -->
+    <path d="M 224 167 A 32 32 0 0 1 288 167 L 288 205 L 224 205 Z" fill="url(#cyanStroke)"/>
+
+    <!-- Capsule Division Seam (Pure White) -->
+    <line x1="220" y1="205" x2="292" y2="205" stroke="#FFFFFF" stroke-width="9"/>
+
+    <!-- Clinical Medical Cross in Lower Half -->
+    <line x1="256" y1="225" x2="256" y2="255" stroke="url(#cyanStroke)" stroke-width="6"/>
+    <line x1="241" y1="240" x2="271" y2="240" stroke="url(#cyanStroke)" stroke-width="6"/>
+  </g>
+
+  <!-- Typography: "Lib" in White, "Dose" in Cyan -->
+  <text x="256" y="440" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="32" letter-spacing="4">
+    <tspan fill="#FFFFFF">LIB</tspan><tspan fill="url(#cyanStroke)">DOSE</tspan>
+  </text>
+</svg>

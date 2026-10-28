@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="appBg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0A2454"/>
+      <stop offset="70%" stop-color="#05122E"/>
+      <stop offset="100%" stop-color="#020817"/>
+    </radialGradient>
+    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38E1FF"/>
+      <stop offset="100%" stop-color="#00AEEF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle App Icon Container -->
+  <rect x="16" y="16" width="480" height="480" rx="115" fill="url(#appBg)" stroke="url(#cyanLine)" stroke-width="7"/>
+
+  <!-- Logo Group -->
+  <g transform="translate(0, -12)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Outer Ears & Silhouette (Electric Cyan, Stroke: 12px) -->
+    <path d="M 175 270 L 205 125 L 265 210 L 307 125 L 337 270" stroke="url(#cyanLine)" stroke-width="12"/>
+
+    <!-- Inner Ear Contour Lines -->
+    <path d="M 205 125 L 245 250" stroke="url(#cyanLine)" stroke-width="10"/>
+    <path d="M 307 125 L 267 250" stroke="url(#cyanLine)" stroke-width="10"/>
+
+    <!-- Central Open Book Arcs (Pure Clinical White) -->
+    <path d="M 245 250 Q 256 215 256 238 Q 256 215 267 250" stroke="#FFFFFF" stroke-width="12"/>
+
+    <!-- Lower Cheeks to Chin (Electric Cyan) -->
+    <path d="M 175 270 L 256 375 L 337 270" stroke="url(#cyanLine)" stroke-width="12"/>
+
+    <!-- Integrated Mini Paw at the Chin Point (Clinical White) -->
+    <circle cx="256" cy="342" r="5" fill="#FFFFFF"/>
+    <circle cx="245" cy="349" r="3.5" fill="#FFFFFF"/>
+    <circle cx="267" cy="349" r="3.5" fill="#FFFFFF"/>
+    <circle cx="256" cy="395" r="5" fill="url(#cyanLine)"/>
+  </g>
+
+  <!-- Typography: "Lib" in White, "Dose" in Cyan -->
+  <text x="256" y="445" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="32" letter-spacing="4">
+    <tspan fill="#FFFFFF">LIB</tspan><tspan fill="url(#cyanLine)">DOSE</tspan>
+  </text>
+</svg>

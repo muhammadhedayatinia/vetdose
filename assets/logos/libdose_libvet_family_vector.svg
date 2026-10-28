@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient matching LibVet -->
+    <radialGradient id="libvetBg" cx="50%" cy="50%" r="65%" fx="50%" fy="48%">
+      <stop offset="0%" stop-color="#0E2452"/>
+      <stop offset="60%" stop-color="#07142E"/>
+      <stop offset="100%" stop-color="#030814"/>
+    </radialGradient>
+
+    <!-- Warm Luxury Gold Linear Gradient -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#E5A93C"/>
+      <stop offset="100%" stop-color="#C58A24"/>
+    </linearGradient>
+
+    <!-- Subtle Glow Filter for Gold Lines -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1000" height="1000" fill="url(#libvetBg)"/>
+
+  <!-- Logo Group -->
+  <g transform="translate(0, 40)" filter="url(#goldGlow)">
+    
+    <!-- 1. The Signature LibVet Geometric Animal Head (Ears + Open Book + Muzzle) -->
+    <!-- Center X: 500. Top of ears at Y: 330. Base of head at Y: 460 -->
+    <g fill="none" stroke="url(#goldGradient)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Outer Left Ear & Head Silhouette -->
+      <path d="M 430 435 L 430 365 L 485 390 L 500 460 L 515 390 L 570 365 L 570 435 Z"/>
+      
+      <!-- Left Outer Ear Peak -->
+      <path d="M 430 435 Q 420 370 450 340 L 485 390"/>
+      <!-- Right Outer Ear Peak -->
+      <path d="M 570 435 Q 580 370 550 340 L 515 390"/>
+      
+      <!-- Central Open-Book / Forehead Wings Curves -->
+      <path d="M 450 340 Q 480 380 500 425 Q 520 380 550 340"/>
+      
+      <!-- Inner Ear Folds -->
+      <path d="M 450 370 L 472 388"/>
+      <path d="M 550 370 L 528 388"/>
+      
+      <!-- The Chin / Dose Precision Anchor -->
+      <path d="M 480 435 L 500 475 L 520 435"/>
+      <circle cx="500" cy="495" r="4" fill="url(#goldGradient)"/>
+    </g>
+
+    <!-- 2. The Architectural Rectangular Frame -->
+    <!-- Gap at top: X from 420 to 580 to accommodate the animal emblem -->
+    <g fill="none" stroke="url(#goldGradient)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Top Left Border -->
+      <line x1="220" y1="435" x2="420" y2="435"/>
+      <!-- Left Vertical Border -->
+      <line x1="220" y1="435" x2="220" y2="570"/>
+      <!-- Bottom Border (with gap for Persian subtitle) -->
+      <line x1="220" y1="570" x2="310" y2="570"/>
+      <line x1="690" y1="570" x2="780" y2="570"/>
+      <!-- Right Vertical Border -->
+      <line x1="780" y1="435" x2="780" y2="570"/>
+      <!-- Top Right Border -->
+      <line x1="580" y1="435" x2="780" y2="435"/>
+    </g>
+
+    <!-- 3. English Typography: "LIBDOSE" (Geometric Monoline Sans) -->
+    <g fill="none" stroke="url(#goldGradient)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <!-- L -->
+      <path d="M 245 480 L 245 535 L 275 535"/>
+      
+      <!-- I -->
+      <line x1="298" y1="480" x2="298" y2="535"/>
+      
+      <!-- B -->
+      <path d="M 325 480 L 325 535 L 350 535 C 362 535 365 522 365 515 C 365 508 358 506 348 506 L 325 506 M 345 506 C 356 506 362 499 362 492 C 362 480 348 480 345 480 L 325 480"/>
+      
+      <!-- D -->
+      <path d="M 405 480 L 405 535 L 425 535 C 445 535 455 522 455 507.5 C 455 493 445 480 425 480 Z"/>
+      
+      <!-- O (Styled with capsule precision) -->
+      <path d="M 485 495 C 485 484 496 480 507 480 C 518 480 529 484 529 495 L 529 520 C 529 531 518 535 507 535 C 496 535 485 531 485 520 Z"/>
+      <!-- Central Dose Seam line inside O -->
+      <line x1="492" y1="507.5" x2="522" y2="507.5" stroke-width="3" opacity="0.8"/>
+      
+      <!-- S -->
+      <path d="M 585 490 C 585 480 560 478 555 488 C 550 498 585 500 585 518 C 585 535 558 537 550 526"/>
+      
+      <!-- E -->
+      <path d="M 640 480 L 610 480 L 610 535 L 640 535 M 610 507.5 L 635 507.5"/>
+    </g>
+
+    <!-- 4. Persian Subtitle: "کتابخانه دوز دامپزشکی" / "دارونامه دامپزشکی" -->
+    <!-- Styled in geometric Kufic/Modern Persian font in matching Gold -->
+    <g fill="url(#goldGradient)" text-anchor="middle">
+      <text x="500" y="582" font-family="'Vazirmatn', 'Dana', 'Peyda', 'Tahoma', sans-serif" font-weight="700" font-size="26" letter-spacing="1">دارونامه و دوزبندی دامپزشکی</text>
+      <!-- Sub-line: Member of LibVet Family -->
+      <text x="500" y="625" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" letter-spacing="3" fill="#A87A24" opacity="0.85">A CLINICAL SUBSIDIARY OF LIBVET</text>
+    </g>
+
+  </g>
+</svg>

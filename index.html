@@ -48,65 +48,34 @@
        ======================================================= -->
   <div id="mainContentWrapper" class="lg:mr-72 min-h-screen flex flex-col transition-all duration-300">
 
-    <!-- هدر اصلی نرم‌افزار (کاملاً خلوت، آرامش‌بخش و شیک) -->
-    <header class="bg-[#061937] text-white shadow-md sticky top-0 z-20 border-b border-[#19F7FC]/20">
-      <div class="px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-3">
+    <!-- هدر اصلی نرم‌افزار (نوار باوقار، کلفت و با نمایش کامل لوگوی اصلی) -->
+    <header class="bg-[#061937] text-white shadow-xl sticky top-0 z-20 border-b border-[#19F7FC]/30 backdrop-blur-md">
+      <div class="px-4 sm:px-6 lg:px-8 py-3.5 sm:py-4 md:py-5 flex items-center justify-between gap-4">
         
-        <!-- سمت راست: دکمه منوی موبایل + عنوان سامانه -->
-        <div class="flex items-center gap-3">
-          <!-- دکمه همبرگری فقط در موبایل و تبلت (در دسکتاپ منوی سمت راست دائمی پین شده است) -->
-          <button onclick="openClinicalSidebar()" class="lg:hidden w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 flex items-center justify-center border border-slate-700 transition cursor-pointer" title="منوی ابزارهای بالینی">
+        <!-- سمت راست: دکمه منوی موبایل + لوگوی عریض و رسمی سامانه -->
+        <div class="flex items-center gap-3 sm:gap-4">
+          <!-- دکمه همبرگری فقط در موبایل و تبلت -->
+          <button onclick="openClinicalSidebar()" class="lg:hidden w-10 h-10 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 flex items-center justify-center border border-slate-700 transition cursor-pointer shrink-0" title="منوی ابزارهای بالینی">
             <i data-lucide="menu" class="w-5 h-5"></i>
           </button>
 
-          <div class="flex items-center gap-2.5">
-            <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#0B2B5C] to-[#041228] border border-[#19F7FC]/50 flex items-center justify-center shadow-lg shrink-0 p-1 hover:scale-105 transition" title="لوگوی رسمی LibDose (خانواده LibVet)">
-              <svg viewBox="0 0 64 64" class="w-full h-full drop-shadow-[0_0_8px_rgba(25,247,252,0.6)]">
-                <!-- ساختار کتاب گشوده (جلد مستقیم با پرسپکتیو و عطف V شکل بدون گردی پیاله‌ای) -->
-                <path d="M 13 40 L 10 46 L 32 53 L 54 46 L 51 40" fill="none" stroke="#19F7FC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                <line x1="32" y1="53" x2="32" y2="49" stroke="#19F7FC" stroke-width="2" stroke-linecap="round" />
-                <path d="M 32 50 C 24 49, 16 45, 13 40" fill="none" stroke="#19F7FC" stroke-width="2.2" stroke-linecap="round" />
-                <path d="M 32 47 C 25 46, 18 43, 15 39" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" />
-                <path d="M 32 50 C 40 49, 48 45, 51 40" fill="none" stroke="#19F7FC" stroke-width="2.2" stroke-linecap="round" />
-                <path d="M 32 47 C 39 46, 46 43, 49 39" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" />
-
-                <!-- کپسول عمودی دو رنگ -->
-                <rect x="25" y="20" width="14" height="26" rx="7" fill="#041228" stroke="#19F7FC" stroke-width="1.5" />
-                <path d="M 25 27 A 7 7 0 0 1 39 27 L 39 33 L 25 33 Z" fill="#19F7FC" />
-                <path d="M 25 33 L 39 33 L 39 39 A 7 7 0 0 1 25 39 Z" fill="#FFFFFF" />
-                <line x1="25" y1="33" x2="39" y2="33" stroke="#061937" stroke-width="1.2" />
-
-                <!-- ۴ پد پنجه بالای کپسول -->
-                <ellipse cx="20" cy="19" rx="2.2" ry="2.8" transform="rotate(-35, 20, 19)" fill="#19F7FC" />
-                <ellipse cx="26" cy="14" rx="2.4" ry="3.2" transform="rotate(-12, 26, 14)" fill="#19F7FC" />
-                <ellipse cx="38" cy="14" rx="2.4" ry="3.2" transform="rotate(12, 38, 14)" fill="#19F7FC" />
-                <ellipse cx="44" cy="19" rx="2.2" ry="2.8" transform="rotate(35, 44, 19)" fill="#19F7FC" />
-              </svg>
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <h1 class="text-base sm:text-lg font-black tracking-tight text-white flex items-center gap-1.5">
-                  <span>لیب‌دوز</span>
-                  <span class="text-xs font-mono font-black tracking-wider flex items-center">
-                    <span class="text-white">Lib</span><span class="text-[#19F7FC] drop-shadow-[0_0_6px_rgba(25,247,252,0.8)]">Dose</span>
-                  </span>
-                </h1>
-                <span class="text-[10px] bg-[#19F7FC]/15 text-[#19F7FC] border border-[#19F7FC]/30 px-2 py-0.5 rounded-full font-bold hidden sm:inline">خانواده LibVet</span>
-              </div>
-              <p class="text-[11px] text-[#A4CAED] hidden md:block">دانشنامه دارونامه جامع و سامانه تصمیم‌یار بالینی دامپزشکی (LibVet)</p>
-            </div>
-          </div>
+          <!-- لوگوی رسمی و اصیل LibDose (دقیقاً منطبق بر عکس انتخابی، بزرگ و کاملاً واضح بدون کادر محدودکننده) -->
+          <a href="./" class="flex items-center group cursor-pointer" title="لوگوی رسمی LibDose (خانواده LibVet)">
+            <img src="assets/logos/libdose_brand_header.jpg" 
+                 alt="LibDose Veterinary Clinical Decision Support" 
+                 class="h-12 sm:h-16 md:h-20 lg:h-24 w-auto max-w-[240px] sm:max-w-[360px] md:max-w-[480px] object-contain rounded-lg drop-shadow-[0_4px_20px_rgba(25,247,252,0.3)] group-hover:drop-shadow-[0_4px_28px_rgba(25,247,252,0.5)] group-hover:scale-[1.02] transition-all duration-300" />
+          </a>
         </div>
 
         <!-- سمت چپ هدر: وضعیت، ارتقای VIP و ورود/عضویت -->
-        <div class="flex items-center gap-2 sm:gap-2.5">
-          <span class="text-[11px] bg-[#19F7FC]/15 text-[#19F7FC] border border-[#19F7FC]/30 px-2.5 py-1 rounded-full font-bold hidden md:inline-flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>نسخه فعال بالینی</span>
+        <div class="flex items-center gap-2 sm:gap-3">
+          <span class="text-xs bg-[#19F7FC]/15 text-[#19F7FC] border border-[#19F7FC]/40 px-3 py-1.5 rounded-full font-bold hidden lg:inline-flex items-center gap-2 shadow-[0_0_12px_rgba(25,247,252,0.2)]">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>نسخه فعال بالینی ۱۴۰۴</span>
           </span>
 
           <!-- دکمه خرید و ارتقای اشتراک VIP -->
-          <button type="button" onclick="openSubscriptionModal()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:brightness-110 active:scale-95 text-slate-950 font-black text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer border border-amber-300">
+          <button type="button" onclick="openSubscriptionModal()" class="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:brightness-110 active:scale-95 text-slate-950 font-black text-xs sm:text-sm shadow-lg transition flex items-center gap-2 cursor-pointer border border-amber-300">
             <i data-lucide="crown" class="w-4 h-4 fill-slate-950 text-slate-950"></i>
             <span class="hidden sm:inline">ارتقای اشتراک VIP</span>
             <span class="sm:hidden font-black">VIP</span>
@@ -114,7 +83,7 @@
 
           <!-- دکمه ورود / عضویت یا پروفایل کاربر -->
           <div id="userAuthHeaderContainer" class="flex items-center">
-            <button type="button" onclick="openAuthModal()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 active:scale-95 text-cyan-300 hover:text-white font-bold text-xs border border-cyan-500/30 transition flex items-center gap-1.5 cursor-pointer">
+            <button type="button" onclick="openAuthModal()" class="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 active:scale-95 text-cyan-300 hover:text-white font-bold text-xs sm:text-sm border border-cyan-500/40 transition flex items-center gap-2 cursor-pointer shadow-md">
               <i data-lucide="user" class="w-4 h-4 text-cyan-400"></i>
               <span>ورود / عضویت</span>
             </button>

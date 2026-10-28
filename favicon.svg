@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Midnight Navy Gradient -->
+    <radialGradient id="favBgReal2" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#0B2B5C" />
+      <stop offset="60%" stop-color="#061937" />
+      <stop offset="100%" stop-color="#020815" />
+    </radialGradient>
+    <linearGradient id="favCyanReal2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3BF8FD" />
+      <stop offset="100%" stop-color="#19F7FC" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Container -->
+  <rect x="2" y="2" width="60" height="60" rx="15" ry="15" fill="url(#favBgReal2)" stroke="#19F7FC" stroke-width="1.8" />
+
+  <!-- ============================================== -->
+  <!-- 1. OPEN HARDCOVER BOOK (کتاب گشوده با پرسپکتیو جلد و اوراق) -->
+  <!-- ============================================== -->
+  <!-- خطوط مستقیم جلد کتاب با عطف V شکل در مرکز (بدون هیچ انحنای پیاله‌ای) -->
+  <path d="M 13 40 L 10 46 L 32 53 L 54 46 L 51 40" 
+        fill="none" stroke="url(#favCyanReal2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- خط عمودی اتصال عطف وسط -->
+  <line x1="32" y1="53" x2="32" y2="49" stroke="url(#favCyanReal2)" stroke-width="2" stroke-linecap="round" />
+
+  <!-- برگه بالایی کتاب باز سمت چپ -->
+  <path d="M 32 50 C 24 49, 16 45, 13 40" 
+        fill="none" stroke="url(#favCyanReal2)" stroke-width="2.2" stroke-linecap="round" />
+  
+  <!-- برگه داخلی کاغذ سفید سمت چپ -->
+  <path d="M 32 47 C 25 46, 18 43, 15 39" 
+        fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" />
+
+  <!-- برگه بالایی کتاب باز سمت راست -->
+  <path d="M 32 50 C 40 49, 48 45, 51 40" 
+        fill="none" stroke="url(#favCyanReal2)" stroke-width="2.2" stroke-linecap="round" />
+
+  <!-- برگه داخلی کاغذ سفید سمت راست -->
+  <path d="M 32 47 C 39 46, 46 43, 49 39" 
+        fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" />
+
+  <!-- ============================================== -->
+  <!-- 2. UPRIGHT PHARMACEUTICAL CAPSULE (کپسول عمودی) -->
+  <!-- ============================================== -->
+  <rect x="25.5" y="20" width="13" height="25" rx="6.5" fill="#041228" stroke="url(#favCyanReal2)" stroke-width="1.5" />
+  
+  <!-- Top Half (Electric Cyan) -->
+  <path d="M 25.5 26.5 A 6.5 6.5 0 0 1 38.5 26.5 L 38.5 32.5 L 25.5 32.5 Z" fill="url(#favCyanReal2)" />
+  
+  <!-- Bottom Half (Pure White) -->
+  <path d="M 25.5 32.5 L 38.5 32.5 L 38.5 38.5 A 6.5 6.5 0 0 1 25.5 38.5 Z" fill="#FFFFFF" />
+  
+  <!-- Capsule Division Seam -->
+  <line x1="25.5" y1="32.5" x2="38.5" y2="32.5" stroke="#061937" stroke-width="1.2" />
+
+  <!-- ============================================== -->
+  <!-- 3. FOUR VETERINARY PAW PADS (ردپای ۴ تایی در بالا) -->
+  <!-- ============================================== -->
+  <ellipse cx="20.5" cy="19.5" rx="2" ry="2.6" transform="rotate(-35, 20.5, 19.5)" fill="url(#favCyanReal2)" />
+  <ellipse cx="26.5" cy="14.5" rx="2.3" ry="3" transform="rotate(-12, 26.5, 14.5)" fill="url(#favCyanReal2)" />
+  <ellipse cx="37.5" cy="14.5" rx="2.3" ry="3" transform="rotate(12, 37.5, 14.5)" fill="url(#favCyanReal2)" />
+  <ellipse cx="43.5" cy="19.5" rx="2" ry="2.6" transform="rotate(35, 43.5, 19.5)" fill="url(#favCyanReal2)" />
+</svg>

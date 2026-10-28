@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%">
+  <defs>
+    <!-- Deep Obsidian Royal Navy Gradient -->
+    <radialGradient id="navyCanvas" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#081F4D"/>
+      <stop offset="60%" stop-color="#05122E"/>
+      <stop offset="100%" stop-color="#020817"/>
+    </radialGradient>
+
+    <!-- Electric Medical Cyan Gradient -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38E1FF"/>
+      <stop offset="50%" stop-color="#00C8F8"/>
+      <stop offset="100%" stop-color="#009BD6"/>
+    </linearGradient>
+
+    <!-- Pure Clinical White to Light Cyan -->
+    <linearGradient id="whiteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E0F7FD"/>
+    </linearGradient>
+
+    <!-- Clean Glow Effect -->
+    <filter id="cleanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Solid Deep Navy Background -->
+  <rect width="1024" height="1024" fill="url(#navyCanvas)"/>
+
+  <!-- Main Logo Structure (Zero Animals, Pure Medical & Formulary Geometry) -->
+  <g filter="url(#cleanGlow)">
+
+    <!-- 1. Top Emblem: The Open Formulary Book + Precision Medicine Capsule -->
+    <!-- Center X: 512, Base of Emblem meets the frame at Y: 416 -->
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      
+      <!-- Open Book Spine and Outer Pages (Electric Cyan, Stroke: 14px) -->
+      <!-- Left Page Curve -->
+      <path d="M 512 416 C 470 416 410 395 365 345 C 365 305 385 270 435 285 C 475 298 502 340 512 375" 
+            stroke="url(#cyanGrad)" stroke-width="13"/>
+      <!-- Right Page Curve -->
+      <path d="M 512 416 C 554 416 614 395 659 345 C 659 305 639 270 589 285 C 549 298 522 340 512 375" 
+            stroke="url(#cyanGrad)" stroke-width="13"/>
+
+      <!-- Inner Book Pages (Pure Clinical White, Stroke: 10px) -->
+      <path d="M 512 390 C 475 390 425 370 395 330" stroke="url(#whiteGrad)" stroke-width="10"/>
+      <path d="M 512 390 C 549 390 599 370 629 330" stroke="url(#whiteGrad)" stroke-width="10"/>
+
+      <!-- Central Upright Precision Capsule (Rising gracefully from the book center) -->
+      <!-- Center: X: 512, Capsule Width: 70px, Height: 150px (Y: 215 to 365) -->
+      
+      <!-- Capsule Outer Body (Pure White & Cyan Dual-Tone) -->
+      <rect x="477" y="215" width="70" height="150" rx="35" 
+            stroke="url(#cyanGrad)" stroke-width="14" fill="#06163D"/>
+
+      <!-- Top Half of Capsule (Filled with Electric Cyan) -->
+      <path d="M 477 250 A 35 35 0 0 1 547 250 L 547 290 L 477 290 Z" 
+            fill="url(#cyanGrad)" opacity="0.95"/>
+
+      <!-- Capsule Division Line (Clinical White) -->
+      <line x1="472" y1="290" x2="552" y2="290" stroke="url(#whiteGrad)" stroke-width="10"/>
+
+      <!-- Minimalist Clinical Cross in Lower White Half of Capsule -->
+      <line x1="512" y1="315" x2="512" y2="345" stroke="url(#cyanGrad)" stroke-width="7"/>
+      <line x1="497" y1="330" x2="527" y2="330" stroke="url(#cyanGrad)" stroke-width="7"/>
+    </g>
+
+    <!-- 2. The Architectural Rectangular Frame -->
+    <g fill="none" stroke="url(#cyanGrad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Top Left Bar (Connecting to Left Book Page at X: 365, Y: 416) -->
+      <line x1="74" y1="416" x2="365" y2="416"/>
+      <!-- Top Right Bar (Connecting to Right Book Page at X: 659, Y: 416) -->
+      <line x1="659" y1="416" x2="950" y2="416"/>
+      
+      <!-- Left Vertical Wall -->
+      <line x1="74" y1="416" x2="74" y2="675"/>
+      <!-- Right Vertical Wall -->
+      <line x1="950" y1="416" x2="950" y2="675"/>
+
+      <!-- Bottom Left Bar (with gap for Persian subtitle) -->
+      <line x1="74" y1="675" x2="230" y2="675"/>
+      <!-- Bottom Right Bar -->
+      <line x1="794" y1="675" x2="950" y2="675"/>
+    </g>
+
+    <!-- 3. Typography: "Lib" in Pure White, "Dose" in Electric Cyan -->
+    <!-- Font Height: Y: 500 to 585 (85px), Clean Monoline Sans -->
+
+    <!-- "LIB" Group in Pure Clinical White -->
+    <g fill="none" stroke="url(#whiteGrad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+      <!-- L -->
+      <path d="M 125 500 L 125 585 L 205 585"/>
+      <!-- I -->
+      <line x1="245" y1="500" x2="245" y2="585"/>
+      <!-- B -->
+      <path d="M 290 500 L 290 585 L 345 585 C 375 585 385 562 385 545 C 385 532 373 528 350 528 L 290 528"/>
+      <path d="M 345 528 C 370 528 380 515 380 507 C 380 500 370 500 345 500 L 290 500"/>
+    </g>
+
+    <!-- Central Clean Divider Dot -->
+    <circle cx="512" cy="542" r="8" fill="url(#cyanGrad)"/>
+
+    <!-- "DOSE" Group in Electric Medical Cyan -->
+    <g fill="none" stroke="url(#cyanGrad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+      <!-- D -->
+      <path d="M 645 500 L 645 585 L 675 585 C 715 585 735 560 735 542 C 735 524 715 500 675 500 Z"/>
+
+      <!-- O (Clean Geometric Medical Capsule Proportion) -->
+      <path d="M 770 518 C 770 505 782 500 798 500 L 808 500 C 824 500 836 505 836 518 L 836 567 C 836 580 824 585 808 585 L 798 585 C 782 585 770 580 770 567 Z"/>
+      <!-- Internal Capsule Divider Seam -->
+      <line x1="772" y1="542" x2="834" y2="542" stroke-width="6" stroke="url(#whiteGrad)" opacity="0.8"/>
+
+      <!-- S -->
+      <path d="M 900 515 C 895 502 875 500 862 500 C 848 500 842 510 842 520 C 842 538 902 540 902 564 C 902 580 885 585 865 585 C 848 585 840 575 840 565"/>
+
+      <!-- E -->
+      <path d="M 945 500 L 910 500 L 910 585 L 945 585 M 910 542 L 938 542"/>
+    </g>
+
+    <!-- 4. Persian Typography: "دارونامه و دوزبندی دامپزشکی" -->
+    <g fill="url(#cyanGrad)" text-anchor="middle">
+      <text x="512" y="692" font-family="'Vazirmatn', 'Dana', 'Peyda', 'Tahoma', sans-serif" font-weight="900" font-size="38" letter-spacing="1">دارونامه و دوزبندی دامپزشکی</text>
+      <!-- Subtitle -->
+      <text x="512" y="736" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="14" letter-spacing="4" fill="url(#whiteGrad)" opacity="0.85">CLINICAL DECISION SYSTEM • BY LIBVET</text>
+    </g>
+
+  </g>
+</svg>

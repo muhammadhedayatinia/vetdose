@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%">
+  <defs>
+    <!-- Deep Obsidian Royal Navy Gradient (High-Tech Clinical Canvas) -->
+    <radialGradient id="cyanCanvasBg" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#081E48"/>
+      <stop offset="60%" stop-color="#05122E"/>
+      <stop offset="100%" stop-color="#020817"/>
+    </radialGradient>
+
+    <!-- Electric Medical Cyan Linear Gradient -->
+    <linearGradient id="electricCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38E1FF"/>
+      <stop offset="50%" stop-color="#00C8F8"/>
+      <stop offset="100%" stop-color="#009BD6"/>
+    </linearGradient>
+
+    <!-- Pure Clinical White to Soft Cyan Gradient -->
+    <linearGradient id="clinicalWhite" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#D6F4FC"/>
+    </linearGradient>
+
+    <!-- Subtle Cyan Medical Glow -->
+    <filter id="medicalCyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="url(#cyanCanvasBg)"/>
+
+  <!-- Logo Group -->
+  <g filter="url(#medicalCyanGlow)">
+
+    <!-- 1. The Iconic LibVet Geometric Animal Head Evolved for LibDose -->
+    <!-- Stroke in Electric Cyan, Inner Book in Clinical White -->
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      
+      <!-- Outer Ear & Head Silhouette (Electric Cyan, Stroke: 14px) -->
+      <path d="M 392 416 L 416 275 L 472 360 L 512 435 L 552 360 L 608 275 L 632 416" 
+            stroke="url(#electricCyan)" stroke-width="14"/>
+
+      <!-- Inner Ear Contour Lines (Cyan, Stroke: 12px) -->
+      <path d="M 416 275 L 452 400" stroke="url(#electricCyan)" stroke-width="12"/>
+      <path d="M 608 275 L 572 400" stroke="url(#electricCyan)" stroke-width="12"/>
+
+      <!-- Central Open-Book / Forehead Wings (Clinical White Accent, Stroke: 14px) -->
+      <path d="M 452 400 Q 482 355 512 390 Q 542 355 572 400" 
+            stroke="url(#clinicalWhite)" stroke-width="14"/>
+
+      <!-- Lower Chin / Capsule Contour (Electric Cyan, Stroke: 14px) -->
+      <path d="M 392 416 L 512 565 L 632 416" 
+            stroke="url(#electricCyan)" stroke-width="14"/>
+
+      <!-- Minimalist Clinical Paw / Capsule Seam at the Center of the Chin -->
+      <!-- Small paw pads in pure white -->
+      <circle cx="512" cy="485" r="7" fill="url(#clinicalWhite)"/>
+      <circle cx="496" cy="495" r="5" fill="url(#clinicalWhite)"/>
+      <circle cx="528" cy="495" r="5" fill="url(#clinicalWhite)"/>
+      <path d="M 504 510 C 504 505 520 505 520 510 C 520 520 504 520 504 510 Z" fill="url(#clinicalWhite)"/>
+    </g>
+
+    <!-- 2. The Architectural Rectangular Frame (Electric Cyan, Stroke: 14px) -->
+    <g fill="none" stroke="url(#electricCyan)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Top Left Bar -->
+      <line x1="74" y1="416" x2="392" y2="416"/>
+      <!-- Top Right Bar -->
+      <line x1="632" y1="416" x2="950" y2="416"/>
+      
+      <!-- Left Vertical Wall -->
+      <line x1="74" y1="416" x2="74" y2="675"/>
+      <!-- Right Vertical Wall -->
+      <line x1="950" y1="416" x2="950" y2="675"/>
+
+      <!-- Bottom Left Bar (with gap for Persian subtitle) -->
+      <line x1="74" y1="675" x2="230" y2="675"/>
+      <!-- Bottom Right Bar -->
+      <line x1="794" y1="675" x2="950" y2="675"/>
+    </g>
+
+    <!-- 3. Typography: "Lib" in Pure White, "Dose" in Electric Cyan -->
+    <!-- Font Height: Y: 495 to 585 (90px) -->
+
+    <!-- "LIB" Group in Pure Clinical White -->
+    <g fill="none" stroke="url(#clinicalWhite)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+      <!-- L -->
+      <path d="M 125 495 L 125 585 L 210 585"/>
+      <!-- I -->
+      <line x1="250" y1="495" x2="250" y2="585"/>
+      <!-- B -->
+      <path d="M 295 495 L 295 585 L 350 585 C 380 585 390 562 390 545 C 390 532 378 528 355 528 L 295 528"/>
+      <path d="M 350 528 C 375 528 385 515 385 507 C 385 495 375 495 350 495 L 295 495"/>
+    </g>
+
+    <!-- "DOSE" Group in Electric Medical Cyan -->
+    <g fill="none" stroke="url(#electricCyan)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+      <!-- D -->
+      <path d="M 645 495 L 645 585 L 675 585 C 715 585 735 560 735 540 C 735 520 715 495 675 495 Z"/>
+
+      <!-- O (Styled with capsule precision) -->
+      <path d="M 770 515 C 770 500 782 495 798 495 L 808 495 C 824 495 836 500 836 515 L 836 565 C 836 580 824 585 808 585 L 798 585 C 782 585 770 580 770 565 Z"/>
+      <!-- Subtle internal capsule divider -->
+      <line x1="772" y1="540" x2="834" y2="540" stroke-width="6" stroke="url(#clinicalWhite)" opacity="0.8"/>
+
+      <!-- S -->
+      <path d="M 900 512 C 895 498 875 495 862 495 C 848 495 842 505 842 516 C 842 534 902 536 902 562 C 902 580 885 585 865 585 C 848 585 840 575 840 565"/>
+
+      <!-- E -->
+      <path d="M 945 495 L 910 495 L 910 585 L 945 585 M 910 540 L 938 540"/>
+    </g>
+
+    <!-- 4. Persian Typography: "دارونامه و دوزبندی دامپزشکی" -->
+    <g fill="url(#electricCyan)" text-anchor="middle">
+      <text x="512" y="692" font-family="'Vazirmatn', 'Dana', 'Peyda', 'Tahoma', sans-serif" font-weight="900" font-size="38" letter-spacing="1">دارونامه و دوزبندی دامپزشکی</text>
+      <!-- Sub-line: Clinical Decision Support -->
+      <text x="512" y="735" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="14" letter-spacing="4" fill="url(#clinicalWhite)" opacity="0.8">CLINICAL DECISION SYSTEM • BY LIBVET</text>
+    </g>
+
+  </g>
+</svg>

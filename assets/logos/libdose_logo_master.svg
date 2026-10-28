@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- گرادینت پس‌زمینه اسکوئرکل -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2D59" />
+      <stop offset="50%" stop-color="#0A2447" />
+      <stop offset="100%" stop-color="#020B16" />
+    </linearGradient>
+
+    <!-- گرادینت فیروزه‌ای متالیک اصلی -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38E1F3" />
+      <stop offset="45%" stop-color="#00CAE0" />
+      <stop offset="100%" stop-color="#0590D5" />
+    </linearGradient>
+
+    <!-- گرادینت سفید بالینی -->
+    <linearGradient id="whiteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#D9E2EC" />
+    </linearGradient>
+
+    <!-- افکت درخشش نئونی بالینی -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- سایه نرم المان‌ها -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- کادر اصلی اسکوئرکل (App Icon Squircle) -->
+  <rect x="16" y="16" width="480" height="480" rx="112" ry="112" fill="url(#bgGrad)" stroke="#00CAE0" stroke-opacity="0.35" stroke-width="4" filter="url(#softShadow)" />
+
+  <!-- هاله نور پس‌زمینه در مرکز -->
+  <circle cx="256" cy="260" r="140" fill="#00CAE0" opacity="0.08" filter="url(#cyanGlow)" />
+
+  <!-- ============================================== -->
+  <!-- ۱. نماد صفحات گشوده کتاب دانشنامه (Lib - Reference) -->
+  <!-- ============================================== -->
+  <g filter="url(#softShadow)">
+    <!-- باله چپ کتاب -->
+    <path d="M 256 390 C 190 366, 110 372, 80 390 C 80 200, 110 180, 190 170 C 230 165, 248 180, 256 195 Z" 
+          fill="none" 
+          stroke="url(#cyanGrad)" 
+          stroke-width="16" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+    
+    <!-- خطوط ورقی چپ کتاب (لایه‌های دانش) -->
+    <path d="M 112 355 C 145 342, 195 340, 240 354" 
+          fill="none" 
+          stroke="#00CAE0" 
+          stroke-opacity="0.35" 
+          stroke-width="8" 
+          stroke-linecap="round" />
+
+    <!-- باله راست کتاب -->
+    <path d="M 256 390 C 322 366, 402 372, 432 390 C 432 200, 402 180, 322 170 C 282 165, 264 180, 256 195 Z" 
+          fill="none" 
+          stroke="url(#cyanGrad)" 
+          stroke-width="16" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+    
+    <!-- خطوط ورقی راست کتاب -->
+    <path d="M 400 355 C 367 342, 317 340, 272 354" 
+          fill="none" 
+          stroke="#00CAE0" 
+          stroke-opacity="0.35" 
+          stroke-width="8" 
+          stroke-linecap="round" />
+
+    <!-- شیرازه مرکزی کتاب (Spine) -->
+    <line x1="256" y1="195" x2="256" y2="390" stroke="url(#cyanGrad)" stroke-width="14" stroke-linecap="round" />
+  </g>
+
+  <!-- ============================================== -->
+  <!-- ۲. کپسول شناور دارویی و دوزبندی دقیق (Dose - Pharmacology) -->
+  <!-- ============================================== -->
+  <g transform="translate(256, 265) rotate(-40)" filter="url(#softShadow)">
+    <!-- بدنه کپسول: نیمه بالایی (فیروزه‌ای درخشان) -->
+    <path d="M -34 0 A 34 34 0 0 1 34 0 L 34 38 L -34 38 Z" fill="url(#cyanGrad)" />
+    <!-- برق شیشه‌ای روی کپسول -->
+    <path d="M -22 -14 A 22 22 0 0 1 2 -22 L 2 30 L -12 30 Z" fill="#FFFFFF" opacity="0.35" />
+
+    <!-- بدنه کپسول: نیمه پایینی (سفید شفاف استریل) -->
+    <path d="M -34 38 L 34 38 L 34 76 A 34 34 0 0 1 -34 76 Z" fill="url(#whiteGrad)" />
+
+    <!-- خط درز دقیق وسط کپسول -->
+    <rect x="-36" y="35" width="72" height="6" rx="3" fill="#0A2447" />
+
+    <!-- علامت دوزبندی متقاطع (Micro-Dosing Cross) -->
+    <circle cx="0" cy="57" r="10" fill="#00CAE0" opacity="0.25" />
+    <path d="M -6 57 L 6 57 M 0 51 L 0 63" stroke="#00CAE0" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+
+  <!-- ============================================== -->
+  <!-- ۳. ردپای ظریف دامپزشکی در تاج بالایی (Vet Accent - Life) -->
+  <!-- ============================================== -->
+  <g filter="url(#cyanGlow)">
+    <!-- پد میانی (قلب / قطره مایع مرکزی) -->
+    <circle cx="256" cy="115" r="18" fill="url(#cyanGrad)" />
+    <!-- پد سمت چپ -->
+    <circle cx="218" cy="132" r="13" fill="url(#cyanGrad)" />
+    <!-- پد سمت راست -->
+    <circle cx="294" cy="132" r="13" fill="url(#cyanGrad)" />
+    <!-- دو پد کناری نرم‌تر برای فرم پنجه اصیل -->
+    <circle cx="190" cy="162" r="9" fill="#00CAE0" opacity="0.8" />
+    <circle cx="322" cy="162" r="9" fill="#00CAE0" opacity="0.8" />
+  </g>
+
+</svg>
