@@ -77,6 +77,13 @@
             <span>نسخه فعال بالینی ۱۴۰۴</span>
           </span>
 
+          <!-- دکمه مستقیم نصب وب‌اپلیکیشن روی گوشی و دسکتاپ -->
+          <button type="button" id="pwaInstallHeaderBtn" onclick="triggerPwaInstall()" class="px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#19F7FC] to-cyan-400 hover:brightness-110 active:scale-95 text-[#061937] font-black text-xs sm:text-sm shadow-[0_0_15px_rgba(25,247,252,0.35)] transition flex items-center gap-1.5 cursor-pointer border border-[#19F7FC]" title="نصب اپلیکیشن روی گوشی یا رایانه">
+            <i data-lucide="download-cloud" class="w-4 h-4 text-[#061937]"></i>
+            <span class="hidden sm:inline">نصب اپلیکیشن</span>
+            <span class="sm:hidden">نصب</span>
+          </button>
+
           <!-- دکمه خرید و ارتقای اشتراک VIP -->
           <button type="button" onclick="openSubscriptionModal()" class="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:brightness-110 active:scale-95 text-slate-950 font-black text-xs sm:text-sm shadow-lg transition flex items-center gap-2 cursor-pointer border border-amber-300">
             <i data-lucide="crown" class="w-4 h-4 fill-slate-950 text-slate-950"></i>
@@ -3577,6 +3584,116 @@
   </div>
 
   
+  <!-- ============================================== -->
+  <!-- بنر شناور نصب روی صفحه اصلی در موبایل (Mobile PWA Bottom Prompt) -->
+  <!-- ============================================== -->
+  <div id="mobileInstallFloatingBanner" class="fixed bottom-3 inset-x-3 sm:hidden z-40 bg-[#061937]/95 border border-[#19F7FC]/60 backdrop-blur-lg p-3 rounded-2xl shadow-2xl flex items-center justify-between gap-2.5 transition-all">
+    <div class="flex items-center gap-2.5 overflow-hidden">
+      <img src="assets/logos/libdose_pwa_icon_192.png" alt="LibDose" class="w-10 h-10 rounded-xl shadow-md border border-[#19F7FC]/40 shrink-0">
+      <div class="overflow-hidden">
+        <h4 class="text-xs font-black text-white truncate">نصب اپلیکیشن لیب‌دوز</h4>
+        <p class="text-[10px] text-cyan-200 truncate">دسترسی آفلاین سریع از صفحه اصلی</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-1.5 shrink-0">
+      <button type="button" onclick="triggerPwaInstall()" class="px-3 py-1.5 rounded-xl bg-[#19F7FC] hover:brightness-110 active:scale-95 text-[#061937] font-black text-xs shadow-md transition cursor-pointer">
+        نصب سریع
+      </button>
+      <button type="button" onclick="dismissMobileInstallBanner()" class="w-7 h-7 rounded-lg bg-white/10 hover:bg-white/20 text-slate-300 flex items-center justify-center text-xs transition cursor-pointer" title="بستن">
+        ✕
+      </button>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       مودال راهنمای نصب وب‌اپلیکیشن (PWA Install Modal - iOS & Android)
+       ======================================================= -->
+  <div id="pwaInstallModal" onclick="if (event.target === this) closePwaInstallModal();" class="fixed inset-0 z-50 hidden overflow-y-auto modal-overlay flex items-center justify-center p-3 sm:p-5">
+    <div class="bg-white rounded-3xl max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden transform transition-all">
+      
+      <!-- هدر مودال -->
+      <div class="p-4 sm:p-5 bg-[#061937] text-white flex items-center justify-between border-b border-[#19F7FC]/30">
+        <div class="flex items-center gap-3">
+          <img src="assets/logos/libdose_pwa_icon_192.png" alt="LibDose Icon" class="w-10 h-10 rounded-xl shadow-md border border-[#19F7FC]/40 shrink-0">
+          <div>
+            <h3 class="text-sm sm:text-base font-black text-white">نصب اپلیکیشن لیب‌دوز (LibDose)</h3>
+            <p class="text-[11px] text-cyan-200">دسترسی آفلاین سریع از صفحه اصلی گوشی</p>
+          </div>
+        </div>
+        <button type="button" onclick="closePwaInstallModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 flex items-center justify-center transition cursor-pointer">
+          ✕
+        </button>
+      </div>
+
+      <!-- محتوای راهنمای آیفون (iOS Safari) -->
+      <div id="pwaIosGuideSection" class="p-5 space-y-4">
+        <div class="bg-cyan-50 border border-cyan-200 p-3 rounded-2xl text-xs text-cyan-950 font-bold flex items-center gap-2">
+          <i data-lucide="smartphone" class="w-5 h-5 text-cyan-700 shrink-0"></i>
+          <span>راهنمای ۳ ثانیه‌ای نصب در گوشی آیفون (Safari):</span>
+        </div>
+
+        <ol class="space-y-3 text-xs sm:text-sm text-slate-700 font-medium">
+          <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-2xl border border-slate-200">
+            <span class="w-6 h-6 rounded-full bg-[#061937] text-[#19F7FC] font-black flex items-center justify-center text-xs shrink-0">۱</span>
+            <div>
+              <span>در نوار پایین مرورگر سافاری، دکمه اشتراک‌گذاری </span>
+              <strong class="text-cyan-700 inline-flex items-center gap-1 font-black">Share (⎋)</strong>
+              <span> را لمس کنید.</span>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-2xl border border-slate-200">
+            <span class="w-6 h-6 rounded-full bg-[#061937] text-[#19F7FC] font-black flex items-center justify-center text-xs shrink-0">۲</span>
+            <div>
+              <span>در منوی بازشده به سمت پایین اسکرول کرده و گزینه </span>
+              <strong class="text-cyan-700 font-black">«Add to Home Screen» (افزودن به صفحه اصلی ➕)</strong>
+              <span> را انتخاب کنید.</span>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-2xl border border-slate-200">
+            <span class="w-6 h-6 rounded-full bg-[#061937] text-[#19F7FC] font-black flex items-center justify-center text-xs shrink-0">۳</span>
+            <div>
+              <span>در گوشه بالا سمت راست دکمه </span>
+              <strong class="text-emerald-700 font-black">«Add» (افزودن)</strong>
+              <span> را بزنید تا آیکون رسمی برنامه فوراً روی صفحه گوشی شما قرار گیرد.</span>
+            </div>
+          </li>
+        </ol>
+
+        <button type="button" onclick="closePwaInstallModal()" class="w-full py-3 rounded-2xl bg-[#061937] hover:bg-[#0A2447] text-white font-black text-sm shadow-md transition cursor-pointer">
+          متوجه شدم
+        </button>
+      </div>
+
+      <!-- محتوای راهنمای اندروید و سایر مرورگرها -->
+      <div id="pwaAndroidGuideSection" class="p-5 space-y-4 hidden">
+        <div class="bg-cyan-50 border border-cyan-200 p-3 rounded-2xl text-xs text-cyan-950 font-bold flex items-center gap-2">
+          <i data-lucide="smartphone" class="w-5 h-5 text-cyan-700 shrink-0"></i>
+          <span>نصب روی گوشی‌های اندروید (Chrome):</span>
+        </div>
+
+        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          برای نصب مستقیم اپلیکیشن روی صفحه اصلی گوشی، روی دکمه زیر کلیک کنید:
+        </p>
+
+        <button type="button" onclick="executeNativeInstallPrompt()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-[#19F7FC] to-cyan-500 hover:brightness-110 text-[#061937] font-black text-sm shadow-lg transition flex items-center justify-center gap-2 cursor-pointer">
+          <i data-lucide="download" class="w-5 h-5"></i>
+          <span>نصب فوری اپلیکیشن</span>
+        </button>
+
+        <p class="text-[11px] text-slate-500 bg-slate-50 p-3 rounded-xl border border-slate-200 leading-relaxed">
+          💡 در صورتی که دکمه بالا در مرورگر شما عمل نکرد، کافیست منوی سه‌نقطه (⋮) در بالای مرورگر کروم را لمس کرده و گزینه <strong>«Install app»</strong> یا <strong>«افزودن به صفحه اصلی»</strong> را انتخاب فرمایید.
+        </p>
+
+        <button type="button" onclick="closePwaInstallModal()" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition cursor-pointer">
+          بستن راهنما
+        </button>
+      </div>
+
+    </div>
+  </div>
+
   <!-- ============================================== -->
   <!-- MODAL: ورود و ثبت‌نام اعضا و همکاران (Auth & Registration Modal) -->
   <!-- ============================================== -->

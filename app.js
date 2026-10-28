@@ -2600,63 +2600,68 @@ function renderSingleDrugCardHtml(drug) {
   const speciesIconsPreview = getSpeciesIconsPreviewHtml(drug);
 
   return `
-    <div id="card_${drug.id}" class="drug-card bg-white rounded-3xl p-5 border ${isExpanded ? 'border-[#0590D5] shadow-md ring-2 ring-[#00CAE0]/20' : 'border-[#D0D7E8] shadow-2xs hover:border-[#0590D5] hover:shadow-sm'} transition-all duration-200 flex flex-col justify-between">
+    <div id="card_${drug.id}" class="drug-card bg-white rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 border ${isExpanded ? 'border-[#0590D5] shadow-md ring-2 ring-[#00CAE0]/20' : 'border-[#D0D7E8] shadow-2xs hover:border-[#0590D5] hover:shadow-sm'} transition-all duration-200 flex flex-col justify-between">
       <div>
-        <!-- هدر کلیک‌پذیر کارت جهت باز/بسته شدن آکاردئونی -->
+        <!-- هدر کلیک‌پذیر کارت: در موبایل یک ردیف خلوت و خوانا، در دسکتاپ کامل -->
         <div class="cursor-pointer select-none group" onclick="toggleDrugCard('${drug.id}', event)">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <div class="flex-1">
-              <div class="flex items-center gap-2 flex-wrap">
-                <h3 class="text-base font-black text-[#0A2447] group-hover:text-[#0590D5] transition">
+          
+          <!-- ردیف اصلی عنوان و اطلاعات کلیدی دارو -->
+          <div class="flex items-center justify-between gap-2.5">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap sm:flex-nowrap">
+                <h3 class="text-base sm:text-lg font-black text-[#0A2447] group-hover:text-[#0590D5] transition truncate">
                   ${drug.generic_name_fa}
                 </h3>
-                <span class="text-[10px] px-2 py-0.5 rounded-lg font-bold whitespace-nowrap ${badgeClass}">
+                <span class="text-[10px] sm:text-xs px-2 py-0.5 rounded-lg font-bold whitespace-nowrap ${badgeClass}">
                   ${drug.category_badge}
                 </span>
+                ${xylitolBadge}
               </div>
-              <p class="text-xs text-[#0590D5] latin-text font-mono mt-0.5 font-semibold"><bdi dir="ltr" class="latin-text">&lrm;${drug.generic_name_en || ''}&lrm;</bdi></p>
+              <div class="flex items-center gap-1.5 sm:gap-2 text-xs text-slate-500 mt-0.5">
+                <span class="text-[#0590D5] latin-text font-mono font-bold truncate"><bdi dir="ltr">&lrm;${drug.generic_name_en || ''}&lrm;</bdi></span>
+                <span class="text-slate-300">•</span>
+                <span class="text-[11px] text-slate-600 font-medium truncate">${drug.therapeutic_category_fa || drug.drug_class_fa}</span>
+              </div>
             </div>
 
-            <div class="flex items-center gap-1.5 shrink-0 no-card-toggle">
-              <button type="button" onclick="toggleFavoriteDrug('${drug.id}', event)" class="p-1 rounded-xl hover:bg-amber-50 transition" title="نشان کردن در علاقه‌مندی‌ها">
+            <!-- سمت چپ: ستاره نشان + دکمه باز کردن -->
+            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0 no-card-toggle">
+              <button type="button" onclick="toggleFavoriteDrug('${drug.id}', event)" class="p-1.5 rounded-xl hover:bg-amber-50 transition" title="نشان کردن در علاقه‌مندی‌ها">
                 ${isFavoriteDrug(drug.id) 
                   ? '<i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-400 transition-transform hover:scale-110"></i>' 
                   : '<i data-lucide="star" class="w-4 h-4 text-slate-300 hover:text-amber-500 transition-colors"></i>'}
               </button>
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E6F7FC] border border-[#B2E7F7] flex items-center justify-center text-[#0070A8] transition group-hover:bg-[#D4F2FB]">
+                <i id="card_toggle_icon_${drug.id}" data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-4 h-4"></i>
+              </div>
             </div>
           </div>
 
-          <!-- برچسب‌های تفکیک رده درمانی و سیستم اندام دارونامه بالینی -->
-          <div class="flex items-center gap-1.5 flex-wrap mb-1.5">
-            <span class="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80">
-              <i data-lucide="${drug.therapeutic_icon || 'pill'}" class="w-3.5 h-3.5 text-teal-600"></i>
-              <span>${drug.therapeutic_category_fa || drug.drug_class_fa}</span>
-            </span>
-            ${drug.organ_system_fa ? `
-              <span class="text-[10px] font-medium px-2 py-0.5 rounded-lg bg-teal-50/80 text-teal-900 border border-teal-200/50">
-                🎯 ${drug.organ_system_fa}
+          <!-- جزئیات پیش‌نمایش تکمیلی: در دسکتاپ نمایش داده می‌شود و در موبایل خلوت می‌ماند تا ردیف‌ها شلوغ نشوند -->
+          <div class="hidden sm:block mt-2 pt-2 border-t border-slate-100">
+            <div class="flex items-center gap-1.5 flex-wrap mb-1.5">
+              <span class="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80">
+                <i data-lucide="${drug.therapeutic_icon || 'pill'}" class="w-3.5 h-3.5 text-teal-600"></i>
+                <span>${drug.therapeutic_category_fa || drug.drug_class_fa}</span>
               </span>
-            ` : ''}
+              ${drug.organ_system_fa ? `
+                <span class="text-[10px] font-medium px-2 py-0.5 rounded-lg bg-teal-50/80 text-teal-900 border border-teal-200/50">
+                  🎯 ${drug.organ_system_fa}
+                </span>
+              ` : ''}
+            </div>
+            <p class="text-xs text-slate-500 line-clamp-1 mb-2">${fixBidiParentheses(drug.drug_class_fa)}</p>
+            ${renderDrugSpecialtyPillsHtml(drug)}
+            ${speciesIconsPreview}
           </div>
 
-          <!-- رده فارماکولوژی تفصیلی با پرانتزهای ایزوله‌شده -->
-          <p class="text-xs text-slate-500 line-clamp-1 mb-2">${fixBidiParentheses(drug.drug_class_fa)}</p>
-
-          <!-- برچسب‌های سریع فوق‌تخصصی دارونامه بالینی -->
-          ${renderDrugSpecialtyPillsHtml(drug)}
-
-          <!-- پیش‌نمایش گونه‌های حیوانی تحت پوشش در حالت فشرده -->
-          ${speciesIconsPreview}
-
-          <!-- نوار کلیک برای باز کردن یا بستن دوزها و جزئیات -->
-          <div class="mt-3 pt-2.5 border-t border-[#E9EDF7] flex items-center justify-between text-xs font-bold text-[#0070A8] group-hover:text-[#0590D5] transition">
-            <span id="card_toggle_text_${drug.id}" class="flex items-center gap-1 text-[11px]">
+          <!-- نوار لمسی باز و بسته کردن دوزها -->
+          <div class="mt-2 pt-1.5 border-t border-[#E9EDF7] flex items-center justify-between text-xs font-bold text-[#0070A8]">
+            <span id="card_toggle_text_${drug.id}" class="flex items-center gap-1 text-[11px] sm:text-xs">
               <i data-lucide="layers" class="w-3.5 h-3.5 text-teal-600"></i>
-              <span>${isExpanded ? 'بستن توضیحات و دوزها' : 'مشاهده دوزها، سرنگ و جزئیات'}</span>
+              <span>${isExpanded ? 'بستن دوزها و سرنگ' : 'مشاهده دوزها و حجم سرنگ'}</span>
             </span>
-            <div class="w-6 h-6 rounded-full bg-[#E6F7FC] border border-[#B2E7F7] flex items-center justify-center text-[#0070A8] transition group-hover:bg-[#D4F2FB]">
-              <i id="card_toggle_icon_${drug.id}" data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-4 h-4"></i>
-            </div>
+            <span class="text-[10px] text-slate-400 font-normal sm:hidden">لمس برای جزئیات ▾</span>
           </div>
         </div>
 
@@ -10682,13 +10687,150 @@ function renderWildlifeProtocolCard(p) { return renderUnifiedSpecialtyProtocolCa
 // ثبت سرویس ورکر برای کاربری کاملاً آفلاین (PWA Offline Service Worker)
 if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js?v=2.10.0').then((reg) => {
+    navigator.serviceWorker.register('sw.js?v=3.20.0').then((reg) => {
       reg.update();
-      console.log('✅ لیب‌دوز (LibDose): سرویس ورکر PWA v3.0 با موفقیت به‌روزرسانی شد:', reg.scope);
+      console.log('✅ لیب‌دوز (LibDose): سرویس ورکر PWA v3.20 با موفقیت فعال شد:', reg.scope);
     }).catch((err) => {
       console.log('⚠️ خطا در ثبت سرویس ورکر PWA:', err);
     });
   });
+}
+
+// ==============================================
+// موتور هوشمند نصب وب‌اپلیکیشن (PWA Cross-Platform Install Engine)
+// ==============================================
+let deferredInstallPrompt = null;
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    console.log('✅ [PWA] رویداد beforeinstallprompt با موفقیت ثبت شد.');
+    showPwaInstallPrompts();
+  });
+
+  window.addEventListener('appinstalled', () => {
+    console.log('🎉 [PWA] اپلیکیشن لیب‌دوز با موفقیت روی دستگاه کاربر نصب شد.');
+    deferredInstallPrompt = null;
+    hidePwaInstallPrompts();
+  });
+
+  // چک کردن هنگام لود صفحه برای نمایش بنر در صورت عدم نصب
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      if (!isAppAlreadyInstalled()) {
+        showPwaInstallPrompts();
+      }
+    }, 1500);
+  });
+}
+
+function isAppAlreadyInstalled() {
+  if (typeof window === 'undefined') return false;
+  return window.matchMedia('(display-mode: standalone)').matches || 
+         window.navigator.standalone === true ||
+         document.referrer.includes('android-app://');
+}
+
+function isIosDevice() {
+  if (typeof window === 'undefined') return false;
+  return /iphone|ipad|ipod/i.test(window.navigator.userAgent) && !window.MSStream;
+}
+
+function showPwaInstallPrompts() {
+  if (isAppAlreadyInstalled()) return;
+
+  const headerBtn = document.getElementById('pwaInstallHeaderBtn');
+  if (headerBtn) headerBtn.classList.remove('hidden');
+
+  const bottomBanner = document.getElementById('mobileInstallFloatingBanner');
+  if (bottomBanner && !sessionStorage.getItem('dismissed_install_banner')) {
+    bottomBanner.classList.remove('hidden');
+  }
+}
+
+function hidePwaInstallPrompts() {
+  const headerBtn = document.getElementById('pwaInstallHeaderBtn');
+  if (headerBtn) headerBtn.classList.add('hidden');
+
+  const bottomBanner = document.getElementById('mobileInstallFloatingBanner');
+  if (bottomBanner) bottomBanner.classList.add('hidden');
+}
+
+function triggerPwaInstall() {
+  if (deferredInstallPrompt) {
+    deferredInstallPrompt.prompt();
+    deferredInstallPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('کاربر نصب را تایید کرد.');
+        hidePwaInstallPrompts();
+      }
+      deferredInstallPrompt = null;
+    });
+  } else if (isIosDevice()) {
+    openIosInstallModal();
+  } else {
+    openGenericInstallGuideModal();
+  }
+}
+
+function executeNativeInstallPrompt() {
+  if (deferredInstallPrompt) {
+    deferredInstallPrompt.prompt();
+    deferredInstallPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        hidePwaInstallPrompts();
+      }
+      deferredInstallPrompt = null;
+    });
+    closePwaInstallModal();
+  } else {
+    alert('برای نصب در کروم اندروید، لطفاً منوی ۳ نقطه (⋮) بالای صفحه را لمس کرده و گزینه Install app یا "افزودن به صفحه اصلی" را بزنید.');
+  }
+}
+
+function dismissMobileInstallBanner() {
+  sessionStorage.setItem('dismissed_install_banner', '1');
+  const bottomBanner = document.getElementById('mobileInstallFloatingBanner');
+  if (bottomBanner) bottomBanner.classList.add('hidden');
+}
+
+function openIosInstallModal() {
+  const modal = document.getElementById('pwaInstallModal');
+  const iosGuide = document.getElementById('pwaIosGuideSection');
+  const androidGuide = document.getElementById('pwaAndroidGuideSection');
+  if (modal) {
+    modal.classList.remove('hidden');
+    if (iosGuide) iosGuide.classList.remove('hidden');
+    if (androidGuide) androidGuide.classList.add('hidden');
+    if (window.lucide) lucide.createIcons();
+  }
+}
+
+function openGenericInstallGuideModal() {
+  const modal = document.getElementById('pwaInstallModal');
+  const iosGuide = document.getElementById('pwaIosGuideSection');
+  const androidGuide = document.getElementById('pwaAndroidGuideSection');
+  if (modal) {
+    modal.classList.remove('hidden');
+    if (iosGuide) iosGuide.classList.add('hidden');
+    if (androidGuide) androidGuide.classList.remove('hidden');
+    if (window.lucide) lucide.createIcons();
+  }
+}
+
+function closePwaInstallModal() {
+  const modal = document.getElementById('pwaInstallModal');
+  if (modal) modal.classList.add('hidden');
+}
+
+if (typeof window !== 'undefined') {
+  window.triggerPwaInstall = triggerPwaInstall;
+  window.executeNativeInstallPrompt = executeNativeInstallPrompt;
+  window.dismissMobileInstallBanner = dismissMobileInstallBanner;
+  window.openIosInstallModal = openIosInstallModal;
+  window.openGenericInstallGuideModal = openGenericInstallGuideModal;
+  window.closePwaInstallModal = closePwaInstallModal;
 }
 
 
