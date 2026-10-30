@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین لیب‌دوز (LibDose PWA Offline Engine - LibVet)
- * نسخه ۳.۲۱.۰ - بهینه‌سازی لوکس تک‌ردیفی کارت‌ها و هدر موبایل بدون بهم‌ریختگی
+ * نسخه ۳.۲۲.۰ - ارتقای کامل مونوگراف و موتور محاسبه حجم سرنگ و دوز منبوتون (ژنابیل)
  */
-const CACHE_NAME = 'libdose-cache-v3.21.0-mobile-single-row-clean-layout';
+const CACHE_NAME = 'libdose-cache-v3.22.0-menbutone-dosage-engine-upgrade';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

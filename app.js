@@ -424,13 +424,13 @@ function getSpeciesForDrug(drug) {
   const p = getDrugSpecialtyProfile(drug);
   const list = [];
   
-  if (drug.species_guide?.canine || drug.species_dosing?.canine) list.push('canine');
-  if (drug.species_guide?.feline || drug.species_dosing?.feline) list.push('feline');
-  if (drug.species_guide?.equine || drug.species_dosing?.equine) list.push('equine');
-  if (drug.species_guide?.bovine || drug.species_dosing?.bovine || drug.species_dosing?.ruminant) list.push('bovine');
-  if (drug.species_guide?.ovine_caprine || drug.species_dosing?.ovine_caprine || drug.species_dosing?.ruminant) list.push('ovine_caprine');
-  if (drug.species_guide?.poultry || drug.species_dosing?.poultry || drug.species_dosing?.avian) list.push('poultry');
+  if (drug.species_guide?.bovine || drug.species_dosing?.bovine || drug.species_dosing?.ruminant || drug.bovine_dosing) list.push('bovine');
+  if (drug.species_guide?.ovine_caprine || drug.species_dosing?.ovine_caprine || drug.species_dosing?.ruminant || drug.ovine_caprine_dosing) list.push('ovine_caprine');
+  if (drug.species_guide?.equine || drug.species_dosing?.equine || drug.equine_dosing) list.push('equine');
+  if (drug.species_guide?.canine || drug.species_dosing?.canine || drug.canine_dosing) list.push('canine');
+  if (drug.species_guide?.feline || drug.species_dosing?.feline || drug.feline_dosing) list.push('feline');
   if (p.hasCamelidUse || p.isCamelidFatal || drug.species_guide?.camelids || drug.species_dosing?.camelids || drug.species_dosing?.camelid) list.push('camelids');
+  if (drug.species_guide?.poultry || drug.species_dosing?.poultry || drug.species_dosing?.avian || drug.poultry_dosing) list.push('poultry');
   if (p.hasAquaticsUse || drug.species_guide?.aquatics || drug.species_guide?.aquatic || drug.species_dosing?.aquatics || drug.species_dosing?.aquatic) list.push('aquatics');
   if (p.hasWildlifeUse || drug.species_guide?.wildlife || drug.species_dosing?.wildlife) list.push('wildlife');
   
@@ -778,14 +778,41 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
     }
   }
 
+  // اگر راهنمای اختصاصی در species_guide موجود نبود، بازیابی خودکار از species_dosing یا فیلدهای دوز اختصاصی
+  if (!guide) {
+    const rawSpDose = drug.species_dosing?.[speciesKey] || drug[`${speciesKey}_dosing`];
+    if (rawSpDose) {
+      const doseStr = typeof rawSpDose === 'string' ? rawSpDose : (rawSpDose.dose || rawSpDose.regimen || JSON.stringify(rawSpDose));
+      const isContra = typeof doseStr === 'string' && (doseStr.includes('منع') || doseStr.includes('فاقد کاربرد') || doseStr.includes('ممنوع'));
+      const isNotRec = typeof doseStr === 'string' && (doseStr.includes('توصیه نمی‌شود') || doseStr.includes('فاقد توصیه'));
+      guide = {
+        status: isContra ? 'contraindicated' : (isNotRec ? 'not_recommended' : 'active'),
+        warning_title: isContra ? `منع مصرف در ${spMeta.label}` : `عدم توصیه در ${spMeta.label}`,
+        warning_body: doseStr,
+        indication: `پروتکل بالینی در ${spMeta.label}`,
+        range_mg: doseStr,
+        formulation: drug.formulations ? drug.formulations[0] : 'فرم دارویی استاندارد',
+        route: doseStr.includes('IV') ? 'وریدی (IV)' : (doseStr.includes('IM') ? 'عضلانی (IM)' : (doseStr.includes('SC') ? 'زیرجلدی (SC)' : (doseStr.includes('PO') ? 'خوراکی (PO)' : 'خوراکی / تزریقی'))),
+        pearl: `دوز مرجع استاندارد بالینی استخراج‌شده از مونوگراف دارونامه.`
+      };
+    }
+  }
+
   // اگر راهنما رشته متنی ساده یا آبجکت خلاصه بود
   if (typeof guide === 'string') {
+    const rawSpDose = drug.species_dosing?.[speciesKey] || drug[`${speciesKey}_dosing`];
+    const hasDoseNumbers = /\d/.test(guide);
+    const doseText = (!hasDoseNumbers && rawSpDose && typeof rawSpDose === 'string') ? rawSpDose : guide;
+    const isContra = guide.includes('منع') || guide.includes('ممنوع') || guide.includes('فاقد کاربرد');
+    const isNotRec = guide.includes('توصیه نمی‌شود') || guide.includes('فاقد توصیه');
     guide = {
-      status: 'active',
+      status: isContra ? 'contraindicated' : (isNotRec ? 'not_recommended' : 'active'),
+      warning_title: isContra ? `منع مصرف در ${spMeta.label}` : (isNotRec ? `عدم توصیه در ${spMeta.label}` : `راهنمای مصرف در ${spMeta.label}`),
+      warning_body: guide,
       indication: `درمان فارماکولوژیک در ${spMeta.label}`,
-      range_mg: guide,
-      formulation: 'فرم دارویی استاندارد',
-      route: 'خوراکی / تزریقی',
+      range_mg: doseText,
+      formulation: drug.formulations ? drug.formulations[0] : 'فرم دارویی استاندارد',
+      route: doseText.includes('IV') ? 'وریدی (IV)' : (doseText.includes('IM') ? 'عضلانی (IM)' : (doseText.includes('SC') ? 'زیرجلدی (SC)' : (doseText.includes('PO') ? 'خوراکی (PO)' : 'خوراکی / تزریقی'))),
       pearl: `پایش دقیق علائم بالینی در ${spMeta.label} الزامی است.`
     };
   } else if (guide && typeof guide === 'object' && guide.status && !guide.range_mg && !guide.warning_title && !guide.warning_body) {
@@ -852,6 +879,25 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
     selectedForm = injectableForms.find(f => f.id === activeFormId) || injectableForms[0];
     if (selectedForm && selectedForm.concentration_mg_ml > 0 && selectedForm.dose_mg_kg > 0) {
       calculatedMl = (currentPatientWeight * selectedForm.dose_mg_kg) / selectedForm.concentration_mg_ml;
+    }
+  }
+
+  // استخراج یا محاسبه هوشمند ml_per_kg در صورت وجود اطلاعات دوز در فیلدهای مکمل
+  if (!calculatedMl && (!guide.ml_per_kg || guide.ml_per_kg <= 0) && guide.status !== 'contraindicated' && guide.status !== 'not_recommended') {
+    const instantRule = drug.instant_species_ml_kg?.[speciesKey];
+    let parsedMlPerKg = null;
+    if (typeof instantRule === 'string') {
+      const match = instantRule.match(/([\d\.]+)\s*(?:cc|mL)\/kg/i);
+      if (match) parsedMlPerKg = parseFloat(match[1]);
+    }
+    if (!parsedMlPerKg && guide.range_ml) {
+      const match1 = String(guide.range_ml).match(/([\d\.]+)\s*(?:cc|mL)\/kg/i);
+      const match2 = String(guide.range_ml).match(/([\d\.]+)\s*(?:cc|mL)\s*(?:به ازای هر|\/)\s*([\d\.]+)\s*(?:کیلوگرم|kg)/i);
+      if (match1) parsedMlPerKg = parseFloat(match1[1]);
+      else if (match2) parsedMlPerKg = parseFloat(match2[1]) / parseFloat(match2[2]);
+    }
+    if (parsedMlPerKg && !isNaN(parsedMlPerKg) && parsedMlPerKg > 0) {
+      guide.ml_per_kg = parsedMlPerKg;
     }
   }
 

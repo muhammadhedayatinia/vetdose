@@ -8352,6 +8352,35 @@
       "BSAVA Small Animal Formulary - Part A: Canine and Feline (12th Ed)",
       "Blackwell's Five-Minute Veterinary Drug Consult: Canine and Feline"
     ]
+  },
+  {
+    "drugs": [
+      "menbutone",
+      "calcium_borogluconate"
+    ],
+    "severity": "major",
+    "title": "🔴 ناسازگاری فیزیکی حاد و رسوب فوری در سرنگ یا ست سرم (Precipitate)",
+    "mechanism": "منبوتون ساختار اسید آلی دارد و در تماس با املاح کلسیم (کلسیم بروکلوکونات دامی یا کلسیم گلوکونات) فوراً رسوب نمک کلسیمی غیرمحلول و کدر تشکیل می‌دهد که خطر آمبولی کشنده دارد.",
+    "clinical_effect": "اختلاط در یک سرنگ یا تجویز در یک رگ وریدی بدون فلاش کامل خط سرم مطلقاً ممنوع است. در دام مبتلا به تب شیر یا کتواسیدوز که نیاز به کلسیم و منبوتون دارد، از دو موضع یا رگ جداگانه تزریق شود.",
+    "sources": [
+      "British Pharmacopoeia (Veterinary) 2024",
+      "Plumb's Veterinary Drug Handbook (10th Ed)",
+      "Large Animal Internal Medicine (6th Ed)"
+    ]
+  },
+  {
+    "drugs": [
+      "menbutone",
+      "penicillin_g_procaine"
+    ],
+    "severity": "major",
+    "title": "🔴 ناسازگاری شیمیایی و رسوب متقابل در سرنگ (Syringe Incompatibility)",
+    "mechanism": "واکنش فیزیکوشیمیایی سریع منبوتون با سوسپانسیون‌های پنی‌سیلین که باعث لخته شدن حامل سوسپانسیون و غیرفعال شدن حلقه بتالاکتام پنی‌سیلین می‌گردد.",
+    "clinical_effect": "هرگز منبوتون با هیچ‌یک از اشکال پنی‌سیلین در یک سرنگ مخلوط نشود؛ تزریق در دو موضع عضلانی مجزا با دو سرنگ جداگانه انجام گیرد.",
+    "sources": [
+      "British Pharmacopoeia (Veterinary) 2024",
+      "The Merck Veterinary Manual (11th Ed)"
+    ]
   }
 ];
   root.PLUMBS_INTERACTION_MATRIX = matrix;
