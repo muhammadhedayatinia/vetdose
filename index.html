@@ -3944,7 +3944,7 @@
               <ul class="space-y-1.5 text-[11px] text-slate-600 border-t border-slate-200/80 pt-2.5">
                 <li class="flex items-center gap-1.5">
                   <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
-                  <span>دسترسی به تمام ۵۰۷ داروی فارماکوپه</span>
+                  <span>دسترسی به تمام ۱,۱۲۰ داروی فارماکوپه</span>
                 </li>
                 <li class="flex items-center gap-1.5">
                   <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
@@ -4077,7 +4077,7 @@
           </div>
           
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-            <button type="button" onclick="handleSimulatedOnlinePayment()" class="py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl text-xs transition flex items-center justify-center gap-2 cursor-pointer shadow">
+            <button type="button" onclick="openVpnWarningModal()" class="py-3 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-black rounded-xl text-xs transition flex items-center justify-center gap-2 cursor-pointer shadow-md">
               <i data-lucide="credit-card" class="w-4 h-4"></i>
               <span>پرداخت آنلاین با کلیه کارت‌های شتاب (شاپرک)</span>
             </button>
@@ -4096,7 +4096,7 @@
           </div>
           <div class="divide-y divide-slate-100 text-[11px]">
             <div class="p-2.5 flex items-center justify-between bg-white">
-              <span class="text-slate-700">دسترسی به مونوگراف کامل ۵۰۷ داروی ایران</span>
+              <span class="text-slate-700">دسترسی به مونوگراف کامل ۱,۱۲۰ داروی فارماکوپه دامپزشکی ایران و جهان</span>
               <div class="flex items-center gap-6">
                 <span class="text-emerald-600 font-bold">نسخه رایگان: ✅</span>
                 <span class="text-emerald-600 font-bold">نسخه VIP: ✅</span>
@@ -4214,6 +4214,166 @@
     </div>
   </div>
 
+
+
+  
+  <!-- ============================================== -->
+  <!-- MODAL: پیش‌هشدار خاموش کردن VPN قبل از اتصال شاپرک -->
+  <!-- ============================================== -->
+  <div id="vpnWarningModal" onclick="if (event.target === this) closeVpnWarningModal();" class="fixed inset-0 z-50 hidden overflow-y-auto modal-overlay flex items-center justify-center p-3 sm:p-5">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[92vh] flex flex-col shadow-2xl border border-amber-300/80 overflow-hidden transform transition-all text-right">
+      
+      <!-- هدر اخطار زرد-کهربایی -->
+      <div class="px-6 py-4 bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600 text-slate-950 flex items-center justify-between border-b border-amber-400 shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-2xl bg-white/30 text-slate-950 flex items-center justify-center font-black shadow-sm shrink-0">
+            <i data-lucide="shield-alert" class="w-5 h-5 text-slate-950"></i>
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-black text-slate-950">توجه مهم قبل از اتصال به درگاه شاپرک</h3>
+            <p class="text-[10px] text-amber-950/80 font-bold">الزام خاموش‌بودن فیلترشکن (VPN) طبق قوانین بانک مرکزی</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeVpnWarningModal()" class="text-slate-900 hover:text-white p-1 rounded-lg hover:bg-black/10 transition cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- محتوای راهنما و توصیه -->
+      <div class="p-5 sm:p-6 space-y-4 text-xs text-slate-700">
+        <div class="p-3.5 bg-amber-50 border border-amber-200 rounded-2xl leading-relaxed text-amber-950">
+          <p class="font-bold mb-2 flex items-center gap-1.5 text-amber-900">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600 shrink-0"></i>
+            <span>همکار گرامی، لطفاً فیلترشکن (VPN / پروکسی) خود را خاموش فرمایید:</span>
+          </p>
+          <p class="text-[11px] text-slate-600 leading-normal">
+            کلیه سرورهای سوییچ شاپرک و درگاه‌های پرداخت اینترنتی بانک‌های کشور، به دلیل پروتکل‌های امنیتی ملی، درخواست‌های دارای IP خارجی را مسدود یا معلق می‌کنند. جهت جلوگیری از کسر ناموفق وجه و ابطال توکن تراکنش، لطفاً پیش از کلیک روی دکمه ورود به بانک، فیلترشکن خود را قطع نمایید.
+          </p>
+        </div>
+
+        <!-- خلاصه فاکتور -->
+        <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200 flex items-center justify-between text-xs">
+          <div>
+            <span class="text-slate-500 block text-[10px]">پلن انتخابی:</span>
+            <span class="font-black text-slate-900" id="vpnWarningPlanTitle">اشتراک VIP</span>
+          </div>
+          <div class="text-left">
+            <span class="text-slate-500 block text-[10px]">مبلغ نهایی قابل پرداخت:</span>
+            <span class="font-black font-mono text-emerald-600 text-sm" id="vpnWarningPlanAmount">۰ تومان</span>
+          </div>
+        </div>
+
+        <!-- دکمه‌های عملیاتی -->
+        <div class="space-y-2 pt-2">
+          <button type="button" onclick="proceedToBankGateway()" class="w-full py-3 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-black rounded-xl text-xs transition flex items-center justify-center gap-2 cursor-pointer shadow-md">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            <span>فیلترشکن خاموش است؛ انتقال به درگاه پرداخت شاپرک</span>
+          </button>
+          <button type="button" onclick="openCardToCardModal()" class="w-full py-2.5 px-4 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-bold rounded-xl text-xs transition flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="receipt" class="w-4 h-4 text-slate-500"></i>
+            <span>روش جایگزین: کارت به کارت بدون نیاز به رمز پویا</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ============================================== -->
+  <!-- MODAL: پرداخت کارت به کارت و ثبت فیش (Card-to-Card) -->
+  <!-- ============================================== -->
+  <div id="cardToCardModal" onclick="if (event.target === this) closeCardToCardModal();" class="fixed inset-0 z-50 hidden overflow-y-auto modal-overlay flex items-center justify-center p-3 sm:p-5">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden transform transition-all text-right">
+      
+      <!-- هدر کارت به کارت -->
+      <div class="px-6 py-4 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white flex items-center justify-between border-b border-indigo-500/30 shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-black shadow-sm shrink-0">
+            <i data-lucide="credit-card" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-black text-white">پرداخت کارت به کارت و فعال‌سازی فوری</h3>
+            <p class="text-[10px] text-slate-300">مناسب همکارانی که رمز پویای فعال یا امکان پرداخت آنلاین ندارند</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeCardToCardModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- محتوای کارت به کارت -->
+      <div class="p-5 sm:p-6 overflow-y-auto space-y-4 text-xs text-slate-700">
+        
+        <!-- کارت شیک مشخصات حساب -->
+        <div class="p-4 bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-950 text-white rounded-2xl border border-indigo-500/40 shadow-lg space-y-3 relative overflow-hidden">
+          <div class="flex items-center justify-between text-[11px] text-indigo-300">
+            <span class="flex items-center gap-1 font-bold">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span>حساب رسمی مدیریت نرم‌افزار لیب‌دوز</span>
+            </span>
+            <span class="text-[10px] bg-indigo-500/30 text-indigo-200 border border-indigo-400/40 px-2 py-0.5 rounded-full font-mono">بانک سامان</span>
+          </div>
+
+          <!-- شماره کارت -->
+          <div class="bg-black/30 p-2.5 rounded-xl border border-white/10 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] text-slate-400 block mb-0.5">شماره کارت جهت واریز:</span>
+              <span class="font-mono font-black text-amber-300 text-sm tracking-wider" id="c2cCardNumberText">۶۲۱۹-۸۶۱۰-۳۳۴۴-۵۵۶۶</span>
+            </div>
+            <button type="button" onclick="copyCardNumberToClipboard()" class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 active:scale-95 text-xs text-white transition flex items-center gap-1 cursor-pointer">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span>کپی</span>
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between text-[11px] pt-1 border-t border-white/10">
+            <span class="text-slate-300">به نام: <strong class="text-white">دکتر محمد هدایتی‌نیا (لیب‌دوز)</strong></span>
+            <span class="text-amber-300 font-bold" id="c2cPayableAmount">مبلغ: ۲۴۹,۰۰۰ تومان</span>
+          </div>
+        </div>
+
+        <!-- فرم ثبت مشخصات فیش -->
+        <div class="space-y-3 bg-slate-50 p-4 rounded-2xl border border-slate-200">
+          <span class="font-black text-slate-800 text-xs block">فرم ثبت مشخصات و فعال‌سازی فوری:</span>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">نام و نام خانوادگی:</label>
+              <input type="text" id="c2cDoctorName" placeholder="دکتر..." class="w-full p-2 bg-white border border-slate-300 rounded-xl text-xs outline-none focus:border-indigo-500">
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">شماره همراه خریدار:</label>
+              <input type="tel" id="c2cDoctorPhone" placeholder="۰۹۱۲۰۰۰۰۰۰۰" class="w-full p-2 bg-white border border-slate-300 rounded-xl text-xs outline-none focus:border-indigo-500 font-mono text-left">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">۴ رقم آخر کارت یا شماره پیگیری:</label>
+              <input type="text" id="c2cTrackingCode" placeholder="مثال: ۸۹۰۴ یا کد پیگیری فیش" class="w-full p-2 bg-white border border-slate-300 rounded-xl text-xs outline-none focus:border-indigo-500 font-mono">
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">تاریخ و ساعت واریز:</label>
+              <input type="text" id="c2cPaymentTime" placeholder="امروز - ساعت ۱۲:۳۰" class="w-full p-2 bg-white border border-slate-300 rounded-xl text-xs outline-none focus:border-indigo-500">
+            </div>
+          </div>
+
+          <div class="p-2.5 bg-emerald-50 rounded-xl border border-emerald-200 text-[10px] text-emerald-800 flex items-start gap-1.5">
+            <i data-lucide="zap" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+            <span><strong>فعال‌سازی آنی موقت:</strong> به محض ثبت این فرم، دسترسی آزمایشی ۲۴ ساعته شما بی‌درنگ فعال می‌شود تا در فرایند معاینه بالینی متوقف نگردید؛ تایید قطعی حداکثر ظرف ۳۰ دقیقه انجام می‌پذیرد.</span>
+          </div>
+
+          <button type="button" onclick="submitCardToCardReceipt()" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-xl text-xs transition cursor-pointer shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="check" class="w-4 h-4"></i>
+            <span>ثبت فیش و فعال‌سازی فوری اشتراک</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 
 
   <!-- ============================================== -->

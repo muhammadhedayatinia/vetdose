@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین لیب‌دوز (LibDose PWA True Offline Engine - LibVet)
- * نسخه ۳.۲۵.۰ - کش کامل لوکال و آفلاین واقعی با پشتیبانی کامل از ignoreSearch و Stale-While-Revalidate
+ * نسخه ۳.۲۶.۰ - کش کامل لوکال و آفلاین واقعی با پشتیبانی کامل از ignoreSearch و Stale-While-Revalidate
  */
-const CACHE_NAME = 'libdose-cache-v3.25.0-true-offline-engine';
+const CACHE_NAME = 'libdose-cache-v3.26.0-commercial-ready-engine';
 
 const ASSETS_TO_CACHE = [
   './',

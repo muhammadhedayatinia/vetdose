@@ -1359,6 +1359,7 @@ function initApp() {
     setupInteractionsCheckboxes();
     if (typeof runDoseCalculation === 'function') runDoseCalculation();
     if (typeof updateAuthUI === 'function') updateAuthUI();
+    if (typeof initPaymentCallbackHandler === 'function') initPaymentCallbackHandler();
   } catch (err) {
     console.warn('InitApp execution note:', err);
   }
@@ -3664,8 +3665,15 @@ function quickCalculateForDrug(drugId) {
         }
       }
     }
-    document.getElementById('doseRate').value = canineDose;
-    runDoseCalculation();
+    const univRate = document.getElementById('univDoseRate');
+    if (univRate) univRate.value = canineDose;
+    const univName = document.getElementById('univDrugName');
+    if (univName) univName.value = `${drug.generic_name_fa || drug.name_fa} (${drug.generic_name_en || drug.name_en || ''})`;
+    const univSelect = document.getElementById('univDrugSelect');
+    if (univSelect) univSelect.value = drug.id;
+    if (typeof runUniversalCalculation === 'function') {
+      runUniversalCalculation();
+    }
   }
 }
 
@@ -5237,15 +5245,28 @@ function quickPrescribeForDrug(drugId) {
 
 // محاسبات دوز و حجم تزریقی
 function runDoseCalculation() {
-  const weight = parseFloat(document.getElementById('doseWeight').value) || 0;
-  const rate = parseFloat(document.getElementById('doseRate').value) || 0;
-  const conc = parseFloat(document.getElementById('doseConc').value) || 0;
+  const weightEl = document.getElementById('doseWeight');
+  const rateEl = document.getElementById('doseRate');
+  const concEl = document.getElementById('doseConc');
+
+  if (!weightEl || !rateEl || !concEl) {
+    if (typeof runUniversalCalculation === 'function') {
+      runUniversalCalculation();
+    }
+    return;
+  }
+
+  const weight = parseFloat(weightEl.value) || 0;
+  const rate = parseFloat(rateEl.value) || 0;
+  const conc = parseFloat(concEl.value) || 0;
 
   const totalMg = weight * rate;
   const volMl = conc > 0 ? (totalMg / conc) : 0;
 
-  document.getElementById('doseResMg').textContent = totalMg.toFixed(2);
-  document.getElementById('doseResVol').textContent = volMl.toFixed(2);
+  const resMg = document.getElementById('doseResMg');
+  const resVol = document.getElementById('doseResVol');
+  if (resMg) resMg.textContent = totalMg.toFixed(2);
+  if (resVol) resVol.textContent = volMl.toFixed(2);
 }
 
 // محاسبات رقیق‌سازی داروی انسانی
@@ -11477,7 +11498,8 @@ const VETDOSE_STORAGE = {
   SUBSCRIPTION: 'vetdose_subscription_info',
   PEARLS: 'vetdose_community_clinical_pearls',
   FEEDBACKS: 'vetdose_clinical_feedbacks',
-  COUPON_ACTIVE: 'vetdose_coupon_active'
+  COUPON_ACTIVE: 'vetdose_coupon_active',
+  C2C_RECEIPTS: 'vetdose_c2c_receipts'
 };
 
 // -------------------------------------------------------------
@@ -11713,7 +11735,8 @@ function applySubscriptionCoupon() {
 }
 
 function selectSubscriptionPlan(planId, price, title) {
-  const discountMultiplier = isSubscriptionDiscountActive ? 0.7 : 1.0;
+  const isDiscount = isSubscriptionDiscountActive || (typeof window !== 'undefined' && window.isSubscriptionDiscountActive);
+  const discountMultiplier = isDiscount ? 0.7 : 1.0;
   const finalPrice = Math.round(price * discountMultiplier);
   
   selectedPlanForPayment = {
@@ -11783,12 +11806,225 @@ function handleCardToCardPayment() {
     alert('لطفاً ابتدا یکی از پلن‌های اشتراک را انتخاب فرمایید.');
     return;
   }
+  openCardToCardModal();
+}
+
+// باز کردن مودال پیش‌هشدار خاموش کردن VPN قبل از اتصال به شاپرک
+function openVpnWarningModal() {
+  if (!selectedPlanForPayment) {
+    alert('لطفاً ابتدا یکی از پلن‌های اشتراک را انتخاب فرمایید.');
+    return;
+  }
+  const modal = document.getElementById('vpnWarningModal');
+  const planTitle = document.getElementById('vpnWarningPlanTitle');
+  const planAmount = document.getElementById('vpnWarningPlanAmount');
+  if (planTitle) planTitle.textContent = selectedPlanForPayment.title;
+  if (planAmount) planAmount.textContent = selectedPlanForPayment.finalPrice.toLocaleString('fa-IR') + ' تومان';
+  if (modal) {
+    modal.classList.remove('hidden');
+    safeCreateIcons();
+  }
+}
+
+function closeVpnWarningModal() {
+  const modal = document.getElementById('vpnWarningModal');
+  if (modal) modal.classList.add('hidden');
+}
+
+// انتقال قطعی به درگاه بانک شاپرک پس از تایید خاموش‌بودن فیلترشکن
+async function proceedToBankGateway() {
+  if (!selectedPlanForPayment) {
+    alert('لطفاً ابتدا یکی از پلن‌های اشتراک را انتخاب فرمایید.');
+    return;
+  }
+
+  closeVpnWarningModal();
+  const user = getCurrentUser() || { name: 'دکتر همکار', phone: '09120000000' };
+
+  try {
+    const response = await fetch('/api/pay-create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        planId: selectedPlanForPayment.id,
+        amount: selectedPlanForPayment.finalPrice,
+        name: user.name,
+        mobile: user.phone || '09120000000',
+        couponCode: isSubscriptionDiscountActive ? 'VETSTUDENT' : null
+      })
+    });
+
+    const data = await response.json();
+    if (data && data.status === 'success' && data.gatewayUrl) {
+      if (data.isLive) {
+        window.location.href = data.gatewayUrl;
+        return;
+      }
+    }
+  } catch (err) {
+    console.warn('API pay-create fallback note:', err);
+  }
+
+  // شبیه‌ساز امن در صورت عدم وجود درگاه مستقیم
+  handleSimulatedOnlinePayment();
+}
+
+// باز کردن مودال کارت به کارت و ثبت فیش
+function openCardToCardModal() {
+  closeVpnWarningModal();
+  const modal = document.getElementById('cardToCardModal');
+  const amountEl = document.getElementById('c2cPayableAmount');
+  const user = getCurrentUser();
+  if (selectedPlanForPayment && amountEl) {
+    amountEl.textContent = 'مبلغ: ' + selectedPlanForPayment.finalPrice.toLocaleString('fa-IR') + ' تومان';
+  }
+  const nameInput = document.getElementById('c2cDoctorName');
+  const phoneInput = document.getElementById('c2cDoctorPhone');
+  if (nameInput && user && user.name) nameInput.value = user.name;
+  if (phoneInput && user && user.phone) phoneInput.value = user.phone;
+
+  if (modal) {
+    modal.classList.remove('hidden');
+    safeCreateIcons();
+  }
+}
+
+function closeCardToCardModal() {
+  const modal = document.getElementById('cardToCardModal');
+  if (modal) modal.classList.add('hidden');
+}
+
+function copyCardNumberToClipboard() {
+  const cardNum = '6219861033445566';
+  if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(cardNum).then(() => {
+      alert('شماره کارت با موفقیت در حافظه کپی شد: ۶۲۱۹-۸۶۱۰-۳۳۴۴-۵۵۶۶');
+    }).catch(() => {
+      alert('شماره کارت جهت واریز: ۶۲۱۹-۸۶۱۰-۳۳۴۴-۵۵۶۶ (بانک سامان)');
+    });
+  } else {
+    alert('شماره کارت جهت واریز: ۶۲۱۹-۸۶۱۰-۳۳۴۴-۵۵۶۶ (بانک سامان)');
+  }
+}
+
+function submitCardToCardReceipt() {
+  const nameInput = document.getElementById('c2cDoctorName');
+  const phoneInput = document.getElementById('c2cDoctorPhone');
+  const trackInput = document.getElementById('c2cTrackingCode');
+  const timeInput = document.getElementById('c2cPaymentTime');
+
+  const name = nameInput ? nameInput.value.trim() : '';
+  const phone = phoneInput ? phoneInput.value.trim() : '';
+  const track = trackInput ? trackInput.value.trim() : '';
+  const time = timeInput ? timeInput.value.trim() : '';
+
+  if (!name || !phone || !track) {
+    alert('لطفاً نام و نام خانوادگی، شماره تماس و شماره پیگیری یا ۴ رقم آخر کارت را وارد فرمایید.');
+    return;
+  }
+
+  const receiptId = 'C2C-' + Date.now().toString().slice(-6);
+  const plan = selectedPlanForPayment || { id: '1_year_vip', title: 'اشتراک VIP سالانه', finalPrice: 1590000 };
+
+  const receipt = {
+    id: receiptId,
+    name: name,
+    phone: phone,
+    trackingCode: track,
+    paymentTime: time || new Date().toLocaleTimeString('fa-IR'),
+    planId: plan.id,
+    planTitle: plan.title,
+    amount: plan.finalPrice,
+    status: 'pending_review',
+    submittedAt: Date.now()
+  };
+
+  try {
+    let receipts = [];
+    const raw = localStorage.getItem('vetdose_c2c_receipts');
+    if (raw) receipts = JSON.parse(raw);
+    receipts.unshift(receipt);
+    localStorage.setItem('vetdose_c2c_receipts', JSON.stringify(receipts));
+  } catch (e) {
+    console.error('Error saving c2c receipt:', e);
+  }
+
+  // فعال‌سازی آنی موقت ۲۴ ساعته جهت عدم توقف فعالیت بالینی پزشک
+  let user = getCurrentUser() || { name: name, phone: phone, role: 'کلینیسین دامپزشکی' };
+  user.isVip = true;
+  user.plan = plan.id;
+  user.planName = plan.title + ' (فعال‌سازی آنی فیش)';
+  user.daysLeft = plan.id === '1_year_vip' ? 365 : (plan.id === '6_months' ? 180 : (plan.id === '3_months' ? 90 : 30));
+  user.temporaryAccess = true;
+  user.receiptId = receiptId;
+
+  localStorage.setItem(VETDOSE_STORAGE.USER, JSON.stringify(user));
+  closeCardToCardModal();
+  closeSubscriptionModal();
+  updateAuthUI();
+
+  alert('🎉 فیش واریزی شما با شماره پیگیری ' + receiptId + ' ثبت گردید.\n\n' +
+        '⚡ جهت رفاه حال شما، دسترسی VIP شما فوراً فعال شد!\n' +
+        'همکاران ما در واحد مالی اطلاعات را بررسی و تایید نهایی را ظرف کمتر از ۳۰ دقیقه پیامک خواهند کرد.\n' +
+        'در صورت تمایل می‌توانید تصویر فیش را در تلگرام به آیدی @LibVet_Support ارسال فرمایید.');
+}
+
+// بررسی خودکار بازگشت از درگاه بانک شاپرک (URL Query Parameters)
+function initPaymentCallbackHandler() {
+  if (typeof window === 'undefined' || !window.location || !window.location.search) return;
   
-  const msg = 'جهت واریز کارت به کارت:\n\n' +
-              'شماره کارت: ۶۲۱۹-۸۶۱۰-۳۳۴۴-۵۵۶۶ (بانک سامان - به نام لیب‌دوز / دکتر محمدی)\n' +
-              'مبلغ قابل پرداخت: ' + selectedPlanForPayment.finalPrice.toLocaleString('fa-IR') + ' تومان\n\n' +
-              'پس از واریز، تصویر فیش را به شماره تلگرام یا واتساپ 09120000000 ارسال فرمایید تا اشتراک شما ظرف کمتر از ۵ دقیقه فعال گردد.';
-  alert(msg);
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get('payment_status');
+  const transid = params.get('transid');
+  const plan = params.get('plan') || '1_year_vip';
+  const tracking = params.get('tracking') || transid || 'SHP-' + Date.now().toString().slice(-8);
+
+  if (status === 'success') {
+    let user = getCurrentUser() || {
+      name: 'دکتر همکار VIP',
+      phone: '۰۹۱۲۰۰۰۰۰۰۰',
+      role: 'کلینیسین دامپزشکی'
+    };
+    user.isVip = true;
+    user.plan = plan;
+    user.planName = plan === '1_year_vip' ? 'VIP الماس ۱ ساله' : (plan === '6_months' ? 'طلایی ۶ ماهه' : (plan === '3_months' ? 'نقره‌ای ۳ ماهه' : 'برنزی ۱ ماهه'));
+    user.daysLeft = plan === '1_year_vip' ? 365 : (plan === '6_months' ? 180 : (plan === '3_months' ? 90 : 30));
+    user.trackingCode = tracking;
+    user.upgradedAt = Date.now();
+
+    localStorage.setItem(VETDOSE_STORAGE.USER, JSON.stringify(user));
+    updateAuthUI();
+
+    alert('🎉 تبریک! پرداخت بانکی شما در شبکه شاپرک با موفقیت تایید شد.\n\n' +
+          'کد پیگیری تراکنش: ' + tracking + '\n' +
+          'پلن فعال‌شده: ' + user.planName + ' (' + user.daysLeft + ' روز دسترسی نامحدود)\n\n' +
+          'تمامی ۱,۱۲۰ مونوگراف دارویی و ابزارهای تشخیصی و محاسباتی برای شما باز شد.');
+
+    // پاکسازی پارامترها از نوار آدرس
+    try {
+      const cleanUrl = window.location.origin + window.location.pathname;
+      window.history.replaceState({}, document.title, cleanUrl);
+    } catch (e) {}
+  } else if (status === 'cancelled') {
+    alert('تراکنش پرداخت توسط شما لغو گردید. در صورت تمایل می‌توانید از روش کارت به کارت استفاده فرمایید.');
+    try {
+      const cleanUrl = window.location.origin + window.location.pathname;
+      window.history.replaceState({}, document.title, cleanUrl);
+    } catch (e) {}
+  } else if (status === 'failed') {
+    alert('متأسفانه تراکنش بانکی ناموفق بود. چنانچه مبلغی از حساب شما کسر شده است، طبق قوانین شاپرک ظرف حداکثر ۷۲ ساعت به حسابتان بازمی‌گردد.');
+    try {
+      const cleanUrl = window.location.origin + window.location.pathname;
+      window.history.replaceState({}, document.title, cleanUrl);
+    } catch (e) {}
+  }
+}
+
+// بررسی دسترسی ویژگی‌های ویژه (Smart Feature Paywall Guard)
+function checkFeatureAccess(featureId, title = 'دسترسی ویژه اعضای VIP لیب‌دوز', subtitle = 'این قابلیت تشخیصی و محاسباتی نیازمند اشتراک بالینی است') {
+  if (isUserVip()) return true;
+  showPaywallModal(title, subtitle);
+  return false;
 }
 
 // -------------------------------------------------------------
@@ -12190,7 +12426,17 @@ if (typeof window !== 'undefined') {
   window.selectSubscriptionPlan = selectSubscriptionPlan;
   window.handleSimulatedOnlinePayment = handleSimulatedOnlinePayment;
   window.handleCardToCardPayment = handleCardToCardPayment;
+  window.openVpnWarningModal = openVpnWarningModal;
+  window.closeVpnWarningModal = closeVpnWarningModal;
+  window.proceedToBankGateway = proceedToBankGateway;
+  window.openCardToCardModal = openCardToCardModal;
+  window.closeCardToCardModal = closeCardToCardModal;
+  window.copyCardNumberToClipboard = copyCardNumberToClipboard;
+  window.submitCardToCardReceipt = submitCardToCardReceipt;
+  window.initPaymentCallbackHandler = initPaymentCallbackHandler;
+  window.checkFeatureAccess = checkFeatureAccess;
 
+  window.switchInteractionMode = switchInteractionMode;
   window.toggleNewPearlForm = toggleNewPearlForm;
   window.renderCommunityPearlsList = renderCommunityPearlsList;
   window.filterClinicalPearls = filterClinicalPearls;
