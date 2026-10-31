@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین لیب‌دوز (LibDose PWA Offline Engine - LibVet)
- * نسخه ۳.۲۲.۰ - ارتقای کامل مونوگراف و موتور محاسبه حجم سرنگ و دوز منبوتون (ژنابیل)
+ * نسخه ۳.۲۳.۰ - تکمیل جامع ۱,۱۲۰ مونوگراف دارویی، دوزهای چندگونه‌ای، فرمولاسیون و راهنمای تجویز
  */
-const CACHE_NAME = 'libdose-cache-v3.22.0-menbutone-dosage-engine-upgrade';
+const CACHE_NAME = 'libdose-cache-v3.23.0-all-1120-drugs-complete-dosing-engine';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

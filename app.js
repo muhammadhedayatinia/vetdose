@@ -273,16 +273,72 @@ let currentPatientWeight = 10; // پیش‌فرض وزن بیمار: ۱۰ کیل
 
 // فراداده جامع ۹ گونه جانوری در کارت بالینی لیب‌دوز (LibDose)
 const CARD_SPECIES_META = {
-  canine: { key: 'canine', label: 'سگ', enLabel: 'Canine' },
-  feline: { key: 'feline', label: 'گربه', enLabel: 'Feline' },
-  equine: { key: 'equine', label: 'اسب', enLabel: 'Equine' },
-  bovine: { key: 'bovine', label: 'گاو', enLabel: 'Bovine' },
-  ovine_caprine: { key: 'ovine_caprine', label: 'گوسفند/بز', enLabel: 'Ovine/Cap' },
-  poultry: { key: 'poultry', label: 'طیور', enLabel: 'Poultry' },
-  camelids: { key: 'camelids', label: 'شترسانان', enLabel: 'Camelids' },
-  aquatics: { key: 'aquatics', label: 'آبزیان', enLabel: 'Aquatics' },
-  wildlife: { key: 'wildlife', label: 'حیات‌وحش', enLabel: 'Wildlife' }
+  canine: { key: 'canine', label: 'سگ', enLabel: 'Canine', icon: '🐕' },
+  feline: { key: 'feline', label: 'گربه', enLabel: 'Feline', icon: '🐈' },
+  equine: { key: 'equine', label: 'اسب', enLabel: 'Equine', icon: '🐎' },
+  bovine: { key: 'bovine', label: 'گاو', enLabel: 'Bovine', icon: '🐄' },
+  ovine_caprine: { key: 'ovine_caprine', label: 'گوسفند/بز', enLabel: 'Ovine/Cap', icon: '🐑' },
+  poultry: { key: 'poultry', label: 'طیور', enLabel: 'Poultry', icon: '🐔' },
+  camelids: { key: 'camelids', label: 'شترسانان', enLabel: 'Camelids', icon: '🐪' },
+  aquatics: { key: 'aquatics', label: 'آبزیان', enLabel: 'Aquatics', icon: '🐟' },
+  wildlife: { key: 'wildlife', label: 'حیات‌وحش', enLabel: 'Wildlife', icon: '🦌' }
 };
+
+// نگاشت تمام نام‌های مستعار و کلیدهای گونه‌ها به کلید استاندارد کارت
+const CARD_SPECIES_ALIASES = {
+  canine: ['canine', 'dog'],
+  feline: ['feline', 'cat'],
+  equine: ['equine', 'horse'],
+  bovine: ['bovine', 'cattle', 'ruminants', 'ruminant', 'large_animal'],
+  ovine_caprine: ['ovine_caprine', 'sheep_goat', 'ovine', 'caprine'],
+  poultry: ['poultry', 'birds_poultry', 'poultry_avian', 'avian', 'birds', 'poultry_backyard'],
+  camelids: ['camelids', 'camel', 'camelid'],
+  aquatics: ['aquatics', 'aquatic'],
+  wildlife: ['wildlife', 'exotics', 'exotic']
+};
+
+function parseNumericDose(doseStr) {
+  if (!doseStr || typeof doseStr !== 'string') return null;
+  const mRange = doseStr.match(/([\d\.]+)\s*(?:-|to|تا|الی|–|—)\s*([\d\.]+)\s*(?:mg|mcg|IU|g|mL|cc)/i);
+  if (mRange) return (parseFloat(mRange[1]) + parseFloat(mRange[2])) / 2;
+  const mSingle = doseStr.match(/([\d\.]+)\s*(?:mg|mcg|IU|g|mL|cc)/i);
+  if (mSingle) return parseFloat(mSingle[1]);
+  return null;
+}
+
+function extractDoseFromRaw(raw) {
+  if (!raw) return null;
+  let dose = '', indication = '', route = '', frequency = '', notes = '', status = 'active';
+  if (Array.isArray(raw) && raw.length > 0) {
+    const item = raw[0];
+    indication = item.indication || item.indications || '';
+    if (item.dose) dose = item.dose;
+    else if (item.dose_low || item.dose_high) {
+      const u = item.unit || 'mg/kg';
+      dose = (item.dose_low === item.dose_high || !item.dose_high)
+        ? `${item.dose_low} ${u}`
+        : `${item.dose_low} - ${item.dose_high} ${u}`;
+    }
+    route = item.route || '';
+    frequency = item.frequency || '';
+    notes = item.notes || '';
+    if (item.status) status = item.status;
+    if (raw.length > 1) {
+      const more = raw.slice(1).map(x => (x.indication ? `${x.indication}: ` : '') + (x.dose || '') + (x.route ? ` (${x.route})` : '')).filter(Boolean).join(' | ');
+      if (more) notes = notes ? `${notes} (سایر موارد: ${more})` : `سایر کاربردها: ${more}`;
+    }
+  } else if (typeof raw === 'object') {
+    indication = raw.indication || raw.indications || '';
+    dose = raw.dose || raw.dose_rate || raw.dose_range || raw.regimen || '';
+    route = raw.route || '';
+    frequency = raw.frequency || '';
+    notes = raw.notes || '';
+    if (raw.status) status = raw.status;
+  } else if (typeof raw === 'string') {
+    dose = raw;
+  }
+  return { dose, indication, route, frequency, notes, status };
+}
 
 // تولید نشانه متنی مینیمال گونه‌ها (بدون شلوغی و استیکر)
 function getSpecies3dIconHtml(spKey, sizeClass = '') {
@@ -421,18 +477,26 @@ function getDrugSpecialtyProfile(drug) {
 // استخراج گونه‌های تحت پوشش این دارو بر اساس دوز و شواهد بالینی دارونامه بالینی
 function getSpeciesForDrug(drug) {
   if (!drug) return ['canine', 'feline'];
-  const p = getDrugSpecialtyProfile(drug);
+  const p = (typeof getDrugSpecialtyProfile === 'function') ? getDrugSpecialtyProfile(drug) : {};
   const list = [];
-  
-  if (drug.species_guide?.bovine || drug.species_dosing?.bovine || drug.species_dosing?.ruminant || drug.bovine_dosing) list.push('bovine');
-  if (drug.species_guide?.ovine_caprine || drug.species_dosing?.ovine_caprine || drug.species_dosing?.ruminant || drug.ovine_caprine_dosing) list.push('ovine_caprine');
-  if (drug.species_guide?.equine || drug.species_dosing?.equine || drug.equine_dosing) list.push('equine');
-  if (drug.species_guide?.canine || drug.species_dosing?.canine || drug.canine_dosing) list.push('canine');
-  if (drug.species_guide?.feline || drug.species_dosing?.feline || drug.feline_dosing) list.push('feline');
-  if (p.hasCamelidUse || p.isCamelidFatal || drug.species_guide?.camelids || drug.species_dosing?.camelids || drug.species_dosing?.camelid) list.push('camelids');
-  if (drug.species_guide?.poultry || drug.species_dosing?.poultry || drug.species_dosing?.avian || drug.poultry_dosing) list.push('poultry');
-  if (p.hasAquaticsUse || drug.species_guide?.aquatics || drug.species_guide?.aquatic || drug.species_dosing?.aquatics || drug.species_dosing?.aquatic) list.push('aquatics');
-  if (p.hasWildlifeUse || drug.species_guide?.wildlife || drug.species_dosing?.wildlife) list.push('wildlife');
+
+  const hasSp = (aliases) => {
+    return aliases.some(a => 
+      (drug.species_guide && drug.species_guide[a]) ||
+      (drug.species_dosing && drug.species_dosing[a]) ||
+      drug[a + '_dosing']
+    );
+  };
+
+  if (hasSp(CARD_SPECIES_ALIASES.bovine)) list.push('bovine');
+  if (hasSp(CARD_SPECIES_ALIASES.ovine_caprine)) list.push('ovine_caprine');
+  if (hasSp(CARD_SPECIES_ALIASES.equine)) list.push('equine');
+  if (hasSp(CARD_SPECIES_ALIASES.canine)) list.push('canine');
+  if (hasSp(CARD_SPECIES_ALIASES.feline)) list.push('feline');
+  if (p.hasCamelidUse || p.isCamelidFatal || hasSp(CARD_SPECIES_ALIASES.camelids)) list.push('camelids');
+  if (hasSp(CARD_SPECIES_ALIASES.poultry)) list.push('poultry');
+  if (p.hasAquaticsUse || hasSp(CARD_SPECIES_ALIASES.aquatics)) list.push('aquatics');
+  if (p.hasWildlifeUse || hasSp(CARD_SPECIES_ALIASES.wildlife)) list.push('wildlife');
   
   if (list.length === 0) list.push('canine', 'feline');
   return list;
@@ -625,8 +689,18 @@ function copyCardTabletPrescription(drugId) {
 
 // تولید HTML کادر بزرگ و خوانای بالینی دارونامه بالینی برای یک گونه مشخص
 function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
-  let guide = drug.species_guide ? (drug.species_guide[speciesKey] || (speciesKey === 'aquatics' ? (drug.species_guide.aquatics || drug.species_guide.aquatic) : null)) : null;
+  const aliases = CARD_SPECIES_ALIASES[speciesKey] || [speciesKey];
   const spMeta = CARD_SPECIES_META[speciesKey] || { label: speciesKey, icon: '🐾' };
+
+  let guide = null;
+  if (drug.species_guide) {
+    for (const a of aliases) {
+      if (drug.species_guide[a]) {
+        guide = drug.species_guide[a];
+        break;
+      }
+    }
+  }
 
   // ۱. استخراج خودکار راهنمای بالینی شترسانان (Camelids)
   if (!guide && speciesKey === 'camelids') {
@@ -778,54 +852,77 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
     }
   }
 
-  // اگر راهنمای اختصاصی در species_guide موجود نبود، بازیابی خودکار از species_dosing یا فیلدهای دوز اختصاصی
-  if (!guide) {
-    const rawSpDose = drug.species_dosing?.[speciesKey] || drug[`${speciesKey}_dosing`];
-    if (rawSpDose) {
-      const doseStr = typeof rawSpDose === 'string' ? rawSpDose : (rawSpDose.dose || rawSpDose.regimen || JSON.stringify(rawSpDose));
-      const isContra = typeof doseStr === 'string' && (doseStr.includes('منع') || doseStr.includes('فاقد کاربرد') || doseStr.includes('ممنوع'));
-      const isNotRec = typeof doseStr === 'string' && (doseStr.includes('توصیه نمی‌شود') || doseStr.includes('فاقد توصیه'));
-      guide = {
-        status: isContra ? 'contraindicated' : (isNotRec ? 'not_recommended' : 'active'),
-        warning_title: isContra ? `منع مصرف در ${spMeta.label}` : `عدم توصیه در ${spMeta.label}`,
-        warning_body: doseStr,
-        indication: `پروتکل بالینی در ${spMeta.label}`,
-        range_mg: doseStr,
-        formulation: drug.formulations ? drug.formulations[0] : 'فرم دارویی استاندارد',
-        route: doseStr.includes('IV') ? 'وریدی (IV)' : (doseStr.includes('IM') ? 'عضلانی (IM)' : (doseStr.includes('SC') ? 'زیرجلدی (SC)' : (doseStr.includes('PO') ? 'خوراکی (PO)' : 'خوراکی / تزریقی'))),
-        pearl: `دوز مرجع استاندارد بالینی استخراج‌شده از مونوگراف دارونامه.`
-      };
+  // استخراج خودکار دوز بالینی از species_dosing با پشتیبانی از تمام نام‌های مستعار
+  let rawSpDose = null;
+  if (drug.species_dosing) {
+    for (const a of aliases) {
+      if (drug.species_dosing[a]) {
+        rawSpDose = drug.species_dosing[a];
+        break;
+      }
+    }
+  }
+  if (!rawSpDose) {
+    for (const a of aliases) {
+      if (drug[a + '_dosing']) {
+        rawSpDose = drug[a + '_dosing'];
+        break;
+      }
     }
   }
 
-  // اگر راهنما رشته متنی ساده یا آبجکت خلاصه بود
+  const parsedRaw = extractDoseFromRaw(rawSpDose);
+
+  // اگر راهنمای اختصاصی در species_guide موجود نبود، بازیابی خودکار از parsedRaw
+  if (!guide && parsedRaw && (parsedRaw.dose || parsedRaw.indication)) {
+    const doseStr = parsedRaw.dose || 'طبق پروتکل بالینی مونوگراف';
+    const isContra = doseStr.includes('منع') || doseStr.includes('فاقد کاربرد') || doseStr.includes('ممنوع') || parsedRaw.status === 'contraindicated' || (parsedRaw.notes && parsedRaw.notes.includes('منع'));
+    const isNotRec = doseStr.includes('توصیه نمی‌شود') || doseStr.includes('فاقد توصیه') || parsedRaw.status === 'not_recommended';
+    guide = {
+      status: isContra ? 'contraindicated' : (isNotRec ? 'not_recommended' : (parsedRaw.status === 'caution' ? 'caution' : 'active')),
+      warning_title: isContra ? `منع مصرف در ${spMeta.label}` : (isNotRec ? `عدم توصیه در ${spMeta.label}` : ''),
+      warning_body: parsedRaw.notes || doseStr,
+      indication: parsedRaw.indication || drug.drug_class_fa || `پروتکل بالینی در ${spMeta.label}`,
+      range_mg: doseStr,
+      dose_mg_kg: parseNumericDose(doseStr) || undefined,
+      formulation: drug.formulations ? drug.formulations[0] : 'فرم دارویی استاندارد',
+      route: parsedRaw.route || (doseStr.includes('IV') ? 'وریدی (IV)' : (doseStr.includes('IM') ? 'عضلانی (IM)' : (doseStr.includes('SC') ? 'زیرجلدی (SC)' : (doseStr.includes('PO') ? 'خوراکی (PO)' : 'خوراکی / تزریقی')))),
+      frequency: parsedRaw.frequency || 'طبق رژیم فارماکولوژی',
+      pearl: parsedRaw.notes || `دوز مرجع استاندارد بالینی استخراج‌شده از مونوگراف دارونامه.`
+    };
+  }
+
+  // اگر راهنما رشته متنی ساده بود
   if (typeof guide === 'string') {
-    const rawSpDose = drug.species_dosing?.[speciesKey] || drug[`${speciesKey}_dosing`];
     const hasDoseNumbers = /\d/.test(guide);
-    const doseText = (!hasDoseNumbers && rawSpDose && typeof rawSpDose === 'string') ? rawSpDose : guide;
+    const doseText = (!hasDoseNumbers && parsedRaw && parsedRaw.dose) ? parsedRaw.dose : guide;
     const isContra = guide.includes('منع') || guide.includes('ممنوع') || guide.includes('فاقد کاربرد');
     const isNotRec = guide.includes('توصیه نمی‌شود') || guide.includes('فاقد توصیه');
+    const indText = (parsedRaw && parsedRaw.indication) ? parsedRaw.indication : (drug.drug_class_fa || `درمان فارماکولوژیک در ${spMeta.label}`);
+    const notesText = hasDoseNumbers ? guide : (parsedRaw && parsedRaw.notes ? `${guide} — ${parsedRaw.notes}` : guide);
     guide = {
       status: isContra ? 'contraindicated' : (isNotRec ? 'not_recommended' : 'active'),
       warning_title: isContra ? `منع مصرف در ${spMeta.label}` : (isNotRec ? `عدم توصیه در ${spMeta.label}` : `راهنمای مصرف در ${spMeta.label}`),
       warning_body: guide,
-      indication: `درمان فارماکولوژیک در ${spMeta.label}`,
+      indication: indText,
       range_mg: doseText,
+      dose_mg_kg: parseNumericDose(doseText) || undefined,
       formulation: drug.formulations ? drug.formulations[0] : 'فرم دارویی استاندارد',
-      route: doseText.includes('IV') ? 'وریدی (IV)' : (doseText.includes('IM') ? 'عضلانی (IM)' : (doseText.includes('SC') ? 'زیرجلدی (SC)' : (doseText.includes('PO') ? 'خوراکی (PO)' : 'خوراکی / تزریقی'))),
-      pearl: `پایش دقیق علائم بالینی در ${spMeta.label} الزامی است.`
+      route: (parsedRaw && parsedRaw.route) ? parsedRaw.route : (doseText.includes('IV') ? 'وریدی (IV)' : (doseText.includes('IM') ? 'عضلانی (IM)' : (doseText.includes('SC') ? 'زیرجلدی (SC)' : (doseText.includes('PO') ? 'خوراکی (PO)' : 'خوراکی / تزریقی')))),
+      pearl: notesText || `پایش دقیق علائم بالینی در ${spMeta.label} الزامی است.`
     };
-  } else if (guide && typeof guide === 'object' && guide.status && !guide.range_mg && !guide.warning_title && !guide.warning_body) {
-    guide = {
-      status: (typeof guide.status === 'string' && (guide.status.includes('منع') || guide.status === 'contraindicated')) ? 'contraindicated' : 'active',
-      warning_title: guide.warning || `راهنمای مصرف در ${spMeta.label}`,
-      warning_body: guide.summary || guide.warning || '',
-      indication: guide.summary || `پروتکل بالینی در ${spMeta.label}`,
-      range_mg: guide.summary || '-',
-      formulation: 'اشکال دارویی استاندارد',
-      route: 'خوراکی / تزریقی',
-      pearl: guide.warning || `پایش دقیق علائم بالینی در ${spMeta.label} الزامی است.`
-    };
+  } else if (guide && typeof guide === 'object') {
+    // اگر guide آبجکت بود ولی فاقد دوز مشخص عددی بود اما parsedRaw دوز داشت
+    if ((!guide.range_mg || guide.range_mg === '-' || !/\d/.test(guide.range_mg)) && parsedRaw && parsedRaw.dose) {
+      guide.range_mg = parsedRaw.dose;
+      if (!guide.dose_mg_kg) guide.dose_mg_kg = parseNumericDose(parsedRaw.dose) || undefined;
+      if (!guide.indication && parsedRaw.indication) guide.indication = parsedRaw.indication;
+      if (!guide.route && parsedRaw.route) guide.route = parsedRaw.route;
+      if (!guide.frequency && parsedRaw.frequency) guide.frequency = parsedRaw.frequency;
+      if (parsedRaw.notes) guide.pearl = guide.pearl ? `${guide.pearl} — ${parsedRaw.notes}` : parsedRaw.notes;
+    } else if (guide.range_mg && !guide.dose_mg_kg) {
+      guide.dose_mg_kg = parseNumericDose(guide.range_mg) || undefined;
+    }
   }
 
   if (!guide) {
@@ -877,8 +974,11 @@ function getPlumbsSpeciesBoxHtml(drug, speciesKey) {
   if (injectableForms.length > 0) {
     const activeFormId = activeCardFormulation[drug.id] || (injectableForms.find(f => f.is_default)?.id || injectableForms[0].id);
     selectedForm = injectableForms.find(f => f.id === activeFormId) || injectableForms[0];
-    if (selectedForm && selectedForm.concentration_mg_ml > 0 && selectedForm.dose_mg_kg > 0) {
-      calculatedMl = (currentPatientWeight * selectedForm.dose_mg_kg) / selectedForm.concentration_mg_ml;
+    if (selectedForm && selectedForm.concentration_mg_ml > 0) {
+      const effDose = selectedForm.dose_mg_kg || guide?.dose_mg_kg || (guide?.range_mg ? parseNumericDose(guide.range_mg) : null);
+      if (effDose && effDose > 0) {
+        calculatedMl = (currentPatientWeight * effDose) / selectedForm.concentration_mg_ml;
+      }
     }
   }
 
