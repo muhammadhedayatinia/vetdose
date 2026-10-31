@@ -10,25 +10,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Early Service Worker Registration for Instant Offline PWA Access -->
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Vazirmatn', 'Yekan Bakh', 'YekanBakh', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').then(function(reg) {
+        reg.update();
+      }).catch(function() {});
+    }
+  </script>
+
+  <!-- Tailwind CSS (Local Vendor for True Offline Access + CDN Fallback) -->
+  <script src="assets/vendor/tailwind.min.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+  <script>
+    if (window.tailwind) {
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Vazirmatn', 'Yekan Bakh', 'YekanBakh', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            }
           }
         }
-      }
-    };
+      };
+    }
   </script>
   
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide Icons (Local Vendor for True Offline Access + CDN Fallback) -->
+  <script src="assets/vendor/lucide.min.js"></script>
+  <script>
+    if (typeof lucide === 'undefined') {
+      document.write('<script src="https://unpkg.com/lucide@latest"><\/script>');
+    }
+  </script>
   
   <!-- Custom Style -->
-  <link rel="stylesheet" href="style.css?v=3.24.0">
+  <link rel="stylesheet" href="style.css?v=3.25.0">
 
   <!-- Favicon & Touch Icon (Exact LibDose Square App Icon) -->
   <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
@@ -685,7 +706,40 @@
     <div id="activeCategoryBanner" class="hidden mb-3"></div>
 
     <div id="drugsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-4 md:gap-5">
-      <!-- کارت‌ها به صورت پویا با جاوااسکریپت تزریق می‌شوند -->
+      <!-- اسکلت انیمیشنی لودینگ پزشکی برای نمایش آنی و رفع هرگونه حس کندی یا حالت ناقص -->
+      <div id="drugsPreloaderSkeleton" class="col-span-full py-10 flex flex-col items-center justify-center text-center">
+        <div class="relative w-14 h-14 sm:w-16 sm:h-16 mb-3">
+          <div class="absolute inset-0 rounded-full border-4 border-cyan-200 animate-ping opacity-60"></div>
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-tr from-[#0A2447] to-[#0590D5] flex items-center justify-center text-cyan-300 shadow-lg shadow-cyan-500/25">
+            <svg class="w-7 h-7 sm:w-8 sm:h-8 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-sm sm:text-base font-black text-[#0A2447]">در حال بارگذاری پایگاه جامع ۱,۱۲۰ داروی پلامبز...</h3>
+        <p class="text-[11px] sm:text-xs text-slate-500 mt-1">آماده‌سازی موتور محاسباتی دوزها و فعال‌سازی بانک اطلاعاتی آفلاین</p>
+      </div>
+
+      <!-- ۳ کارت شبیه‌ساز اسکلت با پالس نرم برای جلوگیری از پرش صفحه -->
+      <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-2xs animate-pulse hidden sm:block">
+        <div class="h-5 bg-slate-200 rounded-md w-3/4 mb-3"></div>
+        <div class="h-3 bg-slate-100 rounded-md w-1/2 mb-4"></div>
+        <div class="h-9 bg-slate-100 rounded-xl mb-3"></div>
+        <div class="h-4 bg-slate-200 rounded-md w-2/3"></div>
+      </div>
+      <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-2xs animate-pulse hidden sm:block">
+        <div class="h-5 bg-slate-200 rounded-md w-3/4 mb-3"></div>
+        <div class="h-3 bg-slate-100 rounded-md w-1/2 mb-4"></div>
+        <div class="h-9 bg-slate-100 rounded-xl mb-3"></div>
+        <div class="h-4 bg-slate-200 rounded-md w-2/3"></div>
+      </div>
+      <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-2xs animate-pulse hidden sm:block">
+        <div class="h-5 bg-slate-200 rounded-md w-3/4 mb-3"></div>
+        <div class="h-3 bg-slate-100 rounded-md w-1/2 mb-4"></div>
+        <div class="h-9 bg-slate-100 rounded-xl mb-3"></div>
+        <div class="h-4 bg-slate-200 rounded-md w-2/3"></div>
+      </div>
     </div>
 
     <!-- پیام عدم یافت نتیجه -->

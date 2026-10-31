@@ -1,13 +1,16 @@
 /**
- * Service Worker: سامانه آفلاین لیب‌دوز (LibDose PWA Offline Engine - LibVet)
- * نسخه ۳.۲۴.۰ - ارتقای فونت وزیرمتن دسکتاپ، خوانایی برجسته اسامی داروها و موتور جستجوی اسامی تجاری و مدل‌های بازار
+ * Service Worker: سامانه آفلاین لیب‌دوز (LibDose PWA True Offline Engine - LibVet)
+ * نسخه ۳.۲۵.۰ - کش کامل لوکال و آفلاین واقعی با پشتیبانی کامل از ignoreSearch و Stale-While-Revalidate
  */
-const CACHE_NAME = 'libdose-cache-v3.24.0-vazirmatn-brand-search-upgrade';
+const CACHE_NAME = 'libdose-cache-v3.25.0-true-offline-engine';
+
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './style.css',
   './app.js',
+  './assets/vendor/tailwind.min.js',
+  './assets/vendor/lucide.min.js',
   './fonts/YekanBakh-Regular.woff2',
   './fonts/YekanBakh-SemiBold.woff2',
   './fonts/YekanBakh-Bold.woff2',
@@ -30,9 +33,16 @@ const ASSETS_TO_CACHE = [
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log('[PWA ServiceWorker] Caching offline assets v2.6...');
-      return cache.addAll(ASSETS_TO_CACHE);
+    caches.open(CACHE_NAME).then(async (cache) => {
+      console.log('[PWA ServiceWorker v3.25] Pre-caching core offline assets...');
+      // کش کردن تک‌تک منابع با مدیریت خطا تا در صورت قطعی اینترنت نصب هرگز متوقف نشود
+      await Promise.allSettled(
+        ASSETS_TO_CACHE.map((url) => {
+          return cache.add(url).catch((err) => {
+            console.warn('[PWA ServiceWorker] Pre-cache non-critical item failed:', url, err);
+          });
+        })
+      );
     }).then(() => self.skipWaiting())
   );
 });
@@ -53,21 +63,40 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // استراتژی Network-First: اول دریافت آخرین تغییرات و در صورت آفلاین بودن رجوع به کش
+  // فقط درخواست‌های GET با پروتکل http/https مدیریت شوند
   if (event.request.method !== 'GET') return;
+  if (!event.request.url.startsWith('http')) return;
 
   event.respondWith(
-    fetch(event.request).then((networkResponse) => {
-      if (networkResponse && networkResponse.status === 200) {
-        const responseToCache = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseToCache);
-        });
+    caches.match(event.request, { ignoreSearch: true }).then((cachedResponse) => {
+      // دریافت موازی از شبکه در پس‌زمینه جهت به‌روز نگه‌داشتن کش (Stale-While-Revalidate)
+      const networkFetch = fetch(event.request).then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200) {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
+        }
+        return networkResponse;
+      }).catch(() => {
+        // خطای شبکه در حالت آفلاین
+        return null;
+      });
+
+      // ۱. اگر فایل در کش موجود است، فوراً و با سرعت صفر میلی‌ثانیه تحویل داده می‌شود (حالت آفلاین و لود برق‌آسا)
+      if (cachedResponse) {
+        return cachedResponse;
       }
-      return networkResponse;
-    }).catch(() => {
-      // حالت آفلاین
-      return caches.match(event.request);
+
+      // ۲. در غیر این صورت منتظر پاسخ شبکه می‌مانیم
+      return networkFetch.then((resp) => {
+        if (resp) return resp;
+        // اگر باز هم نشد و درخواست بارگذاری صفحه بود، صفحه اصلی آفلاین تحویل شود
+        if (event.request.mode === 'navigate') {
+          return caches.match('./index.html', { ignoreSearch: true }) || caches.match('./', { ignoreSearch: true });
+        }
+        return new Response('Offline content unavailable', { status: 503, statusText: 'Offline' });
+      });
     })
   );
 });

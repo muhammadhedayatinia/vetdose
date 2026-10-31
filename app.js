@@ -510,9 +510,17 @@ const DEFAULT_PRE_EXPANDED_DRUGS = [];
 
 let expandedCards = (typeof window !== 'undefined' && window.expandedCards) || new Set(DEFAULT_PRE_EXPANDED_DRUGS); // کارت‌های بازشده به صورت آکاردئونی
 let isAllCardsExpanded = false; // وضعیت کلید باز کردن / بستن همه دوزها
+let currentFilteredDrugs = [];
+let renderedBatchCount = 30;
+const BATCH_SIZE = 30;
+let isInfiniteScrollAttached = false;
+var DRUG_LOOKUP_MAP = null;
+var INTERACTION_INDEX_MAP = null;
+
 if (typeof window !== 'undefined') {
   window.expandedCards = expandedCards;
   window.isAllCardsExpanded = isAllCardsExpanded;
+  window.currentFilteredDrugs = currentFilteredDrugs;
 }
 
 // تابع فعال‌سازی ویترین داروهای شاخص بالینی و هدایت سریع کاربر
@@ -1339,22 +1347,25 @@ function updateWeightPresetPills(w) {
 }
 
 
-// مقداردهی اولیه پس از بارگذاری صفحه
-if (typeof document !== 'undefined') {
-  document.addEventListener('DOMContentLoaded', () => {
+// مقداردهی اولیه پس از بارگذاری صفحه (موتور تضمینی اجرای درجا بدون نیاز به رفرش)
+function initApp() {
+  if (typeof window !== 'undefined' && window._appInitialized) return;
+  if (typeof window !== 'undefined') window._appInitialized = true;
+
+  try {
     updateTherapeuticCategoryCounts();
     renderCategoriesSidebarList();
     renderDrugs();
     setupInteractionsCheckboxes();
-    runDoseCalculation();
-    runDilutionCalculation();
-    runFluidCalculation();
-    runCprCalculation();
-    runCriCalculation();
-    if (typeof window !== 'undefined' && window.lucide) {
-      lucide.createIcons();
-    }
-  });
+    if (typeof runDoseCalculation === 'function') runDoseCalculation();
+    if (typeof updateAuthUI === 'function') updateAuthUI();
+  } catch (err) {
+    console.warn('InitApp execution note:', err);
+  }
+
+  if (typeof window !== 'undefined' && window.lucide) {
+    try { lucide.createIcons(); } catch (e) {}
+  }
 }
 
 // فیلتر جستجو
@@ -2489,11 +2500,6 @@ function fixBidiParentheses(str) {
   if (!str || typeof str !== 'string') return str;
   return str.replace(/\(([^)]*[a-zA-Z0-9][^)]*)\)/g, '<bdi dir="ltr" class="latin-text">&lrm;($1)&lrm;</bdi>');
 }
-
-let currentFilteredDrugs = [];
-let renderedBatchCount = 30;
-const BATCH_SIZE = 30;
-let isInfiniteScrollAttached = false;
 
 // رندر کارت‌های داروها در صفحه
 function renderDrugs(reset = true) {
@@ -5948,9 +5954,7 @@ function checkClassLevelInteraction(d1, d2) {
   return null;
 }
 
-// Fast Indexed Maps for Zero-Lag Lookups
-let DRUG_LOOKUP_MAP = null;
-let INTERACTION_INDEX_MAP = null;
+// Fast Indexed Maps for Zero-Lag Lookups (declared at top)
 
 function getDrugLookupMap() {
   if (!DRUG_LOOKUP_MAP && typeof DRUGS_DATA !== 'undefined' && Array.isArray(DRUGS_DATA)) {
@@ -10985,14 +10989,19 @@ function renderWildlifeProtocolCard(p) { return renderUnifiedSpecialtyProtocolCa
 
 // ثبت سرویس ورکر برای کاربری کاملاً آفلاین (PWA Offline Service Worker)
 if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js?v=3.20.0').then((reg) => {
+  const registerSW = () => {
+    navigator.serviceWorker.register('./sw.js').then((reg) => {
       reg.update();
-      console.log('✅ لیب‌دوز (LibDose): سرویس ورکر PWA v3.20 با موفقیت فعال شد:', reg.scope);
+      console.log('✅ لیب‌دوز (LibDose): موتور آفلاین PWA v3.25 فعال است:', reg.scope);
     }).catch((err) => {
-      console.log('⚠️ خطا در ثبت سرویس ورکر PWA:', err);
+      console.warn('⚠️ ServiceWorker registration note:', err);
     });
-  });
+  };
+  if (document.readyState === 'complete') {
+    registerSW();
+  } else {
+    window.addEventListener('load', registerSW);
+  }
 }
 
 // ==============================================
@@ -12207,4 +12216,17 @@ function showPaywallModal(title = 'دسترسی ویژه اعضای VIP لیب�
 function closePaywallModal() {
   const modal = document.getElementById('paywallModal');
   if (modal) modal.classList.add('hidden');
+}
+
+// راه‌اندازی قطعی و رسمی کل سامانه پس از بارگذاری کامل اسکریپت و تعاریف (Zero-Delay Initialization Guarantee)
+if (typeof document !== 'undefined') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+  } else {
+    // اگر سند قبلاً آماده است بلافاصله و با تأخیر صفر رندر را انجام بده (حل قطعی مشکل لود ناقص در ورود اول)
+    initApp();
+  }
+  if (typeof window !== 'undefined') {
+    window.addEventListener('load', initApp);
+  }
 }
