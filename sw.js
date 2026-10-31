@@ -1,8 +1,8 @@
 /**
  * Service Worker: سامانه آفلاین لیب‌دوز (LibDose PWA Offline Engine - LibVet)
- * نسخه ۳.۲۳.۰ - تکمیل جامع ۱,۱۲۰ مونوگراف دارویی، دوزهای چندگونه‌ای، فرمولاسیون و راهنمای تجویز
+ * نسخه ۳.۲۴.۰ - ارتقای فونت وزیرمتن دسکتاپ، خوانایی برجسته اسامی داروها و موتور جستجوی اسامی تجاری و مدل‌های بازار
  */
-const CACHE_NAME = 'libdose-cache-v3.23.0-all-1120-drugs-complete-dosing-engine';
+const CACHE_NAME = 'libdose-cache-v3.24.0-vazirmatn-brand-search-upgrade';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

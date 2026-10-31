@@ -89,11 +89,15 @@
   --stitch-transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-* {
-  font-family: 'Yekan Bakh', 'YekanBakh', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
+html, body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, span, div, a, label {
+  font-family: 'Vazirmatn', 'Yekan Bakh', 'YekanBakh', system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: 'Vazirmatn', 'Yekan Bakh', 'YekanBakh', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
 }
 
 /* =======================================================

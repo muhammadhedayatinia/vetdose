@@ -5,14 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>لیب‌دوز (LibDose) | دانشنامه دارونامه و تصمیم‌یار بالینی دامپزشکی - LibVet</title>
   
+  <!-- Google Fonts: Vazirmatn (استاندارد طلایی تایپوگرافی فارسی وب و دسکتاپ) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Vazirmatn', 'Yekan Bakh', 'YekanBakh', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Custom Style -->
-  <link rel="stylesheet" href="style.css?v=3.10.0">
+  <link rel="stylesheet" href="style.css?v=3.24.0">
 
   <!-- Favicon & Touch Icon (Exact LibDose Square App Icon) -->
   <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">

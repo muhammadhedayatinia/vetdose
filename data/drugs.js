@@ -1,4 +1,7 @@
-// Iranian Veterinary Plumb's Formulations & Core Data
+// پایگاه داده دارونامه جامع دامپزشکی ایران (پلامبز ایرانی) - LibDose
+// Iranian Veterinary Plumb's Clinical Formulary & Decision Support System
+// نسخه غنی‌شده ۳.۲۴.۰ - شامل کلیه مونوگراف‌ها، دوزبندی ساختاریافته، تداخلات و اسامی تجاری ایرانی/بین‌المللی
+
 const DRUGS_DATA = [
   {
     "id": "ketamine",
@@ -288,7 +291,24 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "کتامین ۱۰٪",
+      "کتامین نصر",
+      "کتامین آلفاسان",
+      "کتامین ارس",
+      "کتالار",
+      "کتاست",
+      "ویال تزریقی کتامین ۱۰٪ (Ketamine 10%)",
+      "ویال کتامین انسانی ۵۰ میلی‌گرم/سی‌سی"
+    ],
+    "brand_names_en": [
+      "Ketalar",
+      "Ketaset",
+      "Ketamidor",
+      "Narketan",
+      "Ketavet"
+    ]
   },
   {
     "id": "xylazine",
@@ -541,7 +561,22 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "رومپون",
+      "رومپون ۲٪",
+      "زایلازین نصر",
+      "زایلازین داملران",
+      "آلفاسان",
+      "محلول تزریقی زایلازین ۲٪ (Xylazine 2%)"
+    ],
+    "brand_names_en": [
+      "Rompun",
+      "Rompun 2%",
+      "Sedazine",
+      "Xylasol",
+      "Anased"
+    ]
   },
   {
     "id": "acepromazine",
@@ -765,7 +800,18 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آسه‌پرومازین ۱٪",
+      "آسه‌پرومازین نصر",
+      "پرومازین",
+      "محلول تزریقی آسه‌پرومازین ۱٪ (Acepromazine 1%)"
+    ],
+    "brand_names_en": [
+      "PromAce",
+      "Aceproject",
+      "Atravet"
+    ]
   },
   {
     "id": "meloxicam",
@@ -1083,7 +1129,30 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ملوکسی‌نصر",
+      "ملوکسیکام داملران",
+      "متاکام",
+      "ملوکسی‌کام نصر",
+      "ملوکسیدیل",
+      "ملوکسی‌نصر (MeloxiNasr 5 & 20)",
+      "سوسپانسیون خوراکی ملوکسیکام دامی",
+      "قرص ملوکسیکام (Mobic)",
+      "ملوکسی‌نصر دام کوچک",
+      "ویال ۵ mg/mL دامی",
+      "ملوکسی‌نصر دام بزرگ",
+      "ویال ۲۰ mg/mL دامی",
+      "داملران",
+      "سوسپانسیون خوراکی ۱.۵ mg/mL دامی"
+    ],
+    "brand_names_en": [
+      "Metacam",
+      "Meloxidyl",
+      "Loxicom",
+      "Meloxivet",
+      "Rheumocam"
+    ]
   },
   {
     "id": "enrofloxacin",
@@ -1408,7 +1477,31 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "انروکین ۵٪",
+      "انروکین ۱۰٪",
+      "انروین",
+      "بایپریل",
+      "انروفلوکساسین نصر",
+      "بایتریل",
+      "محلول تزریقی انروکین ۵٪ و ۱۰٪",
+      "محلول خوراکی انروفلوکساسین ۱۰٪ طیور",
+      "50 mg/mL - انروکین ۵٪",
+      "ویال تزریقی ۵٪ دامی",
+      "100 mg/mL - انروکین ۱۰٪",
+      "ویال تزریقی ۱۰٪ دامی",
+      "بایپریل / انروکین",
+      "قرص ۵۰ میلی‌گرم دامی",
+      "مخصوص سگ‌های بزرگ",
+      "قرص ۱۵۰ میلی‌گرم دامی"
+    ],
+    "brand_names_en": [
+      "Baytril",
+      "Enroquin",
+      "Enrosol",
+      "Enroflox"
+    ]
   },
   {
     "id": "gabapentin",
@@ -1626,7 +1719,18 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "گاباپنتین",
+      "نورونتین",
+      "گابارون",
+      "نوروپنتین",
+      "کپسول گاباپنتین (Gabapentin)"
+    ],
+    "brand_names_en": [
+      "Neurontin",
+      "Gabarone"
+    ]
   },
   {
     "id": "dexamethasone",
@@ -1860,7 +1964,23 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دگزامتازون",
+      "دگزامتازون نصر",
+      "دگزامتازون رازک",
+      "دگزامتازون سینا",
+      "دگزازون",
+      "دکادرون",
+      "ویال تزریقی دگزامتازون ۲ mg/ml دامی",
+      "آمپول دگزامتازون فسفات سدیم انسانی"
+    ],
+    "brand_names_en": [
+      "Decadron",
+      "Dexium",
+      "Azium",
+      "Dexona"
+    ]
   },
   {
     "id": "amoxicillin_clavulanate",
@@ -2179,7 +2299,36 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "کوآموکسی‌کلاو",
+      "سینولوکس",
+      "کلاواسِپتین",
+      "آگمنتین",
+      "فارمنتین",
+      "کلاواموکس",
+      "قرص کلاواموکس دامی (Clavamox Vet)",
+      "شربت و قرص کوآموکسی‌کلاو",
+      "کلاواموکس - استاندارد سگ",
+      "قرص ۲۵۰ mg دامی",
+      "مخصوص گربه و سگ مینیاتوری",
+      "قرص ۶۲.۵ mg دامی",
+      "فاراموکس / کلاویسیل",
+      "قرص ۳۷۵ mg انسانی",
+      "سگ‌های بزرگ بالای ۳۵ کیلو",
+      "قرص ۶۲۵ mg انسانی",
+      "31.25 mg/mL",
+      "شربت خوراکی ۱۵۶ انسانی",
+      "62.5 mg/mL",
+      "شربت خوراکی ۳۱۲ انسانی"
+    ],
+    "brand_names_en": [
+      "Synulox",
+      "Clavaseptin",
+      "Augmentin",
+      "Clavamox",
+      "Noroclav"
+    ]
   },
   {
     "id": "acetaminophen",
@@ -2320,7 +2469,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پاراستامول",
+      "قرص و شربت استامینوفن"
+    ],
+    "brand_names_en": [
+      "Acetaminophen / Paracetamol Vet",
+      "Acetaminophen / Paracetamol Brand"
+    ]
   },
   {
     "id": "diazepam",
@@ -2546,7 +2703,20 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "والیم",
+      "دیازپام عبیدی",
+      "دیازپام فارابی",
+      "دیازپام چسبی",
+      "آمپول دیازپام ۱۰ mg/2ml",
+      "قرص دیازپام ۲، ۵ و ۱۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Valium",
+      "Valrelease",
+      "Diastat"
+    ]
   },
   {
     "id": "tramadol",
@@ -2779,7 +2949,20 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ترامادول",
+      "اولترام",
+      "ترالایو",
+      "بایوتراپ",
+      "آمپول ترامادول ۵۰ mg/ml و ۱۰۰ mg/2ml",
+      "کپسول و قرص ترامادول ۵۰ و ۱۰۰"
+    ],
+    "brand_names_en": [
+      "Ultram",
+      "Tramal",
+      "Tralieve"
+    ]
   },
   {
     "id": "furosemide",
@@ -3081,7 +3264,23 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "لازیکس",
+      "فوروزماید نصر",
+      "فوروزماید رازک",
+      "فوروزماید داملران",
+      "سالیکس",
+      "محلول تزریقی فوروزماید ۵٪ دامی (Furosemide 5%)",
+      "آمپول لازیکس (Lasix Ampoule)",
+      "قرص لازیکس (Lasix Tablet)"
+    ],
+    "brand_names_en": [
+      "Lasix",
+      "Salix",
+      "Dimazon",
+      "Disal"
+    ]
   },
   {
     "id": "atropine",
@@ -3356,7 +3555,18 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آتروپین سولفات",
+      "آتروپین نصر",
+      "آتروپین داملران",
+      "محلول تزریقی آتروپین سولفات دامی (Atropine Sulfate)",
+      "آمپول آتروپین سولفات انسانی"
+    ],
+    "brand_names_en": [
+      "AtroPen",
+      "Atrosol"
+    ]
   },
   {
     "id": "propofol",
@@ -3588,7 +3798,19 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دیپریوان",
+      "پروپوفول بی.براون",
+      "پروپوفول دونا",
+      "پروپوفلو",
+      "امولسیون تزریقی پروپوفول ۱٪ (Propofol 1%)"
+    ],
+    "brand_names_en": [
+      "Diprivan",
+      "PropoFlo",
+      "Rapinovet"
+    ]
   },
   {
     "id": "flunixin",
@@ -3818,7 +4040,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فینادین",
+      "محلول تزریقی فلونیکسین ۵٪ (Flunixin Meglumine 5%)"
+    ],
+    "brand_names_en": [
+      "Flunixin Meglumine Vet",
+      "Flunixin Meglumine Brand"
+    ]
   },
   {
     "id": "ivermectin",
@@ -4042,7 +4272,21 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آیورمکتین",
+      "ایورمکتین",
+      "ایوومک",
+      "عرفامکتین",
+      "آیورمکتین نصر",
+      "نصر مکتین",
+      "محلول تزریقی آیورمکتین ۱٪ دامی (Ivermectin 1%)"
+    ],
+    "brand_names_en": [
+      "Ivomec",
+      "Noromectin",
+      "Paramectin"
+    ]
   },
   {
     "id": "metoclopramide",
@@ -4285,7 +4529,21 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "متوکلوپرامید",
+      "پلازیل",
+      "رگلان",
+      "پلاسیل",
+      "آمپول متوکلوپرامید (Plasil Ampoule)",
+      "قطره خوراکی متوکلوپرامید",
+      "قرص متوکلوپرامید"
+    ],
+    "brand_names_en": [
+      "Reglan",
+      "Plasil",
+      "Degan"
+    ]
   },
   {
     "id": "lidocaine",
@@ -4546,7 +4804,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "زایلوکائین",
+      "محلول تزریقی لیدوکائین ۲٪ دامی (Lidocaine 2%)",
+      "ویال لیدوکائین ۲٪ بدون اپی‌نفرین",
+      "آمپول لیدوکائین ۲٪"
+    ],
+    "brand_names_en": [
+      "Lidocaine  2% Vet",
+      "Lidocaine  2% Brand"
+    ]
   },
   {
     "id": "epinephrine",
@@ -4792,7 +5060,19 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "اپی‌نفرین",
+      "آدرنالین",
+      "آدرنالین داروپخش",
+      "اپی‌پن",
+      "آمپول اپی‌نفرین ۱:۱۰۰۰ (Epinephrine 1:1000)"
+    ],
+    "brand_names_en": [
+      "Adrenaline",
+      "EpiPen",
+      "Adrenalin"
+    ]
   },
   {
     "id": "oxytetracycline",
@@ -5173,7 +5453,35 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "اکسی‌تتراسایکلین",
+      "ترامی‌سین",
+      "تترا وت",
+      "اکسی‌نصر",
+      "اکسی‌رازک",
+      "تتراسایکلین دامی",
+      "محلول تزریقی اکسی‌تتراسایکلین ۲۰٪ LA طولانی‌اثر",
+      "محلول تزریقی اکسی‌تتراسایکلین ۵٪ و ۱۰٪ دامی",
+      "محلول تزریقی اکسی‌تتراسایکلین ۳۰٪ LA",
+      "پودر محلول در آب اکسی‌تتراسایکلین ۲۰٪ و ۵۰٪",
+      "200 mg/mL - Liquamycin LA-200",
+      "ویال ۲۰٪ LA طولانی‌اثر",
+      "100 mg/mL - مصرف روزانه",
+      "ویال ۱۰٪ دامی",
+      "50 mg/mL - مصرف روزانه",
+      "ویال ۵٪ دامی",
+      "300 mg/mL - نصر/آلفاسان",
+      "ویال ۳۰٪ LA فوق طولانی‌اثر",
+      "جهت طیور و گوساله شیرخوار",
+      "پودر محلول در آب ۵۰٪"
+    ],
+    "brand_names_en": [
+      "Terramycin",
+      "Tetra-Vet",
+      "Oxyvet",
+      "Engemycin"
+    ]
   },
   {
     "id": "maropitant",
@@ -5409,7 +5717,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سرنیا",
+      "سرنیا دامی",
+      "سرنیا زوئتیس"
+    ],
+    "brand_names_en": [
+      "Cerenia",
+      "Cerenia Zoetis"
+    ]
   },
   {
     "id": "omeprazole",
@@ -5678,7 +5995,21 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "امپرازول",
+      "پریلوسک",
+      "لوزک",
+      "گاستروگارد",
+      "اولسِروگارد",
+      "امپرازول انسانی"
+    ],
+    "brand_names_en": [
+      "Prilosec",
+      "Losec",
+      "GastroGard",
+      "UlcerGard"
+    ]
   },
   {
     "id": "sucralfate",
@@ -5956,7 +6287,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سوکرالفات",
+      "کارافات",
+      "سوکرالفیت",
+      "سوکرالفات انسانی"
+    ],
+    "brand_names_en": [
+      "Carafate",
+      "Antepsin"
+    ]
   },
   {
     "id": "ondansetron",
@@ -6185,7 +6526,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "اندانسترون",
+      "زوفران",
+      "دمیترون"
+    ],
+    "brand_names_en": [
+      "Zofran",
+      "Demitron"
+    ]
   },
   {
     "id": "pimobendan",
@@ -6474,7 +6824,18 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "وتمیدین",
+      "کاردیسیور",
+      "وتمدین وریدی",
+      "پیموبندان بوهرینگر"
+    ],
+    "brand_names_en": [
+      "Vetmedin",
+      "Cardisure",
+      "Vetmedin Boehringer"
+    ]
   },
   {
     "id": "enalapril",
@@ -6744,7 +7105,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "انالاپریل",
+      "اناکارد",
+      "وازوتک",
+      "انالاپریل انسانی"
+    ],
+    "brand_names_en": [
+      "Enacard",
+      "Vasotec"
+    ]
   },
   {
     "id": "dexmedetomidine",
@@ -6986,7 +7357,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دکسمدتومیدین",
+      "دکس‌دومیتور",
+      "سدکس",
+      "دکسمدین"
+    ],
+    "brand_names_en": [
+      "Dexdomitor",
+      "Sileo"
+    ]
   },
   {
     "id": "atipamezole",
@@ -7213,7 +7594,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آنتی‌سدان",
+      "آنتی سدان",
+      "آتی‌پامزول"
+    ],
+    "brand_names_en": [
+      "Antisedan",
+      "Revertidine"
+    ]
   },
   {
     "id": "carprofen",
@@ -7490,7 +7880,21 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ریمادیل",
+      "ریماژیل",
+      "کارپروفن زوئتیس",
+      "نووُکاکس",
+      "کارپریو",
+      "کارپرووت"
+    ],
+    "brand_names_en": [
+      "Rimadyl",
+      "Novox",
+      "Carprieve",
+      "Carprovet"
+    ]
   },
   {
     "id": "metronidazole",
@@ -7774,7 +8178,18 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "مترونیدازول",
+      "فلاژیل",
+      "مترونیدازول دامی",
+      "فلاجیل",
+      "مترونیدازول انسانی"
+    ],
+    "brand_names_en": [
+      "Flagyl",
+      "Metrobactin"
+    ]
   },
   {
     "id": "phenobarbital",
@@ -8055,7 +8470,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فنوباربیتال سدیم"
+    ],
+    "brand_names_en": [
+      "Phenobarbital Vet",
+      "Phenobarbital Brand"
+    ]
   },
   {
     "id": "prednisolone",
@@ -8342,7 +8764,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پردنیزولون",
+      "دلتازون",
+      "پردنیزولون دامی",
+      "پردنیزولون انسانی"
+    ],
+    "brand_names_en": [
+      "Deltasone",
+      "Prednicortone"
+    ]
   },
   {
     "id": "vitamin_k1",
@@ -8597,7 +9029,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فیتونادیون",
+      "آمپول و قرص ویتامین K"
+    ],
+    "brand_names_en": [
+      "Phytonadione (Vitamin K1) Vet",
+      "Phytonadione (Vitamin K1) Brand"
+    ]
   },
   {
     "id": "fenbendazole",
@@ -8807,7 +9247,20 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فنبندازول",
+      "پناکوریل",
+      "پناکوزول",
+      "فنبندازول نصر",
+      "پانباکور",
+      "فنوکیم",
+      "قرص پانباکور ۲۵۰ و ۵۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Panacur",
+      "Safe-Guard"
+    ]
   },
   {
     "id": "praziquantel",
@@ -9022,7 +9475,23 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پرازی‌کوانتل",
+      "درونتال",
+      "پرازیوت",
+      "درونسید",
+      "سستوسید",
+      "قرص پرازیکوانتل ۵۰ میلی‌گرم دامی",
+      "قرص ترکیبی درنتال پلاس / کانی‌ورم",
+      "آمپول درونسید تزریقی 56.8 mg/mL",
+      "بایر"
+    ],
+    "brand_names_en": [
+      "Droncit",
+      "Drontal",
+      "Cestex"
+    ]
   },
   {
     "id": "pyrantel_pamoate",
@@ -9220,7 +9689,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "نماتوسید دامی",
+      "نمکس",
+      "قرص نماتوسید ۵۰ میلی‌گرم",
+      "خمیر خوراکی اسب استرانگید"
+    ],
+    "brand_names_en": [
+      "Pyrantel Pamoate Vet",
+      "Pyrantel Pamoate Brand"
+    ]
   },
   {
     "id": "insulin_nph_glargine",
@@ -9420,7 +9899,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "لانتوس",
+      "انسولین دامی و انسانی",
+      "انسولین NPH انسانی ۱۰۰ واحدی",
+      "انسولین گلارژین ۱۰۰ واحدی",
+      "انسولین کان‌انسولین دامی ۴۰ واحدی"
+    ],
+    "brand_names_en": [
+      "Caninsulin U-40 MSD"
+    ]
   },
   {
     "id": "levothyroxine",
@@ -9629,7 +10118,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "لووکسین",
+      "تیرو-تبس",
+      "قرص لووتیروکسین ۰.۱ میلی‌گرم",
+      "قرص تیرو"
+    ],
+    "brand_names_en": [
+      "Levothyroxine Vet",
+      "Levothyroxine Brand"
+    ]
   },
   {
     "id": "methimazole",
@@ -9818,7 +10317,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "تاپازول",
+      "فیلی‌مازول",
+      "قرص متی‌مازول ۵ میلی‌گرم انسانی"
+    ],
+    "brand_names_en": [
+      "Dechra Felimazole"
+    ]
   },
   {
     "id": "theophylline",
@@ -10022,7 +10529,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "تئوکال",
+      "فرم آهسته‌رهش SR",
+      "قرص تئوفیلین ۱۰۰ میلی‌گرم معمولی",
+      "شربت تئوفیلین"
+    ],
+    "brand_names_en": [
+      "Theophylline Vet",
+      "Theophylline Brand"
+    ]
   },
   {
     "id": "aminophylline",
@@ -10228,7 +10745,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فرم تزریقی وریدی تئوفیلین",
+      "آمپول آمینوفیلین 250 mg/10 mL",
+      "قرص آمینوفیلین ۱۰۰ میلی‌گرم خوراکی",
+      "معادل 25 mg/mL"
+    ],
+    "brand_names_en": [
+      "Aminophylline Vet",
+      "Aminophylline Brand"
+    ]
   },
   {
     "id": "albuterol",
@@ -10422,7 +10949,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "اسپری استنشاقی و شربت",
+      "قرص سالبوتامول ۲ و ۴ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Albuterol / Salbutamol Vet",
+      "Albuterol / Salbutamol Brand"
+    ]
   },
   {
     "id": "acetylcysteine",
@@ -10627,7 +11162,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "NAC",
+      "موکومیس",
+      "پادزهر استامینوفن",
+      "ساشه پودر ۲۰۰ میلی‌گرم خوراکی"
+    ],
+    "brand_names_en": [
+      "N-Acetylcysteine (NAC) Vet",
+      "N-Acetylcysteine (NAC) Brand"
+    ]
   },
   {
     "id": "ciprofloxacin_ophthalmic",
@@ -10807,7 +11352,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "قطره و پماد ۰.۳٪",
+      "قطره چشمی سیپروفلوکساسین ۰.۳٪",
+      "قطره چشمی سیپروپت",
+      "پماد چشمی سیپروفلوکساسین ۰.۳٪"
+    ],
+    "brand_names_en": [
+      "Ciprofloxacin Ophthalmic Vet",
+      "Ciprofloxacin Ophthalmic Brand"
+    ]
   },
   {
     "id": "tetracycline_ophthalmic",
@@ -10982,7 +11537,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پماد چشمی تتراسایکلین ۱٪"
+    ],
+    "brand_names_en": [
+      "Tetracycline Ophthalmic Vet",
+      "Tetracycline Ophthalmic Brand"
+    ]
   },
   {
     "id": "atropine_ophthalmic",
@@ -11160,7 +11722,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "قطره چشمی آتروپین ۱٪",
+      "قطره چشمی آتروپین ۰.۵٪"
+    ],
+    "brand_names_en": [
+      "Atropine  Ophthalmic Vet",
+      "Atropine  Ophthalmic Brand"
+    ]
   },
   {
     "id": "latanoprost_ophthalmic",
@@ -11337,7 +11907,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "گزالاتان",
+      "قطره چشمی لانوپروست ۰.۰۰۵٪",
+      "قطره چشمی گزالاتان",
+      "قطره چشمی زالاباکس"
+    ],
+    "brand_names_en": [
+      "Latanoprost Ophthalmic Vet",
+      "Latanoprost Ophthalmic Brand"
+    ]
   },
   {
     "id": "prazosin",
@@ -11533,7 +12113,18 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "کپسول و قرص ۱",
+      "۲ و ۵ میلی‌گرم",
+      "کپسول پرازوسین ۱ میلی‌گرم",
+      "قرص پرازوسین ۲ میلی‌گرم",
+      "قرص پرازوسین ۵ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Prazosin Hydrochloride Vet",
+      "Prazosin Hydrochloride Brand"
+    ]
   },
   {
     "id": "tylosin",
@@ -11747,7 +12338,19 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول تزریقی ۵٪ و ۲۰٪",
+      "پودر خوراکی",
+      "50 mg/mL",
+      "تایلوزین ۵٪ دامی",
+      "200 mg/mL",
+      "تایلوزین ۲۰٪ دامی"
+    ],
+    "brand_names_en": [
+      "Tylosin  / Tylosin Vet",
+      "Tylosin  / Tylosin Brand"
+    ]
   },
   {
     "id": "pen_strep",
@@ -11921,7 +12524,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پروکائین پنی‌سیلین + دی‌هیدروسترپتومایسین ۲۰",
+      "۲۰ و ۲۰",
+      "۲۵"
+    ],
+    "brand_names_en": [
+      "Procaine Penicillin G + Dihydrostreptomycin Vet",
+      "Procaine Penicillin G + Dihydrostreptomycin Brand"
+    ]
   },
   {
     "id": "cefazolin",
@@ -12098,7 +12710,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ویال‌های ۵۰۰ و ۱۰۰۰ میلی‌گرم تزریقی",
+      "ویال سفازولین ۱ گرمی",
+      "ویال سفازولین ۵۰۰ میلی‌گرمی تزریقی",
+      "ویال سفازولین ۲۵۰ میلی‌گرمی"
+    ],
+    "brand_names_en": [
+      "Cefazolin Vet",
+      "Cefazolin Brand"
+    ]
   },
   {
     "id": "gentamicin",
@@ -12298,7 +12920,24 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "جنتامایسین",
+      "جنتامایسین نصر",
+      "جنتامایسین دامی",
+      "گارامایسین",
+      "آمپول‌های ۵٪ و ۱۰٪ دامی و ۸۰ انسانی",
+      "50 mg/mL",
+      "جنتامایسین ۵٪ دامی",
+      "100 mg/mL",
+      "جنتامایسین ۱۰٪ دامی",
+      "40 mg/mL - 80 mg/2mL",
+      "آمپول جنتامایسین انسانی"
+    ],
+    "brand_names_en": [
+      "Garamycin",
+      "Gentocin"
+    ]
   },
   {
     "id": "buprenorphine",
@@ -12488,7 +13127,19 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "بوپرنورفین",
+      "بوپرنکس",
+      "سیمبادول",
+      "آمپول 0.3 mg",
+      "mL تزریقی و مخاط دهانی"
+    ],
+    "brand_names_en": [
+      "Buprenex",
+      "Simbadol",
+      "Vetergesic"
+    ]
   },
   {
     "id": "famotidine",
@@ -12676,7 +13327,19 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فاموتیدین",
+      "پپسید",
+      "آمپول ۲۰ میلی‌گرم",
+      "۲ میلی‌لیتر و قرص ۲۰ و ۴۰ میلی‌گرم",
+      "قرص فاموتیدین ۲۰ میلی‌گرم",
+      "قرص فاموتیدین ۴۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Pepcid",
+      "Pepcid AC"
+    ]
   },
   {
     "id": "butorphanol",
@@ -12877,7 +13540,21 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "بوتورفانول",
+      "توربوژزیک",
+      "توربوترول",
+      "دولورکس",
+      "توربوژزیک - آمپول‌های ۲",
+      "۱۰ و ۲۰ میلی‌گرم",
+      "میلی‌لیتر و قرص"
+    ],
+    "brand_names_en": [
+      "Torbugesic",
+      "Torbutrol",
+      "Dolorex"
+    ]
   },
   {
     "id": "apomorphine",
@@ -13048,7 +13725,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آمپول تزریقی و قرص حل‌شونده چشمی",
+      "قلم تزریقی آپومورفین"
+    ],
+    "brand_names_en": [
+      "Apogo"
+    ]
   },
   {
     "id": "spironolactone",
@@ -13239,7 +13923,20 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "اسپیرونولاکتون",
+      "آلداکتون",
+      "پریلاکتون",
+      "قرص ۲۵ و ۱۰۰ میلی‌گرم اسپیرونولاکتون",
+      "قرص ۲۵ و ۱۰۰ میلی‌گرم آلداکتون",
+      "قرص ۲۵ میلی‌گرم اسپیرونولاکتون",
+      "قرص‌های خارجی دامی پریلاکتون"
+    ],
+    "brand_names_en": [
+      "Aldactone",
+      "Prilactone"
+    ]
   },
   {
     "id": "doxycycline",
@@ -13452,7 +14149,22 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "داکسی‌سایکلین",
+      "ویبرامایسین",
+      "داکسی دامی",
+      "رانداکسی",
+      "داکسی‌سایکلین هایکلیت",
+      "مونوپرید",
+      "کپسول و قرص ۱۰۰ میلی‌گرم داکسی‌سایکلین",
+      "پودر دامی داکسی‌سایکلین ۲۰٪ و ۵۰٪"
+    ],
+    "brand_names_en": [
+      "Vibramycin",
+      "Doxirobe",
+      "Ronaxan"
+    ]
   },
   {
     "id": "cephalexin",
@@ -13637,7 +14349,21 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سفالکسین",
+      "سفاسپتین",
+      "کفلکس",
+      "ریفالکس",
+      "کپسول و سوسپانسیون",
+      "کپسول ۲۵۰ و ۵۰۰ میلی‌گرم سفالکسین",
+      "قرص روکش‌دار ۵۰۰ میلی‌گرم سفالکسین"
+    ],
+    "brand_names_en": [
+      "Keflex",
+      "Cefa-Tabs",
+      "Rilexine"
+    ]
   },
   {
     "id": "ciprofloxacin",
@@ -13813,7 +14539,16 @@ const DRUGS_DATA = [
       "milk_fa": "پرهیز از لبنیات: پیوند با کلسیم لبنیات، استخوان و مکمل‌ها جذب فلوروکینولون‌ها را کاملاً فلج می‌کند.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سیپروکینولون",
+      "قرص‌های ۲۵۰ و ۵۰۰",
+      "قرص روکش‌دار سیپروکسین ۵۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Ciprofloxacin Oral Vet",
+      "Ciprofloxacin Oral Brand"
+    ]
   },
   {
     "id": "loperamide",
@@ -13992,7 +14727,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ایمودیوم",
+      "کپسول و قرص ضداسهال ۲ میلی‌گرم",
+      "کپسول و قرص ۲ میلی‌گرم لوپرامید",
+      "شربت لوپرامید ۱ میلی‌گرم/۵ میلی‌لیتر"
+    ],
+    "brand_names_en": [
+      "Loperamide Vet",
+      "Loperamide Brand"
+    ]
   },
   {
     "id": "closantel",
@@ -14157,7 +14902,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "کلوزانتل ۵٪ و ۱۰٪ تزریقی و بولوس",
+      "محلول تزریقی کلوزانتل ۵٪",
+      "محلول تزریقی کلوزانتل ۱۰٪",
+      "بولوس خوراکی ۵۰۰ میلی‌گرم کلوزانتل دامی"
+    ],
+    "brand_names_en": [
+      "Closantel Vet",
+      "Closantel Brand"
+    ]
   },
   {
     "id": "oxytocin",
@@ -14348,7 +15103,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پیتوسین",
+      "آمپول ۱۰ واحد دامی"
+    ],
+    "brand_names_en": [
+      "Oxytocin Vet",
+      "Oxytocin Brand"
+    ]
   },
   {
     "id": "calcium_borogluconate",
@@ -14544,7 +15307,17 @@ const DRUGS_DATA = [
       "milk_fa": "پروتکل نجات تب شیر گاو: نیمی از بطری ۵۰۰ میلی‌لیتری به صورت وریدی آهسته تزریق شده و نیم دیگر در ۲ الی ۴ نقطه مختلف زیر پوست گردن تزریق می‌شود تا از افت مجدد کلسیم در ساعات بعدی جلوگیری گردد.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول ۲۰٪ و ۴۰٪ تزریقی دامی",
+      "درمان تب شیر",
+      "کلسیم فورت دامی",
+      "آمپول‌های گلوکونات کلسیم ۱۰٪ انسانی"
+    ],
+    "brand_names_en": [
+      "Calcium Borogluconate Vet",
+      "Calcium Borogluconate Brand"
+    ]
   },
   {
     "id": "marbofloxacin",
@@ -14740,7 +15513,20 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ماربوسیل",
+      "ماربوفلوکساسین",
+      "زنبوربان",
+      "محلول ۱۰٪ و قرص‌های دامی",
+      "محلول تزریقی ماربوفلوکساسین ۱۰٪ دامی",
+      "محلول تزریقی ۲٪ حیوانات کوچک"
+    ],
+    "brand_names_en": [
+      "Marbocyl",
+      "Zeniquin",
+      "Marbocyl Tablets"
+    ]
   },
   {
     "id": "amoxicillin_la",
@@ -14923,7 +15709,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آموکسی‌نصر LA",
+      "آموکسی‌داملران",
+      "سوسپانسیون تزریقی آموکسی‌سیلین ۱۵٪ LA",
+      "آموکسی‌وت LA ۱۵۰ میلی‌گرم/میلی‌لیتر"
+    ],
+    "brand_names_en": [
+      "Amoxicillin LA 15% Vet",
+      "Amoxicillin LA 15% Brand"
+    ]
   },
   {
     "id": "diminazene",
@@ -15090,7 +15886,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "برنیل",
+      "داروی ضد بابزیوز و تریپانوزوما",
+      "محلول تزریقی آماده دیمینازین ۷٪ دامی"
+    ],
+    "brand_names_en": [
+      "Diminazene Aceturate Vet",
+      "Diminazene Aceturate Brand"
+    ]
   },
   {
     "id": "florfenicol",
@@ -15267,7 +16072,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "نیوفلور",
+      "فلورنصر ۳۰۰ میلی‌گرم",
+      "محلول تزریقی فلورفنیکل ۳۰٪"
+    ],
+    "brand_names_en": [
+      "Florfenicol 30% Vet",
+      "Florfenicol 30% Brand"
+    ]
   },
   {
     "id": "terbinafine",
@@ -15449,7 +16263,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "لامیسیل",
+      "قرص ۲۵۰ میلی‌گرم ضدقارچ",
+      "قرص‌های ۱۲۵ و ۲۵۰ میلی‌گرم تربینافین",
+      "کرم موضعی ۱٪ تربینافین"
+    ],
+    "brand_names_en": [
+      "Terbinafine Vet",
+      "Terbinafine Brand"
+    ]
   },
   {
     "id": "midazolam",
@@ -15634,7 +16458,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "میدازولام",
+      "ورسد",
+      "دورمیکوم",
+      "آمپول‌های ۵ و ۱۵ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Versed",
+      "Dormicum"
+    ]
   },
   {
     "id": "doramectin",
@@ -15801,7 +16635,18 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دورامکتین",
+      "دکتوماکس",
+      "دکتاکس ۱٪ دامی تزریقی",
+      "محلول تزریقی دورامکتین ۱٪ دامی",
+      "محلول پور"
+    ],
+    "brand_names_en": [
+      "Dectomax",
+      "Dectomax Zoetis"
+    ]
   },
   {
     "id": "activated_charcoal",
@@ -15986,7 +16831,18 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "شارکول فعال",
+      "جاذب سموم اورژانس پلامبز",
+      "پودر زغال فعال دارویی ۵۰ و ۱۰۰ گرمی",
+      "سوسپانسیون غلیظ شارکول فعال با سوربیتول",
+      "قرص و کپسول شارکول دارویی ۲۵۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Activated Charcoal Vet",
+      "Activated Charcoal Brand"
+    ]
   },
   {
     "id": "methocarbamol",
@@ -16119,6 +16975,15 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "فرم تزریقی ۱۰۰ mg/mL باید بسیار آهسته به صورت وریدی (IV) تزریق شود تا از ترومبوفلبیت و همولیز به علت حلال پلی‌اتیلن گلیکول پیشگیری شود."
       }
+    ],
+    "brand_names_fa": [
+      "روباکسین",
+      "شل‌کننده مرکزی عضلات و پادزهر لرزش پرمترین",
+      "قرص متوکاربامول ۵۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Methocarbamol Vet",
+      "Methocarbamol Brand"
     ]
   },
   {
@@ -16253,7 +17118,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "۲-پام",
+      "فعال‌کننده مجدد کولین‌استراز و پادزهر ارگانوفسفره",
+      "ویال تزریقی پرالیدوکسیم ۱۰۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Pralidoxime Chloride (2-PAM) Vet",
+      "Pralidoxime Chloride (2-PAM) Brand"
+    ]
   },
   {
     "id": "barium_sulfate",
@@ -16362,6 +17236,15 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "سوسپانسیون ۳۰ تا ۴۰ درصد تهیه شده و به آرامی خورانده شود؛ از ورود آن به ریه اکیداً جلوگیری گردد."
       }
+    ],
+    "brand_names_fa": [
+      "باریوم سولفات",
+      "سوسپانسیون حاجب رادیوگرافی و محافظ گوارشی",
+      "سوسپانسیون آماده باریوم سولفات خوراکی"
+    ],
+    "brand_names_en": [
+      "Barium Vet",
+      "Barium Brand"
     ]
   },
   {
@@ -16528,7 +17411,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ضدانگل نماتودها و تعدیل‌کننده سیستم ایمنی سلولی",
+      "محلول تزریقی لوامیزول ۵٪ و ۷.۵٪",
+      "قرص لوامیزول ۵۰ میلی‌گرم دامی",
+      "پودر محلول در آب لوامیزول ۳۰٪"
+    ],
+    "brand_names_en": [
+      "Levamisole Hydrochloride Vet",
+      "Levamisole Hydrochloride Brand"
+    ]
   },
   {
     "id": "misoprostol",
@@ -16658,6 +17551,15 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "به دلیل خاصیت سقط‌آوری شدید، پرسنل زن باردار کلینیک مطلقاً نباید با این قرص تماس پوستی داشته باشند (دستکش الزامی است)."
       }
+    ],
+    "brand_names_fa": [
+      "آنالوگ پروستاگلاندین E1",
+      "پیشگیری و درمان اولسر معده ناشی از NSAID",
+      "قرص میزوپروستول ۱۰۰ و ۲۰۰ میکروگرم"
+    ],
+    "brand_names_en": [
+      "Misoprostol Vet",
+      "Misoprostol Brand"
     ]
   },
   {
@@ -16777,7 +17679,16 @@ const DRUGS_DATA = [
       "milk_fa": "یکی از مؤثرترین و سریع‌الاثرترین آنتی‌بیوتیک‌های درمانی در طغیان پنومونی‌های کشنده باران و حمل و نقل (Shipping Fever) گاو با دوره پرهیز گوشت فوق‌العاده کوتاه ۴ روزه.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فلوروکینولون اختصاصی دامی تنفسی گاو و گوسفند - آدووسین",
+      "محلول تزریقی دانوفلوکساسین ۱۸٪ و ۲.۵٪",
+      "دانوفلوکساسین مزیلات تزریقی"
+    ],
+    "brand_names_en": [
+      "Danofloxacin Mesylate Vet",
+      "Danofloxacin Mesylate Brand"
+    ]
   },
   {
     "id": "lactulose",
@@ -16902,6 +17813,14 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "به صورت خوراکی با سرنگ داده شود؛ در صورت لزوم می‌توان با کمی ماست یا آب گوشت مخلوط کرد."
       }
+    ],
+    "brand_names_fa": [
+      "شربت ملین هایپراسموتیک و کاهنده آمونیاک خون در انسفالوپاتی کبدی",
+      "شربت لاکتولوز ۱۰ گرم در ۱۵ میلی‌لیتر"
+    ],
+    "brand_names_en": [
+      "Lactulose Vet",
+      "Lactulose Brand"
     ]
   },
   {
@@ -17013,6 +17932,14 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "باید با ست سرم فیلتردار و شرایط کاملاً آسپتیک تجویز شود؛ پس از باز شدن حداکثر طی ۲۴ ساعت مصرف یا دور ریخته شود."
       }
+    ],
+    "brand_names_fa": [
+      "اینترالیپید",
+      "سینک لیپیدی و پادزهر سمیت سموم لیپوفیل"
+    ],
+    "brand_names_en": [
+      "Intravenous Lipid Emulsion 20% (ILE / Intralipid) Vet",
+      "Intravenous Lipid Emulsion 20% (ILE / Intralipid) Brand"
     ]
   },
   {
@@ -17124,6 +18051,14 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "فقط و فقط تزریق داخل وریدی (IV). تزریق داخل نخاعی (Intrathecal) ۱۰۰٪ کشنده و فلج‌کننده است. نشت زیرجلدی (Extravasation) وزیکانت شدید بوده و باعث نکروز و اسلافینگ بافت می‌شود."
       }
+    ],
+    "brand_names_fa": [
+      "آلکالوئید وینکا",
+      "شیمی‌درمانی لنفوم و تومور مقاربتی TVT"
+    ],
+    "brand_names_en": [
+      "Vincristine Vet",
+      "Vincristine Brand"
     ]
   },
   {
@@ -17233,6 +18168,15 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "انفوزیون وریدی آهسته طی ۲۰ الی ۳۰ دقیقه از طریق کاتتر مطمئن. قبل از تزریق، دیفن‌هیدرامین برای پیشگیری از واکنش شبه‌آنافیلاکتیک هیستامینی تزریق شود."
       }
+    ],
+    "brand_names_fa": [
+      "آدریامایسین",
+      "آنتراسایکلین لنفوم",
+      "استئوسارکوم و همانژیوسارکوم"
+    ],
+    "brand_names_en": [
+      "Doxorubicin Hydrochloride Vet",
+      "Doxorubicin Hydrochloride Brand"
     ]
   },
   {
@@ -17348,6 +18292,16 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "قرص‌ها نباید خرد یا نصف شوند (خطر استنشاق و آلودگی سیتوتوکسیک پرسنل کلینیک و سرپرست). همیشه دستکش پوشیده شود."
       }
+    ],
+    "brand_names_fa": [
+      "اندوکسان",
+      "آلکیله‌کننده لنفوم",
+      "آرتریت روماتوئید و IMHA",
+      "قرص روکش‌دار سیکلوفسفامید ۵۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Cyclophosphamide Vet",
+      "Cyclophosphamide Brand"
     ]
   },
   {
@@ -17457,6 +18411,15 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "به صورت یک نوار نازک (یک چهارم اینچ) هر ۱۲ ساعت داخل کیسه ملتحمه چشم گذاشته شود؛ پیش از مصرف چشم با نرمال سالین از ترشحات پاک شود."
       }
+    ],
+    "brand_names_fa": [
+      "اپتیمیون",
+      "پماد چشمی ۰.۲٪ درمان سندرم خشکی چشم KCS",
+      "پماد چشمی سیکلوسپورین ۰.۲٪ دامی"
+    ],
+    "brand_names_en": [
+      "Cyclosporine Ophthalmic Vet",
+      "Cyclosporine Ophthalmic Brand"
     ]
   },
   {
@@ -17572,6 +18535,14 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "حتماً همراه با وعده غذایی اصلی خورانده شود تا جذب آن حداکثر گردد. آزمایش ACTH Stimulation باید ۴ تا ۶ ساعت پس از مصرف کپسول صبحگاهی انجام شود."
       }
+    ],
+    "brand_names_fa": [
+      "وتوریل",
+      "مهارکننده سنتز کورتیزول و درمان خط اول کوشینگ سگ"
+    ],
+    "brand_names_en": [
+      "Trilostane Vet",
+      "Trilostane Brand"
     ]
   },
   {
@@ -17683,6 +18654,15 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "قرص ۷۵ خط‌دار نیست اما می‌توان با کاتر قرص آن را به چهار قسمت ۱۸.۷۵ میلی‌گرم برای گربه‌ها تقسیم کرد."
       }
+    ],
+    "brand_names_fa": [
+      "پلاویکس",
+      "مهارکننده تجمع پلاکتی و پیشگیری از ترومبوآمبولی گربه ATE",
+      "قرص روکش‌دار کلوپیدوگرل ۷۵ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Clopidogrel Bi Vet",
+      "Clopidogrel Bi Brand"
     ]
   },
   {
@@ -17796,6 +18776,15 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "ویال باید قبل از کشیدن در سرنگ به خوبی تکان داده شود تا سوسپانسیون کاملاً یکنواخت گردد؛ تزریق عضلانی (IM) یا زیرجلدی (SC) هر ۲۵ تا ۳۰ روز."
       }
+    ],
+    "brand_names_fa": [
+      "DOCP",
+      "پرکورتن",
+      "سوسپانسیون تزریقی درمان بیماری آدیسون سگ"
+    ],
+    "brand_names_en": [
+      "Desoxycorticosterone Pivalate (DOCP) Vet",
+      "Desoxycorticosterone Pivalate (DOCP) Brand"
     ]
   },
   {
@@ -17910,6 +18899,17 @@ const DRUGS_DATA = [
         ],
         "dispensing_tips": "کپسول خوراکی؛ هرگز باز نشود. همیشه با دستکش تجویز گردد. همراه با داروهای محافظ کبد (Denamarin / SAME + سیلیبینین) مصرف شود."
       }
+    ],
+    "brand_names_fa": [
+      "CCNU",
+      "نیتروزواوره خوراکی",
+      "تومورهای ماست‌سل",
+      "لنفوم و تومورهای مغز",
+      "کپسول خوراکی لوموستین ۱۰ و ۴۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Lomustine (CCNU) Vet",
+      "Lomustine (CCNU) Brand"
     ]
   },
   {
@@ -18021,6 +19021,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "ویال‌های تزریقی انسانی 50 mg/5 mL و 150 mg/15 mL و 450 mg/45 mL (تولید کارخانجات سها، اکسیر و برندهای معتبر اروپایی) موجود در داروخانه‌های انکولوژی و هلال احمر."
+    ],
+    "brand_names_fa": [
+      "کربوپلاتین تزریقی دامی",
+      "کربوپلاتین تزریقی انسانی"
+    ],
+    "brand_names_en": [
+      "Carboplatin Vet",
+      "Carboplatin Brand"
     ]
   },
   {
@@ -18145,6 +19153,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "آلفاکسان",
+      "ویال‌های چنددوزه حاوی ماده محافظ"
+    ],
+    "brand_names_en": [
+      "Alfaxalone Vet",
+      "Alfaxalone Brand"
     ]
   },
   {
@@ -18273,6 +19289,18 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "بطری‌های ۲۵۰ میلی‌لیتری مایع تبخیر استنشاقی انسانی و دامی (Aerrane، ایزوفلوران دانا و برندهای اروپایی) موجود و استاندارد در کلیه اتاق‌های عمل دامپزشکی ایران."
+    ],
+    "brand_names_fa": [
+      "ایزوفلوران",
+      "فورن",
+      "آیسوفلو",
+      "ایزوفلوران دامی"
+    ],
+    "brand_names_en": [
+      "Forane",
+      "IsoFlo",
+      "Aerrane",
+      "Attane"
     ]
   },
   {
@@ -18399,6 +19427,17 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "بطری‌های ۲۵۰ میلی‌لیتری زرد رنگ مایع تبخیر استنشاقی (Sevorane، سووفلوران باختر بیوشیمی و برندهای آلمانی) موجود در مراکز جراحی فوق تخصصی حیوانات خانگی و باغ وحش."
+    ],
+    "brand_names_fa": [
+      "سووفلوران",
+      "اولتان",
+      "سووفلو",
+      "سوورن"
+    ],
+    "brand_names_en": [
+      "Ultane",
+      "SevoFlo",
+      "Sevorane"
     ]
   },
   {
@@ -18527,6 +19566,13 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "کپرا"
+    ],
+    "brand_names_en": [
+      "Levetiracetam Vet",
+      "Levetiracetam Brand"
     ]
   },
   {
@@ -18641,6 +19687,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "پودر گرید دارویی با خلوص بالا (USP/Ph.Eur) جهت ساخت محلول و سوسپانسیون خوراکی 250 mg/mL در داروخانه‌های فرمولاسیون و کپسول‌های دست‌ساز 250 و 500 میلی‌گرم."
+    ],
+    "brand_names_fa": [
+      "KBr",
+      "پودر گرید دارویی با خلوص بالا"
+    ],
+    "brand_names_en": [
+      "Bromide (KBr) Vet",
+      "Bromide (KBr) Brand"
     ]
   },
   {
@@ -18759,6 +19813,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "کپسول‌های دامی آتوپیکا (Atopica 10, 25, 50, 100 mg)، کپسول‌های انسانی میکروامولسیون ۲۵، ۵۰ و ۱۰۰ میلی‌گرم (سندیمون نئورال، ایمورال) و محلول خوراکی 100 mg/mL موجود در بازار دارویی ایران."
+    ],
+    "brand_names_fa": [
+      "آتوپیکا",
+      "کپسول‌های دامی آتوپیکا"
+    ],
+    "brand_names_en": [
+      "Cyclosporine (Systemic) Vet",
+      "Cyclosporine (Systemic) Brand"
     ]
   },
   {
@@ -18876,6 +19938,17 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قرص‌های جویدنی دامی فورتیکور (Fortekor 2.5, 5, 20 mg) و قرص‌های انسانی بنازپریل ۵، ۱۰ و ۲۰ میلی‌گرم موجود در داروخانه‌ها."
+    ],
+    "brand_names_fa": [
+      "بنازپریل",
+      "فورتکور",
+      "لوتنسین",
+      "فورتیکور",
+      "قرص‌های جویدنی دامی فورتیکور"
+    ],
+    "brand_names_en": [
+      "Fortekor",
+      "Lotensin"
     ]
   },
   {
@@ -18992,6 +20065,15 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قرص‌های روکش‌دار ۲۵، ۵۰ و ۱۰۰ میلی‌گرم انسانی (سیتوور، ارکتو، دیاموند و ژنریک‌های ابوریحان و خوارزمی) و سوسپانسیون خوراکی ۱۰ میلی‌گرم بر میلی‌لیتر در کلیه داروخانه‌ها."
+    ],
+    "brand_names_fa": [
+      "سیلدنافیل",
+      "ویاگرا",
+      "رواتیو"
+    ],
+    "brand_names_en": [
+      "Viagra",
+      "Revatio"
     ]
   },
   {
@@ -19099,6 +20181,15 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "پمادهای موضعی ۰.۰۳٪ و ۰.۱٪ جلدی (پروتوپیک، تاکریل و ژنریک‌های پوستی) و کپسول‌های خوراکی 0.5 و 1 و 5 میلی‌گرم انسانی؛ ساخت قطره چشمی ۰.۰۲٪ و ۰.۰۳٪ ترکیبی در داروخانه‌های بیمارستانی."
+    ],
+    "brand_names_fa": [
+      "پروتئوپیک",
+      "پروگراف",
+      "پمادهای موضعی ۰.۰۳٪ و ۰.۱٪ جلدی"
+    ],
+    "brand_names_en": [
+      "Tacrolimus Vet",
+      "Tacrolimus Brand"
     ]
   },
   {
@@ -19213,6 +20304,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قرص‌های روکش‌دار ۲۰۰ میلی‌گرم (کوردارون، آمیودارون آریا و امین) و آمپول تزریقی وریدی 150 mg/3 mL در بیمارستان‌ها و داروخانه‌های سراسر کشور."
+    ],
+    "brand_names_fa": [
+      "کوردارون",
+      "قرص‌های روکش‌دار ۲۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Amiodarone Vet",
+      "Amiodarone Brand"
     ]
   },
   {
@@ -19326,6 +20425,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قرص‌های روکش‌دار ۵ میلی‌گرم (دیتروپان، اکسی‌بوتینین امین و رازک) و شربت خوراکی ۵ میلی‌گرم در ۵ میلی‌لیتر موجود در کلیه داروخانه‌های کشور."
+    ],
+    "brand_names_fa": [
+      "دیتروپان",
+      "قرص‌های روکش‌دار ۵ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Oxybutynin Chloride Vet",
+      "Oxybutynin Chloride Brand"
     ]
   },
   {
@@ -19488,7 +20595,22 @@ const DRUGS_DATA = [
       "milk_fa": "شیر بدون دورریز: بزرگ‌ترین مزیت اقتصادی سفتیوفور در گاوداری‌های صنعتی شیری، صفر روز بودن پرهیز شیر آن است که میلیاردها تومان صرفه‌جویی اقتصادی ایجاد می‌کند.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سفتیوفور",
+      "اکسیدل",
+      "سفتیوفور نصر",
+      "اکسنل",
+      "ناکسل",
+      "اگزنل",
+      "اگزیدر"
+    ],
+    "brand_names_en": [
+      "Excede",
+      "Excenel",
+      "Naxcel",
+      "Ceftiocid"
+    ]
   },
   {
     "id": "tulathromycin",
@@ -19616,7 +20738,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دراکسین",
+      "Draxxin"
+    ],
+    "brand_names_en": [
+      "Tulathromycin Vet",
+      "Tulathromycin Brand"
+    ]
   },
   {
     "id": "ketoprofen",
@@ -19777,7 +20907,18 @@ const DRUGS_DATA = [
       "milk_fa": "طلای گاوداری شیری در کنار سفتیوفور: ترکیب کتوپروفن و سفتیوفور هر دو دارای زمان پرهیز شیر صفر روزه هستند؛ این ترکیب برای درمان گاوهای مبتلا به متریت و ورم پستان معجزه اقتصادی است.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "کتوپروفن",
+      "کتوفن",
+      "کتوپروفن دامی نصر",
+      "کتوون",
+      "پروفن"
+    ],
+    "brand_names_en": [
+      "Ketofen",
+      "Anafen"
+    ]
   },
   {
     "id": "mirtazapine",
@@ -19887,6 +21028,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قرص‌های روکش‌دار ۱۵ و ۳۰ میلی‌گرم انسانی (تولید داروسازی‌های عبیدی، اسوه و امین) و پماد ترانس‌درمال پینای گوش Mirataz دامی به صورت وارداتی در کلینیک‌های گربه."
+    ],
+    "brand_names_fa": [
+      "میراستاز",
+      "رمرون"
+    ],
+    "brand_names_en": [
+      "Mirtazapine Vet",
+      "Mirtazapine Brand"
     ]
   },
   {
@@ -20014,6 +21163,15 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قرص‌های ۴ میلی‌گرم خوراکی (تولید داروسازی‌های رازک، خوارزمی و پورسینا) و شربت خوراکی ۲ میلی‌گرم در ۵ میلی‌لیتر موجود در کلیه داروخانه‌های انسانی سراسر کشور."
+    ],
+    "brand_names_fa": [
+      "تراکتین",
+      "پریاکتین",
+      "قرص‌های ۴ میلی‌گرم خوراکی"
+    ],
+    "brand_names_en": [
+      "Cyproheptadine Vet",
+      "Cyproheptadine Brand"
     ]
   },
   {
@@ -20165,7 +21323,18 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پانتوپرازول",
+      "پانتوسید",
+      "پروتونیکس",
+      "پنتوسیک",
+      "نولپازا"
+    ],
+    "brand_names_en": [
+      "Protonix",
+      "Pantoloc"
+    ]
   },
   {
     "id": "famotidine_inj",
@@ -20280,6 +21449,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "فاموتیدین ۲۰ میلی‌گرم",
+      "10 mg/mL"
+    ],
+    "brand_names_en": [
+      "Famotidine Injection Vet",
+      "Famotidine Injection Brand"
     ]
   },
   {
@@ -20444,7 +21621,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "تزریقی و خوراکی"
+    ],
+    "brand_names_en": [
+      "Chlorpheniramine Vet",
+      "Chlorpheniramine Brand"
+    ]
   },
   {
     "id": "torsemide",
@@ -20555,6 +21739,17 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قرص‌های خوراکی ۵، ۱۰ و ۲۰ میلی‌گرم انسانی (تولید داروسازی‌های اکتوورکو، دانا و رازک) و قرص‌های جویدنی دامی UpCard (0.75, 3, 9 mg) وارداتی."
+    ],
+    "brand_names_fa": [
+      "تورسماید",
+      "اوپدورا",
+      "دمادکس",
+      "آپتور",
+      "دیمادکس"
+    ],
+    "brand_names_en": [
+      "UpCard",
+      "Demadex"
     ]
   },
   {
@@ -20673,6 +21868,13 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "وتمدین وریدی"
+    ],
+    "brand_names_en": [
+      "Pimobendan Injection Vet",
+      "Pimobendan Injection Brand"
     ]
   },
   {
@@ -20777,6 +21979,15 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "ویال‌های تزریقی ۱.۵ گرم (۱ گرم آمپی‌سیلین + ۰.۵ گرم سولباکتام) و ۳ گرم پودر لیوفیلیزه انسانی (یوناسین، آمپی‌سولباکتام جابربن‌حیان و دانا) در داروخانه‌های بیمارستانی."
+    ],
+    "brand_names_fa": [
+      "یوناسین",
+      "Unasyn",
+      "ویال‌های تزریقی ۱.۵ گرم"
+    ],
+    "brand_names_en": [
+      "Ampicillin / Sulbactam Vet",
+      "Ampicillin / Sulbactam Brand"
     ]
   },
   {
@@ -20906,7 +22117,17 @@ const DRUGS_DATA = [
       "milk_fa": "تمایز فرمولاسیون: فرم سدیم وریدی شفاف است ولی فرم تری‌هیدرات دامی کدر شیری بوده و فقط عضلانی تزریق می‌شود.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آمپی‌سیلین",
+      "آمپی‌نصر",
+      "آمپی‌سیلین دامی",
+      "تزریقی دامی و انسانی"
+    ],
+    "brand_names_en": [
+      "Ampicillin",
+      "Omnipen"
+    ]
   },
   {
     "id": "dexmedetomidine_gel",
@@ -20993,6 +22214,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "سرنگ‌های ژل مدرج خوراکی دامی 0.1 mg/mL (Sileo اوروموکوزال ساخت ارین وت) وارداتی ویژه سگ‌های با فوبیای صدا."
+    ],
+    "brand_names_fa": [
+      "سیلئو",
+      "Sileo"
+    ],
+    "brand_names_en": [
+      "Dexmedetomidine Oromucosal Gel Vet",
+      "Dexmedetomidine Oromucosal Gel Brand"
     ]
   },
   {
@@ -21096,6 +22325,15 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قرص‌های ۱۰ میلی‌گرم خوراکی (پلاسیل، متوکلوپرامید رازک، ابوریحان و خوارزمی) و قطره خوراکی ۴ میلی‌گرم بر میلی‌لیتر در کلیه داروخانه‌ها."
+    ],
+    "brand_names_fa": [
+      "پلاسیل",
+      "Metoclopramide",
+      "قرص‌های ۱۰ میلی‌گرم خوراکی"
+    ],
+    "brand_names_en": [
+      "Metoclopramide  Oral Vet",
+      "Metoclopramide  Oral Brand"
     ]
   },
   {
@@ -21199,6 +22437,15 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قرص‌های روکش‌دار ۴ میلی‌گرم (دمیترون، اندانسترون تهران شیمی و رازک) و شربت خوراکی ۴ میلی‌گرم در ۵ میلی‌لیتر در کلیه داروخانه‌ها."
+    ],
+    "brand_names_fa": [
+      "دمیترون",
+      "زوفران",
+      "قرص‌های روکش‌دار ۴ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Ondansetron  Oral Vet",
+      "Ondansetron  Oral Brand"
     ]
   },
   {
@@ -21306,6 +22553,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قرص‌های ۲۵ و ۱۰۰ میلی‌گرم انسانی (آلداکتون، اسپیرونولاکتون پورسینا و ایران‌دارو) در کلیه داروخانه‌ها."
+    ],
+    "brand_names_fa": [
+      "آلداکتون",
+      "قرص‌های ۲۵ و ۱۰۰ میلی‌گرم انسانی"
+    ],
+    "brand_names_en": [
+      "Spironolactone Vet",
+      "Spironolactone Brand"
     ]
   },
   {
@@ -21411,7 +22666,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ادووسین",
+      "Advocin 18%",
+      "Advocin"
+    ],
+    "brand_names_en": [
+      "Danofloxacin Mesylate Vet",
+      "Danofloxacin Mesylate Brand"
+    ]
   },
   {
     "id": "levamisole_inj",
@@ -21533,7 +22797,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "لوامیزول ۷.۵٪"
+    ],
+    "brand_names_en": [
+      "Levamisole  Injection Vet",
+      "Levamisole  Injection Brand"
+    ]
   },
   {
     "id": "ivermectin_la",
@@ -21637,7 +22908,15 @@ const DRUGS_DATA = [
       "milk_fa": "زمان طولانی پرهیز گوشت: به علت لانگ اکتینگ بودن، زمان پرهیز گوشت ۱۲۲ روز است و نباید به دام‌های نزدیک به کشتار تزریق شود.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آیورمکتین ۳.۱۵٪ لانگ اکتینگ دامی دامی",
+      "آیورمکتین ۳.۱۵٪ لانگ اکتینگ دامی انسانی"
+    ],
+    "brand_names_en": [
+      "Ivermectin Long-Acting (LA 3.15%) Vet",
+      "Ivermectin Long-Acting (LA 3.15%) Brand"
+    ]
   },
   {
     "id": "marbofloxacin_inj",
@@ -21776,7 +23055,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ماربوسیل ۱۰٪ و ۲٪"
+    ],
+    "brand_names_en": [
+      "Marbofloxacin Injection Vet",
+      "Marbofloxacin Injection Brand"
+    ]
   },
   {
     "id": "apoquel",
@@ -21892,6 +23178,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قرص‌های ۳.۶، ۵.۴ و ۱۶ میلی‌گرم خط‌دار ساخت کمپانی Zoetis دارای تاییدیه رسمی واردات در داروخانه‌های دامپزشکی ایران."
+    ],
+    "brand_names_fa": [
+      "آپوکوئل",
+      "Apoquel"
+    ],
+    "brand_names_en": [
+      "Oclacitinib Vet",
+      "Oclacitinib Brand"
     ]
   },
   {
@@ -21987,6 +23281,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "ویال‌های تک‌دوز تزریقی حاوی ۱۰، ۲۰، ۳۰ و ۴۰ میلی‌گرم لوکی‌وت‌مب ساخت کمپانی Zoetis آمریکا با زنجیره سرد رسمی."
+    ],
+    "brand_names_fa": [
+      "سایتوپوینت",
+      "Cytopoint"
+    ],
+    "brand_names_en": [
+      "Lokivetmab Vet",
+      "Lokivetmab Brand"
     ]
   },
   {
@@ -22079,6 +23381,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "سوسپانسیون‌های روغنی قطره گوش حاوی پوزاکونازول دامی ساخت MSD و برندهای وارداتی معتبر در حجم‌های ۱۵ و ۳۰ گرمی."
+    ],
+    "brand_names_fa": [
+      "اوتیماکس",
+      "کلارکسل دامی"
+    ],
+    "brand_names_en": [
+      "Posaconazole / Florfenicol / Terbinafine Otic Vet",
+      "Posaconazole / Florfenicol / Terbinafine Otic Brand"
     ]
   },
   {
@@ -22181,6 +23491,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قطره‌های استریل چشمی ۵ و ۱۰ میلی‌لیتری پردنیزولون ۱٪ (پرپرد / پرد فورت) ساخت کارخانجات سینادارو و باختر بیوشیمی."
+    ],
+    "brand_names_fa": [
+      "قطره چشمی پردنیزولون استات ۱٪ دامی",
+      "قطره چشمی پردنیزولون استات ۱٪ انسانی"
+    ],
+    "brand_names_en": [
+      "Prednisolone  1% Ophthalmic Vet",
+      "Prednisolone  1% Ophthalmic Brand"
     ]
   },
   {
@@ -22278,6 +23596,13 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "قطره استریل چشمی توبرامایسین ۰.۳٪ (توبرکس / سینابایوتیک) در بطری‌های قطره‌چکان‌دار ۵ میلی‌لیتری موجود در تمام داروخانه‌های کشور."
+    ],
+    "brand_names_fa": [
+      "قطره استریل چشمی توبرامایسین ۰.۳٪"
+    ],
+    "brand_names_en": [
+      "Tobramycin 0.3% Ophthalmic Vet",
+      "Tobramycin 0.3% Ophthalmic Brand"
     ]
   },
   {
@@ -22395,6 +23720,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "آمپول ۲ mg",
+      "mL"
+    ],
+    "brand_names_en": [
+      "Etomidate Vet",
+      "Etomidate Brand"
     ]
   },
   {
@@ -22509,6 +23842,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "نورآدرنالین آمپول ۱ mg",
+      "mL"
+    ],
+    "brand_names_en": [
+      "Norepinephrine Bi Vet",
+      "Norepinephrine Bi Brand"
     ]
   },
   {
@@ -22625,6 +23966,17 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "دوپامین",
+      "اینتروپین",
+      "آمپول ۴۰ mg",
+      "mL",
+      "40 mg/mL"
+    ],
+    "brand_names_en": [
+      "Intropin",
+      "Dopamine HCl"
     ]
   },
   {
@@ -22730,6 +24082,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "آمپول‌های تزریقی ۲.۵ و ۵ میلی‌لیتری حاوی ۱۰ میلی‌گرم بر میلی‌لیتر آتراکوریوم بسیلات ساخت داروسازی داروپخش و کاسپین‌تامین در بیمارستان‌های سراسر کشور."
+    ],
+    "brand_names_fa": [
+      "آمپول ۱۰ mg",
+      "mL"
+    ],
+    "brand_names_en": [
+      "Atracurium Besylate Vet",
+      "Atracurium Besylate Brand"
     ]
   },
   {
@@ -22835,6 +24195,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "آمپول‌های تزریقی ۱ میلی‌لیتری حاوی ۰.۵ میلی‌گرم نئوستیگمین متیل‌سولفات تولید داروسازی داروپخش و کاسپین‌تامین در کلیه اتاق‌های عمل و داروخانه‌های کشور."
+    ],
+    "brand_names_fa": [
+      "آمپول ۰.۵ mg",
+      "mL"
+    ],
+    "brand_names_en": [
+      "Neostigmine Methyl Vet",
+      "Neostigmine Methyl Brand"
     ]
   },
   {
@@ -22938,6 +24306,13 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "ویال‌های ۵۰ میلی‌گرم پودر لیوفیلیزه تزریقی ساخت کارخانجات داروسازی انسانی موجود در داروخانه‌های بیمارستانی با الزام پوشش ضد نور."
+    ],
+    "brand_names_fa": [
+      "ویال ۵۰ mg"
+    ],
+    "brand_names_en": [
+      "Nitroprusside Vet",
+      "Nitroprusside Brand"
     ]
   },
   {
@@ -23043,6 +24418,14 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "آمپول‌های تزریقی ۱ میلی‌لیتری حاوی ۲۰ واحد وازوپرسین (20 units/mL) در داروخانه‌های تخصصی بیمارستانی کشور."
+    ],
+    "brand_names_fa": [
+      "آمپول ۲۰ واحد",
+      "mL"
+    ],
+    "brand_names_en": [
+      "Vasopressin (Antidiuretic Hormone - ADH) Vet",
+      "Vasopressin (Antidiuretic Hormone - ADH) Brand"
     ]
   },
   {
@@ -23178,7 +24561,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دورموسدان",
+      "Domosedan"
+    ],
+    "brand_names_en": [
+      "Detomidine Vet",
+      "Detomidine Brand"
+    ]
   },
   {
     "id": "phenylbutazone",
@@ -23306,7 +24697,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "بیوت ۲۰٪ تزریقی و خمیر خوراکی"
+    ],
+    "brand_names_en": [
+      "Phenylbutazone Vet",
+      "Phenylbutazone Brand"
+    ]
   },
   {
     "id": "omeprazole_paste",
@@ -23395,6 +24793,15 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "سرنگ‌های مدرج خمیر خوراکی ۳۷٪ اسب (حاوی ۲.۲۸ گرم امپرازول در هر سرنگ ۶.۱۵ گرمی) دارای تاییدیه واردات فدراسیون سوارکاری و سازمان دامپزشکی کشور."
+    ],
+    "brand_names_fa": [
+      "گاستروگارد",
+      "GastroGard",
+      "سرنگ‌های مدرج خمیر خوراکی ۳۷٪ اسب"
+    ],
+    "brand_names_en": [
+      "Omeprazole Equine Oral Paste Vet",
+      "Omeprazole Equine Oral Paste Brand"
     ]
   },
   {
@@ -23506,6 +24913,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "هیونات",
+      "Hyonate"
+    ],
+    "brand_names_en": [
+      "Hyaluronate Intra-Articular Vet",
+      "Hyaluronate Intra-Articular Brand"
     ]
   },
   {
@@ -23612,6 +25027,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "سدیکت",
+      "Sedivet"
+    ],
+    "brand_names_en": [
+      "Romifidine Vet",
+      "Romifidine Brand"
     ]
   },
   {
@@ -23721,7 +25144,13 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "بایپریل پرندگان و خرگوش"
+    ],
+    "brand_names_en": [
+      "Baytril 10% Oral"
+    ]
   },
   {
     "id": "meloxicam_drop",
@@ -23830,7 +25259,15 @@ const DRUGS_DATA = [
       "milk_fa": "طعم دلپذیر: سوسپانسیون متوکام دارای طعم شیرین عسلی است و اغلب جوندگان و خرگوش‌ها آن را داوطلبانه از سرنگ می‌مکند.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "متوکام ۱.۵ mg",
+      "mL جوندگان و پرندگان"
+    ],
+    "brand_names_en": [
+      "Meloxicam 1.5 mg/mL Oral Suspension Vet",
+      "Meloxicam 1.5 mg/mL Oral Suspension Brand"
+    ]
   },
   {
     "id": "ivermectin_spoton",
@@ -23939,7 +25376,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آیورمکتین ۰.۱٪ قطره پشت گردنی پرندگان زینتی دامی",
+      "آیورمکتین ۰.۱٪ قطره پشت گردنی پرندگان زینتی انسانی"
+    ],
+    "brand_names_en": [
+      "Ivermectin 0.1% Spot-on"
+    ]
   },
   {
     "id": "doxycycline_avian",
@@ -24040,7 +25484,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "داکسی‌سایکلین ۲۰٪ پودر محلول در آب پرندگان دامی",
+      "داکسی‌سایکلین ۲۰٪ پودر محلول در آب پرندگان انسانی"
+    ],
+    "brand_names_en": [
+      "Doxycycline 20% Avian Water Soluble Powder Vet",
+      "Doxycycline 20% Avian Water Soluble Powder Brand"
+    ]
   },
   {
     "id": "trimethoprim_sulfa",
@@ -24146,6 +25598,21 @@ const DRUGS_DATA = [
     ],
     "iranian_market_products": [
       "سوسپانسیون خوراکی ۱۰۰ میلی‌لیتری حاوی ۲۴۰ میلی‌گرم در ۵ میلی‌لیتر (200mg SMZ + 40mg TMP) تولید کارخانجات داروسازی انسانی و فرمولاسیون‌های سوسپانسیون دامی."
+    ],
+    "brand_names_fa": [
+      "تری‌متوپریم سولفا",
+      "سولفادیازین",
+      "کوتر Remove",
+      "باکتریم",
+      "تری‌برین",
+      "شربت تری‌متوپریم",
+      "سولفامتوکسازول"
+    ],
+    "brand_names_en": [
+      "Bactrim",
+      "Tribrissen",
+      "Borgal",
+      "Trimsul"
     ]
   },
   {
@@ -24275,7 +25742,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فلژیل مایع ۲۰۰ mg",
+      "5mL"
+    ],
+    "brand_names_en": [
+      "Metronidazole Benzoate Oral Suspension Vet",
+      "Metronidazole Benzoate Oral Suspension Brand"
+    ]
   },
   {
     "id": "amprolium",
@@ -24384,7 +25859,14 @@ const DRUGS_DATA = [
       "milk_fa": "پرهیز شیر و گوشت صفر: آمپرولیوم از نادرترین داروهای ضدانگل است که دوره پرهیز گوشت و تخم‌مرغ آن صفر روز است و مانع ضرر اقتصادی مرغدار می‌شود.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ضد کوکسیدیوز طیور و نشخوارکنندگان"
+    ],
+    "brand_names_en": [
+      "Amprolium 20% Water Soluble Powder Vet",
+      "Amprolium 20% Water Soluble Powder Brand"
+    ]
   },
   {
     "id": "tylosin_tartrate",
@@ -24499,7 +25981,15 @@ const DRUGS_DATA = [
       "milk_fa": "پرهیز گوشت فوق‌العاده کوتاه: دوره پرهیز گوشت تایلوزین در طیور فقط ۲۴ ساعت (۱ روز) است که مدیریت تخلیه سالن مرغداری را بسیار تسهیل می‌کند.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "تایلوداکس",
+      "تایلوزین طیور"
+    ],
+    "brand_names_en": [
+      "Tylosin  Soluble Powder Vet",
+      "Tylosin  Soluble Powder Brand"
+    ]
   },
   {
     "id": "colistin_sulfate",
@@ -24612,7 +26102,14 @@ const DRUGS_DATA = [
       "milk_fa": "جذب صفر و پرهیز تخم‌مرغ صفر: از آنجا که کولیستین یک مولکول بزرگ با بار مثبت است، از جدار سالم روده جذب خون نمی‌شود؛ بنابراین در مرغ‌های تخم‌گذار بدون ایجاد باقیمانده در تخم‌مرغ قابل مصرف است.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پلی‌میکسین E دامی"
+    ],
+    "brand_names_en": [
+      "Colistin  Soluble Powder Vet",
+      "Colistin  Soluble Powder Brand"
+    ]
   },
   {
     "id": "diclazuril",
@@ -24717,7 +26214,15 @@ const DRUGS_DATA = [
       "milk_fa": "پرهیز گوشت صفر روزه در بره: زمان پرهیز گوشت دیکلازوریل صفر روز است؛ دامدار می‌تواند بره‌ها را در هر زمانی پس از درمان بدون منع قانونی به کشتارگاه ارسال کند.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دیکلاکاکس",
+      "وکوکس"
+    ],
+    "brand_names_en": [
+      "Diclazuril 0.5% Oral Suspension Vet",
+      "Diclazuril 0.5% Oral Suspension Brand"
+    ]
   },
   {
     "id": "tilmicosin",
@@ -24845,7 +26350,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "مایکوتیک",
+      "Micotil"
+    ],
+    "brand_names_en": [
+      "Tilmicosin 300 mg/mL Injection Vet",
+      "Tilmicosin 300 mg/mL Injection Brand"
+    ]
   },
   {
     "id": "oxytetracycline_poultry",
@@ -24937,7 +26450,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "اکسی‌تتراسایکلین ۵۰٪ پودر محلول در آب طیور دامی",
+      "اکسی‌تتراسایکلین ۵۰٪ پودر محلول در آب طیور انسانی"
+    ],
+    "brand_names_en": [
+      "Oxytetracycline 50% Powder"
+    ]
   },
   {
     "id": "enrofloxacin_poultry",
@@ -25028,7 +26548,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "انروکینول",
+      "اروسین"
+    ],
+    "brand_names_en": [
+      "Enrofloxacin 10% Solution for Poultry Vet",
+      "Enrofloxacin 10% Solution for Poultry Brand"
+    ]
   },
   {
     "id": "bedinvetmab",
@@ -25139,7 +26667,19 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "منع مصرف در حیوانات تولیدی (صرفاً برای سگ)."
-    }
+    },
+    "brand_names_fa": [
+      "لیبرلا",
+      "ویال تزریقی ۵ میلی‌گرم",
+      "ویال تزریقی ۱۰ میلی‌گرم",
+      "ویال تزریقی ۱۵ میلی‌گرم",
+      "ویال تزریقی ۲۰ میلی‌گرم",
+      "ویال تزریقی ۳۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Bedinvetmab (Librela) Vet",
+      "Bedinvetmab (Librela) Brand"
+    ]
   },
   {
     "id": "frunevetmab",
@@ -25230,7 +26770,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً ویژه گربه خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "سولنسیا"
+    ],
+    "brand_names_en": [
+      "Frunevetmab (Solensia) Vet",
+      "Frunevetmab (Solensia) Brand"
+    ]
   },
   {
     "id": "telmisartan",
@@ -25373,7 +26920,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً در دام کوچک کاربرد دارد."
-    }
+    },
+    "brand_names_fa": [
+      "سمینترا"
+    ],
+    "brand_names_en": [
+      "Telmisartan (Semintra) Vet",
+      "Telmisartan (Semintra) Brand"
+    ]
   },
   {
     "id": "robenacoxib",
@@ -25539,7 +27093,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "اونسیور",
+      "انسیور گربه",
+      "انسیور سگ"
+    ],
+    "brand_names_en": [
+      "Onsior"
+    ]
   },
   {
     "id": "fomepizole",
@@ -25657,7 +27219,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "۴-متیل‌پیرازول",
+      "آنتی‌زول"
+    ],
+    "brand_names_en": [
+      "Fomepizole (4-MP / Antizol-Vet) Vet",
+      "Fomepizole (4-MP / Antizol-Vet) Brand"
+    ]
   },
   {
     "id": "fenoldopam",
@@ -25776,7 +27346,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای بخش‌های اورژانس حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "کورلوپام"
+    ],
+    "brand_names_en": [
+      "Fenoldopam (Corlopam) Vet",
+      "Fenoldopam (Corlopam) Brand"
+    ]
   },
   {
     "id": "leflunomide",
@@ -25894,7 +27471,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "منع مطلق در دام‌های تولیدی."
-    }
+    },
+    "brand_names_fa": [
+      "آراوا"
+    ],
+    "brand_names_en": [
+      "Leflunomide (Arava) Vet",
+      "Leflunomide (Arava) Brand"
+    ]
   },
   {
     "id": "chlorambucil",
@@ -26026,7 +27610,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "منع مصرف ابدی در حیوانات تولیدی."
-    }
+    },
+    "brand_names_fa": [
+      "لوکران",
+      "قرص روکش‌دار ۲ میلی‌گرم لوکران"
+    ],
+    "brand_names_en": [
+      "Leukeran 2 mg"
+    ]
   },
   {
     "id": "ronidazole",
@@ -26156,7 +27747,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "رونیدازول دامی",
+      "رونیدازول انسانی"
+    ],
+    "brand_names_en": [
+      "Ronidazole Vet",
+      "Ronidazole Brand"
+    ]
   },
   {
     "id": "carnidazole",
@@ -26290,7 +27889,13 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "اسپارتريکس"
+    ],
+    "brand_names_en": [
+      "Spartrix 10 mg"
+    ]
   },
   {
     "id": "calcium_glubionate",
@@ -26420,7 +28025,13 @@ const DRUGS_DATA = [
       "milk_fa": "درمان تتانی هیپوکلسمیک در سگ‌های ماده شیرده (اکلامپسی).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ویال تزریقی کلسیم گلوکونات ۱۰٪"
+    ],
+    "brand_names_en": [
+      "Calcium Syrup"
+    ]
   },
   {
     "id": "oxytocin_reptile",
@@ -26511,7 +28122,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "منع مصرف در خزندگان مصرفی ندارد."
-    }
+    },
+    "brand_names_fa": [
+      "پروتکل اختصاصی خزندگان"
+    ],
+    "brand_names_en": [
+      "Oxytocin (Reptile Protocol) Vet",
+      "Oxytocin (Reptile Protocol) Brand"
+    ]
   },
   {
     "id": "latanoprost",
@@ -26601,7 +28219,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "زالاتان",
+      "قطره چشمی ۰.۰۰۵٪ لاتانوپروست"
+    ],
+    "brand_names_en": [
+      "Latanoprost (Xalatan) Vet",
+      "Latanoprost (Xalatan) Brand"
+    ]
   },
   {
     "id": "methadone",
@@ -26736,6 +28362,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "کومفورتان",
+      "10 mg/mL"
+    ],
+    "brand_names_en": [
+      "Methadone (Comfortan / Physeptone) Vet",
+      "Methadone (Comfortan / Physeptone) Brand"
     ]
   },
   {
@@ -26839,6 +28473,13 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "بوپرنورفین ۱.۸ میلی‌گرم گربه"
+    ],
+    "brand_names_en": [
+      "Simbadol (High-Concentration Buprenorphine 1.8 mg/mL) Vet",
+      "Simbadol (High-Concentration Buprenorphine 1.8 mg/mL) Brand"
     ]
   },
   {
@@ -26965,7 +28606,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پروتکل تخصصی پرندگان و اگزوتیک"
+    ],
+    "brand_names_en": [
+      "Itraconazole (Sporanox / Avian Protocol) Vet",
+      "Itraconazole (Sporanox / Avian Protocol) Brand"
+    ]
   },
   {
     "id": "terbinafine_avian",
@@ -27089,7 +28737,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پروتکل تخصصی پرندگان و خزندگان",
+      "قرص خوراکی انسانی ۲۵۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Terbinafine (Avian & Exotic Protocol) Vet",
+      "Terbinafine (Avian & Exotic Protocol) Brand"
+    ]
   },
   {
     "id": "desmopressin",
@@ -27233,7 +28889,17 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "منع در دام مصرفی."
-    }
+    },
+    "brand_names_fa": [
+      "DDAVP",
+      "مینی‌رین",
+      "اسپری و قطره بینی دسموپرسین",
+      "قرص خوراکی ۰.۱ و ۰.۲ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Desmopressin (DDAVP / Minirin) Vet",
+      "Desmopressin (DDAVP / Minirin) Brand"
+    ]
   },
   {
     "id": "prednisolone_sodium_succinate",
@@ -27379,7 +29045,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "گوشت: ۵ روز، شیر: ۷۲ ساعت."
-    }
+    },
+    "brand_names_fa": [
+      "سولو-دلتا-کورتف"
+    ],
+    "brand_names_en": [
+      "Prednisolone  Succinate (Solu-Delta-Cortef) Vet",
+      "Prednisolone  Succinate (Solu-Delta-Cortef) Brand"
+    ]
   },
   {
     "id": "pilocarpine",
@@ -27500,7 +29173,17 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "چشمی",
+      "خوراکی",
+      "قطره چشمی پیلوکارپین ۱٪",
+      "قطره چشمی پیلوکارپین ۲٪"
+    ],
+    "brand_names_en": [
+      "Pilocarpine 1%",
+      "Pilocarpine 2%"
+    ]
   },
   {
     "id": "amikacin",
@@ -27672,6 +29355,16 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "آمیکاسین",
+      "آمیکاسین دامی",
+      "آمیکین",
+      "50 mg/mL",
+      "250 mg/mL"
+    ],
+    "brand_names_en": [
+      "Amikin"
     ]
   },
   {
@@ -27801,7 +29494,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "وی‌فند"
+    ],
+    "brand_names_en": [
+      "Voriconazole (Vfend) Vet",
+      "Voriconazole (Vfend) Brand"
+    ]
   },
   {
     "id": "clarithromycin",
@@ -27952,7 +29652,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "منع مصرف در اسب‌های با کاربری گوشت."
-    }
+    },
+    "brand_names_fa": [
+      "بیاکسین"
+    ],
+    "brand_names_en": [
+      "Clarithromycin (Biaxin) Vet",
+      "Clarithromycin (Biaxin) Brand"
+    ]
   },
   {
     "id": "rifampin",
@@ -28075,7 +29782,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "منع مصرف در اسب‌های ورزشی و مصرفی."
-    }
+    },
+    "brand_names_fa": [
+      "ریفامپیسین"
+    ],
+    "brand_names_en": [
+      "Rifampin (Rifampicin / Rifadin) Vet",
+      "Rifampin (Rifampicin / Rifadin) Brand"
+    ]
   },
   {
     "id": "diltiazem",
@@ -28213,7 +29927,13 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "کاردیزم"
+    ],
+    "brand_names_en": [
+      "Diltiazem CD"
+    ]
   },
   {
     "id": "atenolol",
@@ -28346,7 +30066,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "آتنولول",
+      "تنورمین"
+    ],
+    "brand_names_en": [
+      "Tenormin"
+    ]
   },
   {
     "id": "sotalol",
@@ -28481,7 +30208,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "بتاپیس"
+    ],
+    "brand_names_en": [
+      "Sotalol (Betapace) Vet",
+      "Sotalol (Betapace) Brand"
+    ]
   },
   {
     "id": "ursodiol",
@@ -28619,7 +30353,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "اورسودوکسی کولیک اسید",
+      "اورسوبیل"
+    ],
+    "brand_names_en": [
+      "Ursodiol (Ursodeoxycholic Acid / Actigall) Vet",
+      "Ursodiol (Ursodeoxycholic Acid / Actigall) Brand"
+    ]
   },
   {
     "id": "s_adenosylmethionine",
@@ -28747,7 +30489,18 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "ندارد (مکمل تغذیه‌ای ایمن)."
-    }
+    },
+    "brand_names_fa": [
+      "سام-ای",
+      "دنامارین",
+      "قرص با روکش انتریک ۹۰ میلی‌گرم",
+      "قرص با روکش انتریک ۲۲۵ میلی‌گرم",
+      "قرص با روکش انتریک ۴۲۵ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "S-Adenosylmethionine (SAMe / Denamarin) Vet",
+      "S-Adenosylmethionine (SAMe / Denamarin) Brand"
+    ]
   },
   {
     "id": "fluoxetine",
@@ -28885,7 +30638,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "پروزاک",
+      "رکونسایل"
+    ],
+    "brand_names_en": [
+      "Fluoxetine (Prozac / Reconcile) Vet",
+      "Fluoxetine (Prozac / Reconcile) Brand"
+    ]
   },
   {
     "id": "clomipramine",
@@ -29024,7 +30785,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "کلومیکالم",
+      "آنافرانیل"
+    ],
+    "brand_names_en": [
+      "Clomipramine (Clomicalm / Anafranil) Vet",
+      "Clomipramine (Clomicalm / Anafranil) Brand"
+    ]
   },
   {
     "id": "zonisamide",
@@ -29161,7 +30930,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "زونگران"
+    ],
+    "brand_names_en": [
+      "Zonisamide (Zonegran) Vet",
+      "Zonisamide (Zonegran) Brand"
+    ]
   },
   {
     "id": "selegiline",
@@ -29280,7 +31056,16 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "آنی‌پریل",
+      "ال-دپرنیل",
+      "قرص خوراکی ۵ میلی‌گرم سلژیلین"
+    ],
+    "brand_names_en": [
+      "Selegiline (Anipryl / L-Deprenyl) Vet",
+      "Selegiline (Anipryl / L-Deprenyl) Brand"
+    ]
   },
   {
     "id": "cabergoline",
@@ -29403,7 +31188,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "گالاستاپ",
+      "داستینکس",
+      "قرص انسانی ۰.۵ میلی‌گرم داستینکس"
+    ],
+    "brand_names_en": [
+      "500 mcg"
+    ]
   },
   {
     "id": "fludrocortisone",
@@ -29534,7 +31327,13 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "فلورینف"
+    ],
+    "brand_names_en": [
+      "Florinef 0.1 mg"
+    ]
   },
   {
     "id": "calcitriol",
@@ -29655,7 +31454,17 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "روکالترول",
+      "۱",
+      "۲۵-دی‌هیدروکسی ویتامین D3",
+      "کپسول ژلاتینی نرم ۰.۲۵ میکروگرم"
+    ],
+    "brand_names_en": [
+      "Calcitriol (1,25-Dihydroxycholecalciferol / Rocaltrol) Vet",
+      "Calcitriol (1,25-Dihydroxycholecalciferol / Rocaltrol) Brand"
+    ]
   },
   {
     "id": "dorzolamide",
@@ -29776,7 +31585,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "تروزوپت",
+      "قطره چشمی دورزولامید ۲٪"
+    ],
+    "brand_names_en": [
+      "Dorzolamide 2%"
+    ]
   },
   {
     "id": "timolol",
@@ -29892,7 +31708,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "تیمو پتیک",
+      "قطره چشمی ۰.۲۵٪ و ۰.۵٪ تیمولول"
+    ],
+    "brand_names_en": [
+      "Timolol (Timoptic) Vet",
+      "Timolol (Timoptic) Brand"
+    ]
   },
   {
     "id": "glycopyrrolate",
@@ -30049,6 +31873,13 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "روبینول"
+    ],
+    "brand_names_en": [
+      "Glycopyrrolate (Robinul-V) Vet",
+      "Glycopyrrolate (Robinul-V) Brand"
     ]
   },
   {
@@ -30195,6 +32026,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "نالوکسان",
+      "نارکان"
+    ],
+    "brand_names_en": [
+      "Narcan",
+      "Evzio"
     ]
   },
   {
@@ -30314,7 +32153,17 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "فلومازنیل",
+      "آنکسات",
+      "رومازیکون",
+      "آنگزات"
+    ],
+    "brand_names_en": [
+      "Anexate",
+      "Romazicon"
+    ]
   },
   {
     "id": "doxapram",
@@ -30442,6 +32291,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "دوپرام",
+      "20 mg/mL"
+    ],
+    "brand_names_en": [
+      "Doxapram Hydrochloride (Dopram-V) Vet",
+      "Doxapram Hydrochloride (Dopram-V) Brand"
     ]
   },
   {
@@ -30546,7 +32403,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "لایزودرن",
+      "اُ-پی-دی‌دی‌دی"
+    ],
+    "brand_names_en": [
+      "Lysodren 500 mg"
+    ]
   },
   {
     "id": "paromomycin",
@@ -30670,7 +32534,13 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "هوماتین"
+    ],
+    "brand_names_en": [
+      "Humatin"
+    ]
   },
   {
     "id": "tacrolimus_eye",
@@ -30765,7 +32635,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "قطره و پماد چشمی ۰.۰۲٪ و ۰.۰۳٪",
+      "پماد چشمی استریل تاکرولیموس ۰.۰۳٪"
+    ],
+    "brand_names_en": [
+      "Tacrolimus Ophthalmic (0.02% / 0.03% Suspension & Ointment) Vet",
+      "Tacrolimus Ophthalmic (0.02% / 0.03% Suspension & Ointment) Brand"
+    ]
   },
   {
     "id": "tropicamide",
@@ -30879,7 +32757,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "میدریاسیل",
+      "قطره چشمی ۰.۵٪ و ۱٪ تروپیکامید"
+    ],
+    "brand_names_en": [
+      "Mydriacyl"
+    ]
   },
   {
     "id": "hydrocodone",
@@ -30988,7 +32873,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "هایکودان",
+      "قرص خوراکی ۵ میلی‌گرم هیدروکودون"
+    ],
+    "brand_names_en": [
+      "Hycodan 5 mg"
+    ]
   },
   {
     "id": "iohexol",
@@ -31110,7 +33002,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً تشخیصی حیوانات خانگی و اسب."
-    }
+    },
+    "brand_names_fa": [
+      "اومنی‌پاک"
+    ],
+    "brand_names_en": [
+      "Omnipaque 240",
+      "Omnipaque 300"
+    ]
   },
   {
     "id": "levetiracetam_xr",
@@ -31221,7 +33120,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "صرفاً برای حیوانات خانگی."
-    }
+    },
+    "brand_names_fa": [
+      "کپرا ایکس‌آر"
+    ],
+    "brand_names_en": [
+      "Levetiracetam Extended-Release (Keppra XR) Vet",
+      "Levetiracetam Extended-Release (Keppra XR) Brand"
+    ]
   },
   {
     "id": "apomorphine_sublingual",
@@ -31329,6 +33235,16 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "قطره زیرزبانی",
+      "ملتحمه چشم",
+      "قرص‌های محلول آپومورفین ۶ میلی‌گرم",
+      "5 mg/mL"
+    ],
+    "brand_names_en": [
+      "Apomorphine (Sublingual & Conjunctival Emetic) Vet",
+      "Apomorphine (Sublingual & Conjunctival Emetic) Brand"
     ]
   },
   {
@@ -31425,7 +33341,18 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "کاربرد اختصاصی در حیوانات خانگی (سگ و گربه) - فاقد دوره پرهیز"
-    }
+    },
+    "brand_names_fa": [
+      "آملودیپین",
+      "نورواسک",
+      "آمودیکات",
+      "قرص آملودیپین ۲.۵ میلی‌گرم انسانی",
+      "قرص آملودیپین ۱۰ میلی‌گرم انسانی"
+    ],
+    "brand_names_en": [
+      "Norvasc",
+      "Amodip"
+    ]
   },
   {
     "id": "azithromycin",
@@ -31529,7 +33456,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "مصرف در حیوانات خانگی - در دام تولیدی طبق ضوابط وت‌فارماکولوژی استفاده نشود."
-    }
+    },
+    "brand_names_fa": [
+      "کپسول آزیترومایسین ۲۵۰ میلی‌گرم",
+      "کپسول آزیترومایسین ۵۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Azithromycin Vet",
+      "Azithromycin Brand"
+    ]
   },
   {
     "id": "albendazole",
@@ -31638,7 +33573,18 @@ const DRUGS_DATA = [
       "milk_fa": "رعایت دقیق دوره پرهیز از مصرف گوشت و شیر پیش از ارسال به کشتارگاه.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آلبندازول",
+      "آلبندازول دامی",
+      "آلبن نصر",
+      "ورمیکول",
+      "بولوس آلبندازول ۶۰۰ میلی‌گرم دامی"
+    ],
+    "brand_names_en": [
+      "Valbazen",
+      "Albendazole"
+    ]
   },
   {
     "id": "alprazolam",
@@ -31732,7 +33678,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "داروی اختصاصی همراه (سگ و گربه) - فاقد کاربرد در دام تولیدی"
-    }
+    },
+    "brand_names_fa": [
+      "آلپرازولام دامی",
+      "آلپرازولام انسانی"
+    ],
+    "brand_names_en": [
+      "Alprazolam Vet",
+      "Alprazolam Brand"
+    ]
   },
   {
     "id": "amitriptyline",
@@ -31828,7 +33782,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "حیوانات خانگی - فاقد کاربرد در دام مصرفی"
-    }
+    },
+    "brand_names_fa": [
+      "آمی‌تریپتیلین دامی",
+      "آمی‌تریپتیلین انسانی"
+    ],
+    "brand_names_en": [
+      "Amitriptyline Vet",
+      "Amitriptyline Brand"
+    ]
   },
   {
     "id": "bupivacaine",
@@ -31935,6 +33897,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "بوپیواکائین دامی",
+      "بوپیواکائین انسانی"
+    ],
+    "brand_names_en": [
+      "Bupivacaine Vet",
+      "Bupivacaine Brand"
     ]
   },
   {
@@ -32029,7 +33999,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "داروی رفتاری حیوانات خانگی - فاقد کاربرد در دام مصرفی"
-    }
+    },
+    "brand_names_fa": [
+      "بوسپیرون دامی",
+      "بوسپیرون انسانی"
+    ],
+    "brand_names_en": [
+      "Buspirone Vet",
+      "Buspirone Brand"
+    ]
   },
   {
     "id": "azathioprine",
@@ -32129,7 +34107,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "داروی انحصاری سگ - فاقد مصرف در دام تولیدی"
-    }
+    },
+    "brand_names_fa": [
+      "آزاتیوپرین دامی",
+      "آزاتیوپرین انسانی"
+    ],
+    "brand_names_en": [
+      "Azathioprine Vet",
+      "Azathioprine Brand"
+    ]
   },
   {
     "id": "bethanechol",
@@ -32223,7 +34209,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "مصرف در حیوانات خانگی - فاقد دوره پرهیز غذایی"
-    }
+    },
+    "brand_names_fa": [
+      "بتانیکول دامی",
+      "بتانیکول انسانی"
+    ],
+    "brand_names_en": [
+      "Bethanechol Chloride Vet",
+      "Bethanechol Chloride Brand"
+    ]
   },
   {
     "id": "budesonide",
@@ -32317,7 +34311,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "مصرف اختصاصی در حیوانات خانگی - فاقد کاربرد در دام مصرفی"
-    }
+    },
+    "brand_names_fa": [
+      "اسپری تنفسی بودزوناید"
+    ],
+    "brand_names_en": [
+      "Budesonide Vet",
+      "Budesonide Brand"
+    ]
   },
   {
     "id": "aspirin",
@@ -32419,7 +34420,15 @@ const DRUGS_DATA = [
       "meat_days": 1,
       "milk_hours": 24,
       "note": "در دام‌های شیری و گوشتی ترجیحاً از فلونیکسین مگلومین استفاده شود."
-    }
+    },
+    "brand_names_fa": [
+      "قرص آسپرین ۱۰۰ میلی‌گرم جویدنی",
+      "قرص آسپرین ۳۲۵ میلی‌گرم بزرگسالان"
+    ],
+    "brand_names_en": [
+      "Aspirin (ASA) Vet",
+      "Aspirin (ASA) Brand"
+    ]
   },
   {
     "id": "allopurinol",
@@ -32501,7 +34510,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "مصرف در سگ - فاقد کاربرد در دام تولیدی"
-    }
+    },
+    "brand_names_fa": [
+      "آلوپورینول دامی",
+      "آلوپورینول انسانی"
+    ],
+    "brand_names_en": [
+      "Allopurinol Vet",
+      "Allopurinol Brand"
+    ]
   },
   {
     "id": "afoxolaner",
@@ -32571,7 +34588,16 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "داروی اختصاصی سگ - فاقد دوره پرهیز"
-    }
+    },
+    "brand_names_fa": [
+      "نکس‌گارد",
+      "نکسگارد",
+      "نکس‌گارد اسپکترا"
+    ],
+    "brand_names_en": [
+      "NexGard",
+      "NexGard Spectra"
+    ]
   },
   {
     "id": "aglepristone",
@@ -32664,7 +34690,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "داروی حیوانات همراه (سگ و گربه) - فاقد کاربرد در دام مصرفی"
-    }
+    },
+    "brand_names_fa": [
+      "آگلپریستون دامی",
+      "آگلپریستون انسانی"
+    ],
+    "brand_names_en": [
+      "Aglepristone Vet",
+      "Aglepristone Brand"
+    ]
   },
   {
     "id": "acyclovir",
@@ -32767,7 +34801,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پماد چشمی آسیکلوویر ۳٪"
+    ],
+    "brand_names_en": [
+      "Acyclovir Vet",
+      "Acyclovir Brand"
+    ]
   },
   {
     "id": "bismuth_subsalicylate",
@@ -32864,7 +34905,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "فاقد جذب سیستمیک معنی‌دار بیسموت در دام - فاقد دوره پرهیز"
-    }
+    },
+    "brand_names_fa": [
+      "پودرهای اسهال دامی حاوی بیسموت"
+    ],
+    "brand_names_en": [
+      "Bismuth Subsalicylate Vet",
+      "Bismuth Subsalicylate Brand"
+    ]
   },
   {
     "id": "apramycin",
@@ -32957,7 +35005,14 @@ const DRUGS_DATA = [
       "milk_fa": "رعایت دوره پرهیز از مصرف گوشت در گوساله و طیور صنعتی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پریمیکس آپرامایسین دامی"
+    ],
+    "brand_names_en": [
+      "Apramycin Vet",
+      "Apramycin Brand"
+    ]
   },
   {
     "id": "altrenogest",
@@ -33031,7 +35086,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "اسب‌های مسابقه‌ای و پرورشی - در اسب‌های ارسالی به کشتار مصرف نشود."
-    }
+    },
+    "brand_names_fa": [
+      "آلترنوژست دامی",
+      "آلترنوژست انسانی"
+    ],
+    "brand_names_en": [
+      "Regu-Mate - MSD Animal Health"
+    ]
   },
   {
     "id": "aluminum_hydroxide",
@@ -33118,7 +35180,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "فاقد جذب سیستمیک - فاقد دوره پرهیز"
-    }
+    },
+    "brand_names_fa": [
+      "آلومینیوم هیدروکسید دامی",
+      "آلومینیوم هیدروکسید انسانی"
+    ],
+    "brand_names_en": [
+      "Aluminum Hydroxide Vet",
+      "Aluminum Hydroxide Brand"
+    ]
   },
   {
     "id": "amantadine",
@@ -33211,7 +35281,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_hours": 0,
       "note": "مصرف در حیوانات خانگی - در دام تولیدی منع مصرف دارد."
-    }
+    },
+    "brand_names_fa": [
+      "آمانتادین دامی",
+      "آمانتادین انسانی"
+    ],
+    "brand_names_en": [
+      "Amantadine Vet",
+      "Amantadine Brand"
+    ]
   },
   {
     "id": "acarbose",
@@ -33391,7 +35469,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Acarbose 50 & 100 mg Tablets"
+    ],
+    "brand_names_en": [
+      "Acarbose Vet",
+      "Acarbose Brand"
+    ]
   },
   {
     "id": "acetazolamide",
@@ -33582,7 +35667,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Acetazolamide 250 mg Tablets"
+    ],
+    "brand_names_en": [
+      "Acetazolamide Vet",
+      "Acetazolamide Brand"
+    ]
   },
   {
     "id": "acetic_acid",
@@ -33744,7 +35836,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "شوینده گوشی و موضعی",
+      "Otic Acetic Acid 2% / Ear Cleansing Solution"
+    ],
+    "brand_names_en": [
+      "Acetic Acid (Otic / Topical) Vet",
+      "Acetic Acid (Otic / Topical) Brand"
+    ]
   },
   {
     "id": "albumin_human",
@@ -33919,7 +36019,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Human Albumin 20% (50 ml & 100 ml vials)",
+      "50 ml & 100 ml vials",
+      "Human Albumin 20%"
+    ],
+    "brand_names_en": [
+      "Human Serum Albumin 20% Vet",
+      "Human Serum Albumin 20% Brand"
+    ]
   },
   {
     "id": "alendronate",
@@ -34100,7 +36209,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Alendronate 10, 35 & 70 mg Tablets"
+    ],
+    "brand_names_en": [
+      "Alendronate Vet",
+      "Alendronate Brand"
+    ]
   },
   {
     "id": "alfentanil",
@@ -34276,7 +36392,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Alfentanil HCl 0.5 mg/ml (500 mcg/ml) Ampoules",
+      "500 mcg/ml",
+      "Alfentanil HCl 0.5 mg/ml"
+    ],
+    "brand_names_en": [
+      "Alfentanil Hydrochloride Vet",
+      "Alfentanil Hydrochloride Brand"
+    ]
   },
   {
     "id": "aminocaproic_acid",
@@ -34469,7 +36594,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Aminocaproic Acid 250 mg/ml Ampoules / 500 mg Tablets"
+    ],
+    "brand_names_en": [
+      "Aminocaproic Acid (EACA) Vet",
+      "Aminocaproic Acid (EACA) Brand"
+    ]
   },
   {
     "id": "ammonium_chloride",
@@ -34642,7 +36774,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Ammonium Chloride Pure Chemical / Feed Grade"
+    ],
+    "brand_names_en": [
+      "Ammonium Chloride Vet",
+      "Ammonium Chloride Brand"
+    ]
   },
   {
     "id": "amphotericin_b",
@@ -34806,7 +36945,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سنتی و لیپوزومال",
+      "Amphotericin B 50 mg Vials (Fungizone / AmBisome)"
+    ],
+    "brand_names_en": [
+      "Amphotericin B (Deoxycholate & Liposomal) Vet",
+      "Amphotericin B (Deoxycholate & Liposomal) Brand"
+    ]
   },
   {
     "id": "antivenom_crotalidae",
@@ -34966,7 +37113,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Razi Polyvalent Snake Antivenom (سرم ضد مارگزیدگی رازی)"
+    ],
+    "brand_names_en": [
+      "Antivenom, Polyvalent (Crotalidae / Viperidae) Vet",
+      "Antivenom, Polyvalent (Crotalidae / Viperidae) Brand"
+    ]
   },
   {
     "id": "ascorbic_acid",
@@ -35153,7 +37307,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ویتامین ث",
+      "Ascorbic Acid (Vitamin C) 500 mg / 5 ml Ampoules & Tablets"
+    ],
+    "brand_names_en": [
+      "Ascorbic Acid (Vitamin C) Vet",
+      "Ascorbic Acid (Vitamin C) Brand"
+    ]
   },
   {
     "id": "asparaginase",
@@ -35317,7 +37479,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ال-اسپاراژیناز",
+      "L-Asparaginase 10,000 IU Vials (Kidrolase / Leunase)"
+    ],
+    "brand_names_en": [
+      "Asparaginase (L-Asparaginase / Elspar) Vet",
+      "Asparaginase (L-Asparaginase / Elspar) Brand"
+    ]
   },
   {
     "id": "atovaquone",
@@ -35479,7 +37649,14 @@ const DRUGS_DATA = [
       "milk_fa": "کاهش چشمگیر مرگ و میر ناشی از تب سیاه گوشتخواران (Cytauxzoonosis) در گربه‌ها تا بیش از ۶۰٪.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Atovaquone 750 mg / 5 ml Oral Suspension (Mepron)"
+    ],
+    "brand_names_en": [
+      "Atovaquone Vet",
+      "Atovaquone Brand"
+    ]
   },
   {
     "id": "betamethasone",
@@ -35666,7 +37843,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دی‌پروپیونات و سدیم فسفات",
+      "Betamethasone 4 mg/ml Ampoules & Betamethasone LA"
+    ],
+    "brand_names_en": [
+      "Betamethasone (Dipropionate &  ) Vet",
+      "Betamethasone (Dipropionate &  ) Brand"
+    ]
   },
   {
     "id": "bisacodyl",
@@ -35847,7 +38032,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Bisacodyl 5 mg Tablets & 5/10 mg Suppositories"
+    ],
+    "brand_names_en": [
+      "Bisacodyl Vet",
+      "Bisacodyl Brand"
+    ]
   },
   {
     "id": "bleomycin",
@@ -36019,7 +38211,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Bleomycin 15 IU Vials (Bleocin)"
+    ],
+    "brand_names_en": [
+      "Bleomycin Vet",
+      "Bleomycin Brand"
+    ]
   },
   {
     "id": "bromocriptine",
@@ -36199,7 +38398,14 @@ const DRUGS_DATA = [
       "milk_fa": "درمان انتخابی آبستنی کاذب (Pseudopregnancy) و قطع شیرواری ناخواسته در ماده‌سگ‌ها.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Bromocriptine 2.5 mg Tablets (Parlodel)"
+    ],
+    "brand_names_en": [
+      "Bromocriptine Mesylate Vet",
+      "Bromocriptine Mesylate Brand"
+    ]
   },
   {
     "id": "butylscopolamine",
@@ -36385,7 +38591,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "بوتیل‌اسکوپولامین",
+      "Hyoscine Butylbromide 20 mg/ml Ampoules (Buscopan / Vet Hyoscine)",
+      "Hyoscine Butylbromide 20 mg/ml Ampoules"
+    ],
+    "brand_names_en": [
+      "Hyoscine Butylbromide (Butylscopolamine / Buscopan) Vet",
+      "Hyoscine Butylbromide (Butylscopolamine / Buscopan) Brand"
+    ]
   },
   {
     "id": "caffeine",
@@ -36570,7 +38785,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Caffeine Citrate 20 mg/ml Ampoules & Oral Solution (Peditest)"
+    ],
+    "brand_names_en": [
+      "Caffeine Vet",
+      "Caffeine Brand"
+    ]
   },
   {
     "id": "calcitonin",
@@ -36734,7 +38956,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Calcitonin Salmon 100 IU/ml Ampoules (Miacalcic)"
+    ],
+    "brand_names_en": [
+      "Calcitonin Salmon Vet",
+      "Calcitonin Salmon Brand"
+    ]
   },
   {
     "id": "calcium_gluconate_iv",
@@ -36924,7 +39153,14 @@ const DRUGS_DATA = [
       "milk_fa": "درمان اورژانسی اکلامپسی و تتانی ناشی از شیردهی (Puerperal Tetany) در سگ‌های ماده زایمان‌کرده.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Calcium Gluconate 10% 10 ml Ampoules & Large Animal 500 ml Bottles"
+    ],
+    "brand_names_en": [
+      "Calcium Gluconate 10% IV Vet",
+      "Calcium Gluconate 10% IV Brand"
+    ]
   },
   {
     "id": "calcium_carbonate_oral",
@@ -37105,7 +39341,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "خوراکی",
+      "Calcium Carbonate 500 mg Tablets & Pure Powder"
+    ],
+    "brand_names_en": [
+      "Calcium Carbonate (Oral) Vet",
+      "Calcium Carbonate (Oral) Brand"
+    ]
   },
   {
     "id": "cannabidiol",
@@ -37270,7 +39514,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "CBD دامپزشکی",
+      "Veterinary CBD Oil Drops (Pure Isolate / Broad Spectrum)"
+    ],
+    "brand_names_en": [
+      "Cannabidiol (CBD) Vet",
+      "Cannabidiol (CBD) Brand"
+    ]
   },
   {
     "id": "capromorelin",
@@ -37435,7 +39687,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Entyce 30 mg/ml (Canine) & Elura 20 mg/ml (Feline) Oral Solutions"
+    ],
+    "brand_names_en": [
+      "Capromorelin (Entyce / Elura) Vet",
+      "Capromorelin (Entyce / Elura) Brand"
+    ]
   },
   {
     "id": "carbimazole",
@@ -37616,7 +39875,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Carbimazole 5 mg Tablets (Neo-Mercazole)"
+    ],
+    "brand_names_en": [
+      "Carbimazole Vet",
+      "Carbimazole Brand"
+    ]
   },
   {
     "id": "carvedilol",
@@ -37802,7 +40068,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Carvedilol Tablets 3.125, 6.25, 12.5, 25 mg"
+    ],
+    "brand_names_en": [
+      "Carvedilol Vet",
+      "Carvedilol Brand"
+    ]
   },
   {
     "id": "caspofungin",
@@ -37968,7 +40241,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cancidas 50 mg & 70 mg Vials (Caspofungin)"
+    ],
+    "brand_names_en": [
+      "Caspofungin Vet",
+      "Caspofungin Brand"
+    ]
   },
   {
     "id": "cefaclor",
@@ -38149,7 +40429,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cefaclor 250 & 500 mg Capsules / 125 & 250 mg/5mL Suspensions"
+    ],
+    "brand_names_en": [
+      "Cefaclor Vet",
+      "Cefaclor Brand"
+    ]
   },
   {
     "id": "cefixime",
@@ -38332,7 +40619,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cefixime Tablets 200 & 400 mg / Suspension 100 mg/5mL"
+    ],
+    "brand_names_en": [
+      "Cefixime Vet",
+      "Cefixime Brand"
+    ]
   },
   {
     "id": "cefotaxime",
@@ -38506,7 +40800,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cefotaxime Sodium Vials 500 mg & 1 g"
+    ],
+    "brand_names_en": [
+      "Cefotaxime Vet",
+      "Cefotaxime Brand"
+    ]
   },
   {
     "id": "cefoxitin",
@@ -38671,7 +40972,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cefoxitin Sodium 1 g & 2 g Vials"
+    ],
+    "brand_names_en": [
+      "Cefoxitin Vet",
+      "Cefoxitin Brand"
+    ]
   },
   {
     "id": "cefpodoxime",
@@ -38852,7 +41160,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Simplicef / Cefpodoxime Proxetil Tablets 100 & 200 mg"
+    ],
+    "brand_names_en": [
+      "Cefpodoxime Proxetil Vet",
+      "Cefpodoxime Proxetil Brand"
+    ]
   },
   {
     "id": "cefquinome",
@@ -39030,7 +41345,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cobactan 2.5% Injection / Cobactan LC & DC Mastitis Ointment"
+    ],
+    "brand_names_en": [
+      "Cefquinome Vet",
+      "Cefquinome Brand"
+    ]
   },
   {
     "id": "ceftazidime",
@@ -39204,7 +41526,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Ceftazidime Vials 500 mg, 1 g & 2 g"
+    ],
+    "brand_names_en": [
+      "Ceftazidime Vet",
+      "Ceftazidime Brand"
+    ]
   },
   {
     "id": "ceftriaxone",
@@ -39380,7 +41709,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Ceftriaxone Sodium Vials 500 mg & 1 g"
+    ],
+    "brand_names_en": [
+      "Ceftriaxone Vet",
+      "Ceftriaxone Brand"
+    ]
   },
   {
     "id": "cefuroxime",
@@ -39561,7 +41897,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cefuroxime Axetil Tablets 250 & 500 mg / Vials 750 mg & 1.5 g (Zinnat)"
+    ],
+    "brand_names_en": [
+      "Cefuroxime Vet",
+      "Cefuroxime Brand"
+    ]
   },
   {
     "id": "cephapirin",
@@ -39719,7 +42062,14 @@ const DRUGS_DATA = [
       "milk_fa": "ماتریکور (Metricure 500 mg) استاندارد طلایی و بی‌رقیب جهانی در درمان آندومتریت تحت‌بالینی و بالینی مزمن گاوهای شیری.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Metricure 500 mg Intrauterine Syringe / Cefa-Lak & Cefa-Dri"
+    ],
+    "brand_names_en": [
+      "Cephapirin ( / Benzathine) Vet",
+      "Cephapirin ( / Benzathine) Brand"
+    ]
   },
   {
     "id": "cetirizine",
@@ -39902,7 +42252,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cetirizine Tablets 5 & 10 mg / Syrup 5 mg/5mL"
+    ],
+    "brand_names_en": [
+      "Cetirizine Hydrochloride Vet",
+      "Cetirizine Hydrochloride Brand"
+    ]
   },
   {
     "id": "chloramphenicol",
@@ -40097,7 +42454,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Chloramphenicol 250 mg Capsules / 1 g Vials / Ophthalmic Drops & Ointments"
+    ],
+    "brand_names_en": [
+      "Chloramphenicol Vet",
+      "Chloramphenicol Brand"
+    ]
   },
   {
     "id": "chlorothiazide",
@@ -40290,7 +42654,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Chlorothiazide 250 & 500 mg Tablets / Diuril"
+    ],
+    "brand_names_en": [
+      "Chlorothiazide Vet",
+      "Chlorothiazide Brand"
+    ]
   },
   {
     "id": "chlorpromazine",
@@ -40475,7 +42846,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Chlorpromazine Ampoules 25 & 50 mg/2mL / Tablets 25 & 100 mg"
+    ],
+    "brand_names_en": [
+      "Chlorpromazine Hydrochloride Vet",
+      "Chlorpromazine Hydrochloride Brand"
+    ]
   },
   {
     "id": "chlortetracycline",
@@ -40660,7 +43038,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Chlortetracycline 20% & 50% Soluble Powders / Premixes / CTC Topical Spray"
+    ],
+    "brand_names_en": [
+      "Chlortetracycline (CTC) Vet",
+      "Chlortetracycline (CTC) Brand"
+    ]
   },
   {
     "id": "cholestyramine",
@@ -40826,7 +43211,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cholestyramine 4 g Powder Sachets (Questran)"
+    ],
+    "brand_names_en": [
+      "Cholestyramine Resin Vet",
+      "Cholestyramine Resin Brand"
+    ]
   },
   {
     "id": "ciclesonide",
@@ -40981,7 +43373,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Aservo EquiHaler (Ciclesonide Inhalation Solution)"
+    ],
+    "brand_names_en": [
+      "Ciclesonide Vet",
+      "Ciclesonide Brand"
+    ]
   },
   {
     "id": "cimetidine",
@@ -41173,7 +43572,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cimetidine Tablets 200 & 400 mg / Ampoules 200 mg/2mL"
+    ],
+    "brand_names_en": [
+      "Cimetidine Vet",
+      "Cimetidine Brand"
+    ]
   },
   {
     "id": "cisapride",
@@ -41365,7 +43771,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cisapride 5 & 10 mg Tablets / Compounded Oral Suspensions"
+    ],
+    "brand_names_en": [
+      "Cisapride Vet",
+      "Cisapride Brand"
+    ]
   },
   {
     "id": "cisplatin",
@@ -41541,7 +43954,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cisplatin Vials 10 mg & 50 mg (Cisplat / Ebewe)"
+    ],
+    "brand_names_en": [
+      "Cisplatin Vet",
+      "Cisplatin Brand"
+    ]
   },
   {
     "id": "clemastine",
@@ -41725,7 +44145,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "تاوژیل",
+      "Clemastine 1 mg Tablets (Tavegyl) / 2 mg/2mL Ampoules"
+    ],
+    "brand_names_en": [
+      "Clemastine Fumarate Vet",
+      "Clemastine Fumarate Brand"
+    ]
   },
   {
     "id": "clenbuterol",
@@ -41884,7 +44312,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ونتی‌پولمین",
+      "Ventipulmin Syrup (Clenbuterol HCl 72.5 mcg/mL) / Injectable Solution"
+    ],
+    "brand_names_en": [
+      "Clenbuterol Hydrochloride Vet",
+      "Clenbuterol Hydrochloride Brand"
+    ]
   },
   {
     "id": "clindamycin",
@@ -42070,7 +44506,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آنتیروب",
+      "Clindamycin Capsules 150 & 300 mg / Ampoules 300 & 600 mg / Antirobe Liquid"
+    ],
+    "brand_names_en": [
+      "Clindamycin Hydrochloride / Vet",
+      "Clindamycin Hydrochloride / Brand"
+    ]
   },
   {
     "id": "cefovecin",
@@ -42252,7 +44696,20 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "کانونیا",
+      "کانونی‌یا",
+      "سفووسین دامی",
+      "کونووینیا",
+      "Convenia (Cefovecin Sodium 80 mg/mL)",
+      "Cefovecin Sodium 80 mg/mL",
+      "Convenia"
+    ],
+    "brand_names_en": [
+      "Convenia",
+      "Convenia Zoetis"
+    ]
   },
   {
     "id": "cefadroxil",
@@ -42435,7 +44892,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سفا-تبس",
+      "Cefadroxil Tablets 500 mg & 1 g / Suspension 250 & 500 mg/5mL (Cefa-Tabs)"
+    ],
+    "brand_names_en": [
+      "Cefadroxil Vet",
+      "Cefadroxil Brand"
+    ]
   },
   {
     "id": "cefepime",
@@ -42609,7 +45074,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ماکسی‌پیم",
+      "Cefepime 1 g & 2 g Vials (Maxipime)"
+    ],
+    "brand_names_en": [
+      "Cefepime Hydrochloride Vet",
+      "Cefepime Hydrochloride Brand"
+    ]
   },
   {
     "id": "cefotetan",
@@ -42775,7 +45248,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cefotetan 1 g & 2 g Vials (Cefotan)"
+    ],
+    "brand_names_en": [
+      "Cefotetan Di Vet",
+      "Cefotetan Di Brand"
+    ]
   },
   {
     "id": "chorionic_gonadotropin",
@@ -42949,7 +45429,15 @@ const DRUGS_DATA = [
       "milk_fa": "درمان اختصاصی کیست‌های تخمدانی فولیکولی (Cystic Ovaries) در گاوهای شیری از طریق لوتئینی کردن کیست.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "hCG",
+      "Chorionic Gonadotropin (hCG) 500 & 5000 IU Vials (Pregnyl / Choriomon)"
+    ],
+    "brand_names_en": [
+      "Human Chorionic Gonadotropin (hCG) Vet",
+      "Human Chorionic Gonadotropin (hCG) Brand"
+    ]
   },
   {
     "id": "potassium_citrate",
@@ -43132,7 +45620,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Potassium Citrate Tablets 540 & 1080 mg (Urocit-K) / Oral Solution"
+    ],
+    "brand_names_en": [
+      " Vet",
+      " Brand"
+    ]
   },
   {
     "id": "clonazepam",
@@ -43316,7 +45811,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Clonazepam Tablets 1 & 2 mg"
+    ],
+    "brand_names_en": [
+      "Clonazepam Vet",
+      "Clonazepam Brand"
+    ]
   },
   {
     "id": "clonidine",
@@ -43500,7 +46002,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Clonidine Tablets 0.2 mg (Catapres)"
+    ],
+    "brand_names_en": [
+      "Clonidine Hydrochloride Vet",
+      "Clonidine Hydrochloride Brand"
+    ]
   },
   {
     "id": "cloprostenol",
@@ -43679,7 +46188,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "استرومیت",
+      "استروپلان",
+      "Estrumate / Estroplan / Cloprostenol 250 mcg/mL Vials"
+    ],
+    "brand_names_en": [
+      "Cloprostenol Vet",
+      "Cloprostenol Brand"
+    ]
   },
   {
     "id": "clorazepate",
@@ -43862,7 +46380,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Clorazepate Dipotassium Capsules 3.75, 7.5 & 15 mg (Tranxene)"
+    ],
+    "brand_names_en": [
+      "Clorazepate Di Vet",
+      "Clorazepate Di Brand"
+    ]
   },
   {
     "id": "cloxacillin",
@@ -44045,7 +46570,14 @@ const DRUGS_DATA = [
       "milk_fa": "داروی استراتژیک داخل پستانی در کنترل و پیشگیری از ورم پستان مسری ناشی از *Staphylococcus aureus* در گله‌های شیری.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cloxacillin Intramammary Ointment (Lactating & Dry Cow) / 500 mg Capsules"
+    ],
+    "brand_names_en": [
+      "Cloxacillin ( / Benzathine) Vet",
+      "Cloxacillin ( / Benzathine) Brand"
+    ]
   },
   {
     "id": "cobalamin",
@@ -44211,7 +46743,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ویتامین ب۱۲",
+      "Cyanocobalamin (Vitamin B12) Ampoules 1000 mcg/mL / Hydroxocobalamin"
+    ],
+    "brand_names_en": [
+      "Cyanocobalamin / Hydroxocobalamin (Vitamin B12) Vet",
+      "Cyanocobalamin / Hydroxocobalamin (Vitamin B12) Brand"
+    ]
   },
   {
     "id": "codeine",
@@ -44396,7 +46936,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Codeine Phosphate Tablets 10, 15 & 30 mg / Syrups"
+    ],
+    "brand_names_en": [
+      "Codeine Vet",
+      "Codeine Brand"
+    ]
   },
   {
     "id": "colchicine",
@@ -44580,7 +47127,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Colchicine Tablets 0.5 & 1 mg"
+    ],
+    "brand_names_en": [
+      "Colchicine Vet",
+      "Colchicine Brand"
+    ]
   },
   {
     "id": "cosyntropin",
@@ -44758,7 +47312,18 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سیناکتن",
+      "ACTH سنتتیک",
+      "Synacthen 0.25 mg/mL (Tetracosactide / Cosyntropin) Ampoules",
+      "Tetracosactide / Cosyntropin",
+      "Synacthen 0.25 mg/mL"
+    ],
+    "brand_names_en": [
+      "Cosyntropin / Tetracosactide (Synthetic ACTH 1-24) Vet",
+      "Cosyntropin / Tetracosactide (Synthetic ACTH 1-24) Brand"
+    ]
   },
   {
     "id": "cromolyn",
@@ -44942,7 +47507,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Cromolyn Sodium 2% & 4% Eye Drops / Inhalation Solution (Cromal)"
+    ],
+    "brand_names_en": [
+      "Cromolyn Vet",
+      "Cromolyn Brand"
+    ]
   },
   {
     "id": "crofelemer",
@@ -45097,7 +47669,15 @@ const DRUGS_DATA = [
       "milk_fa": "استخراج‌شده از شیره قرمز درخت خون اژدها (*Croton lechleri*) بومی جنگل‌های آمازون.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "کانالویا",
+      "Canalevia-CA1 (Crofelemer Delayed-Release Tablets)"
+    ],
+    "brand_names_en": [
+      "Crofelemer Vet",
+      "Crofelemer Brand"
+    ]
   },
   {
     "id": "cytarabine",
@@ -45265,7 +47845,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سایتوسار",
+      "Cytarabine Vials 100 mg & 500 mg (Cytosar-U)"
+    ],
+    "brand_names_en": [
+      "Cytarabine / Cytosine Arabinoside (Ara-C) Vet",
+      "Cytarabine / Cytosine Arabinoside (Ara-C) Brand"
+    ]
   },
   {
     "id": "dacarbazine",
@@ -45432,7 +48020,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Dacarbazine 100 mg & 200 mg Vials (DTIC-Dome)"
+    ],
+    "brand_names_en": [
+      "Dacarbazine (DTIC) Vet",
+      "Dacarbazine (DTIC) Brand"
+    ]
   },
   {
     "id": "dactinomycin",
@@ -45599,7 +48194,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "اکتینومایسین دی",
+      "Dactinomycin 0.5 mg Vials (Cosmegen)"
+    ],
+    "brand_names_en": [
+      "Dactinomycin (Actinomycin D) Vet",
+      "Dactinomycin (Actinomycin D) Brand"
+    ]
   },
   {
     "id": "dalteparin",
@@ -45767,7 +48370,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فرگمین",
+      "Fragmin (Dalteparin Sodium) Prefilled Syringes 2500 & 5000 IU"
+    ],
+    "brand_names_en": [
+      "Dalteparin Vet",
+      "Dalteparin Brand"
+    ]
   },
   {
     "id": "dantrolene",
@@ -45944,7 +48555,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Dantrolene Sodium Vials 20 mg (Dantrium IV) / Capsules 25 & 50 mg"
+    ],
+    "brand_names_en": [
+      "Dantrolene Vet",
+      "Dantrolene Brand"
+    ]
   },
   {
     "id": "dapsone",
@@ -46127,7 +48745,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Dapsone Tablets 50 & 100 mg"
+    ],
+    "brand_names_en": [
+      "Dapsone (DDS) Vet",
+      "Dapsone (DDS) Brand"
+    ]
   },
   {
     "id": "darbepoetin_alfa",
@@ -46294,7 +48919,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آراناسپ",
+      "Aranesp (Darbepoetin Alfa) Prefilled Syringes 10, 20 & 40 mcg"
+    ],
+    "brand_names_en": [
+      "Darbepoetin Alfa Vet",
+      "Darbepoetin Alfa Brand"
+    ]
   },
   {
     "id": "diphenhydramine",
@@ -46492,7 +49125,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Diphenhydramine HCl Ampoules 50 mg/mL / Elixir 12.5 mg/5mL / Tablets 25 mg"
+    ],
+    "brand_names_en": [
+      "Diphenhydramine Hydrochloride Vet",
+      "Diphenhydramine Hydrochloride Brand"
+    ]
   },
   {
     "id": "digoxin",
@@ -46678,7 +49318,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Digoxin Tablets 0.25 mg & 0.125 mg / Elixir 0.05 mg/mL (Lanoxin)"
+    ],
+    "brand_names_en": [
+      "Digoxin Vet",
+      "Digoxin Brand"
+    ]
   },
   {
     "id": "dobutamine",
@@ -46855,7 +49502,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دوبوتامین",
+      "دوبوترکس",
+      "Dobutamine 250 mg/20mL & 250 mg/5mL Ampoules/Vials (Dobutrex)"
+    ],
+    "brand_names_en": [
+      "Dobutrex"
+    ]
   },
   {
     "id": "dimercaprol",
@@ -47045,7 +49700,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "BAL",
+      "Dimercaprol (BAL in Oil) 100 mg/mL Ampoules",
+      "BAL in Oil",
+      "Dimercaprol"
+    ],
+    "brand_names_en": [
+      "Dimercaprol (BAL - British Anti-Lewisite) Vet",
+      "Dimercaprol (BAL - British Anti-Lewisite) Brand"
+    ]
   },
   {
     "id": "dimethyl_sulfoxide",
@@ -47237,7 +49902,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "DMSO",
+      "DMSO 90% & 99% Medical Grade Liquid / Gel / Vials"
+    ],
+    "brand_names_en": [
+      "Dimethyl Sulfoxide (DMSO) Vet",
+      "Dimethyl Sulfoxide (DMSO) Brand"
+    ]
   },
   {
     "id": "dinoprost",
@@ -47417,7 +50090,17 @@ const DRUGS_DATA = [
       "milk_fa": "داروی استاندارد طلایی لوتئولیز جسم زرد در گاوهای شیری، تلیسه‌ها، مادیان‌ها و خوک‌ها.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "لوتالیز",
+      "Lutalyse (Dinoprost Tromethamine 5 mg/mL) / Dinolytic Vials",
+      "Dinoprost Tromethamine 5 mg/mL",
+      "Lutalyse"
+    ],
+    "brand_names_en": [
+      "Dinoprost Tromethamine (Natural PGF2alpha) Vet",
+      "Dinoprost Tromethamine (Natural PGF2alpha) Brand"
+    ]
   },
   {
     "id": "deracoxib",
@@ -47602,7 +50285,15 @@ const DRUGS_DATA = [
       "milk_fa": "قرص‌های جویدنی با طعم گوشت که پذیرش درمانی بسیار بالایی در سگ‌ها دارند.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دراماکس",
+      "Deramaxx Chewable Tablets 12, 25, 75 & 100 mg"
+    ],
+    "brand_names_en": [
+      "Deracoxib Vet",
+      "Deracoxib Brand"
+    ]
   },
   {
     "id": "desflurane",
@@ -47775,7 +50466,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Suprane (Desflurane Inhalation Liquid 240 mL)"
+    ],
+    "brand_names_en": [
+      "Desflurane Vet",
+      "Desflurane Brand"
+    ]
   },
   {
     "id": "deslorelin",
@@ -47952,7 +50650,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سوپرلورین",
+      "Suprelorin 4.7 mg & 9.4 mg Implants"
+    ],
+    "brand_names_en": [
+      "Deslorelin Vet",
+      "Deslorelin Brand"
+    ]
   },
   {
     "id": "dexrazoxane",
@@ -48119,7 +50825,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "زینیکارد",
+      "Dexrazoxane 250 mg & 500 mg Vials (Zinecard / Savene)"
+    ],
+    "brand_names_en": [
+      "Dexrazoxane Hydrochloride Vet",
+      "Dexrazoxane Hydrochloride Brand"
+    ]
   },
   {
     "id": "dextran_70",
@@ -48311,7 +51025,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Dextran 70 6% in 0.9% Sodium Chloride (500 mL Infusion Bottle)",
+      "Dextran 70 6% in 0.9% Sodium Chloride"
+    ],
+    "brand_names_en": [
+      "Dextran 70 (6% in 0.9% NaCl) Vet",
+      "Dextran 70 (6% in 0.9% NaCl) Brand"
+    ]
   },
   {
     "id": "dextromethorphan",
@@ -48478,7 +51200,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Dextromethorphan Hydrobromide Syrup 15 mg/5mL (Dextro-Pure)"
+    ],
+    "brand_names_en": [
+      "Dextromethorphan Hydrobromide Vet",
+      "Dextromethorphan Hydrobromide Brand"
+    ]
   },
   {
     "id": "dextrose_50",
@@ -48671,7 +51400,15 @@ const DRUGS_DATA = [
       "milk_fa": "داروی استاندارد طلایی درمان کتوز بالینی گاو شیری (Bovine Ketosis) و توکسمی آبستنی در میش‌ها.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "گلوکز هایپرتونیک",
+      "Dextrose 50% 50 mL Vials & 500 mL Infusion Bottles"
+    ],
+    "brand_names_en": [
+      "Dextrose 50% Injection (Hypertonic Dextrose) Vet",
+      "Dextrose 50% Injection (Hypertonic Dextrose) Brand"
+    ]
   },
   {
     "id": "diazoxide",
@@ -48856,7 +51593,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پروگلیم",
+      "Proglycem (Diazoxide) Oral Suspension 50 mg/mL / Capsules 25 & 100 mg"
+    ],
+    "brand_names_en": [
+      "Diazoxide Vet",
+      "Diazoxide Brand"
+    ]
   },
   {
     "id": "diethylstilbestrol",
@@ -49040,7 +51785,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "DES",
+      "Diethylstilbestrol (DES) 1 mg Tablets / Compounded Capsules"
+    ],
+    "brand_names_en": [
+      "Diethylstilbestrol (DES) Vet",
+      "Diethylstilbestrol (DES) Brand"
+    ]
   },
   {
     "id": "dimenhydrinate",
@@ -49224,7 +51977,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "درامامین",
+      "Dimenhydrinate Tablets 50 mg (Dramamine)"
+    ],
+    "brand_names_en": [
+      "Dimenhydrinate Vet",
+      "Dimenhydrinate Brand"
+    ]
   },
   {
     "id": "diphenoxylate",
@@ -49408,7 +52169,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "لوموتیل",
+      "Diphenoxylate Tablets (2.5 mg Diphenoxylate + 0.025 mg Atropine - Lomotil)"
+    ],
+    "brand_names_en": [
+      "Diphenoxylate Hydrochloride with Atropine Vet",
+      "Diphenoxylate Hydrochloride with Atropine Brand"
+    ]
   },
   {
     "id": "dipyrone",
@@ -49598,7 +52367,18 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "متامیزول",
+      "نوالژین",
+      "Dipyrone 50% Injection (Novalgin / Analgin 500 mg/mL)",
+      "Novalgin / Analgin 500 mg/mL",
+      "Dipyrone 50% Injection"
+    ],
+    "brand_names_en": [
+      "Dipyrone / Metamizole Vet",
+      "Dipyrone / Metamizole Brand"
+    ]
   },
   {
     "id": "docusate",
@@ -49792,7 +52572,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "DSS",
+      "Docusate Sodium 100 mg Capsules / 5% Veterinary Solution"
+    ],
+    "brand_names_en": [
+      "Docusate  (DSS - Dioctyl  Sulfosuccinate) Vet",
+      "Docusate  (DSS - Dioctyl  Sulfosuccinate) Brand"
+    ]
   },
   {
     "id": "domperidone",
@@ -49986,7 +52774,14 @@ const DRUGS_DATA = [
       "milk_fa": "رفع کامل بی‌پستانی و فقدان شیر (Agalactia) در مادیان از طریق مهار دوپامین و تحریک ترشح پرولاکتین هیپوفیز.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Domperidone Tablets 10 mg / Suspension 1 mg/mL (Motilium / Equidone)"
+    ],
+    "brand_names_en": [
+      "Domperidone Vet",
+      "Domperidone Brand"
+    ]
   },
   {
     "id": "doxepin",
@@ -50171,7 +52966,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Doxepin Capsules 10 & 25 mg (Sinequan)"
+    ],
+    "brand_names_en": [
+      "Doxepin Hydrochloride Vet",
+      "Doxepin Hydrochloride Brand"
+    ]
   },
   {
     "id": "droperidol",
@@ -50341,7 +53143,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "Droperidol 2.5 mg/mL Ampoules (Inapsine)",
+      "Inapsine",
+      "Droperidol 2.5 mg/mL Ampoules"
+    ],
+    "brand_names_en": [
+      "Droperidol Vet",
+      "Droperidol Brand"
+    ]
   },
   {
     "id": "dolasetron",
@@ -50537,7 +53348,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آنزمت",
+      "Anzemet (Dolasetron Mesylate) Vials 20 mg/mL & 100 mg / Tablets 50 & 100 mg",
+      "Dolasetron Mesylate",
+      "Anzemet"
+    ],
+    "brand_names_en": [
+      "Dolasetron Mesylate Vet",
+      "Dolasetron Mesylate Brand"
+    ]
   },
   {
     "id": "deferoxamine",
@@ -50704,7 +53525,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دسفرال",
+      "Desferal (Deferoxamine Mesylate 500 mg Vials)"
+    ],
+    "brand_names_en": [
+      "Deferoxamine Mesylate Vet",
+      "Deferoxamine Mesylate Brand"
+    ]
   },
   {
     "id": "decoquinate",
@@ -50880,7 +53709,15 @@ const DRUGS_DATA = [
       "milk_fa": "فاقد دوره پرهیز گوشت در گوساله‌ها، بره‌ها و جوجه‌های گوشتی (Zero Withdrawal Time).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دکوکس",
+      "Deccox Premix 6% (Decoquinate 60 g/kg) / Granules"
+    ],
+    "brand_names_en": [
+      "Decoquinate Vet",
+      "Decoquinate Brand"
+    ]
   },
   {
     "id": "carnitine",
@@ -51063,7 +53900,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "لووکارنیتین",
+      "L-Carnitine Tablets 250, 500 & 1000 mg / Oral Vials 1000 & 2000 mg / Syrup"
+    ],
+    "brand_names_en": [
+      "L-Carnitine (Levocarnitine) Vet",
+      "L-Carnitine (Levocarnitine) Brand"
+    ]
   },
   {
     "id": "edetate_calcium_disodium",
@@ -51267,7 +54112,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "کلسیم ادتا",
+      "آمپول ادتات کلسیم دی‌سدیم ۲۰٪",
+      "5 mL"
+    ],
+    "brand_names_en": [
+      "Calcium Disodium Versenate / EDTA-Ca Inj"
+    ]
   },
   {
     "id": "edrophonium",
@@ -51401,6 +54254,13 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "تنسیلون",
+      "آمپول تنسیلون / ادروفونیوم کلراید"
+    ],
+    "brand_names_en": [
+      "Tensilon / Enlon / Edrophonium Inj"
     ]
   },
   {
@@ -51525,7 +54385,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "به صورت گسترده در تمامی داروخانه‌های بیمارستانی و شهری ایران موجود است.",
     "pharmacology_mechanism": "انوکساپارین به آنتی‌ترومبین III (AT-III) متصل شده و سرعت مهار فاکتور Xa فعال را چندین هزار برابر می‌کند؛ به علت زنجیره کوتاه ساکاریدی، تمایل بسیار کمتری به مهار ترومبین (فاکتور IIa) نسبت به فاکتور Xa دارد و انعقاد خون را در مرحله آغازین آبشار بدون اختلال وسیع PTT مهار می‌کند.",
-    "clinical_pearls": "در گربه‌های فلج ناشی از سدل ترومبوز، انوکساپارین لخته موجود را حل نمی‌کند (ترومبولیتیک نیست) بلکه از رشد بیشتر لخته و تشکیل ترومبوس‌های جدید جلوگیری کرده تا ترومبولیز فیزیولوژیک خود بدن فعال گردد."
+    "clinical_pearls": "در گربه‌های فلج ناشی از سدل ترومبوز، انوکساپارین لخته موجود را حل نمی‌کند (ترومبولیتیک نیست) بلکه از رشد بیشتر لخته و تشکیل ترومبوس‌های جدید جلوگیری کرده تا ترومبولیز فیزیولوژیک خود بدن فعال گردد.",
+    "brand_names_fa": [
+      "کلکسان",
+      "سرنگ آماده تزریق کلکسان / انوکساپارین ۲۰۰۰ و ۴۰۰۰"
+    ],
+    "brand_names_en": [
+      "Clexane / Enoxaparin Prefilled Syringes (20 mg / 40 mg)"
+    ]
   },
   {
     "id": "ephedrine",
@@ -51690,6 +54557,12 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "آمپول افدرین سولفات ۵۰ میلی‌گرم در میلی‌لیتر"
+    ],
+    "brand_names_en": [
+      "Ephedrine Sulfate Injection 50 mg/mL"
     ]
   },
   {
@@ -51824,6 +54697,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "فارموروبیسین",
+      "ویال اپی‌روبیسین ۱۰ و ۵۰ میلی‌گرم (فارموروبیسین)",
+      "ویال اپی‌روبیسین ۱۰ و ۵۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Pharmorubicin / Epirubicin Injection (10 mg / 50 mg)"
     ]
   },
   {
@@ -51953,7 +54834,14 @@ const DRUGS_DATA = [
       "milk_fa": "محبوب‌ترین و ایمن‌ترین ضدانگل گله‌های گاو شیری جهان با نام تجاری اپرینکس (Eprinex - Boehringer Ingelheim).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "اپیرینکس",
+      "محلول پورآن اپرینومکتین ۰.۵٪ (اپیرینکس / اِپریمک)"
+    ],
+    "brand_names_en": [
+      "Eprinex / Eprimec Pour-on 0.5%"
+    ]
   },
   {
     "id": "epsiprantel",
@@ -52074,7 +54962,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در کلینیک‌ها و داروخانه‌های دامپزشکی حیوانات خانگی کشور.",
     "pharmacology_mechanism": "اپسی‌پرانتل با ایجاد اختلال شدید در هموستاز کلسیم و یکپارچگی پوسته خارجی (Tegument) کرم سستود، باعث ورود کلسیم به داخل سلول‌های انگل، اسپاسم کزاز عضلانی و جدا شدن بادکش‌ها از دیواره روده و در نهایت متلاشی شدن و هضم کامل آن توسط آنزیم‌های روده میزبان می‌شود.",
-    "clinical_pearls": "به صاحب حیوان توضیح دهید که حل شدن انگل درون روده نشانه اثربخشی کامل دارو است و عدم مشاهده کرم دفع‌شده به معنای شکست درمان نیست."
+    "clinical_pearls": "به صاحب حیوان توضیح دهید که حل شدن انگل درون روده نشانه اثربخشی کامل دارو است و عدم مشاهده کرم دفع‌شده به معنای شکست درمان نیست.",
+    "brand_names_fa": [
+      "سستکس",
+      "قرص‌های سستکس (اپسی‌پرانتل ۱۲.۵ و ۵۰ و ۱۰۰ میلی‌گرم)"
+    ],
+    "brand_names_en": [
+      "Cestex Film-Coated Tablets (12.5, 25, 50, 100 mg)"
+    ]
   },
   {
     "id": "ergocalciferol",
@@ -52222,7 +55117,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ویتامین دی۲",
+      "کپسول ارگوکلسیفرول ۵۰,۰۰۰ واحدی / قطره خوراکی ویتامین D"
+    ],
+    "brand_names_en": [
+      "Ergocalciferol Capsules 50,000 IU / Vitamin D Drops"
+    ]
   },
   {
     "id": "ertapenem",
@@ -52346,7 +55248,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی بیمارستانی با نسخه رسمی و فرم کنترل آنتی‌بیوتیک.",
     "pharmacology_mechanism": "ارتاپنم با اتصال با تمایل بسیار بالا به پروتئین‌های متصل شونده به پنی‌سیلین (PBPs به ویژه PBP-2 و PBP-3) در دیواره باکتری، فرآیند ترانس‌پپتیداسیون پپتیدوگلیکان را مهار کرده و با فعال‌سازی آنزیم‌های اتولیتیک درونی باعث لیز و مرگ سریع باکتری می‌شود.",
-    "clinical_pearls": "ارتاپنم به دلیل اتصال بالا به پروتئین‌های پلاسما نیمه‌عمر بسیار طولانی‌تری نسبت به مروپنم دارد و تنها کارباپنمی است که می‌توان به صورت تزریق زیرجلدی در منزل توسط صاحب بیمار ادامه داد."
+    "clinical_pearls": "ارتاپنم به دلیل اتصال بالا به پروتئین‌های پلاسما نیمه‌عمر بسیار طولانی‌تری نسبت به مروپنم دارد و تنها کارباپنمی است که می‌توان به صورت تزریق زیرجلدی در منزل توسط صاحب بیمار ادامه داد.",
+    "brand_names_fa": [
+      "اینوانز",
+      "ویال اینوانز / ارتاپنم ۱ گرم"
+    ],
+    "brand_names_en": [
+      "Invanz / Ertapenem for Injection 1 g"
+    ]
   },
   {
     "id": "erythromycin",
@@ -52544,7 +55453,13 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "قرص اریترومایسین ۲۰۰ و ۴۰۰ میلی‌گرم / سوسپانسیون ۲۰۰"
+    ],
+    "brand_names_en": [
+      "Erythromycin Ethylsuccinate Tabs / Oral Susp"
+    ]
   },
   {
     "id": "esmolol",
@@ -52668,7 +55583,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در لیست داروهای ست احیا و ICU بیمارستان‌های تخصصی قلب و جراحی.",
     "pharmacology_mechanism": "اسمولول با رقابت انتخابی با کاتکول‌آمین‌ها بر سر گیرنده‌های بتا-۱ آدرنرژیک میوکارد و گره AV، فعالیت آدنیلات سیکلاز و کلسیم داخل سلولی را کاهش داده و موجب کاهش سرعت هدایت گره دهلیزی-بطنی (اثر دروموتروپ منفی) و کاهش خودکاری ضربان‌سازها و کنترل ضربان بطنی می‌شود.",
-    "clinical_pearls": "به دلیل طول اثر فوق‌العاده کوتاه، در مواردی که بالینگر نگران بدتر شدن وضعیت قلبی بیمار با بتابلوکرها است، ابتدا ۵۰ تا ۱۰۰ میکروگرم بر کیلوگرم در دقیقه اسمولول تزریق می‌شود؛ در صورت پاسخ خوب و عدم افت فشار، داروی خوراکی با خیال راحت آغاز می‌گردد."
+    "clinical_pearls": "به دلیل طول اثر فوق‌العاده کوتاه، در مواردی که بالینگر نگران بدتر شدن وضعیت قلبی بیمار با بتابلوکرها است، ابتدا ۵۰ تا ۱۰۰ میکروگرم بر کیلوگرم در دقیقه اسمولول تزریق می‌شود؛ در صورت پاسخ خوب و عدم افت فشار، داروی خوراکی با خیال راحت آغاز می‌گردد.",
+    "brand_names_fa": [
+      "بروی‌بلوک",
+      "ویال اسمولول ۱۰ میلی‌گرم در میلی‌لیتر (بروی‌بلوک)"
+    ],
+    "brand_names_en": [
+      "Brevibloc / Esmolol HCl Injection (10 mg/mL)"
+    ]
   },
   {
     "id": "estriol",
@@ -52779,7 +55701,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌ها و مراکز پخش تخصصی دامپزشکی حیوانات خانگی کشور.",
     "pharmacology_mechanism": "استریول به گیرنده‌های استروژن درون سلول‌های عضلانی صاف و موکوس اسفنکتر پیشابراه متصل شده و ضمن تقویت ضخامت مخاطی، رونویسی و بیان گیرنده‌های آلفا-۱ آدرنرژیک را تحریک می‌کند؛ این امر حساسیت اسفنکتر به نوراپی‌نفرین درون‌زاد را افزایش داده و مقاومت خروجی مثانه را بازسازی می‌کند.",
-    "clinical_pearls": "کلید موفقیت درمان با استریول پیدا کردن کمترین دوز نگهدارنده است؛ پس از ۱۴ روز اول اگر سگ خشک شد، هر هفته دوز را یک پله کاهش دهید تا به دوزی برسید که با کمترین هزینه و عارضه بی‌اختیاری را مهار کند."
+    "clinical_pearls": "کلید موفقیت درمان با استریول پیدا کردن کمترین دوز نگهدارنده است؛ پس از ۱۴ روز اول اگر سگ خشک شد، هر هفته دوز را یک پله کاهش دهید تا به دوزی برسید که با کمترین هزینه و عارضه بی‌اختیاری را مهار کند.",
+    "brand_names_fa": [
+      "اینکورین",
+      "قرص‌های اینکورین ۱ میلی‌گرم (استریول)"
+    ],
+    "brand_names_en": [
+      "Incurin Tablets 1 mg (Estriol)"
+    ]
   },
   {
     "id": "ethambutol",
@@ -52900,7 +55829,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در مراکز سل و بیماری‌های ریوی و داروخانه‌های مرجع هلال احمر.",
     "pharmacology_mechanism": "اتامبوتول با مهار آنزیم آرابینوزیل ترانسفراز (عمدتاً با کد ژنی embB) مانع از پلیمریزاسیون آرابینوز به آرابینوگالاکتان در غشای پپتیدوگلیکان مایکوباکتریوم‌ها شده و نفوذپذیری دیواره سلولی را متلاشی و اثر سایر آنتی‌بیوتیک‌ها را تسهیل می‌کند.",
-    "clinical_pearls": "درمان مایکوباکتریوز در دامپزشکی بسیار طولانی و پرچالش است؛ همیشه قبل از شروع مطمئن شوید سویه مایکوباکتریوم مشترک بین انسان و حیوان (زئونوز مانند مایکوباکتریوم بوویس یا توبرکلوزیس) نباشد تا خطری پرسنل و صاحب حیوان را تهدید نکند."
+    "clinical_pearls": "درمان مایکوباکتریوز در دامپزشکی بسیار طولانی و پرچالش است؛ همیشه قبل از شروع مطمئن شوید سویه مایکوباکتریوم مشترک بین انسان و حیوان (زئونوز مانند مایکوباکتریوم بوویس یا توبرکلوزیس) نباشد تا خطری پرسنل و صاحب حیوان را تهدید نکند.",
+    "brand_names_fa": [
+      "قرص اتامبوتول ۴۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Ethambutol Tablets 400 mg"
+    ]
   },
   {
     "id": "ethanol",
@@ -53024,7 +55959,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "الکل طبی در تمامی مراکز درمانی کشور موجود است؛ تهیه محلول تزریقی نیازمند فیلتر استریل است.",
     "pharmacology_mechanism": "اتانول به عنوان سوبسترای جایگزین با تمایل پیوندی ۱۰۰ برابر بیشتر با آنزیم الکل دهیدروژناز کبد (ADH) پیوند برقرار می‌کند؛ این مهار رقابتی مانع از اکسیداسیون اتیلن گلیکول به گلیکول‌آلدئید، اسید گلیکولیک، گلی‌اکسیلیک اسید و در نهایت اگزالیک اسید می‌شود و بدین ترتیب از تخریب لوله‌های پروگزیمال کلیه جلوگیری می‌کند.",
-    "clinical_pearls": "حیوان تحت درمان با اتانول کاملاً بیهوش و تلوتلوخوران است؛ هرگز صاحب حیوان را نگران نکنید و توضیح دهید که این حالت مستی و گیجی برای زنده ماندن کلیه‌های بیمار لازم و ضروری است."
+    "clinical_pearls": "حیوان تحت درمان با اتانول کاملاً بیهوش و تلوتلوخوران است؛ هرگز صاحب حیوان را نگران نکنید و توضیح دهید که این حالت مستی و گیجی برای زنده ماندن کلیه‌های بیمار لازم و ضروری است.",
+    "brand_names_fa": [
+      "الکل اتیلیک ۲۰٪ تا ۳۰٪ تزریقی",
+      "الکل اتیلیک طبی ۹۶٪ تقطیری استریل"
+    ],
+    "brand_names_en": [
+      "Medical Ethyl Alcohol 96% / Ethanol Injection Compounded"
+    ]
   },
   {
     "id": "etodolac",
@@ -53135,7 +56077,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در دسترس در تمامی داروخانه‌های انسانی و مراکز درمانی معتبر کشور.",
     "pharmacology_mechanism": "اتودولاک با مهار ترجیحی آنزیم سیکلواکسیژناز-۲ (COX-2) از تبدیل اسید آراشیدونیک به پروستاگلاندین‌های پیش‌التهابی (PGE2 و PGI2) در مفاصل ملتهب جلوگیری می‌کند و به علت حفظ نسبی COX-1 آسیب مخاطی کمتری نسبت به آسپرین ایجاد می‌نماید.",
-    "clinical_pearls": "اگر سگی پس از چند هفته درمان با اتودولاک دچار قرمزی چشم، ریزش ترشحات چرکی خاکستری از گوشه چشم یا کدر شدن قرنیه شد، علت التهاب یا آلرژی نیست؛ فوراً تست اشک شیرمر بگیرید، اتودولاک را قطع کنید و قطره چشمی سیکلوسپورین را آغاز نمایید."
+    "clinical_pearls": "اگر سگی پس از چند هفته درمان با اتودولاک دچار قرمزی چشم، ریزش ترشحات چرکی خاکستری از گوشه چشم یا کدر شدن قرنیه شد، علت التهاب یا آلرژی نیست؛ فوراً تست اشک شیرمر بگیرید، اتودولاک را قطع کنید و قطره چشمی سیکلوسپورین را آغاز نمایید.",
+    "brand_names_fa": [
+      "لودین",
+      "اتوجزیک",
+      "کپسول و قرص اتودولاک ۲۰۰ و ۴۰۰ میلی‌گرم (لودین)"
+    ],
+    "brand_names_en": [
+      "Lodine / Etodolac Capsules & Tablets 200 mg / 400 mg"
+    ]
   },
   {
     "id": "exenatide",
@@ -53246,7 +56196,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های انسانی عرضه‌کننده داروهای غدد و دیابت کشور.",
     "pharmacology_mechanism": "اکسناتاید با اتصال اختصاصی به گیرنده‌های پپتید شبه گلوکاگون-۱ (GLP-1R) در سطح سلول‌های بتای جزایر لانگرهانس پانکراس، تولید cAMP درون‌سلولی را در حضور غلظت‌های بالای گلوکز تحریک کرده و ترشح اگزوسیتوزی انسولین را به راه می‌اندازد؛ همچنین با مهار سلول‌های آلفا ترشح گلوکاگون را مهار می‌کند.",
-    "clinical_pearls": "دیابت گربه‌ها پاتوفیزیولوژی بسیار شبیهی به دیابت نوع ۲ انسان دارد؛ اکسناتاید می‌تواند با خارج کردن سلول‌های بتا از فاز خاموشی و سمیت ناشی از گلوکز، گربه را از وابستگی مادام‌العمر به تزریق انسولین نجات دهد."
+    "clinical_pearls": "دیابت گربه‌ها پاتوفیزیولوژی بسیار شبیهی به دیابت نوع ۲ انسان دارد؛ اکسناتاید می‌تواند با خارج کردن سلول‌های بتا از فاز خاموشی و سمیت ناشی از گلوکز، گربه را از وابستگی مادام‌العمر به تزریق انسولین نجات دهد.",
+    "brand_names_fa": [
+      "بایتا",
+      "قلم آماده تزریق بایتا ۵ و ۱۰ میکروگرم (اکسناتاید)"
+    ],
+    "brand_names_en": [
+      "Byetta Prefilled Pen (5 mcg / 10 mcg per dose)"
+    ]
   },
   {
     "id": "famciclovir",
@@ -53357,7 +56314,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در دسترس در داروخانه‌های شهری و تخصصی معتبر سراسر کشور.",
     "pharmacology_mechanism": "فام‌سیکلوویر پس از جذب روده‌ای توسط استرازها و آنزیم آلدهید اکسیداز به پنسیکلوویر تبدیل می‌شود. پنسیکلوویر منحصراً درون سلول‌های آلوده به ویروس توسط آنزیم تیمیدین کیناز اختصاصی هرپس ویروس فسفریله شده و به فرم مهارکننده فعال پنسیکلوویر تری‌فسفات تبدیل می‌شود که با مهار رقابتی DNA پلیمراز ویروس همانندسازی ویروس را متوقف می‌کند.",
-    "clinical_pearls": "گربه‌های مبتلا به هرپس معمولاً از تجویز مکرر قطره‌های چشمی زجر می‌کشند و دچار استرس شدید می‌شوند؛ استفاده از فام‌سیکلوویر خوراکی یک بار یا دو بار در روز نیاز به قطره‌های چشمی مکرر را به حداقل رسانده و نتایج بالینی معجزه‌آسایی ایجاد می‌کند."
+    "clinical_pearls": "گربه‌های مبتلا به هرپس معمولاً از تجویز مکرر قطره‌های چشمی زجر می‌کشند و دچار استرس شدید می‌شوند؛ استفاده از فام‌سیکلوویر خوراکی یک بار یا دو بار در روز نیاز به قطره‌های چشمی مکرر را به حداقل رسانده و نتایج بالینی معجزه‌آسایی ایجاد می‌کند.",
+    "brand_names_fa": [
+      "فام‌ویر",
+      "قرص‌های فام‌سیکلوویر ۱۲۵، ۲۵۰ و ۵۰۰ میلی‌گرم (فام‌ویر)"
+    ],
+    "brand_names_en": [
+      "Famvir / Famciclovir Tablets (125, 250, 500 mg)"
+    ]
   },
   {
     "id": "omega_3_fatty_acids",
@@ -53483,7 +56447,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های انسانی و پت‌شاپ‌ها و کلینیک‌های دامپزشکی کشور به وفور موجود است.",
     "pharmacology_mechanism": "اسیدهای چرب امگا-۳ (EPA و DHA) در فسفولیپیدهای غشای سلولی جانشین اسید آراشیدونیک (امگا-۶) می‌شوند. در هنگام التهاب، آنزیم‌های فسفولیپاز و سیکلواکسیژناز به جای تولید ایکوزانوئیدهای پیش‌التهابی شدید (مانند لوکوترین B4 و ترومبوکسان A2)، متابولیت‌های ۳ و ۵ غیراشباع (مانند لوکوترین B5 و پروستاسایکلین PGI3) تولید می‌کنند که خاصیت گشادی عروقی داشته و التهاب را خاموش می‌سازند.",
-    "clinical_pearls": "برای ارزیابی اثر امگا-۳ بر خارش و پوست، صاحب حیوان باید بداند حداقل ۶ تا ۸ هفته مصرف مداوم لازم است تا غشای سلول‌های پوستی بازسازی شوند؛ در مورد بیماری کلیه، کاهش نسبت پروتئین به کراتینین ادرار (UPC) ظرف ۴ هفته قابل سنجش است."
+    "clinical_pearls": "برای ارزیابی اثر امگا-۳ بر خارش و پوست، صاحب حیوان باید بداند حداقل ۶ تا ۸ هفته مصرف مداوم لازم است تا غشای سلول‌های پوستی بازسازی شوند؛ در مورد بیماری کلیه، کاهش نسبت پروتئین به کراتینین ادرار (UPC) ظرف ۴ هفته قابل سنجش است.",
+    "brand_names_fa": [
+      "ایکوزاپنتانوئیک اسید و دوکوزاهگزانوئیک اسید",
+      "کپسول ژلاتینی امگا-۳ حاوی ۱۰۰۰ میلی‌گرم روغن ماهی (امگازون / یوروویتال)"
+    ],
+    "brand_names_en": [
+      "Omega-3 Softgels 1000 mg (EPA 180 mg + DHA 120 mg)"
+    ]
   },
   {
     "id": "felbamate",
@@ -53593,7 +56564,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های منتخب اعصاب و روان به صورت تک‌نسخه‌ای.",
     "pharmacology_mechanism": "فلبامات با پیوند به جایگاه متصل‌شونده به گلیسین در گیرنده‌های ان-متیل دی-آسپارتات (NMDA)، جریان یون کلسیم و اثرات تحریک عصبی سمی گلوتامات را بلوک کرده و با تسهیل اتصال گابا به گیرنده‌های GABA-A آستانه تحریک پذیری سلول‌های عصبی کورتکس را بالا می‌برد.",
-    "clinical_pearls": "فلبامات داروی نجات‌دهنده برای سگ‌هایی است که فنوباربیتال کبد آنها را از کار انداخته یا بروماید پتاسیم باعث فلج پاهای عقب آنها شده است؛ عدم خواب‌آلودگی بزرگترین هدیه این دارو به سگ و صاحب او است."
+    "clinical_pearls": "فلبامات داروی نجات‌دهنده برای سگ‌هایی است که فنوباربیتال کبد آنها را از کار انداخته یا بروماید پتاسیم باعث فلج پاهای عقب آنها شده است؛ عدم خواب‌آلودگی بزرگترین هدیه این دارو به سگ و صاحب او است.",
+    "brand_names_fa": [
+      "فلباتول",
+      "قرص فلبامات ۴۰۰ و ۶۰۰ میلی‌گرم (فلباتول)"
+    ],
+    "brand_names_en": [
+      "Felbamate / Felbatol Tablets (400 mg / 600 mg)"
+    ]
   },
   {
     "id": "ferrous_sulfate",
@@ -53717,7 +56695,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های کشور به صورت عمومی و بدون نسخه در دسترس است.",
     "pharmacology_mechanism": "آهن جذب‌شده از انتروسیت‌های دوازدهه به ترانسفرین متصل شده و به پیش‌سازهای اریتروئیدی در مغز استخوان تحویل داده می‌شود تا با پیوند به حلقه پورفیرین هموگلوبین عملکردی را جهت حمل گازهای تنفسی تولید کند؛ آهن مازاد به شکل فریتین و هموسیدرین در سلول‌های رتیکولوآندوتلیال کبد ذخیره می‌شود.",
-    "clinical_pearls": "سیاه شدن مدفوع حیوان تحت درمان با آهن امری کاملاً طبیعی ناشی از سولفید آهن است؛ بالینگر باید قبل از خروج بیمار از کلینیک به صاحب حیوان اطمینان دهد تا با خونریزی داخلی یا ملنا اشتباه گرفته نشود."
+    "clinical_pearls": "سیاه شدن مدفوع حیوان تحت درمان با آهن امری کاملاً طبیعی ناشی از سولفید آهن است؛ بالینگر باید قبل از خروج بیمار از کلینیک به صاحب حیوان اطمینان دهد تا با خونریزی داخلی یا ملنا اشتباه گرفته نشود.",
+    "brand_names_fa": [
+      "مکمل آهن خوراکی",
+      "قرص فروس سولفات ۵۰ میلی‌گرم آهن عنصری / قطره خوراکی آهن فروفورت"
+    ],
+    "brand_names_en": [
+      "Ferrous Sulfate Tablets / Ferro Fort Oral Drops"
+    ]
   },
   {
     "id": "fexofenadine",
@@ -53839,7 +56824,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های سراسر ایران به عنوان داروی عمومی موجود است.",
     "pharmacology_mechanism": "فکسوفنادین یک آنتاگونیست رقابتی و بسیار انتخابی گیرنده‌های H1 هیستامینی در بافت‌های محیطی است؛ به دلیل ویژگی زویتریونی و عدم تمایل به عبور از سد خونی-مغزی، گیرنده‌های H1 قشر مغز را اشغال نکرده و از خواب‌آلودگی و مهار CNS جلوگیری می‌کند.",
-    "clinical_pearls": "اگر صاحب سگ شکایت دارد که دیفن‌هیدرامین یا هیدروکسی‌زین سگ را منگ و بی‌حال می‌کند، فکسوفنادین بهترین جایگزین نسل دوم است که خارش را تسکین داده و نشاط و هوشیاری بیمار را کاملاً حفظ می‌نماید."
+    "clinical_pearls": "اگر صاحب سگ شکایت دارد که دیفن‌هیدرامین یا هیدروکسی‌زین سگ را منگ و بی‌حال می‌کند، فکسوفنادین بهترین جایگزین نسل دوم است که خارش را تسکین داده و نشاط و هوشیاری بیمار را کاملاً حفظ می‌نماید.",
+    "brand_names_fa": [
+      "تلفاست",
+      "آلگرا",
+      "قرص‌های فکسوفنادین ۳۰، ۶۰، ۱۲۰ و ۱۸۰ میلی‌گرم (تلفاست / آلگرا)"
+    ],
+    "brand_names_en": [
+      "Telfast / Fexofenadine Tablets (30, 60, 120, 180 mg)"
+    ]
   },
   {
     "id": "filgrastim",
@@ -53963,7 +56956,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های بیمارستانی و پیوند و انکولوژی کشور به وفور در دسترس است.",
     "pharmacology_mechanism": "فیلگراستیم به گیرنده‌های اختصاصی G-CSFR در سطح سلول‌های پیش‌ساز میلوئیدی متصل شده و آبشار پیام‌رسانی JAK/STAT را فعال می‌کند که منجر به تسریع تکثیر، بقا و تمایز سلول‌های رده نوتروفیلی و تقویت فاگوسیتوز و اکسیداتیو برست نوتروفیل‌های در گردش می‌شود.",
-    "clinical_pearls": "فیلگراستیم معجزه بخش ICU برای نجات توله‌های پاروویروسی دچار سپسیس و گلبول سفید زیر ۵۰۰ است؛ با این حال به محض رسیدن نوتروفیل به محدوده نرمال دارو را قطع کنید تا از خنثی شدن بیولوژیک دارو در آینده پیشگیری شود."
+    "clinical_pearls": "فیلگراستیم معجزه بخش ICU برای نجات توله‌های پاروویروسی دچار سپسیس و گلبول سفید زیر ۵۰۰ است؛ با این حال به محض رسیدن نوتروفیل به محدوده نرمال دارو را قطع کنید تا از خنثی شدن بیولوژیک دارو در آینده پیشگیری شود.",
+    "brand_names_fa": [
+      "فاکتور محرک کلنی گرانولوسیت‌ها - نئوپوژن",
+      "سرنگ آماده تزریق فیلگراستیم ۳۰۰ میکروگرم (پی‌دی‌گراستیم / نئوپوژن)"
+    ],
+    "brand_names_en": [
+      "PD-Grastim / Neupogen Prefilled Syringes (300 mcg / 0.5 mL)"
+    ]
   },
   {
     "id": "finasteride",
@@ -54074,7 +57074,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های کشور به صورت گسترده موجود است.",
     "pharmacology_mechanism": "فیناستراید یک مهارکننده رقابتی قوی و اختصاصی آنزیم تیپ ۲ درون‌سلولی ۵-آلفا ردوکتاز است؛ این آنزیم مسئول تبدیل تستوسترون به آندروژن بسیار قدرتمندتر دی‌هیدروتستوسترون (DHT) در غده پروستات است. با کاهش غلظت DHT در خون و بافت پروستات، تحریک تکثیر سلولی متوقف شده و بافت پروستات آتروفی فیزیولوژیک می‌یابد.",
-    "clinical_pearls": "برای سگ‌های شیتزو یا تریر مسنی که به علت بزرگی پروستات دچار یبوست نواری و فشرده شدن کولون هستند و صاحب آنها به علت خطرات بیهوشی حاضر به جراحی نیست، فیناستراید ظرف ۴ تا ۶ هفته معجزه کرده و بدون بیهوشی مشکل دفع را حل می‌کند."
+    "clinical_pearls": "برای سگ‌های شیتزو یا تریر مسنی که به علت بزرگی پروستات دچار یبوست نواری و فشرده شدن کولون هستند و صاحب آنها به علت خطرات بیهوشی حاضر به جراحی نیست، فیناستراید ظرف ۴ تا ۶ هفته معجزه کرده و بدون بیهوشی مشکل دفع را حل می‌کند.",
+    "brand_names_fa": [
+      "پروستار",
+      "فین‌پشیا",
+      "قرص فیناستراید ۱ و ۵ میلی‌گرم (پروستار / فین‌پشیا)"
+    ],
+    "brand_names_en": [
+      "Proscar / Finasteride Tablets (1 mg / 5 mg)"
+    ]
   },
   {
     "id": "flucytosine",
@@ -54197,7 +57205,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی تک‌نسخه‌ای و بیمارستان‌های عفونی انسانی.",
     "pharmacology_mechanism": "فلوکیتوزین توسط آنزیم سیتوزین پرمئاز به داخل سلول قارچ نفوذ کرده و توسط سیتوزین دآمیناز قارچی به ۵-فلورویوراسیل (5-FU) تبدیل می‌شود. این متابولیت به دو مسیر تقسیم می‌شود: تبدیل به 5-FUTP و اتصال به RNA قارچی که سنتز پروتئین را مختل می‌کند، و تبدیل به 5-FdUMP که آنزیم تیمیدیلات سنتتاز را مهار کرده و سنتز DNA قارچ را متوقف می‌سازد.",
-    "clinical_pearls": "به صاحب گربه‌ای که کریپتوکوکوزیس دارد اطمینان دهید که با وجود تغییر شکل وحشتناک بینی و صورت گربه (بینی دلقکی / Clown Nose)، ترکیب فلوکیتوزین با فلوکونازول ظرف چند هفته بافت‌های بینی را کاملاً ترمیم می‌کند."
+    "clinical_pearls": "به صاحب گربه‌ای که کریپتوکوکوزیس دارد اطمینان دهید که با وجود تغییر شکل وحشتناک بینی و صورت گربه (بینی دلقکی / Clown Nose)، ترکیب فلوکیتوزین با فلوکونازول ظرف چند هفته بافت‌های بینی را کاملاً ترمیم می‌کند.",
+    "brand_names_fa": [
+      "۵-فلوروسیتوزین",
+      "آنکوبون",
+      "کپسول فلوکیتوزین ۲۵۰ و ۵۰۰ میلی‌گرم (آنکوبون)"
+    ],
+    "brand_names_en": [
+      "Ancobon / Flucytosine Capsules (250 mg / 500 mg)"
+    ]
   },
   {
     "id": "flumethasone",
@@ -54349,7 +57365,14 @@ const DRUGS_DATA = [
       "milk_fa": "تحریک فوق‌العاده سریع گلوکونئوژنز کبدی و افزایش پایدار قند خون در درمان کتوز گاوهای شیری پرولید.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فلوکورت",
+      "ویال تزریقی فلوکورت ۰.۵ میلی‌گرم در میلی‌لیتر (فلومتازون)"
+    ],
+    "brand_names_en": [
+      "Flucort / Flumethasone Injection 0.5 mg/mL"
+    ]
   },
   {
     "id": "fentanyl",
@@ -54480,7 +57503,19 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "داروی مخدر سهمیه‌ای بسیار تحت کنترل وزارت بهداشت و توزیع در اتاق‌های عمل.",
     "pharmacology_mechanism": "فنتانیل با اتصال اختصاصی با تمایل بسیار بالا به گیرنده‌های مو-اوپیوئیدی (MOR) متصل به پروتئین Gi، آدنیلات سیکلاز را مهار کرده و کانال‌های پتاسیمی را باز و کانال‌های ولتاژی کلسیم را مسدود می‌کند؛ در نتیجه هدایت پیام‌های درد از نخاع به قشر مغز مهار می‌شود.",
-    "clinical_pearls": "برای جدا کردن چسب فنتانیل از پوست بیمار دستکش به دست کنید و چسب مصرف‌شده را از وسط تا کرده و فوراً معدوم نمایید تا حیوان دیگری آن را نلیسد."
+    "clinical_pearls": "برای جدا کردن چسب فنتانیل از پوست بیمار دستکش به دست کنید و چسب مصرف‌شده را از وسط تا کرده و فوراً معدوم نمایید تا حیوان دیگری آن را نلیسد.",
+    "brand_names_fa": [
+      "فنتانیل",
+      "دوروجسیک",
+      "فنتانیل ارس",
+      "تزریقی و چسب پوستی ترنس‌درمال",
+      "آمپول فنتانیل 0.5 mg/10 mL (50 mcg/mL) / چسب دوروجزیک"
+    ],
+    "brand_names_en": [
+      "Duragesic",
+      "Sublimaze",
+      "Fentanyl Injection 50 mcg/mL / Durogesic Patches (25, 50, 100 mcg/hr)"
+    ]
   },
   {
     "id": "firocoxib",
@@ -54618,7 +57653,19 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌ها و بیمارستان‌های تخصصی دامپزشکی کشور.",
     "pharmacology_mechanism": "فیروککسیب با مهار اختصاصی پاکت اتصالی ایزوآنزیم سیکلواکسیژناز-۲ (COX-2) با تمایل صدها برابر نسبت به COX-1، سنتز پروستاگلاندین‌های عامل درد و التهاب (به ویژه PGE2) در غضروف و سینوویوم مفصلی را متوقف کرده و هموستاز محافظتی مخاط دستگاه گوارش و جریان خون کلیوی را حفظ می‌نماید.",
-    "clinical_pearls": "در سگ‌های مسنی که نیاز به مصرف مداوم داروی ضددرد مفصلی دارند اما سابقه تحریک معده با کارپروفن داشته‌اند، فیروککسیب ایمن‌ترین گزینه خط اول درمان بلندمدت است."
+    "clinical_pearls": "در سگ‌های مسنی که نیاز به مصرف مداوم داروی ضددرد مفصلی دارند اما سابقه تحریک معده با کارپروفن داشته‌اند، فیروککسیب ایمن‌ترین گزینه خط اول درمان بلندمدت است.",
+    "brand_names_fa": [
+      "پرویکوکس",
+      "پریویکوکس",
+      "اکیوکوکس",
+      "اکویوکس",
+      "قرص‌های جویدنی پریویکوکس ۵۷ و ۲۲۷ میلی‌گرم (فیروککسیب)"
+    ],
+    "brand_names_en": [
+      "Previcox",
+      "Equioxx",
+      "Previcox Chewable Tablets (57 mg / 227 mg)"
+    ]
   },
   {
     "id": "fluconazole",
@@ -54791,7 +57838,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دیفلوکان",
+      "کپسول فلوکونازول ۵۰، ۱۰۰، ۱۵۰ و ۲۰۰ میلی‌گرم / ویال تزریقی ۲ mg/mL"
+    ],
+    "brand_names_en": [
+      "Diflucan / Fluconazole Capsules & IV Infusion 2 mg/mL"
+    ]
   },
   {
     "id": "fluorouracil",
@@ -54928,7 +57982,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در دسترس از طریق داروخانه‌های رسمی انکولوژی و شیمی‌درمانی کشور.",
     "pharmacology_mechanism": "فلورویوراسیل درون سلول به دهیدروفلورویوراسیل منوفسفات (FdUMP) تبدیل می‌شود که با اتصال به آنزیم تیمیدیلات سنتتاز و کوفاکتور فولات یک کمپلکس سه تایی پایدار تشکیل داده و مانع از متیلاسیون دئوکسی‌اوریدیلیک اسید به تیمیدیلیک اسید می‌شود که این امر سنتز DNA را کاملاً متوقف می‌کند؛ همچنین فرم ریبونوکلئوتیدی آن درون RNA وارد شده و رونویسی سلولی را مختل می‌سازد.",
-    "clinical_pearls": "به صاحب سگی که کرم ۵-FU برای ضایعات پوستی برای او تجویز شده تاکید کنید اگر در خانه گربه نگهداری می‌کند، دارو را هرگز به خانه نبرد؛ حتی اگر گربه بالشتکی را که پماد به آن مالیده شده بلیسد، ظرف چند ساعت تلف خواهد شد."
+    "clinical_pearls": "به صاحب سگی که کرم ۵-FU برای ضایعات پوستی برای او تجویز شده تاکید کنید اگر در خانه گربه نگهداری می‌کند، دارو را هرگز به خانه نبرد؛ حتی اگر گربه بالشتکی را که پماد به آن مالیده شده بلیسد، ظرف چند ساعت تلف خواهد شد.",
+    "brand_names_fa": [
+      "۵-فلورواوراسیل",
+      "ایفودکس",
+      "آمپول فلورویوراسیل ۵۰ میلی‌گرم در میلی‌لیتر (ایفودکس) / کرم موضعی ۵٪"
+    ],
+    "brand_names_en": [
+      "Efudex / 5-Fluorouracil Injection 50 mg/mL & 5% Topical Cream"
+    ]
   },
   {
     "id": "fluralaner",
@@ -55051,7 +58113,17 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در کلینیک‌ها و داروخانه‌های دامپزشکی حیوانات خانگی معتبر کشور.",
     "pharmacology_mechanism": "فلورالانر یک مهارکننده قوی و بسیار انتخابی کانال‌های کلریدی دریچه‌دار لیگاندی، به ویژه گیرنده‌های گابا (GABA) و گیرنده‌های گلوتامات در سیستم عصبی بندپایان است؛ با مهار این کانال‌ها، انتقال پیام مهاری متوقف شده و تحریک عصبی مفرط، فلج اسپاستیک و مرگ حشره و کنه رخ می‌دهد، بدون آنکه بر گیرنده‌های پستانداران اثر معناداری بگذارد.",
-    "clinical_pearls": "برای اثرگذاری فلورالانر، کک یا کنه باید پوست را نیش بزند و خون بنوشد تا دارو وارد بدنش شود؛ بنابراین مشاهده موقت یک کنه روی سطح موهای حیوان نشانه عدم اثر دارو نیست؛ کنه ظرف چند ساعت پس از گزش خشک شده و می‌افتد."
+    "clinical_pearls": "برای اثرگذاری فلورالانر، کک یا کنه باید پوست را نیش بزند و خون بنوشد تا دارو وارد بدنش شود؛ بنابراین مشاهده موقت یک کنه روی سطح موهای حیوان نشانه عدم اثر دارو نیست؛ کنه ظرف چند ساعت پس از گزش خشک شده و می‌افتد.",
+    "brand_names_fa": [
+      "براوکتو",
+      "براووکتو",
+      "قرص‌های جویدنی براوکتو (برای وزن‌های مختلف از ۲ تا ۵۶ کیلوگرم)"
+    ],
+    "brand_names_en": [
+      "Bravecto",
+      "Bravecto Plus",
+      "Bravecto Chewable Tablets (112.5, 250, 500, 1000, 1400 mg)"
+    ]
   },
   {
     "id": "fluticasone",
@@ -55173,7 +58245,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های انسانی کشور با نسخه عمومی موجود است.",
     "pharmacology_mechanism": "فلوتیکازون با تمایل اتصالی ۱۸ برابر بیشتر از دگزامتازون به گیرنده‌های گلوکوکورتیکوئیدی متصل شده و آبشارهای رونویسی سیتوکین‌های Th2، کموکاین‌ها و فاکتورهای چسبندگی ائوزینوفیل‌ها را خاموش می‌کند؛ این امر التهاب مزمن اپی‌تلیوم برونش‌ها را مهار و بازسازی مخاط تنفسی را تسریع می‌بخشد.",
-    "clinical_pearls": "به صاحب گربه آموزش دهید ابتدا ماسک اسپیسر را بدون اسپری کردن روی صورت گربه بگذارد و با دادن تشویقی او را عادت دهد؛ سپس یک پاف دارو داخل محفظه بزند تا صدای فیش اسپری گربه را نترساند."
+    "clinical_pearls": "به صاحب گربه آموزش دهید ابتدا ماسک اسپیسر را بدون اسپری کردن روی صورت گربه بگذارد و با دادن تشویقی او را عادت دهد؛ سپس یک پاف دارو داخل محفظه بزند تا صدای فیش اسپری گربه را نترساند.",
+    "brand_names_fa": [
+      "اسپری استنشاقی فلوکسیتاید",
+      "اسپری استنشاقی فلوتیکازون ۱۲۵ و ۲۵۰ میکروگرم (فلوکسیتاید)"
+    ],
+    "brand_names_en": [
+      "Flixotide / Flovent Inhaler (125 mcg / 250 mcg per actuation)"
+    ]
   },
   {
     "id": "fluvoxamine",
@@ -55289,7 +58368,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های کشور با نسخه پزشک موجود است.",
     "pharmacology_mechanism": "فلووکسامین پمپ بازجذب سروتونین (SERT) را در غشای پیش‌سیناپسی مسدود کرده و دسترسی انتقال‌دهنده عصبی سروتونین (5-HT) را به گیرنده‌های پس‌سیناپسی در سیستم لیمبیک و مدارهای کورتیکو-استریاتو-تالامیک افزایش می‌دهد و با تحریک گیرنده‌های سیگما-۱ تعادل مهاری را بازسازی می‌کند.",
-    "clinical_pearls": "به صاحب حیوان توضیح دهید که اثر فلووکسامین شبه‌معجزه فوری نیست و حداقل ۳ تا ۴ هفته زمان لازم است تا مدارهای عصبی مغز خود را بازسازی کنند؛ صبر و مداومت کلید موفقیت درمان است."
+    "clinical_pearls": "به صاحب حیوان توضیح دهید که اثر فلووکسامین شبه‌معجزه فوری نیست و حداقل ۳ تا ۴ هفته زمان لازم است تا مدارهای عصبی مغز خود را بازسازی کنند؛ صبر و مداومت کلید موفقیت درمان است.",
+    "brand_names_fa": [
+      "لووکس",
+      "قرص فلووکسامین ۵۰ و ۱۰۰ میلی‌گرم (لووکس)"
+    ],
+    "brand_names_en": [
+      "Luvox / Fluvoxamine Maleate Tablets (50 mg / 100 mg)"
+    ]
   },
   {
     "id": "folic_acid",
@@ -55422,7 +58508,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های کشور به عنوان مکمل عمومی بدون نسخه موجود است.",
     "pharmacology_mechanism": "اسید فولیک در بدن توسط دی‌هیدروفولات ردوکتاز به تتراهیدروفولات (THF) تبدیل می‌شود؛ THF به عنوان کوآنزیم ناقل گروه‌های یک‌کربنه در سنتز بازهای پورین و پیریمیدین، متیلاسیون اسیدهای آمینه و سنتز تیمیدین برای ساخت DNA سلول‌های با تکثیر سریع نقشی حیاتی ایفا می‌کند.",
-    "clinical_pearls": "تجویز اسید فولیک ۵ میلی‌گرم به ماده بولداگ باردار ساده‌ترین، ارزان‌ترین و نجات‌بخش‌ترین مداخله فارماکولوژیک برای پیشگیری از نقص مادرزادی شکاف کام در توله‌هاست."
+    "clinical_pearls": "تجویز اسید فولیک ۵ میلی‌گرم به ماده بولداگ باردار ساده‌ترین، ارزان‌ترین و نجات‌بخش‌ترین مداخله فارماکولوژیک برای پیشگیری از نقص مادرزادی شکاف کام در توله‌هاست.",
+    "brand_names_fa": [
+      "ویتامین ب۹",
+      "فولاسین",
+      "قرص اسید فولیک ۱ و ۵ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Folic Acid Tablets 1 mg / 5 mg"
+    ]
   },
   {
     "id": "fosfomycin",
@@ -55533,7 +58627,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در دسترس در داروخانه‌های شهری و بیمارستانی کشور با نسخه رسمی.",
     "pharmacology_mechanism": "فسفومایسین به طور برگشت‌ناپذیر آنزیم انول‌پیروویل ترانسفراز (MurA) را مهار می‌کند؛ این آنزیم نخستین مرحله کلیدی در سنتز پپتیدوگلیکان (تبدیل UDP-N-استیل‌گلوکزآمین به UDP-N-استیل‌مورامیک اسید) را کاتالیز می‌کند؛ با توقف این فرآیند باکتری بدون دیواره شده و متلاشی می‌گردد.",
-    "clinical_pearls": "اگر سگی ماه‌هاست با انروفلوکساسین و کوآموکسی‌کلاو درمان شده اما هنوز ادرارش بوی تعفن می‌دهد و کشت ادرار E. coli فوق‌مقاوم نشان می‌دهد، فسفومایسین داروی طلایی نجات‌دهنده بیمار است."
+    "clinical_pearls": "اگر سگی ماه‌هاست با انروفلوکساسین و کوآموکسی‌کلاو درمان شده اما هنوز ادرارش بوی تعفن می‌دهد و کشت ادرار E. coli فوق‌مقاوم نشان می‌دهد، فسفومایسین داروی طلایی نجات‌دهنده بیمار است.",
+    "brand_names_fa": [
+      "مونورول",
+      "ساشه گرانول فسفومایسین ۳ گرم (مونورول / فسفوکین)"
+    ],
+    "brand_names_en": [
+      "Monurol / Fosfomycin Tromethamine Sachet 3 g"
+    ]
   },
   {
     "id": "furazolidone",
@@ -55665,7 +58766,13 @@ const DRUGS_DATA = [
       "milk_fa": "فعالیت مهارکننده آنزیم مونوآمین اکسیداز (MAO) درون‌زاد که باید از تداخلات غذایی و دارویی پرهیز شود.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پودر و بلوس فورازولیدون دامی (نصر / داملران)"
+    ],
+    "brand_names_en": [
+      "Furazolidone Bolus & Water Soluble Powder"
+    ]
   },
   {
     "id": "gamithromycin",
@@ -55795,7 +58902,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "زاکتران",
+      "ویال تزریقی زاکتران ۱۵٪ (گامیترومایسین ۱۵۰ mg/mL)"
+    ],
+    "brand_names_en": [
+      "Zactran / Gamithromycin 150 mg/mL Solution for Injection"
+    ]
   },
   {
     "id": "gemcitabine",
@@ -55918,7 +59032,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در دسترس از طریق داروخانه‌های رسمی بیمارستان‌های انکولوژی و شیمی‌درمانی کشور.",
     "pharmacology_mechanism": "جمسیتابین درون سلول توسط دئوکسی‌سیتیدین کیناز فسفریله شده و به جمسیتابین دی‌فسفات (dFdCDP) و تری‌فسفات (dFdCTP) تبدیل می‌شود؛ فرم دی‌فسفات آنزیم ریبونوکلئوتید ردوکتاز را مهار کرده و ذخایر دئوکسی‌نوکلئوتیدهای لازم برای ساخت DNA را تخلیه می‌کند، در حالی که فرم تری‌فسفات با رقابت مستقیم به جای دئوکسی‌سیتیدین تری‌فسفات در هلیکس DNA وارد شده و همانندسازی را متوقف می‌سازد.",
-    "clinical_pearls": "جمسیتابین یکی از ایمن‌ترین و کم‌عارضه‌ترین داروهای شیمی‌درمانی برای سگ‌های مسنی است که از تومور مثانه رنج می‌برند و صاحب آنها از استفراغ و بی‌حالی شیمی‌درمانی‌های رایج وحشت دارد."
+    "clinical_pearls": "جمسیتابین یکی از ایمن‌ترین و کم‌عارضه‌ترین داروهای شیمی‌درمانی برای سگ‌های مسنی است که از تومور مثانه رنج می‌برند و صاحب آنها از استفراغ و بی‌حالی شیمی‌درمانی‌های رایج وحشت دارد.",
+    "brand_names_fa": [
+      "جمزار",
+      "ویال جمسیتابین ۲۰۰ و ۱۰۰۰ میلی‌گرم (جمزار)"
+    ],
+    "brand_names_en": [
+      "Gemzar / Gemcitabine for Injection (200 mg / 1 g)"
+    ]
   },
   {
     "id": "gemfibrozil",
@@ -56028,7 +59149,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های کشور به عنوان داروی عمومی در دسترس است.",
     "pharmacology_mechanism": "جم‌فیبروزیل با تحریک گیرنده‌های هسته‌ای فعال‌شونده با تکثیرکننده پراکسی‌زوم آلفا (PPAR-alpha) رونویسی ژن‌های مسئول اکسیداسیون اسیدهای چرب در کبد را القا کرده و سنتز VLDL را در هپاتوسیت‌ها مهار می‌کند؛ همچنین بیان ژن لیپوپروتئین لیپاز عروقی را تقویت کرده و آپولیپوپروتئین C-III (مهارکننده LPL) را سرکوب می‌نماید.",
-    "clinical_pearls": "اگر در خون سگی پس از سانتریفیوژ لایه چربی سفید و شیری‌رنگ شبیه خامه غلیظ روی پلاسما دیدید، بیمار در آستانه پانکراتیت نکروزان کشنده است؛ پس از رژیم غذایی کم‌چرب، جم‌فیبروزیل سرم را به وضعیت شفاف و زلال طبیعی بازمی‌گرداند."
+    "clinical_pearls": "اگر در خون سگی پس از سانتریفیوژ لایه چربی سفید و شیری‌رنگ شبیه خامه غلیظ روی پلاسما دیدید، بیمار در آستانه پانکراتیت نکروزان کشنده است؛ پس از رژیم غذایی کم‌چرب، جم‌فیبروزیل سرم را به وضعیت شفاف و زلال طبیعی بازمی‌گرداند.",
+    "brand_names_fa": [
+      "لوپید",
+      "کپسول و قرص جم‌فیبروزیل ۳۰۰ و ۴۵۰ میلی‌گرم (لوپید)"
+    ],
+    "brand_names_en": [
+      "Lopid / Gemfibrozil Capsules & Tablets (300 mg / 450 mg)"
+    ]
   },
   {
     "id": "glipizide",
@@ -56143,7 +59271,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های شهری کشور با قیمت ارزان موجود است.",
     "pharmacology_mechanism": "گلی‌پیزید به گیرنده‌های اختصاصی سولفونیل‌اوره (SUR1) روی کانال‌های پتاسیمی حساس به ATP در غشای سلول‌های بتای پانکراس متصل شده و آنها را مسدود می‌کند؛ دپلاریزاسیون غشا کانال‌های کلسیمی ولتاژی را باز کرده و ورود کلسیم ترشح گرانول‌های ذخیره‌ای انسولین را تحریک می‌نماید.",
-    "clinical_pearls": "گلی‌پیزید در گربه‌ها ممکن است در درازمدت ترشح آمیلوئید را در جزایر لانگرهانس تشدید کرده و به سلول‌های بتا آسیب بزند؛ بنابراین انسولین‌های آنالوگ (گلارژین) همواره گزینه برتر درمان هستند و گلی‌پیزید فقط راهکاری موقت برای راضی کردن صاحبان کم‌طاقت است."
+    "clinical_pearls": "گلی‌پیزید در گربه‌ها ممکن است در درازمدت ترشح آمیلوئید را در جزایر لانگرهانس تشدید کرده و به سلول‌های بتا آسیب بزند؛ بنابراین انسولین‌های آنالوگ (گلارژین) همواره گزینه برتر درمان هستند و گلی‌پیزید فقط راهکاری موقت برای راضی کردن صاحبان کم‌طاقت است.",
+    "brand_names_fa": [
+      "گلوکوترول",
+      "قرص گلی‌پیزید ۵ میلی‌گرم (گلوکوترول)"
+    ],
+    "brand_names_en": [
+      "Glucotrol / Glipizide Tablets 5 mg"
+    ]
   },
   {
     "id": "glucagon",
@@ -56272,7 +59407,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در لیست داروهای ترالی احیا و ICU بیمارستان‌های کشور.",
     "pharmacology_mechanism": "گلوکاگون به گیرنده‌های هپاتوسیت متصل شده و تولید cAMP درون سلولی را به شدت بالا می‌برد که موجب فعال‌سازی فسفوریلاز کبدی و تجزیه سریع گلیکوژن به گلوکز (گلیکوژنولیز) می‌شود؛ در عضله قلب، افزایش cAMP بدون وابستگی به گیرنده‌های بتا-آدرنرژیک جریان ورودی کلسیم را بازسازی کرده و قدرت انقباضی میوکارد را به سرعت برمی‌گرداند.",
-    "clinical_pearls": "در سگی که به علت انسولینوما دچار تشنج‌های مکرر است، تزریق سرم قندی مکرر بولوس ممکن است با تحریک مجدد ترشح انسولین تومور وضعیت را بدتر کند؛ راه‌اندازی CRI گلوکاگون کلید قطع قطعی تشنج‌ها و تثبیت وضعیت بیمار است."
+    "clinical_pearls": "در سگی که به علت انسولینوما دچار تشنج‌های مکرر است، تزریق سرم قندی مکرر بولوس ممکن است با تحریک مجدد ترشح انسولین تومور وضعیت را بدتر کند؛ راه‌اندازی CRI گلوکاگون کلید قطع قطعی تشنج‌ها و تثبیت وضعیت بیمار است.",
+    "brand_names_fa": [
+      "نوترکیب انسانی تزریقی",
+      "کیت ویال گلوکاگون ۱ میلی‌گرم (گلوکاژن هایپوکیت)"
+    ],
+    "brand_names_en": [
+      "GlucaGen HypoKit / Glucagon 1 mg (1 IU)"
+    ]
   },
   {
     "id": "glyburide",
@@ -56381,7 +59523,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های کشور به عنوان داروی عمومی موجود است.",
     "pharmacology_mechanism": "مشابه گلی‌پیزید با بستن کانال‌های پتاسیمی حساس به ATP در غشای سلول‌های بتای پانکراس، رهاسازی انسولین درون‌زاد را تحریک می‌کند اما به دلیل تفکیک کندتر از گیرنده، اثر هایپوگلایسمیک طولانی‌تری پدید می‌آورد.",
-    "clinical_pearls": "همیشه گلی‌پیزید به دلیل طول اثر کوتاه‌تر و خطر کمتر هایپوگلایسمی کشنده نسبت به گلی‌بن‌کلامید در گربه ارجحیت دارد؛ گلی‌بن‌کلامید فقط زمانی به کار می‌رود که گلی‌پیزید در دسترس نباشد."
+    "clinical_pearls": "همیشه گلی‌پیزید به دلیل طول اثر کوتاه‌تر و خطر کمتر هایپوگلایسمی کشنده نسبت به گلی‌بن‌کلامید در گربه ارجحیت دارد؛ گلی‌بن‌کلامید فقط زمانی به کار می‌رود که گلی‌پیزید در دسترس نباشد.",
+    "brand_names_fa": [
+      "گلی‌بن‌کلامید",
+      "قرص گلی‌بن‌کلامید ۵ میلی‌گرم (داونیست / گلی‌بورید)"
+    ],
+    "brand_names_en": [
+      "Daonil / Glibenclamide Tablets 5 mg"
+    ]
   },
   {
     "id": "glycerin",
@@ -56506,7 +59655,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های کشور به صورت عمومی موجود است.",
     "pharmacology_mechanism": "گلیسیرین جذب سریع روده‌ای داشته و با توزیع در فضای عروقی اسمولاریته پلاسما را به شدت بالا می‌برد؛ این گرادیان اسمزی آب را از ساختارهای چشم (به ویژه بافت زجاجیه) و پارانشیم مغز به درون عروق کشیده و فشار داخل کره چشم (IOP) و فشار داخل جمجمه (ICP) را سریعاً کاهش می‌دهد.",
-    "clinical_pearls": "در سگی که با گلوکوم حاد و چشم برجسته و دردناک به کلینیک مراجعه کرده، اگر به مانیتول دسترسی ندارید، تجویز فوری گلیسیرین خوراکی همراه با یک قطره دورزولامید شبکیه را از نابودی کامل و کوری نجات می‌دهد."
+    "clinical_pearls": "در سگی که با گلوکوم حاد و چشم برجسته و دردناک به کلینیک مراجعه کرده، اگر به مانیتول دسترسی ندارید، تجویز فوری گلیسیرین خوراکی همراه با یک قطره دورزولامید شبکیه را از نابودی کامل و کوری نجات می‌دهد.",
+    "brand_names_fa": [
+      "گلیسرول",
+      "محلول گلیسیرین خوراکی طبی خالص (گلیسرول)"
+    ],
+    "brand_names_en": [
+      "Glycerin Oral Solution Pure USP"
+    ]
   },
   {
     "id": "gonadorelin",
@@ -56658,7 +59814,15 @@ const DRUGS_DATA = [
       "milk_fa": "داروی استاندارد طلایی هورمونی مدیریت تولیدمثل و ناباروری در گاوداری‌های شیری جهان.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "هورمون آزادکننده گنادوتروپین‌ها - فکتریل",
+      "سیستورلین",
+      "ویال گونادورلین استات دامی (سیستورلین / فکتریل / وتارولین)"
+    ],
+    "brand_names_en": [
+      "Cystorelin / Factrel / Gonadorelin Acetate (50 mcg/mL)"
+    ]
   },
   {
     "id": "granisetron",
@@ -56780,7 +59944,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های بیمارستانی و پیوند و شیمی‌درمانی کشور در دسترس است.",
     "pharmacology_mechanism": "گرانیسترون با مهار رقابتی و بسیار انتخابی گیرنده‌های 5-HT3 سروتونین در انتهای فیبرهای حسی عصب واگ در دیواره دستگاه گوارش و همچنین در ناحیه پوسترما (CRTZ) و هسته مجرای منفرد (STN) در ساقه مغز، مسیرهای انتقال سیگنال‌های تهوع و رفلکس استفراغ را مسدود می‌سازد.",
-    "clinical_pearls": "در مواردی که اندانسترون به دلیل نیاز به تزریق‌های مکرر هر ۸ ساعت باعث زحمت کادر درمان و استرس حیوان می‌شود، گرانیسترون با تجویز یک بار یا حداکثر دو بار در روز همان اثر را با پایداری بالاتر ارائه می‌دهد."
+    "clinical_pearls": "در مواردی که اندانسترون به دلیل نیاز به تزریق‌های مکرر هر ۸ ساعت باعث زحمت کادر درمان و استرس حیوان می‌شود، گرانیسترون با تجویز یک بار یا حداکثر دو بار در روز همان اثر را با پایداری بالاتر ارائه می‌دهد.",
+    "brand_names_fa": [
+      "کیترین",
+      "آمپول گرانیسترون ۱ و ۳ میلی‌گرم (کیترین)"
+    ],
+    "brand_names_en": [
+      "Kytril / Granisetron Injection (1 mg/mL and 3 mg/3 mL)"
+    ]
   },
   {
     "id": "grapiprant",
@@ -56892,7 +60063,16 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌ها و بیمارستان‌های تخصصی حیوانات خانگی کشور.",
     "pharmacology_mechanism": "پروستاگلاندین E2 از طریق چهار گیرنده مختلف (EP1 تا EP4) عمل می‌کند؛ گیرنده‌های EP1 تا EP3 عملکردهای فیزیولوژیک محافظت معده و پرفیوژن کلیه را میانجی‌گری می‌کنند در حالی که گیرنده EP4 منحصراً مسئول انتقال سیگنال درد و تخریب بافت مفصل است. گراپیپرانت یک آنتاگونیست رقابتی با تمایل بالا و بسیار اختصاصی برای گیرنده EP4 است و با خاموش کردن این گیرنده بدون مهار سنتز PGE2، درد و التهاب را تسکین می‌دهد.",
-    "clinical_pearls": "گالیپرانت رویای دامپزشکان برای سگ‌های پیر مبتلا به آرتریت است که به دلیل افزایش BUN و کراتینین مجاز به مصرف کارپروفن یا ملوکسیکام نبودند؛ این دارو با دور زدن آنزیم‌های COX خیال بالینگر را از خونرسانی کلیه آسوده می‌کند."
+    "clinical_pearls": "گالیپرانت رویای دامپزشکان برای سگ‌های پیر مبتلا به آرتریت است که به دلیل افزایش BUN و کراتینین مجاز به مصرف کارپروفن یا ملوکسیکام نبودند؛ این دارو با دور زدن آنزیم‌های COX خیال بالینگر را از خونرسانی کلیه آسوده می‌کند.",
+    "brand_names_fa": [
+      "گالیپرانت",
+      "گالیپرنت",
+      "قرص‌های طعم‌دار گالیپرانت ۲۰، ۶۰ و ۱۰۰ میلی‌گرم (گراپیپرانت)"
+    ],
+    "brand_names_en": [
+      "Galliprant",
+      "Galliprant Flavored Tablets (20 mg / 60 mg / 100 mg)"
+    ]
   },
   {
     "id": "griseofulvin",
@@ -57039,7 +60219,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های سراسر کشور در دسترس است.",
     "pharmacology_mechanism": "گریزئوفولوین وارد سلول درماتوفیت در حال تکثیر شده و با اتصال به توبولین‌های پروتئینی، پلیمریزاسیون میکروتوبول‌ها و تشکیل دوک میتوزی را مسدود کرده و تقسیم سلولی قارچ را در مرحله متافاز متوقف می‌سازد (اثر فنگواستاتیک)؛ همچنین با آسیب به DNA عملکرد ترشحی قارچ را متلاشی می‌کند.",
-    "clinical_pearls": "در درمان قارچ گربه با گریزئوفولوین هرگز به ناپدید شدن لکه‌های کچلی اکتفا نکنید؛ موهای به ظاهر سالم تا هفته‌ها می‌توانند اسپور فعال بریزند؛ درمان باید تا منفی شدن دو کشت متوالی آزمایشگاهی با فاصله ۱۰ روز ادامه یابد."
+    "clinical_pearls": "در درمان قارچ گربه با گریزئوفولوین هرگز به ناپدید شدن لکه‌های کچلی اکتفا نکنید؛ موهای به ظاهر سالم تا هفته‌ها می‌توانند اسپور فعال بریزند؛ درمان باید تا منفی شدن دو کشت متوالی آزمایشگاهی با فاصله ۱۰ روز ادامه یابد.",
+    "brand_names_fa": [
+      "میکروسایز و اولترامیکروسایز - فولوسین",
+      "قرص گریزئوفولوین ۱۲۵ و ۵۰۰ میلی‌گرم (فولوسین)"
+    ],
+    "brand_names_en": [
+      "Fulvicin / Griseofulvin Tablets (125 mg / 500 mg)"
+    ]
   },
   {
     "id": "guaifenesin",
@@ -57178,7 +60365,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "گلیسرول گوآیاکولات - GG تزریقی",
+      "پودر استریل گلیسیرین گوآیاکولات (GG) / شربت گوایفنزین انسانی"
+    ],
+    "brand_names_en": [
+      "Guaifenesin Sterile Powder for Injection / Guaifenesin Syrup"
+    ]
   },
   {
     "id": "hydralazine",
@@ -57306,7 +60500,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در داروخانه‌های شهری و بیمارستانی تخصصی قلب کشور موجود است.",
     "pharmacology_mechanism": "هیدرالازین با تداخل در انتقال کلسیم داخل سلولی در سلول‌های عضلات صاف شریانچه‌ها و تحریک تولید نیتریک اکساید (NO) از اندوتلیوم، اتساع بسیار قوی و انتخابی شریانچه‌های مقاومت محیطی را بدون اثر بر عروق خازنی وریدی القا کرده و پس‌بار قلب را به شدت کاهش می‌دهد.",
-    "clinical_pearls": "اگر سگی با نارسایی میترال با وجود مصرف پیموبندان و فوروزماید هنوز به شدت سرفه می‌کند و آب مروارید ریه دارد، اضافه کردن دوز دقیق هیدرالازین با برداشتن بار مقاومتی جلوی بطن چپ، برگشت خون را متوقف کرده و ریه را خشک می‌کند."
+    "clinical_pearls": "اگر سگی با نارسایی میترال با وجود مصرف پیموبندان و فوروزماید هنوز به شدت سرفه می‌کند و آب مروارید ریه دارد، اضافه کردن دوز دقیق هیدرالازین با برداشتن بار مقاومتی جلوی بطن چپ، برگشت خون را متوقف کرده و ریه را خشک می‌کند.",
+    "brand_names_fa": [
+      "آپرسولین",
+      "قرص و آمپول هیدرالازین ۱۰، ۲۵ و ۵۰ میلی‌گرم (آپرسولین)"
+    ],
+    "brand_names_en": [
+      "Apresoline / Hydralazine Tablets (10, 25, 50 mg) & Injection 20 mg/mL"
+    ]
   },
   {
     "id": "hydrocortisone",
@@ -57435,7 +60636,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌ها و ترالی‌های اورژانس سراسر کشور به وفور در دسترس است.",
     "pharmacology_mechanism": "هیدروکورتیزون به گیرنده‌های سیتوپلاسمی گلوکوکورتیکوئید و مینرالوکورتیکوئید متصل شده و با انتقال به هسته سلول‌ها، رونویسی آنزیم‌های گلوکونئوژنز را فعال کرده و سنتز سیتوکین‌های التهابی را مسدود می‌سازد؛ همچنین در توبول دیستال کلیه بازجذب سدیم و کلر را تقویت و دفع پتاسیم و یون هیدروژن را تسریع می‌بخشد.",
-    "clinical_pearls": "در سگی که با لتارژی شدید، برادی‌کاردی و نسبت سدیم به پتاسیم زیر ۲۰ به عنوان شوک آدیسونی آورده شده، هیدروکورتیزون سدیم سوکسینات ظرف کمتر از نیم ساعت ضربان قلب را اصلاح و حیوان را از ایست قلبی هایپرکالمیک نجات می‌دهد."
+    "clinical_pearls": "در سگی که با لتارژی شدید، برادی‌کاردی و نسبت سدیم به پتاسیم زیر ۲۰ به عنوان شوک آدیسونی آورده شده، هیدروکورتیزون سدیم سوکسینات ظرف کمتر از نیم ساعت ضربان قلب را اصلاح و حیوان را از ایست قلبی هایپرکالمیک نجات می‌دهد.",
+    "brand_names_fa": [
+      "کورتیزول",
+      "ویال هیدروکورتیزون سدیم سوکسینات ۱۰۰ میلی‌گرم / کرم و لوسیون ۱٪"
+    ],
+    "brand_names_en": [
+      "Hydrocortisone Sodium Succinate 100 mg / Topical Cream 1%"
+    ]
   },
   {
     "id": "hydrogen_peroxide",
@@ -57549,7 +60757,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌ها، مراکز درمانی و منازل بدون نسخه در دسترس است.",
     "pharmacology_mechanism": "هیدروژن پراکسید به محض ورود به لومن معده، توسط آنزیم کاتالاز مخاطی و خون به سرعت به آب و گاز اکسیژن مولکولی تجزیه می‌شود؛ حجم عظیم حباب‌های گاز اکسیژن و کف تولیدشده دیواره معده را متسع کرده و با تحریک انتهای اعصاب واگ مخاط، مرکز استفراغ در بصل‌النخاع را فعال و رفلکس استفراغ پرفشار را برمی‌انگیزد.",
-    "clinical_pearls": "به صاحب سگی که سراسیمه تماس گرفته و می‌گوید سگش یک بسته قرص را خورده، بگویید با سرنگ از آب اکسیژنه داخل کمد دارو ۲ قاشق غذاخوری در حلق سگ بریزد و سگ را چند دقیقه در حیاط راه ببرد؛ سگ ظرف ده دقیقه کل محتویات معده را تخلیه خواهد کرد."
+    "clinical_pearls": "به صاحب سگی که سراسیمه تماس گرفته و می‌گوید سگش یک بسته قرص را خورده، بگویید با سرنگ از آب اکسیژنه داخل کمد دارو ۲ قاشق غذاخوری در حلق سگ بریزد و سگ را چند دقیقه در حیاط راه ببرد؛ سگ ظرف ده دقیقه کل محتویات معده را تخلیه خواهد کرد.",
+    "brand_names_fa": [
+      "آب‌اکسیژنه خوراکی - داروی القای استفراغ سگ",
+      "محلول آب اکسیژنه ۳٪ طبی (هیدروژن پراکسید ۱۰ حجمی)"
+    ],
+    "brand_names_en": [
+      "Hydrogen Peroxide 3% Topical & Oral Solution USP"
+    ]
   },
   {
     "id": "hydromorphone",
@@ -57678,7 +60893,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در لیست داروهای مخدر تحت کنترل شدید پوکه‌ای بیمارستان‌ها.",
     "pharmacology_mechanism": "هیدرومورفون با اتصال بسیار قوی به گیرنده‌های مو-اوپیوئیدی در ساقه مغز و طناب نخاعی، باز شدن کانال‌های پتاسیمی و بسته شدن کانال‌های کلسیمی وابسته به ولتاژ را القا کرده و آزادسازی نوروترانسمیترهای درد (ماده P و گلوتامات) را در شاخ خلفی نخاع به طور کامل مسدود می‌سازد.",
-    "clinical_pearls": "برای جلوگیری از استفراغ سگ، هیدرومورفون را پس از تجویز داروی آرام‌بخش (دکسمدتومازین یا آسپرومازین) تزریق کنید تا بیمار بدون تهوع وارد فاز آرامش عمیق ضددرد شود."
+    "clinical_pearls": "برای جلوگیری از استفراغ سگ، هیدرومورفون را پس از تجویز داروی آرام‌بخش (دکسمدتومازین یا آسپرومازین) تزریق کنید تا بیمار بدون تهوع وارد فاز آرامش عمیق ضددرد شود.",
+    "brand_names_fa": [
+      "دیلادید",
+      "آمپول هیدرومورفون ۲ و ۴ میلی‌گرم در میلی‌لیتر (دیلادید)"
+    ],
+    "brand_names_en": [
+      "Dilaudid / Hydromorphone Injection (2 mg/mL / 4 mg/mL)"
+    ]
   },
   {
     "id": "hydroxychloroquine",
@@ -57794,7 +61016,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های شهری کشور با نسخه پزشک موجود است.",
     "pharmacology_mechanism": "هیدروکسی‌کلروکین یک باز ضعیف چربی‌دوست است که درون وزیکول‌های اسیدی درون‌سلولی (لیزوزوم‌ها و اندوزوم‌ها) تجمع یافته و pH آنها را بالا می‌برد؛ این افزایش اسیدیته مانع از پردازش آنتی‌ژن‌ها توسط ماکروفاژها، مهار سیگنال‌دهی گیرنده‌های TLR درون‌سلولی و کاهش چشمگیر تولید سیتوکین‌های التهابی (اینترفرون آلفا، IL-1 و TNF-alpha) می‌گردد.",
-    "clinical_pearls": "برای درمان لوپوس بینی سگ‌ها، به صاحب بیمار بگویید حداقل ۲ ماه صبر کند؛ هیدروکسی‌کلروکین دارویی بسیار اصیل و آرام است که با تغییر تدریجی عملکرد سلول‌های ایمنی، بافت تخریب‌شده بینی را بدون عوارض وحشتناک کورتون‌ها بازسازی می‌کند."
+    "clinical_pearls": "برای درمان لوپوس بینی سگ‌ها، به صاحب بیمار بگویید حداقل ۲ ماه صبر کند؛ هیدروکسی‌کلروکین دارویی بسیار اصیل و آرام است که با تغییر تدریجی عملکرد سلول‌های ایمنی، بافت تخریب‌شده بینی را بدون عوارض وحشتناک کورتون‌ها بازسازی می‌کند.",
+    "brand_names_fa": [
+      "پلاکوئنیل",
+      "قرص هیدروکسی‌کلروکین سولفات ۲۰۰ میلی‌گرم (پلاکوئنیل)"
+    ],
+    "brand_names_en": [
+      "Plaquenil / Hydroxychloroquine Tablets 200 mg"
+    ]
   },
   {
     "id": "hydroxyurea",
@@ -57916,7 +61145,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های معتبر شیمی‌درمانی و هماتولوژی کشور در دسترس است.",
     "pharmacology_mechanism": "هیدروکسی‌اوره با مهار فوری و اختصاصی آنزیم ریبونوکلئوتید ردوکتاز (RNR) مانع از تبدیل ریبونوکلئوزید دی‌فسفات‌ها به دئوکسی‌ریبونوکلئوتیدها می‌شود؛ این مهار سنتز DNA را بدون تداخل در ساخت RNA یا پروتئین در سلول‌های در حال تقسیم مغز استخوان متوقف کرده و تولید رده‌های خونی را به شدت کاهش می‌دهد.",
-    "clinical_pearls": "در سگی که با رنگ تیره و بنفش زبان و گیجی به دلیل هماتوکریت ۷۵٪ مراجعه کرده، فلبوتومی اولیه جان حیوان را نجات می‌دهد و شروع بلافاصله هیدروکسی‌اوره تضمین می‌کند که این غلظت خون مهلک دیگر بازنگردد."
+    "clinical_pearls": "در سگی که با رنگ تیره و بنفش زبان و گیجی به دلیل هماتوکریت ۷۵٪ مراجعه کرده، فلبوتومی اولیه جان حیوان را نجات می‌دهد و شروع بلافاصله هیدروکسی‌اوره تضمین می‌کند که این غلظت خون مهلک دیگر بازنگردد.",
+    "brand_names_fa": [
+      "هیدروکسی‌کاربامید - هیدریا",
+      "کپسول هیدروکسی‌اوره ۵۰۰ میلی‌گرم (هیدریا)"
+    ],
+    "brand_names_en": [
+      "Hydrea / Hydroxyurea Capsules 500 mg"
+    ]
   },
   {
     "id": "hydroxyzine",
@@ -58060,7 +61296,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های کشور به صورت عمومی و بدون نسخه در دسترس است.",
     "pharmacology_mechanism": "هیدروکسی‌زین یک آنتاگونیست رقابتی قوی گیرنده‌های H1 هیستامینی در عضلات صاف، اندوتلیوم عروق و سلول‌های عصبی پوست است؛ با مسدود کردن این گیرنده‌ها، گشادی عروق، نفوذپذیری مویرگی، ادم و تحریک انتهای اعصاب حسی خارش متوقف می‌شود؛ همچنین با نفوذ از سد خونی-مغزی فعالیت زیرکورتکس را تعدیل کرده و اثر آرام‌بخش ضدخارش مرکزی اعمال می‌نماید.",
-    "clinical_pearls": "اگر سگی از خارش مداوم خواب ندارد و صاحبش از صدای لیسیدن شبانه کلافه شده، تجویز هیدروکسی‌زین شب‌ها هم خارش پوست را خاموش می‌کند و هم خوابی آرام و عمیق به سگ و صاحب او هدیه می‌دهد."
+    "clinical_pearls": "اگر سگی از خارش مداوم خواب ندارد و صاحبش از صدای لیسیدن شبانه کلافه شده، تجویز هیدروکسی‌زین شب‌ها هم خارش پوست را خاموش می‌کند و هم خوابی آرام و عمیق به سگ و صاحب او هدیه می‌دهد.",
+    "brand_names_fa": [
+      "هیدروکلراید",
+      "پاموات - آتاراکس",
+      "قرص و شربت هیدروکسی‌زین ۱۰ و ۲۵ میلی‌گرم (آتاراکس)"
+    ],
+    "brand_names_en": [
+      "Atarax / Hydroxyzine Tablets (10 mg / 25 mg) & Syrup 10 mg/5 mL"
+    ]
   },
   {
     "id": "hyoscyamine",
@@ -58216,7 +61460,14 @@ const DRUGS_DATA = [
       "duration_days_default": 7,
       "administration_note": "همراه یا بلافاصله پس از غذا مصرف شود.",
       "scoring_info": "در صورت نیاز به تقسیم دوز، از قرص خط‌دار یا تبلت کاتر استفاده شود."
-    }
+    },
+    "brand_names_fa": [
+      "لوسین",
+      "قرص و قطره هیوسیامین ۰.۱۲۵ میلی‌گرم (لوسین)"
+    ],
+    "brand_names_en": [
+      "Levsin / Hyoscyamine Sulfate Tablets 0.125 mg / Drops"
+    ]
   },
   {
     "id": "hypertonic_saline",
@@ -58393,7 +61644,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول کلرید سدیم غلیظ وریدی",
+      "سرم سالین هایپرتونیک ۵٪ و ۷٪ (محلول غلیظ سدیم کلراید)"
+    ],
+    "brand_names_en": [
+      "Hypertonic Saline 7% / 7.5% Solution for Infusion"
+    ]
   },
   {
     "id": "ifosfamide",
@@ -58509,7 +61767,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های بیمارستان‌های انکولوژی و شیمی‌درمانی کشور موجود است.",
     "pharmacology_mechanism": "ایفوسفامید در کبد توسط سیتوکروم P450 فعال شده و به مشتقات آلکیلان فسفورامید موستارد و آکرولئین تبدیل می‌شود؛ فسفورامید موستارد با ایجاد پیوندهای کووالانسی متقاطع بین رشته‌های هلیکس دوگانه DNA (Cross-linking)، از باز شدن و همانندسازی DNA سلول‌های بدخیم جلوگیری کرده و مرگ برنامه‌ریزی‌شده آپوپتوز را تحریک می‌نماید.",
-    "clinical_pearls": "برای تزریق ایفوسفامید یک قانون طلایی وجود دارد: هرگز و تحت هیچ شرایطی ایفوسفامید را بدون همراهی مسنا تزریق نکنید؛ مسنا در مثانه با آکرولئین ترکیب شده و از سوختگی و خونریزی فاجعه‌بار مثانه پیشگیری می‌کند."
+    "clinical_pearls": "برای تزریق ایفوسفامید یک قانون طلایی وجود دارد: هرگز و تحت هیچ شرایطی ایفوسفامید را بدون همراهی مسنا تزریق نکنید؛ مسنا در مثانه با آکرولئین ترکیب شده و از سوختگی و خونریزی فاجعه‌بار مثانه پیشگیری می‌کند.",
+    "brand_names_fa": [
+      "آیفکس",
+      "ویال ایفوسفامید ۱ گرم و ۲ گرم (آیفکس / هولوکسان)"
+    ],
+    "brand_names_en": [
+      "Ifex / Holoxan / Ifosfamide for Injection (1 g / 2 g)"
+    ]
   },
   {
     "id": "imepitoin",
@@ -58627,7 +61892,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌ها و بیمارستان‌های تخصصی دامپزشکی کشور.",
     "pharmacology_mechanism": "ایمه‌پیتوئین یک آگونیست نسبی با تمایل پایین برای جایگاه اتصالی بنزودیازپین‌ها در کمپلکس گیرنده GABA-A مغز است؛ با تحریک نسبی این گیرنده‌ها، جریان یون کلرید به داخل نورون‌ها افزایش یافته و مهار سیناپسی تقویت می‌شود بدون آنکه مقاومت دارویی یا وابستگی شدید ناشی از آگونیست‌های کامل بنزودیازپینی رخ دهد؛ همچنین اثر بلوک‌کننده ضعیف کانال‌های کلسیمی دارد.",
-    "clinical_pearls": "برای سگی که در چهارشنبه‌سوری از ترس صدای ترقه خود را به در و دیوار می‌کوبد و تپش قلب شدید می‌گیرد، شروع پکسیون از ۲ روز قبل معجزه می‌کند؛ سگ کاملاً هوشیار است اما صدای ترقه‌ها دیگر هیچ ترسی در او برنمی‌انگیزد."
+    "clinical_pearls": "برای سگی که در چهارشنبه‌سوری از ترس صدای ترقه خود را به در و دیوار می‌کوبد و تپش قلب شدید می‌گیرد، شروع پکسیون از ۲ روز قبل معجزه می‌کند؛ سگ کاملاً هوشیار است اما صدای ترقه‌ها دیگر هیچ ترسی در او برنمی‌انگیزد.",
+    "brand_names_fa": [
+      "پکسیون",
+      "قرص‌های پکسیون ۱۰۰ و ۴۰۰ میلی‌گرم (ایمه‌پیتوئین)"
+    ],
+    "brand_names_en": [
+      "Pexion Tablets 100 mg / 400 mg (Imepitoin)"
+    ]
   },
   {
     "id": "imidacloprid",
@@ -58749,7 +62021,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی کلینیک‌ها و داروخانه‌های دامپزشکی کشور به وفور در دسترس است.",
     "pharmacology_mechanism": "ایمیداکلوپرید با اتصال برگشت‌ناپذیر به گیرنده‌های پس‌سیناپسی نیکوتینی استیل‌کولین (nAChR) در سیستم اعصاب مرکزی حشرات، موجب دپلاریزاسیون مداوم، انتقال پیام عصبی غیرقابل کنترل، فلج عضلانی و مرگ سریع کک‌ها می‌شود؛ تمایل اتصالی آن به گیرنده‌های پستانداران صدها برابر ضعیف‌تر است.",
-    "clinical_pearls": "اگر سگی از درماتیت شدید ناشی از کک زجر می‌کشد، قرص‌های خوراکی کک را بعد از گزیدن می‌کشند اما ایمیداکلوپرید کک را روی موها قبل از گزیدن فلج می‌کند و از انتقال بزاق آلرژی‌زا جلوگیری می‌نماید."
+    "clinical_pearls": "اگر سگی از درماتیت شدید ناشی از کک زجر می‌کشد، قرص‌های خوراکی کک را بعد از گزیدن می‌کشند اما ایمیداکلوپرید کک را روی موها قبل از گزیدن فلج می‌کند و از انتقال بزاق آلرژی‌زا جلوگیری می‌نماید.",
+    "brand_names_fa": [
+      "ادونتیج",
+      "پیپت قطره موضعی ادونتیج و ادوکیت (ایمیداکلوپرید ۱۰٪)"
+    ],
+    "brand_names_en": [
+      "Advantage / Advocate Spot-on Tubes (Imidacloprid 10%)"
+    ]
   },
   {
     "id": "imidapril",
@@ -58877,7 +62156,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌ها و بیمارستان‌های تخصصی دامپزشکی کشور.",
     "pharmacology_mechanism": "ایمیداپریل یک پیش‌دارو است که پس از جذب توسط استرازهای کبد به ایمیداپریلات هیدرولیز می‌شود؛ ایمیداپریلات آنزیم مبدل آنژیوتنسین (ACE) را به شدت مهار کرده و از تبدیل آنژیوتنسین I به آنژیوتنسین II (قوی‌ترین منقبض‌کننده عروق درون‌زاد) جلوگیری می‌کند و همچنین ترشح آلدوسترون را مهار می‌نماید؛ این امر باعث اتساع عروق، کاهش مقاومت عروقی محیطی و کاهش بار قلبی می‌گردد.",
-    "clinical_pearls": "بر خلاف انالاپریل که اگر کلیه حیوان نارسا باشد در بدن تجمع می‌یابد، ایمیداپریل مسیر فرار صفراوی دارد؛ اگر کلیه افت عملکرد پیدا کند، کبد و صفرا به طور خودکار جور دفع دارو را می‌کشند."
+    "clinical_pearls": "بر خلاف انالاپریل که اگر کلیه حیوان نارسا باشد در بدن تجمع می‌یابد، ایمیداپریل مسیر فرار صفراوی دارد؛ اگر کلیه افت عملکرد پیدا کند، کبد و صفرا به طور خودکار جور دفع دارو را می‌کشند.",
+    "brand_names_fa": [
+      "پریلاکتون",
+      "قرص‌های پریلاکتون ۱.۲۵، ۲.۵ و ۵ میلی‌گرم (ایمیداپریل)"
+    ],
+    "brand_names_en": [
+      "Prilactone Tablets (1.25 mg / 2.5 mg / 5 mg)"
+    ]
   },
   {
     "id": "imidocarb_dipropionate",
@@ -59033,7 +62319,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ایمیزول",
+      "ویال تزریقی ایمیزول ۱۲٪ (ایمیدوکارب ۱۲۰ mg/mL)"
+    ],
+    "brand_names_en": [
+      "Imizol / Imidocarb Dipropionate 12% Injection (120 mg/mL)"
+    ]
   },
   {
     "id": "imipenem_cilastatin",
@@ -59163,7 +62456,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های بیمارستانی با تاییدیه کمیته کنترل عفونت و نسخه رسمی.",
     "pharmacology_mechanism": "ایمی‌پنم با میل ترکیبی بسیار بالا به پروتئین‌های متصل شونده به پنی‌سیلین (PBPs به خصوص PBP-1b و PBP-2) در دیواره باکتری پیوند یافته و ساخت دیواره سلولی را متوقف می‌کند؛ سیلاستاتین با مهار اختصاصی آنزیم دهیدروپپتیداز-۱ در براش بوردر توبول‌های کلیه، از هیدرولیز کلیوی ایمی‌پنم جلوگیری کرده و غلظت بالای آنتی‌باکتریال را در ادرار تضمین می‌نماید.",
-    "clinical_pearls": "مروپنم و ایمی‌پنم الماس‌های گرانبهای داروسازی هستند؛ هرگز آنها را بدون تاییدیه آنتی‌بیوگرام مصرف نکنید تا این آخرین سلاح درمانی برای مهار مرگبارترین پریتونیت‌ها نسوزد."
+    "clinical_pearls": "مروپنم و ایمی‌پنم الماس‌های گرانبهای داروسازی هستند؛ هرگز آنها را بدون تاییدیه آنتی‌بیوگرام مصرف نکنید تا این آخرین سلاح درمانی برای مهار مرگبارترین پریتونیت‌ها نسوزد.",
+    "brand_names_fa": [
+      "پریماکسین",
+      "ویال ایمی‌پنم / سیلاستاتین ۵۰۰ میلی‌گرم (پریماکسین / تینام)"
+    ],
+    "brand_names_en": [
+      "Primaxin / Tienam / Imipenem + Cilastatin 500 mg"
+    ]
   },
   {
     "id": "imipramine",
@@ -59301,7 +62601,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های شهری کشور با نسخه در دسترس است.",
     "pharmacology_mechanism": "ایمی‌پرامین مهارکننده غیرانتخابی بازجذب سروتونین و نوراپی‌نفرین در ترمینال‌های پیش‌سیناپسی کورتکس و سیستم لیمبیک است؛ افزایش این مونوآمین‌ها خواب REM را سرکوب کرده و مانع از ورود ناگهانی به فاز آتونی عضلانی کاتاپلکسی می‌شود؛ همچنین با اثرات آنتی‌موسکارینی و تحریک آلفا-۱ خروجی مثانه را منقبض و انزال اسب را فعال می‌کند.",
-    "clinical_pearls": "در سگ‌های دوبرمن مبتلا به نارکولپسی، حیوان هنگام هیجان بازی ناگهان شبیه عروسک خیمه‌شب‌بازی شل شده و روی زمین می‌افتد؛ ایمی‌پرامین با مهار خواب متناقض (REM) به این سگ‌ها اجازه می‌دهد بدون کلاپس بدوند و بازی کنند."
+    "clinical_pearls": "در سگ‌های دوبرمن مبتلا به نارکولپسی، حیوان هنگام هیجان بازی ناگهان شبیه عروسک خیمه‌شب‌بازی شل شده و روی زمین می‌افتد؛ ایمی‌پرامین با مهار خواب متناقض (REM) به این سگ‌ها اجازه می‌دهد بدون کلاپس بدوند و بازی کنند.",
+    "brand_names_fa": [
+      "تفرانیل",
+      "قرص ایمی‌پرامین ۱۰، ۲۵ و ۵۰ میلی‌گرم (تفرانیل)"
+    ],
+    "brand_names_en": [
+      "Tofranil / Imipramine Tablets (10 mg / 25 mg / 50 mg)"
+    ]
   },
   {
     "id": "intravenous_immune_globulin",
@@ -59426,7 +62733,16 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در دسترس از طریق داروخانه‌های هلال احمر و بیمارستان‌های تخصصی با نسخه هماتولوژیست.",
     "pharmacology_mechanism": "ایمونوگلوبولین وریدی انسانی از طریق چندین مکانیسم همزمان عمل می‌کند: ۱) اشباع رقابتی و بلوک فیزیکی گیرنده‌های Fc-gamma در سطح ماکروفاژهای سیستم رتیکولوآندوتلیال طحال و کبد، مانع از بلعیده شدن گلبول‌های قرمز و پلاکت‌های خودی می‌شود؛ ۲) خنثی‌سازی فاکتورهای فعال کمپلمان (C3b)؛ ۳) پاک‌سازی سیتوکین‌های پیش‌التهابی و ارائه سیگنال‌های مهاری به لنفوسیت‌های B.",
-    "clinical_pearls": "در سگی که با هماتوکریت ۸٪ و ادرار قرمز تیره و پلاکت صفر در حال مرگ است و به دوزهای مگا پردنیزولون و آزاتیوپرین پاسخی نداده، انفوزیون یک ویال IVIG به مانند یک سد محکم طحال را فلج کرده و تخریب گلبول‌ها را تا زمان اثربخشی داروها متوقف می‌سازد."
+    "clinical_pearls": "در سگی که با هماتوکریت ۸٪ و ادرار قرمز تیره و پلاکت صفر در حال مرگ است و به دوزهای مگا پردنیزولون و آزاتیوپرین پاسخی نداده، انفوزیون یک ویال IVIG به مانند یک سد محکم طحال را فلج کرده و تخریب گلبول‌ها را تا زمان اثربخشی داروها متوقف می‌سازد.",
+    "brand_names_fa": [
+      "IVIG",
+      "گامونکس",
+      "اکتاگام",
+      "ویال ایمونوگلوبولین وریدی انسانی ۵ گرم و ۱۰ گرم (گامونکس / اکتاگام / آی‌وی‌آی‌جی)"
+    ],
+    "brand_names_en": [
+      "Gamunex-C / Octagam / IVIG 5% and 10% Infusion (5 g / 10 g)"
+    ]
   },
   {
     "id": "interferon_alfa",
@@ -59548,7 +62864,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های تخصصی بیمارستانی و انکولوژی کشور موجود است.",
     "pharmacology_mechanism": "اینترفرون آلفا با اتصال به گیرنده‌های اختصاصی IFNAR در سطح غشای سلول‌های میزبان، مسیر سیگنال‌دهی JAK-STAT را فعال کرده و بیش از ۳۰۰ ژن تحریک‌شونده با اینترفرون (ISGs) از جمله ۲-۵-الیگوآدنیلات سنتتاز و پروتئین کیناز R (PKR) را بیان می‌کند که این آنزیم‌ها رونویسی و ترجمه RNA ویروس‌ها را بلوک کرده و فعالیت فاگوسیتیک ماکروفاژها و سمیت سلولی لنفوسیت‌های NK را به شدت بالا می‌برند.",
-    "clinical_pearls": "یک ویال ۳ میلیون واحدی اینترفرون آلفا می‌تواند برای بیش از ۱۰۰۰ روز درمان گربه رقیق‌سازی و در فریزر فریز شود؛ این راهکار دارویی بسیار ارزان و نجات‌دهنده برای گربه‌های پناهگاهی مبتلا به FeLV است."
+    "clinical_pearls": "یک ویال ۳ میلیون واحدی اینترفرون آلفا می‌تواند برای بیش از ۱۰۰۰ روز درمان گربه رقیق‌سازی و در فریزر فریز شود؛ این راهکار دارویی بسیار ارزان و نجات‌دهنده برای گربه‌های پناهگاهی مبتلا به FeLV است.",
+    "brand_names_fa": [
+      "نوترکیب انسانی - اینترون آ",
+      "ویال اینترفرون آلفا-۲بی نوترکیب ۳ میلیون و ۵ میلیون واحد (اینترون آ / پی‌دی‌فرون)"
+    ],
+    "brand_names_en": [
+      "Intron A / PD-Feron / Interferon Alfa-2b (3 MIU / 5 MIU)"
+    ]
   },
   {
     "id": "interferon_omega",
@@ -59669,7 +62992,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌ها و کلینیک‌های ارجاعی معتبر حیوانات خانگی کشور.",
     "pharmacology_mechanism": "اینترفرون امگا گربه‌ای با پیوند به گیرنده‌های اینترفرون تیپ ۱ سلول‌های اپی‌تلیال روده و سلول‌های ایمنی، مسیرهای آنزیمی ضدویروس درون‌سلولی را روشن کرده و سنتز پروتئین‌های کپسید و همانندسازی ژنوم DNA پاروویروس و رتروویروس‌ها را مسدود می‌سازد؛ همچنین بیان آنتی‌ژن‌های MHC کلاس ۱ را افزایش داده و سلول‌های کشنده سیتوتوکسیک را هدایت می‌نماید.",
-    "clinical_pearls": "توله‌سگی که با اسهال خونی متعفن، لکوپنی زیر ۵۰۰ و بی‌حالی کامل پاروویروسی بستری می‌شود، با تزریق دوز اول ویرباژن امگا ظرف ۲۴ ساعت روند تخریب پرزهای روده متوقف شده و بافت روده شروع به بازسازی می‌کند."
+    "clinical_pearls": "توله‌سگی که با اسهال خونی متعفن، لکوپنی زیر ۵۰۰ و بی‌حالی کامل پاروویروسی بستری می‌شود، با تزریق دوز اول ویرباژن امگا ظرف ۲۴ ساعت روند تخریب پرزهای روده متوقف شده و بافت روده شروع به بازسازی می‌کند.",
+    "brand_names_fa": [
+      "ویرباژن امگا",
+      "ویال ویرباژن امگا ۱۰ میلیون واحدی (اینترفرون امگا گربه)"
+    ],
+    "brand_names_en": [
+      "Virbagen Omega 10 MU Solution for Injection (rFeIFN-omega)"
+    ]
   },
   {
     "id": "ipratropium",
@@ -59812,7 +63142,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های کشور به صورت عمومی موجود است.",
     "pharmacology_mechanism": "ایپراتروپیوم بروماید با مهار رقابتی گیرنده‌های کولینرژیک موسکارینی تیپ M3 در سطح سلول‌های عضلات صاف برونش‌ها، از اتصال استیل‌کولین آزاد شده از پایانه‌های عصب واگ جلوگیری کرده و سنتز cGMP را مهار می‌کند؛ نتیجه این مهار، اتساع سریع و کامل عضلات اسپاستیک برونش‌ها و کاهش ترشحات موکوسی است.",
-    "clinical_pearls": "اگر گربه‌ای مبتلا به آسم همزمان دچار کاردیومیوپاتی اتساعی یا هیپرتروفیک است و با سالبوتامول ضربان قلبش به بالای ۲۲۰ می‌رسد، فوراً سالبوتامول را قطع کنید و آتروونت (ایپراتروپیوم) را جایگزین نمایید تا بدون حتی یک ضربه تپش قلب، ریه گربه باز شود."
+    "clinical_pearls": "اگر گربه‌ای مبتلا به آسم همزمان دچار کاردیومیوپاتی اتساعی یا هیپرتروفیک است و با سالبوتامول ضربان قلبش به بالای ۲۲۰ می‌رسد، فوراً سالبوتامول را قطع کنید و آتروونت (ایپراتروپیوم) را جایگزین نمایید تا بدون حتی یک ضربه تپش قلب، ریه گربه باز شود.",
+    "brand_names_fa": [
+      "اسپری استنشاقی آتروونت",
+      "اسپری استنشاقی آتروونت ۲۰ میکروگرم (ایپراتروپیوم بروماید)"
+    ],
+    "brand_names_en": [
+      "Atrovent Inhaler (20 mcg per actuation) / Nebulizer Solution 0.25 mg/mL"
+    ]
   },
   {
     "id": "irbesartan",
@@ -59941,7 +63278,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های سراسر ایران به صورت گسترده در دسترس است.",
     "pharmacology_mechanism": "ایربسارتان یک آنتاگونیست غیررقابتی و فوق‌العاده انتخابی گیرنده‌های آنژیوتنسین تیپ ۱ (AT1) است؛ با مهار این گیرنده‌ها، اثرات مخرب آنژیوتنسین II شامل انقباض شدید عروقی، سنتز آلدوسترون، بازجذب سدیم، پرفشاری داخل گلومرولی و فیبروز بافتی را متوقف ساخته و همزمان فعالیت محافظتی گیرنده AT2 (وازودیلاتاسیون و ضدتکثیر) را دست‌نخورده باقی می‌گذارد.",
-    "clinical_pearls": "تلمیسارتان داروی بسیار محبوبی در طب گربه است اما قیمت بالایی دارد و شربت آن همیشه موجود نیست؛ ایربسارتان با کپسول‌بندی دقیق داروخانه، همان اثربخشی درخشان در کاهش پروتئینوری و حفظ بافت کلیه را با هزینه‌ای بسیار کمتر برای صاحب گربه فراهم می‌کند."
+    "clinical_pearls": "تلمیسارتان داروی بسیار محبوبی در طب گربه است اما قیمت بالایی دارد و شربت آن همیشه موجود نیست؛ ایربسارتان با کپسول‌بندی دقیق داروخانه، همان اثربخشی درخشان در کاهش پروتئینوری و حفظ بافت کلیه را با هزینه‌ای بسیار کمتر برای صاحب گربه فراهم می‌کند.",
+    "brand_names_fa": [
+      "آواپرو",
+      "قرص ایربسارتان ۷۵، ۱۵۰ و ۳۰۰ میلی‌گرم (آواپرو / کوآواپرو)"
+    ],
+    "brand_names_en": [
+      "Avapro / Irbesartan Tablets (75 mg / 150 mg / 300 mg)"
+    ]
   },
   {
     "id": "iron_dextran",
@@ -60076,7 +63420,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های دامی کشور با فراوانی بسیار بالا و قیمت ارزان موجود است.",
     "pharmacology_mechanism": "آهن دکستران یک کمپلکس کلوئیدی از هیدروکسید فریک متصل به پلیمرهای دکستران است؛ پس از تزریق عضلانی، این ماکرومولکول‌ها توسط سیستم لنفاوی موضعی جذب شده و به سلول‌های سیستم رتیکولوآندوتلیال کبد و طحال تحویل داده می‌شوند؛ در آنجا آهن از دکستران جدا شده و به ترانسفرین متصل می‌گردد تا مستقیماً به مغز استخوان تحویل شود و مازاد آن به شکل فریتین ذخیره گردد.",
-    "clinical_pearls": "برای گربه‌ای که به علت نارسایی کلیه داربپوئتین می‌گیرد و با قطره خوراکی آهن مدام استفراغ می‌کند، تزریق یک دوز عضلانی ۰.۵ سی‌سی آهن دکستران دامی در ران، مشکل تأمین آهن مغز استخوان را برای یک ماه کامل حل می‌کند."
+    "clinical_pearls": "برای گربه‌ای که به علت نارسایی کلیه داربپوئتین می‌گیرد و با قطره خوراکی آهن مدام استفراغ می‌کند، تزریق یک دوز عضلانی ۰.۵ سی‌سی آهن دکستران دامی در ران، مشکل تأمین آهن مغز استخوان را برای یک ماه کامل حل می‌کند.",
+    "brand_names_fa": [
+      "فروگان",
+      "دکستروفر",
+      "ویال تزریقی آهن دکستران ۱۰٪ دامی (فروگان / دکستروفر / هموفر)"
+    ],
+    "brand_names_en": [
+      "Iron Dextran 10% / 20% Injection (100 mg/mL / 200 mg/mL)"
+    ]
   },
   {
     "id": "isradipine",
@@ -60199,7 +63551,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در دسترس در داروخانه‌های تخصصی قلب و تک‌نسخه‌ای کشور.",
     "pharmacology_mechanism": "ایسرادیپین با اتصال اختصاصی به زیرواحد آلفا-۱ کانال‌های کلسیمی ولتاژی نوع L در غشای سلول‌های عضلانی صاف عروق شریانی، از ورود یون‌های کلسیم در زمان دپلاریزاسیون جلوگیری کرده و مقاومت عروقی محیطی را کاهش می‌دهد بدون آنکه گره‌های سینوسی و دهلیزی-بطنی قلب را مهار کند.",
-    "clinical_pearls": "گربه‌های مسنی که ناگهان صاحبشان متوجه می‌شود به در و دیوار می‌خورند و مردمک‌هایشان گشاد و قرمز شده، دچار پرفشاری خون وحشتناک هستند؛ ایسرادیپین فشار را مهار کرده و از کوری همیشگی و سکته مغزی پیشگیری می‌نماید."
+    "clinical_pearls": "گربه‌های مسنی که ناگهان صاحبشان متوجه می‌شود به در و دیوار می‌خورند و مردمک‌هایشان گشاد و قرمز شده، دچار پرفشاری خون وحشتناک هستند؛ ایسرادیپین فشار را مهار کرده و از کوری همیشگی و سکته مغزی پیشگیری می‌نماید.",
+    "brand_names_fa": [
+      "دایناسیرک",
+      "کپسول ایسرادیپین ۲.۵ و ۵ میلی‌گرم (دایناسیرک)"
+    ],
+    "brand_names_en": [
+      "DynaCirc / Isradipine Capsules (2.5 mg / 5 mg)"
+    ]
   },
   {
     "id": "isoxsuprine",
@@ -60310,7 +63669,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های انسانی کشور موجود است.",
     "pharmacology_mechanism": "ایزوکسوپرین آگونیست گیرنده‌های بتا-۲ آدرنرژیک در عضلات صاف عروقی است؛ با افزایش غلظت cAMP درون سلولی، اتساع شریانچه‌های عضلات اسکلتی و شریان‌های انتهایی سم را القا کرده و مقاومت عروقی را کاهش می‌دهد؛ همچنین با مهار فسفودی‌استراز چسبندگی پلاکت‌ها را مهار می‌سازد.",
-    "clinical_pearls": "ایزوکسوپرین داروی جادویی به تنهایی نیست؛ برای اسبی که از درد پاشنه سم رنج می‌برد، همزمان با ایزوکسوپرین باید سم‌تراش ماهر زاویه سم را اصلاح کرده و نعل تخم‌مرغی (Egg-bar shoe) بزند تا فشار از روی استخوان ناویکولار برداشته شود."
+    "clinical_pearls": "ایزوکسوپرین داروی جادویی به تنهایی نیست؛ برای اسبی که از درد پاشنه سم رنج می‌برد، همزمان با ایزوکسوپرین باید سم‌تراش ماهر زاویه سم را اصلاح کرده و نعل تخم‌مرغی (Egg-bar shoe) بزند تا فشار از روی استخوان ناویکولار برداشته شود.",
+    "brand_names_fa": [
+      "دوواپلان",
+      "قرص ایزوکسوپرین ۱۰ و ۲۰ میلی‌گرم (دوواپلان)"
+    ],
+    "brand_names_en": [
+      "Duvadilan / Isoxsuprine Tablets (10 mg / 20 mg)"
+    ]
   },
   {
     "id": "kaolin_pectin",
@@ -60483,7 +63849,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "کائوپکتات",
+      "سوسپانسیون کائولین پکتین دامی (کائوپکتات دامی / نصر / رازک)"
+    ],
+    "brand_names_en": [
+      "Kaolin Pectin Oral Suspension (Kaopectate Veterinary)"
+    ]
   },
   {
     "id": "ketoconazole",
@@ -60610,7 +63983,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های کشور به صورت عمومی موجود است.",
     "pharmacology_mechanism": "کتوکونازول با مهار آنزیم سیتوکروم P450 14-alpha-demethylase در قارچ‌ها، سنتز ارگوسترول غشای سلولی را مسدود کرده و غشای قارچ را سوراخ و متلاشی می‌سازد؛ در بافت فوق‌کلیه، با مهار آنزیم‌های سیتوکرومی P450 کلیدی (۱۱-بتا هیدروکسیلاز و ۱۷-آلفا لیاز) تبدیل پیش‌سازها به کورتیزول را مهار می‌نماید.",
-    "clinical_pearls": "برای سگ ژرمن شپردهای دچار فیستول پری‌آنال یا درماتیت آتوپیک شدید که هزینه ماهانه سیکلوسپورین برای صاحبشان کمرشکن است، ترکیب دوز پایین کتوکونازول با یک‌سوم دوز سیکلوسپورین، درمان را برای صاحب سگ کاملاً مقدور و پایدار می‌سازد."
+    "clinical_pearls": "برای سگ ژرمن شپردهای دچار فیستول پری‌آنال یا درماتیت آتوپیک شدید که هزینه ماهانه سیکلوسپورین برای صاحبشان کمرشکن است، ترکیب دوز پایین کتوکونازول با یک‌سوم دوز سیکلوسپورین، درمان را برای صاحب سگ کاملاً مقدور و پایدار می‌سازد.",
+    "brand_names_fa": [
+      "نیزورال",
+      "قرص کتوکونازول ۲۰۰ میلی‌گرم / شامپو ۲٪ (نیزورال)"
+    ],
+    "brand_names_en": [
+      "Nizoral / Ketoconazole Tablets 200 mg & 2% Shampoo"
+    ]
   },
   {
     "id": "lincomycin",
@@ -60767,7 +64147,14 @@ const DRUGS_DATA = [
       "milk_fa": "داروی خط اول در درمان دیسانتری خوک‌ها (*Brachyspira hyodysenteriae*) و انتریت نکروتیک طیور گوشتی ناشی از *Clostridium perfringens*.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "لینکوسین",
+      "محلول تزریقی لینکومایسین دامی ۱۰٪ و ۳۰٪ / پودر لینکو-اسپکتین"
+    ],
+    "brand_names_en": [
+      "Lincomycin 10% & 30% Injection / Linco-Spectin Soluble Powder"
+    ]
   },
   {
     "id": "liothyronine",
@@ -60894,7 +64281,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در تمامی داروخانه‌های کشور به صورت عمومی با نسخه در دسترس است.",
     "pharmacology_mechanism": "لیوتیرونین (T3) فرم فعال بیولوژیک هورمون تیروئید است که با ورود مستقیم به هسته سلول‌ها و اتصال به گیرنده‌های هسته‌ای هورمون تیروئید (TR-alpha و TR-beta)، رونویسی ژن‌های مسئول پمپ Na+/K+ ATPase، آنزیم‌های زنجیره تنفسی میتوکندری و گیرنده‌های بتا-آدرنرژیک را فعال می‌کند؛ این فرآیند مصرف اکسیژن، تولید حرارت و نرخ متابولیسم پایه (BMR) را در تمام بافت‌های بدن بالا می‌برد.",
-    "clinical_pearls": "در تست سرکوب T3 گربه: در گربه سالم تجویز لیوتیرونین فیدبک منفی به هیپوفیز داده و T4 خون را بیش از ۵۰ درصد سرکوب می‌کند؛ اما در گربه مبتلا به هایپرتیروئیدیسم، توده‌های خودمختار تیروئید به فیدبک منفی پاسخی نداده و سطح T4 همچنان بالا باقی می‌ماند که این امر بیماری را صددرصد اثبات می‌نماید."
+    "clinical_pearls": "در تست سرکوب T3 گربه: در گربه سالم تجویز لیوتیرونین فیدبک منفی به هیپوفیز داده و T4 خون را بیش از ۵۰ درصد سرکوب می‌کند؛ اما در گربه مبتلا به هایپرتیروئیدیسم، توده‌های خودمختار تیروئید به فیدبک منفی پاسخی نداده و سطح T4 همچنان بالا باقی می‌ماند که این امر بیماری را صددرصد اثبات می‌نماید.",
+    "brand_names_fa": [
+      "هورمون تری‌یودوتیرونین سنتتیک T3 - سیتومل",
+      "قرص لیوتیرونین سدیم ۲۵ میکروگرم (سیتومل / ترتروکسین)"
+    ],
+    "brand_names_en": [
+      "Cytomel / Liothyronine Sodium Tablets 25 mcg"
+    ]
   },
   {
     "id": "l_theanine",
@@ -61027,7 +64421,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار مکمل‌های دامپزشکی و انسانی مجاز کشور.",
     "pharmacology_mechanism": "ال-تینین به عنوان آنالوگ ساختاری گلوتامات به گیرنده‌های گلوتامات در مغز متصل شده و بازجذب گلوتامات را تعدیل می‌کند؛ همچنین سطح GABA، سروتونین و دوپامین را در قشر مغز تعدیل کرده و امواج آلفای مغزی آرام‌بخش را افزایش می‌دهد.",
     "clinical_pearls": "برای اثر بهینه در فوبیای آتش‌بازی (چهارشنبه‌سوری)، تجویز باید از ۲ تا ۳ روز قبل آغاز شده و در روز موعود دوز تقویت‌کننده ۲ ساعت قبل داده شود.",
-    "quick_dosing": "سگ: 2–4 mg/kg | گربه: 25–50 mg به ازای هر گربه (یا 4 mg/kg)"
+    "quick_dosing": "سگ: 2–4 mg/kg | گربه: 25–50 mg به ازای هر گربه (یا 4 mg/kg)",
+    "brand_names_fa": [
+      "آنکسیوتین / تینین وت",
+      "کپسول ال-تینین انسانی ۱۰۰ و ۲۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Anxitane (Virbac) / L-Theanine Chews",
+      "L-Theanine 100 mg / 200 mg Capsules"
+    ]
   },
   {
     "id": "lanthanum_carbonate",
@@ -61152,7 +64554,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی انسانی در سراسر کشور.",
     "pharmacology_mechanism": "یون‌های لانتانوم در محیط اسیدی معده و خنثای روده با میل ترکیبی بسیار بالا به آنیون فسفات متصل شده و رسوب نامحلول فسفات لانتانوم تولید می‌کنند که از دیواره روده جذب نشده و دفع می‌گردد.",
     "clinical_pearls": "سطح فسفات و کلسیم سرم باید هر ۴ تا ۶ هفته پایش شود. هرگز نباید با معده خالی خورانده شود چرا که اثر اتصالی به فسفات نخواهد داشت.",
-    "quick_dosing": "سگ: 30–45 mg/kg/day (تقسیم شده در وعده‌های غذایی) | گربه: 30–50 mg/kg/day (معمولاً حدود 100–250 mg به ازای هر گربه تقسیم با غذا)"
+    "quick_dosing": "سگ: 30–45 mg/kg/day (تقسیم شده در وعده‌های غذایی) | گربه: 30–50 mg/kg/day (معمولاً حدود 100–250 mg به ازای هر گربه تقسیم با غذا)",
+    "brand_names_fa": [
+      "قرص لانتانوم کربنات ۵۰۰ و ۷۵۰ و ۱۰۰۰ میلی‌گرم (فوسرانول)"
+    ],
+    "brand_names_en": [
+      "Fosrenol (Lanthanum Carbonate) 500 / 750 / 1000 mg Chewable Tablets"
+    ]
   },
   {
     "id": "leucovorin_calcium",
@@ -61317,7 +64725,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در شبکه رسمی دارویی و بیمارستانی کشور.",
     "pharmacology_mechanism": "لوکوورین فرم مشتق 5-فرمیل تتراهیدروفولیک اسید است که نیاز به مداخله آنزیم دی‌هیدروفولات ردوکتاز (که توسط متوترکسات بلاک شده) ندارد و مستقیماً کوفاکتورهای ساخت پورین و پیریمیدین را به سلول‌های سالم بازمی‌گرداند.",
     "clinical_pearls": "تفاوت لوکوورین (اسید فولینیک) با اسید فولیک معمولی حیاتی است: اسید فولیک در حضور متوترکسات فعال نمی‌شود، فقط لوکوورین می‌تواند سلول‌ها را نجات دهد.",
-    "quick_dosing": "سگ: 3–5 mg/m² (یا 0.1–0.2 mg/kg) | گربه: 1–5 mg/cat/day | اسب: 0.2–0.5 mg/kg"
+    "quick_dosing": "سگ: 3–5 mg/m² (یا 0.1–0.2 mg/kg) | گربه: 1–5 mg/cat/day | اسب: 0.2–0.5 mg/kg",
+    "brand_names_fa": [
+      "اسید فولینیک",
+      "آمپول لوکوورین کلسیم ۳۰ میلی‌گرم / ۱۰ میلی‌لیتر و ۵۰ میلی‌گرم",
+      "قرص لوکوورین ۱۵ میلی‌گرم خوراکی"
+    ],
+    "brand_names_en": [
+      "Leucovorin Calcium 30 mg / 50 mg Injection",
+      "Leucovorin 15 mg Oral Tablets"
+    ]
   },
   {
     "id": "leuprolide_acetate",
@@ -61477,7 +64894,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی تخصصی و انکولوژی انسانی کشور.",
     "pharmacology_mechanism": "لوپرولاید با تحریک اولیه گیرنده‌های GnRH غده هیپوفیز قدامی، ابتدا ترشح LH/FSH را آزاد کرده اما با استمرار اتصال، گیرنده‌ها درون‌سازی (Internalization) شده و حساسیت‌زدایی رخ می‌دهد که به مهار ترشح استروئیدهای جنسی از آدرنال و گنادها می‌انجامد.",
     "clinical_pearls": "در فرت‌های دچار آلوپسی آدرنال، موها ابتدا از انتهای دم شروع به رشد مجدد می‌کنند و ظرف ۶۰ روز پوشش بدنی حیوان کامل می‌شود.",
-    "quick_dosing": "سگ: 0.1–0.2 mg/kg (دپو ماهانه) | گربه: 100–200 mcg/kg (فرم دپو ماهانه)"
+    "quick_dosing": "سگ: 0.1–0.2 mg/kg (دپو ماهانه) | گربه: 100–200 mcg/kg (فرم دپو ماهانه)",
+    "brand_names_fa": [
+      "میکروسفر لوپرولاید استات ۳.۷۵ میلی‌گرم (لوپرومر / میکرورلین)",
+      "آمپول دیفرلین (دسیلورلین / تریپتورلین) به عنوان هم‌خانواده GnRH"
+    ],
+    "brand_names_en": [
+      "Leuprorelin / Leuprolide Acetate 3.75 mg Depot Injection",
+      "Triptorelin / Diphereline 3.75 mg Depot"
+    ]
   },
   {
     "id": "linezolid",
@@ -61617,7 +65042,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در فهرست رسمی داروهای بیمارستانی کشور تحت پروتکل نظارتی.",
     "pharmacology_mechanism": "لینزولید با اتصال اختصاصی به زیرواحد 23S از ریبوزوم 50S باکتریایی، از تشکیل کمپلکس آغازین 70S فعال ریبوزومی ممانعت کرده و ساخت پروتئین را در همان گام ابتدایی متوقف می‌کند (باکتریواستاتیک بر استاف و انتروکوک؛ باکتریوسیدال بر استرپتوکوک).",
     "clinical_pearls": "لینزولید داروی نجات است؛ هرگز آن را به عنوان درمان تجربی (Empirical) قبل از دریافت نتیجه کشت و آنتی‌بیوگرام شروع نکنید.",
-    "quick_dosing": "سگ: 10–15 mg/kg | گربه: 10 mg/kg"
+    "quick_dosing": "سگ: 10–15 mg/kg | گربه: 10 mg/kg",
+    "brand_names_fa": [
+      "محلول استریل انفوزیون لینزولید ۶۰۰ میلی‌گرم در ۳۰۰ میلی‌لیتر (۲ میلی‌گرم/میلی‌لیتر)",
+      "قرص لینزولید ۶۰۰ میلی‌گرم خوراکی"
+    ],
+    "brand_names_en": [
+      "Linezolid 600 mg / 300 mL Infusion Bag (Zyvox)",
+      "Linezolid 600 mg Film-Coated Tablets"
+    ]
   },
   {
     "id": "lipid_emulsion_iv",
@@ -61764,7 +65197,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های بیمارستانی و انسانی کشور (داروی حیاتی ترالی کد).",
     "pharmacology_mechanism": "امولسیون چربی به عنوان یک سینک یا فاز گیرنده چربی داخل عروقی عمل کرده و مولکول‌های به شدت لیپوفیل سم را از گیرنده‌های بافت هدف (سلول‌های پورکنژ قلب و نورون‌های مغز) جدا کرده و به داخل گردش خون می‌کشد؛ همچنین بستری غنی از انرژی برای میتوکندری‌های میوکارد فراهم می‌سازد.",
     "clinical_pearls": "برای ارزیابی وضعیت، ۳ میلی‌لیتر خون داخل لوله میکروهماتوکریت سانتریفیوژ شود؛ اگر پلاسما شیری غلیظ بود، دوز بعدی تا رفع لیپمی به تعویق بیفتد.",
-    "quick_dosing": "سگ: 1.5–2 mL/kg (بولوس ظرف ۱۵ دقیقه) سپس 0.25–0.5 mL/kg/min به مدت ۳۰ تا ۶۰ دقیقه | گربه: 1.5 mL/kg (بولوس وریدی ظرف ۱۵ دقیقه) سپس 0.25 mL/kg/min به مدت ۳۰ تا ۶۰ دقیقه | اسب: 1.5 mL/kg بولوس وریدی سپس انفوزیون مداوم"
+    "quick_dosing": "سگ: 1.5–2 mL/kg (بولوس ظرف ۱۵ دقیقه) سپس 0.25–0.5 mL/kg/min به مدت ۳۰ تا ۶۰ دقیقه | گربه: 1.5 mL/kg (بولوس وریدی ظرف ۱۵ دقیقه) سپس 0.25 mL/kg/min به مدت ۳۰ تا ۶۰ دقیقه | اسب: 1.5 mL/kg بولوس وریدی سپس انفوزیون مداوم",
+    "brand_names_fa": [
+      "اینترالیپید",
+      "تزریق چربی",
+      "امولسیون چربی وریدی ۲۰٪ (اینترالیپید ۲۰٪ / لیپوفوندین ۲۰٪)"
+    ],
+    "brand_names_en": [
+      "Intralipid 20% / Lipofundin MCT/LCT 20% (100 mL, 250 mL, 500 mL)"
+    ]
   },
   {
     "id": "lisinopril",
@@ -61905,7 +65346,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور با دسترسی آسان.",
     "pharmacology_mechanism": "لیزینوپریل با مهار رقابتی آنزیم تبدیل‌کننده آنژیوتانسین (ACE)، مانع از تبدیل آنژیوتانسین I به آنژیوتانسین II (یک منقبض‌کننده عروقی قدرتمند و محرک ترشح آلدوسترون) می‌شود. این امر به اتساع شریانچه‌ها و وریدها، کاهش مقاومت عروق سیستمیک و کاهش فشار مویرگ‌های گلومرولی کلیه می‌انجامد.",
     "clinical_pearls": "اگر پس از آغاز لیزینوپریل کراتینین بیش از ۳۰ درصد بالا رفت یا بیمار بی‌حال شد، موقتاً دوز را نصف کرده یا وضعیت دهیدراتاسیون را اصلاح نمایید.",
-    "quick_dosing": "سگ: 0.25–0.5 mg/kg | گربه: 0.25–0.5 mg/kg (یا 1.25–2.5 mg به ازای هر گربه)"
+    "quick_dosing": "سگ: 0.25–0.5 mg/kg | گربه: 0.25–0.5 mg/kg (یا 1.25–2.5 mg به ازای هر گربه)",
+    "brand_names_fa": [
+      "قرص لیزینوپریل ۲.۵، ۵، ۱۰ و ۲۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Lisinopril 2.5 / 5 / 10 / 20 mg Tablets (Zestril)"
+    ]
   },
   {
     "id": "loratadine",
@@ -62039,7 +65486,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "داروی بدون نسخه (OTC) در تمام داروخانه‌های سراسر کشور.",
     "pharmacology_mechanism": "لوراتادین یک آنتاگونیست انتخابی و اختصاصی گیرنده‌های H1 محیطی هیستامین است. با جلوگیری از اتصال هیستامین به عروق و پایانه‌های عصبی حسی، اتساع عروق، نفوذپذیری مویرگی، ادم و احساس خارش را مهار می‌کند.",
     "clinical_pearls": "برای اثر محافظتی در تزریق واکسن‌های دارای ریسک آنافیلاکسی در سگ‌های کوچک (مانند لپتوسپیروز)، لوراتادین را ۱ ساعت قبل از تزریق واکسن تجویز کنید.",
-    "quick_dosing": "سگ: 0.25–0.5 mg/kg (یا دوز سرانگشتی: سگ‌های زیر ۱۵ کیلوگرم ۵ میلی‌گرم؛ بالای ۱۵ کیلوگرم ۱۰ میلی‌گرم) | گربه: 2.5–5 mg به ازای هر گربه"
+    "quick_dosing": "سگ: 0.25–0.5 mg/kg (یا دوز سرانگشتی: سگ‌های زیر ۱۵ کیلوگرم ۵ میلی‌گرم؛ بالای ۱۵ کیلوگرم ۱۰ میلی‌گرم) | گربه: 2.5–5 mg به ازای هر گربه",
+    "brand_names_fa": [
+      "قرص لوراتادین ۱۰ میلی‌گرم (کلاریتین / لوراتادین)",
+      "شربت لوراتادین ۵ میلی‌گرم در ۵ میلی‌لیتر (بدون زایلیتول)"
+    ],
+    "brand_names_en": [
+      "Loratadine 10 mg Tablets",
+      "Loratadine Syrup 5 mg / 5 mL"
+    ]
   },
   {
     "id": "lorazepam",
@@ -62188,7 +65643,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در لیست داروهای تحت کنترل روان‌پزشکی و بیمارستانی کشور.",
     "pharmacology_mechanism": "لورازپام به عنوان مدولاتور آلوستریک مثبت به گیرنده‌های GABA-A در قشر مخ و سیستم لیمبیک متصل می‌شود. با تسهیل ورود یون‌های کلر به داخل نورون‌ها، هایپرپلاریزاسیون غشا رخ داده و تحریک‌پذیری کانون‌های صرعی و تشنج بلاک می‌گردد.",
     "clinical_pearls": "در صورت دست نیافتن به رگ در سگ در حال تشنج، آمپول لورازپام را با سرنگ بدون سوزن در گونه و زیر لب بچکانید؛ جذب از طریق مخاط لثه کمتر از ۳ تا ۵ دقیقه طول می‌کشد.",
-    "quick_dosing": "سگ: 0.1–0.2 mg/kg (حداکثر 4 mg) | گربه: 0.05–0.1 mg/kg"
+    "quick_dosing": "سگ: 0.1–0.2 mg/kg (حداکثر 4 mg) | گربه: 0.05–0.1 mg/kg",
+    "brand_names_fa": [
+      "آمپول لورازپام ۲ میلی‌گرم در میلی‌لیتر (آتیوان)",
+      "قرص لورازپام ۱ و ۲ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Lorazepam 2 mg / mL Injection Ampoule (Ativan)",
+      "Lorazepam 1 mg / 2 mg Tablets"
+    ]
   },
   {
     "id": "losartan",
@@ -62320,7 +65783,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های سراسر کشور.",
     "pharmacology_mechanism": "لوزارتان با مسدود کردن اختصاصی گیرنده‌های AT1 آنژیوتانسین II در عضلات صاف عروقی، غدد فوق کلیوی و گلومرول‌های کلیه، مانع انقباض عروقی و ترشح آلدوسترون می‌شود. این امر منجر به افت مقاومت عروقی، اتساع شریانچه وابران گلومرول و کاهش دفع ادراری پروتئین می‌گردد.",
     "clinical_pearls": "برای ارزیابی کارایی در پروتئینوری، نسبت UPC باید یک ماه پس از شروع مصرف بررسی شود؛ کاهش حداقل ۵۰ درصدی UPC نشان‌دهنده موفقیت درمان است.",
-    "quick_dosing": "سگ: 0.5–1 mg/kg (تا حداکثر 2 mg/kg) | گربه: 0.5–1 mg/kg (معمولاً 2.5–5 mg به ازای هر گربه)"
+    "quick_dosing": "سگ: 0.5–1 mg/kg (تا حداکثر 2 mg/kg) | گربه: 0.5–1 mg/kg (معمولاً 2.5–5 mg به ازای هر گربه)",
+    "brand_names_fa": [
+      "قرص لوزارتان پتاسیم ۲۵ و ۵۰ میلی‌گرم (پوزارکس / لوزار)"
+    ],
+    "brand_names_en": [
+      "Losartan Potassium 25 mg / 50 mg Tablets (Cozaar)"
+    ]
   },
   {
     "id": "lotilaner",
@@ -62454,7 +65923,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در کلینیک‌ها و داروخانه‌های معتبر دامپزشکی کشور.",
     "pharmacology_mechanism": "لوتیلانر یک ایزومر خالص از دسته ایزوکسازولین‌ها است که کانال‌های کلریدی وابسته به GABA و گلوتامات (GluCl) را در سیناپس‌های عصبی-عضلانی بندپایان به صورت غیررقابتی مهار می‌کند. این امر موجب تحریک مداوم عصبی، فلج تشنجی و مرگ قطعی کک و کنه‌ها بدون آسیب به گیرنده‌های پستانداران می‌شود.",
     "clinical_pearls": "برای اطمینان از پیشگیری از انتقال بابزیوز و بیماری لایم، سرعت عمل کردلیو در کشتار کنه پیش از ۲۴ ساعت از چسبیدن آن، یک مزیت بالینی بی‌رقیب است.",
-    "quick_dosing": "سگ: 20–43 mg/kg | گربه: 6–24 mg/kg"
+    "quick_dosing": "سگ: 20–43 mg/kg | گربه: 6–24 mg/kg",
+    "brand_names_fa": [
+      "کردلیو",
+      "قرص کردلیو سگ (لوتیلانر ۵۶، ۱۱۲، ۲۲۵، ۴۵۰، ۹۰۰ میلی‌گرم)",
+      "قرص کردلیو گربه (لوتیلانر ۱۲ و ۴۸ میلی‌گرم)"
+    ],
+    "brand_names_en": [
+      "Credelio for Dogs (Lotilaner 56.25, 112.5, 225, 450, 900 mg)",
+      "Credelio for Cats (Lotilaner 12 mg, 48 mg)"
+    ]
   },
   {
     "id": "lufenuron",
@@ -62595,7 +66073,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی و کلینیک‌های حیوانات خانگی کشور.",
     "pharmacology_mechanism": "لوفنورون پلیمریزاسیون کیتین را مهار می‌کند. در کک‌های ماده پس از خون‌خواری، لوفنورون وارد تخم شده و مانع تشکیل ساختار اسکلت خارجی کیتینی لارو داخل تخم و عدم تشکیل دندان تخم‌شکن (Egg Tooth) می‌شود، بنابراین لارو هرگز متولد نمی‌گردد. در قارچ‌ها نیز سنتز کیتین دیواره مهار می‌شود.",
     "clinical_pearls": "به صاحب حیوان توضیح دهید که لوفنورون کک روی بدن را فوراً نمی‌کشد، بلکه مانع تکثیر و بقای نسل آن در فرش و مبلمان خانه می‌شود.",
-    "quick_dosing": "سگ: 10 mg/kg | گربه: 30 mg/kg (کنترل کک) یا 80–100 mg/kg (پروتکل کمکی درماتوفیتوزیس)"
+    "quick_dosing": "سگ: 10 mg/kg | گربه: 30 mg/kg (کنترل کک) یا 80–100 mg/kg (پروتکل کمکی درماتوفیتوزیس)",
+    "brand_names_fa": [
+      "پروگرام",
+      "قرص پروگرام سگ (لوفنورون ۱۱۵، ۲۳۰، ۴۱۰ میلی‌گرم)",
+      "سوسپانسیون پروگرام گربه (۱۳۳ میلی‌گرم و ۲۶۶ میلی‌گرم)"
+    ],
+    "brand_names_en": [
+      "Program Tablets for Dogs (Lufenuron)",
+      "Program Oral Suspension for Cats"
+    ]
   },
   {
     "id": "lysine",
@@ -62716,7 +66203,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام پت‌شاپ‌های کلینیکی و داروخانه‌های دامپزشکی کشور.",
     "pharmacology_mechanism": "ویروس هرپس گربه (FHV-1) برای همانندسازی پروتئین‌های کپسید و پوشش خود شدیداً به اسید آمینه آرژینین وابسته است. ال-لایزین با آرژینین بر سر ورود به سلول و گنجانده شدن در پروتئین‌های ویروسی رقابت می‌کند و به عنوان آنتاگونیست متابولیک آرژینین، سرعت تکثیر ویروس را به شدت کند می‌سازد.",
     "clinical_pearls": "تجویز ال-لایزین باید به محض مشاهده اولین علائم بلفارواسپاسم، ترشحات چرکی چشم و عطسه آغاز شود تا از بروز زخم‌های عمیق قرنیه جلوگیری کند.",
-    "quick_dosing": "گربه: بچه‌گربه: 250 mg / هر ۱۲ ساعت؛ گربه بالغ: 500 mg / هر ۱۲ ساعت"
+    "quick_dosing": "گربه: بچه‌گربه: 250 mg / هر ۱۲ ساعت؛ گربه بالغ: 500 mg / هر ۱۲ ساعت",
+    "brand_names_fa": [
+      "خمیر ال-لایزین گربه (انروپت / جیم کت / وتوکینول انیسیل-اف)",
+      "پودر خوراکی ال-لایزین دامی و انسانی"
+    ],
+    "brand_names_en": [
+      "Enisyl-F (Vetoquinol) / GimCat L-Lysine Paste",
+      "L-Lysine Monohydrochloride Pure Powder"
+    ]
   },
   {
     "id": "magnesium_hydroxide",
@@ -62899,7 +66394,16 @@ const DRUGS_DATA = [
       "milk_fa": "گوشت: ۰ روز، شیر: ۰ روز (ماده معدنی فیزیولوژیک بدون باقی‌مانده سمی).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "شیر منیزیا",
+      "سوسپانسیون منیزیم هیدروکسید ۸٪ (شیر منیزیا ۲۴۰ میلی‌لیتر)",
+      "پودر هیدروکسید منیزیم خالص دامی (مگنزیا وت)"
+    ],
+    "brand_names_en": [
+      "Magnesium Hydroxide 8% (Milk of Magnesia) Suspension",
+      "Magnesium Hydroxide Feed / Pharma Grade Powder"
+    ]
   },
   {
     "id": "magnesium_sulfate",
@@ -63076,7 +66580,16 @@ const DRUGS_DATA = [
       "milk_fa": "گوشت: ۰ روز، شیر: ۰ روز (الکترولیت ضروری فیزیولوژیک).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "تزریقی ۲۰٪ و ۵۰٪",
+      "آمپول منیزیم سولفات ۲۰٪ و ۵۰٪ (ویال‌های ۱۰ و ۵۰ میلی‌لیتری)",
+      "محلول تزریقی کلسیم بوروگلوکونات + منیزیم (کلسی‌مگنسین دامی)"
+    ],
+    "brand_names_en": [
+      "Magnesium Sulfate 20% / 50% Injection (Pastur / Darou Pakhsh)",
+      "Calcimagnesium Infusion Bottle 500 mL"
+    ]
   },
   {
     "id": "mannitol",
@@ -63234,7 +66747,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌ها و بیمارستان‌های سراسر کشور.",
     "pharmacology_mechanism": "مانیتول یک قند الکلی ۶ کربنه با وزن مولکولی ۱۸۲ دالتون است که از سد خونی-مغزی سالم عبور نمی‌کند. با افزایش اسمولالیته پلاسما، گرادیان اسمزی قدرتمندی ایجاد کرده و آب آزاد را از بافت پارانشیم مغز و مایع زلالیه چشم به داخل عروق می‌کشد. همچنین با کاهش ویسکوزیته خون، پرفیوژن مویرگی مغز را بهبود می‌بخشد.",
     "clinical_pearls": "همیشه قبل از تجویز مانیتول، وضعیت هیدراتاسیون و فشار خون را ارزیابی کنید. اگر بیمار شوک هیپوولمیک دارد، ابتدا شوک را با سرم ایزوتونیک درمان کنید، در غیر این صورت مانیتول بیمار را دچار نارسایی حاد کلیه و مرگ خواهد کرد.",
-    "quick_dosing": "سگ: 0.5–1 g/kg (معادل 2.5–5 mL/kg از محلول ۲۰٪) | گربه: 0.5 g/kg (معادل 2.5 mL/kg از فرمولاسیون ۲۰٪) | اسب: 0.25–1 g/kg (1.25–5 mL/kg)"
+    "quick_dosing": "سگ: 0.5–1 g/kg (معادل 2.5–5 mL/kg از محلول ۲۰٪) | گربه: 0.5 g/kg (معادل 2.5 mL/kg از فرمولاسیون ۲۰٪) | اسب: 0.25–1 g/kg (1.25–5 mL/kg)",
+    "brand_names_fa": [
+      "سرم مانیتول ۲۰٪ تزریقی (ویال و بطری‌های ۲۵۰ و ۵۰۰ میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "Mannitol 20% Infusion Bottle (250 / 500 mL)"
+    ]
   },
   {
     "id": "mavacoxib",
@@ -63342,7 +66861,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌ها و بیمارستان‌های تخصصی دام‌های کوچک کشور.",
     "pharmacology_mechanism": "ماواکوکسیب با مهار اختصاصی و انتخابی آنزیم سیکلواکسیژناز-۲ (COX-2)، سنتز پروستاگلاندین‌های پیش‌برنده درد و التهاب (PGE2) را در مفاصل مهار می‌کند؛ عدم مهار COX-1 محافظت نسبی مخاط معده و خون‌رسانی کلیه را حفظ می‌نماید.",
     "clinical_pearls": "به دلیل نیمه‌عمر طولانی ماواکوکسیب، اگر سگی دچار عارضه جانبی گوارشی شد، دارو تا هفته‌ها در بدن باقی می‌ماند؛ لذا درمان حمایتی طولانی‌مدت با امپرازول و سوکرالفیت باید بلافاصله آغاز گردد.",
-    "quick_dosing": "سگ: 2 mg/kg"
+    "quick_dosing": "سگ: 2 mg/kg",
+    "brand_names_fa": [
+      "تروکوکسیل",
+      "قرص تروکوکسیل (ماواکوکسیب ۲۰، ۳۰، ۷۵ و ۹۵ میلی‌گرم)"
+    ],
+    "brand_names_en": [
+      "Trocoxil Chewable Tablets for Dogs (Pfizer / Zoetis)"
+    ]
   },
   {
     "id": "mechlorethamine",
@@ -63469,7 +66995,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در مراکز منتخب شیمی‌درمانی و انکولوژی بیمارستانی کشور.",
     "pharmacology_mechanism": "مکلورتامین به سرعت در محیط فیزیولوژیک تبدیل به یون اتیلن ایمونیوم فعال می‌شود و با اتصال کووالانسی به موقعیت N7 بازهای گوانین در DNA، پیوندهای متقاطع بین رشته‌ای (Interstrand Cross-linking) ایجاد کرده و از همانندسازی و رونویسی سلول‌های توموری جلوگیری می‌کند.",
     "clinical_pearls": "قبل از لمس یا کشیدن دارو، حتماً سلامت رگ را با سرم ایزوتونیک بیازمایید؛ حتی ذره‌ای شک به نشت وریدی باید مانع تزریق مکلورتامین شود.",
-    "quick_dosing": "سگ: 5 mg/m² (یا 0.1–0.2 mg/kg) | گربه: 2.5–5 mg/m²"
+    "quick_dosing": "سگ: 5 mg/m² (یا 0.1–0.2 mg/kg) | گربه: 2.5–5 mg/m²",
+    "brand_names_fa": [
+      "موستین",
+      "نیتروژن موستارد",
+      "پودر استریل مکلورتامین هیدروکلراید ۱۰ میلی‌گرم (موستارژن)"
+    ],
+    "brand_names_en": [
+      "Mustargen (Mechlorethamine HCl) 10 mg Powder for Injection"
+    ]
   },
   {
     "id": "meclizine",
@@ -63604,7 +67138,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور به عنوان داروی OTC.",
     "pharmacology_mechanism": "مکلیزین آنتاگونیست گیرنده‌های H1 هیستامینی با ویژگی‌های برجسته آنتی‌کولینرژیک و ضداسپاسم مرکزی است. با مهار انتقال ایمپالس‌های عصبی از لابیرنت گوش داخلی به هسته‌های وستیبولار ساقه مغز و مسدود کردن تحریک ناحیه ماشه‌چکان کمورسپتور (CRTZ)، از تهوع، گیجی و عدم تعادل جلوگیری می‌نماید.",
     "clinical_pearls": "در سگی که ناگهان با سرکج شدید، نیستاگموس چشمی و ناتوانی در ایستادن مراجعه می‌کند، پس از رد تومورهای مغزی، درمان حمایتی مکلیزین روزانه می‌تواند بیمار را طی چند روز سرپا کند.",
-    "quick_dosing": "سگ: 12.5–25 mg به ازای هر سگ (یا 0.5–1 mg/kg) | گربه: 6.25–12.5 mg به ازای هر گربه (حدود یک‌چهارم تا نصف قرص ۲۵ میلی‌گرم)"
+    "quick_dosing": "سگ: 12.5–25 mg به ازای هر سگ (یا 0.5–1 mg/kg) | گربه: 6.25–12.5 mg به ازای هر گربه (حدود یک‌چهارم تا نصف قرص ۲۵ میلی‌گرم)",
+    "brand_names_fa": [
+      "قرص مکلیزین هیدروکلراید ۲۵ میلی‌گرم (آنتی‌ورت)"
+    ],
+    "brand_names_en": [
+      "Meclizine HCl 25 mg Tablets (Antivert)"
+    ]
   },
   {
     "id": "medroxyprogesterone",
@@ -63741,7 +67281,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های انسانی سراسر کشور.",
     "pharmacology_mechanism": "مدروکسی پروژسترون استات با فیدبک منفی بر هیپوتالاموس و هیپوفیز، ترشح پالسی هورمون GnRH و در نتیجه ترشح LH و FSH را سرکوب کرده و مانع بلوغ فولیکول و تخمک‌گذاری می‌شود؛ همچنین محیط رحم را برای ترشحات غددی مهیا می‌سازد.",
     "clinical_pearls": "هرگز از مدروکسی پروژسترون در حیوان خانگی به عنوان راه‌حل آسان استفاده نکنید؛ همیشه عقیم‌سازی استاندارد جراحی به عنوان گزینه ایمن و سلامت‌بخش توصیه شود.",
-    "quick_dosing": "سگ: 2–3 mg/kg (فرم دپو) هر ۴ تا ۶ ماه، یا 5 mg خوراکی روزانه به مدت ۵ روز سپس 2.5 mg روزانه به مدت ۲ تا ۳ هفته | گربه: 2.5–5 mg به ازای هر گربه (خوراکی) یا 10–20 mg (تزریقی دپو)"
+    "quick_dosing": "سگ: 2–3 mg/kg (فرم دپو) هر ۴ تا ۶ ماه، یا 5 mg خوراکی روزانه به مدت ۵ روز سپس 2.5 mg روزانه به مدت ۲ تا ۳ هفته | گربه: 2.5–5 mg به ازای هر گربه (خوراکی) یا 10–20 mg (تزریقی دپو)",
+    "brand_names_fa": [
+      "آمپول دپوپروورا ۱۵۰ میلی‌گرم در میلی‌لیتر (مدروکسی پروژسترون دپو)",
+      "قرص مدروکسی پروژسترون ۵ میلی‌گرم خوراکی"
+    ],
+    "brand_names_en": [
+      "Depo-Provera (Medroxyprogesterone Acetate) 150 mg / mL Suspension",
+      "Medroxyprogesterone 5 mg Tablets"
+    ]
   },
   {
     "id": "megestrol_acetate",
@@ -63894,7 +67442,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در شبکه رسمی دارویی کشور.",
     "pharmacology_mechanism": "مژسترول استات با اثر بر محور هیپوتالاموس-هیپوفیز ترشح گنادوتروپین‌ها را سرکوب می‌کند؛ همچنین دارای اثرات آنتی‌اوستروژنیک، آنتی‌اندروژنیک و گلوکوکورتیکوئیدی ضعیف بر گیرنده‌های بافتی است.",
     "clinical_pearls": "اگر پس از تجویز مژسترول در گربه متوجه افزایش شدید حجم آب ظرف ادرار شدید، فوراً قند خون را چک کنید؛ قطع زودهنگام دارو در فاز اولیه می‌تواند دیابت را برگشت‌پذیر کند.",
-    "quick_dosing": "سگ: 2 mg/kg روزانه به مدت ۸ روز | گربه: 5 mg به ازای هر گربه روزانه به مدت ۳ روز سپس 2.5–5 mg یکبار در هفته به مدت ۱۰ هفته"
+    "quick_dosing": "سگ: 2 mg/kg روزانه به مدت ۸ روز | گربه: 5 mg به ازای هر گربه روزانه به مدت ۳ روز سپس 2.5–5 mg یکبار در هفته به مدت ۱۰ هفته",
+    "brand_names_fa": [
+      "اووارید",
+      "قرص مژسترول استات ۴۰ و ۱۶۰ میلی‌گرم (مگاس)",
+      "قرص اووارید دامپزشکی ۵ و ۲۰ میلی‌گرم (وارداتی)"
+    ],
+    "brand_names_en": [
+      "Megestrol Acetate 40 mg / 160 mg Tablets (Megace)",
+      "Ovarid (Megestrol Acetate) 5 mg / 20 mg Vet Tablets"
+    ]
   },
   {
     "id": "meglumine_antimoniate",
@@ -63999,7 +67556,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در شبکه بهداشت و داروخانه‌های تخصصی مناطق اندمیک لیشمانیوز کشور.",
     "pharmacology_mechanism": "آنتیموان پنج‌ظرفیتی در داخل فاگولیزوزوم ماکروفاژها توسط انگل به شکل سه‌ظرفیتی فعال احیا می‌شود. این ترکیب آنزیم‌های مسیر گلیکولیز و اکسیداسیون اسیدهای چرب انگل لیشمانیا را مهار کرده و سنتز ATP را متوقف و ساختار انگل را متلاشی می‌سازد.",
     "clinical_pearls": "لیشمانیوز سگ درمان ریشه‌کن‌کننده قطعی ندارد؛ گلوکانتیم بار انگلی را به صفر نزدیک می‌کند و علائم را برطرف می‌سازد اما انگل در بافت‌ها باقی می‌ماند و ادامه آلوپورینول طولانی‌مدت برای جلوگیری از عود بیماری اجباری است.",
-    "quick_dosing": "سگ: 100 mg/kg (معادل حدود 0.33 mL/kg از محلول آماده گلوکانتیم)"
+    "quick_dosing": "سگ: 100 mg/kg (معادل حدود 0.33 mL/kg از محلول آماده گلوکانتیم)",
+    "brand_names_fa": [
+      "گلوکانتیم",
+      "آمپول گلوکانتیم ۱.۵ گرم در ۵ میلی‌لیتر (مگلومین آنتیمونیات)"
+    ],
+    "brand_names_en": [
+      "Glucantime (Meglumine Antimoniate) 1.5 g / 5 mL Ampoules"
+    ]
   },
   {
     "id": "melarsomine",
@@ -64115,7 +67679,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌های مرجع و مراکز تخصصی دامپزشکی کشور.",
     "pharmacology_mechanism": "ملارسومین یک ترکیب آرسنیکال آلی است که با واکنش و اتصال به گروه‌های سولفیدریل (-SH) در آنزیم‌های حیاتی نماتود Dirofilaria immitis، متابولیسم انرژی انگل را متوقف کرده و مرگ اختصاصی کرم‌های فیلاریای بالغ نر و ماده را رقم می‌زند.",
     "clinical_pearls": "تزریق ملارسومین نیمی از درمان است؛ نیم دیگر موفقیت، ممانعت ۱۰۰ درصدی از دویدن و بازی کردن سگ تا یک ماه پس از تزریق است تا لاشه کرم‌ها بدون انسداد شریان‌های اصلی ریه جذب شوند.",
-    "quick_dosing": "سگ: 2.5 mg/kg"
+    "quick_dosing": "سگ: 2.5 mg/kg",
+    "brand_names_fa": [
+      "ایمیتسید",
+      "پودر استریل ایمیتسید / دیبانسیل (ملارسومین ۵۰ میلی‌گرم با حلال)"
+    ],
+    "brand_names_en": [
+      "Immiticide / Diroban (Melarsomine Dihydrochloride) 50 mg Lyophilized Vial"
+    ]
   },
   {
     "id": "melatonin",
@@ -64249,7 +67820,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت OTC.",
     "pharmacology_mechanism": "ملاتونین گیرنده‌های MT1 و MT2 را در مغز فعال می‌کند که در القای فاز خواب و تنظیم ساعت بیولوژیکی نقش دارند. در پوست و غدد مو، ملاتونین فعالیت آنزیم آروماتاز را تعدیل کرده و غلظت گیرنده‌های استروژن و هورمون‌های جنسی موضعی را مهار می‌کند و بدین ترتیب فولیکول‌های تلوژن را مجدداً به فاز فعال رشد (آناژن) وارد می‌سازد.",
     "clinical_pearls": "به صاحب سگی که به دلیل آلوپسی X ملاتونین دریافت می‌کند یادآوری کنید که فولیکول‌های مو بسیار تنبل هستند؛ حداقل باید ۲ ماه مصرف پیوسته صورت گیرد تا جوانه‌های نرم موهای جدید مشاهده شود.",
-    "quick_dosing": "سگ: سگ‌های زیر ۵ کیلوگرم: 1 mg؛ سگ‌های ۵ تا ۱۵ کیلوگرم: 3 mg؛ سگ‌های بالای ۱۵ کیلوگرم: 6 mg | گربه: 1.5–3 mg به ازای هر گربه"
+    "quick_dosing": "سگ: سگ‌های زیر ۵ کیلوگرم: 1 mg؛ سگ‌های ۵ تا ۱۵ کیلوگرم: 3 mg؛ سگ‌های بالای ۱۵ کیلوگرم: 6 mg | گربه: 1.5–3 mg به ازای هر گربه",
+    "brand_names_fa": [
+      "قرص ملاتونین خالص ۳ و ۵ میلی‌گرم (ساده بدون زایلیتول)"
+    ],
+    "brand_names_en": [
+      "Melatonin 3 mg / 5 mg Tablets (Nature Made / Razak)"
+    ]
   },
   {
     "id": "melphalan",
@@ -64381,7 +67958,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های رسمی انکولوژی و بیمارستانی کشور.",
     "pharmacology_mechanism": "ملفالان مشتق اسید آمینه ال-فنیل‌آلانین متصل به خردل نیتروژن است که از طریق سیستم‌های انتقال اسید آمینه فعال به سرعت وارد سلول‌های پلاسماسل توموری می‌شود. گروه آلکیله‌کننده آن به رشته‌های دی‌ان‌ای متصل شده و اتصالات متقاطع دورشته‌ای گوانین-گوانین ایجاد کرده و مانع تکثیر سلول‌های تومور مغز استخوان می‌گردد.",
     "clinical_pearls": "در درمان میلوما، موفقیت بالینی تنها به شمارش CBC خلاصه نمی‌شود؛ حتماً الکتروفورز پروتئین‌های سرم و سطح کلسیم خون را چک کنید؛ ناپدید شدن باند M نشان‌دهنده رمیشن کامل است.",
-    "quick_dosing": "سگ: 0.1 mg/kg روزانه به مدت ۱۰ تا ۱۴ روز، سپس 0.05 mg/kg روزانه مداوم (یا پروتکل متناوب: 7 mg/m² روزانه به مدت ۵ روز پیاپی، تکرار هر ۲۱ روز) | گربه: 0.1 mg/kg روزانه به مدت ۱۰ روز سپس یک روز در میان (یا 1–2 mg به ازای هر گربه هر هفته)"
+    "quick_dosing": "سگ: 0.1 mg/kg روزانه به مدت ۱۰ تا ۱۴ روز، سپس 0.05 mg/kg روزانه مداوم (یا پروتکل متناوب: 7 mg/m² روزانه به مدت ۵ روز پیاپی، تکرار هر ۲۱ روز) | گربه: 0.1 mg/kg روزانه به مدت ۱۰ روز سپس یک روز در میان (یا 1–2 mg به ازای هر گربه هر هفته)",
+    "brand_names_fa": [
+      "الکران",
+      "قرص الکران ۲ میلی‌گرم (ملفالان خوراکی)"
+    ],
+    "brand_names_en": [
+      "Alkeran (Melphalan) 2 mg Film-Coated Tablets"
+    ]
   },
   {
     "id": "meperidine",
@@ -64535,7 +68119,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در لیست داروهای تحت نظارت مستقیم معاونت غذا و دارو و ترالی‌های بیمارستانی.",
     "pharmacology_mechanism": "مپریدین آگونیست اختصاصی گیرنده‌های میو (μ) اوپیوئیدی است و با هایپرپلاریزاسیون نورون‌های شاخ خلفی نخاع و مهار ترشح ماده P و گلوتامات، انتقال پیام درد را مهار می‌سازد؛ ساختار ساختمانی شبه‌آتروپینی آن گیرنده‌های موسکارینی را نیز تا حدی مسدود کرده و مانع انقباض اسپاسمودیک عضلات صاف احشا می‌شود.",
     "clinical_pearls": "اگر مپریدین اشتباهاً وریدی تزریق شد و بیمار دچار افت فشار ناگهانی و اریتم پوستی گردید، فوراً دیفن‌هیدرامین تزریقی و مایع‌درمانی تهاجمی را آغاز نمایید.",
-    "quick_dosing": "سگ: 2–5 mg/kg (حداکثر 10 mg/kg) | گربه: 2–4 mg/kg | اسب: 2–4 mg/kg (حداکثر 1 g به ازای هر رأس اسب بالغ)"
+    "quick_dosing": "سگ: 2–5 mg/kg (حداکثر 10 mg/kg) | گربه: 2–4 mg/kg | اسب: 2–4 mg/kg (حداکثر 1 g به ازای هر رأس اسب بالغ)",
+    "brand_names_fa": [
+      "پتیدین",
+      "آمپول پتیدین هیدروکلراید ۵۰ و ۱۰۰ میلی‌گرم در ۲ میلی‌لیتر (مپریدین)"
+    ],
+    "brand_names_en": [
+      "Pethidine (Meperidine HCl) 50 mg / 100 mg Injection"
+    ]
   },
   {
     "id": "mepivacaine",
@@ -64691,7 +68282,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌های اسب و شرکت‌های واردکننده داروهای اسب کشور.",
     "pharmacology_mechanism": "مپیواکائین با نفوذ از غشای لیپیدی اعصاب، کانال‌های سریع سدیمی حساس به ولتاژ (Voltage-Gated Na+ Channels) را در سطح داخلی غشا مسدود می‌کند. با جلوگیری از ورود سدیم، دپلاریزاسیون غشا و انتشار پتانسیل عمل در فیبرهای عصبی حسی A-دلتا و C متوقف شده و هدایت حس درد کاملاً قطع می‌گردد.",
     "clinical_pearls": "در معاینه لنگش اسب، ابتدا پایین‌ترین بلوک (عصب پالمار دیجیتال پایین) را انجام دهید؛ اگر لنگش برطرف نشد گام به گام به مفاصل بالاتر صعود کنید. این روش طلایی با مپیواکائین دقیقاً موضع آسیب را مشخص می‌سازد.",
-    "quick_dosing": "سگ: 1–2 mg/kg (حداکثر دوز سمی کلی 4–5 mg/kg) | گربه: 1 mg/kg (حداکثر دوز سمی 2–3 mg/kg) | اسب: 1.5–3 mL از محلول ۲٪ به ازای هر عصب (یا 5–10 mL برای مفاصل کوچک، 20–30 mL برای مفاصل بزرگ زانو و استایفل)"
+    "quick_dosing": "سگ: 1–2 mg/kg (حداکثر دوز سمی کلی 4–5 mg/kg) | گربه: 1 mg/kg (حداکثر دوز سمی 2–3 mg/kg) | اسب: 1.5–3 mL از محلول ۲٪ به ازای هر عصب (یا 5–10 mL برای مفاصل کوچک، 20–30 mL برای مفاصل بزرگ زانو و استایفل)",
+    "brand_names_fa": [
+      "کاربوکائین",
+      "محلول تزریقی کاربوکائین ۲٪ دامی (مپیواکائین اختصاصی اسب)",
+      "کارپول دندانپزشکی مپیواکائین ۳٪ بدون وازوکانستریکتور (اسکاندیکائین)"
+    ],
+    "brand_names_en": [
+      "Carbocaine-V (Mepivacaine HCl 2%) 50 mL Vial",
+      "Scandicaine (Mepivacaine HCl 3%) Dental Cartridges 1.8 mL"
+    ]
   },
   {
     "id": "meropenem",
@@ -64823,7 +68423,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در لیست داروهای بیمارستانی کشور تحت پروتکل تجویز منطقی آنتی‌بیوتیک‌ها.",
     "pharmacology_mechanism": "مروپنم با اتصال بسیار پایدار به پروتئین‌های متصل شونده به پنی‌سیلین (PBPs به ویژه PBP-2 و PBP-3)، ساخت پپتیدوگلیکان دیواره باکتری را مهار کرده و به سرعت اتولیز و مرگ سلولی باکتری را رقم می‌زند. مروپنم در برابر هیدرولیز توسط اکثر بتالاکتامازها از جمله پنی‌سیلینازها، سفالوسپورینازها و بتالاکتامازهای وسیع‌الطیف (ESBL) شدیداً مقاوم است.",
     "clinical_pearls": "اگر سگ با سپسیس شدید عروق تخریب‌شده دارد و دسترسی به رگ ناممکن است، مروپنم را می‌توان به راحتی زیر جلد تزریق کرد؛ جذب زیرجلدی مروپنم در سگ تقریباً ۱۰۰٪ است.",
-    "quick_dosing": "سگ: 8.5–12 mg/kg (در مننژیت تا 20 mg/kg) | گربه: 10 mg/kg"
+    "quick_dosing": "سگ: 8.5–12 mg/kg (در مننژیت تا 20 mg/kg) | گربه: 10 mg/kg",
+    "brand_names_fa": [
+      "ویال مروپنم ۵۰۰ میلی‌گرم و ۱ گرم (مرونم / مروژیک)"
+    ],
+    "brand_names_en": [
+      "Meropenem 500 mg / 1 g Powder for Injection (Meronem)"
+    ]
   },
   {
     "id": "metergoline",
@@ -64949,7 +68555,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های معتبر دامپزشکی کشور.",
     "pharmacology_mechanism": "سروتونین محرک فیزیولوژیک ترشح پرولاکتین در سگ‌سانان است. مترگولین به عنوان یک آنتاگونیست رقابتی قوی گیرنده‌های سروتونرژیک (5-HT) عمل کرده و با بلاک کردن تحریک سروتونین بر هیپوفیز، آزادسازی پرولاکتین را به شدت سرکوب می‌کند؛ این امر به پسرفت سریع بافت غدد شیری و توقف رفتارهای مادری می‌انجامد.",
     "clinical_pearls": "حتماً قبل از شروع مترگولین، با سونوگرافی یا رادیوگرافی از عدم وجود بارداری واقعی اطمینان حاصل کنید، زیرا ترشح پرولاکتین در نیمه دوم آبستنی سگ برای بقای جسم زرد و جنین حیاتی است.",
-    "quick_dosing": "سگ: 0.1 mg/kg (یا 0.2 mg/kg تقسیم به دو دوز) | گربه: 0.125 mg/kg"
+    "quick_dosing": "سگ: 0.1 mg/kg (یا 0.2 mg/kg تقسیم به دو دوز) | گربه: 0.125 mg/kg",
+    "brand_names_fa": [
+      "کنتالاک",
+      "قرص کنتالاک سگ (مترگولین ۲ میلی‌گرم)"
+    ],
+    "brand_names_en": [
+      "Contralac (Metergoline) 0.5 mg / 2 mg Tablets (Virbac)"
+    ]
   },
   {
     "id": "metformin",
@@ -65056,7 +68669,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های سراسر کشور.",
     "pharmacology_mechanism": "متفورمین پروتئین کیناز فعال‌شده با AMP (AMPK) را در سلول‌های کبدی و روده فعال می‌کند. این امر موجب مهار گلوکونئوژنز کبدی، کاهش جذب روده‌ای گلوکز، افزایش برداشت گلوکز توسط عضلات و کاهش غلظت انسولین در گردش خون می‌شود.",
     "clinical_pearls": "متفورمین به تنهایی معجزه نمی‌کند؛ اساس درمان سندرم متابولیک اسب قطع کامل خوراک غلات و هویج و تغذیه انحصاری با یونجه شسته شده (جهت خروج قندهای محلول) است.",
-    "quick_dosing": "اسب: 15–30 mg/kg"
+    "quick_dosing": "اسب: 15–30 mg/kg",
+    "brand_names_fa": [
+      "گلوکوفاژ",
+      "قرص متفورمین ۵۰۰ و ۱۰۰۰ میلی‌گرم (گلوکوفاژ / آریا متفورمین)"
+    ],
+    "brand_names_en": [
+      "Metformin HCl 500 mg / 1000 mg Tablets (Glucophage)"
+    ]
   },
   {
     "id": "methazolamide",
@@ -65183,7 +68803,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های تک‌نسخه‌ای و تخصصی چشم‌پزشکی کشور.",
     "pharmacology_mechanism": "متازولامید آنزیم کربنیک انهیدراز را در سلول‌های اپیتلیوم ترشحی زوائد مژگانی چشم مسدود می‌کند. با توقف تبدیل CO2 و آب به یون بیکربنات، انتقال فعال مایعات و تولید زلالیه کاهش یافته و فشار داخل کره چشم (IOP) به سرعت افت می‌کند.",
     "clinical_pearls": "همیشه قبل از تجویز خوراکی متازولامید، قطره موضعی دورزولامید ۲٪ را امتحان کنید؛ اگر قطره پاسخ نداد یا ورم قرنیه مانع نفوذ شد، متازولامید را شروع کنید.",
-    "quick_dosing": "سگ: 2–5 mg/kg | گربه: 1–2 mg/kg"
+    "quick_dosing": "سگ: 2–5 mg/kg | گربه: 1–2 mg/kg",
+    "brand_names_fa": [
+      "نپتازین",
+      "قرص نپتازین (متازولامید ۵۰ میلی‌گرم)"
+    ],
+    "brand_names_en": [
+      "Neptazane (Methazolamide) 50 mg Tablets"
+    ]
   },
   {
     "id": "methenamine_mandelate",
@@ -65316,7 +68943,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در شبکه دارویی تخصصی ارولوژی کشور.",
     "pharmacology_mechanism": "متنامین در محیط اسیدی (pH زیر ۵.۵) هیدرولیز شده و به فرمالدئید و آمونیاک تجزیه می‌شود. اسید ماندلیک نیز اثر ضدمیکروبی و اسیدی‌کننده کمکی دارد. فرمالدئید با انعقاد غیرانتخابی پروتئین‌های سلولی باکتری‌ها، تمام ارگانیسم‌های بیماری‌زا را بدون بروز مقاومت آنتی‌بیوتیکی معدوم می‌سازد.",
     "clinical_pearls": "برای موفقیت با متنامین، همراه با آن متیونین خوراکی (D,L-Methionine) تجویز کنید و از صاحب حیوان بخواهید با نوارهای تست ادرار اطمینان یابد که pH ادرار کمتر از ۵.۵ است.",
-    "quick_dosing": "سگ: 10–20 mg/kg (یا 250–500 mg به ازای هر سگ) | گربه: 250 mg به ازای هر گربه"
+    "quick_dosing": "سگ: 10–20 mg/kg (یا 250–500 mg به ازای هر سگ) | گربه: 250 mg به ازای هر گربه",
+    "brand_names_fa": [
+      "یورواستات",
+      "قرص متنامین ماندلات ۵۰۰ میلی‌گرم و ۱ گرم (ماندلامین / یورواستات)"
+    ],
+    "brand_names_en": [
+      "Mandelamine (Methenamine Mandelate) 500 mg / 1 g Tablets"
+    ]
   },
   {
     "id": "methotrexate",
@@ -65457,7 +69091,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در شبکه رسمی داروخانه‌های انکولوژی و بیمارستانی کشور.",
     "pharmacology_mechanism": "متوترکسات با شباهت ساختاری به اسید فولیک، آنزیم دی‌هیدروفولات ردوکتاز (DHFR) را به طور رقابتی مهار می‌کند. با مسدود شدن ساخت تتراهیدروفولات فعال، بیوسنتز نوکلئوتیدهای تیمیدیلات و پورین متوقف شده و همانندسازی DNA و تقسیم میتوزی سلول‌ها در فاز S چرخه سلولی متوقف می‌گردد.",
     "clinical_pearls": "همیشه مطمئن شوید بیمار قبل از تزریق متوترکسات به اندازه کافی هیدراته است؛ ادرار اسیدی باعث رسوب متوترکسات در توبول‌های کلیه می‌شود؛ بنابراین قلیایی‌سازی ادرار با مایعات حاوی بیکربنات از آسیب کلیوی پیشگیری می‌کند.",
-    "quick_dosing": "سگ: 2.5–5 mg/m² خوراکی یا تزریقی ۲ تا ۳ بار در هفته (یا 0.8 mg/kg وریدی در پروتکل‌های دوز بالا با لوکوورین) | گربه: 2.5 mg/m²"
+    "quick_dosing": "سگ: 2.5–5 mg/m² خوراکی یا تزریقی ۲ تا ۳ بار در هفته (یا 0.8 mg/kg وریدی در پروتکل‌های دوز بالا با لوکوورین) | گربه: 2.5 mg/m²",
+    "brand_names_fa": [
+      "قرص متوترکسات ۲.۵ میلی‌گرم خوراکی",
+      "ویال تزریقی متوترکسات ۵۰ میلی‌گرم در ۲ میلی‌لیتر (۲۵ میلی‌گرم/میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "Methotrexate 2.5 mg Tablets (Ebewe / Cipla)",
+      "Methotrexate 50 mg / 2 mL Injection"
+    ]
   },
   {
     "id": "methylene_blue",
@@ -65630,7 +69272,17 @@ const DRUGS_DATA = [
       "milk_fa": "گوشت: ۱۴ روز، شیر: ۷۲ ساعت (جهت پاک‌سازی کامل تغییر رنگ بافتی).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "متیل تیونینیوم کلراید",
+      "آبی متیلن",
+      "آمپول متیلن بلو ۱٪ (۵۰ میلی‌گرم در ۵ میلی‌لیتر و ۱۰۰ میلی‌گرم در ۱۰ میلی‌لیتر)",
+      "پودر خالص متیلن بلو گرید دارویی دامی"
+    ],
+    "brand_names_en": [
+      "Methylene Blue 1% Injection Ampoules",
+      "Methylene Blue USP Pure Powder"
+    ]
   },
   {
     "id": "methylphenidate",
@@ -65742,7 +69394,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های منتخب دولتی و آموزشی تحت نسخه قرمز بیمارستانی.",
     "pharmacology_mechanism": "متیل‌فنیدات با مسدود کردن انتخابی پمپ‌های بازجذب دوپامین (DAT) و نوراپی‌نفرین (NET) در قشر پیش‌پیشانی و سیستم فعال‌کننده مشبک مغز (RAS)، غلظت این نوروترانسمیترها را در شکاف سیناپسی افزایش می‌دهد که به بهبود هوشیاری، تمرکز و مهار حملات ناگهانی خواب فلج‌کننده می‌انجامد.",
     "clinical_pearls": "برای ارزیابی نارکولپسی در سگ، تست برانگیختگی غذا (Food-Elicited Response Test) را انجام دهید؛ اگر سگ هنگام دیدن غذای دلخواه ناگهان بیفتد و شل شود، نارکولپسی تایید شده و متیل‌فنیدات داروی معجزه‌گر او خواهد بود.",
-    "quick_dosing": "سگ: 0.25–0.5 mg/kg (حداکثر 1–2 mg/kg برحسب پاسخ)"
+    "quick_dosing": "سگ: 0.25–0.5 mg/kg (حداکثر 1–2 mg/kg برحسب پاسخ)",
+    "brand_names_fa": [
+      "ریتالین",
+      "قرص ریتالین ۱۰ میلی‌گرم (متیل‌فنیدات هیدروکلراید)"
+    ],
+    "brand_names_en": [
+      "Ritalin (Methylphenidate HCl) 10 mg Tablets (Novartis)"
+    ]
   },
   {
     "id": "metoprolol",
@@ -65882,7 +69541,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور.",
     "pharmacology_mechanism": "متوپرولول گیرنده‌های بتا-۱ آدرنرژیک موجود در میوکارد را به صورت انتخابی و رقابتی مهار می‌کند. این امر فعالیت پروتئین کیناز وابسته به cAMP را کاهش داده و منجر به کاهش سرعت ضربان قلب (اثر کرونوتروپیک منفی)، کاهش قدرت انقباضی (اثر اینوتروپیک منفی) و کاهش سرعت هدایت در گره دهلیزی-بطنی (اثر دروموتروپیک منفی) می‌شود.",
     "clinical_pearls": "هرگز داروی بتابلاکر را به طور ناگهانی قطع نکنید! قطع ناگهانی به دلیل حساسیت مفرط و افزایش گیرنده‌ها (Rebound Tachycardia)، خطر سکته قلبی و آریتمی بطنی مرگبار دارد؛ قطع دارو باید ظرف ۲ هفته به صورت پله‌ای انجام شود.",
-    "quick_dosing": "سگ: فرم تارتارات: 0.5–1 mg/kg هر ۸ تا ۱۲ ساعت؛ فرم سوکسینات: 0.5–1 mg/kg هر ۲۴ ساعت | گربه: 2 mg/kg روزانه (معمولاً حدود 6.25–12.5 mg به ازای هر گربه)"
+    "quick_dosing": "سگ: فرم تارتارات: 0.5–1 mg/kg هر ۸ تا ۱۲ ساعت؛ فرم سوکسینات: 0.5–1 mg/kg هر ۲۴ ساعت | گربه: 2 mg/kg روزانه (معمولاً حدود 6.25–12.5 mg به ازای هر گربه)",
+    "brand_names_fa": [
+      "قرص متوپرولول تارتارات ۵۰ میلی‌گرم (متورال)",
+      "قرص متوپرولول سوکسینات ۲۳.۷۵ و ۴۷.۵ میلی‌گرم (متوهگزال / متوپین پیوسته‌رهش)"
+    ],
+    "brand_names_en": [
+      "Metoral (Metoprolol Tartrate) 50 mg Tablets",
+      "Metoprolol Succinate ER (Metohexal) 25 mg / 50 mg Tablets"
+    ]
   },
   {
     "id": "metyrapone",
@@ -66009,7 +69676,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در مراکز تک‌نسخه‌ای و دارویی مرجع کشور.",
     "pharmacology_mechanism": "متیروپون آنزیم استروئید 11-بتا-هیدروکسیلاز (CYP11B1) را در قشر غده آدرنال مسدود می‌کند. این آنزیم گام نهایی در بیوسنتز کورتیزول و کورتیکوسترون را کاتالیز می‌کند؛ با مهار آن، سنتز کورتیزول کاهش یافته و پیش‌سازهای آن (۱۱-دئوکسی‌کورتیزول) در خون تجمع می‌یابند.",
     "clinical_pearls": "در گربه‌های مبتلا به کوشینگ که پوستشان مانند کاغذ سیگار پاره می‌شود، متیروپون ظرف ۲ هفته با کاهش سطح کورتیزول، ضخامت و استحکام پوست را به حالت نرمال بازمی‌گرداند.",
-    "quick_dosing": "سگ: 50–100 mg/kg (تقسیم در چند دوز) | گربه: 65 mg به ازای هر گربه (یا 10–20 mg/kg)"
+    "quick_dosing": "سگ: 50–100 mg/kg (تقسیم در چند دوز) | گربه: 65 mg به ازای هر گربه (یا 10–20 mg/kg)",
+    "brand_names_fa": [
+      "متوپیرون",
+      "کپسول متوپیرون ۲۵۰ میلی‌گرم (متیروپون)"
+    ],
+    "brand_names_en": [
+      "Metopirone (Metyrapone) 250 mg Capsules (HRA Pharma)"
+    ]
   },
   {
     "id": "mexiletine",
@@ -66120,7 +69794,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی قلب و عروق سراسر کشور.",
     "pharmacology_mechanism": "مکسیلتین با مسدود کردن کانال‌های سریع سدیمی در فاز صفر پتانسیل عمل میوکارد، شیب صعودی دپلاریزاسیون را کاهش داده و دوره تحریک‌پذیری موثر فیبرهای بطنی را بدون طولانی کردن فاصله QT کوتاه می‌کند. این اثر مستقیماً کانون‌های ضربان‌ساز نابجا در دیواره بطن‌ها را مهار می‌سازد.",
     "clinical_pearls": "اگر سگی پس از مصرف مکسیلتین دچار استفراغ شد، دوز را کاهش ندهید؛ ابتدا مطمئن شوید قرص در لابلای یک تکه بزرگ گوشت یا غذای کنسروی چرب پنهان شده باشد.",
-    "quick_dosing": "سگ: 4–8 mg/kg"
+    "quick_dosing": "سگ: 4–8 mg/kg",
+    "brand_names_fa": [
+      "کپسول مکسیلتین هیدروکلراید ۵۰، ۱۰۰ و ۲۰۰ میلی‌گرم (مکسیتیل)"
+    ],
+    "brand_names_en": [
+      "Mexitil (Mexiletine HCl) 50 mg / 100 mg / 200 mg Capsules"
+    ]
   },
   {
     "id": "milbemycin_oxime",
@@ -66263,7 +69943,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌ها و کلینیک‌های دامپزشکی معتبر کشور.",
     "pharmacology_mechanism": "میلبمایسین اکسیم حاصل تخمیر استرپتومایسس است. با اتصال با تمایل بالا به کانال‌های کلریدی وابسته به گلوتامات (GluCl) در سلول‌های عصبی و عضلانی بی‌مهرگان، نفوذپذیری غشا به یون کلر را افزایش داده و هایپرپلاریزاسیون ایجاد می‌کند که به فلج شل و مرگ قطعی انگل‌های نماتودی و بندپایان می‌انجامد.",
     "clinical_pearls": "برای یک سگ کالی یا استرالین شپرد که صاحب آن نگران حساسیت ژنتیکی آیورمکتین است، میلبمایسین اکسیم با خیال راحت به عنوان امن‌ترین جایگزین پیشگیری ماهانه توصیه می‌شود.",
-    "quick_dosing": "سگ: 0.5–1 mg/kg (حداقل دوز مصوب: 0.5 mg/kg) | گربه: 2 mg/kg"
+    "quick_dosing": "سگ: 0.5–1 mg/kg (حداقل دوز مصوب: 0.5 mg/kg) | گربه: 2 mg/kg",
+    "brand_names_fa": [
+      "اینترسپتور",
+      "قرص میلبماکس سگ و گربه (میلبمایسین + پرازیکوانتل)",
+      "قرص اینترسپتور پلاس (میلبمایسین اکسیم)"
+    ],
+    "brand_names_en": [
+      "Milbemax (Milbemycin Oxime / Praziquantel) Tablets (Elanco)",
+      "Interceptor Plus Chewable Tablets for Dogs"
+    ]
   },
   {
     "id": "miltefosine",
@@ -66377,7 +70066,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌ها و داروخانه‌های تخصصی دامپزشکی استان‌های درگیر لیشمانیوز.",
     "pharmacology_mechanism": "میلته‌فوسین با برهم زدن متابولیسم فسفولیپیدهای غشای سلولی لیشمانیا و مهار آنزیم‌های مسیر سیگنال‌دهی پروتئین کیناز C (PKC) و فسفولیپاز C، سیالیت غشا را مخدوش کرده و آپوپتوز سلولی انگل‌های داخل ماکروفاژها را تسریع می‌کند.",
     "clinical_pearls": "اگر سگ لیشمانیایی دچار پروتئینوری و افزایش کراتینین بود، گلوکانتیم تزریقی ممکن است کلیه را به سمت نارسایی کامل ببرد؛ در این بیماران میلته‌فوسین انتخاب هوشمندانه و نجات‌دهنده است.",
-    "quick_dosing": "سگ: 2 mg/kg (معادل 1 mL به ازای هر ۱۰ کیلوگرم وزن بدن از محلول ۲٪)"
+    "quick_dosing": "سگ: 2 mg/kg (معادل 1 mL به ازای هر ۱۰ کیلوگرم وزن بدن از محلول ۲٪)",
+    "brand_names_fa": [
+      "میلته‌فوران",
+      "محلول خوراکی میلته‌فوران ۲۰ میلی‌گرم در میلی‌لیتر (میلته‌فوسین دامی)",
+      "کپسول ایمپاویدو ۵۰ میلی‌گرم (میلته‌فوسین انسانی)"
+    ],
+    "brand_names_en": [
+      "Milteforan (Miltefosine 20 mg / mL) Oral Solution (Virbac)",
+      "Impavido (Miltefosine) 50 mg Capsules"
+    ]
   },
   {
     "id": "mineral_oil",
@@ -66526,7 +70224,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی، دامی و فروشگاه‌های تجهیزات اسب کشور.",
     "pharmacology_mechanism": "روغن پارافین یک هیدروکربن مایع سنگین نفتی خالص‌شده است که آنزیم‌های گوارشی توانایی هیدرولیز آن را ندارند و از سد اپیتلیوم روده جذب نمی‌شود. این روغن با تشکیل لایه‌ای لغزنده بر سطح مخاط روده و محتویات متراکم مدفوع، مانع از بازجذب آب لومن توسط کولون شده و با کاهش اصطکاک، لغزش و دفع فیکالیت‌ها را تسهیل می‌کند.",
     "clinical_pearls": "قانون حیاتی اسب: پیش از ریختن حتی یک سی‌سی روغن پارافین در سوند معدی اسب، سوند را بو کنید و انتهای آن را داخل آب بگیرید؛ اگر حباب زد یا هوای تنفسی بیرون داد، سوند در نای است و تزریق روغن مساوی مرگ فوری اسب خواهد بود!",
-    "quick_dosing": "سگ: 5–15 mL به ازای هر سگ (یا به صورت تنقیه رکتال با آب صابون ولرم) | گربه: 2–5 mL مخلوط شده کامل با غذای مرطوب کنسروی | اسب: 2–4 Liters به ازای یک اسب بالغ ۴۵۰ تا ۵۰۰ کیلوگرمی (معادل 5–10 mL/kg)"
+    "quick_dosing": "سگ: 5–15 mL به ازای هر سگ (یا به صورت تنقیه رکتال با آب صابون ولرم) | گربه: 2–5 mL مخلوط شده کامل با غذای مرطوب کنسروی | اسب: 2–4 Liters به ازای یک اسب بالغ ۴۵۰ تا ۵۰۰ کیلوگرمی (معادل 5–10 mL/kg)",
+    "brand_names_fa": [
+      "مینرال اویل",
+      "پارافین مایع",
+      "روغن پارافین مایع خوراکی گرید دارویی (بطری‌های ۱ لیتری و ۴ لیتری)"
+    ],
+    "brand_names_en": [
+      "Liquid Paraffin (Mineral Oil) USP / BP Grade"
+    ]
   },
   {
     "id": "minocycline",
@@ -66667,7 +70373,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت عمومی.",
     "pharmacology_mechanism": "مینوکسیلین به طور برگشت‌پذیر به زیرواحد 30S ریبوزوم باکتریایی متصل می‌شود و مانع از اتصال آمینواسیل-tRNA به محل پذیرنده (A-site) در کمپلکس ریبوزومی می‌گردد. این امر طویل شدن زنجیره پلی‌پپتیدی را متوقف کرده و سنتز پروتئین‌های باکتریایی را مهار می‌سازد.",
     "clinical_pearls": "قانون طلایی تجویز کپسول در گربه‌ها: هرگز کپسول مینوکسیلین یا داکسی‌سایکلین را خشک به گلوی گربه نیندازید! حتماً بلافاصله با سرنگ ۵ تا ۱۰ سی‌سی آب به دهان حیوان تزریق کنید تا کپسول فوراً وارد معده شود و مری نسوزد.",
-    "quick_dosing": "سگ: 5–10 mg/kg | گربه: 5–8.8 mg/kg"
+    "quick_dosing": "سگ: 5–10 mg/kg | گربه: 5–8.8 mg/kg",
+    "brand_names_fa": [
+      "کپسول مینوکسیلین ۵۰ و ۱۰۰ میلی‌گرم (مینوسین)"
+    ],
+    "brand_names_en": [
+      "Minocycline HCl 50 mg / 100 mg Capsules (Minocin)"
+    ]
   },
   {
     "id": "mitoxantrone",
@@ -66795,7 +70507,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در مراکز رسمی شیمی‌درمانی و داروخانه‌های انکولوژی کشور.",
     "pharmacology_mechanism": "میتوکسانترون یک ترکیب مصنوعی آنتراسن‌دیون است که بین جفت بازهای DNA قرار گرفته (Intercalation) و با مهار آنزیم توپوایزومراز II، از بازپیوند رشته‌های شکسته شده DNA جلوگیری می‌کند. همچنین با ایجاد پیوندهای متقاطع و رادیکال‌های آزاد، ساخت RNA و DNA را در تمام فازهای چرخه سلولی متوقف می‌سازد.",
     "clinical_pearls": "به صاحب حیوان قبل از تزریق اطلاع دهید که ادرار سگ برای یک تا دو روز آینده سبز-آبی درخشان خواهد شد تا از تماس دست با ادرار پرهیز کرده و نگران نشوند.",
-    "quick_dosing": "سگ: 5–5.5 mg/m² (یا 0.15 mg/kg در سگ‌های زیر ۱۵ کیلوگرم) | گربه: 6–6.5 mg/m²"
+    "quick_dosing": "سگ: 5–5.5 mg/m² (یا 0.15 mg/kg در سگ‌های زیر ۱۵ کیلوگرم) | گربه: 6–6.5 mg/m²",
+    "brand_names_fa": [
+      "نووانترون",
+      "ویال میتوکسانترون ۲۰ میلی‌گرم در ۱۰ میلی‌لیتر (نووانترون / میتوسینا)"
+    ],
+    "brand_names_en": [
+      "Novantrone (Mitoxantrone 2 mg / mL) 10 mL / 20 mL Vial"
+    ]
   },
   {
     "id": "montelukast",
@@ -66921,7 +70640,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های سراسر کشور.",
     "pharmacology_mechanism": "سیستینیل لکوترین‌ها (LTC4, LTD4, LTE4) از قوی‌ترین محرک‌های انقباض برونش‌ها، ادم مویرگی و افزایش موکوس هستند. مونته‌لوکاست با مسدود کردن رقابتی گیرنده‌های CysLT1، مانع از اتصال این واسطه‌های التهابی شده و ترشح موکوس و اسپاسم تنفسی را مهار می‌کند.",
     "clinical_pearls": "به صاحب گربه یادآوری کنید که مونته‌لوکاست داروی کنترل درازمدت است، نه اسپری نجات؛ هنگام حمله حاد تنگی نفس باید فوراً اکسیژن و اسپری سالبوتامول استفاده شود.",
-    "quick_dosing": "سگ: 0.5–1 mg/kg (قرص‌های ۵ یا ۱۰ میلی‌گرم بر حسب وزن) | گربه: 0.5–1 mg/kg (معمولاً 2.5–5 mg به ازای هر گربه)"
+    "quick_dosing": "سگ: 0.5–1 mg/kg (قرص‌های ۵ یا ۱۰ میلی‌گرم بر حسب وزن) | گربه: 0.5–1 mg/kg (معمولاً 2.5–5 mg به ازای هر گربه)",
+    "brand_names_fa": [
+      "سینگولار",
+      "قرص مونته‌لوکاست سدیم ۵ و ۱۰ میلی‌گرم (ایرکاست / سینگولار)"
+    ],
+    "brand_names_en": [
+      "Montelukast 5 mg / 10 mg Tablets (Singulair)"
+    ]
   },
   {
     "id": "morantel_tartrate",
@@ -67053,7 +70779,15 @@ const DRUGS_DATA = [
       "milk_fa": "گوشت گاو و گوسفند: ۱۴ روز؛ شیر: ۰ روز (در فرمولاسیون استاندارد).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "روماکود",
+      "رومنتل",
+      "پودر مورانتل تارتارات دامی (رومنتل / پودر درنچ خوراکی)"
+    ],
+    "brand_names_en": [
+      "Rumatel / Morantel Tartrate Feed Grade Powder"
+    ]
   },
   {
     "id": "moxidectin",
@@ -67245,7 +70979,19 @@ const DRUGS_DATA = [
       "milk_fa": "گوشت گاو: ۱۴ روز؛ شیر: در گاوهای دوشا با فرمولاسیون‌های خاص ارزیابی شود (بسته به برند).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سایدکتین",
+      "کوئست",
+      "خمیر خوراکی کوئست اسب (موکسیدکتین ۲٪ ژل خوراکی)",
+      "محلول پور-آن سایدکتین ۵ میلی‌گرم/میلی‌لیتر (موکسیدکتین دامی)",
+      "پیپت ادوکیت سگ و گربه (موکسیدکتین + ایمی‌داکلوپرید)"
+    ],
+    "brand_names_en": [
+      "Quest (Moxidectin 2%) Oral Gel Syringe for Horses (Zoetis)",
+      "Cydectin (Moxidectin 0.5%) Pour-On / Injectable 500 mL",
+      "Advocate / Advantage Multi Spot-on Pipettes (Bayer / Elanco)"
+    ]
   },
   {
     "id": "mycophenolate_mofetil",
@@ -67395,7 +71141,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های تخصصی پیوند و بیمارستانی کشور.",
     "pharmacology_mechanism": "مایکوفنولات موفتیل پیش‌دارویی است که در بدن به سرعت به مایکوفنولیک اسید (MPA) فعال تبدیل می‌شود. MPA یک مهارکننده غیررقابتی و برگشت‌پذیر آنزیم اینوزین مونوپفسفات دهیدروژناز (IMPDH) است. از آنجا که لنفوسیت‌های T و B بر خلاف سایر سلول‌ها فاقد مسیر فرعی بازیافت پورین هستند، سنتز de novo گوانوزین نوکلئوتید در آنها مسدود شده و تکثیر و تولید آنتی‌بادی خودایمن متوقف می‌گردد.",
     "clinical_pearls": "در سگ دچار IMHA که کورتون به تنهایی نتوانسته مانع افت هماتوکریت شود، مایکوفنولات ظرف ۴۸ ساعت روند لیز سلول‌ها را متوقف می‌کند؛ اگر سگ دچار مدفوع نرم شد، فوراً پروبیوتیک و مترونیدازول اضافه کرده و دوز را اندکی تعدیل کنید ولی دارو را قطع ننمایید.",
-    "quick_dosing": "سگ: 8–12 mg/kg (حداکثر 15 mg/kg)"
+    "quick_dosing": "سگ: 8–12 mg/kg (حداکثر 15 mg/kg)",
+    "brand_names_fa": [
+      "سل‌سپت",
+      "کپسول سل‌سپت ۲۵۰ و ۵۰۰ میلی‌گرم (مایکوفنولات موفتیل)",
+      "سوسپانسیون خوراکی سل‌سپت ۱ گرم در ۵ میلی‌لیتر (۲۰۰ میلی‌گرم/میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "CellCept (Mycophenolate Mofetil) 250 mg / 500 mg Capsules (Roche)",
+      "CellCept 200 mg / mL Oral Suspension (Roche)"
+    ]
   },
   {
     "id": "nalbuphine",
@@ -67556,7 +71311,14 @@ const DRUGS_DATA = [
       "milk_fa": "دام غیرتولیدی - فاقد دوره پرهیز.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "نوبین",
+      "آمپول نالبوفین هیدروکلراید ۱۰ و ۲۰ میلی‌گرم در میلی‌لیتر (نوبین)"
+    ],
+    "brand_names_en": [
+      "Nubain (Nalbuphine HCl) 10 mg / 20 mg Injection Ampoules"
+    ]
   },
   {
     "id": "naltrexone",
@@ -67671,7 +71433,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های رسمی منتخب کشور.",
     "pharmacology_mechanism": "نالتروکسان آنتاگونیست رقابتی با تمایل پیوندی فوق‌العاده بالا برای گیرنده‌های میو (μ)، کاپا (κ) و دلتا (δ) اوپیوئیدی است. در رفتارهای وسواسی، عمل لیسیدن باعث ترشح اندورفین‌های درون‌زاد در مغز شده و احساس سرخوشی پاداش‌دهنده ایجاد می‌کند؛ نالتروکسان این گیرنده‌ها را مسدود کرده و چرخه پاداش لیسیدن را خاموش می‌سازد.",
     "clinical_pearls": "اگر سگی ماه‌هاست که پای خود را لیس می‌زند تا به استخوان برسد و هیچ پماد یا آنتی‌بیوتیکی پاسخ نداده، این سگ به ترشح اندورفین مغزش معتاد شده است؛ نالتروکسان این زنجیره اعتیاد رفتاری را ظرف چند هفته قطع می‌کند.",
-    "quick_dosing": "سگ: 1–2 mg/kg"
+    "quick_dosing": "سگ: 1–2 mg/kg",
+    "brand_names_fa": [
+      "رِویا",
+      "قرص نالتروکسان هیدروکلراید ۵۰ میلی‌گرم (رِویا)"
+    ],
+    "brand_names_en": [
+      "ReVia (Naltrexone HCl) 50 mg Tablets"
+    ]
   },
   {
     "id": "neomycin",
@@ -67847,7 +71616,15 @@ const DRUGS_DATA = [
       "milk_fa": "گوشت گوساله و بره: ۳۰ روز؛ شیر: مصرف در گاوهای شیری مجاز نیست.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "قرص نئومایسین سولفات ۵۰۰ میلی‌گرم خوراکی",
+      "پودر نئومایسین ۲۰٪ دامی (نئوویت / نئوسولفات)"
+    ],
+    "brand_names_en": [
+      "Neomycin Sulfate 500 mg Oral Tablets",
+      "Neomycin Sulfate 20% Soluble Powder (100 g / 500 g)"
+    ]
   },
   {
     "id": "niacinamide",
@@ -67973,7 +71750,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت OTC.",
     "pharmacology_mechanism": "نیاسینامید پیش‌ساز کوآنزیم‌های حیاتی NAD و NADP در واکنش‌های اکسیداسیون-احیای سلولی است. در پوست، نیاسینامید فسفودی‌استراز را مهار کرده و سطح cAMP داخل سلولی را بالا می‌برد؛ این امر مانع ترشح واسطه‌های التهابی و اینترلوکین‌ها از ماست‌سل‌ها و سلول‌های اپیدرمال شده و کموتاکسی نوتروفیل‌ها را مهار می‌سازد.",
     "clinical_pearls": "به صاحب بیمار یادآوری کنید که درمان ترکیبی نیاسینامید + داکسی‌سایکلین درمان آهسته و ملایم است؛ حداقل ۶ تا ۸ هفته صبوری لازم است تا تغییر رنگ و بهبود زخم‌های سیاه بینی سگ آغاز شود.",
-    "quick_dosing": "سگ: سگ‌های زیر ۱۰ کیلوگرم: 250 mg؛ سگ‌های بالای ۱۰ کیلوگرم: 500 mg به ازای هر سگ | گربه: 250 mg به ازای هر گربه"
+    "quick_dosing": "سگ: سگ‌های زیر ۱۰ کیلوگرم: 250 mg؛ سگ‌های بالای ۱۰ کیلوگرم: 500 mg به ازای هر سگ | گربه: 250 mg به ازای هر گربه",
+    "brand_names_fa": [
+      "نیکوتینامید",
+      "ویتامین B3",
+      "قرص نیاسینامید ۵۰۰ میلی‌گرم (ویتامین B3 خالص)"
+    ],
+    "brand_names_en": [
+      "Niacinamide 500 mg Tablets (Nature Made / 21st Century)"
+    ]
   },
   {
     "id": "nitazoxanide",
@@ -68135,7 +71920,16 @@ const DRUGS_DATA = [
       "milk_fa": "گوشت گوساله: ۷ روز؛ شیر: مصرف در گاوهای شیرده انسانی مجاز نیست.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آلینیا",
+      "قرص نیتوزوکسانید ۵۰۰ میلی‌گرم خوراکی (آلینیا / نیتوکس)",
+      "سوسپانسیون خوراکی نیتوزوکسانید ۱۰۰ میلی‌گرم در ۵ میلی‌لیتر (۲۰ میلی‌گرم/میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "Alinia (Nitazoxanide) 500 mg Tablets",
+      "Nitazoxanide 100 mg / 5 mL Oral Suspension 60 mL"
+    ]
   },
   {
     "id": "nitenpyram",
@@ -68260,7 +72054,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام کلینیک‌ها و داروخانه‌های معتبر دامپزشکی کشور.",
     "pharmacology_mechanism": "نیتن‌پیرام یک نئونیکوتینوئید انتخابی است که با میل پیوندی بسیار بالا به گیرنده‌های استیل‌کولین نیکوتینی (nAChRs) در سیستم عصبی مرکزی حشرات متصل می‌شود. این اتصال باعث تحریک مداوم سیناپس‌ها، عدم بسته شدن کانال‌های عصبی، تشنج‌های مکرر کک و مرگ قطعی آن ظرف چند دقیقه می‌شود بدون اینکه بر گیرنده‌های پستانداران اثر سوء بگذارد.",
     "clinical_pearls": "قبل از بستری کردن هر حیوانی در کلینیک یا فرستادن آن به اتاق اصلاح، یک قرص کپ‌استار به او بخورانید؛ ظرف نیم ساعت تمام کک‌های زنده کف باکس می‌ریزند و پانسیون شما هرگز آلوده به کک نخواهد شد.",
-    "quick_dosing": "سگ: 1 mg/kg (قرص‌های استاندارد: سگ‌های ۱ تا ۱۱ کیلوگرم: 11.4 mg؛ سگ‌های ۱۱ تا ۵۷ کیلوگرم: 57 mg) | گربه: 11.4 mg به ازای هر گربه (قرص کوچک Capstar Cat)"
+    "quick_dosing": "سگ: 1 mg/kg (قرص‌های استاندارد: سگ‌های ۱ تا ۱۱ کیلوگرم: 11.4 mg؛ سگ‌های ۱۱ تا ۵۷ کیلوگرم: 57 mg) | گربه: 11.4 mg به ازای هر گربه (قرص کوچک Capstar Cat)",
+    "brand_names_fa": [
+      "کپ‌استار",
+      "قرص کپ‌استار سگ و گربه ۱۱.۴ و ۵۷ میلی‌گرم (نیتن‌پیرام)"
+    ],
+    "brand_names_en": [
+      "Capstar (Nitenpyram) 11.4 mg / 57 mg Oral Tablets (Elanco)"
+    ]
   },
   {
     "id": "nitrofurantoin",
@@ -68392,7 +72193,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به عنوان آنتی‌بیوتیک تخصصی ادراری.",
     "pharmacology_mechanism": "نیتروفورانتوئین پس از ورود به سلول باکتری، توسط آنزیم‌های نیترورودوکتاز باکتریایی احیا شده و واسطه‌های الکتروفیلیک واکنشی ناپایدار تولید می‌کند. این متابولیت‌ها به ریبوزوم‌ها، اسیدهای نوکلئیک (DNA/RNA) و پروتئین‌های تنفسی سلول باکتری متصل شده و آنها را غیرفعال می‌سازند؛ به دلیل مکانیسم حمله چندگانه، بروز مقاومت باکتریایی نادر است.",
     "clinical_pearls": "نیتروفورانتوئین فقط در مثانه معجزه می‌کند! اگر سگ شما علاوه بر ترشحات ادراری، تب و لکوسیتوز دارد، عفونت به بافت کلیه (پیلونفریت) سرایت کرده و نیتروفورانتوئین بی اثر خواهد بود؛ در پیلونفریت باید از آنتی‌بیوتیک‌های سیستمیک بافتی مثل مروپنم یا سفتریاکسون استفاده کنید.",
-    "quick_dosing": "سگ: 3–4.4 mg/kg (حداکثر 5 mg/kg) | گربه: 2.5–4 mg/kg"
+    "quick_dosing": "سگ: 3–4.4 mg/kg (حداکثر 5 mg/kg) | گربه: 2.5–4 mg/kg",
+    "brand_names_fa": [
+      "کپسول نیتروفورانتوئین ۱۰۰ میلی‌گرم (ماکرودانتین / توتول)"
+    ],
+    "brand_names_en": [
+      "Macrodantin (Nitrofurantoin Macro配) 100 mg Capsules"
+    ]
   },
   {
     "id": "nitroglycerin_transdermal",
@@ -68527,7 +72334,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌ها و ترالی‌های کد بیمارستانی کشور.",
     "pharmacology_mechanism": "نیتروگلیسیرین در دیواره عروق وریدی به اکسید نیتریک (NO) فعال تبدیل می‌شود. اکسید نیتریک با تحریک آنزیم گوانیلات سیکلاز، غلظت cGMP داخل سلولی را افزایش داده و سبب دفسفریلاسیون زنجیره سبک میوزین و اتساع پرقدرت عضلات صاف وریدها می‌شود. با به دام افتادن خون در وریدها، پر شدن و فشار پایان دیاستولی بطن چپ کاهش یافته و مایع ادم ریه به سرعت جذب می‌گردد.",
     "clinical_pearls": "یک کاغذ اخطار پررنگ بالای قفس حیوان بچسبانید: 'پماد نیترو روی گوش چپ مالیده شده است - بدون دستکش لمس نشود!' تا دانشجویان یا صاحبان حیوان در اثر لمس ناخواسته گوش بیمار دچار سردرد و افت فشار نشوند.",
-    "quick_dosing": "سگ: پماد ۲٪: یک‌چهارم تا ۳/۴ اینچ (حدود 6–18 mm یا 6–12 mg) به ازای هر سگ | گربه: یک‌هشتم تا یک‌چهارم اینچ (حدود 3–6 mm پماد ۲٪)"
+    "quick_dosing": "سگ: پماد ۲٪: یک‌چهارم تا ۳/۴ اینچ (حدود 6–18 mm یا 6–12 mg) به ازای هر سگ | گربه: یک‌هشتم تا یک‌چهارم اینچ (حدود 3–6 mm پماد ۲٪)",
+    "brand_names_fa": [
+      "پماد ۲٪ و چسب پوستی",
+      "پماد نیتروگلیسیرین ۲٪ (نیتروبید ۳۰ گرمی با نوار اندازه‌گیری)",
+      "چسب پوستی نیتروگلیسیرین ۵ و ۱۰ میلی‌گرم (نیترودرم TTS)"
+    ],
+    "brand_names_en": [
+      "Nitro-Bid (Nitroglycerin 2% Ointment) 30 g",
+      "Nitro贴 (Nitroglycerin Transdermal Patches) 5 mg / 10 mg"
+    ]
   },
   {
     "id": "nizatidine",
@@ -68653,7 +72469,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت عمومی.",
     "pharmacology_mechanism": "نیزاتیدین گیرنده‌های H2 در غشای سلول‌های پاریتال معده را به صورت رقابتی مسدود کرده و ترشح اسید معده پایه و اسید تحریک‌شده با غذا را مهار می‌سازد؛ علاوه بر این، با مهار آنزیم استیل‌کولین‌استراز در اعصاب شبکه میانتریک، استیل‌کولین اندوژن را حفظ کرده و حرکات پریستالتیک کولینرژیک معده و روده را تقویت می‌نماید.",
     "clinical_pearls": "در سگی که همزمان زخم معده دارد و معده‌اش به دلیل فلج موضعی بعد از عمل تخلیه نمی‌شود، نیزاتیدین یک داروی دوکاره بی‌نظیر است: اسید را کم می‌کند و همزمان معده را به حرکت درمی‌آورد.",
-    "quick_dosing": "سگ: 2.5–5 mg/kg | گربه: 2.5–5 mg/kg"
+    "quick_dosing": "سگ: 2.5–5 mg/kg | گربه: 2.5–5 mg/kg",
+    "brand_names_fa": [
+      "آکسید",
+      "کپسول نیزاتیدین ۱۵۰ و ۳۰۰ میلی‌گرم (آکسید / نیزاتین)"
+    ],
+    "brand_names_en": [
+      "Axid (Nizatidine) 150 mg / 300 mg Capsules"
+    ]
   },
   {
     "id": "novobiocin",
@@ -68763,7 +72586,14 @@ const DRUGS_DATA = [
       "milk_fa": "شیر: ۷۲ تا ۹۶ ساعت پس از آخرین تزریق دوره شیرواری (در فرمولاسیون خشکی ۳۰ روز تا زایمان + ۹۶ ساعت بعد زایمان)؛ گوشت: ۱۵ تا ۳۰ روز.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آلبامایسین",
+      "پماد داخل پستانی آلباداری پلاس (نووبیوسین + پنی‌سیلین دوره خشکی)"
+    ],
+    "brand_names_en": [
+      "Albadry Plus Dry Cow Intramammary Infusion (Zoetis)"
+    ]
   },
   {
     "id": "nystatin",
@@ -68920,7 +72750,15 @@ const DRUGS_DATA = [
       "milk_fa": "دام غیرتولیدی - فاقد دوره پرهیز.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "قطره نیستاتین ۱۰۰،۰۰۰ واحد در میلی‌لیتر خوراکی (نیستات)",
+      "پماد نیستاتین ۱۰۰،۰۰۰ واحد موضعی"
+    ],
+    "brand_names_en": [
+      "Nystatin 100,000 IU / mL Oral Suspension Drops 30 mL",
+      "Nystatin Topical Ointment 15 g"
+    ]
   },
   {
     "id": "octreotide",
@@ -69072,7 +72910,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی انکولوژی و بیمارستانی کشور.",
     "pharmacology_mechanism": "اکتروتاید با تمایل بسیار بالا به گیرنده‌های اختصاصی سوماتواستاتین (SSTR-2 و SSTR-5) در بافت توموری متصل می‌شود. این اتصال کانال‌های کلسیمی را مسدود ساخته و با فعال‌سازی کانال‌های پتاسیمی، غشای سلول‌های بتای پانکراس را هایپرپلاریزه می‌کند که مستقیماً ترشح وابسته به اگزوسیتوز انسولین، گاسترین، متالوپروتئینازها و هورمون رشد را سرکوب می‌نماید.",
     "clinical_pearls": "در سگ دچار تشنج ناشی از انسولینوما، پاسخ به اکتروتاید غیرقابل پیش‌بینی است چون همه تومورها گیرنده سوماتواستاتین ندارند؛ یک دوره آزمایشی ۲۴ ساعته تحت پایش گلوکومتر مشخص می‌کند که آیا تومور به اکتروتاید پاسخ می‌دهد یا خیر.",
-    "quick_dosing": "سگ: 2–5 mcg/kg (میکروگرم به ازای هر کیلوگرم) | گربه: 10–20 mcg به ازای هر گربه"
+    "quick_dosing": "سگ: 2–5 mcg/kg (میکروگرم به ازای هر کیلوگرم) | گربه: 10–20 mcg به ازای هر گربه",
+    "brand_names_fa": [
+      "ساندوستاتین",
+      "آمپول ساندوستاتین ۵۰، ۱۰۰ و ۵۰۰ میکروگرم در میلی‌لیتر (اکتروتاید)"
+    ],
+    "brand_names_en": [
+      "Sandostatin (Octreotide) 50 mcg / 100 mcg / 500 mcg Ampoules (Novartis)"
+    ]
   },
   {
     "id": "olsalazine",
@@ -69177,7 +73022,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی گوارش کشور.",
     "pharmacology_mechanism": "اولسالازین متشکل از دایمر دو مولکول مسالازین است. در کولون، آنزیم آزوردوکتاز باکتری‌های بی‌هوازی پیوند آزو را می‌شکند و غلظت‌های بسیار بالایی از 5-ASA آزاد می‌شود. 5-ASA با مهار آنزیم لیپواکسیژناز و مهار سنتز لکوترین B4 و فاکتورهای کموتاکتیک نوتروفیل‌ها، التهاب موکوس کولون را سرکوب می‌نماید.",
     "clinical_pearls": "هر سگی که قرار است برای کولیت تحت درمان طولانی با سولفاسالازین قرار گیرد، تست اشک شیرمر (STT) نیاز دارد؛ اما با تجویز اولسالازین نیازی به نگرانی از کور شدن سگ در اثر خشکی چشم نخواهید داشت.",
-    "quick_dosing": "سگ: 5–10 mg/kg (حداکثر 20 mg/kg تقسیم در چند دوز)"
+    "quick_dosing": "سگ: 5–10 mg/kg (حداکثر 20 mg/kg تقسیم در چند دوز)",
+    "brand_names_fa": [
+      "دی‌پنتوم",
+      "کپسول دی‌پنتوم ۲۵۰ و ۵۰۰ میلی‌گرم (اولسالازین سدیم)"
+    ],
+    "brand_names_en": [
+      "Dipentum (Olsalazine Sodium) 250 mg / 500 mg Capsules"
+    ]
   },
   {
     "id": "orbifloxacin",
@@ -69318,7 +73170,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در کلینیک‌ها و بیمارستان‌های تخصصی دام‌های کوچک کشور.",
     "pharmacology_mechanism": "اوربیفلوکساسین با مهار همزمان آنزیم‌های DNA ژیراز (توپوایزومراز II) و توپوایزومراز IV باکتری، شکستن و بستن دورشته‌ای DNA را مختل می‌کند. با متوقف شدن همانندسازی ژنوم و ناپایداری کروموزومی، مرگ سریع و باکتریوسیدال باکتری در هر دو فاز استراحت و تقسیم سلولی رخ می‌دهد.",
     "clinical_pearls": "برای رسیدن به بالاترین اثربخشی بالینی با اوربیفلوکساسین، دوز کامل روزانه را یکجا (q24h) تجویز کنید، زیرا اثر باکتریوسیدال آن وابسته به اوج غلظت خونی (Peak/MIC) است نه زمان ماندگاری.",
-    "quick_dosing": "سگ: 2.5–7.5 mg/kg (معمولاً دوز هدف 7.5 mg/kg یکبار در روز) | گربه: 2.5–7.5 mg/kg (هرگز از دوز 7.5 mg/kg در روز فراتر نرود)"
+    "quick_dosing": "سگ: 2.5–7.5 mg/kg (معمولاً دوز هدف 7.5 mg/kg یکبار در روز) | گربه: 2.5–7.5 mg/kg (هرگز از دوز 7.5 mg/kg در روز فراتر نرود)",
+    "brand_names_fa": [
+      "اورباکس",
+      "قرص اورباکس ۲۲.۷ و ۶۸ میلی‌گرم (اوربیفلوکساسین دامی)",
+      "سوسپانسیون خوراکی اورباکس ۳۰ میلی‌گرم/میلی‌لیتر دامی"
+    ],
+    "brand_names_en": [
+      "Orbax (Orbifloxacin) 22.7 mg / 68 mg Taste Tablets (Schering-Plough / Merck)",
+      "Orbax (Orbifloxacin 30 mg / mL) Oral Suspension 20 mL"
+    ]
   },
   {
     "id": "osaterone_acetate",
@@ -69424,7 +73285,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌ها و مراکز جراحی دام‌های کوچک کشور.",
     "pharmacology_mechanism": "اوزاترون استات یک آنتی‌آندروژن استروئیدی است که از دو مسیر عمل می‌کند: اول، اتصال دی‌هیدروتستوسترون (DHT) به گیرنده‌های آندروژن در سلول‌های پروستات را به صورت رقابتی مسدود می‌سازد. دوم، برداشت تستوسترون توسط بافت پروستات را مهار کرده و از تکثیر و هایپرتروفی سلول‌های اپیتلیوم ترشحی پروستات ممانعت می‌کند بدون اینکه سطح تستوسترون گردش خون را سرکوب کند.",
     "clinical_pearls": "برای صاحبان سگ‌های نر که به دلیل باورهای عاطفی یا اهداف پرورش نژاد حاضر به اخته کردن سگ مبتلا به بزرگی پروستات نیستند، ایپوزان با یک دوره ۷ روزه قرص، معضل یبوست و خونریزی پروستات را تا ۶ ماه حل می‌کند.",
-    "quick_dosing": "سگ: 0.25–0.5 mg/kg روزانه به مدت ۷ روز متوالی (قرص‌های 1.875, 3.75, 7.5, 15 mg)"
+    "quick_dosing": "سگ: 0.25–0.5 mg/kg روزانه به مدت ۷ روز متوالی (قرص‌های 1.875, 3.75, 7.5, 15 mg)",
+    "brand_names_fa": [
+      "ایپوزان",
+      "قرص ایپوزان (اوزاترون استات ۱.۸۷۵، ۳.۷۵، ۷.۵ و ۱۵ میلی‌گرم)"
+    ],
+    "brand_names_en": [
+      "Ypozane (Osaterone Acetate) Tablets for Dogs (Virbac)"
+    ]
   },
   {
     "id": "oseltamivir",
@@ -69566,7 +73434,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های انسانی سراسر کشور.",
     "pharmacology_mechanism": "اسلتامیویر فسفات در کبد به متابولیت فعال اسلتامیویر کربوکسیلات تبدیل می‌شود. اگرچه پاروویروس یک آنزیم نورآمینیداز اختصاصی ندارد، اما تامیفلو با مهار نورآمینیداز باکتری‌های همزیست روده، مانع از برداشت اسید سیالیک مخاطی توسط باکتری‌ها شده و از چسبیدن باکتری‌های پاتوژن به لایه موکوسی پرزهای تخریب‌شده روده و سپسیس سپتی‌سمیک جلوگیری می‌کند.",
     "clinical_pearls": "تامیفلو برای پاروویروس نوشداروی پس از مرگ سهراب نیست! اگر توله‌ای ۴ روز است اسهال خونی دارد، تامیفلو کمکی نمی‌کند؛ ارزش طلایی تامیفلو برای توله‌ای است که صبح امروز بی‌حال شده یا برادرش دیروز از پاروو تلف شده است.",
-    "quick_dosing": "سگ: 2 mg/kg | گربه: 1.5–2 mg/kg"
+    "quick_dosing": "سگ: 2 mg/kg | گربه: 1.5–2 mg/kg",
+    "brand_names_fa": [
+      "تامیفلو",
+      "کپسول اسلتامیویر ۷۵ میلی‌گرم (تامیفلو / فلوسین)",
+      "سوسپانسیون خوراکی اسلتامیویر ۶ میلی‌گرم در میلی‌لیتر (تامیفلو)"
+    ],
+    "brand_names_en": [
+      "Tamiflu (Oseltamivir Phosphate) 75 mg Capsules (Roche)",
+      "Oseltamivir 6 mg / mL Powder for Oral Suspension"
+    ]
   },
   {
     "id": "oxacillin",
@@ -69700,7 +73577,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور.",
     "pharmacology_mechanism": "اگزاسیلین یک بتالاکتام با زنجیره جانبی استریک حجیم ایزوکسازولیل است که مانع اتصال و هیدرولیز حلقه بتالاکتام توسط آنزیم‌های پنی‌سیلیناز استافیلوکوکوس اورئوس و پسودواینترمدیوس می‌شود. با اتصال به PBPs دیواره سلولی، پلیمریزاسیون پپتیدوگلیکان مهار و باکتری لیز می‌شود.",
     "clinical_pearls": "اگزاسیلین را حتماً با معده خالی به سگ بدهید؛ اگر صاحب حیوان کپسول را در میان غذای پر از چربی یا کنسرو پنهان کند، دارو اصلاً جذب خون نخواهد شد و پیودرم سگ عود می‌کند.",
-    "quick_dosing": "سگ: 22–40 mg/kg | گربه: 15–25 mg/kg"
+    "quick_dosing": "سگ: 22–40 mg/kg | گربه: 15–25 mg/kg",
+    "brand_names_fa": [
+      "کپسول اگزاسیلین ۵۰۰ میلی‌گرم خوراکی",
+      "ویال تزریقی اگزاسیلین ۱ گرم و ۵۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Oxacillin Sodium 500 mg Capsules",
+      "Oxacillin Sodium 500 mg / 1 g Powder for Injection"
+    ]
   },
   {
     "id": "oxazepam",
@@ -69827,7 +73712,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در لیست داروهای رسمی تحت کنترل روان‌پزشکی کشور.",
     "pharmacology_mechanism": "اگزازپام با اتصال آلوستریک به زیرواحد گاما در گیرنده‌های GABA-A مغز، اثرات بازدارنده گاما آمینوبوتیریک اسید را تقویت می‌کند. در مرکز اشتهای هیپوتالاموس، مهار سیگنال‌های سیری و اضطراب منجر به القای احساس گرسنگی شدید و تحریک رفتار غذاخوردن در حیوان می‌شود.",
     "clinical_pearls": "برای گربه‌ای با آنزیم‌های کبدی بالا که غذا نمی‌خورد، هرگز دیازپام خوراکی ننویسید زیرا خطر نکروز مرگبار کبد دارد؛ در این بیماران اگزازپام با خیال راحت کبد را دور می‌زند و گربه را به غذاخوردن می‌اندازد.",
-    "quick_dosing": "سگ: 0.2–0.5 mg/kg (تا 1 mg/kg در فوبیای شدید) | گربه: 0.2–0.5 mg/kg (معمولاً حدود 1.25–2.5 mg به ازای هر گربه)"
+    "quick_dosing": "سگ: 0.2–0.5 mg/kg (تا 1 mg/kg در فوبیای شدید) | گربه: 0.2–0.5 mg/kg (معمولاً حدود 1.25–2.5 mg به ازای هر گربه)",
+    "brand_names_fa": [
+      "سراکس",
+      "قرص اگزازپام ۱۰ میلی‌گرم خوراکی (سراکس)"
+    ],
+    "brand_names_en": [
+      "Serax (Oxazepam) 10 mg Tablets"
+    ]
   },
   {
     "id": "oxfendazole",
@@ -69980,7 +73872,14 @@ const DRUGS_DATA = [
       "milk_fa": "گوشت گاو: ۷ تا ۱۰ روز؛ گوشت گوسفند: ۱۰ تا ۱۴ روز؛ شیر: در برخی کشورها منع مصرف در گاوهای شیروار.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سینانتیک",
+      "سوسپانسیون خوراکی اکسفندازول ۲.۲۶٪ و ۹.۰۶٪ دامی (سینانتیک)"
+    ],
+    "brand_names_en": [
+      "Synanthic (Oxfendazole) 2.26% / 9.06% Oral Suspension 1 Liter"
+    ]
   },
   {
     "id": "oxibendazole",
@@ -70085,7 +73984,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های دامپزشکی و بیمارستان‌های تخصصی اسب کشور.",
     "pharmacology_mechanism": "اکسی‌بندازول با اتصال به زیرواحد بتاتوبولین در انگل‌های لوله‌ای اسب، از تشکیل میکروتوبول‌های حیاتی سلول‌های روده کرم جلوگیری کرده و جذب مواد مغذی و گلوکز را قطع می‌کند؛ نماتود در اثر گرسنگی و فلج دفع می‌گردد.",
     "clinical_pearls": "برای جلوگیری از مقاومت انگلی در اسب‌ها، نباید همیشه از آیورمکتین استفاده کرد؛ گنجاندن اکسی‌بندازول در تناوب فصول سال (Rotation Program) جمعیت‌های انگلی را به شدت آسیب‌پذیر نگه می‌دارد.",
-    "quick_dosing": "اسب: 10 mg/kg (در درمان پاراسکاریس دوز 15 mg/kg توصیه می‌شود)"
+    "quick_dosing": "اسب: 10 mg/kg (در درمان پاراسکاریس دوز 15 mg/kg توصیه می‌شود)",
+    "brand_names_fa": [
+      "آنتلمیساید",
+      "خمیر خوراکی آنتلمیساید اسب (اکسی‌بندازول ۲۲.۷٪)"
+    ],
+    "brand_names_en": [
+      "Anthelcide EQ (Oxibendazole 22.7%) Paste Syringe 24 g (Zoetis)"
+    ]
   },
   {
     "id": "oxymorphone",
@@ -70217,7 +74123,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در مراکز جراحی و بیمارستان‌های تخصصی دارای مجوز داروی تحت کنترل.",
     "pharmacology_mechanism": "اکسی‌مورفون به طور اختصاصی گیرنده‌های میو (μ) اوپیوئیدی را در شاخ خلفی طناب نخاعی، ماده خاکستری اطراف قنات سیلویوس و سیستم لیمبیک تحریک می‌کند. این تحریک باز شدن کانال‌های پتاسیمی و مهار کانال‌های کلسیمی را رقم زده و انتقال پیام‌های درد از فیبرهای ورودی را کاملاً مسدود می‌سازد.",
     "clinical_pearls": "اگر سگی پس از جراحی استخوان فمور از درد بی‌قراری می‌کند و مورفین به علت ترس از افت فشار خون ناشی از هیستامین منع دارد، اکسی‌مورفون انتخابی‌ترین داروی نجات بی‌دردی اوست.",
-    "quick_dosing": "سگ: 0.05–0.1 mg/kg (حداکثر 0.2 mg/kg یا حداکثر 4 mg به ازای هر سگ) | گربه: 0.02–0.05 mg/kg (معمولاً 0.05–0.1 mg به ازای هر گربه)"
+    "quick_dosing": "سگ: 0.05–0.1 mg/kg (حداکثر 0.2 mg/kg یا حداکثر 4 mg به ازای هر سگ) | گربه: 0.02–0.05 mg/kg (معمولاً 0.05–0.1 mg به ازای هر گربه)",
+    "brand_names_fa": [
+      "نومورفان",
+      "آمپول اکسی‌مورفون ۱ و ۱.۵ میلی‌گرم در میلی‌لیتر (نومورفان / اپانا)"
+    ],
+    "brand_names_en": [
+      "Numorphan / Opana (Oxymorphone HCl) 1 mg / 1.5 mg / mL Injection"
+    ]
   },
   {
     "id": "pamidronate_disodium",
@@ -70358,7 +74271,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌ها و داروخانه‌های انکولوژی سراسر کشور.",
     "pharmacology_mechanism": "پامیدرونات به کریستال‌های هیدروکسی‌آپاتیت ماتریکس معدنی استخوان متصل می‌شود. هنگامی که استئوکلاست‌ها شروع به بازجذب استخوان می‌کنند، پامیدرونات وارد استئوکلاست شده و آنزیم فارنسیل پیروفسفات سنتاز را در مسیر موالونات مهار می‌کند؛ این امر ساخت پروتئین‌های غشایی حیاتی را متوقف کرده و سبب تحلیل و آپوپتوز استئوکلاست‌ها و توقف آزادسازی کلسیم به خون می‌شود.",
     "clinical_pearls": "در سگی با کلسیم سرم بالای ۱۵ میلی‌گرم/دسی‌لیتر که در آستانه ایست قلبی است، پامیدرونات را بلافاصله پس از ۲ ساعت هیدراتاسیون با نرمال سالین شروع کنید؛ سطح کلسیم ظرف ۲۴ تا ۴۸ ساعت کاملاً نرمال می‌شود.",
-    "quick_dosing": "سگ: 1–1.3 mg/kg (رقیق شده در ۲۵۰ تا ۵۰۰ میلی‌لیتر نرمال سالین ۰.۹٪) | گربه: 1 mg/kg رقیق شده در ۱۰۰ میلی‌لیتر نرمال سالین"
+    "quick_dosing": "سگ: 1–1.3 mg/kg (رقیق شده در ۲۵۰ تا ۵۰۰ میلی‌لیتر نرمال سالین ۰.۹٪) | گربه: 1 mg/kg رقیق شده در ۱۰۰ میلی‌لیتر نرمال سالین",
+    "brand_names_fa": [
+      "آردیا",
+      "ویال پامیدرونات دی‌سدیم ۳۰ و ۹۰ میلی‌گرم (آردیا / پامیسل)"
+    ],
+    "brand_names_en": [
+      "Aredia (Pamidronate Disodium) 30 mg / 90 mg Powder for Infusion"
+    ]
   },
   {
     "id": "pancrelipase",
@@ -70496,7 +74416,17 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های سراسر کشور.",
     "pharmacology_mechanism": "پانکرلیپاز حاوی سه آنزیم اصلی است: لیپاز تری‌گلیسریدها را به اسیدهای چرب آزاد و مونوگلیسرید هیدرولیز می‌کند؛ پروتئاز پیوندهای پپتیدی پروتئین‌ها را به الیگوپپتیدها می‌شکند؛ و آمیلاز نشاسته را به مالتوز و دکسترین تبدیل می‌سازد. گرانول‌های مقاوم به اسید از معده عبور کرده و در pH قلیایی دوازدهه باز می‌شوند تا هضم کامل غذا انجام شود.",
     "clinical_pearls": "در سگ‌های مبتلا به EPI، همیشه همزمان سرم یا آمپول ویتامین B12 (کوبالامین) تجویز کنید؛ در غیاب فاکتور داخلی پانکراس، کوبالامین هرگز از روده جذب نمی‌شود و بدون B12 وزن حیوان به حالت نرمال بازنخواهد گشت.",
-    "quick_dosing": "سگ: 1–2 قاشق چایخوری (حدود 2.8–5.6 گرم) پودر یا ۱ تا ۳ کپسول انتریک به ازای هر وعده غذای سگ | گربه: نصف تا یک قاشق چایخوری پودر یا یک کپسول باز شده با هر وعده غذا"
+    "quick_dosing": "سگ: 1–2 قاشق چایخوری (حدود 2.8–5.6 گرم) پودر یا ۱ تا ۳ کپسول انتریک به ازای هر وعده غذای سگ | گربه: نصف تا یک قاشق چایخوری پودر یا یک کپسول باز شده با هر وعده غذا",
+    "brand_names_fa": [
+      "آنزیم‌های پانکراس",
+      "ویوکیس",
+      "کپسول کرئون ۱۰،۰۰۰ و ۲۵،۰۰۰ واحد (پانکراتین / پانکرلیپاز ماکروسفری)",
+      "قرص پانکراتین ساده خوراکی"
+    ],
+    "brand_names_en": [
+      "Kreon (Pancrelipase Minimicrospheres) 10,000 / 25,000 Capsules (Abbott)",
+      "Pancreatin Simple Enteric-Coated Tablets"
+    ]
   },
   {
     "id": "paroxetine",
@@ -70628,7 +74558,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور تحت نسخه رسمی پزشک.",
     "pharmacology_mechanism": "پاروکستین ناقل بازجذب سروتونین (SERT) را در غشای پایانه‌های عصبی پیش‌سیناپسی مسدود می‌سازد. این امر غلظت سروتونین در شکاف سیناپسی را افزایش داده و در طول مصرف مزمن، سبب حساسیت‌زدایی و داون-رگولاسیون گیرنده‌های خودی 5-HT1A و افزایش پایدار انتقال پیام‌های سروتونرژیک آرام‌بخش و ضدترس در قشر مغز و آمیگدال می‌شود.",
     "clinical_pearls": "به صاحب حیوان اکیداً یادآوری کنید: پاروکستین داروی آرام‌بخش فوری نیست! نباید انتظار داشته باشید سگ امروز قرص بخورد و فردا آرام شود؛ اثر بیوشیمیایی دارو بر قشر مغز حداقل ۱ ماه مصرف مداوم زمان می‌برد.",
-    "quick_dosing": "سگ: 0.5–1 mg/kg (حداکثر 1.5 mg/kg) | گربه: 0.25–0.5 mg/kg (یا 1.25–2.5 mg به ازای هر گربه)"
+    "quick_dosing": "سگ: 0.5–1 mg/kg (حداکثر 1.5 mg/kg) | گربه: 0.25–0.5 mg/kg (یا 1.25–2.5 mg به ازای هر گربه)",
+    "brand_names_fa": [
+      "پاکسیل",
+      "قرص پاروکستین ۲۰ میلی‌گرم خط‌دار (پاکسیل / لوکسیتین)"
+    ],
+    "brand_names_en": [
+      "Paxil (Paroxetine HCl) 20 mg Tablets"
+    ]
   },
   {
     "id": "penicillamine",
@@ -70763,7 +74700,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های بیمارستانی و مرجع کشور.",
     "pharmacology_mechanism": "دی-پنی‌سیلامین یک ترکیب تیولی فعال (-SH) است که اتم‌های مس و سایر فلزات سنگین (سرب، جیوه) را در بافت‌ها و گردش خون به دام انداخته و با آنها کمپلکس‌های کلاته بسیار پایدار، محلول در آب و فاقد سمیت بافتی تشکیل می‌دهد. این کمپلکس‌ها به سرعت از طریق فیلتراسیون گلومرولی کلیه‌ها وارد ادرار شده و دفع می‌گردند.",
     "clinical_pearls": "اگر سگی پس از مصرف پنی‌سیلامین استفراغ می‌کند، هرگز آن را همراه با غذای پرپروتئین ندهید؛ به جای آن، دوز روزانه را به ۳ یا ۴ نوبت کوچک‌تر تقسیم کنید و همراه با یک حبه قند یا تکه بسیار کوچک نان خشک تجویز نمایید.",
-    "quick_dosing": "سگ: 10–15 mg/kg | گربه: 10 mg/kg"
+    "quick_dosing": "سگ: 10–15 mg/kg | گربه: 10 mg/kg",
+    "brand_names_fa": [
+      "کوپریمین",
+      "کپسول دی-پنی‌سیلامین ۲۵۰ میلی‌گرم (کوپریمین / آرتامین)"
+    ],
+    "brand_names_en": [
+      "Cuprimine (D-Penicillamine) 250 mg Capsules"
+    ]
   },
   {
     "id": "penicillin_v_potassium",
@@ -70898,7 +74842,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به عنوان آنتی‌بیوتیک پایه.",
     "pharmacology_mechanism": "پنی‌سیلین وی با اتصال به پروتئین‌های اختصاصی اتصالی پنی‌سیلین (PBPs) در دیواره باکتری، آنزیم‌های ترانس‌پپتیداز را مهار کرده و از تشکیل اتصالات عرضی در زنجیره‌های پپتیدوگلیکان دیواره باکتری ممانعت می‌کند. این امر موجب ناپایداری اسمزی دیواره و لیز سریع باکتری در فاز رشد فعال می‌شود.",
     "clinical_pearls": "همیشه قبل از نسخه کردن پنی‌سیلین وی از صاحب حیوان نوع گونه را بپرسید؛ خوراندن حتی نصف قرص پنی‌سیلین وی به یک خرگوش خانگی مبتلا به آبسه دندان، ظرف ۴۸ ساعت سبب انتروکولیت کلستریدیایی حاد و مرگ حتمی خرگوش خواهد شد.",
-    "quick_dosing": "سگ: 10 mg/kg (معادل حدود 15,000–20,000 IU/kg) | گربه: 10 mg/kg"
+    "quick_dosing": "سگ: 10 mg/kg (معادل حدود 15,000–20,000 IU/kg) | گربه: 10 mg/kg",
+    "brand_names_fa": [
+      "فنوکسی‌متیل پنی‌سیلین",
+      "قرص پنی‌سیلین وی ۵۰۰ میلی‌گرم (معادل ۶۵۰،۰۰۰ واحد)",
+      "سوسپانسیون خوراکی پنی‌سیلین وی ۱۲۵ و ۲۵۰ میلی‌گرم در ۵ میلی‌لیتر"
+    ],
+    "brand_names_en": [
+      "Penicillin V Potassium 500 mg Tablets",
+      "Penicillin V 125 mg / 250 mg / 5 mL Oral Suspension"
+    ]
   },
   {
     "id": "pentobarbital_sodium",
@@ -71062,7 +75015,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در لیست داروهای به شدت تحت کنترل و پوکه‌ای دامپزشکی کشور.",
     "pharmacology_mechanism": "پنتوباربیتال گیرنده‌های GABA-A را در سراسر سیستم عصبی مرکزی فعال کرده و زمان باز بودن کانال‌های کلریدی را به شدت طولانی می‌سازد؛ در دوزهای اتانازی، هایپرپلاریزاسیون عمیق تمام نورون‌های مغزی، فلج مرکز تنفس در بصل‌النخاع، هیپوکسی آنوکسیک میوکارد و ایست کامل فعالیت قلبی در دیاستول را ظرف ۳۰ تا ۶۰ ثانیه رقم می‌زند.",
     "clinical_pearls": "قانون طلایی اتانازی دامپزشکی: هرگز پنتوباربیتال را به حیوان بیدار تزریق نکنید! همیشه ابتدا با پروپوفول یا ترکیب آرام‌بخش حیوان را به خواب عمیق ببرید تا صاحب حیوان شاهد کوچکترین تقلا یا گازپینگ تنفسی رفلکسی نباشد.",
-    "quick_dosing": "سگ: 80–100 mg/kg (معادل حدود 1 mL به ازای هر ۴ تا ۵ کیلوگرم از محلول‌های استاندارد ۳۹۰ mg/mL) | گربه: 100 mg/kg (معادل حدود 1 mL به ازای هر ۳ تا ۴ کیلوگرم) | اسب: 80–100 mg/kg (معادل حدود 100–120 mL از محلول غلیظ دامی)"
+    "quick_dosing": "سگ: 80–100 mg/kg (معادل حدود 1 mL به ازای هر ۴ تا ۵ کیلوگرم از محلول‌های استاندارد ۳۹۰ mg/mL) | گربه: 100 mg/kg (معادل حدود 1 mL به ازای هر ۳ تا ۴ کیلوگرم) | اسب: 80–100 mg/kg (معادل حدود 100–120 mL از محلول غلیظ دامی)",
+    "brand_names_fa": [
+      "نمبوتال",
+      "محلول غلیظ اتانازی پنتوباربیتال سدیم دامی (یوتازول / تی-۶۱)",
+      "آمپول پنتوباربیتال سدیم ۵۰ میلی‌گرم در میلی‌لیتر (نمبوتال)"
+    ],
+    "brand_names_en": [
+      "Euthasol / Somulose (Pentobarbital Sodium 390 mg/mL) 100 mL",
+      "Nembutal (Pentobarbital Sodium 50 mg/mL) Injection"
+    ]
   },
   {
     "id": "pentosan_polysulfate",
@@ -71211,7 +75173,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در کلینیک‌ها و بیمارستان‌های تخصصی دامپزشکی کشور.",
     "pharmacology_mechanism": "پنتوزان پلی‌سولفات یک پلیمر خطی پلی‌آنیونی از عصاره چوب راش است. این مولکول آنزیم‌های کلاژناز، اگریکاناز و متالوپروتئیناز ماتریکس (MMP-3, MMP-13) را در مایع سینوویال مهار کرده و از آپوپتوز سلول‌های غضروفی جلوگیری می‌کند؛ همچنین جریان خون مویرگی در استخوان ساب‌کوندرال را بهبود بخشیده و غلظت اسید هیالورونیک درون‌مفصلی را به حالت فیزیولوژیک بازمی‌گرداند.",
     "clinical_pearls": "به صاحب بیمار توضیح دهید که کارتروفن مسکن کورتونی نیست که ظرف ۲ ساعت درد را قطع کند؛ پنتوزان مانند معمار غضروف است؛ معجزه آن در پایان هفته سوم و چهارم با بازگشت نرمی و بازیگوشی سگ آشکار خواهد شد.",
-    "quick_dosing": "سگ: 3 mg/kg | گربه: 1–3 mg/kg (معمولاً 2.5 mg/kg) | اسب: 3 mg/kg (یا 2.5–3 g به ازای هر اسب بالغ)"
+    "quick_dosing": "سگ: 3 mg/kg | گربه: 1–3 mg/kg (معمولاً 2.5 mg/kg) | اسب: 3 mg/kg (یا 2.5–3 g به ازای هر اسب بالغ)",
+    "brand_names_fa": [
+      "کارت Validate",
+      "کارتروفن",
+      "ویال کارتروفن وت ۱۰۰ میلی‌گرم در میلی‌لیتر (پنتوزان پلی‌سولفات سدیم)"
+    ],
+    "brand_names_en": [
+      "Cartrophen Vet (Pentosan Polysulfate 100 mg / mL) 10 mL Vial"
+    ]
   },
   {
     "id": "pentoxifylline",
@@ -71365,7 +75335,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به عنوان داروی عروقی.",
     "pharmacology_mechanism": "پنتوکسی‌فیلین یک مهارکننده غیراختصاصی آنزیم فسفودی‌استراز (PDE) است. با افزایش غلظت cAMP داخل سلولی در گلبول‌های قرمز، شکل‌پذیری و انعطاف‌پذیری دیواره اریتروسیت‌ها را به شدت افزایش داده و تجمع و چسبندگی پلاکت‌ها را مهار می‌سازد. همچنین با کاهش سطح فیبرینوژن پلاسما، خون را روان‌تر کرده و از طریق مهار رونویسی ژن TNF-alpha و IL-1، التهاب بافت عروقی را خاموش می‌کند.",
     "clinical_pearls": "در سگی که لبه گوش‌هایش مانند چرم سیاه شده و با هر تکان دادن سر خون می‌پاشد (واسکولیت پرولفراتیو گوش)، پنتوکسی‌فیلین تنها دارویی است که مویرگ‌های بسته شده انتهای گوش را مجدداً باز می‌کند.",
-    "quick_dosing": "سگ: 10–15 mg/kg (حداکثر 20 mg/kg) | گربه: 10 mg/kg | اسب: 8–10 mg/kg"
+    "quick_dosing": "سگ: 10–15 mg/kg (حداکثر 20 mg/kg) | گربه: 10 mg/kg | اسب: 8–10 mg/kg",
+    "brand_names_fa": [
+      "ترنتال",
+      "قرص پنتوکسی‌فیلین ۴۰۰ میلی‌گرم پیوسته‌رهش (ترنتال / رتارفیین)"
+    ],
+    "brand_names_en": [
+      "Trental (Pentoxifylline) 400 mg Extended-Release Tablets"
+    ]
   },
   {
     "id": "pergolide_mesylate",
@@ -71471,7 +75448,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در باشگاه‌ها و بیمارستان‌های تخصصی اسب کشور.",
     "pharmacology_mechanism": "در اسب‌های مبتلا به PPID، نورون‌های دوپامinergic هیپوتالاموس دچار تخریب اکسیداتیو شده و مهار مهاری طبیعی بر بخش میانی هیپوفیز از بین می‌رود. پرگولاید به عنوان آگونیست گیرنده‌های D2 دوپامینی عمل کرده و جایگزین دوپامین از دست رفته می‌شود؛ با تحریک این گیرنده‌ها، هیپرپلازی و ترشح بیش از حد پپتیدهای POMC و ACTH از سلول‌های ملانوتروف هیپوفیز کاملاً مهار می‌گردد.",
     "clinical_pearls": "اگر اسب مسنی در فصل تابستان پوشش پشمی ضخیم زمستانه خود را حفظ کرده و موهایش فر خورده است، شک نکنید که مبتلا به PPID است؛ قرص پراسند ظرف چند ماه موهای بلند و مجعد را ریخته و اسب را ۲۰ سال جوان‌تر نشان می‌دهد.",
-    "quick_dosing": "اسب: دوز شروع: 2 mcg/kg (معادل 1 mg به ازای یک اسب ۵۰۰ کیلوگرمی خوراکی یکبار در روز)"
+    "quick_dosing": "اسب: دوز شروع: 2 mcg/kg (معادل 1 mg به ازای یک اسب ۵۰۰ کیلوگرمی خوراکی یکبار در روز)",
+    "brand_names_fa": [
+      "پراسند",
+      "قرص پراسند ۱ میلی‌گرم (پرگولاید مزینات اختصاصی اسب)"
+    ],
+    "brand_names_en": [
+      "Prascend (Pergolide Mesylate 1 mg) Tablets for Horses (Boehringer Ingelheim)"
+    ]
   },
   {
     "id": "phenoxybenzamine",
@@ -71611,7 +75595,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های تک‌نسخه‌ای و ارولوژی تخصصی کشور.",
     "pharmacology_mechanism": "فنوکسی‌بنزامین با تشکیل یک حدواسط فعال و یونیزه اتیلن‌ایمونیوم، پیوند کووالانسی بسیار محکمی با گیرنده‌های آلفا-آدرنرژیک عضلات صاف برقرار می‌کند. از آنجا که این اتصال برگشت‌ناپذیر است، اثر شل‌کنندگی عضلات اسفنکتر خروجی پیشابراه و افت مقاومت عروقی حتی با مقادیر بالای اپی‌نفرین شکسته نمی‌شود و تا زمان سنتز گیرنده‌های جدید (چند روز) باقی می‌ماند.",
     "clinical_pearls": "اگر گربه نری پس از خروج سوند ادراری مکرراً به خاک می‌رود و با زورپیچ فقط چند قطره ادرار بیرون می‌دهد، مثانه بسته نیست بلکه اسفنکتر پیشابراه دچار اسپاسم شدید است؛ فنوکسی‌بنزامین این گره عضلانی را باز می‌کند.",
-    "quick_dosing": "سگ: 0.25–1 mg/kg (شروع با کمترین دوز) | گربه: 0.25–0.5 mg/kg (معمولاً حدود 1.25–2.5 mg به ازای هر گربه)"
+    "quick_dosing": "سگ: 0.25–1 mg/kg (شروع با کمترین دوز) | گربه: 0.25–0.5 mg/kg (معمولاً حدود 1.25–2.5 mg به ازای هر گربه)",
+    "brand_names_fa": [
+      "دیبنزیلین",
+      "کپسول فنوکسی‌بنزامین ۱۰ میلی‌گرم (دیبنزیلین)"
+    ],
+    "brand_names_en": [
+      "Dibenzyline (Phenoxybenzamine HCl) 10 mg Capsules"
+    ]
   },
   {
     "id": "phenylephrine_systemic",
@@ -71765,7 +75756,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام بیمارستان‌ها و داروخانه‌های دارای بخش مراقبت‌های ویژه.",
     "pharmacology_mechanism": "فنیل‌افرین گیرنده‌های آلفا-۱ پس‌سیناپسی را در عضلات صاف شریانچه‌های محیطی تحریک می‌کند. با فعال‌سازی فسفولیپاز C و افزایش اینوزیتول تری‌فسفات (IP3) داخل سلولی، یون‌های کلسیم آزاد شده و انقباض شدید عروقی و افزایش مقاومت عروق سیستمیک (SVR) رخ می‌دهد. در اسب، کپسول طحال غنی از گیرنده‌های آلفا-۱ منقبض شده، اندازه طحال به نصف کاهش می‌یابد و کولون به دام افتاده آزاد می‌گردد.",
     "clinical_pearls": "در کولیک به دام افتادن طحال اسب، بلافاصله پس از اتمام انفوزیون فنیل‌افرین، اسب را ۱۰ تا ۱۵ دقیقه در محوطه مانژ یورتمه ببرید؛ انقباض طحال همراه با حرکات جهشی دویدن، کولون گیر افتاده را از روی طحال به پایین می‌اندازد و نیاز به جراحی مرتفع می‌شود.",
-    "quick_dosing": "سگ: 1–3 mcg/kg به صورت بولوس وریدی آهسته، یا 0.1–0.5 mcg/kg/min به صورت CRI | گربه: 0.1–0.3 mcg/kg/min (CRI) | اسب: 2–3 mcg/kg/min به صورت انفوزیون وریدی رقیق‌شده در ۵۰۰ میلی‌لیتر سالین ظرف ۱۵ دقیقه (یا تک دوز 10–12 mcg/kg وریدی آهسته)"
+    "quick_dosing": "سگ: 1–3 mcg/kg به صورت بولوس وریدی آهسته، یا 0.1–0.5 mcg/kg/min به صورت CRI | گربه: 0.1–0.3 mcg/kg/min (CRI) | اسب: 2–3 mcg/kg/min به صورت انفوزیون وریدی رقیق‌شده در ۵۰۰ میلی‌لیتر سالین ظرف ۱۵ دقیقه (یا تک دوز 10–12 mcg/kg وریدی آهسته)",
+    "brand_names_fa": [
+      "تزریقی و سیستمیک",
+      "آمپول فنیل‌افرین هیدروکلراید ۱۰ میلی‌گرم در میلی‌لیتر (۱٪ تزریقی)"
+    ],
+    "brand_names_en": [
+      "Phenylephrine HCl 10 mg / mL (1%) Injection Ampoules"
+    ]
   },
   {
     "id": "phenylpropanolamine",
@@ -71886,7 +75884,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌ها و داروخانه‌های تخصصی دامپزشکی کشور.",
     "pharmacology_mechanism": "فنیل‌پروپانول‌آمین یک آمین سمپاتومیمتیک با اثر مستقیم و غیرمستقیم است. این دارو با تحریک مستقیم گیرنده‌های آلفا-۱ آدرنرژیک و نیز تحریک آزادسازی نوراپی‌نفرین در پایانه‌های عصبی عضلات صاف گردن مثانه و پیشابراه، فشار بسته شدن پیشابراه (Urethral Closure Pressure) را افزایش داده و مانع خروج غیرارادی ادرار در زمان افزایش فشار شکمی می‌شود.",
     "clinical_pearls": "به صاحب سگی که فرشش دائماً از ادرار نشت کرده خیس است مژده دهید که پروین ظرف ۴۸ تا ۷۲ ساعت نشت ادرار را به طور کامل متوقف می‌کند؛ اما حتماً قبل از شروع، فشار خون سگ را با دستگاه داپلر چک کنید.",
-    "quick_dosing": "سگ: 1–1.5 mg/kg (قرص‌های ۲۵، ۵۰ و ۷۵ میلی‌گرم Proin)"
+    "quick_dosing": "سگ: 1–1.5 mg/kg (قرص‌های ۲۵، ۵۰ و ۷۵ میلی‌گرم Proin)",
+    "brand_names_fa": [
+      "پروین",
+      "قرص پروین جویدنی (فنیل‌پروپانول‌آمین ۲۵، ۵۰ و ۷۵ میلی‌گرم)",
+      "کپسول فنیل‌پروپانول‌آمین ترکیبی فرموله شده"
+    ],
+    "brand_names_en": [
+      "Proin Chewable Tablets for Dogs (Pegasus Laboratories)",
+      "Phenylpropanolamine Compounded Capsules"
+    ]
   },
   {
     "id": "physostigmine_salicylate",
@@ -72041,7 +76048,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در مراکز مسمومیت‌ها و بیمارستان‌های تخصصی ارجاعی کشور.",
     "pharmacology_mechanism": "فیزوستیگمین یک استر کربامات است که به طور برگشت‌پذیر به جایگاه فعال آنزیم استیل‌کولین‌استراز در سیناپس‌های عصبی متصل می‌شود. ساختار لیپوفیلیک آمین ثالثیه به آن اجازه می‌دهد به سرعت از سد خونی-مغزی عبور کرده و تخریب استیل‌کولین را هم در مغز و هم در اعصاب محیطی مهار سازد؛ با تجمع استیل‌کولین، بلاک ناشی از آتروپین به صورت رقابتی شکسته می‌شود.",
     "clinical_pearls": "قاعده طلایی سم‌شناسی: نئوستیگمین هرگز پادزهر تاتوره نیست چون به مغز وارد نمی‌شود؛ تنها فیزوستیگمین است که از سد مغز می‌گذرد و هذیان، بی‌قراری و تشنج ناشی از تاتوره را متوقف می‌سازد.",
-    "quick_dosing": "سگ: 0.02–0.04 mg/kg (حداکثر 1 mg به ازای هر سگ) | گربه: 0.01–0.02 mg/kg | اسب: 0.01–0.02 mg/kg"
+    "quick_dosing": "سگ: 0.02–0.04 mg/kg (حداکثر 1 mg به ازای هر سگ) | گربه: 0.01–0.02 mg/kg | اسب: 0.01–0.02 mg/kg",
+    "brand_names_fa": [
+      "آنتی‌لیریوم",
+      "آمپول فیزوستیگمین سالیسیلات ۱ میلی‌گرم در میلی‌لیتر (آنتی‌لیریوم)"
+    ],
+    "brand_names_en": [
+      "Antilirium (Physostigmine Salicylate) 1 mg / mL Injection 2 mL"
+    ]
   },
   {
     "id": "piperacillin_tazobactam",
@@ -72194,7 +76208,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام بیمارستان‌های کشور تحت نظارت کمیته کنترل عفونت.",
     "pharmacology_mechanism": "پیپراسیلین با اتصال به PBPs حیاتی (به‌ویژه PBP-3 و PBP-1B) ساخت دیواره سلولی باکتری را متوقف می‌کند؛ تازوباکتام با مهار برگشت‌ناپذیر طیف وسیعی از آنزیم‌های بتالاکتاماز (کلاس‌های A و C شامل پنی‌سیلینازها و سفالوسپورینازها)، پیپراسیلین را از تجزیه آنزیمی محافظت کرده و نفوذ آن را به درون باکتری‌های گرم‌منفی سرسخت تضمین می‌نماید.",
     "clinical_pearls": "در پریتونیت ناشی از پاره شدن روده پس از تصادف، زوسین تنها دارویی است که همزمان باکتری‌های گرم‌منفی روده‌ای، سودوموناس مهاجم و باکتری‌های بی‌هوازی بدبوی مدفوعی (باکتروئیدس فراژیلیس) را با هم ریشه‌کن می‌کند.",
-    "quick_dosing": "سگ: 50–100 mg/kg (بر مبنای جزء پیپراسیلین) | گربه: 50 mg/kg | اسب: 50 mg/kg"
+    "quick_dosing": "سگ: 50–100 mg/kg (بر مبنای جزء پیپراسیلین) | گربه: 50 mg/kg | اسب: 50 mg/kg",
+    "brand_names_fa": [
+      "زوسین",
+      "ویال تزریقی پیپراسیلین/تازوباکتام ۲.۲۵ گرم، ۳.۳۷۵ گرم و ۴.۵ گرم (زوسین / تازوسین)"
+    ],
+    "brand_names_en": [
+      "Zosyn / Tazocin (Piperacillin/Tazobactam) 2.25 g / 4.5 g Powder for Infusion"
+    ]
   },
   {
     "id": "piperazine",
@@ -72378,7 +76399,15 @@ const DRUGS_DATA = [
       "milk_fa": "گوشت طیور: ۲ روز؛ تخم‌مرغ: ۰ روز؛ گوشت نشخوارکنندگان: ۲ تا ۴ روز.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "شربت پیپرازین سیترات خوراکی دامی و انسانی (پیپرازین وت)",
+      "پودر پیپرازین هیدرات ۱۰۰٪ محلول در آب (ساشه ۱۰۰ و ۵۰۰ گرمی)"
+    ],
+    "brand_names_en": [
+      "Piperazine Citrate 10% / 17% Oral Syrup",
+      "Piperazine Soluble Powder for Poultry & Livestock"
+    ]
   },
   {
     "id": "pirlimycin",
@@ -72488,7 +76517,14 @@ const DRUGS_DATA = [
       "milk_fa": "شیر: ۳۶ ساعت پس از آخرین تزریق دوره ۲ روزه؛ گوشت: ۹ روز (در پروتکل تمدید شده ۸ روزه زمان پرهیز شیر متناسباً افزایش می‌یابد).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پیرسو",
+      "پماد داخل پستانی پیرسو ۵۰ میلی‌گرم (پیرلیمایسین دامی)"
+    ],
+    "brand_names_en": [
+      "Pirsue (Pirlimycin HCl 50 mg) Sterile Intramammary Infusion 10 mL (Zoetis)"
+    ]
   },
   {
     "id": "piroxicam",
@@ -72638,7 +76674,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت عمومی.",
     "pharmacology_mechanism": "پیروکسیکام مهارکننده غیرانتخابی آنزیم‌های سیکلواکسیژناز (COX-1 و COX-2) است. در سرطان‌های کارسینوم سلول بینابینی (TCC)، سلول‌های بدخیم به شدت COX-2 را بیان می‌کنند که پروستاگلاندین‌های تحریک‌کننده رگ‌زایی (PGE2) و مهارکننده سیستم ایمنی را ترشح می‌نمایند. پیروکسیکام با قطع سنتز PGE2، جریان خون تومور را قطع کرده، آپوپتوز سلول‌های تومور را تحریک و فعالیت سلول‌های کشنده طبیعی (NK) را علیه سرطان احیا می‌سازد.",
     "clinical_pearls": "در سگی با تومور مثانه TCC، هرگز پیروکسیکام را به تنهایی شروع نکنید؛ همیشه از روز اول یک کپسول امپرازول نیز در کنار آن نسخه کنید تا معده بیمار سوراخ نشود و بتواند تا سال‌ها با تومور مهارشده زندگی کند.",
-    "quick_dosing": "سگ: 0.3 mg/kg | گربه: 0.3 mg/kg هر ۴۸ تا ۷۲ ساعت"
+    "quick_dosing": "سگ: 0.3 mg/kg | گربه: 0.3 mg/kg هر ۴۸ تا ۷۲ ساعت",
+    "brand_names_fa": [
+      "فلدن",
+      "کپسول پیروکسیکام ۱۰ و ۲۰ میلی‌گرم (فلدن)",
+      "آمپول پیروکسیکام ۲۰ میلی‌گرم در میلی‌لیتر تزریقی"
+    ],
+    "brand_names_en": [
+      "Feldene (Piroxicam) 10 mg / 20 mg Capsules",
+      "Piroxicam 20 mg / mL Injection Ampoules"
+    ]
   },
   {
     "id": "polyethylene_glycol_3350",
@@ -72764,7 +76809,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت OTC.",
     "pharmacology_mechanism": "پلی‌اتیلن گلیکول ۳۳۵۰ یک پلیمر طویل پلی‌اتری است که از طریق پیوندهای هیدروژنی قدرتمند، مولکول‌های آب را به دام می‌اندازد. از آنجا که این مولکول از اپیتلیوم روده جذب نمی‌شود، آب آزاد را در لومن کولون محبوس نگه داشته و مانع از بازجذب آب توسط کولون می‌شود. با افزایش حجم، هیدراته شدن و ژله‌ای شدن مدفوع متراکم، دیواره کولون تحریک شده و دفع طبیعی و بدون درد رخ می‌دهد.",
     "clinical_pearls": "بزرگترین مزیت پیدرولاکس برای گربه‌ها این است که بر خلاف لاکتولوز شیرین و چسبناک نیست که روی سبیل گربه بچسبد و گربه از صاحبش فرار کند؛ یک پیمانه پیدرولاکس در آب مرغ کاملاً محو می‌شود و گربه بدون استرس آن را تا قطره آخر لیس می‌زند.",
-    "quick_dosing": "سگ: 0.5–1 g/kg (یا نصف تا یک قاشق غذاخوری به ازای هر سگ متوسط) | گربه: یک‌هشتم تا یک‌چهارم قاشق چایخوری (حدود 0.6–1.5 گرم) به ازای هر گربه"
+    "quick_dosing": "سگ: 0.5–1 g/kg (یا نصف تا یک قاشق غذاخوری به ازای هر سگ متوسط) | گربه: یک‌هشتم تا یک‌چهارم قاشق چایخوری (حدود 0.6–1.5 گرم) به ازای هر گربه",
+    "brand_names_fa": [
+      "میرالاکس",
+      "پیدرولاکس",
+      "پودر پیدرولاکس ساشه و قوطی (پلی‌اتیلن گلیکول ۳۳۵۰ خالص)"
+    ],
+    "brand_names_en": [
+      "Pيدرولاکس / Pidrolax (Pure PEG 3350) Powder 70 g / 250 g"
+    ]
   },
   {
     "id": "polymyxin_b",
@@ -72895,7 +76948,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌های مرجع و بخش‌های جراحی اسب و مراقبت‌های ویژه کشور.",
     "pharmacology_mechanism": "پلی‌میکسین بی دارای بار الکتریکی کاتیونی بسیار بالاست. با تمایل فوق‌العاده بالا به جزء لیپید A (Lipid A) در ساختار لیپوپلی‌ساکارید (LPS) باکتری‌های گرم‌منفی متصل می‌شود. این پیوند استوکیومتری، اندوتوکسین آزاد را خنثی ساخته و مانع تحریک گیرنده‌های TLR-4 ماکروفاژها، مهار ترشح TNF-alpha و مهار شوک اتساعی و لامینایتیس ناشی از اندوتوکسین می‌گردد.",
     "clinical_pearls": "قانون حیاتی اسب‌های کولیکی: برای خنثی کردن اندوتوکسین، دوزهای اندک پلی‌میکسین بی (حدود ۲۰۰۰ واحد/کیلوگرم) معجزه می‌کند؛ هرگز دوز آنتی‌بیوتیکی به اسب نزنید زیرا کلیه‌های اسب را منهدم خواهید کرد.",
-    "quick_dosing": "سگ: 1,000–2,000 IU/kg رقیق شده در سرم سالین | اسب: 1,000–6,000 IU/kg (معمولاً 2,000–3,000 U/kg رقیق شده در ۱ تا ۲ لیتر سرم نمکی)"
+    "quick_dosing": "سگ: 1,000–2,000 IU/kg رقیق شده در سرم سالین | اسب: 1,000–6,000 IU/kg (معمولاً 2,000–3,000 U/kg رقیق شده در ۱ تا ۲ لیتر سرم نمکی)",
+    "brand_names_fa": [
+      "ویال پلی‌میکسین بی سولفات ۵۰۰،۰۰۰ واحد تزریقی استریل"
+    ],
+    "brand_names_en": [
+      "Polymyxin B Sulfate 500,000 Units Powder for Injection"
+    ]
   },
   {
     "id": "polysulfated_glycosaminoglycan",
@@ -73032,7 +77091,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌های تخصصی اسب و مراکز جراحی حیوانات خانگی کشور.",
     "pharmacology_mechanism": "PSGAG یک گلیکوزآمینوگلیکان سولفاته است که با ساختار بیوشیمیایی مشابه با ماتریکس غضروف، به سطوح فرسوده غضروف متصل می‌شود. این ترکیب آنزیم‌های کاتابولیک سرین پروتئاز، استروملایزین و اینترلوکین-۱ (IL-1) را در مایع سینوویال مهار ساخته و با تحریک سلول‌های سینوویوسیت نوع B، سنتز اسید هیالورونیک درون‌زا و پروتئوگلیکان‌ها را بازسازی می‌نماید.",
     "clinical_pearls": "در سگی با لنگش مزمن، ادکوان تنها مسکنی است که اثر ساختاری دارد؛ صاحب سگ ممکن است تا دوز سوم و چهارم تغییر چشمگیری نبیند، اما پس از تکمیل پروتکل ۸ دوزه، بهبود بالینی تا ۶ ماه باقی خواهد ماند.",
-    "quick_dosing": "سگ: 4.4 mg/kg (معادل 1 mL به ازای هر ۲۲.۷ کیلوگرم وزن سگ از ویال 100 mg/mL) | اسب: 500 mg به ازای هر اسب بالغ (۵ میلی‌لیتر از محلول 100 mg/mL)"
+    "quick_dosing": "سگ: 4.4 mg/kg (معادل 1 mL به ازای هر ۲۲.۷ کیلوگرم وزن سگ از ویال 100 mg/mL) | اسب: 500 mg به ازای هر اسب بالغ (۵ میلی‌لیتر از محلول 100 mg/mL)",
+    "brand_names_fa": [
+      "ادکوان",
+      "ویال ادکوان سگ ۱۰۰ میلی‌گرم در میلی‌لیتر (PSGAG تزریقی ۵ میلی‌لیتر)",
+      "ویال ادکوان اسب ۵۰۰ میلی‌گرم در ۵ میلی‌لیتر (Adequan Equine)"
+    ],
+    "brand_names_en": [
+      "Adequan Canine (PSGAG 100 mg / mL) 5 mL Multi-Dose Vial (Luitpold / American Regent)",
+      "Adequan Equine (PSGAG 500 mg / 5 mL) Injection"
+    ]
   },
   {
     "id": "ponazuril",
@@ -73180,7 +77248,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در باشگاه‌ها، بیمارستان‌های تخصصی اسب و مراکز مرجع کشور.",
     "pharmacology_mechanism": "پونازوریل یک مشتق تریازین-تری‌ان است که به طور انتخابی اندامک آپیکوپلاست (Apicoplast) و آنزیم‌های بیوسنتز اسیدهای چرب و پیرول انگل‌های رده Apicomplexa را هدف قرار می‌دهد. با متوقف شدن تقسیم شیزونت‌ها و تخریب غشای سلولی، تک‌یاخته تکثیر خود در نورون‌های طناب نخاعی و سلول‌های اپیتلیال را از دست داده و لیز می‌شود.",
     "clinical_pearls": "اگر کره‌ای در پناهگاه یا توله‌ای در پانسیون با اسهال آبکی پر از اووسیست کوکسیدیا به سولفادیمتوکسین پاسخ نمی‌دهد، وقت را تلف نکنید؛ یک دوز پونازوریل ظرف ۲۴ ساعت اسهال را قطع کرده و جان حیوان را نجات می‌دهد.",
-    "quick_dosing": "سگ: 20–30 mg/kg (حداکثر 50 mg/kg) | گربه: 20–30 mg/kg | اسب: 5 mg/kg روزانه به مدت ۲۸ روز متوالی (خمیر خوراکی Marquis 150 mg/g)"
+    "quick_dosing": "سگ: 20–30 mg/kg (حداکثر 50 mg/kg) | گربه: 20–30 mg/kg | اسب: 5 mg/kg روزانه به مدت ۲۸ روز متوالی (خمیر خوراکی Marquis 150 mg/g)",
+    "brand_names_fa": [
+      "مارکوئیس",
+      "خمیر خوراکی مارکوئیس اسب (پونازوریل ۱۵٪ - هر سرنگ حاوی ۱۲۷ گرم خمیر)"
+    ],
+    "brand_names_en": [
+      "Marquis (Ponazuril 15% w/w) Oral Paste Syringe (Boehringer Ingelheim / Merial)"
+    ]
   },
   {
     "id": "pradofloxacin",
@@ -73316,7 +77391,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌ها و کلینیک‌های معتبر حیوانات خانگی کشور.",
     "pharmacology_mechanism": "پرادوفلوکساسین دارای یک گروه منحصر به فرد سیانو در موقعیت C-8 است. این تغییر ساختاری تمایل آنزیمی دارو را به هر دو هدف باکتریایی یعنی DNA ژیراز و توپوایزومراز IV برابر می‌سازد (مکانیسم مهار دوگانه Dual-Targeting). این ویژگی سبب می‌شود که باکتری‌ها نتوانند با یک جهش تک‌نقطه‌ای در ژن gyrA مقاومت ایجاد کنند و همچنین اثر باکتریوسیدال آن بر بی‌هوازی‌ها گسترش یابد.",
     "clinical_pearls": "اگر برای گربه‌ای نیاز به فلوروکینولون دارید، هرگز به سراغ انروفلوکساسین دوز بالا نروید زیرا خطر نابینایی دائمی دارد؛ ورافلوکس (پرادوفلوکساسین) با خیال راحت تجویز می‌شود بدون آنکه نگران آسیب به شبکیه گربه باشید.",
-    "quick_dosing": "سگ: 3–5 mg/kg | گربه: 7.5 mg/kg (معادل 0.3 mL/kg از سوسپانسیون 25 mg/mL Veraflox)"
+    "quick_dosing": "سگ: 3–5 mg/kg | گربه: 7.5 mg/kg (معادل 0.3 mL/kg از سوسپانسیون 25 mg/mL Veraflox)",
+    "brand_names_fa": [
+      "ورافلوکس",
+      "سوسپانسیون خوراکی ورافلوکس گربه ۲.۵٪ (پرادوفلوکساسین ۲۵ میلی‌گرم/میلی‌لیتر)",
+      "قرص ورافلوکس سگ ۱۵، ۶۰ و ۱۲۰ میلی‌گرم (پرادوفلوکساسین)"
+    ],
+    "brand_names_en": [
+      "Veraflox (Pradofloxacin 2.5%) Oral Suspension for Cats 15 mL (Bayer / Elanco)",
+      "Veraflox Taste Tablets for Dogs (Pradofloxacin)"
+    ]
   },
   {
     "id": "pregabalin",
@@ -73464,7 +77548,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور تحت نسخه رسمی.",
     "pharmacology_mechanism": "پره‌گابالین با تمایل پیوندی بسیار قوی‌تر از گاباپنتین به زیرواحد کمکی آلفا-۲-دلتا (Alpha-2-Delta) از کانال‌های کلسیمی وابسته به ولتاژ نوع N در نورون‌های پیش‌سیناپسی نخاع و مغز متصل می‌شود. با کاهش ورود کلسیم به پایانه‌های عصبی، آزادسازی نوروترانسمیترهای پیش‌برنده درد و تشنج (گلوتامات، نوراپی‌نفرین و ماده P) مهار شده و انتقال سیناپسی درد نوروپاتیک سرکوب می‌گردد.",
     "clinical_pearls": "اگر سگی با دیسک مهره‌ای (IVDD) علی‌رغم ترامادول و کورتون هنوز از درد جیغ می‌کشد، درد او نوروپاتیک است؛ پره‌گابالین ظرف چند ساعت آتش این درد را خاموش می‌کند.",
-    "quick_dosing": "سگ: 2–4 mg/kg (حداکثر 5 mg/kg) | گربه: 5 mg/kg خوراکی (تک دوز حدود ۹۰ دقیقه قبل از خروج از منزل)"
+    "quick_dosing": "سگ: 2–4 mg/kg (حداکثر 5 mg/kg) | گربه: 5 mg/kg خوراکی (تک دوز حدود ۹۰ دقیقه قبل از خروج از منزل)",
+    "brand_names_fa": [
+      "لیریکا",
+      "کپسول پره‌گابالین ۵۰، ۷۵، ۱۰۰ و ۱۵۰ میلی‌گرم (لیریکا / لیریکور)"
+    ],
+    "brand_names_en": [
+      "Lyrica (Pregabalin) 50 mg / 75 mg / 100 mg / 150 mg Capsules (Pfizer)"
+    ]
   },
   {
     "id": "primaquine_phosphate",
@@ -73591,7 +77682,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در مراکز مبارزه با بیماری‌های واگیر و داروخانه‌های رسمی کشور.",
     "pharmacology_mechanism": "پریماکین در داخل سلول‌های انگلی و اریتروسیت‌ها اکسید شده و واسطه‌های فعال کینونی و رادیکال‌های فعال اکسیژن (ROS) تولید می‌کند. این رادیکال‌ها زنجیره انتقال الکترون میتوکندری انگل تک‌یاخته را تخریب کرده و با اختلال در عملکرد یوبی‌کینون، تمام اشکال تروفوزوئیت خونی بابزیا را نابود می‌سازند.",
     "clinical_pearls": "اگر گربه‌ای با زردی و کم‌خونی شدید با تشخیص بابزیوز مواجه شد، ایمیدوکارب به او نزنید زیرا بابزیا فلیس به آن مقاوم است؛ پریماکین تنها سلاحی است که انگل را در گلبول‌های قرمز گربه از بین می‌برد.",
-    "quick_dosing": "سگ: 0.5 mg/kg | گربه: 0.5–1 mg/kg (بر مبنای داروی پایه پریماکین)"
+    "quick_dosing": "سگ: 0.5 mg/kg | گربه: 0.5–1 mg/kg (بر مبنای داروی پایه پریماکین)",
+    "brand_names_fa": [
+      "قرص پریماکین فسفات ۱۵ میلی‌گرم (معادل ۷.۵ میلی‌گرم پایه)"
+    ],
+    "brand_names_en": [
+      "Primaquine Phosphate 15 mg Tablets"
+    ]
   },
   {
     "id": "procainamide",
@@ -73732,7 +77829,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌ها و داروخانه‌های تخصصی قلب کشور.",
     "pharmacology_mechanism": "پروکائین‌آمید با مسدود ساختن کانال‌های سریع سدیمی در غشای میوکارد، شیب فاز صفر پتانسیل عمل و سرعت هدایت را کاهش می‌دهد. علاوه بر این، با مسدود کردن جریان‌های خروجی پتاسیم، فاز ۳ رپلاریزاسیون را طولانی کرده و دوره تحریک‌ناپذیری موثر دهلیزها، بطن‌ها و سیستم پورکنژ را به شدت افزایش می‌دهد که مانع از چرخش ایمپالس‌های رینترانت نابجا می‌شود.",
     "clinical_pearls": "قانون کاردیولوژی اورژانس: اگر سگ پس از جراحی پیچ‌خوردگی معده (GDV) دچار تاکی‌کاردی بطنی شد و پس از ۳ بولوس لیدوکائین هنوز آریتمی بطنی پابرجاست، وقت را با لیدوکائین تلف نکنید؛ پروکائین‌آمید خط دوم نجات زندگی اوست.",
-    "quick_dosing": "سگ: 6–10 mg/kg بولوس آهسته وریدی ظرف ۱۰ تا ۱۵ دقیقه، سپس 25–40 mcg/kg/min به صورت انفوزیون مداوم (CRI) | گربه: 3–8 mg/kg"
+    "quick_dosing": "سگ: 6–10 mg/kg بولوس آهسته وریدی ظرف ۱۰ تا ۱۵ دقیقه، سپس 25–40 mcg/kg/min به صورت انفوزیون مداوم (CRI) | گربه: 3–8 mg/kg",
+    "brand_names_fa": [
+      "پرونکستیل",
+      "آمپول پروکائین‌آمید ۱۰۰ میلی‌گرم در میلی‌لیتر (پرونکستیل ویال ۱۰ میلی‌لیتری)",
+      "کپسول و قرص پروکائین‌آمید ۲۵۰ و ۵۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Pronestyl (Procainamide HCl) 100 mg / mL Injection 10 mL",
+      "Procainamide HCl 250 mg / 500 mg Capsules"
+    ]
   },
   {
     "id": "procarbazine",
@@ -73873,7 +77979,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی انکولوژی کشور.",
     "pharmacology_mechanism": "پروکاربازین در کبد به متابولیت‌های فعال آزو، آزوکسی و در نهایت رادیکال‌های متیل آزاد اکسید می‌شود. این رادیکال‌ها به DNA سلول‌ها متصل شده و متیلاسیون موقعیت O6 و N7 گوانین را القا می‌کنند؛ شکست دورشته‌ای DNA، مهار سنتز پروتئین و مهار میتوز به سرعت تکثیر لنفوسیت‌های توموری و سلول‌های التهابی مغز را متوقف می‌سازد.",
     "clinical_pearls": "در سگی با آتاکسی حاد و تشنج که ام‌آرآی مننگوانسفالیت خودایمن GME را نشان داده است، کورتون به تنهایی کافی نیست؛ پروکاربازین به دلیل نفوذ معجزه‌آسا به مایع مغزی-نخاعی، سگ را ظرف ۲ هفته از مرگ نجات می‌دهد.",
-    "quick_dosing": "سگ: 25–50 mg/m² روزانه به صورت خوراکی مداوم یا 100 mg/m² روزانه به مدت ۱۴ روز متوالی هر ۴ هفته | گربه: 25–50 mg/m² روزانه به مدت ۱۴ روز"
+    "quick_dosing": "سگ: 25–50 mg/m² روزانه به صورت خوراکی مداوم یا 100 mg/m² روزانه به مدت ۱۴ روز متوالی هر ۴ هفته | گربه: 25–50 mg/m² روزانه به مدت ۱۴ روز",
+    "brand_names_fa": [
+      "ماتولان",
+      "کپسول ماتولان ۵۰ میلی‌گرم (پروکاربازین هیدروکلراید)"
+    ],
+    "brand_names_en": [
+      "Matulane (Procarbazine HCl) 50 mg Capsules (Sigma-Tau / Leadiant)"
+    ]
   },
   {
     "id": "prochlorperazine",
@@ -74013,7 +78126,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت عمومی.",
     "pharmacology_mechanism": "پروکلرپرازین با مسدود کردن گیرنده‌های دوپامینی D2 در ناحیه ماشه‌چکان کمورسپتور (CRTZ) واقع در کف بطن چهارم مغز، از تحریک مرکز استفراغ توسط سموم اورمیک، داروها و متابولیت‌ها جلوگیری می‌کند؛ همچنین دارای اثرات آنتی‌کولینرژیک و آنتی‌هیستامینی ضعیف است که به آرامش عضلات صاف دستگاه گوارش کمک می‌نماید.",
     "clinical_pearls": "همیشه قبل از تزریق پروکلرپرازین مطمئن شوید سگ جسم خارجی نخورده باشد؛ مهار استفراغ در حیوانی که استخوان یا توپ در روده‌اش گیر کرده، علائم بالینی را پنهان کرده و باعث نکروز و سوراخ شدن روده می‌شود.",
-    "quick_dosing": "سگ: 0.1–0.5 mg/kg (معمولاً 0.1–0.2 mg/kg تزریقی) | گربه: 0.1–0.2 mg/kg"
+    "quick_dosing": "سگ: 0.1–0.5 mg/kg (معمولاً 0.1–0.2 mg/kg تزریقی) | گربه: 0.1–0.2 mg/kg",
+    "brand_names_fa": [
+      "کامپازین",
+      "آمپول پروکلرپرازین مالئات ۱۲.۵ میلی‌گرم در میلی‌لیتر (کامپازین / استمتیل)",
+      "قرص پروکلرپرازین ۵ میلی‌گرم خوراکی"
+    ],
+    "brand_names_en": [
+      "Compazine / Stemetil (Prochlorperazine) 12.5 mg / mL Injection",
+      "Prochlorperazine 5 mg Tablets"
+    ]
   },
   {
     "id": "promethazine",
@@ -74149,7 +78271,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت عمومی.",
     "pharmacology_mechanism": "پرومتازین آنتاگونیست رقابتی قوی گیرنده‌های H1 هیستامینی در عضلات صاف عروق، برونش‌ها و پایانه‌های حسی است. همچنین با مهار گیرنده‌های کولینرژیک موسکارینی در هسته‌های وستیبولار گوش داخلی و ساقه مغز، انتقال پیام‌های تهوع ناشی از حرکت و تعادل را مسدود ساخته و آرام‌بخشی مرکزی ایجاد می‌نماید.",
     "clinical_pearls": "سگی که با صورت ورم‌کرده و چشم‌های بسته ناشی از نیش زنبور به کلینیک می‌آید، یک تزریق عضلانی پرومتازین همراه با دگزامتازون ظرف ۲۰ دقیقه ادم صورت را می‌خواباند و سگ را به راحتی به خواب می‌برد.",
-    "quick_dosing": "سگ: 0.2–0.5 mg/kg (حداکثر 1 mg/kg) | گربه: 0.2–0.4 mg/kg"
+    "quick_dosing": "سگ: 0.2–0.5 mg/kg (حداکثر 1 mg/kg) | گربه: 0.2–0.4 mg/kg",
+    "brand_names_fa": [
+      "آمپول پرومتازین هیدروکلراید ۵۰ میلی‌گرم در ۲ میلی‌لیتر (۲۵ میلی‌گرم/میلی‌لیتر)",
+      "شربت پرومتازین ۵ میلی‌گرم در ۵ میلی‌لیتر خوراکی (بدون زایلیتول)"
+    ],
+    "brand_names_en": [
+      "Promethazine HCl 25 mg / mL Injection 2 mL",
+      "Promethazine 5 mg / 5 mL Oral Syrup 60 mL"
+    ]
   },
   {
     "id": "propantheline_bromide",
@@ -74285,7 +78415,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های سراسر کشور.",
     "pharmacology_mechanism": "پروپانتلین بروماید آنتاگونیست رقابتی گیرنده‌های کولینرژیک موسکارینی (M2 و M3) در عضلات صاف احشایی است. با مسدود کردن تحریک استیل‌کولین در عضله دتروسور مثانه، انقباضات اسپاستیک غیرارادی مثانه مهار شده، آستانه احساس پرشدگی مثانه بالا می‌رود و ظرفیت ذخیره‌سازی ادرار بدون احساس درد و فشار افزایش می‌یابد.",
     "clinical_pearls": "همیشه قبل از تجویز پروپانتلین مطمئن شوید پیشابراه باز است و انسداد سنگ یا لخته وجود ندارد؛ اگر به حیوانی با پیشابراه مسدود داروی شل‌کننده مثانه بدهید، مثانه تا مرز ترکیدن پر خواهد شد بدون اینکه حیوان بتواند آن را تخلیه کند.",
-    "quick_dosing": "سگ: 0.25–0.5 mg/kg (حداکثر تا 1 mg/kg در موارد مقاوم) | گربه: 1.25–2.5 mg به ازای هر گربه (حدود یک‌چهارم قرص ۱۵ میلی‌گرم)"
+    "quick_dosing": "سگ: 0.25–0.5 mg/kg (حداکثر تا 1 mg/kg در موارد مقاوم) | گربه: 1.25–2.5 mg به ازای هر گربه (حدود یک‌چهارم قرص ۱۵ میلی‌گرم)",
+    "brand_names_fa": [
+      "پرو-بانتین",
+      "قرص پروپانتلین بروماید ۱۵ میلی‌گرم (پرو-بانتین)"
+    ],
+    "brand_names_en": [
+      "Pro-Banthine (Propantheline Bromide) 15 mg Sugar-Coated Tablets"
+    ]
   },
   {
     "id": "propranolol",
@@ -74436,7 +78573,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت عمومی.",
     "pharmacology_mechanism": "پروپرانولول گیرنده‌های بتا-۱ میوکارد را مسدود ساخته و سرعت ضربان، قدرت انقباضی و سرعت هدایت گره AV را کاهش می‌دهد؛ همچنین با مهار گیرنده‌های بتا-۲ عروقی انقباض ملایم عروقی ایجاد می‌کند. در پرکاری تیروئید، علاوه بر بلاک اثرات کاتکول‌آمین‌ها بر قلب، آنزیم 5-دیدیناز محیطی را مهار کرده و تبدیل هورمون T4 به T3 فعال را در کبد و کلیه تا ۲۰ درصد کاهش می‌دهد.",
     "clinical_pearls": "همیشه قبل از نسخه کردن پروپرانولول برای گربه پرکار تیروئید، به صدای تنفس ریه‌اش گوش دهید؛ اگر گربه سابقه حملات سرفه و آسم دارد، هرگز پروپرانولول ندهید و به جای آن از آتنولول (بتابلاکر انتخابی بتا-۱) استفاده کنید.",
-    "quick_dosing": "سگ: 0.2–1 mg/kg (حداکثر 2 mg/kg) | گربه: 2.5–5 mg به ازای هر گربه (یا 0.2–1 mg/kg)"
+    "quick_dosing": "سگ: 0.2–1 mg/kg (حداکثر 2 mg/kg) | گربه: 2.5–5 mg به ازای هر گربه (یا 0.2–1 mg/kg)",
+    "brand_names_fa": [
+      "ایندرال",
+      "قرص پروپرانولول هیدروکلراید ۱۰، ۲۰ و ۴۰ میلی‌گرم (ایندرال / پرانول)",
+      "آمپول پروپرانولول ۱ میلی‌گرم در میلی‌لیتر تزریقی"
+    ],
+    "brand_names_en": [
+      "Inderal (Propranolol HCl) 10 mg / 20 mg / 40 mg Tablets",
+      "Propranolol 1 mg / mL Injection Ampoules"
+    ]
   },
   {
     "id": "psyllium_hydrophilic_mucilloid",
@@ -74589,7 +78735,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی، دامی و عطاری‌های معتبر کشور.",
     "pharmacology_mechanism": "پوسته دانه اسفرزه سرشار از پلی‌ساکاریدهای آرابینوکسیلان با توانایی جذب آب تا بیش از ۴۰ برابر وزن خود است. در مجرای کولون اسب، این فیبرها به ژل ویسکوز غیرقابل هضمی تبدیل می‌شوند که به ذرات سنگین شن و ماسه چسبیده و آنها را در میان ژل معلق می‌سازند و با تسهیل پریستالتیک، این بار سنگین معدنی را با مدفوع خارج می‌کنند.",
     "clinical_pearls": "تست دستکش برای کولیک ماسه‌ای: دو عدد گلوله مدفوع اسب را داخل یک دستکش مامایی پر از آب بیندازید و آن را آویزان کنید؛ اگر بعد از ۱۵ دقیقه در نوک انگشتان دستکش ماسه ته‌نشین شد، بلافاصله پروتکل پسیلیوم را آغاز کنید.",
-    "quick_dosing": "سگ: یک قاشق چایخوری تا ۲ قاشق غذاخوری (حدود 2–10 گرم) مخلوط با غذا | گربه: نصف قاشق چایخوری (حدود 1–2 گرم) مخلوط در غذای مرطوب | اسب: 0.5–1 g/kg (حدود 250–500 گرم پودر به ازای هر اسب بالغ ۵۰۰ کیلوگرمی)"
+    "quick_dosing": "سگ: یک قاشق چایخوری تا ۲ قاشق غذاخوری (حدود 2–10 گرم) مخلوط با غذا | گربه: نصف قاشق چایخوری (حدود 1–2 گرم) مخلوط در غذای مرطوب | اسب: 0.5–1 g/kg (حدود 250–500 گرم پودر به ازای هر اسب بالغ ۵۰۰ کیلوگرمی)",
+    "brand_names_fa": [
+      "اسفرزه",
+      "پلانتین",
+      "ساشه پودر پسیلیوم دامی و انسانی (موسیلیوم / اسفرزه گرید دارویی)"
+    ],
+    "brand_names_en": [
+      "Psyllium Mucilloid Powder (Musilium / Sand Clear) Sachet / Bucket"
+    ]
   },
   {
     "id": "pyridostigmine_bromide",
@@ -74729,7 +78883,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی مغز و اعصاب کشور.",
     "pharmacology_mechanism": "پیریدوستیگمین با مهار رقابتی و برگشت‌پذیر آنزیم استیل‌کولین‌استراز در شکاف سیناپسی اتصالات عصبی-عضلانی (Neuromuscular Junction)، تخریب طبیعی استیل‌کولین را مهار می‌کند. با تجمع و ماندگاری طولانی‌تر استیل‌کولین، گیرنده‌های نیکوتینی باقیمانده بر روی صفحه حرکتی عضلات مخطط مکرراً تحریک شده و انتقال پیام انقباض عضلانی حتی در حضور آنتی‌بادی‌های خودایمن برقرار می‌گردد.",
     "clinical_pearls": "قانون حیاتی میاستنی گراویس: قرص مستینون را ۳۰ تا ۴۵ دقیقه قبل از وعده غذای سگ بدهید؛ این زمان طلایی به عضلات مری و حلق فرصت می‌دهد تا به اوج قدرت برسند و سگ بتواند بدون گیر کردن غذا در گلو و بدون ایجاد پنومونی آسپیراسیون غذایش را ببلعد.",
-    "quick_dosing": "سگ: 0.5–3 mg/kg (شروع با کمترین دوز حدود 0.5–1 mg/kg) | گربه: 0.25–0.5 mg/kg (یا حدود 1.25–2.5 mg به ازای هر گربه)"
+    "quick_dosing": "سگ: 0.5–3 mg/kg (شروع با کمترین دوز حدود 0.5–1 mg/kg) | گربه: 0.25–0.5 mg/kg (یا حدود 1.25–2.5 mg به ازای هر گربه)",
+    "brand_names_fa": [
+      "مستینون",
+      "قرص مستینون ۶۰ میلی‌گرم (پیریدوستیگمین بروماید)",
+      "شربت خوراکی مستینون ۶۰ میلی‌گرم در ۵ میلی‌لیتر (۱۲ میلی‌گرم/میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "Mestinon (Pyridostigmine Bromide) 60 mg Sugar-Coated Tablets (Meda / Roche)",
+      "Mestinon Oral Syrup 60 mg / 5 mL"
+    ]
   },
   {
     "id": "pyrimethamine",
@@ -74879,7 +79042,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی انسانی ایران و قابل تجویز در دامپزشکی تحت نسخه معتبر.",
     "pharmacology_mechanism": "مهار رقابتی آنزیم دی‌هیدروفولات ردوکتاز در تک‌یاخته‌ها که مانع تبدیل اسید دی‌هیدروفولیک به اسید تتراهیدروفولیک و توقف ساخت اسیدهای نوکلئیک می‌گردد.",
     "clinical_pearls": "برای جلوگیری از سمیت خونی کشنده ناشی از کمبود فولات در سگ و گربه، تجویز فولینیک اسید (Leucovorin) با دوز ۵ میلی‌گرم در روز همزمان با پیریمتامین یک استاندارد زرین بالینی است.",
-    "quick_dosing": "سگ: 0.5 - 1 mg/kg | گربه: 0.5 - 1 mg/kg | اسب: 1 mg/kg"
+    "quick_dosing": "سگ: 0.5 - 1 mg/kg | گربه: 0.5 - 1 mg/kg | اسب: 1 mg/kg",
+    "brand_names_fa": [
+      "قرص پیریمتامین ۲۵ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Pyrimethamine 25mg Tablet"
+    ]
   },
   {
     "id": "pyriproxyfen",
@@ -74998,7 +79167,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های دامپزشکی ایران در قالب پیپت‌های موضعی ترکیبی.",
     "pharmacology_mechanism": "پیری‌پروکسی‌فن گیرنده‌های هورمون جوانی (JH) در کک را فعال نگه می‌دارد و مانع از پوست‌اندازی موفق لارو به مرحله شفیره و بلوغ جنسی می‌گردد و همچنین مانع تفریخ تخم‌های گذاشته شده می‌شود.",
-    "clinical_pearls": "برای حل ریشه‌ای هجوم کک در منزل، ۹۵٪ از جمعیت کک در قالب تخم و لارو در فرش و مبل حضور دارند و پیری‌پروکسی‌فن با اثر ماندگار IGR چرخه زندگی انگل را در منزل قطع می‌کند."
+    "clinical_pearls": "برای حل ریشه‌ای هجوم کک در منزل، ۹۵٪ از جمعیت کک در قالب تخم و لارو در فرش و مبل حضور دارند و پیری‌پروکسی‌فن با اثر ماندگار IGR چرخه زندگی انگل را در منزل قطع می‌کند.",
+    "brand_names_fa": [
+      "پیپت موضعی ضدکک و کنه فیپرونیل + پیری‌پروکسی‌فن"
+    ],
+    "brand_names_en": [
+      "Fipronil + Pyriproxyfen Spot-on"
+    ]
   },
   {
     "id": "penicillin_g_procaine",
@@ -75182,7 +79357,13 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "سگ: 20,000 - 40,000 IU/kg | گاو: 20,000 IU/kg (معادل 1 mL/15 kg) | اسب: 20,000 - 40,000 IU/kg (معمولاً 1 mL/15 kg) | گوسفند/بز: 20,000 IU/kg"
+    "quick_dosing": "سگ: 20,000 - 40,000 IU/kg | گاو: 20,000 IU/kg (معادل 1 mL/15 kg) | اسب: 20,000 - 40,000 IU/kg (معمولاً 1 mL/15 kg) | گوسفند/بز: 20,000 IU/kg",
+    "brand_names_fa": [
+      "سوسپانسیون تزریقی پنی‌سیلین جی پروکائین ۳۰۰,۰۰۰ واحد"
+    ],
+    "brand_names_en": [
+      "Penicillin G Procaine 300,000 IU/mL Inj"
+    ]
   },
   {
     "id": "penicillin_g_potassium",
@@ -75332,7 +79513,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی کشور در داروخانه‌های انسانی و بیمارستان‌های تخصصی دامپزشکی.",
     "pharmacology_mechanism": "مهار اتصال زنجیره‌های پپتیدوگلیکان در دیواره باکتری در مرحله پایانی سنتز و لیز سریع وابسته به غلظت باکتری‌های گرم مثبت حساس و بی‌هوازی‌ها.",
     "clinical_pearls": "پنی‌سیلین جی کریستاله پتاسیم کوتاه‌اثر است و باید هر ۶ ساعت یک‌بار تزریق گردد تا غلظت سرمی آن بالاتر از MIC باکتری بماند؛ تزریق با فواصل طولانی‌تر موجب شکست درمان می‌شود.",
-    "quick_dosing": "سگ: 20,000 - 40,000 IU/kg | گربه: 20,000 - 40,000 IU/kg | اسب: 22,000 - 44,000 IU/kg"
+    "quick_dosing": "سگ: 20,000 - 40,000 IU/kg | گربه: 20,000 - 40,000 IU/kg | اسب: 22,000 - 44,000 IU/kg",
+    "brand_names_fa": [
+      "محلول آبی تزریق وریدی",
+      "ویال تزریقی پنی‌سیلین جی پتاسیم ۵ میلیون واحد"
+    ],
+    "brand_names_en": [
+      "Penicillin G Potassium 5,000,000 IU Inj"
+    ]
   },
   {
     "id": "protamine_sulfate",
@@ -75466,7 +79654,13 @@ const DRUGS_DATA = [
         "interval": "طبق دستور مونوگراف"
       }
     ],
-    "quick_dosing": "سگ: 1 mg پروتامین به ازای هر 100 IU هپارین تزریق‌شده در ۲ ساعت اخیر | گربه: 1 mg به ازای هر 100 IU هپارین"
+    "quick_dosing": "سگ: 1 mg پروتامین به ازای هر 100 IU هپارین تزریق‌شده در ۲ ساعت اخیر | گربه: 1 mg به ازای هر 100 IU هپارین",
+    "brand_names_fa": [
+      "آمپول پروتامین سولفات ۵۰ میلی‌گرم / ۵ میلی‌لیتر"
+    ],
+    "brand_names_en": [
+      "Protamine Sulfate 50mg/5mL Ampoule"
+    ]
   },
   {
     "id": "pseudoephedrine",
@@ -75573,7 +79767,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی انسانی کشور با نسخه پزشکی.",
     "pharmacology_mechanism": "آگونیست مستقیم گیرنده‌های آلفا-۱ و بتا آدرنرژیک و نیز تحریک آزادسازی نوراپی‌نفرین درون‌زاد از پایانه‌های عصبی سمپاتیک که منجر به انقباض ماهیچه‌های صاف اسفنکتر مجرا می‌گردد.",
     "clinical_pearls": "هرگز از قرص‌های ترکیبی سرماخوردگی انسانی مانند Adult Cold استفاده نکنید زیرا حاوی استامینوفن (مرگبار در گربه) یا کلرفنیرامین هستند؛ صرفاً فرمولاسیون تک‌ماده سودوافدرین مجاز است.",
-    "quick_dosing": "سگ: 0.2 - 0.4 mg/kg (حداکثر تا 15-30 mg برای سگ‌های درشت)"
+    "quick_dosing": "سگ: 0.2 - 0.4 mg/kg (حداکثر تا 15-30 mg برای سگ‌های درشت)",
+    "brand_names_fa": [
+      "قرص سودوافدرین ۳۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Pseudoephedrine 30mg Tablet"
+    ]
   },
   {
     "id": "primidone",
@@ -75681,7 +79881,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی انسانی ایران در داروخانه‌های منتخب.",
     "pharmacology_mechanism": "پریمیدون در کبد توسط سیتوکروم P450 به فنوباربیتال و PEMA تبدیل می‌شود؛ این متابولیت‌ها با پیوند به گیرنده GABA-A باز ماندن کانال کلر را طولانی کرده و مهار پیش‌سیناپسی تشنج را تقویت می‌کنند.",
     "clinical_pearls": "سطح خونی پریمیدون به تنهایی چک نمی‌شود؛ در ارزیابی درمانی پریمیدون در سگ، آزمایشگاه باید سطح سرمی فنوباربیتال را بسنجد و بازه ایده‌آل درمانی ۱۵ تا ۳۵ mcg/mL را هدف قرار دهد.",
-    "quick_dosing": "سگ: 10 - 15 mg/kg"
+    "quick_dosing": "سگ: 10 - 15 mg/kg",
+    "brand_names_fa": [
+      "قرص پریمیدون ۲۵۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Primidone 250mg Tablet"
+    ]
   },
   {
     "id": "quinapril",
@@ -75808,7 +80014,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی انسانی کشور.",
     "pharmacology_mechanism": "مهار آنزیم مبدل آنژیوتانسین (ACE) و توقف تبدیل آنژیوتانسین I به آنژیوتانسین II، در نتیجه اتساع شریان‌ها و وریدها، کاهش مقاومت عروق سیستمیک و کاهش ترشح آلدوسترون.",
     "clinical_pearls": "به دلیل میل ترکیبی بالای کویناپریل به ACE موجود در دیواره بافت‌های عروقی و میوکارد، اثرات مهارکنندگی بافتی ماندگارتری نسبت به انالاپریل نشان می‌دهد.",
-    "quick_dosing": "سگ: 0.25 - 0.5 mg/kg | گربه: 0.25 - 0.5 mg/kg"
+    "quick_dosing": "سگ: 0.25 - 0.5 mg/kg | گربه: 0.25 - 0.5 mg/kg",
+    "brand_names_fa": [
+      "قرص کویناپریل ۱۰ و ۲۰ میلی‌گرم (آکوپریل)"
+    ],
+    "brand_names_en": [
+      "Quinapril 10mg / 20mg Tablet"
+    ]
   },
   {
     "id": "quinidine_sulfate",
@@ -75931,7 +80143,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در فارماکوپه بیمارستان‌های تخصصی دامپزشکی و انسانی.",
     "pharmacology_mechanism": "مسدودسازی کانال‌های سریع سدیمی (فاز ۰ پتانسیل عمل)، کاهش سرعت هدایت، افزایش دوره تحریک‌ناپذیری موثر دهلیز و بطن و اثرات آنتی‌کولینرژیک غیرمستقیم.",
     "clinical_pearls": "همیشه قبل از شروع پروتکل کینیدین در اسب، یک لوله تراکئوستومی در دسترس داشته باشید زیرا ادم حاد مخاط بینی و لارنکس ممکن است باعث انسداد کامل راه هوایی اسب گردد.",
-    "quick_dosing": "سگ: 6 - 11 mg/kg | اسب: 22 mg/kg"
+    "quick_dosing": "سگ: 6 - 11 mg/kg | اسب: 22 mg/kg",
+    "brand_names_fa": [
+      "قرص کینیدین سولفات ۲۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Quinidine Sulfate 200mg Tablet"
+    ]
   },
   {
     "id": "rabeprazole",
@@ -76052,7 +80270,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی انسانی کشور و قابل دسترس در کلیه داروخانه‌ها.",
     "pharmacology_mechanism": "پیوند کووالانسی با ریشه‌های سیستئین در پمپ H+/K+ ATPase سطح لومینال سلول‌های پریتال معده و مهار غیرقابل بازگشت ترشح اسید کلریدریک.",
     "clinical_pearls": "رابه‌پرازول در محدوده وسیع‌تری از pH نسبت به امپرازول فعال می‌شود، بنابراین شروع مهار اسیدیته آن در روز اول درمان بسیار سریع‌تر رخ می‌دهد.",
-    "quick_dosing": "سگ: 0.5 - 1 mg/kg | گربه: 0.5 - 1 mg/kg"
+    "quick_dosing": "سگ: 0.5 - 1 mg/kg | گربه: 0.5 - 1 mg/kg",
+    "brand_names_fa": [
+      "قرص رابه‌پرازول ۲۰ میلی‌گرم (رابلایف / رابزول)"
+    ],
+    "brand_names_en": [
+      "Rabeprazole 20mg Tablet"
+    ]
   },
   {
     "id": "ramipril",
@@ -76188,7 +80412,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دامپزشکی (برند وارداتی) و بازار دارویی انسانی کشور.",
     "pharmacology_mechanism": "رامیپریلات با اتصال قوی به آنزیم مبدل آنژیوتانسین در بافت‌های قلب، عروق و کلیه، ساخت آنژیوتانسین II را متوقف ساخته و بازسازی بافت میوکارد (Cardiac Remodeling) را معکوس می‌کند.",
     "clinical_pearls": "رامی‌پریل به علت خاصیت لیپوفیلیک بالا نفوذ بسیار عمیق‌تری به بافت فیبروزه میوکارد نسبت به انالاپریل دارد و دوز یک بار در روز آن مدیریت درمان خانگی را بسیار ساده‌تر می‌سازد.",
-    "quick_dosing": "سگ: 0.125 mg/kg (قابلیت افزایش تا 0.25 mg/kg) | گربه: 0.125 mg/kg"
+    "quick_dosing": "سگ: 0.125 mg/kg (قابلیت افزایش تا 0.25 mg/kg) | گربه: 0.125 mg/kg",
+    "brand_names_fa": [
+      "قرص واسوتوپ دامپزشکی (رامی‌پریل ۱.۲۵ و ۲.۵ و ۵ mg)",
+      "قرص رامی‌پریل انسانی ۲.۵ و ۵ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Vasotop (Intervet / MSD) Tablets",
+      "Ramipril 2.5mg / 5mg Tablet"
+    ]
   },
   {
     "id": "ranitidine",
@@ -76342,7 +80574,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌ها و داروخانه‌های کشور.",
     "pharmacology_mechanism": "مهار رقابتی گیرنده‌های هیستامینی H2 در سلول‌های پریتال معده که ترشح پایه و تحریک‌شده اسید را کاهش می‌دهد؛ همچنین با مهار آنزیم استیل‌کولین‌استراز عضلانی، غلظت استیل‌کولین در روده را افزایش داده و حرکات دستگاه گوارش را تقویت می‌کند.",
     "clinical_pearls": "مزیت اصلی رانیتیدین بر فاموتیدین در دامپزشکی، اثرات پروکینتیک رانیتیدین بر عضلات کولون است که آن را به گزینه‌ای ایده‌آل در گربه‌های مبتلا به یبوست‌های مزمن و مگاکولون تبدیل می‌سازد.",
-    "quick_dosing": "سگ: 1 - 2 mg/kg | گربه: 1 - 2 mg/kg | اسب: 6.6 mg/kg"
+    "quick_dosing": "سگ: 1 - 2 mg/kg | گربه: 1 - 2 mg/kg | اسب: 6.6 mg/kg",
+    "brand_names_fa": [
+      "آمپول رانیتیدین ۵۰ میلی‌گرم / ۲ میلی‌لیتر",
+      "قرص رانیتیدین ۱۵۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Ranitidine 50mg/2mL Ampoule",
+      "Ranitidine 150mg Tablet"
+    ]
   },
   {
     "id": "reserpine",
@@ -76448,7 +80688,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌ها و مراکز اصلاح نژاد و باشگاه‌های سوارکاری تخصصی کشور.",
     "pharmacology_mechanism": "مهار برگشت‌ناپذیر پمپ انتقال‌دهنده وزیکولی مونوآمین‌ها (VMAT-1 و VMAT-2) در نورون‌ها، ممانعت از بازجذب نوراپی‌نفرین و دوپامین در وزیکول‌های سیناپسی و تجزیه آن‌ها توسط آنزیم MAO.",
     "clinical_pearls": "رزرپین شروع اثر بسیار کندی دارد (۲۴ تا ۴۸ ساعت طول می‌کشد تا اثر آرام‌بخشی آشکار شود)، بنابراین هرگز نباید برای آرام‌سازی فوری یا اورژانس استفاده شود؛ همچنین اثرات آن تا روزها پس از قطع دارو باقی می‌ماند.",
-    "quick_dosing": "اسب: 2 - 5 mg برای کل اسب بالغ (حدود 4 - 8 mcg/kg)"
+    "quick_dosing": "اسب: 2 - 5 mg برای کل اسب بالغ (حدود 4 - 8 mcg/kg)",
+    "brand_names_fa": [
+      "پودر یا قرص رزرپین دامی و ترکیبی"
+    ],
+    "brand_names_en": [
+      "Reserpine Equine Formulation"
+    ]
   },
   {
     "id": "rifaximin",
@@ -76578,7 +80824,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی انسانی کشور در کلیه داروخانه‌ها.",
     "pharmacology_mechanism": "اتصال به زیرواحد بتا در آنزیم RNA پلیمراز وابسته به DNA باکتری‌ها و مهار رونویسی اسیدهای نوکلئیک در باکتری‌های بی‌هوازی و گرم منفی روده.",
     "clinical_pearls": "در سگ‌های مبتلا به شانت پورتوسیستمیک که ماه‌ها تحت درمان با مترونیدازول بوده و در معرض تشنج و نوروتوکسیسیتی قرار دارند، جایگزینی مترونیدازول با ریفاکسیمین یک اقدام نجات‌بخش بالینی بدون کوچک‌ترین بار کبدی است.",
-    "quick_dosing": "سگ: 10 - 20 mg/kg | گربه: 10 mg/kg"
+    "quick_dosing": "سگ: 10 - 20 mg/kg | گربه: 10 mg/kg",
+    "brand_names_fa": [
+      "قرص ریفاکسیمین ۲۰۰ و ۵۵۰ میلی‌گرم (زاکسیفام / ریفاموت)"
+    ],
+    "brand_names_en": [
+      "Rifaximin 200mg / 550mg Tablet"
+    ]
   },
   {
     "id": "rocuronium_bromide",
@@ -76741,7 +80993,14 @@ const DRUGS_DATA = [
         "interval": "طبق دستور مونوگراف"
       }
     ],
-    "quick_dosing": "سگ: 0.2 - 0.5 mg/kg | گربه: 0.2 - 0.4 mg/kg | اسب: 0.3 - 0.6 mg/kg"
+    "quick_dosing": "سگ: 0.2 - 0.5 mg/kg | گربه: 0.2 - 0.4 mg/kg | اسب: 0.3 - 0.6 mg/kg",
+    "brand_names_fa": [
+      "ویال روکورونیوم بروماید ۵۰ میلی‌گرم / ۵ میلی‌لیتر (اسمرون)",
+      "اسمرون"
+    ],
+    "brand_names_en": [
+      "Rocuronium 50mg/5mL Vial (Esmeron)"
+    ]
   },
   {
     "id": "ropinirole",
@@ -76848,7 +81107,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در کلینیک‌ها و بیمارستان‌های تخصصی دام‌های کوچک کشور به صورت وارداتی.",
     "pharmacology_mechanism": "روپینیرول آگونیست قوی گیرنده‌های D2 دوپامینی در ناحیه ماشه‌ای گیرنده‌های شیمیایی (CRTZ) ساقه مغز سگ است که مسیر رفلکس مرکز استفراغ را مستقیماً فعال می‌کند.",
-    "clinical_pearls": "اگر سگ پس از رسیدن به هدف تخلیه معده همچنان به استفراغ کف‌آلود ادامه داد، چکاندن یک قطره متوکلوپرامید در چشم یا تزریق عضلانی ماروپیتانت بلافاصله رفلکس استفراغ را مهار می‌کند."
+    "clinical_pearls": "اگر سگ پس از رسیدن به هدف تخلیه معده همچنان به استفراغ کف‌آلود ادامه داد، چکاندن یک قطره متوکلوپرامید در چشم یا تزریق عضلانی ماروپیتانت بلافاصله رفلکس استفراغ را مهار می‌کند.",
+    "brand_names_fa": [
+      "کلوور",
+      "قطره چشمی کلوور دامپزشکی (روپینیرول ۳۰ میلی‌گرم/mL)"
+    ],
+    "brand_names_en": [
+      "Clevor (Orion Pharma / Vetoquinol) Eye Drops"
+    ]
   },
   {
     "id": "ropivacaine",
@@ -76994,7 +81260,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در فهرست داروهای رسمی بیمارستان‌های کشور.",
     "pharmacology_mechanism": "انسداد کانال‌های سدیمی وابسته به ولتاژ در غشای فیبرهای عصبی، ممانعت از دپلاریزاسیون و هدایت پیام درد به نخاع با تمایل انتخابی بیشتر به مهار فیبرهای حسی A-delta و C نسبت به فیبرهای حرکتی A-beta.",
     "clinical_pearls": "تفاوت بزرگ روپیواکائین با بوپیواکائین در این است که روپیواکائین انقباض عروقی خفیف موضعی ایجاد می‌کند، بنابراین نیازی به اضافه کردن اپی‌نفرین ندارد و کمتر وارد گردش خون سیستمیک می‌شود و بی‌حسی حرکتی کمتری نسبت به حسی به جا می‌گذارد.",
-    "quick_dosing": "سگ: 1 - 2 mg/kg (غلظت 0.5% یا 0.75%) | گربه: 1 mg/kg (حداکثر دوز کل مجاز در گربه) | اسب: طبق حجم فضای مفصلی یا عصب (معمولاً 2-10 mL محلول 0.5%)"
+    "quick_dosing": "سگ: 1 - 2 mg/kg (غلظت 0.5% یا 0.75%) | گربه: 1 mg/kg (حداکثر دوز کل مجاز در گربه) | اسب: طبق حجم فضای مفصلی یا عصب (معمولاً 2-10 mL محلول 0.5%)",
+    "brand_names_fa": [
+      "آمپول روپیواکائین ۵ میلی‌گرم/mL و ۷.۵ میلی‌گرم/mL (نارو پین)"
+    ],
+    "brand_names_en": [
+      "Ropivacaine (Naropin) 5mg/mL & 7.5mg/mL"
+    ]
   },
   {
     "id": "salicylic_acid",
@@ -77113,7 +81385,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در کلیه داروخانه‌های دامپزشکی و انسانی کشور.",
     "pharmacology_mechanism": "کاهش چسبندگی بین کورنئوسیت‌ها از طریق حل پروتئین‌های سیمان بین‌سلولی، مرطوب‌سازی و ریزش سلول‌های شاخی و همچنین ایجاد محیط اسیدی مهارکننده رشد باکتری‌ها و قارچ‌ها.",
-    "clinical_pearls": "برای اثرگذاری درمانی شامپوهای حاوی سالیسیلیک اسید در سگ، حداقل ۱۰ دقیقه باقی ماندن کف شامپو روی پوست خیس قبل از آبکشی الزامی است؛ شستشوی فوری اثربخشی را به صفر می‌رساند."
+    "clinical_pearls": "برای اثرگذاری درمانی شامپوهای حاوی سالیسیلیک اسید در سگ، حداقل ۱۰ دقیقه باقی ماندن کف شامپو روی پوست خیس قبل از آبکشی الزامی است؛ شستشوی فوری اثربخشی را به صفر می‌رساند.",
+    "brand_names_fa": [
+      "موضعی",
+      "شامپو سالیسیلیک اسید و گوگرد دامپزشکی (Sebolyse / Keratolux)"
+    ],
+    "brand_names_en": [
+      "Salicylic Acid + Sulfur Vet Shampoo"
+    ]
   },
   {
     "id": "salmeterol",
@@ -77270,7 +81549,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی انسانی کشور در کلیه داروخانه‌ها.",
     "pharmacology_mechanism": "زنجیره جانبی چربی‌دوست طولانی سالمترول به اگزوسایت گیرنده بتا-۲ پیوند می‌یابد و باعث فعال‌سازی مداوم آدنیلات سیکلاز، افزایش cAMP درون‌سلولی و شل‌سازی پایدار ماهیچه‌های صاف مجاری هوایی به مدت ۱۲ ساعت می‌گردد.",
     "clinical_pearls": "یک تفاوت حیاتی در فارماکولوژی: آلبوترول داروی اورژانس حمله آسم (Rescue drug) است اما سالمترول داروی کنترل‌کننده طولانی‌مدت (Controller drug)؛ هرگز در زمان دیسترس حاد تنفسی گربه وقت را با سالمترول تلف نکنید!",
-    "quick_dosing": "سگ: 1 پاف | گربه: 1 پاف (حاوی 25 mcg سالمترول) | اسب: 2 تا 4 پاف"
+    "quick_dosing": "سگ: 1 پاف | گربه: 1 پاف (حاوی 25 mcg سالمترول) | اسب: 2 تا 4 پاف",
+    "brand_names_fa": [
+      "اسپری استنشاقی سالمترول ۲۵ میکروگرم (سرونت)",
+      "اسپری ترکیبی سالمترول + فلوتیکازون (سرتاید / سروفلو)"
+    ],
+    "brand_names_en": [
+      "Serevent Inhaler (Salmeterol 25mcg)",
+      "Seretide / Seroflo Inhaler (Salmeterol + Fluticasone)"
+    ]
   },
   {
     "id": "sarolaner",
@@ -77387,7 +81674,19 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در کلیه داروخانه‌ها و کلینیک‌های دامپزشکی معتبر کشور.",
     "pharmacology_mechanism": "مهار انتخابی کانال‌های کلریدی وابسته به گیرنده‌های GABA و گلوتامات در سیستم عصبی حشرات و کنه‌ها که منجر به هایپراکسیتاسیون، فلج اسپاستیک و مرگ سریع انگل می‌گردد.",
     "clinical_pearls": "سارولانر درمان بیماری دمودیکوزیس ژنرالیزه سگ را که سابقاً ماه‌ها با حمام‌های سمی آمیتراز درمان می‌شد و اغلب عود می‌کرد، به مصرف ساده یک قرص ماهانه با درصد درمان قطعی بالای ۹۹٪ تبدیل کرده است.",
-    "quick_dosing": "سگ: 2 - 4 mg/kg (طبق دسته‌بندی وزنی قرص‌های سیمپاریکا)"
+    "quick_dosing": "سگ: 2 - 4 mg/kg (طبق دسته‌بندی وزنی قرص‌های سیمپاریکا)",
+    "brand_names_fa": [
+      "سیمپاریکا",
+      "سیمپاریکا تریو",
+      "قرص جویدنی سیمپاریکا (سارولانر ۵، ۱۰، ۲۰، ۴۰، ۸۰، ۱۲۰ mg)",
+      "محلول موضعی روولوشن پلاس گربه (سارولانر + سلامکتین)"
+    ],
+    "brand_names_en": [
+      "Simparica",
+      "Simparica Trio",
+      "Simparica (Zoetis) Chewable Tablets for Dogs",
+      "Revolution Plus for Cats (Sarolaner + Selamectin)"
+    ]
   },
   {
     "id": "selamectin",
@@ -77517,7 +81816,21 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی دامپزشکی سراسر کشور.",
     "pharmacology_mechanism": "سلامکتین با تحریک باز شدن کانال‌های کلریدی وابسته به گلوتامات در باکتری‌ها و بی‌مهرگان، ورود یون کلر و هیپرپلاریزاسیون غشای عصبی انگل‌ها، باعث فلج شل و مرگ کک‌ها، کنه‌ها و کرم‌های گرد می‌گردد.",
     "clinical_pearls": "برای درمان جرب گوش گربه (Otodectes cynotis)، سلامکتین نباید درون کانال گوش ریخته شود؛ ریختن آن بر روی پوست پشت گردن به علت جذب سیستمیک و انتشار در ترشحات غدد سباسه گوش، انگل‌های درون مجرا را بدون هیچ زحمتی ریشه‌کن می‌کند.",
-    "quick_dosing": "سگ: 6 - 12 mg/kg (طبق تیوب‌های وزنی استاندارد روولوشن) | گربه: 6 - 12 mg/kg"
+    "quick_dosing": "سگ: 6 - 12 mg/kg (طبق تیوب‌های وزنی استاندارد روولوشن) | گربه: 6 - 12 mg/kg",
+    "brand_names_fa": [
+      "رولوشن",
+      "استرانگ‌هولد",
+      "سلارست",
+      "پیپت موضعی روولوشن سگ و گربه (سلامکتین ۶٪ و ۱۲٪)",
+      "سلین استرانگ‌هولد (سلامکتین)"
+    ],
+    "brand_names_en": [
+      "Revolution",
+      "Stronghold",
+      "Selapro",
+      "Revolution (Zoetis) Spot-on",
+      "Stronghold (Zoetis)"
+    ]
   },
   {
     "id": "sevelamer_carbonate",
@@ -77639,7 +81952,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی کشور در داروخانه‌های تخصصی بیماران کلیوی.",
     "pharmacology_mechanism": "سولامر یک رزین پلیمری متقاطع کاتیونی فاقد فلز و کلسیم است؛ با گروه‌های آمینی متعدد در روده به آنیون‌های فسفات غذا پیوند هیدروژنی برقرار کرده و مانع جذب گوارشی و دفع فسفات در مدفوع می‌گردد.",
     "clinical_pearls": "در گربه‌های مبتلا به CKD، افزایش حاصل‌ضرب کلسیم در فسفر (Ca x P > 55) باعث رسوب بلورهای کلسیم در بافت کلیه و تسریع مرگ می‌شود؛ سولامر برخلاف کلسیم کربنات بدون دستکاری کلسیم، سطح فسفر را مهار می‌کند.",
-    "quick_dosing": "سگ: 30 - 50 mg/kg | گربه: 30 - 50 mg/kg (حدود یک چهارم تا نصف قرص ۴۰۰ میلی‌گرمی)"
+    "quick_dosing": "سگ: 30 - 50 mg/kg | گربه: 30 - 50 mg/kg (حدود یک چهارم تا نصف قرص ۴۰۰ میلی‌گرمی)",
+    "brand_names_fa": [
+      "قرص سولامر کربنات ۸۰۰ میلی‌گرم (رنولا / سواکرب)"
+    ],
+    "brand_names_en": [
+      "Sevelamer Carbonate 800mg Tablet"
+    ]
   },
   {
     "id": "silymarin_silybin",
@@ -77802,7 +82121,18 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دامپزشکی (برندهای خارجی) و داروخانه‌های انسانی کشور (لیورگل).",
     "pharmacology_mechanism": "سیلی‌مارین مانع نفوذ توکسین‌ها به داخل هپاتوسیت‌ها از طریق اشغال گیرنده‌های غشایی می‌شود، ساخت پروتئین درون‌سلولی را با تحریک RNA پلیمراز I ریبوزومی تسریع می‌کند و با مهار رادیکال‌های آزاد و پراکسیداسیون لیپیدها، از نکروز سلولی پیشگیری می‌نماید.",
     "clinical_pearls": "در سگ‌هایی که تحت شیمی‌درمانی طولانی با داروهای هپاتوتوکسیک مانند لوموستین (CCNU) یا درمان صرع با فنوباربیتال هستند، تجویز همزمان سیلی‌مارین افزایش آنزیم‌های کبدی را به حداقل رسانده و از سیروز جلوگیری می‌کند.",
-    "quick_dosing": "سگ: 10 - 20 mg/kg (فرم سیلی‌مارین خالص) یا طبق دستور قرص‌های دامپزشکی Zentonil | گربه: 10 - 20 mg/kg | اسب: 10 mg/kg"
+    "quick_dosing": "سگ: 10 - 20 mg/kg (فرم سیلی‌مارین خالص) یا طبق دستور قرص‌های دامپزشکی Zentonil | گربه: 10 - 20 mg/kg | اسب: 10 mg/kg",
+    "brand_names_fa": [
+      "عصاره خار مریم",
+      "قرص زنوتونیل ادونس (Zentonil Advanced) سگ و گربه",
+      "قرص لگافیتون دامپزشکی (Legaphyton)",
+      "قرص لیورگل ۷۰ و ۱۴۰ میلی‌گرم (سیلی‌مارین انسانی)"
+    ],
+    "brand_names_en": [
+      "Zentonil Advanced (Vetoquinol) Silybin + SAMe",
+      "Legaphyton (Vetoquinol) Silymarin Tablets",
+      "Livergol 70mg / 140mg Tablet"
+    ]
   },
   {
     "id": "silver_sulfadiazine",
@@ -77941,7 +82271,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی و مراکز درمانی دامپزشکی کشور.",
     "pharmacology_mechanism": "آزادسازی آهسته و تدریجی یون‌های نقره بر سطح زخم که به DNA باکتری متصل شده و آن را تجزیه می‌کنند؛ همزمان سولفادیازین آزادشده ساخت اسید فولیک باکتری را مهار می‌سازد.",
-    "clinical_pearls": "سیلور سولفادیازین برخلاف سایر ضدعفونی‌کننده‌ها هیچ سوزشی روی بافت عریان سوخته ایجاد نمی‌کند و تسکین‌دهنده فوری درد موضعی است؛ همچنین به صورت معجزه‌آسایی در اوتیت‌های مقاوم سودوموناسی سگ که به تمام آنتی‌بیوتیک‌ها مقاوم شده‌اند پاسخ درمانی کامل می‌دهد."
+    "clinical_pearls": "سیلور سولفادیازین برخلاف سایر ضدعفونی‌کننده‌ها هیچ سوزشی روی بافت عریان سوخته ایجاد نمی‌کند و تسکین‌دهنده فوری درد موضعی است؛ همچنین به صورت معجزه‌آسایی در اوتیت‌های مقاوم سودوموناسی سگ که به تمام آنتی‌بیوتیک‌ها مقاوم شده‌اند پاسخ درمانی کامل می‌دهد.",
+    "brand_names_fa": [
+      "موضعی",
+      "کرم سیلور سولفادیازین ۱٪ (فلامازین)"
+    ],
+    "brand_names_en": [
+      "Silver Sulfadiazine 1% Cream"
+    ]
   },
   {
     "id": "sincalide",
@@ -78041,7 +82378,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در مراکز منتخب تصویربرداری پزشکی و بیمارستان‌های تخصصی دانشگاهی.",
     "pharmacology_mechanism": "تحریک مستقیم گیرنده‌های CCK-A در سلول‌های ماهیچه صاف جدار کیسه صفرا و ایجاد انقباض فیزیولوژیک همزمان با شل کردن اسفنکتر عضلانی مجرای مشترک.",
     "clinical_pearls": "کاهش بیش از ۵۰ درصدی در حجم کیسه صفرا طی ۳۰ دقیقه پس از انفوزیون سینکالید، باز بودن مجاری صفراوی و سالم بودن تحرک‌پذیری جدار را تایید می‌کند؛ عدم کاهش حجم نشانه زودهنگام موکوسل کیسه صفرا یا انسداد عملکردی است.",
-    "quick_dosing": "سگ: 0.04 - 0.1 mcg/kg"
+    "quick_dosing": "سگ: 0.04 - 0.1 mcg/kg",
+    "brand_names_fa": [
+      "اوکتاپپتید کوله‌سیستوکینین",
+      "ویال تزریقی سینکالید ۵ میکروگرم (کینسواک)"
+    ],
+    "brand_names_en": [
+      "Kinevac (Sincalide 5mcg) Lyophilized Vial"
+    ]
   },
   {
     "id": "sodium_bicarbonate",
@@ -78235,7 +82579,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "سگ: مقداری برابر با 0.3 × وزن(kg) × کسر باز (Base Deficit) یا دوز تجربی 1-2 mEq/kg | گربه: 1 mEq/kg (معادل 1 mL/kg از محلول 8.4%) | گاو: فرمول: وزن(kg) × 0.6 × (28 - غلظت HCO3 سرم) | اسب: 0.3 × وزن(kg) × Base Deficit"
+    "quick_dosing": "سگ: مقداری برابر با 0.3 × وزن(kg) × کسر باز (Base Deficit) یا دوز تجربی 1-2 mEq/kg | گربه: 1 mEq/kg (معادل 1 mL/kg از محلول 8.4%) | گاو: فرمول: وزن(kg) × 0.6 × (28 - غلظت HCO3 سرم) | اسب: 0.3 × وزن(kg) × Base Deficit",
+    "brand_names_fa": [
+      "محلول وریدی ۸.۴٪",
+      "آمپول سدیم بیکربنات ۸.۴٪ (۵۰ میلی‌لیتر و ۱۰ میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "Sodium Bicarbonate 8.4% Infusion Ampoule/Vial"
+    ]
   },
   {
     "id": "sodium_bromide",
@@ -78352,7 +82703,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "به صورت داروی فرموله دست‌ساز در داروخانه‌های مرجع دامپزشکی کشور عرضه می‌گردد.",
     "pharmacology_mechanism": "یون بروماید از نظر بار الکتریکی مشابه یون کلر است؛ با عبور ترجیحی از کانال‌های کلریدی بازشده توسط GABA، هیپرپلاریزاسیون غشای نورون‌ها را تشدید کرده و آستانه تحریک‌پذیری صرعی مغز را به شدت بالا می‌برد.",
     "clinical_pearls": "میزان یون کلرید در رژیم غذایی سگ تعیین‌کننده مستقیم نیمه‌عمر بروماید است: اگر سگ غذای شور یا تشویقی پرنمک مصرف کند، کلیه بروماید را سریع‌تر دفع کرده و تشنج عود می‌کند؛ بنابراین ثبات رژیم غذایی اصل اول در درمان با بروماید است.",
-    "quick_dosing": "سگ: 20 - 30 mg/kg"
+    "quick_dosing": "سگ: 20 - 30 mg/kg",
+    "brand_names_fa": [
+      "محلول یا پودر سدیم بروماید دارویی ۲۵۰ mg/mL"
+    ],
+    "brand_names_en": [
+      "Sodium Bromide Compounded Oral Solution"
+    ]
   },
   {
     "id": "heparin_sodium",
@@ -78506,7 +82863,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در فهرست داروهای اساسی کلیه بیمارستان‌ها و داروخانه‌های کشور.",
     "pharmacology_mechanism": "پیوند با آنتی‌ترومبین III (AT-III) و ایجاد تغییر ساختاری در آن که سبب افزایش هزار برابری سرعت مهاری آن بر ترومبین، فاکتور Xa، IXa، XIa و XIIa شده و تشکیل لخته فیبرینی را متوقف می‌سازد.",
     "clinical_pearls": "هپارین لخته تشکیل شده قبلی را حل نمی‌کند؛ بلکه مانع بزرگ‌تر شدن لخته موجود و تشکیل میکروترومبوزهای جدید می‌شود تا سیستم فیبرینولیتیک درون‌زاد خود بیمار لخته را تدریجاً تجزیه نماید.",
-    "quick_dosing": "سگ: 150 - 250 IU/kg | گربه: 100 - 200 IU/kg | اسب: 40 - 100 IU/kg"
+    "quick_dosing": "سگ: 150 - 250 IU/kg | گربه: 100 - 200 IU/kg | اسب: 40 - 100 IU/kg",
+    "brand_names_fa": [
+      "هپارین تجزیه‌نشده",
+      "UFH",
+      "ویال هپارین سدیم ۵۰۰۰ واحد/میلی‌لیتر (۵ میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "Heparin Sodium 5,000 IU/mL Injection Vial"
+    ]
   },
   {
     "id": "sodium_iodide",
@@ -78645,7 +83010,14 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "گاو: 66 mg/kg (حدود 150-250 mL از محلول ۲۰٪ برای گاو بالغ) | اسب: 20 - 40 mg/kg"
+    "quick_dosing": "گاو: 66 mg/kg (حدود 150-250 mL از محلول ۲۰٪ برای گاو بالغ) | اسب: 20 - 40 mg/kg",
+    "brand_names_fa": [
+      "محلول تزریقی ۲۰٪",
+      "محلول تزریقی سدیم یدید ۲۰٪ دامی (۲۵۰ میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "Sodium Iodide 20% Veterinary Injection"
+    ]
   },
   {
     "id": "sodium_polystyrene_sulfonate",
@@ -78768,7 +83140,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی انسانی کشور در داروخانه‌های بیمارستانی.",
     "pharmacology_mechanism": "این رزین در طول مسیر گوارش جذب نمی‌شود؛ هر گرم رزین حدود ۱ میلی‌اکی‌والان پتاسیم را در ازای آزادسازی ۱ تا ۲ میلی‌اکی‌والان سدیم جذب کرده و مانع ورود مجدد پتاسیم ترشح‌شده به گردش خون می‌گردد.",
     "clinical_pearls": "تجویز رکتال (انما) شروع اثر بسیار سریع‌تری (زیر ۱ ساعت) نسبت به تجویز خوراکی (۲ تا ۱۲ ساعت) دارد، بنابراین در اورژانس گربه‌های مسدود با برادی‌کاردی کشنده، انمای کای‌اگزالات اقدام ارجح است.",
-    "quick_dosing": "سگ: 1 - 2 g/kg | گربه: 1 g/kg (سوسپانسیون در 10-15 mL آب)"
+    "quick_dosing": "سگ: 1 - 2 g/kg | گربه: 1 g/kg (سوسپانسیون در 10-15 mL آب)",
+    "brand_names_fa": [
+      "کای‌اگزالات",
+      "پودر سدیم پلی‌استیرن سولفونات (کای‌اگزالات / کای‌پوتاسیوم)"
+    ],
+    "brand_names_en": [
+      "Sodium Polystyrene Sulfonate Powder"
+    ]
   },
   {
     "id": "sodium_stibogluconate",
@@ -78876,7 +83255,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در مراکز درمانی بیماری‌های زئونوز و داروخانه‌های تخصصی کشور تحت نظارت پزشکی.",
     "pharmacology_mechanism": "آنتیموان پنج‌ظرفیتی در درون ماکروفاژهای میزبان به آنتیموان سه‌ظرفیتی توکسیک احیا می‌شود که آنزیم‌های گلیکولیتیک و فسفوفروکتوکیناز آماستیگوت‌های لیشمانیا را مهار کرده و سنتز ATP را متوقف و انگل را نابود می‌سازد.",
     "clinical_pearls": "لیشمانیوز احشایی سگ یک بیماری زئونوز مشترک خطرناک است؛ درمان با پنتوستام علائم بالینی و بار انگلی را بسیار کم می‌کند اما معمولاً انگل به طور ۱۰۰٪ از بدن سگ ریشه‌کن نمی‌شود و سگ باید با استفاده از قلاده‌های دلتامترین در برابر گزش مجدد پشه‌خاکی محافظت گردد.",
-    "quick_dosing": "سگ: 100 mg/kg (حاوی ۳۳ میلی‌گرم آنتیموان پنج‌ظرفیتی)"
+    "quick_dosing": "سگ: 100 mg/kg (حاوی ۳۳ میلی‌گرم آنتیموان پنج‌ظرفیتی)",
+    "brand_names_fa": [
+      "پنتوستام",
+      "ویال تزریقی پنتوستام ۱۰۰ میلی‌گرم/mL (سدیم استیبوگلوکونات)"
+    ],
+    "brand_names_en": [
+      "Pentostam 100mg/mL Vial"
+    ]
   },
   {
     "id": "sodium_thiosulfate",
@@ -79012,7 +83398,13 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "گاو: 500 - 660 mg/kg (معادل 30-40 گرم برای گاو بالغ به صورت محلول ۲۰٪)"
+    "quick_dosing": "گاو: 500 - 660 mg/kg (معادل 30-40 گرم برای گاو بالغ به صورت محلول ۲۰٪)",
+    "brand_names_fa": [
+      "آمپول سدیم تیوسولفات ۲۵٪ (۵۰ میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "Sodium Thiosulfate 25% Ampoule/Vial"
+    ]
   },
   {
     "id": "spectinomycin",
@@ -79173,7 +83565,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "سگ: 10 - 20 mg/kg | گاو: 10 - 20 mg/kg"
+    "quick_dosing": "سگ: 10 - 20 mg/kg | گاو: 10 - 20 mg/kg",
+    "brand_names_fa": [
+      "محلول تزریقی لینکو-اسپکتین دامی (لینکومایسین + اسپکتینومایسین)",
+      "پودر محلول در آب لینکواسپکتین طیوری"
+    ],
+    "brand_names_en": [
+      "Linco-Spectin Injection Vial",
+      "Linco-Spectin Soluble Powder"
+    ]
   },
   {
     "id": "spiramycin",
@@ -79331,7 +83731,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "سگ: 75,000 IU اسپیرامایسین به ازای هر کیلوگرم (معادل ۱ قرص استومورجیل ۲ برای ۲ کیلو، استومورجیل ۱۰ برای ۱۰ کیلو) | گربه: 75,000 IU/kg | گاو: 30,000 IU/kg"
+    "quick_dosing": "سگ: 75,000 IU اسپیرامایسین به ازای هر کیلوگرم (معادل ۱ قرص استومورجیل ۲ برای ۲ کیلو، استومورجیل ۱۰ برای ۱۰ کیلو) | گربه: 75,000 IU/kg | گاو: 30,000 IU/kg",
+    "brand_names_fa": [
+      "قرص استومورجیل ۲ و ۱۰ و ۲۰ (اسپیرامایسین + مترونیدازول)",
+      "ویال تزریقی اسپیرامایسین دامی (سوپرامایسین)"
+    ],
+    "brand_names_en": [
+      "Stomorgyl (Boehringer Ingelheim) Tablets",
+      "Spiramycin 600,000 IU/mL Vet Inj"
+    ]
   },
   {
     "id": "stanozolol",
@@ -79476,7 +83884,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی و کلینیک‌های اسب و دام‌های کوچک با نسخه ویژه.",
     "pharmacology_mechanism": "پیوند به گیرنده‌های آندروژن درون هسته سلول‌های عضلانی و بافت‌های استخوانی، تحریک رونویسی ژن‌های مسئول ساخت میوزین، اکتین و پروتئین‌های ساختاری و افزایش ترشح هورمون اریتروپویتین از کلیه‌ها.",
     "clinical_pearls": "استانوزولول اثر معجزه‌آسایی در بهبود اشتهای سگ‌های دچار افسردگی و کاشکسی ناشی از بیماری‌های مزمن دارد، اما نباید به عنوان جایگزین تغذیه کمکی با لوله استفاده شود؛ ابتدا باید منبع اولیه بیماری تحت کنترل درآید.",
-    "quick_dosing": "سگ: 25 - 50 mg به ازای هر سگ IM هفتگی یا 1 - 4 mg خوراکی به ازای کل سگ | گربه: 1 - 2 mg به ازای هر گربه | اسب: 0.55 mg/kg (حداکثر تا ۲۵۰ میلی‌گرم برای اسب بالغ)"
+    "quick_dosing": "سگ: 25 - 50 mg به ازای هر سگ IM هفتگی یا 1 - 4 mg خوراکی به ازای کل سگ | گربه: 1 - 2 mg به ازای هر گربه | اسب: 0.55 mg/kg (حداکثر تا ۲۵۰ میلی‌گرم برای اسب بالغ)",
+    "brand_names_fa": [
+      "آمپول و قرص استانوزولول دامی (وینسترول-وی ۵۰ mg/mL)"
+    ],
+    "brand_names_en": [
+      "Winstrol-V (Stanozolol 50mg/mL) Vet Inj"
+    ]
   },
   {
     "id": "streptokinase",
@@ -79596,7 +84010,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در فهرست داروهای حیاتی اورژانس قلب بیمارستان‌های کشور.",
     "pharmacology_mechanism": "استرپتوکیناز یک پروتئین باکتریایی است که با پلاسمینوژن خون پیوند ۱ به ۱ تشکیل داده و کمپلکس فعالی می‌سازد که سایر مولکول‌های پلاسمینوژن را به پلاسمین تبدیل می‌کند؛ پلاسمین تولیدشده شبکه‌های فیبرینی لخته را هضم می‌نماید.",
     "clinical_pearls": "اگر بیش از ۲۴ ساعت از وقوع ترومبوآمبولی سدل در گربه گذشته باشد، استرپتوکیناز دیگر نباید استفاده شود زیرا لخته متراکم شده و حل شدن دیرهنگام آن سموم و اسید تجمع‌یافته در عضلات ایسکمیک نکروزه پاها را ناگهان وارد قلب کرده و در جا بیمار را دچار ایست قلبی می‌سازد.",
-    "quick_dosing": "گربه: دوز لودینگ 90,000 IU به ازای کل گربه طی ۳۰ دقیقه، سپس انفوزیون مداوم 45,000 IU/hr طی ۲ تا ۶ ساعت"
+    "quick_dosing": "گربه: دوز لودینگ 90,000 IU به ازای کل گربه طی ۳۰ دقیقه، سپس انفوزیون مداوم 45,000 IU/hr طی ۲ تا ۶ ساعت",
+    "brand_names_fa": [
+      "ویال تزریقی استرپتوکیناز ۱,۵۰۰,۰۰۰ واحد (استرپتاز)"
+    ],
+    "brand_names_en": [
+      "Streptokinase 1,500,000 IU Vial"
+    ]
   },
   {
     "id": "streptozocin",
@@ -79703,7 +84123,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های انکولوژی بیمارستان‌های فوق‌تخصصی کشور.",
     "pharmacology_mechanism": "آلکیلاسیون DNA و ایجاد اتصالات متقاطع در رشته‌های اسید نوکلئیک سلول‌های بتای پانکراس، کاهش غلظت NAD درون‌سلولی و مرگ انتخابی سلول‌های ترشح‌کننده انسولین.",
     "clinical_pearls": "استفاده از پروتکل دیورز نمکی تهاجمی (Saline Diuresis) غلظت استرپتوزوسین را در توبول‌های کلیه رقیق کرده و عبور آن را تسریع می‌کند؛ بدون اجرای این پروتکل، کلیه‌ها دچار نکروز غیرقابل برگشت می‌شوند.",
-    "quick_dosing": "سگ: 500 mg/m² سطح بدن (BSA)"
+    "quick_dosing": "سگ: 500 mg/m² سطح بدن (BSA)",
+    "brand_names_fa": [
+      "استرپتوزوتوسین",
+      "ویال استرپتوزوسین ۱ گرم (زانوسار)"
+    ],
+    "brand_names_en": [
+      "Zanosar (Streptozocin 1g) Lyophilized Vial"
+    ]
   },
   {
     "id": "succinylcholine_chloride",
@@ -79846,7 +84273,14 @@ const DRUGS_DATA = [
         "interval": "طبق دستور مونوگراف"
       }
     ],
-    "quick_dosing": "سگ: 0.2 - 0.4 mg/kg | اسب: 0.1 - 0.2 mg/kg"
+    "quick_dosing": "سگ: 0.2 - 0.4 mg/kg | اسب: 0.1 - 0.2 mg/kg",
+    "brand_names_fa": [
+      "ساکسامتونیوم",
+      "آمپول سوکسینیل‌کولین ۱۰۰ میلی‌گرم / ۲ میلی‌لیتر و ۵۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Succinylcholine (Suxamethonium) 100mg/2mL Ampoule"
+    ]
   },
   {
     "id": "sulfachlorpyridazine",
@@ -79990,7 +84424,13 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "سگ: 30 mg/kg | گاو: 30 - 50 mg/kg (حدود ۱ تا ۱.۵ گرم به ازای هر ۳۰ کیلوگرم)"
+    "quick_dosing": "سگ: 30 mg/kg | گاو: 30 - 50 mg/kg (حدود ۱ تا ۱.۵ گرم به ازای هر ۳۰ کیلوگرم)",
+    "brand_names_fa": [
+      "پودر سولفاکلروپیریدازین سدیم ۱۰۰٪ دامی (وتوسول)"
+    ],
+    "brand_names_en": [
+      "Sulfachlorpyridazine Sodium Powder (Vetisulid)"
+    ]
   },
   {
     "id": "sulfadiazine_trimethoprim",
@@ -80165,7 +84605,17 @@ const DRUGS_DATA = [
     "iran_pharma_status": "تولید انبوه در کشور و در دسترس در کلیه داروخانه‌های دامپزشکی.",
     "pharmacology_mechanism": "سولفادیازین با مهار آنزیم دی‌هیدروپتروآت سنتتاز مانع ساخت اسید دی‌هیدروفولیک می‌شود و تری‌متوپریم با مهار دی‌هیدروفولات ردوکتاز مانع مرحله بعدی می‌گردد؛ این مهار دوگانه متوالی مسیر سنتز تیمیدین و پورین‌های DNA باکتری را کاملاً مسدود می‌سازد.",
     "clinical_pearls": "قبل از شروع درمان سگ با TMS به مدت بیش از ۱۰ روز، تست اشک شیرمر (Schirmer Tear Test) انجام دهید و به صاحب بیمار آموزش دهید که در صورت ترشح چسبنده و قرمزی چشم فوراً دارو را قطع کند تا از کوری ناشی از خشکی چشم مادام‌العمر پیشگیری شود.",
-    "quick_dosing": "سگ: 15 - 30 mg/kg | گربه: 15 mg/kg | اسب: 15 - 30 mg/kg کل دارو (نسبت ترکیبی)"
+    "quick_dosing": "سگ: 15 - 30 mg/kg | گربه: 15 mg/kg | اسب: 15 - 30 mg/kg کل دارو (نسبت ترکیبی)",
+    "brand_names_fa": [
+      "TMS",
+      "کوتریمازین",
+      "سوسپانسیون تزریقی و خوراکی تری‌سولفید / تری‌متوزین ۴۸٪ دامی",
+      "خمیر خوراکی تری‌برینن اسب (Tribrissen Equine Paste)"
+    ],
+    "brand_names_en": [
+      "Trimethoprim + Sulfadiazine 48% Vet Inj / Oral",
+      "Tribrissen Equine Paste"
+    ]
   },
   {
     "id": "sulfadimethoxine",
@@ -80328,7 +84778,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "سگ: 55 mg/kg در روز اول (Loading)، سپس 27.5 mg/kg | گربه: 55 mg/kg در روز اول، سپس 27.5 mg/kg | گاو: 55 mg/kg روز اول، سپس 27.5 mg/kg"
+    "quick_dosing": "سگ: 55 mg/kg در روز اول (Loading)، سپس 27.5 mg/kg | گربه: 55 mg/kg در روز اول، سپس 27.5 mg/kg | گاو: 55 mg/kg روز اول، سپس 27.5 mg/kg",
+    "brand_names_fa": [
+      "سوسپانسیون خوراکی آلبون ۵٪ (۵۰ میلی‌گرم/mL)",
+      "قرص سولفادی‌متوکسین ۲۵۰ و ۵۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Albon Oral Suspension 5%",
+      "Sulfadimethoxine 250mg/500mg Tablets"
+    ]
   },
   {
     "id": "sulfasalazine",
@@ -80452,7 +84910,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در کلیه داروخانه‌های انسانی کشور و کاملاً در دسترس.",
     "pharmacology_mechanism": "پیوند آزو مولکول سولفاسالازین مانع جذب آن در معده و روده باریک می‌شود؛ در روده بزرگ، فلور باکتریایی پیوند آزو را شکسته و بخش ۵-آمینو سالیسیلیک اسید (۵-ASA) موضعاً آنزیم‌های لیپواکسیژناز و سیکلواکسیژناز را مهار کرده و سنتز لکوترین‌ها و پروستاگلاندین‌های التهابی جدار کولون را خاموش می‌سازد.",
     "clinical_pearls": "اگر سگ پس از یک هفته مصرف سولفاسالازین دچار قرمزی چشم و ترشحات غلیظ چرکی شد، نشانه قطعی افت اشک و KCS است؛ دارو باید فوراً قطع شده و با مسالازین خالص یا کورتیکواستروئیدها جایگزین گردد و قطره سیکلوسپورین چشمی شروع شود.",
-    "quick_dosing": "سگ: 10 - 30 mg/kg (معمولاً 20 mg/kg) | گربه: 10 - 20 mg/kg"
+    "quick_dosing": "سگ: 10 - 30 mg/kg (معمولاً 20 mg/kg) | گربه: 10 - 20 mg/kg",
+    "brand_names_fa": [
+      "قرص سولفاسالازین ۵۰۰ میلی‌گرم (آزولفیدین / سولفارین)"
+    ],
+    "brand_names_en": [
+      "Sulfasalazine 500mg Enteric-Coated Tablet"
+    ]
   },
   {
     "id": "sulfaquinoxaline",
@@ -80600,7 +85064,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "گاو: 130 mg/kg روز اول، سپس 65 mg/kg"
+    "quick_dosing": "گاو: 130 mg/kg روز اول، سپس 65 mg/kg",
+    "brand_names_fa": [
+      "محلول خوراکی سولفاکینوکسالین ۲۰٪ طیوری",
+      "پودر سولفاکینوکسالین + دی‌آوریدین (کوکسی‌دی)"
+    ],
+    "brand_names_en": [
+      "Sulfaquinoxaline 20% Oral Solution",
+      "Sulfaquinoxaline + Diaveridine Soluble Powder"
+    ]
   },
   {
     "id": "spinosad",
@@ -80729,7 +85201,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی دامپزشکی سراسر کشور به صورت وارداتی معتبر.",
     "pharmacology_mechanism": "پیوند به جایگاه آلوستریک گیرنده‌های استیل‌کولین نیکوتینی (nAChRs) در سیستم عصبی کک که باعث تحریک پیوسته و تخلیه پیام‌های عصبی، خستگی عصبی، فلج اسپاستیک و مرگ فوق‌العاده سریع حشره می‌گردد.",
     "clinical_pearls": "در سگی که از درماتیت شدید ناشی از حساسیت به نیش کک (FAD) به شدت خودزنی و ناله می‌کند، کامفورتیس معجزه بالینی ایجاد می‌کند؛ کک‌ها در عرض ۳۰ دقیقه شروع به سقوط از موهای حیوان کرده و خارش کاملاً تسکین می‌یابد.",
-    "quick_dosing": "سگ: 30 - 60 mg/kg | گربه: 50 - 100 mg/kg"
+    "quick_dosing": "سگ: 30 - 60 mg/kg | گربه: 50 - 100 mg/kg",
+    "brand_names_fa": [
+      "قرص جویدنی کامفورتیس (اسپینوساد ۱۴۰، ۲۷۰، ۴۲۵، ۵۶۰، ۸۱۰، ۱۶۲۰ mg)",
+      "قرص تریفکسیس (اسپینوساد + میلبه‌مایسین اوکسیم)"
+    ],
+    "brand_names_en": [
+      "Comfortis (Elanco) Chewable Tablets",
+      "Trifexis Chewable Tablets"
+    ]
   },
   {
     "id": "somatropin",
@@ -80838,7 +85318,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های انسانی کشور و تحت پوشش شرکت‌های پیشرفته بیوتکنولوژی ایران (سیناژن).",
     "pharmacology_mechanism": "پیوند به گیرنده‌های اختصاصی GH در کبد و سلول‌های اسکلتی، تحریک سنتز و ترشح فاکتور رشد شبه‌انسولین ۱ (IGF-1 / Somatomedin C)، تحریک سنتز پروتئین و تکثیر سلول‌های غضروفی و مهار مصرف گلوکز در سلول‌های چربی.",
     "clinical_pearls": "توله‌های ژرمن شپرد مبتلا به کوتولگی هیپوفیزی علاوه بر جثه عروسکی و پوست بی‌پشم و چروکیده، دچار کم‌کاری همزمان تیروئید (هایپوتیروئیدیسم ثانویه) هستند؛ بنابراین درمان موفق این بیماران همیشه نیازمند تجویز توأم سوماتروپین به همراه لووتیروکسین است.",
-    "quick_dosing": "سگ: 0.1 IU/kg (معادل حدود 0.03-0.05 mg/kg)"
+    "quick_dosing": "سگ: 0.1 IU/kg (معادل حدود 0.03-0.05 mg/kg)",
+    "brand_names_fa": [
+      "هورمون رشد نوترکیب",
+      "قلم یا ویال سوماتروپین ۴ و ۱۶ واحدی (نوردیتروپین / سیناتروپین / جینوتروپین)"
+    ],
+    "brand_names_en": [
+      "Somatropin (Norditropin / Cinnatropin) Pen/Vial"
+    ]
   },
   {
     "id": "sertraline",
@@ -80964,7 +85451,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی کشور در کلیه داروخانه‌ها.",
     "pharmacology_mechanism": "مهار بسیار انتخابی ناقل بازجذب سروتونین (SERT) در پایانه پیش‌سیناپسی نورون‌های مغز، افزایش غلظت سروتونین فعال در شکاف سیناپسی و القای تغییرات پلاستیسیته و تطابق‌پذیری عصبی در بادامک و قشر مغز.",
     "clinical_pearls": "به صاحب حیوان تاکید کنید که سرترالین داروی آرام‌بخش فوری (Tranquilizer) نیست و اثرات ضداضطراب آن مانند کلونازپام در همان روز اول ظاهر نمی‌شود؛ مغز سگ حداقل به ۴ هفته مواجهه مداوم با سروتونین نیاز دارد تا رفتارهای فوبیک و اضطرابی را خاموش سازد.",
-    "quick_dosing": "سگ: 1 - 3 mg/kg (شروع با 1 mg/kg و افزایش تدریجی) | گربه: 0.5 - 1.5 mg/kg"
+    "quick_dosing": "سگ: 1 - 3 mg/kg (شروع با 1 mg/kg و افزایش تدریجی) | گربه: 0.5 - 1.5 mg/kg",
+    "brand_names_fa": [
+      "قرص سرترالین ۵۰ و ۱۰۰ میلی‌گرم (زولوفت / آسنترا / سرترال)"
+    ],
+    "brand_names_en": [
+      "Sertraline 50mg / 100mg Tablet (Zoloft)"
+    ]
   },
   {
     "id": "sugammadex",
@@ -81118,7 +85611,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در لیست داروهای فوق‌تخصصی بیهوشی بیمارستان‌های کشور.",
     "pharmacology_mechanism": "ساختار حلقوی گاما-سیکلودکسترین دارای یک حفره مرکزی آبگریز و لبه‌های باردار آبدوست است؛ این ساختار مولکول چربی‌دوست روکورونیوم را با تمایل فوق‌العاده قوی درون خود به دام انداخته و کپسوله می‌کند و غلظت روکورونیوم آزاد پلاسما را به صفر می‌رساند.",
     "clinical_pearls": "بر خلاف نئوستیگمین که تلاش می‌کرد با افزایش استیل‌کولین در صفحه محرکه شل‌کننده را مغلوب کند و عوارض شدیدی چون برادی‌کاردی مهلک و برونکواسپاسم می‌داد، سوگامادکس مستقیماً خود روکورونیوم را از خون جاروب می‌کند؛ بنابراین هیچ نیازی به آتروپین ندارد و بیمار در عرض ۱۲۰ ثانیه بیدار و تنفس نرمال پیدا می‌کند.",
-    "quick_dosing": "سگ: 2 - 4 mg/kg (بر اساس عمق بلوک عضلانی) | گربه: 2 - 4 mg/kg | اسب: 2 - 4 mg/kg"
+    "quick_dosing": "سگ: 2 - 4 mg/kg (بر اساس عمق بلوک عضلانی) | گربه: 2 - 4 mg/kg | اسب: 2 - 4 mg/kg",
+    "brand_names_fa": [
+      "ویال سوگامادکس ۲۰۰ میلی‌گرم / ۲ میلی‌لیتر و ۵۰۰ میلی‌گرم (بریدیون)"
+    ],
+    "brand_names_en": [
+      "Bridion (Sugammadex 100mg/mL) Vial"
+    ]
   },
   {
     "id": "secnidazole",
@@ -81240,7 +85739,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی انسانی کشور در کلیه داروخانه‌ها.",
     "pharmacology_mechanism": "گروه نیترو در محیط بی‌هوازی تک‌یاخته توسط فرودوکسین احیا شده و رادیکال‌های آزاد نیتروز ایجاد می‌کند که به مارپیچ DNA ژیاردیا و تریکوموناس متصل شده و رشته‌های اسید نوکلئیک را خرد می‌سازد.",
     "clinical_pearls": "بزرگ‌ترین کابوس صاحبان گربه خوراندن قرص‌های تلخ مترونیدازول به مدت ۷ روز است که باعث سالیویشن و امتناع گربه می‌شود؛ سکنیدازول با اثربخشی در قالب یک دوز تکی درون کپسول این چالش بالینی را کاملاً حل کرده است.",
-    "quick_dosing": "سگ: 30 - 50 mg/kg | گربه: 30 mg/kg"
+    "quick_dosing": "سگ: 30 - 50 mg/kg | گربه: 30 mg/kg",
+    "brand_names_fa": [
+      "قرص یا ساشه سکنیدازول ۵۰۰ میلی‌گرم و ۱ گرم (سکنی‌تک / سکنید)"
+    ],
+    "brand_names_en": [
+      "Secnidazole 500mg / 1g Tablets / Granules"
+    ]
   },
   {
     "id": "scopolamine_butylbromide",
@@ -81380,7 +85885,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی دامپزشکی و کلیه داروخانه‌های کشور.",
     "pharmacology_mechanism": "مسدودسازی انتخابی گیرنده‌های موسکارینی استیل‌کولین در سلول‌های ماهیچه صاف جدار دستگاه گوارش، کیسه صفرا و مجاری ادراری که سبب مهار اسپاسم‌های شدید و شل‌سازی تونیسیته احشا بدون اثر بر CNS می‌گردد.",
     "clinical_pearls": "پیش از انجام توشه رکتال در اسب‌های پرخاشگر یا دارای کولیک شدید که زور می‌زنند، تزریق یک ویال کوچک بوسکوپان ظرف ۲ دقیقه دیواره رکتوم را مانند حریر شل می‌کند و از پارگی فاجعه‌بار رکتوم (Rectal tear) که منجر به پریتونیت و اتانازی اسب می‌شود پیشگیری می‌نماید.",
-    "quick_dosing": "سگ: 0.3 - 0.5 mg/kg | اسب: 0.3 mg/kg (معادل 1.5 mL به ازای هر ۱۰۰ کیلوگرم از محلول 20 mg/mL)"
+    "quick_dosing": "سگ: 0.3 - 0.5 mg/kg | اسب: 0.3 mg/kg (معادل 1.5 mL به ازای هر ۱۰۰ کیلوگرم از محلول 20 mg/mL)",
+    "brand_names_fa": [
+      "هیوسین ان بوتیل‌بروماید",
+      "محلول تزریقی بوسکوپان دامپزشکی (هیوسین ۲۰ mg/mL)",
+      "آمپول هیوسین بوتیل‌بروماید انسانی ۲۰ میلی‌گرم / میلی‌لیتر"
+    ],
+    "brand_names_en": [
+      "Buscopan 20mg/mL Veterinary Injection",
+      "Hyoscine Butylbromide 20mg/mL Ampoule"
+    ]
   },
   {
     "id": "sacubitril_valsartan",
@@ -81497,7 +86011,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی کشور در کلیه داروخانه‌های تخصصی قلب و عروق.",
     "pharmacology_mechanism": "ساکوبیتریل آنزیم نپری‌لایزین را مهار کرده و از تجزیه پپتیدهای ناتریورتیک (ANP، BNP و CNP) جلوگیری می‌کند که باعث گشادی عروق، ناتریورز و مهار بازسازی نامطلوب میوکارد می‌شود؛ همزمان والزارتان با بلوک گیرنده AT1 مانع انقباض عروقی و ترشح آلدوسترون ناشی از آنژیوتانسین II می‌گردد.",
     "clinical_pearls": "در سگ‌های مبتلا به CHF شدید که به رغم دریافت بالاترین دوزهای انالاپریل و پیموبندان دچار ادم ریه عودکننده می‌شوند، قطع انالاپریل و شروع ساکوبیتریل/والزارتان پس از ۳۶ ساعت می‌تواند احتقان ریه را رفع کرده و بقای حیوان را به شکل چشمگیری افزایش دهد.",
-    "quick_dosing": "سگ: 5 - 10 mg/kg (بر اساس مجموع ساکوبیتریل/والزارتان)"
+    "quick_dosing": "سگ: 5 - 10 mg/kg (بر اساس مجموع ساکوبیتریل/والزارتان)",
+    "brand_names_fa": [
+      "قرص انترستو ۵۰، ۱۰۰ و ۲۰۰ میلی‌گرم (ساکوبیتریل/والزارتان)"
+    ],
+    "brand_names_en": [
+      "Entresto (Novartis) 24/26mg, 49/51mg, 97/103mg Tablets"
+    ]
   },
   {
     "id": "sulfamethazine",
@@ -81656,7 +86176,16 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "گاو: 200 mg/kg روز اول، سپس 100 mg/kg | گوسفند/بز: 100 mg/kg روز اول، سپس 50 mg/kg"
+    "quick_dosing": "گاو: 200 mg/kg روز اول، سپس 100 mg/kg | گوسفند/بز: 100 mg/kg روز اول، سپس 50 mg/kg",
+    "brand_names_fa": [
+      "سولفادیمیدین",
+      "محلول تزریقی سولفادیمیدین ۳۳.۳٪ دامی (۲۵۰ میلی‌لیتر)",
+      "بلوس خوراکی سولفادیمیدین ۵ گرمی"
+    ],
+    "brand_names_en": [
+      "Sulfadimidine 33.3% Veterinary Injection",
+      "Sulfadimidine 5g Bolus"
+    ]
   },
   {
     "id": "sulfamethoxazole_trimethoprim",
@@ -81795,7 +86324,16 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های سراسر کشور به وفور و با قیمت بسیار در دسترس.",
     "pharmacology_mechanism": "مهار دو مرحله متوالی و ضروری بیوسنتز اسید فولیک در باکتری‌ها (سولفامتوکسازول سنتتاز را مهار می‌کند و تری‌متوپریم ردوکتاز را بلوک می‌نماید) که منجر به اثر باکتریوسیدی سینرژیک و وسیع‌الطیف می‌گردد.",
     "clinical_pearls": "به دلیل خاصیت چربی‌دوستی بالا، کوتریموکسازول از سد خونی-پروستات عبور می‌کند و برخلاف پنی‌سیلین‌ها در داخل ترشحات غده پروستات تغلیظ می‌شود؛ بنابراین در سگ‌های نر مسن مبتلا به پروستاتیت باکتریایی، داروی انتخابی بدون رقیب است.",
-    "quick_dosing": "سگ: 15 - 30 mg/kg مجموع دو دارو | گربه: 15 mg/kg"
+    "quick_dosing": "سگ: 15 - 30 mg/kg مجموع دو دارو | گربه: 15 mg/kg",
+    "brand_names_fa": [
+      "کوتریموکسازول",
+      "شربت سوسپانسیون کوتریموکسازول (۲۴۰ میلی‌گرم/۵ میلی‌لیتر)",
+      "قرص کوتریموکسازول بزرگسالان (۴۸۰ و ۹۶۰ میلی‌گرم فورته)"
+    ],
+    "brand_names_en": [
+      "Co-Trimoxazole Pediatric Suspension",
+      "Co-Trimoxazole 480mg & 960mg Forte Tablets"
+    ]
   },
   {
     "id": "simethicone",
@@ -81955,7 +86493,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "سگ: 25 - 100 mg به ازای کل سگ (معادل ۱ تا ۲ قطره‌چکان شربت اطفال) | گربه: 10 - 25 mg به ازای کل گربه | گاو: 100 mL از امولسیون غلیظ سایمتیکون (یا پودرهای حاوی دایمتیکون)"
+    "quick_dosing": "سگ: 25 - 100 mg به ازای کل سگ (معادل ۱ تا ۲ قطره‌چکان شربت اطفال) | گربه: 10 - 25 mg به ازای کل گربه | گاو: 100 mL از امولسیون غلیظ سایمتیکون (یا پودرهای حاوی دایمتیکون)",
+    "brand_names_fa": [
+      "قطره خوراکی سایمتیکون اطفال (۴۰ میلی‌گرم/میلی‌لیتر)",
+      "شربت امولسیون ضد نفخ دامی (بلوت‌استاپ / دایمتیکون دامی)"
+    ],
+    "brand_names_en": [
+      "Simethicone 40mg/mL Oral Drops (Infacol / Dimethicone)",
+      "Bloat-Stop Veterinary Emulsion"
+    ]
   },
   {
     "id": "streptomycin",
@@ -82128,7 +86674,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "سگ: 10 - 15 mg/kg | گاو: 25 mg/kg تک دوز (یا 12.5 mg/kg q12h برای ۳ روز) | گوسفند/بز: 10 - 15 mg/kg"
+    "quick_dosing": "سگ: 10 - 15 mg/kg | گاو: 25 mg/kg تک دوز (یا 12.5 mg/kg q12h برای ۳ روز) | گوسفند/بز: 10 - 15 mg/kg",
+    "brand_names_fa": [
+      "ویال پودر استرپتومایسین سولفات ۵ گرمی دامی",
+      "سوسپانسیون تزریقی پن‌استرپ (پنی‌سیلین پروکائین + دی‌هیدرواسترپتومایسین)"
+    ],
+    "brand_names_en": [
+      "Streptomycin Sulfate 5g Veterinary Vial",
+      "Pen-Strep Injection Vial"
+    ]
   },
   {
     "id": "sirolimus",
@@ -82244,7 +86798,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی پیوند و انکولوژی کشور با نسخه فوق‌تخصص.",
     "pharmacology_mechanism": "پیوند با پروتئین درون‌سلولی FKBP-12 و تشکیل کمپلکسی که مستقیماً کیناز mTOR (Mammalian Target of Rapamycin) را مهار می‌کند؛ این مهار مانع ترجمه پروتئین‌های چرخه سلولی، توقف چرخه سلول در فاز G1 به S، مهار فاکتور رگ‌زایی VEGF و تحریک اتوفاژی جهت پاکسازی سلول‌های فرسوده می‌گردد.",
     "clinical_pearls": "یافته‌های دراماتیک پروژه تحقیقاتی Dog Aging Project نشان داده است که دوزهای بسیار پایین هفتگی راپامایسین در سگ‌های مسن بدون سرکوب ایمنی، فیبروز قلبی را معکوس کرده و قدرت پمپاژ بطن چپ و شادابی حرکتی حیوان را به طرز چشمگیری احیا می‌کند.",
-    "quick_dosing": "سگ: 0.05 - 0.1 mg/kg"
+    "quick_dosing": "سگ: 0.05 - 0.1 mg/kg",
+    "brand_names_fa": [
+      "راپامایسین",
+      "قرص یا کپسول سیرولیموس ۱ میلی‌گرم (راپامون)"
+    ],
+    "brand_names_en": [
+      "Rapamune (Sirolimus 1mg) Tablets"
+    ]
   },
   {
     "id": "sorafenib",
@@ -82352,7 +86913,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی تخصصی انکولوژی کشور با نسخه متخصص.",
     "pharmacology_mechanism": "سورافنیب هم تکثیر سلول‌های توموری را از طریق مهار مسیر پروتئین کیناز Raf/MEK/ERK سرکوب می‌کند و هم با مهار گیرنده‌های فاکتور رشد اندوتلیال عروقی (VEGFR) و پلاکت‌ها (PDGFR)، عروق‌زایی نئوپلاستیک تومور را قطع کرده و باعث نکروز توده سرطانی می‌گردد.",
     "clinical_pearls": "کارسینومای سلول‌های کبدی سگ سابقاً پاسخی به هیچ داروی شیمی‌درمانی نمی‌داد؛ معرفی سورافنیب با مهار اختصاصی مسیرهای کینازی، امکان پایدارسازی توده تومور و افزایش چند برابری طول عمر سگ‌های مبتلا به تومورهای غول‌آسای کبد را بدون جراحی‌های پرخطر فراهم کرده است.",
-    "quick_dosing": "سگ: 2 - 5 mg/kg"
+    "quick_dosing": "سگ: 2 - 5 mg/kg",
+    "brand_names_fa": [
+      "قرص روکش‌دار سورافنیب ۲۰۰ میلی‌گرم (نکساوار / سورافنکس)"
+    ],
+    "brand_names_en": [
+      "Nexavar (Sorafenib 200mg) Tablets"
+    ]
   },
   {
     "id": "sunitinib",
@@ -82460,7 +87027,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی تخصصی کشور در داروخانه‌های انکولوژی.",
     "pharmacology_mechanism": "سونیتینیب با مسدود ساختن جایگاه اتصال ATP در قلمرو کینازی گیرنده‌های فاکتور رشد c-KIT و VEGFR، مسیرهای پیام‌رسانی فسفوریلاسیون و بقای سلول‌های ماست سل توموری را قطع کرده و باعث القای آپوپتوز سلول‌های تومور و متلاشی شدن شبکه خون‌رسانی آن می‌گردد.",
     "clinical_pearls": "حدود ۳۰٪ از ماست سل تومورهای سگ دارای جهش فعال‌کننده در اگزون ۱۱ ژن c-KIT هستند؛ در این بیماران سونیتینیب ظرف چند روز توده متورم تومور را به شدت کوچک کرده و علائم خطرناک ناشی از دگرانولاسیون ماست سل‌ها (زخم معده و شوک هیستامینی) را برطرف می‌سازد.",
-    "quick_dosing": "سگ: 0.5 - 1 mg/kg"
+    "quick_dosing": "سگ: 0.5 - 1 mg/kg",
+    "brand_names_fa": [
+      "کپسول سونیتینیب ۱۲.۵، ۲۵ و ۵۰ میلی‌گرم (سوتنت / سونینیکس)"
+    ],
+    "brand_names_en": [
+      "Sutent (Sunitinib) 12.5mg, 25mg, 50mg Capsules"
+    ]
   },
   {
     "id": "sulfadimethoxine_ormetoprim",
@@ -82581,7 +87154,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی دامپزشکی کشور به صورت برند وارداتی معتبر.",
     "pharmacology_mechanism": "سولفادی‌متوکسین مرحله اول ساخت اسید فولیک را مهار می‌کند و اورمتوپریم (مشابه تری‌متوپریم اما با نیمه‌عمر بسیار منطبق‌تر با سولفادی‌متوکسین) مرحله دوم دی‌هیدروفولات ردوکتاز را بلوک می‌سازد؛ این اثر هم‌افزا باکتری‌های مقاوم به هر یک از داروها را به سرعت نابود می‌کند.",
     "clinical_pearls": "بزرگ‌ترین مزیت بالینی پریمور بر تری‌برینن یا کوتریموکسازول، نیمه‌عمر پلاسمایی هماهنگ سولفادی‌متوکسین و اورمتوپریم است؛ در سایر ترکیبات تری‌متوپریم سریع‌تر دفع می‌شود و باکتری با سولفانامید تنها مواجه می‌گردد، اما در پریمور هر دو دارو همزمان ۲۴ ساعت در خون باقی مانده و مقاومت باکتریایی ایجاد نمی‌شود.",
-    "quick_dosing": "سگ: 55 mg/kg روز اول (Loading)، سپس 27.5 mg/kg"
+    "quick_dosing": "سگ: 55 mg/kg روز اول (Loading)، سپس 27.5 mg/kg",
+    "brand_names_fa": [
+      "پریمور",
+      "قرص‌های پریمور ۱۲۰، ۲۴۰، ۶۰۰ و ۱۲۰۰ میلی‌گرم سگ"
+    ],
+    "brand_names_en": [
+      "Primor (Zoetis) Chewable Tablets for Dogs"
+    ]
   },
   {
     "id": "somatostatin",
@@ -82705,7 +87285,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های بیمارستانی و بخش‌های مراقبت ویژه ICU کشور.",
     "pharmacology_mechanism": "پیوند به گیرنده‌های اختصاصی سوماتواستاتین (SSTR1 تا SSTR5) در سلول‌های آسینار و جزایر لانگرهانس پانکراس و سلول‌های مخاطی معده؛ مهار پروتئین کیناز A و آدنیلات سیکلاز و توقف خروج وزیکول‌های حاوی تریپسینوژن و آنزیم‌های گوارشی و انقباض عروق اسپلانکنیک.",
     "clinical_pearls": "در پانکراتیت‌های حاد فوق‌العاده دردناک که سگ در وضعیت شبیه به سجده (Prayer position) ناله می‌کند، انفوزیون سوماتواستاتین با به استراحت واداشتن بافت ملتهب پانکراس، درد را مهار کرده و از فاجعه نشت آنزیم‌های هضمی به حفره صفاق جلوگیری می‌نماید.",
-    "quick_dosing": "سگ: بولوس اولیه 2 - 4 mcg/kg، سپس انفوزیون پیوسته 2 - 4 mcg/kg/hr | گربه: 1 - 2 mcg/kg/hr"
+    "quick_dosing": "سگ: بولوس اولیه 2 - 4 mcg/kg، سپس انفوزیون پیوسته 2 - 4 mcg/kg/hr | گربه: 1 - 2 mcg/kg/hr",
+    "brand_names_fa": [
+      "آمپول سوماتواستاتین ۳ میلی‌گرم (استیلامین)"
+    ],
+    "brand_names_en": [
+      "Somatostatin 3mg / 250mcg Lyophilized Ampoule"
+    ]
   },
   {
     "id": "spironolactone_benazepril",
@@ -82829,7 +87415,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی دامپزشکی کشور به عنوان داروی وارداتی رسمی فوق‌تخصصی.",
     "pharmacology_mechanism": "بنازپریل با مهار ACE مانع تولید آنژیوتانسین II و انقباض عروق می‌گردد؛ اما از آنجا که آلدوسترون از مسیرهای غیروابسته به ACE نیز ترشح می‌شود (Aldosterone Breakthrough)، جزء اسپیرونولاکتون گیرنده‌های معدنی آلدوسترون را در میوکارد و عروق مستقیماً مسدود کرده و مانع فیبروز بافت قلب و آریتمی می‌گردد.",
     "clinical_pearls": "سابقاً صاحبان سگ باید قرص‌های انالاپریل و اسپیرونولاکتون را به طور جداگانه در زمان‌های مختلف خورانده و با امتناع سگ مواجه می‌شدند؛ کاردالیس با ادغام هر دو دارو در یک قرص خوش‌طعم جویدنی گوشتی روزانه، هم بقای سگ را دوبرابر کرده و هم استرس صاحب بیمار را حذف کرده است.",
-    "quick_dosing": "سگ: 2 mg/kg اسپیرونولاکتون + 0.25 mg/kg بنازپریل"
+    "quick_dosing": "سگ: 2 mg/kg اسپیرونولاکتون + 0.25 mg/kg بنازپریل",
+    "brand_names_fa": [
+      "کاردالیس",
+      "قرص‌های جویدنی کاردالیس سگ (۲۰/۲.۵، ۴۰/۵ و ۸۰/۱۰ میلی‌گرم)"
+    ],
+    "brand_names_en": [
+      "Cardalis (Ceva) Chewable Tablets for Dogs"
+    ]
   },
   {
     "id": "tamoxifen_citrate",
@@ -82936,7 +87529,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور با نسخه پزشکی.",
     "pharmacology_mechanism": "مهار رقابتی اتصال ۱۷-بتا استرادیول به گیرنده‌های استروژنی درون سلول‌های توموری بافت پستان، مهار تحریک فاکتورهای رونویسی DNA و مهار تکثیر سلول‌های تومور وابسته به هورمون.",
     "clinical_pearls": "قانون آهن در انکولوژی دامپزشکی: هرگز به سگی که رحم دارد تاموکسیفن ندهید؛ این دارو در پستان آنتاگونیست است اما در رحم سگ آگونیست عمل می‌کند و رحم را ظرف چند هفته پر از ترشحات چرکی و عفونت کشنده پایومترا می‌سازد.",
-    "quick_dosing": "سگ: 0.5 - 1 mg/kg (حداکثر ۱۰ میلی‌گرم برای کل سگ)"
+    "quick_dosing": "سگ: 0.5 - 1 mg/kg (حداکثر ۱۰ میلی‌گرم برای کل سگ)",
+    "brand_names_fa": [
+      "قرص تاموکسیفن ۱۰ و ۲۰ میلی‌گرم (تاموکسین)"
+    ],
+    "brand_names_en": [
+      "Tamoxifen 10mg / 20mg Tablets"
+    ]
   },
   {
     "id": "tamsulosin",
@@ -83060,7 +87659,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور و کاملاً در دسترس.",
     "pharmacology_mechanism": "بلوک انتخابی زیرنوع گیرنده‌های آلفا-۱A آدرنرژیک که تراکم آن‌ها منحصراً در گردن مثانه و ماهیچه‌های صاف پیشابراه بسیار بالا است، در نتیجه کاهش تونیسیته مجرا و سهولت جریان ادرار بدون اتساع عروق خونی محیطی سیستمیک.",
     "clinical_pearls": "بر خلاف پرازوسین که گربه را دچار لتارژی شدید و افت شدید فشار خون می‌کند، تامسولوسین انتخابی عمل می‌کند و به طور اختصاصی روی اسفنکتر پیشابراه قفل می‌شود؛ بازگشت ادرار خودبه‌خودی گربه پس از درآوردن کاتتر با تامسولوسین بسیار روان‌تر و با کمترین زورزدگی (Dysuria) رخ می‌دهد.",
-    "quick_dosing": "سگ: 0.01 - 0.02 mg/kg (حداکثر تا یک کپسول 0.4 mg روزانه) | گربه: 0.005 - 0.01 mg/kg (معادل یک‌چهارم تا یک‌پنجم محتوای کپسول 0.4 mg)"
+    "quick_dosing": "سگ: 0.01 - 0.02 mg/kg (حداکثر تا یک کپسول 0.4 mg روزانه) | گربه: 0.005 - 0.01 mg/kg (معادل یک‌چهارم تا یک‌پنجم محتوای کپسول 0.4 mg)",
+    "brand_names_fa": [
+      "کپسول تامسولوسین هیدروکلراید ۰.۴ میلی‌گرم (فلوماکس / اومنیک / تامسول)"
+    ],
+    "brand_names_en": [
+      "Tamsulosin 0.4mg Modified-Release Capsules (Flomax)"
+    ]
   },
   {
     "id": "taurine",
@@ -83194,7 +87799,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام پت‌شاپ‌ها، داروخانه‌های دامپزشکی و انسانی کشور.",
     "pharmacology_mechanism": "تورین در غلظت‌های میلی‌مولار در میوکارد و شبکیه حضور دارد؛ با تنظیم همئوستاز یون‌های کلسیم درون‌سلولی، مهار آپوپتوز میوسیت‌ها، فعالیت آنتی‌اکسیدانی و پیوند با اسیدهای صفراوی، انقباض‌پذیری طبیعی میوکارد و هدایت فوتورسپتورهای شبکیه را حفظ می‌کند.",
     "clinical_pearls": "معجزه تاریخ دامپزشکی: گربه‌های مبتلا به DCM شدید که در آستانه مرگ ناشی از احتقان ریه بودند، با مصرف مداوم تورین ظرف چند هفته اتساع بطن چپ آن‌ها معکوس شده و قلب به ابعاد کاملاً نرمال بازمی‌گردد؛ یکی از معدود بیماری‌های نارسایی قلبی که درمان قطعی دارد!",
-    "quick_dosing": "سگ: 500 - 1000 mg برای سگ‌های کمتر از ۲۵ کیلو، ۱۰۰۰ تا ۲۰۰۰ میلی‌گرم برای سگ‌های درشت | گربه: 250 - 500 mg به ازای کل گربه"
+    "quick_dosing": "سگ: 500 - 1000 mg برای سگ‌های کمتر از ۲۵ کیلو، ۱۰۰۰ تا ۲۰۰۰ میلی‌گرم برای سگ‌های درشت | گربه: 250 - 500 mg به ازای کل گربه",
+    "brand_names_fa": [
+      "پودر یا قرص تورین ۵۰۰ میلی‌گرم دامپزشکی و انسانی",
+      "خمیرهای مولتی‌ویتامین حاوی تورین گربه (جیم‌کت / بیفار)"
+    ],
+    "brand_names_en": [
+      "Taurine 500mg / 1000mg Powder & Capsules",
+      "GimCat / Beaphar Taurine Paste for Cats"
+    ]
   },
   {
     "id": "teicoplanin",
@@ -83318,7 +87931,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های بیمارستانی کشور تحت پروتکل نظارت بر مصرف آنتی‌بیوتیک‌ها.",
     "pharmacology_mechanism": "اتصال به انتهای D-آلانیل-D-آلانین در پیش‌سازهای پپتیدوگلیکان دیواره باکتری و مهار مرحله پلیمریزاسیون و ترانس‌پپتیداسیون که باعث تضعیف دیواره و لیز اسمزی باکتری‌های گرم مثبت در حال تقسیم می‌گردد.",
     "clinical_pearls": "ونکومایسین در سگ و گربه نیازمند انفوزیون وریدی بسیار آهسته طی ۶۰ دقیقه است و تزریق عضلانی آن نکروز بافتی فاجعه‌بار می‌دهد؛ تیکوپلانین این محدودیت‌ها را ندارد و می‌توان آن را حتی با یک تزریق عضلانی سریع روزانه با همان قدرت کشندگی باکتری تجویز نمود.",
-    "quick_dosing": "سگ: دوز لودینگ: 10-20 mg/kg روز اول (منقسم هر ۱۲ ساعت)، سپس 6 - 10 mg/kg | گربه: 10 mg/kg لودینگ، سپس 5 mg/kg"
+    "quick_dosing": "سگ: دوز لودینگ: 10-20 mg/kg روز اول (منقسم هر ۱۲ ساعت)، سپس 6 - 10 mg/kg | گربه: 10 mg/kg لودینگ، سپس 5 mg/kg",
+    "brand_names_fa": [
+      "ویال تزریقی تیکوپلانین ۲۰۰ و ۴۰۰ میلی‌گرم (تارگوسید / تیکوسین)"
+    ],
+    "brand_names_en": [
+      "Targocid / Teicoplanin 200mg & 400mg Vial"
+    ]
   },
   {
     "id": "temozolomide",
@@ -83428,7 +88047,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های انکولوژی بیمارستان‌های فوق‌تخصصی کشور.",
     "pharmacology_mechanism": "در pH فیزیولوژیک خودبه‌خود و بدون نیاز به متابولیسم کبدی به ترکیب فعال MTIC تجزیه می‌شود؛ این متابولیت گروه متیل را به موقعیت O6 و N7 گوانین در DNA متصل کرده که منجر به اختلال در همانندسازی و القای مرگ برنامه‌ریزی‌شده (آپوپتوز) سلول‌های توموری مغز می‌گردد.",
     "clinical_pearls": "تومورهای مغزی سگ به دلیل سد خونی-مغزی نفوذناپذیر (BBB) تقریباً به هیچ داروی شیمی‌درمانی پاسخ نمی‌دهند؛ تموزولوماید به دلیل وزن مولکولی اندک و چربی‌دوستی بالا به راحتی از این سد عبور کرده و درمان دارویی تومورهای داخل جمجمه را امکان‌پذیر ساخته است.",
-    "quick_dosing": "سگ: 60 - 100 mg/m² سطح بدن (BSA)"
+    "quick_dosing": "سگ: 60 - 100 mg/m² سطح بدن (BSA)",
+    "brand_names_fa": [
+      "کپسول تموزولوماید ۲۰، ۱۰۰ و ۲۵۰ میلی‌گرم (تمودار / تموتک)"
+    ],
+    "brand_names_en": [
+      "Temodar (Temozolomide) 20mg, 100mg, 250mg Capsules"
+    ]
   },
   {
     "id": "tenoxicam",
@@ -83543,7 +88168,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی انسانی کشور در کلیه داروخانه‌ها.",
     "pharmacology_mechanism": "مهار سنتز پروستاگلاندین‌ها از طریق مهار غیراختصاصی ایزوفرم‌های سیکلواکسیژناز (COX-1 و COX-2)، مهار تجمع لکوسیت‌ها در موضع التهاب و کاهش تولید سایتوکین‌های پیش‌التهابی.",
     "clinical_pearls": "اگرچه تنوکسیکام یک مسکن قوی است، اما به دلیل شاخص مهاری COX-1 بالا در دامپزشکی، داروهای انتخابی COX-2 مانند ملوکسیکام یا رابناکوسیب اولویت اول بالینی هستند و تنوکسیکام فقط در شرایط نبود داروهای اختصاصی دامی مد نظر قرار می‌گیرد.",
-    "quick_dosing": "سگ: 0.2 mg/kg روز اول، سپس 0.1 mg/kg"
+    "quick_dosing": "سگ: 0.2 mg/kg روز اول، سپس 0.1 mg/kg",
+    "brand_names_fa": [
+      "قرص تنوکسیکام ۲۰ میلی‌گرم (تیلوکوتیل)",
+      "ویال تزریقی تنوکسیکام ۲۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Tenoxicam 20mg Tablet",
+      "Tenoxicam 20mg Injection Vial"
+    ]
   },
   {
     "id": "tepoxalin",
@@ -83661,7 +88294,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در کلینیک‌ها و داروخانه‌های تخصصی دامپزشکی کشور به صورت وارداتی رسمی.",
     "pharmacology_mechanism": "تپوکسالین و متابولیت فعال آن هر دو مسیر اصلی اسید آراشیدونیک را مسدود می‌کنند: مهار COX مانع تولید پروستاگلاندین‌های دردزا (PGE2) می‌شود و مهار 5-LOX مانع تشکیل لکوترین B4 (مسئول کشش نوتروفیل‌ها و التهاب مخرب غضروف) می‌گردد.",
     "clinical_pearls": "بزرگ‌ترین دردسر صاحبان سگ‌های پیر مبتلا به آرتروز، مبارزه روزانه برای خوراندن قرص‌های بزرگ است؛ زوبرین به محض تماس با زبان یا مخاط گونه سگ در عرض ۴ ثانیه ناپدید می‌شود و سگ حتی فرصت تف کردن دارو را پیدا نمی‌کند!",
-    "quick_dosing": "سگ: 10 - 20 mg/kg روز اول (Loading)، سپس 10 mg/kg"
+    "quick_dosing": "سگ: 10 - 20 mg/kg روز اول (Loading)، سپس 10 mg/kg",
+    "brand_names_fa": [
+      "قرص‌های حل شونده در دهان زوبرین (تپوکسالین ۵۰، ۱۰۰ و ۲۰۰ mg)"
+    ],
+    "brand_names_en": [
+      "Zubrin (Schering-Plough / Merck) Rapid-Disintegrating Tablets"
+    ]
   },
   {
     "id": "terbutaline_systemic",
@@ -83832,7 +88471,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در کلیه مراکز اورژانس و داروخانه‌های انسانی سراسر کشور.",
     "pharmacology_mechanism": "تحریک انتخابی گیرنده‌های بتا-۲ آدرنرژیک در عضلات صاف برونش، فعال‌سازی آنزیم آدنیلات سیکلاز، افزایش غلظت کلسیم ترشح‌شده به داخل شبکه سارکوپلاسمی و شل‌سازی سریع ماهیچه‌های منقبض مجاری هوایی ریه.",
     "clinical_pearls": "وقتی گربه مبتلا به آسم در حالت دیسترس خفگی با دهان باز تنفس می‌کند، نزدیک کردن ماسک آلبوترول استرس بیمار را منفجر کرده و باعث ایست تنفسی می‌شود؛ تزریق یک دوز زیرجلدی بسیار سریع تربوتالین بدون دستکاری گربه، ظرف چند دقیقه اسپاسم را باز کرده و جان حیوان را نجات می‌دهد.",
-    "quick_dosing": "سگ: 0.05 mg/kg (حداکثر تا ۲.۵ تا ۵ میلی‌گرم به ازای کل سگ) | گربه: 0.01 mg/kg (معادل 0.02 mL/kg از آمپول 0.5 mg/mL) | اسب: 0.005 - 0.01 mg/kg"
+    "quick_dosing": "سگ: 0.05 mg/kg (حداکثر تا ۲.۵ تا ۵ میلی‌گرم به ازای کل سگ) | گربه: 0.01 mg/kg (معادل 0.02 mL/kg از آمپول 0.5 mg/mL) | اسب: 0.005 - 0.01 mg/kg",
+    "brand_names_fa": [
+      "آمپول تربوتالین سولفات ۰.۵ میلی‌گرم / میلی‌لیتر (بریکانیل)",
+      "قرص تربوتالین ۲.۵ میلی‌گرم (بریکانیل)"
+    ],
+    "brand_names_en": [
+      "Bricanyl (Terbutaline 0.5mg/mL) Ampoule",
+      "Terbutaline 2.5mg Tablets"
+    ]
   },
   {
     "id": "teriparatide",
@@ -83955,7 +88602,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی انسانی کشور به شکل قلم‌های نوترکیب پیشرفته (سیناژن).",
     "pharmacology_mechanism": "پیوند به گیرنده نوع ۱ هورمون پاراتیروئید (PTH1R) در استئوبلاست‌ها و سلول‌های توبول کلیوی؛ تحریک بازجذب کلسیم و دفع فسفات در کلیه، فعال‌سازی ویتامین D کلیوی و القای بازسازی استخوانی.",
     "clinical_pearls": "در گربه‌هایی که پس از جراحی تیروئیدکتومی به دلیل قطع تصادفی خون‌رسانی پاراتیروئید دچار تتانی، اسپاسم شدید عضلات صورت و تشنج هایپوکلسیمی می‌شوند، تری‌پاراتاید به عنوان هورمون طبیعی درمان علامتی را به درمان فیزیولوژیک قطعی تبدیل می‌سازد.",
-    "quick_dosing": "سگ: 0.5 - 1 mcg/kg | گربه: 0.5 mcg/kg"
+    "quick_dosing": "سگ: 0.5 - 1 mcg/kg | گربه: 0.5 mcg/kg",
+    "brand_names_fa": [
+      "هورمون پاراتیروئید نوترکیب",
+      "قلم تزریقی تری‌پاراتاید ۲۵۰ میکروگرم/میلی‌لیتر (فورتئو / سینوریتل)"
+    ],
+    "brand_names_en": [
+      "Forteo / Cinnoritelle (Teriparatide 20mcg/dose) Pen"
+    ]
   },
   {
     "id": "testosterone_cypionate",
@@ -84070,7 +88724,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی کشور در کلیه داروخانه‌ها با نسخه رسمی.",
     "pharmacology_mechanism": "پیوند به گیرنده‌های آندروژن در سلول‌های ماهیچه صاف اسفنکتر مجرای ادرار و گردن مثانه، تحریک ساخت پروتئین‌های انقباضی و بازگرداندن تونیسیته عضلانی اسفنکتر ادراری که پس از اخته شدن و افت آندروژن‌ها دچار آتروفی شده بود.",
     "clinical_pearls": "سگ‌های نر اخته‌شده مسن اغلب در خواب دچار نشت بی‌اختیار ادرار می‌شوند؛ اگر فنیل‌پروپانول‌آمین به تنهایی پاسخ ندهد، یک تزریق ماهانه تستوسترون سیپیونات تون عضلات پیشابراه را بازسازی کرده و نشت ادرار را به طور کامل متوقف می‌سازد.",
-    "quick_dosing": "سگ: 1 - 2 mg/kg (حداکثر تا ۱۰۰ میلی‌گرم به ازای کل سگ) | گربه: 5 - 10 mg به ازای کل گربه"
+    "quick_dosing": "سگ: 1 - 2 mg/kg (حداکثر تا ۱۰۰ میلی‌گرم به ازای کل سگ) | گربه: 5 - 10 mg به ازای کل گربه",
+    "brand_names_fa": [
+      "آمپول تستوسترون سیپیونات و انانتات ۱۰۰ و ۲۵۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Testosterone Cypionate / Enanthate 100mg & 250mg Inj"
+    ]
   },
   {
     "id": "tetracaine_ophthalmic",
@@ -84207,7 +88867,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به عنوان داروی تشخیصی چشم‌پزشکی.",
     "pharmacology_mechanism": "مسدود ساختن کانال‌های سدیمی در فیبرهای عصبی حسی اپی‌تلیوم قرنیه و مهار دپلاریزاسیون و تولید پتانسیل عمل پیام‌های درد ناشی از تماس تماسی و فشاری.",
     "clinical_pearls": "قانون طلایی چشم‌پزشکی: اگر صاحب حیوانی با زخم قرنیه شدید التماس کرد که قطره بی‌حسی را برای تسکین درد در منزل به او بدهید، مطلقاً این کار را نکنید! تتراکائین با خاموش کردن رفلکس حسی، مانع تکثیر و مهاجرت سلول‌های اپی‌تلیال شده و چشم سگ یا گربه را به سمت ذوب قرنیه (Melting Ulcer) و تخلیه کره چشم پیش می‌برد.",
-    "quick_dosing": "سگ: 1 تا 2 قطره محلول 0.5% | گربه: 1 قطره محلول 0.5% | اسب: 2 تا 3 قطره در چشم"
+    "quick_dosing": "سگ: 1 تا 2 قطره محلول 0.5% | گربه: 1 قطره محلول 0.5% | اسب: 2 تا 3 قطره در چشم",
+    "brand_names_fa": [
+      "قطره چشمی",
+      "قطره چشمی تتراکائین هیدروکلراید ۰.۵٪ (سیناکائین)"
+    ],
+    "brand_names_en": [
+      "Tetracaine 0.5% Ophthalmic Drops (Sinacaine)"
+    ]
   },
   {
     "id": "tetracycline_systemic",
@@ -84365,7 +89032,16 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "سگ: 15 - 22 mg/kg | گربه: 15 - 20 mg/kg | گاو: 10 - 20 mg/kg"
+    "quick_dosing": "سگ: 15 - 22 mg/kg | گربه: 15 - 20 mg/kg | گاو: 10 - 20 mg/kg",
+    "brand_names_fa": [
+      "سیستمیک خوراکی",
+      "کپسول تتراسایکلین ۲۵۰ میلی‌گرم انسانی",
+      "پودر تتراسایکلین ۲۰٪ و ۵۰٪ دامی"
+    ],
+    "brand_names_en": [
+      "Tetracycline 250mg Capsules",
+      "Tetracycline 20% & 50% Soluble Powder"
+    ]
   },
   {
     "id": "thiabendazole",
@@ -84518,7 +89194,15 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "گاو: 50 - 100 mg/kg"
+    "quick_dosing": "گاو: 50 - 100 mg/kg",
+    "brand_names_fa": [
+      "قطره گوش ترزادرم دامپزشکی (تیابندازول + نئومایسین + دگزامتازون)",
+      "سوسپانسیون خوراکی تیابندازول دامی"
+    ],
+    "brand_names_en": [
+      "Tresaderm Otic Solution (Merial / Boehringer)",
+      "Thiabendazole Oral Suspension"
+    ]
   },
   {
     "id": "thiamine_hydrochloride",
@@ -84705,7 +89389,16 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "گربه: 50 - 100 mg به ازای کل گربه | گاو: 10 - 20 mg/kg | اسب: 5 - 10 mg/kg | گوسفند/بز: 10 - 20 mg/kg (معادل 1-2 mL از محلول 100 mg/mL به ازای هر ۱۰ کیلوگرم)"
+    "quick_dosing": "گربه: 50 - 100 mg به ازای کل گربه | گاو: 10 - 20 mg/kg | اسب: 5 - 10 mg/kg | گوسفند/بز: 10 - 20 mg/kg (معادل 1-2 mL از محلول 100 mg/mL به ازای هر ۱۰ کیلوگرم)",
+    "brand_names_fa": [
+      "ویتامین B1",
+      "محلول تزریقی ویتامین B1 دامی ۱۰۰ mg/mL (۱۰۰ میلی‌لیتر)",
+      "آمپول ویتامین B1 انسانی ۱۰۰ و ۳۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Vitamin B1 (Thiamine 100mg/mL) Veterinary Injection",
+      "Thiamine 100mg & 300mg Ampoules"
+    ]
   },
   {
     "id": "thioguanine",
@@ -84827,7 +89520,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های منتخب انکولوژی بیمارستان‌های فوق‌تخصصی کشور.",
     "pharmacology_mechanism": "تیوگوانین توسط آنزیم HGPRT به تیوگوانین مونوکلئوتید (TGMP) تبدیل می‌شود که سنتز پورین‌ها را مهار کرده و به صورت دروغین وارد ساختار DNA و RNA می‌گردد؛ حضور این نوکلئوتید معیوب باعث شکستن رشته‌های DNA و آپوپتوز سلول‌های سرطانی در فاز S تقسیم سلولی می‌شود.",
     "clinical_pearls": "بر خلاف مرکاپتوپورین (6-MP) که در صورت مصرف همزمان با داروی آلوپورینول غلظت خونی آن ۵ برابر بالا رفته و مرگبار می‌شود، تیوگوانین وابستگی ناچیزی به آنزیم زانتین اکسیداز دارد و بسیار ایمن‌تر در بیماران نیازمند مهار اسید اوریک تحمل می‌گردد.",
-    "quick_dosing": "سگ: 40 - 50 mg/m² سطح بدن (یا حدود 1-2 mg/kg) | گربه: 25 - 40 mg/m²"
+    "quick_dosing": "سگ: 40 - 50 mg/m² سطح بدن (یا حدود 1-2 mg/kg) | گربه: 25 - 40 mg/m²",
+    "brand_names_fa": [
+      "۶-تیوگوانین",
+      "قرص تیوگوانین ۴۰ میلی‌گرم (لنویز)"
+    ],
+    "brand_names_en": [
+      "Lanvis (Thioguanine 40mg) Tablets"
+    ]
   },
   {
     "id": "thiopental_sodium",
@@ -84982,7 +89682,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در لیست داروهای رسمی بیهوشی اتاق‌های عمل بیمارستان‌های کشور.",
     "pharmacology_mechanism": "پیوند به جایگاه باربیتوراتی بر روی کمپلکس گیرنده GABA-A در سیستم اعصاب مرکزی، طولانی ساختن زمان باز ماندن کانال‌های کلریدی، افزایش ورود یون کلر و هایپرپلاریزاسیون عمیق نورون‌ها و مهار سیستم فعال‌کننده مشبک صعودی (ARAS).",
     "clinical_pearls": "اگر تیوپنتال به صورت تصادفی در اطراف سیاهرگ (Perivascular) نشت کرد، فاجعه بافتی رخ می‌دهد؛ اقدام فوری این است: فوراً موضع را با سرم نرمال سالین و تزریق موضعی لیدوکائین ۲٪ یا پروکائین ارتشاح دهید تا pH قلیایی رقیق شده و از نکروز و ریزش بافت پیشگیری گردد.",
-    "quick_dosing": "سگ: 8 - 12 mg/kg (در صورت استفاده از پیش‌بیهوشی ۵ تا ۸ mg/kg) | گربه: 8 - 10 mg/kg | اسب: 6 - 10 mg/kg (معمولاً ۱ گرم برای اسب ۴۵۰ کیلویی به صورت محلول ۱۰٪)"
+    "quick_dosing": "سگ: 8 - 12 mg/kg (در صورت استفاده از پیش‌بیهوشی ۵ تا ۸ mg/kg) | گربه: 8 - 10 mg/kg | اسب: 6 - 10 mg/kg (معمولاً ۱ گرم برای اسب ۴۵۰ کیلویی به صورت محلول ۱۰٪)",
+    "brand_names_fa": [
+      "ویال پودر تیوپنتال سدیم ۱ گرم و ۵۰۰ میلی‌گرم (پنتوتال)"
+    ],
+    "brand_names_en": [
+      "Thiopental Sodium 1g / 0.5g Lyophilized Vial"
+    ]
   },
   {
     "id": "thyrotropin_rhTSH",
@@ -85083,7 +89789,15 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در مراکز رادیوتراپی و غدد بیمارستان‌های فوق‌تخصصی کشور.",
     "pharmacology_mechanism": "تیروتروپین آلفا یک گلیکوپروتئین هترودایمر نوترکیب مشابه TSH هیپوفیز است؛ با اتصال به گیرنده‌های اختصاصی غشای فولیکول‌های تیروئید، برداشت ید، سنتز تیروگلوبولین و آزادسازی فوری هورمون‌های T3 و T4 را در سگ‌های دارای بافت تیروئید سالم تحریک می‌کند.",
     "clinical_pearls": "بسیاری از سگ‌ها به اشتباه بر اساس یک آزمایش ساده T4 که به دلیل مصرف کورتون، فنوباربیتال یا درماتیت کاهش یافته، برچسب کم‌کاری تیروئید می‌خورند و سال‌ها داروی اضافه مصرف می‌کنند؛ تست تحریکی با تیروتروپین (rhTSH) تنها راه اثبات قطعی است که نشان می‌دهد آیا تیروئید واقعاً از کار افتاده است یا خیر.",
-    "quick_dosing": "سگ: 75 تا 100 میکروگرم برای سگ‌های درشت یا 50 میکروگرم برای سگ‌های کوچک (یا 5 mcg/kg)"
+    "quick_dosing": "سگ: 75 تا 100 میکروگرم برای سگ‌های درشت یا 50 میکروگرم برای سگ‌های کوچک (یا 5 mcg/kg)",
+    "brand_names_fa": [
+      "هورمون محرک تیروئید نوترکیب",
+      "rhTSH",
+      "ویال تیروتروپین آلفا ۰.۹ میلی‌گرم (تایروژن)"
+    ],
+    "brand_names_en": [
+      "Thyrogen (Thyrotropin Alfa 0.9mg) Vial"
+    ]
   },
   {
     "id": "tiamulin",
@@ -85217,7 +89931,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول خوراکی تیامولین ۱۲.۵٪ دامی (دیناموتیلین / تیاموتک)",
+      "پودر محلول تیامولین ۴۵٪"
+    ],
+    "brand_names_en": [
+      "Tiamulin 12.5% Oral Solution",
+      "Tiamulin 45% Water Soluble Granules"
+    ]
   },
   {
     "id": "ticarcillin_clavulanate",
@@ -85364,7 +90086,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های بیمارستان‌های تخصصی کشور به عنوان آنتی‌بیوتیک تحت کنترل.",
     "pharmacology_mechanism": "تیکارسیلین با پیوند به پروتئین‌های اختصاصی دیواره سلولی باکتری (PBP-1a، PBP-1b و PBP-3) سنتز پپتیدوگلیکان را مهار کرده و باکتریوسید عمل می‌کند؛ کلاوولانات پتاسیم آنزیم‌های بتالاکتاماز ترشح‌شده توسط استافیلوکوک‌ها و باکتری‌های گرم منفی را مهار غیرقابل بازگشت (Suicide inhibition) می‌کند.",
     "clinical_pearls": "سودوموناس آئروژینوزا به بیشتر آنتی‌بیوتیک‌ها از جمله پنی‌سیلین‌ها و سفالوسپورین‌های نسل اول و دوم ذاتاً مقاوم است؛ تیمنتین به علت ساختار کربوکسی خود از کانال‌های پورینی دیواره سودوموناس عبور کرده و آن را متلاشی می‌سازد.",
-    "quick_dosing": "سگ: 50 mg/kg مجموع دارو | گربه: 50 mg/kg | اسب: 50 mg/kg"
+    "quick_dosing": "سگ: 50 mg/kg مجموع دارو | گربه: 50 mg/kg | اسب: 50 mg/kg",
+    "brand_names_fa": [
+      "تیمنتین",
+      "ویال تزریقی تیکارسیلین کلاوولانات ۳.۱ گرم (تیمنتین)"
+    ],
+    "brand_names_en": [
+      "Timentin (Ticarcillin 3g + Clavulanate 0.1g) Vial"
+    ]
   },
   {
     "id": "ticagrelor",
@@ -85488,7 +90217,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بازار دارویی کشور در کلیه داروخانه‌های تخصصی قلب و عروق.",
     "pharmacology_mechanism": "تیکاگرلور بر خلاف تینوپیریدین‌ها (کلوپیدوگرل) یک آنتاگونیست آلوستریک مستقیم و برگشت‌پذیر گیرنده P2Y12 بر سطح پلاکت است؛ با مهار پیام‌رسانی ناشی از ADP مانع فعال شدن گلیکوپروتئین GPIIb/IIIa و توقف کامل اتصال فیبرینوژن و تجمع پلاکت‌ها می‌گردد.",
     "clinical_pearls": "مطالعات اخیر کاردیولوژی دامپزشکی نشان داده است که حدود یک سوم از گربه‌ها به علت جهش‌های آنزیمی کبد قادر به فعال‌سازی کلوپیدوگرل نیستند و به رغم دریافت پلاویکس دچار فلج سدل مجدد می‌شوند؛ تیکاگرلور نیازی به کبد ندارد و در این گربه‌ها ۱۰۰٪ اثربخشی ضدلخته را نشان می‌دهد.",
-    "quick_dosing": "سگ: 2 - 3 mg/kg | گربه: 2 - 4 mg/kg (معادل یک‌چهارم تا یک‌ششم قرص ۹۰ میلی‌گرمی)"
+    "quick_dosing": "سگ: 2 - 3 mg/kg | گربه: 2 - 4 mg/kg (معادل یک‌چهارم تا یک‌ششم قرص ۹۰ میلی‌گرمی)",
+    "brand_names_fa": [
+      "قرص تیکاگرلور ۹۰ میلی‌گرم (بریلینتا / تیکاگرل)"
+    ],
+    "brand_names_en": [
+      "Brilinta (Ticagrelor 90mg) Tablets"
+    ]
   },
   {
     "id": "tildipirosin",
@@ -85611,7 +90346,13 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "گاو: 4 mg/kg (معادل 1 mL به ازای هر 45 kg وزن زنده)"
+    "quick_dosing": "گاو: 4 mg/kg (معادل 1 mL به ازای هر 45 kg وزن زنده)",
+    "brand_names_fa": [
+      "محلول تزریقی زوپروو ۱۸٪ دامی (تیلدی‌پیروسین ۱۸۰ mg/mL)"
+    ],
+    "brand_names_en": [
+      "Zuprevo 18% (MSD Animal Health) Injection"
+    ]
   },
   {
     "id": "tiludronate_disodium",
@@ -85727,7 +90468,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در بیمارستان‌ها و مراکز جراحی و سوارکاری اسب کشور به صورت وارداتی رسمی.",
     "pharmacology_mechanism": "تیلودرونات به کریستال‌های هیدروکسی‌آپاتیت در بافت استخوان پیوند می‌یابد؛ حین تحلیل استخوان توسط استئوکلاست‌ها بلعیده شده و به آنالوگ‌های غیرقابل هیدرولیز ATP متابولیزه می‌شود که زنجیره تنفسی استئوکلاست‌ها را مهار و آپوپتوز آن‌ها را تحریک می‌کند و مانع تحلیل استخوان می‌گردد.",
     "clinical_pearls": "تیلودرونات یک مسکن فوری نیست؛ بیشترین کاهش لنگش و بهبودی اسب معمولاً بین هفته‌های ۶ تا ۱۲ پس از تزریق آشکار می‌شود، زیرا زمان لازم است تا استئوبلاست‌ها حفرات استخوانی به جا مانده در استخوان ناویکولار را با بافت استخوانی متراکم و مستحکم پر کنند.",
-    "quick_dosing": "اسب: 1 mg/kg (معادل 500 mg برای اسب بالغ)"
+    "quick_dosing": "اسب: 1 mg/kg (معادل 500 mg برای اسب بالغ)",
+    "brand_names_fa": [
+      "ویال تزریقی تیلدرن ۵۰۰ میلی‌گرم اسب (تیلودرونات دی‌سدیم)"
+    ],
+    "brand_names_en": [
+      "Tildren (Ceva) 500mg Lyophilized Vial for Horses"
+    ]
   },
   {
     "id": "tinidazole",
@@ -85879,7 +90626,13 @@ const DRUGS_DATA = [
       "meat_days": 0,
       "milk_days": 0
     },
-    "quick_dosing": "سگ: 15 - 25 mg/kg | گربه: 15 mg/kg"
+    "quick_dosing": "سگ: 15 - 25 mg/kg | گربه: 15 mg/kg",
+    "brand_names_fa": [
+      "قرص تینیدازول ۵۰۰ میلی‌گرم (فاسجین)"
+    ],
+    "brand_names_en": [
+      "Tinidazole 500mg Tablets (Fasigyn)"
+    ]
   },
   {
     "id": "tiopronin",
@@ -85989,7 +90742,14 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی ارولوژی و پیوند کشور با نسخه ارولوژیست.",
     "pharmacology_mechanism": "تیوپرونین دارای گروه تیول (-SH) فعال آزاد است؛ از طریق واکنش تبادل تیول-دی‌سولفید با اسید آمینه نامحلول سیستین وارد واکنش شده و پل دی‌سولفیدی آن را می‌شکند و یک کمپلکس محلول مختلط ایجاد می‌کند که به راحتی در ادرار حل شده و رسوب نمی‌کند.",
     "clinical_pearls": "سنگ‌های سیستینی در سگ‌های نر به علت نقص مادرزادی در بازجذب لوله‌ای کلیوی ایجاد می‌شوند و پس از هر عمل جراحی مجدداً عود می‌کنند؛ تیوپرونین به همراه قلیایی کردن ادرار تنها روشی است که می‌تواند سنگ‌های موجود را بدون چاقوی جراحی کاملاً ذوب کرده و از انسدادهای مجدد پیشابراه پیشگیری نماید.",
-    "quick_dosing": "سگ: 15 - 20 mg/kg (یا 30-40 mg/kg روزانه در دو دوز منقسم)"
+    "quick_dosing": "سگ: 15 - 20 mg/kg (یا 30-40 mg/kg روزانه در دو دوز منقسم)",
+    "brand_names_fa": [
+      "۲-مرکاپتوپروپیونیل‌گلایسین",
+      "قرص تیوپرونین ۱۰۰ و ۳۰۰ میلی‌گرم (تیولا)"
+    ],
+    "brand_names_en": [
+      "Thiola (Tiopronin 100mg / 300mg) Tablets"
+    ]
   },
   {
     "id": "toceranib_phosphate",
@@ -86126,7 +90886,13 @@ const DRUGS_DATA = [
     "iran_pharma_status": "موجود در مراکز تخصصی انکولوژی دامپزشکی و بیمارستان‌های مرجع کشور به عنوان داروی وارداتی ویژه.",
     "pharmacology_mechanism": "توسرانیب با مهار اختصاصی دومین کینازی گیرنده‌های ترانس‌ممبران c-KIT و VEGFR، مسیرهای پیام‌رسانی بقا و تکثیر سلول‌های ماست سل توموری را مسدود کرده و با قطع عروق‌زایی تغذیه‌کننده تومور، باعث آپوپتوز و کوچک شدن سریع توده سرطانی می‌گردد.",
     "clinical_pearls": "یک قانون طلایی در درمان با پالادیا (Holiday Protocol): اگر سگ در حین مصرف پالادیا دچار بی‌اشتهایی یا حتی یک نوبت اسهال آبکی شد، درمان باید بلافاصله موقتاً قطع شود (Drug Holiday) و پس از رفع علائم گوارشی، با دوز تعدیل‌شده (۲۰ تا ۲۵ درصد کمتر) از سر گرفته شود تا از سوراخ شدن کشنده روده جلوگیری به عمل آید.",
-    "quick_dosing": "سگ: 2.4 - 2.75 mg/kg | گربه: 1 - 1.5 mg/kg"
+    "quick_dosing": "سگ: 2.4 - 2.75 mg/kg | گربه: 1 - 1.5 mg/kg",
+    "brand_names_fa": [
+      "قرص‌های پالادیا ۱۰، ۱۵ و ۵۰ میلی‌گرم (توسرانیب فسفات)"
+    ],
+    "brand_names_en": [
+      "Palladia (Zoetis) 10mg, 15mg, 50mg Tablets"
+    ]
   },
   {
     "id": "tolfenamic_acid",
@@ -86280,7 +91046,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول تزریقی تولفدین ۴٪ (تولفنامیک اسید)",
+      "قرص‌های تولفدین ۶ و ۶۰ میلی‌گرم",
+      "تولفنامیک اسید",
+      "محلول تزریقی تولفدین ۴٪"
+    ],
+    "brand_names_en": [
+      "Tolfedine 4% Injection (Vetoquinol / Razak)",
+      "Tolfedine 6mg & 60mg Tablets"
+    ]
   },
   {
     "id": "tolazoline",
@@ -86415,7 +91191,13 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول تزریقی تولازولین ۱۰٪ (پادزهر زایلازین)"
+    ],
+    "brand_names_en": [
+      "Tolazoline HCl 100 mg/mL Injection (Tolazine / Priscoline)"
+    ]
   },
   {
     "id": "toltrazuril",
@@ -86581,7 +91363,17 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سوسپانسیون خوراکی ۵٪ بایکاکس (تولترازوریل دامی)",
+      "سوسپانسیون خوراکی تولترازوریل ۵٪",
+      "محلول خوراکی تولترازوریل ۲.۵٪ طیور"
+    ],
+    "brand_names_en": [
+      "Baycox 5% Oral Suspension (Bayer / Elanco)",
+      "Toltrazuril 5% Oral Suspension",
+      "Toltrazuril 2.5% Oral Solution"
+    ]
   },
   {
     "id": "topiramate",
@@ -86689,7 +91481,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور و بیمارستان‌های تخصصی دامپزشکی.",
     "pharmacology_mechanism": "توپیرامات فعالیت کانال‌های وابسته به ولتاژ سدیم و کلسیم نوع L را مهار می‌کند، جریان کلرید ناشی از گیرنده‌های مهاری GABA-A را افزایش می‌دهد و از طرفی با مهار ساب‌تایپ‌های گلوتامات AMPA/Kainate، پتانسیل تحریکی پس‌سیناپسی نورون‌های کانون تشنج را سرکوب می‌نماید.",
-    "clinical_pearls": "قانون قطع تشنج: هرگز توپیرامات را به صورت ناگهانی قطع نکنید! قطع ناگهانی این دارو در سگ‌های مبتلا به صرع می‌تواند باعث استاتوس اپیلپتیکوس (Status Epilepticus) کشنده شود؛ در صورت نیاز به قطع، دوز باید طی ۲ تا ۳ هفته به صورت پله‌ای کاهش یابد."
+    "clinical_pearls": "قانون قطع تشنج: هرگز توپیرامات را به صورت ناگهانی قطع نکنید! قطع ناگهانی این دارو در سگ‌های مبتلا به صرع می‌تواند باعث استاتوس اپیلپتیکوس (Status Epilepticus) کشنده شود؛ در صورت نیاز به قطع، دوز باید طی ۲ تا ۳ هفته به صورت پله‌ای کاهش یابد.",
+    "brand_names_fa": [
+      "قرص‌های توپیرامات ۲۵، ۵۰ و ۱۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Topiramate 25mg, 50mg, 100mg Tablets"
+    ]
   },
   {
     "id": "trazodone",
@@ -86804,7 +91602,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور و پرمصرف‌ترین داروی رفتاری در کلینیک‌های حیوانات خانگی.",
     "pharmacology_mechanism": "ترازودون عمدتاً به عنوان آنتاگونیست پرقدرت گیرنده‌های 5-HT2A و مهارکننده متوسط بازجذب سروتونین (SERT) عمل می‌کند. در دوزهای پایین، با مسدود کردن گیرنده‌های 5-HT2A، گیرنده‌های آلفا-۱ آدرنرژیک و H1 هیستامینی، آرام‌بخشی و کاهش اضطراب بدون خواب‌آلودگی رخوت‌انگیز شدید به وجود می‌آورد.",
-    "clinical_pearls": "قانون طلایی Fear-Free: برای اثربخشی کامل، ترازودون باید حداقل ۹۰ تا ۱۲۰ دقیقه پیش از اینکه حیوان وارد محیط استرس‌زا (مانند کلینیک یا ماشین) شود خورانده شود؛ اگر دارو پس از برانگیخته شدن و ترشح آدرنالین خورانده شود، اثربخشی آن به شدت افت خواهد کرد."
+    "clinical_pearls": "قانون طلایی Fear-Free: برای اثربخشی کامل، ترازودون باید حداقل ۹۰ تا ۱۲۰ دقیقه پیش از اینکه حیوان وارد محیط استرس‌زا (مانند کلینیک یا ماشین) شود خورانده شود؛ اگر دارو پس از برانگیخته شدن و ترشح آدرنالین خورانده شود، اثربخشی آن به شدت افت خواهد کرد.",
+    "brand_names_fa": [
+      "قرص‌های ترازودون ۵۰ و ۱۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Trazodone 50mg, 100mg Tablets"
+    ]
   },
   {
     "id": "triamcinolone_acetonide",
@@ -86947,7 +91751,17 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در سراسر داروخانه‌های دامپزشکی و انسانی و بیمارستان‌های تخصصی کشور.",
     "pharmacology_mechanism": "تریامسینولون استوناید به گیرنده‌های گلوکوکورتیکوئیدی سیتوپلاسمی متصل شده و به داخل هسته انتقال می‌یابد؛ در آنجا با مهار سنتز آنزیم فسفولیپاز A2 (از طریق تحریک لیپوکورتین) مانع آزاد شدن اسید آراشیدونیک شده و تولید تمام پروستاگلاندین‌ها، لوکوترین‌ها و سیتوکین‌های التهابی (IL-1, TNF-alpha) را مهار می‌کند.",
-    "clinical_pearls": "در تزریق داخل مفصلی اسب، تریامسینولون نسبت به متیل‌پردنیزولون ارجحیت دارد؛ زیرا تریامسینولون خاصیت Chondroprotective (محافظت‌کننده از متابولیسم کندروسیت‌ها) داشته و ماتریکس پروتئوگلیکان غضروف را تخریب نمی‌کند."
+    "clinical_pearls": "در تزریق داخل مفصلی اسب، تریامسینولون نسبت به متیل‌پردنیزولون ارجحیت دارد؛ زیرا تریامسینولون خاصیت Chondroprotective (محافظت‌کننده از متابولیسم کندروسیت‌ها) داشته و ماتریکس پروتئوگلیکان غضروف را تخریب نمی‌کند.",
+    "brand_names_fa": [
+      "سوسپانسیون تزریقی وتالوگ ۴۰ میلی‌گرم/میلی‌لیتر (تریامسینولون دامی)",
+      "آمپول تریامسینولون استوناید ۴۰ میلی‌گرم انسانی",
+      "پماد پوستی تریامسینولون ان‌ان (NN)"
+    ],
+    "brand_names_en": [
+      "Vetalog Parenteral 40 mg/mL (Zoetis)",
+      "Triamcinolone Acetonide 40 mg/mL Ampoule",
+      "Triamcinolone NN Ointment"
+    ]
   },
   {
     "id": "trientine_hydrochloride",
@@ -87045,7 +91859,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی تک‌نسخه‌ای و مراکز دانشگاهی داخلی دامپزشکی.",
     "pharmacology_mechanism": "ترینتین یک شلاتور پلی‌آمینی است که یک کمپلکس پایدار حلقوی چهارتایی با یون‌های مس آزاد (Cu2+) تشکیل می‌دهد. این کمپلکس دفع کلیوی مس را از طریق ادرار به شدت تسهیل کرده و مانع از تشکیل رادیکال‌های آزاد هیدروکسیل و پراکسیداسیون لیپیدی در هپاتوسیت‌های کبد می‌شود.",
-    "clinical_pearls": "تفاوت کلینیکی ترینتین با پنیسیلامین: پنیسیلامین در بیش از ۳۰ درصد سگ‌ها باعث بی‌اشتهایی و استفراغ شدید می‌شود، در حالی که ترینتین عوارض گوارشی بسیار ناچیزی دارد و بیمار درمان طولانی‌مدت را به راحتی تحمل می‌کند."
+    "clinical_pearls": "تفاوت کلینیکی ترینتین با پنیسیلامین: پنیسیلامین در بیش از ۳۰ درصد سگ‌ها باعث بی‌اشتهایی و استفراغ شدید می‌شود، در حالی که ترینتین عوارض گوارشی بسیار ناچیزی دارد و بیمار درمان طولانی‌مدت را به راحتی تحمل می‌کند.",
+    "brand_names_fa": [
+      "کپسول‌های ترینتین هیدروکلراید ۲۵۰ میلی‌گرم (ساپرین)"
+    ],
+    "brand_names_en": [
+      "Syprine (Trientine HCl) 250 mg Capsules"
+    ]
   },
   {
     "id": "trifluridine_ophthalmic",
@@ -87155,7 +91975,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های انسانی و مراکز جراحی چشم‌پزشکی دامپزشکی.",
     "pharmacology_mechanism": "تری‌فلوریدین یک آنالوگ نوکلئوزیدی فلوئوره‌شده تیمیدین است. این دارو توسط آنزیم‌های سلولی به تری‌فلوریدین تری‌فسفات فسفوریله شده و در هنگام همانندسازی به جای تیمیدین طبیعی درون DNA ویروس ادغام می‌شود؛ در نتیجه پلیمراز DNA ویروس مهار شده و ساخت پروتئین‌های ویروسی معیوب گشته و روند تکثیر ویروس هرپس متوقف می‌شود.",
-    "clinical_pearls": "قانون حیاتی چشم‌پزشکی گربه: در هر گربه‌ای با زخم قرنیه، تست فلورسین باید انجام شود. اگر ضایعه شاخه‌ای (Dendritic Ulcer) دیده شد، تشخیص قطعی هرپس ویروس است و باید بلافاصله قطره تری‌فلوریدین آغاز شده و هرگونه قطره حاوی دگزامتازون یا بتامتازون فوراً قطع گردد."
+    "clinical_pearls": "قانون حیاتی چشم‌پزشکی گربه: در هر گربه‌ای با زخم قرنیه، تست فلورسین باید انجام شود. اگر ضایعه شاخه‌ای (Dendritic Ulcer) دیده شد، تشخیص قطعی هرپس ویروس است و باید بلافاصله قطره تری‌فلوریدین آغاز شده و هرگونه قطره حاوی دگزامتازون یا بتامتازون فوراً قطع گردد.",
+    "brand_names_fa": [
+      "قطره استریل چشمی تری‌فلوریدین ۱٪ (ویروپتیک)"
+    ],
+    "brand_names_en": [
+      "Trifluridine 1% Ophthalmic Solution (Viroptic)"
+    ]
   },
   {
     "id": "trimeprazine_prednisolone",
@@ -87278,7 +92104,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود به عنوان داروی وارداتی اورجینال در کلینیک‌های مرجع حیوانات خانگی کشور.",
     "pharmacology_mechanism": "تری‌مپرازین با مهار گیرنده‌های هیستامینی H1 و اثر بر مراکز کنترل سرفه در بصل‌النخاع، رفلکس سرفه و حس خارش را قطع می‌کند؛ پردنیزولون نیز با سرکوب واسطه‌های التهابی مخاط راه‌های هوایی یا پوست، تورم و ترشحات مخاطی را متوقف می‌سازد و این دو دارو با هم‌افزایی همزمان چرخه خارش و سرفه را می‌شکنند.",
-    "clinical_pearls": "در سگ‌های نژاد کوچک اسباب‌بازی (Toy Breeds) مبتلا به کلاپس نای، تماریل-پی می‌تواند کیفیت زندگی بیمار را نجات دهد. برای جلوگیری از عوارض کوشینگوئید پردنیزولون، حتماً پس از ۴۸ تا ۷۲ ساعت دوز دارو را به کمترین مقدار اثربخش یک روز در میان کاهش دهید."
+    "clinical_pearls": "در سگ‌های نژاد کوچک اسباب‌بازی (Toy Breeds) مبتلا به کلاپس نای، تماریل-پی می‌تواند کیفیت زندگی بیمار را نجات دهد. برای جلوگیری از عوارض کوشینگوئید پردنیزولون، حتماً پس از ۴۸ تا ۷۲ ساعت دوز دارو را به کمترین مقدار اثربخش یک روز در میان کاهش دهید.",
+    "brand_names_fa": [
+      "قرص‌های تماریل-پی (تری‌مپرازین / پردنیزولون)"
+    ],
+    "brand_names_en": [
+      "Temaril-P Tablets (Zoetis)"
+    ]
   },
   {
     "id": "tripelennamine",
@@ -87410,7 +92242,15 @@ const DRUGS_DATA = [
       "milk_fa": "تزریق داخل عضلانی باید عمیق باشد و از تزریق سریع وریدی به دلیل تشنج شدیداً پرهیز شود.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول تزریقی تری‌په‌لنامین ۲٪ (آنتی‌هیستامین دامی)",
+      "آنتی‌هیستامین دامی",
+      "محلول تزریقی تری‌په‌لنامین ۲٪"
+    ],
+    "brand_names_en": [
+      "Tripelennamine HCl 2% Injection (Re-Covr)"
+    ]
   },
   {
     "id": "trospium_chloride",
@@ -87512,7 +92352,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور و کلینیک‌های تخصصی حیوانات کوچک.",
     "pharmacology_mechanism": "تروسپیوم کلراید یک آنتاگونیست رقابتی پرقدرت گیرنده‌های موسکارینی M1، M2 و M3 در عضله صاف دتروسور مثانه است. با مسدود کردن تحریک ناشی از استیل‌کولین در پایانه‌های عصب پاراسمپاتیک، دامنه انقباضات غیرارادی مثانه را کاهش داده و ظرفیت نگهداری ادرار را بدون اثرگذاری بر سیستم اعصاب مرکزی افزایش می‌دهد.",
-    "clinical_pearls": "مزیت استثنایی تروسپیوم بر اکسی‌بوتینین: چون ساختار مولکولی تروسپیوم کلراید دارای بار مثبت دائمی (آمونیوم چهارگانه) است، لیپوفیل نبوده و نمی‌تواند از سد خونی-مغزی بگذرد؛ بنابراین حیوان خانگی برخلاف اکسی‌بوتینین به هیچ عنوان دچار علائم تغییرات خلقی، گیجی، بی‌قراری یا خواب‌آلودگی نمی‌شود."
+    "clinical_pearls": "مزیت استثنایی تروسپیوم بر اکسی‌بوتینین: چون ساختار مولکولی تروسپیوم کلراید دارای بار مثبت دائمی (آمونیوم چهارگانه) است، لیپوفیل نبوده و نمی‌تواند از سد خونی-مغزی بگذرد؛ بنابراین حیوان خانگی برخلاف اکسی‌بوتینین به هیچ عنوان دچار علائم تغییرات خلقی، گیجی، بی‌قراری یا خواب‌آلودگی نمی‌شود.",
+    "brand_names_fa": [
+      "قرص‌های تروسپیوم کلراید ۲۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Trospium Chloride 20 mg Tablets"
+    ]
   },
   {
     "id": "tylosin_phosphate",
@@ -87623,7 +92469,13 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پری‌میکس تایلوزین فسفات ۱۰٪ و ۲۵٪"
+    ],
+    "brand_names_en": [
+      "Tylosin Phosphate 10% & 25% Premix (Tylan)"
+    ]
   },
   {
     "id": "tobramycin_systemic",
@@ -87744,7 +92596,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های انسانی و بخش‌های مراقبت‌های ویژه بیمارستان‌های دامپزشکی کشور.",
     "pharmacology_mechanism": "توبرامایسین با عبور وابسته به اکسیژن از دیواره سلولی باکتری و اتصال برگشت‌ناپذیر به زیرواحد 30S ریبوزوم، باعث خوانش غلط کد ژنتیکی mRNA و تولید پروتئین‌های نامتعارف و سمی باکتریایی شده و غشای باکتری را متلاشی می‌سازد. فعالیت آن وابسته به غلظت (Concentration-dependent) با اثر چشمگیر پس از آنتی‌بیوتیکی (PAE) است.",
-    "clinical_pearls": "تشخیص زودرس سمیت کلیوی: افزایش سطح اوره و کراتینین سرم نشانه دیرهنگام آسیب کلیوی است و زمانی رخ می‌دهد که بیش از ۷۰ درصد نفرون‌ها آسیب دیده‌اند؛ برای تشخیص زودهنگام نفروتوکسیسیتی توبرامایسین، روزانه ادرار بیمار را سانتریفیوژ و زیر میکروسکوپ بررسی کنید: ظهور سیلندرهای دانه‌دار (Granular Casts) یا پروتئینوری اولین علامت هشدار برای قطع فوری دارو است."
+    "clinical_pearls": "تشخیص زودرس سمیت کلیوی: افزایش سطح اوره و کراتینین سرم نشانه دیرهنگام آسیب کلیوی است و زمانی رخ می‌دهد که بیش از ۷۰ درصد نفرون‌ها آسیب دیده‌اند؛ برای تشخیص زودهنگام نفروتوکسیسیتی توبرامایسین، روزانه ادرار بیمار را سانتریفیوژ و زیر میکروسکوپ بررسی کنید: ظهور سیلندرهای دانه‌دار (Granular Casts) یا پروتئینوری اولین علامت هشدار برای قطع فوری دارو است.",
+    "brand_names_fa": [
+      "ویال تزریقی توبرامایسین ۸۰ میلی‌گرم/۲ میلی‌لیتر (توبرامایسین انسانی)"
+    ],
+    "brand_names_en": [
+      "Tobramycin 80 mg/2 mL Injection (Nebcin)"
+    ]
   },
   {
     "id": "monensin",
@@ -87865,7 +92723,13 @@ const DRUGS_DATA = [
       "milk_fa": "پیشگیری قطعی از کتوز تحت‌بالینی، اسیدوز شکمبه و جابجایی شیردان در گاوهای شیری پروده با ارتقای بالانس مثبت انرژی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پری‌میکس موننسین سدیم ۱۰٪ و ۲۰٪ (رومنسین)"
+    ],
+    "brand_names_en": [
+      "Rumensin / Monensin Sodium 10% & 20% Premix"
+    ]
   },
   {
     "id": "potassium_chloride",
@@ -88007,7 +92871,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "KCl",
+      "آمپول پتاسیم کلراید ۱۵٪ (معادل 2 mEq/mL یا ۵۰ میلی‌اکی‌والان)"
+    ],
+    "brand_names_en": [
+      "Potassium Chloride 15% Injection (KCl)"
+    ]
   },
   {
     "id": "thiamylal_sodium",
@@ -88122,7 +92993,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌ها و دانشکده‌های دامپزشکی کشور تحت نظارت داروهای بیهوشی کنترل‌شده.",
     "pharmacology_mechanism": "تیامیلال سدیم با اتصال به گیرنده‌های GABA-A در غشای پس‌سیناپسی نورون‌های قشر مغز و سیستم رتیکولار فعال‌کننده (RAS)، هدایت یون کلرید را افزایش داده و با هایپرپلاریزاسیون نورونی، انتقال پیام‌های تحریکی را سرکوب کرده و بیهوشی عمیق و سستی عضلانی ایجاد می‌نماید.",
-    "clinical_pearls": "قانون حیاتی نشت دور رگی: پی‌اچ محلول بازسازی‌شده تیامیلال بالای ۱۰.۵ و به شدت قلیایی است. در صورت نشت ناخواسته خارج رگ، فوراً تزریق را قطع کرده و محل نشت را با ۱۰ تا ۲۰ سی‌سی سرم سالین و پروکائین یا لیدوکائین ۱٪ شستشو دهید تا از نکروز و پوست‌اندازی فاجعه‌بار جلوگیری شود."
+    "clinical_pearls": "قانون حیاتی نشت دور رگی: پی‌اچ محلول بازسازی‌شده تیامیلال بالای ۱۰.۵ و به شدت قلیایی است. در صورت نشت ناخواسته خارج رگ، فوراً تزریق را قطع کرده و محل نشت را با ۱۰ تا ۲۰ سی‌سی سرم سالین و پروکائین یا لیدوکائین ۱٪ شستشو دهید تا از نکروز و پوست‌اندازی فاجعه‌بار جلوگیری شود.",
+    "brand_names_fa": [
+      "پودر استریل تزریقی تیامیلال سدیم ۱ و ۵ گرمی (سوریتال)"
+    ],
+    "brand_names_en": [
+      "Surital (Thiamylal Sodium) 1g, 5g Sterile Powder"
+    ]
   },
   {
     "id": "thioridazine",
@@ -88213,7 +93090,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های معتبر انسانی کشور.",
     "pharmacology_mechanism": "تیوریدازین گیرنده‌های دوپامین D2 را در سیستم مزولیمبیک مغز مسدود کرده و با تعدیل نوروترانسمیترهای دوپامینرژیک، رفتارهای تحریک‌پذیری بالا، پرخاشگری و اضطراب را فرو می‌نشاند.",
-    "clinical_pearls": "در سگ‌های مبتلا به گرانولوم لیسشی مزمن (Acral Lick Granuloma)، تیوریدازین چرخه وسواسی عصبی لیسیدن مداوم پنجه را می‌شکند و به پوست اجازه ترمیم بافتی می‌دهد."
+    "clinical_pearls": "در سگ‌های مبتلا به گرانولوم لیسشی مزمن (Acral Lick Granuloma)، تیوریدازین چرخه وسواسی عصبی لیسیدن مداوم پنجه را می‌شکند و به پوست اجازه ترمیم بافتی می‌دهد.",
+    "brand_names_fa": [
+      "قرص‌های تیوریدازین ۱۰، ۲۵ و ۱۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Thioridazine 10mg, 25mg, 100mg Tablets (Mellaril)"
+    ]
   },
   {
     "id": "timolol_maleate_systemic",
@@ -88315,7 +93198,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های معتبر انسانی کشور.",
     "pharmacology_mechanism": "تیمولول به صورت رقابتی به گیرنده‌های بتا-۱ در قلب و بتا-۲ در عروق و برونش‌ها متصل شده و اثرات کاتکول‌آمین‌های آدرنالین و نورآدرنالین را مسدود می‌سازد؛ در نتیجه سرعت انقباض گره سینوسی، سرعت هدایت گره AV و اینوتروپی قلب کاهش می‌یابد.",
-    "clinical_pearls": "قانون قطع تدریجی بتا-بلوکرها: هرگز تیمولول را به یکباره قطع نکنید؛ قطع ناگهانی باعث آپ‌رگولاسیون جبرانی گیرنده‌های بتا و وقوع تاکی‌آریتمی بازگشتی و مرگبار قلبی می‌گردد. تیپر کردن دوز باید طی ۲ هفته انجام گیرد."
+    "clinical_pearls": "قانون قطع تدریجی بتا-بلوکرها: هرگز تیمولول را به یکباره قطع نکنید؛ قطع ناگهانی باعث آپ‌رگولاسیون جبرانی گیرنده‌های بتا و وقوع تاکی‌آریتمی بازگشتی و مرگبار قلبی می‌گردد. تیپر کردن دوز باید طی ۲ هفته انجام گیرد.",
+    "brand_names_fa": [
+      "قرص‌های تیمولول مالئات ۵ و ۱۰ میلی‌گرم خوراکی"
+    ],
+    "brand_names_en": [
+      "Timolol Maleate 5mg, 10mg Tablets (Blocadren)"
+    ]
   },
   {
     "id": "tiotropium_bromide",
@@ -88417,7 +93306,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی انسانی و کلینیک‌های پیشرفته طب اسب و حیوانات خانگی.",
     "pharmacology_mechanism": "تیوتروپیوم به گیرنده‌های موسکارینی M1، M2 و M3 متصل می‌شود اما سرعت جدا شدن آن از گیرنده‌های M3 و M1 عضلات صاف بسیار آهسته‌تر از M2 است؛ در نتیجه به صورت پایدار و ۲۴ ساعته اثرات انقباضی و ترشحی استیل‌کولین را مهار کرده و برونکودیلاتاسیون مداوم ایجاد می‌کند.",
-    "clinical_pearls": "تیوتروپیوم داروی پیشگیری و تثبیت درازمدت است نه داروی نجات اورژانس؛ در بحران‌های تنگی نفس شدید گربه آسمی، ابتدا از اکسیژن و سالبوتامول استنشاقی سریع‌الاثر استفاده کنید و پس از ثبات بالینی، تیوتروپیوم را برای مهار حملات آینده آغاز نمایید."
+    "clinical_pearls": "تیوتروپیوم داروی پیشگیری و تثبیت درازمدت است نه داروی نجات اورژانس؛ در بحران‌های تنگی نفس شدید گربه آسمی، ابتدا از اکسیژن و سالبوتامول استنشاقی سریع‌الاثر استفاده کنید و پس از ثبات بالینی، تیوتروپیوم را برای مهار حملات آینده آغاز نمایید.",
+    "brand_names_fa": [
+      "کپسول استنشاقی تیوتروپیوم بروماید ۱۸ میکروگرم (اسپیریوا هندی‌هالر)"
+    ],
+    "brand_names_en": [
+      "Spiriva HandiHaler 18 mcg Inhalation Powder"
+    ]
   },
   {
     "id": "triamcinolone_hexacetonide",
@@ -88521,7 +93416,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در مراکز جراحی ارتوپدی اسب و داروخانه‌های فوق‌تخصصی تک‌نسخه‌ای.",
     "pharmacology_mechanism": "تریامسینولون هگزاستوناید با استریفیه شدن با اسید هگزانوئیک پیوند استری بسیار مقاومی پیدا کرده که حلالیت در مایع ساینوویال را به حداقل رسانده و به صورت مخزن میکروبلوری درون غشای ساینوویال باقی می‌ماند و ماه‌ها سنتز متالوپروتئینازها و سایتوکین‌های تخریب‌کننده غضروف را مهار می‌سازد.",
-    "clinical_pearls": "تفاوت طلایی هگزاستوناید با استوناید: تریامسینولون استوناید حلالیت بیشتری دارد و بعد از ۱ تا ۲ هفته از مفصل به گردش خون نشت می‌کند، اما تریامسینولون هگزاستوناید عملاً در مفصل قفل می‌شود و ماندگاری بالینی آن حداقل ۳ برابر طولانی‌تر است."
+    "clinical_pearls": "تفاوت طلایی هگزاستوناید با استوناید: تریامسینولون استوناید حلالیت بیشتری دارد و بعد از ۱ تا ۲ هفته از مفصل به گردش خون نشت می‌کند، اما تریامسینولون هگزاستوناید عملاً در مفصل قفل می‌شود و ماندگاری بالینی آن حداقل ۳ برابر طولانی‌تر است.",
+    "brand_names_fa": [
+      "سوسپانسیون استریل تریامسینولون هگزاستوناید ۲۰ mg/mL (آریستوسپن)"
+    ],
+    "brand_names_en": [
+      "Aristospan (Triamcinolone Hexacetonide) 20 mg/mL Suspension"
+    ]
   },
   {
     "id": "triamterene",
@@ -88623,7 +93524,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور.",
     "pharmacology_mechanism": "تریامترن کانال‌های سدیم اپیتلیال (ENaC) در غشای لومینال سلول‌های توبول دیستال و لوله جمع‌کننده کلیه را مسدود می‌سازد. با قطع ورود سدیم بار مثبت پتانسیل ترانس‌پیتلیال منفی درون لومن لغو شده و نیروی الکتریکی محرک برای ترشح یون‌های پتاسیم و هیدروژن به ادرار از بین می‌رود.",
-    "clinical_pearls": "مزیت کلیدی تریامترن بر اسپیرونولاکتون سرعت شروع اثر آن است: اسپیرونولاکتون برای مهار ژنتیکی رسپتورهای آلدوسترون به ۲ تا ۳ روز زمان نیاز دارد، در حالی که تریامترن به صورت مستقیم کانال ENaC را مسدود کرده و ظرف ۱ تا ۲ ساعت ناتریورز و حفظ پتاسیم را آغاز می‌کند."
+    "clinical_pearls": "مزیت کلیدی تریامترن بر اسپیرونولاکتون سرعت شروع اثر آن است: اسپیرونولاکتون برای مهار ژنتیکی رسپتورهای آلدوسترون به ۲ تا ۳ روز زمان نیاز دارد، در حالی که تریامترن به صورت مستقیم کانال ENaC را مسدود کرده و ظرف ۱ تا ۲ ساعت ناتریورز و حفظ پتاسیم را آغاز می‌کند.",
+    "brand_names_fa": [
+      "قرص تریامترن-اچ (حاوی ۵۰ mg تریامترن و ۲۵ mg هیدروکلروتیازید)"
+    ],
+    "brand_names_en": [
+      "Triamterene-H (Triamterene / HCTZ) Tablets"
+    ]
   },
   {
     "id": "triazolam",
@@ -88715,7 +93622,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های بیمارستانی با نسخه روان‌پزشکی به عنوان داروی تحت کنترل.",
     "pharmacology_mechanism": "تریازولام با اتصال به جایگاه ویژه بنزودیازپینی بر روی کمپلکس گیرنده‌های GABA-A در سیستم اعصاب مرکزی، تمایل گابا به گیرنده را افزایش داده و بسامد باز شدن کانال‌های کلرید را بالا می‌برد و با هایپرپلاریزاسیون نورونی آرامش فوری ایجاد می‌کند.",
-    "clinical_pearls": "قانون طلایی پیشگیری از وحشت: اگر تریازولام پس از شروع طوفان و ترشح انبوه آدرنالین خورانده شود، سگ ممکن است به جای خواب‌آلودگی دچار آتاکسی همراه با توهم و هیجان شود. همیشه به سرپرست توصیه کنید دارو را ۳۰ دقیقه پیش از غروب آفتاب در شب آتش‌بازی بخوراند."
+    "clinical_pearls": "قانون طلایی پیشگیری از وحشت: اگر تریازولام پس از شروع طوفان و ترشح انبوه آدرنالین خورانده شود، سگ ممکن است به جای خواب‌آلودگی دچار آتاکسی همراه با توهم و هیجان شود. همیشه به سرپرست توصیه کنید دارو را ۳۰ دقیقه پیش از غروب آفتاب در شب آتش‌بازی بخوراند.",
+    "brand_names_fa": [
+      "قرص‌های تریازولام ۰.۱۲۵ و ۰.۲۵ میلی‌گرم (هالسیون)"
+    ],
+    "brand_names_en": [
+      "Halcion (Triazolam) 0.125mg, 0.25mg Tablets"
+    ]
   },
   {
     "id": "triflupromazine",
@@ -88830,6 +93743,14 @@ const DRUGS_DATA = [
         "route": "تزریقی (IV / IM / SC)",
         "interval": "طبق دستور مونوگراف"
       }
+    ],
+    "brand_names_fa": [
+      "محلول تزریقی تری‌فلوپرومازین ۲٪ (وترانکیل دامی)",
+      "وترانکیل دامی",
+      "محلول تزریقی تری‌فلوپرومازین ۲٪"
+    ],
+    "brand_names_en": [
+      "Vetranquil (Triflupromazine HCl) 2% Injection"
     ]
   },
   {
@@ -88921,7 +93842,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور.",
     "pharmacology_mechanism": "تری‌هگزی‌فنیدیل از سد خونی-مغزی عبور کرده و به طور انتخابی گیرنده‌های موسکارینی مرکزی را مسدود می‌کند؛ با مهار غلبه فعالیت کولینرژیک ناشی از کمبود یا مهار دوپامین در استریاتوم مغز، تعادل نوروترانسمیتری را احیا کرده و لرزش را مهار می‌سازد.",
-    "clinical_pearls": "در سگ‌های بولداگ انگلیسی و فرانسوی مبتلا به سندرم لرزش سر (Bobble-head Syndrome)، در صورت عدم پاسخ به تغذیه قندی و آرام‌بخشی، تری‌هگزی‌فنیدیل می‌تواند حملات را به شدت کاهش دهد."
+    "clinical_pearls": "در سگ‌های بولداگ انگلیسی و فرانسوی مبتلا به سندرم لرزش سر (Bobble-head Syndrome)، در صورت عدم پاسخ به تغذیه قندی و آرام‌بخشی، تری‌هگزی‌فنیدیل می‌تواند حملات را به شدت کاهش دهد.",
+    "brand_names_fa": [
+      "قرص‌های تری‌هگزی‌فنیدیل ۲ میلی‌گرم (آرتان)"
+    ],
+    "brand_names_en": [
+      "Trihexyphenidyl 2mg Tablets (Artane)"
+    ]
   },
   {
     "id": "trilostane_suspension",
@@ -89023,7 +93950,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "فرموله شده در داروخانه‌های بیمارستان‌های تخصصی دامپزشکی کشور.",
     "pharmacology_mechanism": "تریلوستان به صورت برگشت‌پذیر آنزیم 3-beta-hydroxysteroid dehydrogenase را در کورتکس فوق‌کلیه مهار می‌کند؛ در نتیجه تبدیل پرگننولون به پروژسترون و متعاقب آن ساخت کورتیزول، کورتیکوسترون و آلدوسترون مهار می‌شود بدون اینکه بافت آدرنال تخریب شود.",
-    "clinical_pearls": "قانون حیاتی تست ACTH با سوسپانسیون: آزمون تحریکی ACTH باید دقیقاً ۴ تا ۶ ساعت پس از خورانیدن دوز صبحگاهی سوسپانسیون به همراه غذا انجام شود؛ کورتیزول پس از تحریک باید بین ۱.۵ تا ۵ میکروگرم بر دسی‌لیتر (40 - 140 nmol/L) قرار گیرد تا کنترل ایده‌آل کوشینگ بدون خطر آدیسون تایید گردد."
+    "clinical_pearls": "قانون حیاتی تست ACTH با سوسپانسیون: آزمون تحریکی ACTH باید دقیقاً ۴ تا ۶ ساعت پس از خورانیدن دوز صبحگاهی سوسپانسیون به همراه غذا انجام شود؛ کورتیزول پس از تحریک باید بین ۱.۵ تا ۵ میکروگرم بر دسی‌لیتر (40 - 140 nmol/L) قرار گیرد تا کنترل ایده‌آل کوشینگ بدون خطر آدیسون تایید گردد.",
+    "brand_names_fa": [
+      "سوسپانسیون خوراکی تریلوستان ۱۰ mg/mL و ۲۰ mg/mL ساختنی"
+    ],
+    "brand_names_en": [
+      "Compounded Trilostane 10 mg/mL, 20 mg/mL Oral Suspension"
+    ]
   },
   {
     "id": "tulathromycin_ketoprofen",
@@ -89121,7 +94054,13 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول تزریقی درکسین پلاس (تولاترومایسین + کتوپروفن)"
+    ],
+    "brand_names_en": [
+      "Draxxin Plus (Tulathromycin / Ketoprofen) Injection"
+    ]
   },
   {
     "id": "unoprostone_isopropyl",
@@ -89224,7 +94163,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی چشم‌پزشکی کشور.",
     "pharmacology_mechanism": "اونوپروستون با فعال کردن کانال‌های کلریدی وابسته به ماکسی-کی (BK channels) در شبکه ترابکولار و تحریک بازسازی ماتریکس خارج سلولی مسیر یووئواسکلرال، مقاومت هیدرولیکی خروج زلالیه را شکسته و فشار چشم را ظرف ۲ ساعت کاهش می‌دهد.",
-    "clinical_pearls": "مزیت اونوپروستون نسبت به لاتانوپروست در چشم‌پزشکی سگ: لاتانوپروست در سگ‌ها میوزیس شدید و پین‌پوینت ایجاد می‌کند که در صورت وجود کاتاراکت دید حیوان را کاملاً تاریک می‌کند؛ اما اونوپروستون میوزیس بسیار ملایمی دارد و میدان دید حیوان حفظ می‌شود."
+    "clinical_pearls": "مزیت اونوپروستون نسبت به لاتانوپروست در چشم‌پزشکی سگ: لاتانوپروست در سگ‌ها میوزیس شدید و پین‌پوینت ایجاد می‌کند که در صورت وجود کاتاراکت دید حیوان را کاملاً تاریک می‌کند؛ اما اونوپروستون میوزیس بسیار ملایمی دارد و میدان دید حیوان حفظ می‌شود.",
+    "brand_names_fa": [
+      "قطره استریل چشمی اونوپروستون ایزوپروپیل ۰.۱۵٪ (رسکولا)"
+    ],
+    "brand_names_en": [
+      "Rescula (Unoprostone Isopropyl) 0.15% Ophthalmic Drops"
+    ]
   },
   {
     "id": "urea",
@@ -89341,7 +94286,13 @@ const DRUGS_DATA = [
       "milk_fa": "تنها در نشخوارکنندگان دارای شکمبه فعال و بالغ (گوساله‌های با سن بالای ۳ تا ۴ ماهگی) قابل استفاده است؛ در تک‌سمی‌ها و گوساله‌های شیرخوار فاقد اثر و بسیار سمی است.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "اوره دامی پریزماتیک / گرانول ۴۶٪ نیتروژن"
+    ],
+    "brand_names_en": [
+      "Feed Grade Urea 46% Nitrogen"
+    ]
   },
   {
     "id": "urokinase",
@@ -89442,7 +94393,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بخش‌های مراقبت‌های ویژه بیمارستان‌های مرجع کشور.",
     "pharmacology_mechanism": "اوروکیناز یک سرین‌پروتئاز ایزوله شده از سلول‌های کلیوی است که به طور مستقیم و مستقل از فاکتورهای دیگر، پیوند پپتیدی Arg560-Val561 مولکول پلاسمینوژن را شکسته و آن را به پلاسمین فعال تبدیل می‌کند؛ پلاسمین تولیدشده پلیمرهای فیبرین غیرمحلول لخته را به قطعات محلول پپتیدی هیدرولیز می‌نماید.",
-    "clinical_pearls": "پنجره طلایی ترومبولیتیک‌ها در گربه: اوروکیناز تنها زمانی موثر است که کمتر از ۶ تا ۱۲ ساعت از شروع لنگش و فلج پاهای عقب گربه گذشته باشد؛ اگر لخته بیش از ۲۴ ساعت قدمت داشته باشد، شبکه فیبرین متراکم شده و بافت‌های عضلانی دچار نکروز ایسکمیک غیرقابل بازگشت شده‌اند و درمان ترومبولیتیک سودی نخواهد داشت."
+    "clinical_pearls": "پنجره طلایی ترومبولیتیک‌ها در گربه: اوروکیناز تنها زمانی موثر است که کمتر از ۶ تا ۱۲ ساعت از شروع لنگش و فلج پاهای عقب گربه گذشته باشد؛ اگر لخته بیش از ۲۴ ساعت قدمت داشته باشد، شبکه فیبرین متراکم شده و بافت‌های عضلانی دچار نکروز ایسکمیک غیرقابل بازگشت شده‌اند و درمان ترومبولیتیک سودی نخواهد داشت.",
+    "brand_names_fa": [
+      "ویال تزریقی اوروکیناز ۲۵۰,۰۰۰ و ۵۰۰,۰۰۰ واحدی"
+    ],
+    "brand_names_en": [
+      "Urokinase 250,000 IU, 500,000 IU Injection"
+    ]
   },
   {
     "id": "urapidil",
@@ -89553,7 +94510,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌های تخصصی و مراکز مراقبت‌های ویژه کشور.",
     "pharmacology_mechanism": "اوراپیدیل با مسدود کردن رقابتی گیرنده‌های پس‌سیناپسی آلفا-۱ آدرنرژیک مقاومت عروق محیطی را کاهش داده و همزمان با تحریک آگونیستی گیرنده‌های 5-HT1A سروتونینی در مرکز کنترل وازوموتور ساقه مغز، تون سمپاتیک و پدیده تاکی‌کاردی رفلکسی را مهار می‌کند.",
-    "clinical_pearls": "قانون کنترل هایپرتنشن بحرانی: در حیوانات با فشار خون سیستولیک بالای ۲۰۰ mmHg هرگز فشار خون را ناگهان به حد نرمال نرسانید؛ کاهش ناگهانی فشار باعث قطع خونرسانی به مغز و کلیه‌ها می‌شود. با اوراپیدیل فشار را طی ۲ تا ۴ ساعت اول حدود ۲۰ تا ۲۵ درصد کاهش دهید تا اندام‌ها سازگار شوند."
+    "clinical_pearls": "قانون کنترل هایپرتنشن بحرانی: در حیوانات با فشار خون سیستولیک بالای ۲۰۰ mmHg هرگز فشار خون را ناگهان به حد نرمال نرسانید؛ کاهش ناگهانی فشار باعث قطع خونرسانی به مغز و کلیه‌ها می‌شود. با اوراپیدیل فشار را طی ۲ تا ۴ ساعت اول حدود ۲۰ تا ۲۵ درصد کاهش دهید تا اندام‌ها سازگار شوند.",
+    "brand_names_fa": [
+      "آمپول تزریقی اوراپیدیل ۵۰ میلی‌گرم/۱۰ میلی‌لیتر (ابرانت)",
+      "کپسول‌های رهش طولانی اوراپیدیل ۳۰ و ۶۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Ebrantil (Urapidil) 50mg/10mL Injection",
+      "Ebrantil 30mg, 60mg Modified-Release Capsules"
+    ]
   },
   {
     "id": "valaciclovir",
@@ -89664,7 +94629,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های انسانی کشور و تهیه توسط کلینیک‌های تخصصی اسب.",
     "pharmacology_mechanism": "والاسیکلوویر پس از بلع با سرعت بالا توسط آنزیم والاسیکلوویر هیدرولاز کبدی به آسیکلوویر تبدیل می‌شود. سپس توسط آنزیم تیمیدین کیناز اختصاصی ویروس به فرم منوفسفات و سپس تری‌فسفات فعال درمی‌آید و به عنوان مهارکننده رقابتی DNA پلی‌مراز ویروس، همانندسازی ویروس هرپس را کاملاً متوقف می‌سازد.",
-    "clinical_pearls": "قانون حیاتی تفکیک گونه‌ای (Species Safety Invariant): هرگز والاسیکلوویر را برای گربه دارای زخم چشم هرپسی تجویز نکنید! این یک اشتباه بالینی کشنده است؛ گربه فاقد مسیرهای خنثی‌سازی متابولیت‌های این دارو بوده و ظرف ۴۸ ساعت دچار نارسایی حاد و برگشت‌ناپذیر کلیه می‌شود. برای گربه همیشه فام‌سیکلوویر (Famciclovir) بنویسید و والاسیکلوویر را منحصراً برای اسب نگه دارید."
+    "clinical_pearls": "قانون حیاتی تفکیک گونه‌ای (Species Safety Invariant): هرگز والاسیکلوویر را برای گربه دارای زخم چشم هرپسی تجویز نکنید! این یک اشتباه بالینی کشنده است؛ گربه فاقد مسیرهای خنثی‌سازی متابولیت‌های این دارو بوده و ظرف ۴۸ ساعت دچار نارسایی حاد و برگشت‌ناپذیر کلیه می‌شود. برای گربه همیشه فام‌سیکلوویر (Famciclovir) بنویسید و والاسیکلوویر را منحصراً برای اسب نگه دارید.",
+    "brand_names_fa": [
+      "قرص‌های والاسیکلوویر ۵۰۰ و ۱۰۰۰ میلی‌گرم (والترکس)"
+    ],
+    "brand_names_en": [
+      "Valtrex (Valacyclovir) 500mg, 1000mg Tablets"
+    ]
   },
   {
     "id": "valganciclovir",
@@ -89774,7 +94745,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های انکولوژی و پیوند اعضای انسانی کشور.",
     "pharmacology_mechanism": "وال‌گان‌سیکلوویر در کبد و دیواره روده به گان‌سیکلوویر تبدیل می‌شود. گان‌سیکلوویر با مهار رقابتی دی‌اکسی‌گوانوزین تری‌فسفات (dGTP) برای ادغام در DNA ویروس، پلیمراز DNA ویروس را مهار کرده و سنتز زنجیره DNA ویروسی را خاتمه می‌دهد.",
-    "clinical_pearls": "نکته ایمنی تجویز داروساز بالینی: هنگام خورانیدن این دارو به حیوان، دستکش یکبار مصرف الزامی است؛ این مولکول به شدت تراتوژن و موتاژن است و بانوان باردار نباید با دارو یا بزاق و ادرار حیوان تحت درمان تماس داشته باشند."
+    "clinical_pearls": "نکته ایمنی تجویز داروساز بالینی: هنگام خورانیدن این دارو به حیوان، دستکش یکبار مصرف الزامی است؛ این مولکول به شدت تراتوژن و موتاژن است و بانوان باردار نباید با دارو یا بزاق و ادرار حیوان تحت درمان تماس داشته باشند.",
+    "brand_names_fa": [
+      "قرص‌های وال‌گان‌سیکلوویر ۴۵۰ میلی‌گرم (وال‌سیت)",
+      "پودر سوسپانسیون خوراکی وال‌گان‌سیکلوویر ۵۰ mg/mL"
+    ],
+    "brand_names_en": [
+      "Valcyte (Valganciclovir) 450mg Tablets",
+      "Valganciclovir 50 mg/mL Oral Solution Powder"
+    ]
   },
   {
     "id": "valproic_acid",
@@ -89883,7 +94862,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی سراسر کشور.",
     "pharmacology_mechanism": "والپروات سدیم با مهار آنزیم GABA ترانس‌آمیناز و سوکسینیک سمی‌آلدهید دهیدروژناز، غلظت ماده مهاری گابا (GABA) را در سیناپس‌های مغزی افزایش می‌دهد؛ همچنین با مهار کانال‌های کلسیمی نوع T و کانال‌های سدیم وابسته به ولتاژ، از شلیک‌های نورونی کانون‌های صرع جلوگیری می‌کند.",
-    "clinical_pearls": "قانون غلظت سرمی درمانی والپروات: سطح درمانی پلاسمایی والپروئیک اسید در سگ‌ها بین ۵۰ تا ۱۰۰ میکروگرم بر میلی‌لیتر (350 - 700 mcmol/L) است؛ به دلیل کلیرنس فوق‌سریع در سگ، نمونه‌گیری خون باید دقیقاً قبل از نوبت دوز بعدی (Trough level) انجام شود."
+    "clinical_pearls": "قانون غلظت سرمی درمانی والپروات: سطح درمانی پلاسمایی والپروئیک اسید در سگ‌ها بین ۵۰ تا ۱۰۰ میکروگرم بر میلی‌لیتر (350 - 700 mcmol/L) است؛ به دلیل کلیرنس فوق‌سریع در سگ، نمونه‌گیری خون باید دقیقاً قبل از نوبت دوز بعدی (Trough level) انجام شود.",
+    "brand_names_fa": [
+      "قرص‌های دپاکین کرونو ۵۰۰ میلی‌گرم (سدیم والپروات آهسته‌رهش)",
+      "شربت سدیم والپروات ۲۰۰ mg/5mL"
+    ],
+    "brand_names_en": [
+      "Depakine Chrono 500mg Controlled-Release Tablets",
+      "Sodium Valproate 200mg/5mL Syrup"
+    ]
   },
   {
     "id": "vancomycin_systemic",
@@ -89997,7 +94984,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های بیمارستانی و بخش‌های ICU کشور.",
     "pharmacology_mechanism": "وانکومایسین با میل پیوندی بسیار بالا به انتهای D-آلانیل-D-آلانین مولکول‌های پیش‌ساز پپتیدوگلیکان دیواره باکتری متصل می‌شود و با ممانعت فضایی، از تشکیل پیوندهای پپتیدی پپتیدوگلیکان جلوگیری کرده و نفوذپذیری غشای باکتری را افزایش داده و ساخت RNA را متوقف می‌سازد.",
-    "clinical_pearls": "قانون پایش غلظت خونی (TDM): حداقل غلظت پلاسمایی وانکومایسین (Trough Level) که دقیقاً نیم ساعت قبل از نوبت بعدی سنجیده می‌شود، باید بین ۱۰ تا ۱۵ میکروگرم بر میلی‌لیتر (یا ۱۵ تا ۲۰ در سپسیس‌های وخیم) باشد؛ سطح بالای ۲۰ خطر نفروتوکسیسیتی را تا ۵ برابر افزایش می‌دهد."
+    "clinical_pearls": "قانون پایش غلظت خونی (TDM): حداقل غلظت پلاسمایی وانکومایسین (Trough Level) که دقیقاً نیم ساعت قبل از نوبت بعدی سنجیده می‌شود، باید بین ۱۰ تا ۱۵ میکروگرم بر میلی‌لیتر (یا ۱۵ تا ۲۰ در سپسیس‌های وخیم) باشد؛ سطح بالای ۲۰ خطر نفروتوکسیسیتی را تا ۵ برابر افزایش می‌دهد.",
+    "brand_names_fa": [
+      "ویال پودر استریل وانکومایسین ۵۰۰ میلی‌گرم و ۱ گرمی"
+    ],
+    "brand_names_en": [
+      "Vancomycin 500mg, 1g Sterile Powder for Injection"
+    ]
   },
   {
     "id": "vardenafil",
@@ -90099,7 +95092,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی سراسر کشور.",
     "pharmacology_mechanism": "واردنافیل با مهار اختصاصی آنزیم فسفودی‌استراز تیپ ۵ مانع هیدرولیز و تجزیه cGMP در سلول‌های عضلانی صاف شریانچه‌های ریوی می‌شود؛ افزایش غلظت cGMP داخل‌سلولی با فعال‌سازی پروتئین کیناز G باعث اتساع عروق ریوی و سقوط فشار شریان پولمونر می‌گردد.",
-    "clinical_pearls": "مزیت واردنافیل بر سیلدنافیل: به دلیل تمایل پیوندی بسیار قوی‌تر به جایگاه فعال آنزیم PDE-5، دوزهای مورد نیاز آن در سگ‌ها بسیار کمتر از سیلدنافیل است (حدود یک‌پنجم تا یک‌دهم دوز سیلدنافیل) و عوارض گوارشی و افت فشار سیستمیک کمتری ایجاد می‌نماید."
+    "clinical_pearls": "مزیت واردنافیل بر سیلدنافیل: به دلیل تمایل پیوندی بسیار قوی‌تر به جایگاه فعال آنزیم PDE-5، دوزهای مورد نیاز آن در سگ‌ها بسیار کمتر از سیلدنافیل است (حدود یک‌پنجم تا یک‌دهم دوز سیلدنافیل) و عوارض گوارشی و افت فشار سیستمیک کمتری ایجاد می‌نماید.",
+    "brand_names_fa": [
+      "قرص‌های واردنافیل ۵، ۱۰ و ۲۰ میلی‌گرم (لویترا)"
+    ],
+    "brand_names_en": [
+      "Levitra (Vardenafil) 5mg, 10mg, 20mg Tablets"
+    ]
   },
   {
     "id": "vedaprofen",
@@ -90202,7 +95201,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های دامپزشکی و بیمارستان‌های تخصصی اسب کشور.",
     "pharmacology_mechanism": "وداپروفن با مهار سنتز پروستاگلاندین‌ها از طریق مهار آنزیم سیکلواکسیژناز با تمایل ترجیحی به ایزوفرم التهابی COX-2، واسطه‌های درد، ادم و افزایش نفوذپذیری عروقی را در مفاصل و تاندون‌های ملتهب مهار می‌کند.",
-    "clinical_pearls": "مزیت استثنایی وداپروفن در اسب: فنیل‌بوتازون در اسب‌های ورزشی خطر بالایی برای ایجاد کولیت فرسایشی کولون راست پشتی (Right Dorsal Colitis) و نکروز مدولای کلیه دارد؛ اما وداپروفن حتی در مصرف ۱۴ روزه تحمل احشایی بسیار بالاتری نشان می‌دهد و مخاط کولون را تخریب نمی‌کند."
+    "clinical_pearls": "مزیت استثنایی وداپروفن در اسب: فنیل‌بوتازون در اسب‌های ورزشی خطر بالایی برای ایجاد کولیت فرسایشی کولون راست پشتی (Right Dorsal Colitis) و نکروز مدولای کلیه دارد؛ اما وداپروفن حتی در مصرف ۱۴ روزه تحمل احشایی بسیار بالاتری نشان می‌دهد و مخاط کولون را تخریب نمی‌کند.",
+    "brand_names_fa": [
+      "ژل خوراکی کوادریسول ۱۰۰ mg/mL اسب (وداپروفن)"
+    ],
+    "brand_names_en": [
+      "Quadrisol (Vedaprofen) 100 mg/mL Oral Gel for Horses"
+    ]
   },
   {
     "id": "vecuronium_bromide",
@@ -90318,7 +95323,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام اتاق‌های عمل و بیمارستان‌های کشور تحت نظارت داروهای بیهوشی.",
     "pharmacology_mechanism": "وکورونیوم یک آنتاگونیست رقابتی گیرنده‌های کولینرژیک نیکوتینی (Nm) در صفحه محرکه انتهایی عضلات اسکلتی است؛ با مسدود کردن جایگاه اتصال استیل‌کولین مانع دپلاریزاسیون غشای سلول عضله شده و فلج شل کامل (Flaccid paralysis) ایجاد می‌نماید.",
-    "clinical_pearls": "قانون حیاتی بیهوشی چشم‌پزشکی: در جراحی کاتاراکت و پیوند قرنیه سگ، انحراف کره چشم به سمت پایین (Ventral rotation) جراحی را ناممکن می‌کند؛ تزریق یک دوز اندک وکورونیوم عضله رترکتور و مایل را کاملاً فلج کرده و مردمک را دقیقاً در مرکز میدان دید فیکو قرار می‌دهد."
+    "clinical_pearls": "قانون حیاتی بیهوشی چشم‌پزشکی: در جراحی کاتاراکت و پیوند قرنیه سگ، انحراف کره چشم به سمت پایین (Ventral rotation) جراحی را ناممکن می‌کند؛ تزریق یک دوز اندک وکورونیوم عضله رترکتور و مایل را کاملاً فلج کرده و مردمک را دقیقاً در مرکز میدان دید فیکو قرار می‌دهد.",
+    "brand_names_fa": [
+      "ویال پودر استریل تزریقی وکورونیوم بروماید ۴ و ۱۰ میلی‌گرم (نورکورون)"
+    ],
+    "brand_names_en": [
+      "Norcuron (Vecuronium Bromide) 4mg, 10mg Injection"
+    ]
   },
   {
     "id": "velagliflozin",
@@ -90411,7 +95422,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌های تخصصی گربه‌سانان کشور به عنوان داروی وارداتی ویژه ۲۰۲۳.",
     "pharmacology_mechanism": "ولاگلیفلوزین با مهار اختصاصی ناقل سدیم-گلوکز تیپ ۲ (SGLT-2) در توبول پروگزیمال نفرون‌های کلیه، آستانه بازجذب کلیوی گلوکز را به شدت کاهش داده و مازاد گلوکز سمی پلاسما را از طریق ادرار (گلوکوزوری هدفمند) دفع می‌سازد و سمیت گلوکزی بر سلول‌های بتای پانکراس را برطرف می‌کند.",
-    "clinical_pearls": "معمای کتواسیدوز ائوگلیسمیک (Euglycemic DKA): یک دامپزشک آگاه باید بداند که در حین مصرف سنولگو، قند خون گربه ممکن است کاملاً نرمال (زیر ۲۰۰ mg/dL) به نظر برسد اما بیمار به دلیل کمبود انسولین درون‌زا دچار کتواسیدوز شدید شده باشد! بنابراین اگر گربه تحت درمان دچار بی‌حالی یا بی‌اشتهایی شد، بلافاصله کتون خون را اندازه بگیرید حتی اگر قند خون کاملاً طبیعی باشد."
+    "clinical_pearls": "معمای کتواسیدوز ائوگلیسمیک (Euglycemic DKA): یک دامپزشک آگاه باید بداند که در حین مصرف سنولگو، قند خون گربه ممکن است کاملاً نرمال (زیر ۲۰۰ mg/dL) به نظر برسد اما بیمار به دلیل کمبود انسولین درون‌زا دچار کتواسیدوز شدید شده باشد! بنابراین اگر گربه تحت درمان دچار بی‌حالی یا بی‌اشتهایی شد، بلافاصله کتون خون را اندازه بگیرید حتی اگر قند خون کاملاً طبیعی باشد.",
+    "brand_names_fa": [
+      "محلول خوراکی سنولگو ۱۵ mg/mL (ولاگلیفلوزین دامی)"
+    ],
+    "brand_names_en": [
+      "Senvelgo (Velagliflozin) 15 mg/mL Oral Solution for Cats"
+    ]
   },
   {
     "id": "venlafaxine",
@@ -90515,7 +95532,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های معتبر انسانی کشور.",
     "pharmacology_mechanism": "ونلافاکسین با مهار اختصاصی حامل‌های بازجذب سروتونین (SERT) و نوراپی‌نفرین (NET) در پایانه پیش‌سیناپسی، غلظت این دو انتقال‌دهنده عصبی را در شکاف سیناپسی مدارهای لیمبیک مغز و مسیرهای نزولی مهار درد در طناب نخاعی افزایش داده و مقاومت روانی و ثبات خلقی ایجاد می‌کند.",
-    "clinical_pearls": "قانون طلایی تیپر کردن ونلافاکسین: اگر قصد قطع ونلافاکسین را دارید، دوز دارو را هر هفته ۲۵ تا ۳۰ درصد طی مدت حداقل ۳ تا ۴ هفته کاهش دهید؛ قطع ناگهانی این مولکول حتی در سگ‌ها باعث بی‌قراری، لرزش سر و آشفتگی خواب می‌شود."
+    "clinical_pearls": "قانون طلایی تیپر کردن ونلافاکسین: اگر قصد قطع ونلافاکسین را دارید، دوز دارو را هر هفته ۲۵ تا ۳۰ درصد طی مدت حداقل ۳ تا ۴ هفته کاهش دهید؛ قطع ناگهانی این مولکول حتی در سگ‌ها باعث بی‌قراری، لرزش سر و آشفتگی خواب می‌شود.",
+    "brand_names_fa": [
+      "کپسول‌های پیوسته رهش ونلافاکسین ۳۷.۵، ۷۵ و ۱۵۰ میلی‌گرم (افکسور XR)"
+    ],
+    "brand_names_en": [
+      "Effexor XR (Venlafaxine) 37.5mg, 75mg Extended-Release Capsules"
+    ]
   },
   {
     "id": "verapamil",
@@ -90630,7 +95653,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌ها و بخش‌های اورژانس بیمارستان‌های سراسر کشور.",
     "pharmacology_mechanism": "وراپامیل کانال‌های کلسیمی نوع L فعال‌شده با ولتاژ را در مرحله دپلاریزاسیون کند سلول‌های گره‌های SA و AV مسدود می‌کند؛ در نتیجه جریان ورودی یون کلسیم متوقف شده، سرعت هدایت پیام الکتریکی در گره AV کند گشته و دوره تحریک‌ناپذیری آن طولانی می‌شود که ریتم‌های گردشی تاکی‌کاردی را متوقف می‌سازد.",
-    "clinical_pearls": "پادزهر بحران اوردوز وراپامیل: اگر حیوانی در اثر تجویز وراپامیل دچار کلاپس، بلوک قلبی شدید یا ایست سینوسی شد، پادزهر انتخابی محلول کلسیم گلوکونات ۱۰٪ وریدی (۰.۵ تا ۱.۵ mL/kg آهسته) به همراه آتروپین یا ایزوپروترنول است تا جریان کلسیم را احیا نماید."
+    "clinical_pearls": "پادزهر بحران اوردوز وراپامیل: اگر حیوانی در اثر تجویز وراپامیل دچار کلاپس، بلوک قلبی شدید یا ایست سینوسی شد، پادزهر انتخابی محلول کلسیم گلوکونات ۱۰٪ وریدی (۰.۵ تا ۱.۵ mL/kg آهسته) به همراه آتروپین یا ایزوپروترنول است تا جریان کلسیم را احیا نماید.",
+    "brand_names_fa": [
+      "آمپول تزریقی وراپامیل ۵ میلی‌گرم/۲ میلی‌لیتر (ایزوپتین)",
+      "قرص‌های وراپامیل ۴۰ و ۸۰ میلی‌گرم خوراکی"
+    ],
+    "brand_names_en": [
+      "Isoptin (Verapamil) 5mg/2mL Injection",
+      "Verapamil 40mg, 80mg Film-Coated Tablets"
+    ]
   },
   {
     "id": "vidarabine_ophthalmic",
@@ -90734,7 +95765,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی چشم‌پزشکی و مراکز ارجاعی دامپزشکی.",
     "pharmacology_mechanism": "ویدارابین (آدنین آرابینوزید یا Ara-A) توسط کینازهای سلولی به مشتق تری‌فسفات فعال (Ara-ATP) تبدیل می‌شود که با مهار انتخابی آنزیم DNA پلی‌مراز ویروس و مهار آنزیم ریبونوکلئوتید ردوکتاز، سنتز ژنوم ویروس هرپس را متوقف می‌سازد بدون اینکه بر DNA سلول میزبان اثر سمیت بارز بگذارد.",
-    "clinical_pearls": "تفاوت کاربردی ویدارابین با تری‌فلوریدین: تری‌فلوریدین باید هر ۲ ساعت یک‌بار چکانده شود که برای سرپرستان گربه بسیار سخت است و سوزش شدیدی ایجاد می‌کند؛ اما پماد ویدارابین به دلیل ماندگاری پایه روغنی، هر ۸ ساعت یک‌بار کافی است و چشم گربه را نیز مرطوب نگه می‌دارد."
+    "clinical_pearls": "تفاوت کاربردی ویدارابین با تری‌فلوریدین: تری‌فلوریدین باید هر ۲ ساعت یک‌بار چکانده شود که برای سرپرستان گربه بسیار سخت است و سوزش شدیدی ایجاد می‌کند؛ اما پماد ویدارابین به دلیل ماندگاری پایه روغنی، هر ۸ ساعت یک‌بار کافی است و چشم گربه را نیز مرطوب نگه می‌دارد.",
+    "brand_names_fa": [
+      "پماد استریل چشمی ویدارابین ۳٪ (ویرا-آ)"
+    ],
+    "brand_names_en": [
+      "Vira-A (Vidarabine) 3% Ophthalmic Ointment"
+    ]
   },
   {
     "id": "vigabatrin",
@@ -90834,7 +95871,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تک‌نسخه‌ای و تخصصی بیماری‌های مغز و اعصاب کشور.",
     "pharmacology_mechanism": "ویگاباترین یک آنالوگ ساختاری GABA است که به صورت برگشت‌ناپذیر به جایگاه فعال آنزیم گابا ترانس‌آمیناز (4-aminobutyrate aminotransferase) پیوند کووالانسی برقرار کرده و آن را برای همیشه غیرفعال می‌سازد؛ در نتیجه تجزیه GABA متوقف شده و غلظت مهاری آن در سیناپس‌های مهاری تا زمان بازتولید آنزیم جدید بالا می‌ماند.",
-    "clinical_pearls": "مزیت استثنایی ویگاباترین در سگ‌های دارای آسیب کبدی: ویگاباترین بر خلاف فنوباربیتال هیچ‌گونه متابولیسم کبدی سیتوکرومی ندارد و تقریباً ۱۰۰٪ به صورت داروی دست‌نخورده از طریق ادرار دفع می‌شود؛ بنابراین در سگ‌های صرعی که کبد آن‌ها به دلیل فنوباربیتال آسیب دیده گزینه‌ای ایده‌آل است."
+    "clinical_pearls": "مزیت استثنایی ویگاباترین در سگ‌های دارای آسیب کبدی: ویگاباترین بر خلاف فنوباربیتال هیچ‌گونه متابولیسم کبدی سیتوکرومی ندارد و تقریباً ۱۰۰٪ به صورت داروی دست‌نخورده از طریق ادرار دفع می‌شود؛ بنابراین در سگ‌های صرعی که کبد آن‌ها به دلیل فنوباربیتال آسیب دیده گزینه‌ای ایده‌آل است.",
+    "brand_names_fa": [
+      "قرص‌های ویگاباترین ۵۰۰ میلی‌گرم (سابریل)",
+      "ساشه پودر گرانول خوراکی ویگاباترین ۵۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Sabril (Vigabatrin) 500mg Film-Coated Tablets",
+      "Sabril 500mg Oral Solution Sachets"
+    ]
   },
   {
     "id": "vinblastine_sulfate",
@@ -90937,7 +95982,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های انکولوژی و مراکز بیمارستانی معتبر کشور.",
     "pharmacology_mechanism": "وین‌بلاستین به پروتئین توبولین دایمر متصل شده و از پلیمریزاسیون آن به میکروتوبول‌های دوک تقسیم میتوزی جلوگیری می‌کند؛ با متوقف ساختن میتوز سلولی در مرحله متافاز (M-phase arrest)، تقسیم سلول‌های توموری را مسدود کرده و آپوپتوز سلول‌های ماست سل سرطانی را القا می‌نماید.",
-    "clinical_pearls": "پادزهر و پروتکل اورژانس نشت دور رگی وین‌بلاستین (Extravasation): در صورت نشت دارو، هرگز سوزن را بلافاصله نکشید! ابتدا تا جای ممکن با سرنگ خون و داروی نشت‌کرده را آسپیره کنید؛ سپس کمپرس گرم موضعی (جهت گشاد شدن عروق و پخش دارو) قرار دهید و آمپول هیالورونیداز (Hyaluronidase) را در ناحیه نشت تزریق کنید تا دارو رقیق و جذب شود."
+    "clinical_pearls": "پادزهر و پروتکل اورژانس نشت دور رگی وین‌بلاستین (Extravasation): در صورت نشت دارو، هرگز سوزن را بلافاصله نکشید! ابتدا تا جای ممکن با سرنگ خون و داروی نشت‌کرده را آسپیره کنید؛ سپس کمپرس گرم موضعی (جهت گشاد شدن عروق و پخش دارو) قرار دهید و آمپول هیالورونیداز (Hyaluronidase) را در ناحیه نشت تزریق کنید تا دارو رقیق و جذب شود.",
+    "brand_names_fa": [
+      "ویال تزریقی وین‌بلاستین سولفات ۱۰ میلی‌گرم/۱۰ میلی‌لیتر (ولبان)"
+    ],
+    "brand_names_en": [
+      "Velban (Vinblastine Sulfate) 10mg/10mL Injection"
+    ]
   },
   {
     "id": "vinorelbine_tartrate",
@@ -91039,7 +96090,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های انکولوژی و بیمارستان‌های تخصصی کشور.",
     "pharmacology_mechanism": "وینورلبین به طور انتخابی با میکروتوبول‌های میتوزی سلول پیوند برقرار می‌کند؛ به دلیل تفاوت در ساختار فضایی با وینکریستین و وین‌بلاستین، تمایل آن به میکروتوبول‌های آکسونی اعصاب محیطی بسیار کمتر است، بنابراین سمیت عصبی اندک اما خاصیت ضدتوموری ریوی فوق‌العاده‌ای نشان می‌دهد.",
-    "clinical_pearls": "پیشگیری از ترومبوفلبیت در ورید سگ: وینورلبین می‌تواند باعث سوزش و فلبیت شیمیایی در رگ شود؛ همیشه قبل از تزریق دارو، جریان سرم آزاد را تایید کنید و دارو را درون ۱۰۰ سی‌سی سرم رقیق کرده و طی ۱۵ تا ۲۰ دقیقه تزریق نمایید و بلافاصله مسیر را با سرم خالص سالین فلاش کنید."
+    "clinical_pearls": "پیشگیری از ترومبوفلبیت در ورید سگ: وینورلبین می‌تواند باعث سوزش و فلبیت شیمیایی در رگ شود؛ همیشه قبل از تزریق دارو، جریان سرم آزاد را تایید کنید و دارو را درون ۱۰۰ سی‌سی سرم رقیق کرده و طی ۱۵ تا ۲۰ دقیقه تزریق نمایید و بلافاصله مسیر را با سرم خالص سالین فلاش کنید.",
+    "brand_names_fa": [
+      "ویال تزریقی وینورلبین تارتارات ۱۰ و ۵۰ میلی‌گرم (ناولبین)"
+    ],
+    "brand_names_en": [
+      "Navelbine (Vinorelbine) 10mg/mL Injection"
+    ]
   },
   {
     "id": "viscum_album",
@@ -91140,7 +96197,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در باشگاه‌های سوارکاری و بیمارستان‌های تخصصی دام بزرگ کشور به عنوان داروی وارداتی ویژه.",
     "pharmacology_mechanism": "لکتین‌های ویسکوم آلبوم از طریق اتصال به گیرنده‌های گلیکوپروتئینی غشای سلول‌های توموری، مسیر آپوپتوز داخلی وابسته به میتوکندری را تحریک می‌کنند؛ همزمان ویسکوتوکسین‌ها باعث نفوذپذیری غشای تومور و لیز سلولی شده و با آزاد شدن آنتی‌ژن‌های سرطانی، لنفوسیت‌های T سیتوتوکسیک به کانون نئوپلاسم فراخوانده می‌شوند.",
-    "clinical_pearls": "تفسیر واکنش موضعی در اسب: ایجاد یک تورم و قرمزی به قطر ۲ تا ۵ سانتی‌متر دور محل تزریق یا در پایه سارکوئید نشانه بسیار مثبتی است و نشان می‌دهد سیستم ایمنی اسب علیه آنتی‌ژن‌های تومور فعال شده است؛ اگر هیچ واکنشی دیده نشد، دوز بعدی باید به غلظت قوی‌تر بعدی ارتقا یابد."
+    "clinical_pearls": "تفسیر واکنش موضعی در اسب: ایجاد یک تورم و قرمزی به قطر ۲ تا ۵ سانتی‌متر دور محل تزریق یا در پایه سارکوئید نشانه بسیار مثبتی است و نشان می‌دهد سیستم ایمنی اسب علیه آنتی‌ژن‌های تومور فعال شده است؛ اگر هیچ واکنشی دیده نشد، دوز بعدی باید به غلظت قوی‌تر بعدی ارتقا یابد.",
+    "brand_names_fa": [
+      "آمپول‌های تزریقی ایسکادور (عصاره دارواش سفید دامی)"
+    ],
+    "brand_names_en": [
+      "Iscador (Viscum Album Extract) Sterile Ampoules"
+    ]
   },
   {
     "id": "vitamin_a",
@@ -91267,7 +96330,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "رتینول",
+      "محلول تزریقی ویتامین A دامی ۵۰۰,۰۰۰ واحد/میلی‌لیتر یا AD3E",
+      "کپسول‌های نرم ژلاتینی ویتامین A خوراکی ۲۵,۰۰۰ و ۵۰,۰۰۰ واحدی"
+    ],
+    "brand_names_en": [
+      "Vitamin A / AD3E Injection (500,000 IU/mL)",
+      "Vitamin A 25,000 IU, 50,000 IU Softgels"
+    ]
   },
   {
     "id": "vitamin_b_complex",
@@ -91397,7 +96469,15 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول استریل تزریقی ویتامین ب-کمپلکس دامی",
+      "آمپول ویتامین ب-کمپلکس انسانی ۲ میلی‌لیتری"
+    ],
+    "brand_names_en": [
+      "Vitamin B-Complex Injection Veterinary",
+      "Vitamin B-Complex 2mL Ampoule"
+    ]
   },
   {
     "id": "menadione_sodium_bisulfite",
@@ -91544,7 +96624,16 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ویتامین K3 دامی",
+      "پودر ویتامین K3 دامی ۲۵٪ (منادیون سدیم بی‌سولفیت)",
+      "محلول تزریقی ویتامین K3 دامی (منادیون ۱۰ mg/mL)"
+    ],
+    "brand_names_en": [
+      "Menadione Sodium Bisulfite 25% Water Soluble Powder",
+      "Menadione 10mg/mL Veterinary Injection"
+    ]
   },
   {
     "id": "vitamin_d3",
@@ -91660,7 +96749,16 @@ const DRUGS_DATA = [
       "milk_fa": "پروتکل کلاسیک پیشگیری از تب شیر (Hypocalcemia / Milk Fever) در گاوهای شیری مسن پرتولید از طریق تحریک استخوان‌ها و روده قبل از زایش.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ویتامین D3",
+      "محلول روغنی تزریقی ویتامین D3 دامی (یا در ترکیب ویتامین AD3E)",
+      "آمپول تزریقی ویتامین D3 ۳۰۰,۰۰۰ واحدی انسانی"
+    ],
+    "brand_names_en": [
+      "Vitamin D3 Injection (500,000 IU/mL)",
+      "Vitamin D3 300,000 IU/mL Injection Ampoule"
+    ]
   },
   {
     "id": "vitamin_e_selenium",
@@ -91781,7 +96879,13 @@ const DRUGS_DATA = [
       "milk_fa": "پیشگیری از جفت‌ماندگی (Retained Placenta)، متریت حاد و ورم پستان مزمن در گاوهای شیری از طریق تزریق در دوره خشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول استریل تزریقی ویتامین E + سلنیوم دامی"
+    ],
+    "brand_names_en": [
+      "Vitamin E + Selenium Injection (50 mg Vit E + 0.5 mg Se/mL)"
+    ]
   },
   {
     "id": "warfarin_sodium",
@@ -91889,7 +96993,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور.",
     "pharmacology_mechanism": "وارفارین آنزیم ویتامین K اپوکساید ردوکتاز (VKOR) را در سلول‌های کبد مسدود می‌سازد؛ در نتیجه چرخه احیای ویتامین K متوقف شده و کربوکسیلاسیون باقیمانده‌های اسید گلوتامیک در پروتئین‌های پیش‌ساز فاکتورهای انعقادی II، VII، IX و X و پروتئین‌های C و S متوقف می‌گردد و فاکتورهای خونی فاقد توانایی اتصال به کلسیم و تشکیل شبکه فیبرین می‌شوند.",
-    "clinical_pearls": "قانون حیاتی پایش ایمنی وارفارین در اسب: هدف درمانی در سندرم ناویگولار طولانی شدن زمان پروترومبین (PT) بین ۱.۵ تا حداکثر ۲ برابر حد نرمال است؛ اگر PT به بیش از ۲.۵ برابر حد نرمال رسید، بلافاصله مصرف وارفارین را قطع کرده و یک دوز ویتامین K1 تزریق نمایید تا از خونریزی‌های هماتوم مرگبار سم و مفاصل پیشگیری شود."
+    "clinical_pearls": "قانون حیاتی پایش ایمنی وارفارین در اسب: هدف درمانی در سندرم ناویگولار طولانی شدن زمان پروترومبین (PT) بین ۱.۵ تا حداکثر ۲ برابر حد نرمال است؛ اگر PT به بیش از ۲.۵ برابر حد نرمال رسید، بلافاصله مصرف وارفارین را قطع کرده و یک دوز ویتامین K1 تزریق نمایید تا از خونریزی‌های هماتوم مرگبار سم و مفاصل پیشگیری شود.",
+    "brand_names_fa": [
+      "قرص‌های وارفارین سدیم ۵ میلی‌گرم (کومادین)"
+    ],
+    "brand_names_en": [
+      "Warfarin Sodium 5mg Tablets (Coumadin)"
+    ]
   },
   {
     "id": "xylometazoline_nasal",
@@ -92021,7 +97131,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور بدون نیاز به نسخه.",
     "pharmacology_mechanism": "زایلومتازولین یک سمپاتومیمتیک ایمیدازولینی است که مستقیماً گیرنده‌های آلفا-۱ و آلفا-۲ آدرنرژیک را در ماهیچه صاف شریانچه‌های مخاط بینی تحریک می‌کند؛ انقباض عروقی حاصل باعث کاهش پرخونی و ادم بافتی شده و ظرف ۲ دقیقه لومن تنفسی بینی را باز می‌نماید.",
-    "clinical_pearls": "قانون حیاتی اشتهای گربه (The Anosmia-Anorexia Link): گربه‌ها اگر بوی غذا را حس نکنند، مطلقاً لب به غذا نمی‌زنند و وارد چرخه کشنده لیپیدوز کبدی می‌شوند؛ در بچه گربه‌های مبتلا به کوریزا که بینی آن‌ها کیپ شده، چکاندن ۱ قطره زایلومتازولین اطفال ۱۵ دقیقه قبل از ارائه غذای گرم و معطر، راه تنفس را باز کرده و با بازگشت حس بویایی، گربه به طرز معجزه‌آسایی شروع به لیسیدن غذا می‌کند."
+    "clinical_pearls": "قانون حیاتی اشتهای گربه (The Anosmia-Anorexia Link): گربه‌ها اگر بوی غذا را حس نکنند، مطلقاً لب به غذا نمی‌زنند و وارد چرخه کشنده لیپیدوز کبدی می‌شوند؛ در بچه گربه‌های مبتلا به کوریزا که بینی آن‌ها کیپ شده، چکاندن ۱ قطره زایلومتازولین اطفال ۱۵ دقیقه قبل از ارائه غذای گرم و معطر، راه تنفس را باز کرده و با بازگشت حس بویایی، گربه به طرز معجزه‌آسایی شروع به لیسیدن غذا می‌کند.",
+    "brand_names_fa": [
+      "قطره بینی زایلومتازولین ۰.۰۵٪ کودکان (اوترین اطفال)"
+    ],
+    "brand_names_en": [
+      "Xylometazoline 0.05% Pediatric Nasal Drops (Otrivin)"
+    ]
   },
   {
     "id": "yohimbine_hydrochloride",
@@ -92144,7 +97260,13 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول استریل تزریقی یوهیمبین هیدروکلراید ۲ mg/mL (آنتادین دامی)"
+    ],
+    "brand_names_en": [
+      "Antagonil / Yobine (Yohimbine HCl) 2 mg/mL Injection"
+    ]
   },
   {
     "id": "zidovudine",
@@ -92243,7 +97365,16 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی بیماری‌های عفونی و مراکز مرجع کشور.",
     "pharmacology_mechanism": "زیدوودین یک آنالوگ نوکلئوزیدی تیمیدین است که توسط کینازهای سلول گربه به فرم تری‌فسفات (AZT-TP) فعال می‌شود. AZT-TP با قرار گرفتن درون زنجیره DNA سنتز شونده توسط آنزیم ترانس‌کریپتاز معکوس رتروویروس، به دلیل فقدان گروه 3-OH مانع اتصال نوکلئوتید بعدی شده و همانندسازی ویروس‌های FIV و FeLV را متوقف می‌سازد.",
-    "clinical_pearls": "قانون شروع دوزینگ در گربه FIV: همیشه با دوز محتاطانه ۵ mg/kg هر ۱۲ ساعت شروع کنید؛ اگر بعد از ۳ هفته هماتوکریت بالای ۲۵٪ باقی ماند و استوماتیت هنوز فعال بود، می‌توانید دوز را به ۸ تا ۱۰ mg/kg افزایش دهید؛ پایش هفتگی PCV با میکروهماتوکریت سانترفیوژ سریع‌ترین و ارزان‌ترین روش تضمین ایمنی است."
+    "clinical_pearls": "قانون شروع دوزینگ در گربه FIV: همیشه با دوز محتاطانه ۵ mg/kg هر ۱۲ ساعت شروع کنید؛ اگر بعد از ۳ هفته هماتوکریت بالای ۲۵٪ باقی ماند و استوماتیت هنوز فعال بود، می‌توانید دوز را به ۸ تا ۱۰ mg/kg افزایش دهید؛ پایش هفتگی PCV با میکروهماتوکریت سانترفیوژ سریع‌ترین و ارزان‌ترین روش تضمین ایمنی است.",
+    "brand_names_fa": [
+      "AZT",
+      "شربت خوراکی زیدوودین ۵۰ mg/5mL (10 mg/mL)",
+      "کپسول‌های زیدوودین ۱۰۰ و ۳۰۰ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Zidovudine 50mg/5mL Oral Syrup (Retrovir)",
+      "Zidovudine 100mg, 300mg Capsules"
+    ]
   },
   {
     "id": "zinc_gluconate",
@@ -92336,7 +97467,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی و دامپزشکی کشور.",
     "pharmacology_mechanism": "یون‌های روی در دیواره روده باریک بیان ژن پروتئین متالوتیونئین (Metallothionein) را به شدت تحریک می‌کنند. این پروتئین غنی از گوگرد تمایل پیوندی فوق‌العاده بالاتری به مس نسبت به روی دارد؛ مس غذایی به متالوتیونئین انتروسیت متصل شده و با ریزش طبیعی سلول‌های مخاطی روده از طریق مدفوع دفع می‌شود و وارد کبد نمی‌گردد.",
-    "clinical_pearls": "تکنیک مهار استفراغ ناشی از روی: روی یک محرک قوی انقباض معده است و سگ‌ها اغلب پس از خوردن قرص ناشتا استفراغ می‌کنند؛ برای حل این مشکل، ابتدا یک لقمه کوچک بدون مس (مانند سفیده تخم‌مرغ آب‌پز) به سگ بدهید و قرص را درون آن پنهان کنید تا بدون تهوع جذب متالوتیونئینی آغاز شود."
+    "clinical_pearls": "تکنیک مهار استفراغ ناشی از روی: روی یک محرک قوی انقباض معده است و سگ‌ها اغلب پس از خوردن قرص ناشتا استفراغ می‌کنند؛ برای حل این مشکل، ابتدا یک لقمه کوچک بدون مس (مانند سفیده تخم‌مرغ آب‌پز) به سگ بدهید و قرص را درون آن پنهان کنید تا بدون تهوع جذب متالوتیونئینی آغاز شود.",
+    "brand_names_fa": [
+      "قرص‌های زینک گلوکونات ۵۰ میلی‌گرم روی عنصری"
+    ],
+    "brand_names_en": [
+      "Zinc Gluconate 50mg Elemental Zinc Tablets"
+    ]
   },
   {
     "id": "zinc_sulfate_ophthalmic",
@@ -92461,7 +97598,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور بدون نیاز به نسخه.",
     "pharmacology_mechanism": "یون‌های روی با رسوب دادن پروتئین‌های موکوس و ترشحات التهابی، یک لایه پروتئینی محافظ روی سلول‌های ملتحمه ایجاد می‌کنند که نفوذپذیری مویرگ‌ها و ادم را کاهش می‌دهد؛ همچنین روی به عنوان کوفاکتور اساسی آنزیم‌های دی‌ان‌ای پلی‌مراز و روی-پروتئینازها، میتوز سلول‌های اپیتلیوم را برای ترمیم زخم‌های سطحی تسریع می‌نماید.",
-    "clinical_pearls": "قانون ترتیب چکاندن قطره‌های چشمی: اگر بیمار همزمان قطره آنتی‌بیوتیک یا اشک مصنوعی دارد، ابتدا چشم را تمیز کنید، سپس قطره زینک سولفات را بچکانید تا ترشحات اضافی شسته و جمع شود؛ ۱۰ دقیقه بعد قطره آنتی‌بیوتیکی را تجویز کنید تا بیشترین نفوذ و ماندگاری را روی بستر تمیز قرنیه داشته باشد."
+    "clinical_pearls": "قانون ترتیب چکاندن قطره‌های چشمی: اگر بیمار همزمان قطره آنتی‌بیوتیک یا اشک مصنوعی دارد، ابتدا چشم را تمیز کنید، سپس قطره زینک سولفات را بچکانید تا ترشحات اضافی شسته و جمع شود؛ ۱۰ دقیقه بعد قطره آنتی‌بیوتیکی را تجویز کنید تا بیشترین نفوذ و ماندگاری را روی بستر تمیز قرنیه داشته باشد.",
+    "brand_names_fa": [
+      "قطره استریل چشمی زینک سولفات ۰.۱٪ و ۰.۲۵٪"
+    ],
+    "brand_names_en": [
+      "Zinc Sulfate 0.1%, 0.25% Sterile Eye Drops"
+    ]
   },
   {
     "id": "zoledronic_acid",
@@ -92573,7 +97716,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انکولوژی و بیمارستان‌های کشور.",
     "pharmacology_mechanism": "زولدرونیک اسید آنزیم فارنسیل پیروفسفات سنتاز (FPPS) را در مسیر موالونات استئوکلاست‌ها مهار می‌کند؛ در نتیجه پرنیلاسیون پروتئین‌های ساختاری مهار شده، حاشیه چین‌خورده استئوکلاست تخریب گشته و با القای آپوپتوز سلول‌های استئوکلاست، فرایند بازجذب و تخریب استخوان توموری کاملاً مهار می‌شود.",
-    "clinical_pearls": "قانون طلایی هیدراتاسیون زومتا: زولدرونیک اسید نباید به بیماری که دهان خشک یا چشمان گودرفته دارد تزریق شود؛ همیشه حداقل ۲ تا ۴ ساعت قبل از انفوزیون زومتا، سرم سالین ۰.۹٪ با دوز ۱۰ تا ۲۰ mL/kg وصل کنید تا دیورز برقرار شود؛ این اقدام ساده خطر سمیت کلیوی را تقریباً به صفر می‌رساند."
+    "clinical_pearls": "قانون طلایی هیدراتاسیون زومتا: زولدرونیک اسید نباید به بیماری که دهان خشک یا چشمان گودرفته دارد تزریق شود؛ همیشه حداقل ۲ تا ۴ ساعت قبل از انفوزیون زومتا، سرم سالین ۰.۹٪ با دوز ۱۰ تا ۲۰ mL/kg وصل کنید تا دیورز برقرار شود؛ این اقدام ساده خطر سمیت کلیوی را تقریباً به صفر می‌رساند.",
+    "brand_names_fa": [
+      "ویال کنسانتره زولدرونیک اسید ۴ mg/5mL (زومتا)",
+      "محلول آماده انفوزیون زولدرونیک اسید ۴ mg/100mL"
+    ],
+    "brand_names_en": [
+      "Zometa (Zoledronic Acid) 4mg/5mL Injection",
+      "Zoledronic Acid 4mg/100mL Ready-to-use Infusion"
+    ]
   },
   {
     "id": "zomepirac",
@@ -92664,7 +97815,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در فارماکوپه‌های تخصصی و مراکز دانشگاهی.",
     "pharmacology_mechanism": "زومپیرک سدیم با مهار آنزیم سیکلواکسیژناز (COX)، تبدیل اسید آراشیدونیک به اندوپراکسیدهای ناپایدار (PGG2 و PGH2) را مسدود کرده و ترشح واسطه‌های درد در پایانه‌های عصبی محیطی و بافت ملتهب را مهار می‌سازد.",
-    "clinical_pearls": "محافظت همزمان گوارشی در دردهای ارتوپدی: هنگام تجویز مسکن‌های قوی مانند زومپیرک، تجویز همزمان یک داروی مهارکننده پمپ پروتون (امپرازول با دوز ۱ mg/kg صبح ناشتا) ترشح اسید معده را مهار کرده و ایمنی مخاط گوارشی را به حداکثر می‌رساند."
+    "clinical_pearls": "محافظت همزمان گوارشی در دردهای ارتوپدی: هنگام تجویز مسکن‌های قوی مانند زومپیرک، تجویز همزمان یک داروی مهارکننده پمپ پروتون (امپرازول با دوز ۱ mg/kg صبح ناشتا) ترشح اسید معده را مهار کرده و ایمنی مخاط گوارشی را به حداکثر می‌رساند.",
+    "brand_names_fa": [
+      "قرص‌های زومپیرک ۵۰ و ۱۰۰ میلی‌گرم (زوماکس)"
+    ],
+    "brand_names_en": [
+      "Zomax (Zomepirac Sodium) 50mg, 100mg Tablets"
+    ]
   },
   {
     "id": "zuclopenthixol",
@@ -92775,7 +97932,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های روان‌پزشکی انسانی و بیمارستان‌های تخصصی دام بزرگ.",
     "pharmacology_mechanism": "زوکلوپنتیکسول گیرنده‌های دوپامینرژیک D1 و D2 و همچنین گیرنده‌های آلفا-۱ و 5-HT2 را در مغز مسدود می‌کند؛ استریفیکاسیون مولکول با اسید استیک یا دکانوئیک حلالیت در چربی را فوق‌العاده بالا برده و پس از تزریق عضلانی، به آرامی از مخزن روغنی عضله آزاد و توسط استرازها هیدرولیز شده و سطح پلاسمایی ثابتی از داروی آزاد را برای چند روز تا چند هفته حفظ می‌نماید.",
-    "clinical_pearls": "تفاوت نجات‌بخش با آسه‌پرومازین در اسب‌های ارتوپدی: آسه‌پرومازین تنها ۳ تا ۴ ساعت اثر دارد و پس از پریدن اثر آن، اسب در اصطبل با شدت بیشتری جفتک می‌اندازد که می‌تواند پیچ و پلاک‌های ارتوپدی را بشکند؛ اما زوکلوپنتیکسول استات خواب‌آلودگی منگ‌کننده شدید ایجاد نمی‌کند، بلکه اسب را آرام، خوش‌خلق و بی‌حرکت نگه می‌دارد و اثر آن به صورت یکنواخت تا ۷۲ ساعت پایدار می‌ماند."
+    "clinical_pearls": "تفاوت نجات‌بخش با آسه‌پرومازین در اسب‌های ارتوپدی: آسه‌پرومازین تنها ۳ تا ۴ ساعت اثر دارد و پس از پریدن اثر آن، اسب در اصطبل با شدت بیشتری جفتک می‌اندازد که می‌تواند پیچ و پلاک‌های ارتوپدی را بشکند؛ اما زوکلوپنتیکسول استات خواب‌آلودگی منگ‌کننده شدید ایجاد نمی‌کند، بلکه اسب را آرام، خوش‌خلق و بی‌حرکت نگه می‌دارد و اثر آن به صورت یکنواخت تا ۷۲ ساعت پایدار می‌ماند.",
+    "brand_names_fa": [
+      "آمپول تزریقی کلوپیکسال آکوفاز ۵۰ میلی‌گرم/میلی‌لیتر (زوکلوپنتیکسول استات)",
+      "آمپول کلوپیکسال دپو ۲۰۰ mg/mL (زوکلوپنتیکسول دکانوات)"
+    ],
+    "brand_names_en": [
+      "Clopixol-Acutard (Zuclopenthixol Acetate) 50mg/mL Ampoule",
+      "Clopixol Depot (Zuclopenthixol Decanoate) 200mg/mL"
+    ]
   },
   {
     "id": "zylkene_alpha_casozepine",
@@ -92878,7 +98043,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام پت‌شاپ‌های تخصصی، داروخانه‌های دامپزشکی و بیمارستان‌های حیوانات خانگی کشور.",
     "pharmacology_mechanism": "آلفا-کازوزپین یک دکاپپتید نوترکیب (Tyr-Leu-Gly-Tyr-Leu-Glu-Gln-Leu-Leu-Arg) است که به طور انتخابی به ساب‌یونیت آلفا در گیرنده‌های بنزودیازپینی کمپلکس GABA-A متصل می‌شود؛ این اتصال تمایل گابا به گیرنده را تقویت کرده و بدون ایجاد شل‌شدگی عضلانی یا سداسیون، احساس ایمنی و ریلکسیشن پایدار پدید می‌آورد.",
-    "clinical_pearls": "چرا زایلکین بر بنزودیازپین‌ها ارجح است؟ بنزودیازپین‌ها (مانند دیازپام یا آلپرازولام) سگ را گیج و بی‌حال می‌کنند و فرآیند یادگیری رفتاری را مختل می‌سازند و در گربه‌ها نیز خطر سمیت کبدی دارند؛ اما زایلکین مغز حیوان را کاملاً هشیار نگه می‌دارد تا مربی بتواند آموزش‌های اصلاح رفتار و حساسیت‌زدایی را با موفقیت ۱۰۰٪ اجرا کند."
+    "clinical_pearls": "چرا زایلکین بر بنزودیازپین‌ها ارجح است؟ بنزودیازپین‌ها (مانند دیازپام یا آلپرازولام) سگ را گیج و بی‌حال می‌کنند و فرآیند یادگیری رفتاری را مختل می‌سازند و در گربه‌ها نیز خطر سمیت کبدی دارند؛ اما زایلکین مغز حیوان را کاملاً هشیار نگه می‌دارد تا مربی بتواند آموزش‌های اصلاح رفتار و حساسیت‌زدایی را با موفقیت ۱۰۰٪ اجرا کند.",
+    "brand_names_fa": [
+      "زایلکین",
+      "کپسول‌های زایلکین ۷۵، ۲۲۵ و ۴۵۰ میلی‌گرم (آلفا-کازوزپین دامی)"
+    ],
+    "brand_names_en": [
+      "Zylkene (Alpha-Casozepine) 75mg, 225mg, 450mg Capsules"
+    ]
   },
   {
     "id": "pancuronium_bromide",
@@ -92999,7 +98171,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام بیمارستان‌ها و مراکز جراحی کشور.",
     "pharmacology_mechanism": "پانکورونیوم یک مسدودکننده رقابتی گیرنده‌های کولینرژیک نیکوتینی در صفحه محرکه انتهایی عضلات مخطط است؛ با اشغال جایگاه استیل‌کولین مانع دپلاریزاسیون غشای سلول عضلانی شده و فلج شل کامل ایجاد می‌کند؛ اثر واگولیتیک آن ناشی از بلوک گیرنده‌های موسکارینی M2 در گره سینوسی قلب است.",
-    "clinical_pearls": "قانون طلایی رِوِرسال در جراحی‌های طولانی: هرگز اجازه ندهید حیوانی که پانکورونیوم دریافت کرده بدون تجویز آنتی‌کولین‌استراز (ادروفونیوم یا نئوستیگمین همراه آتروپین) از دستگاه تنفس مصنوعی جدا شود؛ نیمه‌عمر دفع پانکورونیوم نسبتاً طولانی است و ناتوانی در تهویه کافی پس از لوله‌برداری (Extubation) می‌تواند ظرف چند دقیقه منجر به هیپوکسی کشنده گردد."
+    "clinical_pearls": "قانون طلایی رِوِرسال در جراحی‌های طولانی: هرگز اجازه ندهید حیوانی که پانکورونیوم دریافت کرده بدون تجویز آنتی‌کولین‌استراز (ادروفونیوم یا نئوستیگمین همراه آتروپین) از دستگاه تنفس مصنوعی جدا شود؛ نیمه‌عمر دفع پانکورونیوم نسبتاً طولانی است و ناتوانی در تهویه کافی پس از لوله‌برداری (Extubation) می‌تواند ظرف چند دقیقه منجر به هیپوکسی کشنده گردد.",
+    "brand_names_fa": [
+      "پاولون",
+      "آمپول تزریقی پانکورونیوم بروماید ۲ mg/mL (پاولون ۴ میلی‌گرم/۲ میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "Pavulon (Pancuronium Bromide) 2mg/mL Ampoules"
+    ]
   },
   {
     "id": "cisatracurium_besylate",
@@ -93102,7 +98281,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام اتاق‌های عمل و مراکز جراحی فوق‌تخصصی کشور.",
     "pharmacology_mechanism": "سیس‌آتراکوریوم با اتصال رقابتی به گیرنده‌های کولینرژیک نیکوتینی پس‌سیناپسی در صفحه محرکه انتهایی عضله، مانع اتصال استیل‌کولین شده و انتقال تکانه عصبی به عضله را بلوک می‌سازد؛ سپس ۷۷ درصد دوز دارو از طریق واکنش خودبه‌خودی حذفی هافمن به متابولیت‌های غیرفعال لودانوزین و مونوآکریلات تجزیه می‌گردد.",
-    "clinical_pearls": "مزیت بی‌بدیل سیس‌آتراکوریوم بر آتراکوریوم: آتراکوریوم در سگ‌های مبتلا به ماست سل تومور یا سگ‌های آتوپیک می‌تواند باعث شعله‌ور شدن خروج هیستامین و شوک عروقی شود؛ اما سیس‌آتراکوریوم ساختار ایزومری خالصی دارد که گیرنده‌های ماست‌سل را تحریک نمی‌کند و حتی با تزریق سریع، فشار خون حیوان کوچکترین تغییری نخواهد کرد."
+    "clinical_pearls": "مزیت بی‌بدیل سیس‌آتراکوریوم بر آتراکوریوم: آتراکوریوم در سگ‌های مبتلا به ماست سل تومور یا سگ‌های آتوپیک می‌تواند باعث شعله‌ور شدن خروج هیستامین و شوک عروقی شود؛ اما سیس‌آتراکوریوم ساختار ایزومری خالصی دارد که گیرنده‌های ماست‌سل را تحریک نمی‌کند و حتی با تزریق سریع، فشار خون حیوان کوچکترین تغییری نخواهد کرد.",
+    "brand_names_fa": [
+      "آمپول تزریقی سیس‌آتراکوریوم بسپلات ۲ mg/mL (نیمبکس ۱۰ میلی‌گرم/۵ میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "Nimbex (Cisatracurium Besylate) 2mg/mL Ampoules"
+    ]
   },
   {
     "id": "doxapram_hydrochloride",
@@ -93230,7 +98415,13 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول تزریقی دوکساپرام هیدروکلراید ۲٪ (دوپرام دامی و انسانی)"
+    ],
+    "brand_names_en": [
+      "Dopram (Doxapram HCl) 20 mg/mL Injection"
+    ]
   },
   {
     "id": "calcium_propionate",
@@ -93329,7 +98520,13 @@ const DRUGS_DATA = [
       "milk_fa": "پیشگیری قطعی از سندرم بالانس منفی انرژی، کتونوری و جابجایی شیردان به چپ (LDA) در دوره انتقال (Transition Period) گاوهای شیری.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "پودر کلسیم پروپیونات خوراکی دامی فیدگرید"
+    ],
+    "brand_names_en": [
+      "Feed Grade Calcium Propionate Powder"
+    ]
   },
   {
     "id": "dextrose_hypertonic",
@@ -93468,7 +98665,15 @@ const DRUGS_DATA = [
       "milk_fa": "داروی استاندارد طلایی قطع آنی کتوز حاد و استونمی در گاوهای شیری از طریق مهار ناگهانی لیپولیز و کتوژنز کبدی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "سرم شیشه‌ای دکستروز ۵۰٪ تزریقی ۵۰۰ میلی‌لیتری (گلوکز ۵۰٪)",
+      "آمپول آب مقطر و سرم دکستروز ۲۰٪ تزریقی"
+    ],
+    "brand_names_en": [
+      "Dextrose 50% 500 mL Infusion Bottle",
+      "Dextrose 20% Sterile Injection"
+    ]
   },
   {
     "id": "acetohydroxamic_acid",
@@ -93571,7 +98776,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های بیمارستانی و مراکز ارولوژی مرجع کشور.",
     "pharmacology_mechanism": "استوهیدروکسامیک اسید شباهت ساختاری با اوره داشته و با رقابت در جایگاه فعال آنزیم اوره‌آز باکتریایی، هیدرولیز اوره به آمونیاک و دی‌اکسید کربن را مسدود می‌سازد؛ در غیاب آمونیاک، pH ادرار قلیایی نشده و سنگ‌های استروویتی محیط رشد خود را از دست می‌دهند.",
-    "clinical_pearls": "قانون طلایی درمان استروویت: استوهیدروکسامیک اسید هرگز جایگزین آنتی‌بیوتیک‌تراپی نیست بلکه مکمل آن است؛ باکتری‌های محبوس در لایه‌های درونی سنگ با مهار آنزیم آزاد شده و باید همزمان تحت پوشش آنتی‌بیوتیک حساس بر اساس کشت ادرار باشند."
+    "clinical_pearls": "قانون طلایی درمان استروویت: استوهیدروکسامیک اسید هرگز جایگزین آنتی‌بیوتیک‌تراپی نیست بلکه مکمل آن است؛ باکتری‌های محبوس در لایه‌های درونی سنگ با مهار آنزیم آزاد شده و باید همزمان تحت پوشش آنتی‌بیوتیک حساس بر اساس کشت ادرار باشند.",
+    "brand_names_fa": [
+      "لیتواستات",
+      "قرص لیتواستات ۲۵۰ میلی‌گرم (استوهیدروکسامیک اسید)"
+    ],
+    "brand_names_en": [
+      "Lithostat 250mg Tablets"
+    ]
   },
   {
     "id": "acitretin",
@@ -93673,7 +98885,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی پوست و منتخب انسانی کشور.",
     "pharmacology_mechanism": "اسی‌ترتین با اتصال به گیرنده‌های هسته‌ای اسید رتینوئیک (RARs) نسخه برداری ژن‌های کنترل‌کننده تمایز سلولی و تکثیر کراتینوسیت‌ها را تعدیل می‌کند و با کاهش انسجام سلول‌های لایه شاخی، پوسته‌ریزی پاتولوژیک را برطرف می‌سازد.",
-    "clinical_pearls": "قانون تست شرمر (STT): قبل از آغاز درمان با اسی‌ترتین در سگ و سپس هر ماه یک‌بار، حتماً ترشح اشک چشم را اندازه بگیرید؛ اسی‌ترتین می‌تواند سبب خشکی حاد چشم (KCS) شود و در صورت افت ترشح اشک به زیر ۱۰ mm/min باید دوز کاهش یابد یا قطره‌های مرطوب‌کننده افزوده شوند."
+    "clinical_pearls": "قانون تست شرمر (STT): قبل از آغاز درمان با اسی‌ترتین در سگ و سپس هر ماه یک‌بار، حتماً ترشح اشک چشم را اندازه بگیرید؛ اسی‌ترتین می‌تواند سبب خشکی حاد چشم (KCS) شود و در صورت افت ترشح اشک به زیر ۱۰ mm/min باید دوز کاهش یابد یا قطره‌های مرطوب‌کننده افزوده شوند.",
+    "brand_names_fa": [
+      "نئوتیگازون",
+      "کپسول نئوتیگازون ۱۰ و ۲۵ میلی‌گرم (اسی‌ترتین)"
+    ],
+    "brand_names_en": [
+      "Neotigason (Acitretin) 10mg & 25mg Capsules"
+    ]
   },
   {
     "id": "alizapride",
@@ -93776,7 +98995,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های انسانی و بخش‌های گوارش کشور.",
     "pharmacology_mechanism": "آلیزاپراید با بلوک انتخابی گیرنده‌های دوپامینی D2 در منطقه ماشه‌ای کمورسپتور (CTZ) در بصل‌النخاع از انتقال تکانه استفراغ به مرکز استفراغ جلوگیری می‌کند؛ همچنین با تسهیل رهایش استیل‌کولین در شبکه میان‌تریک، تون اسفنکتر تحتانی مری را افزایش و تخلیه آنتروم معده را تسریع می‌بخشد.",
-    "clinical_pearls": "تفاوت با متوکلوپرامید: آلیزاپراید نفوذ کمتری به هسته‌های قاعده‌ای ساب‌کورتیکال دارد و بنابراین در سگ‌های نژاد حساس یا دچار اضطراب، شیوع واکنش‌های دیسکینزی و وحشت حرکتی نسبت به متوکلوپرامید بسیار کمتر است."
+    "clinical_pearls": "تفاوت با متوکلوپرامید: آلیزاپراید نفوذ کمتری به هسته‌های قاعده‌ای ساب‌کورتیکال دارد و بنابراین در سگ‌های نژاد حساس یا دچار اضطراب، شیوع واکنش‌های دیسکینزی و وحشت حرکتی نسبت به متوکلوپرامید بسیار کمتر است.",
+    "brand_names_fa": [
+      "پلیتیل",
+      "آمپول تزریقی پلیتیکان ۵۰ میلی‌گرم/۲ میلی‌لیتر (آلیزاپراید)"
+    ],
+    "brand_names_en": [
+      "Plitican (Alizapride) 50mg/2mL Ampoules"
+    ]
   },
   {
     "id": "allantoin",
@@ -93906,7 +99132,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "در دسترس در تمامی داروخانه‌های کشور و محصولات درماتولوژی.",
     "pharmacology_mechanism": "آلانتوئین (دی‌اوریدو اسید گلیوکسیلیک) یک محصول نهایی اکسیداسیون اسید اوریک است که از طریق هیدراته کردن ماتریکس بین‌سلولی لایه شاخی، پیوند کراتینوسیت‌ها را سست کرده و از سوی دیگر سنتز پروتئین و تقسیم میتوزی لایه بازال اپیدرم را تحریک می‌نماید.",
-    "clinical_pearls": "مروارید درمان پد پای سگ‌های کوهستان و شکاری: پد کف پای سگ‌هایی که روی سطوح خشن سنگلاخی یا برف و یخ حرکت می‌کنند دچار شیارهای دردناک می‌شود؛ ماساژ شبانه پماد آلانتوئین به همراه وازلین ظرف ۱ هفته خاصیت ارتجاعی و مقاومت فیزیکی پدها را بازمی‌گرداند."
+    "clinical_pearls": "مروارید درمان پد پای سگ‌های کوهستان و شکاری: پد کف پای سگ‌هایی که روی سطوح خشن سنگلاخی یا برف و یخ حرکت می‌کنند دچار شیارهای دردناک می‌شود؛ ماساژ شبانه پماد آلانتوئین به همراه وازلین ظرف ۱ هفته خاصیت ارتجاعی و مقاومت فیزیکی پدها را بازمی‌گرداند.",
+    "brand_names_fa": [
+      "پماد موضعی آلانتوئین و زینک ۲٪ (کرم‌های ترمیم‌کننده)"
+    ],
+    "brand_names_en": [
+      "Allantoin 2% Topical Ointment / Cream"
+    ]
   },
   {
     "id": "ambroxol",
@@ -94019,7 +99251,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت شربت و قرص.",
     "pharmacology_mechanism": "آمبروکسول از طریق تحریک آنزیم‌های هیدرولیتیک لیزوزومی در سلول‌های ترشح‌کننده موکوس، الیاف موکوپلی‌ساکاریدی اسیدی را تکه‌تکه کرده و ویسکوزیته موکوس را می‌کاهد؛ همچنین با افزایش تحرک مژک‌های اپیتلیوم تنفسی، کلیرنس موکوسیلیاری را شتاب می‌بخشد.",
-    "clinical_pearls": "هم‌افزایی با آنتی‌بیوتیک‌ها در ذات‌الریه: در سگی که دچار برونکوپنومونی شدید شده و به تنهایی به آموکسی‌سیلین پاسخ مناسبی نمی‌دهد، اضافه کردن آمبروکسول نفوذ آنتی‌بیوتیک به ترشحات مجاری هوایی را تا ۴۰ درصد افزایش می‌دهد و زمان بهبود بالینی را به نصف می‌رساند."
+    "clinical_pearls": "هم‌افزایی با آنتی‌بیوتیک‌ها در ذات‌الریه: در سگی که دچار برونکوپنومونی شدید شده و به تنهایی به آموکسی‌سیلین پاسخ مناسبی نمی‌دهد، اضافه کردن آمبروکسول نفوذ آنتی‌بیوتیک به ترشحات مجاری هوایی را تا ۴۰ درصد افزایش می‌دهد و زمان بهبود بالینی را به نصف می‌رساند.",
+    "brand_names_fa": [
+      "شربت آمبروکسول ۱۵ و ۳۰ میلی‌گرم/۵ میلی‌لیتر (موکوسولوان)",
+      "آمپول تزریقی آمبروکسول ۱۵ میلی‌گرم/۲ میلی‌لیتر"
+    ],
+    "brand_names_en": [
+      "Ambroxol 15mg/5mL & 30mg/5mL Syrup",
+      "Ambroxol 15mg/2mL Injection Ampoules"
+    ]
   },
   {
     "id": "aminoglutethimide",
@@ -94121,7 +99361,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "توزیع محدود در داروخانه‌های بیمارستانی تخصصی کشور.",
     "pharmacology_mechanism": "آمینوگلوتتیمید با اتصال به سیتوکروم P450 کمپلکس شکست زنجیره جانبی کلسترول (CYP11A1)، مانع هیدروکسیلاسیون کلسترول در موقعیت‌های C20 و C22 و تبدیل آن به پرگننولون می‌شود؛ بدین ترتیب بیوسنتز کلیه هورمون‌های استروئیدی از جمله گلوکوکورتیکوئیدها، مینرالوکورتیکوئیدها و استروئیدهای جنسی مهار می‌گردد.",
-    "clinical_pearls": "قانون کنترل بی‌حالی اولیه: در هفته اول تجویز آمینوگلوتتیمید در سگ، خواب‌آلودگی و لتارژی بسیار شایع است که ناشی از مهار سداتیو مرکزی دارو است نه کمبود کورتیزول؛ پس از ۲ تا ۳ هفته تحمل به این اثر ایجاد می‌شود. اما اگر بی‌حالی با استفراغ و عدم تعادل الکترولیت همراه بود، حتماً شوک آدیسونی را بررسی کنید."
+    "clinical_pearls": "قانون کنترل بی‌حالی اولیه: در هفته اول تجویز آمینوگلوتتیمید در سگ، خواب‌آلودگی و لتارژی بسیار شایع است که ناشی از مهار سداتیو مرکزی دارو است نه کمبود کورتیزول؛ پس از ۲ تا ۳ هفته تحمل به این اثر ایجاد می‌شود. اما اگر بی‌حالی با استفراغ و عدم تعادل الکترولیت همراه بود، حتماً شوک آدیسونی را بررسی کنید.",
+    "brand_names_fa": [
+      "سیتادرن",
+      "قرص سیتادرن ۲۵۰ میلی‌گرم (آمینوگلوتتیمید)"
+    ],
+    "brand_names_en": [
+      "Cytadren (Aminoglutethimide) 250mg Tablets"
+    ]
   },
   {
     "id": "amphotericin_b_lipid",
@@ -94226,7 +99473,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی تک‌نسخه‌ای و بیمارستان‌های عفونی کشور.",
     "pharmacology_mechanism": "آمفوتریسین B با اتصال با تمایل بالا به ارگوسترول در غشای سلولی قارچ‌ها، منافذ نفوذپذیری یونی (کانال‌های تخلخل) ایجاد می‌کند که منجر به نشت یون‌های پتاسیم و منیزیم درون سلولی و مرگ قارچ می‌شود؛ فرمولاسیون لیپیدی آزاد شدن دارو را به ماکروفاژهای بافتی معطوف کرده و میل اتصال به کلسترول کلیه پستانداران را به حداقل می‌رساند.",
-    "clinical_pearls": "قانون طلایی هیدراتاسیون کلیه (Salt Loading): یک ساعت قبل از شروع انفوزیون آمفوتریسین B، حیوان را با تزریق وریدی نرمال سالین ۰.۹٪ به میزان ۱۰ تا ۲۰ mL/kg هیدراته کنید؛ وجود بار سدیم کافی در مجاری ادرار مانع ترشح رنین و انقباض عروقی آرتریول آفرنت گلومرول‌ها شده و سلامت کلیه را تضمین می‌کند."
+    "clinical_pearls": "قانون طلایی هیدراتاسیون کلیه (Salt Loading): یک ساعت قبل از شروع انفوزیون آمفوتریسین B، حیوان را با تزریق وریدی نرمال سالین ۰.۹٪ به میزان ۱۰ تا ۲۰ mL/kg هیدراته کنید؛ وجود بار سدیم کافی در مجاری ادرار مانع ترشح رنین و انقباض عروقی آرتریول آفرنت گلومرول‌ها شده و سلامت کلیه را تضمین می‌کند.",
+    "brand_names_fa": [
+      "آبلست",
+      "سوسپانسیون تزریقی آبلست ۵ mg/mL (آمفوتریسین B کمپلکس لیپیدی ۱۰۰ میلی‌گرم)"
+    ],
+    "brand_names_en": [
+      "Abelcet (Amphotericin B Lipid Complex) 5mg/mL Injection"
+    ]
   },
   {
     "id": "anastrozole",
@@ -94336,7 +99590,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آریمیدکس",
+      "قرص آریمیدکس ۱ میلی‌گرم (آناستروزول)"
+    ],
+    "brand_names_en": [
+      "Arimidex (Anastrozole) 1mg Tablets"
+    ]
   },
   {
     "id": "aprepitant",
@@ -94440,7 +99701,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های شیمی‌درمانی و بیمارستانی سراسر کشور.",
     "pharmacology_mechanism": "آپریپیتانت با تمایل فوق‌العاده بالا به گیرنده‌های نوروکینین-۱ متصل شده و از پیوند نوروپپتید ماده P با گیرنده‌هایش در مرکز استفراغ (Emetic Center) و ناحیه چسبیده به بطن چهارم مغز جلوگیری می‌کند؛ این مهار نهایی مستقل از محرک اولیه عمل کرده و تهوع‌های گوارشی، دهلیزی و شیمیایی را مهار می‌سازد.",
-    "clinical_pearls": "قانون کنترل بی‌اشتهایی در گربه‌های اورمیک: گربه‌های مبتلا به نارسایی مزمن کلیه (CKD) به دلیل تجمع سموم اورمیک مداوماً دچار تهوع و اکراه از غذا هستند؛ تجویز دوزهای 1 mg/kg آپریپیتانت دو بار در هفته حس تهوع را خاموش کرده و اشتها را بدون نیاز به داروهای محرک اشتها احیا می‌کند."
+    "clinical_pearls": "قانون کنترل بی‌اشتهایی در گربه‌های اورمیک: گربه‌های مبتلا به نارسایی مزمن کلیه (CKD) به دلیل تجمع سموم اورمیک مداوماً دچار تهوع و اکراه از غذا هستند؛ تجویز دوزهای 1 mg/kg آپریپیتانت دو بار در هفته حس تهوع را خاموش کرده و اشتها را بدون نیاز به داروهای محرک اشتها احیا می‌کند.",
+    "brand_names_fa": [
+      "امند",
+      "کپسول امند ۸۰ و ۱۲۵ میلی‌گرم (آپریپیتانت)"
+    ],
+    "brand_names_en": [
+      "Emend (Aprepitant) 80mg & 125mg Capsules"
+    ]
   },
   {
     "id": "aripiprazole",
@@ -94542,7 +99810,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور.",
     "pharmacology_mechanism": "آریپیپرازول به عنوان یک آگونیست نسبی در گیرنده‌های دوپامینی D2 و D3 و گیرنده‌های سروتونینی 5-HT1A عمل می‌کند و از سوی دیگر گیرنده‌های 5-HT2A را مسدود می‌سازد؛ این بالانس منحصر‌به‌فرد مسیرهای دوپامینرژیک مزولیمبیک و مزوکورتیکال را متعادل ساخته و وسواس را بدون خاموشی احساسی مهار می‌کند.",
-    "clinical_pearls": "قانون درمان گرانولوم لیسیدنی (Lick Granuloma): سگ‌هایی که پاهای خود را تا رسیدن به استخوان لیس می‌زنند دچار ترشح اندورفین پاداش‌دهنده مغزی هستند؛ آریپیپرازول با مهار فیدبک دوپامینی در مغز چرخه لذت ناشی از خودزنی را قطع کرده و باعث می‌شود سگ لیسیدن را متوقف کند تا پوست مهلت ترمیم پیدا کند."
+    "clinical_pearls": "قانون درمان گرانولوم لیسیدنی (Lick Granuloma): سگ‌هایی که پاهای خود را تا رسیدن به استخوان لیس می‌زنند دچار ترشح اندورفین پاداش‌دهنده مغزی هستند؛ آریپیپرازول با مهار فیدبک دوپامینی در مغز چرخه لذت ناشی از خودزنی را قطع کرده و باعث می‌شود سگ لیسیدن را متوقف کند تا پوست مهلت ترمیم پیدا کند.",
+    "brand_names_fa": [
+      "ابیلیفای",
+      "قرص ابیلیفای ۵، ۱۰ و ۱۵ میلی‌گرم (آریپیپرازول)"
+    ],
+    "brand_names_en": [
+      "Abilify (Aripiprazole) 5mg, 10mg & 15mg Tablets"
+    ]
   },
   {
     "id": "asparaginase_pegylated",
@@ -94646,7 +99921,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌ها و داروخانه‌های تخصصی آنکولوژی کشور.",
     "pharmacology_mechanism": "پگاسپارگاز از اتصال کووالانسی ال-آسپارژیناز با منشا اشریشیا کلی به واحدهای مونو متوکسی‌پلی‌اتیلن‌گلیکول تشکیل شده است؛ این آنزیم اسید آمینه آسپاراژین پلاسما را به اسید آسپارتیک و آمونیاک هیدرولیز می‌کند و چون سلول‌های تومورال لنفوم قادر به سنتز آسپاراژین درون‌سلولی نیستند، سنتز DNA و پروتئین آن‌ها متوقف شده و تومور متلاشی می‌شود.",
-    "clinical_pearls": "مزیت پگاسپارگاز بر ال-آسپارژیناز معمولی: ال-آسپارژیناز عادی هر هفته باید تزریق شود و بعد از ۲ تا ۳ بار تزریق، بدن حیوان آنتی‌بادی ضد آن ساخته و در تزریق‌های بعدی شوک آنافیلاکسی مهلک ایجاد می‌کند؛ اما فرم پگیله انکاسپار با ماسک کردن آنتی‌ژن‌ها از شناسایی توسط سیستم ایمنی فرار کرده و بدون افت اثربخشی تا ماه‌ها قابل استفاده است."
+    "clinical_pearls": "مزیت پگاسپارگاز بر ال-آسپارژیناز معمولی: ال-آسپارژیناز عادی هر هفته باید تزریق شود و بعد از ۲ تا ۳ بار تزریق، بدن حیوان آنتی‌بادی ضد آن ساخته و در تزریق‌های بعدی شوک آنافیلاکسی مهلک ایجاد می‌کند؛ اما فرم پگیله انکاسپار با ماسک کردن آنتی‌ژن‌ها از شناسایی توسط سیستم ایمنی فرار کرده و بدون افت اثربخشی تا ماه‌ها قابل استفاده است.",
+    "brand_names_fa": [
+      "پگ‌آسپارژیناز",
+      "انکاسپار",
+      "ویال تزریقی انکاسپار ۳۷۵۰ واحد بین‌المللی/۵ میلی‌لیتر (پگاسپارگاز)"
+    ],
+    "brand_names_en": [
+      "Oncaspar (Pegaspargase) 3750 IU/5mL Injection"
+    ]
   },
   {
     "id": "auranofin",
@@ -94749,7 +100032,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های روماتولوژی و مراکز تخصصی دانشگاهی.",
     "pharmacology_mechanism": "اورانوفین با تجمع انتخابی در لیزوزوم‌های ماکروفاژها، فعالیت آنزیم‌های هیدرولیتیک مخرب کلاژن را مسدود ساخته و از سوی دیگر با مهار فعال‌سازی فاکتور رونویسی NF-kB مانع رونویسی ژن‌های سایتوکاین‌های التهابی در مفاصل ملتهب می‌شود.",
-    "clinical_pearls": "قانون پروتئین ادرار: در سگ‌های تحت درمان با اورانوفین، شایع‌ترین خطر خاموش گلومرولوپاتی غشایی طلا است؛ قبل از هر بار تمدید نسخه، نسبت پروتئین به کراتینین ادرار (UPC) را چک کنید؛ اگر نسبت UPC به بالای ۰.۵ رسید، نشان‌دهنده نشت پروتئین از کلیه است و دارو باید بی درنگ متوقف شود."
+    "clinical_pearls": "قانون پروتئین ادرار: در سگ‌های تحت درمان با اورانوفین، شایع‌ترین خطر خاموش گلومرولوپاتی غشایی طلا است؛ قبل از هر بار تمدید نسخه، نسبت پروتئین به کراتینین ادرار (UPC) را چک کنید؛ اگر نسبت UPC به بالای ۰.۵ رسید، نشان‌دهنده نشت پروتئین از کلیه است و دارو باید بی درنگ متوقف شود.",
+    "brand_names_fa": [
+      "ریدورا",
+      "کپسول ریدورا ۳ میلی‌گرم (اورانوفین)"
+    ],
+    "brand_names_en": [
+      "Ridaura (Auranofin) 3mg Capsules"
+    ]
   },
   {
     "id": "azacitidine",
@@ -94851,7 +100141,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌های انکولوژی و مراکز پیوند کشور.",
     "pharmacology_mechanism": "آزاسیتیدین پس از فسفوریلاسیون درون سلولی مستقیماً در ساختار RNA و به میزان کمتر در DNA گنجانده می‌شود؛ اتصال کووالانسی آن به آنزیم DNA متیل‌ترانسفراز مانع متیلاسیون جزایر CpG در پروموتر ژن‌ها شده و با هیپومتیلاسیون اپی‌ژنتیک، بیان مجدد ژن‌های مهارکننده تومور را فعال می‌سازد.",
-    "clinical_pearls": "قانون صبر اپی‌ژنتیک: در سگ‌های مبتلا به سندرم میلودیسپلاستیک، پاسخ بالینی به آزاسیتیدین آنی نیست؛ بر خلاف داروهای سیتوتوکسیک معمولی، حداقل ۲ تا ۴ سیکل ۲۸ روزه زمان لازم است تا مغز استخوان بازسازی شده و رده‌های خونی در آزمایش CBC صعود پیدا کنند؛ بنابراین درمان نباید زودرس قطع شود."
+    "clinical_pearls": "قانون صبر اپی‌ژنتیک: در سگ‌های مبتلا به سندرم میلودیسپلاستیک، پاسخ بالینی به آزاسیتیدین آنی نیست؛ بر خلاف داروهای سیتوتوکسیک معمولی، حداقل ۲ تا ۴ سیکل ۲۸ روزه زمان لازم است تا مغز استخوان بازسازی شده و رده‌های خونی در آزمایش CBC صعود پیدا کنند؛ بنابراین درمان نباید زودرس قطع شود.",
+    "brand_names_fa": [
+      "ویدازا",
+      "ویال تزریقی ویدازا ۱۰۰ میلی‌گرم (آزاسیتیدین)"
+    ],
+    "brand_names_en": [
+      "Vidaza (Azacitidine) 100mg Lyophilized Powder for Injection"
+    ]
   },
   {
     "id": "azaperone",
@@ -94980,7 +100277,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در شبکه رسمی داروخانه‌های دامی کشور.",
     "pharmacology_mechanism": "آزاپِرون یک مشتق بوتیروفنون است که با انسداد گیرنده‌های دوپامینی پیش‌سیناپسی و پس‌سیناپسی در سیستم فعال‌کننده مشبک صعودی و سیستم لیمبیک، انتقال تکانه‌های هیجانی و پرخاشگری را خاموش می‌سازد؛ همزمان بلوک گیرنده‌های آلفا-۱ آدرنرژیک محیطی سبب وازودیلاتاسیون ملایم و آرامش عضلانی می‌شود.",
-    "clinical_pearls": "قانون طلایی ۲۰ دقیقه سکوت: پس از تزریق عضلانی استرسنیل در خوک، حیوان باید کاملاً به حال خود رها شود و از سر و صدا یا جابجایی آن خودداری گردد؛ اگر خوک در دقایق اول تحریک شود، سداسیون مختل شده و ممکن است به جای آرامش دچار مقاومت و تحریک عصبی شود."
+    "clinical_pearls": "قانون طلایی ۲۰ دقیقه سکوت: پس از تزریق عضلانی استرسنیل در خوک، حیوان باید کاملاً به حال خود رها شود و از سر و صدا یا جابجایی آن خودداری گردد؛ اگر خوک در دقایق اول تحریک شود، سداسیون مختل شده و ممکن است به جای آرامش دچار مقاومت و تحریک عصبی شود.",
+    "brand_names_fa": [
+      "استرسنیل",
+      "محلول تزریقی استرسنیل ۴۰ mg/mL (آزاپِرون دامی)"
+    ],
+    "brand_names_en": [
+      "Stresnil (Azaperone) 40mg/mL Injection"
+    ]
   },
   {
     "id": "bacitracin_zinc",
@@ -95117,7 +100421,16 @@ const DRUGS_DATA = [
       "milk_fa": "استاندارد طلایی کنترل و پیشگیری از آنتریت نکروتیک (Necrotic Enteritis) ناشی از Clostridium perfringens در جوجه‌های گوشتی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "باسیتراسین زینک",
+      "پودر پری‌میکس زینک باسیتراسین ۱۵٪ دامی (مخلوط در خوراک)",
+      "پماد موضعی باسیتراسین زینک و پلی‌میکسین (پماد چشمی و پوستی)"
+    ],
+    "brand_names_en": [
+      "Zinc Bacitracin 15% Feed Premix",
+      "Bacitracin Zinc Topical Ointment"
+    ]
   },
   {
     "id": "baclofen",
@@ -95220,7 +100533,13 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور.",
     "pharmacology_mechanism": "باکلوفن با اتصال اختصاصی به گیرنده‌های پیش‌سیناپسی GABA-B در طناب نخاعی و فعال‌سازی پروتئین G، ورود یون کلسیم به پایانه‌های عصبی را مهار کرده و رهایش گلوتامات و آسپارتات را متوقف می‌سازد؛ این امر رفلکس‌های پلی‌سیناپسی و مونوسیناپسی اسپاستیک عضلات اسکلتی و اسفنکتر ارادی ادراری را مسدود می‌سازد.",
-    "clinical_pearls": "تشخیص افتراقی احتباس ادراری باکلوفن و پرازوسین: در سگی که ادرار نمی‌کند، اسفنکتر داخلی تحت کنترل اعصاب سمپاتیک (عضله صاف) با پرازوسین شل می‌شود، اما اسفنکتر خارجی (عضله مخطط) فقط به باکلوفن پاسخ می‌دهد؛ تجویز ترکیبی پرازوسین + باکلوفن کامل‌ترین پوشش رفع انسداد عملکردی پیشابراه را فراهم می‌کند."
+    "clinical_pearls": "تشخیص افتراقی احتباس ادراری باکلوفن و پرازوسین: در سگی که ادرار نمی‌کند، اسفنکتر داخلی تحت کنترل اعصاب سمپاتیک (عضله صاف) با پرازوسین شل می‌شود، اما اسفنکتر خارجی (عضله مخطط) فقط به باکلوفن پاسخ می‌دهد؛ تجویز ترکیبی پرازوسین + باکلوفن کامل‌ترین پوشش رفع انسداد عملکردی پیشابراه را فراهم می‌کند.",
+    "brand_names_fa": [
+      "قرص باکلوفن ۱۰ و ۲۵ میلی‌گرم"
+    ],
+    "brand_names_en": [
+      "Baclofen 10mg & 25mg Tablets"
+    ]
   },
   {
     "id": "bambermycins",
@@ -95331,7 +100650,15 @@ const DRUGS_DATA = [
       "milk_fa": "هیچ‌گونه جذبی از دستگاه گوارش ندارد و کلیرنس بافتی ۱۰۰٪ گوارشی دارد؛ فاقد دوره پرهیز در گوشت و شیر.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فلاوومایسین",
+      "فلاووفسفولیپول",
+      "پری‌میکس فلاوومایسین ۸٪ دامی (فلاووفسفولیپول)"
+    ],
+    "brand_names_en": [
+      "Flavomycin 8% (Bambermycins) Premix"
+    ]
   },
   {
     "id": "benazepril_amlodipine",
@@ -95443,7 +100770,16 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت داروی انسانی.",
     "pharmacology_mechanism": "آملودیپین با مهار ورود کلسیم به سلول‌های عضلانی صاف شریانچه‌ها باعث وازودیلاتاسیون محیطی قدرتمند و افت مقاومت عروقی می‌شود؛ بنازپریل با مهار تبدیل آنژیوتانسین I به آنژیوتانسین II، ترشح آلدوسترون و انقباض شریانی را مهار کرده و وازودیلاتاسیون انتخابی آرتریول افرنت گلومرولی کلیه ایجاد می‌نماید.",
-    "clinical_pearls": "معجزه نجات بینایی در گربه‌های سالمند: گربه‌های بالای ۱۰ سال مبتلا به نارسایی کلیه در صورت پرفشاری خون سیستولیک بالای ۱۸۰ دچار خونریزی ته چشم، پارگی عروق شبکیه و کوری ناگهانی برگشت‌ناپذیر می‌شوند؛ ترکیب بنازپریل-آملودیپین با مهار قطعی فشار خون مانع آسیب شبکیه و نجات بینایی گربه خواهد شد."
+    "clinical_pearls": "معجزه نجات بینایی در گربه‌های سالمند: گربه‌های بالای ۱۰ سال مبتلا به نارسایی کلیه در صورت پرفشاری خون سیستولیک بالای ۱۸۰ دچار خونریزی ته چشم، پارگی عروق شبکیه و کوری ناگهانی برگشت‌ناپذیر می‌شوند؛ ترکیب بنازپریل-آملودیپین با مهار قطعی فشار خون مانع آسیب شبکیه و نجات بینایی گربه خواهد شد.",
+    "brand_names_fa": [
+      "ترکیب آنژیوسنسور دامی",
+      "کپسول لوتنسل ۵/۱۰ و ۵/۲۰ (بنازپریل + آملودیپین)",
+      "قرص‌های مجزای بنازپریل و آملودیپین (تهیه ترکیبی)"
+    ],
+    "brand_names_en": [
+      "Lotrel (Amlodipine Besylate & Benazepril HCl) Capsules",
+      "Benazepril 5mg & Amlodipine 2.5mg Tablets"
+    ]
   },
   {
     "id": "bendamustine",
@@ -95545,7 +100881,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌های انکولوژی و مراکز ارجاعی کشور.",
     "pharmacology_mechanism": "بنداموستین از طریق گروه‌های کلرواتیل آلکیله‌کننده خود پیوندهای متقاطع درون‌رشته‌ای و بین‌رشته‌ای در DNA دوگانه ایجاد می‌کند که منجر به شکست زنجیره‌های DNA، مهار میتوز و القای آپوپتوز با فعال‌سازی مسیر p53 می‌شود؛ حلقه بنزیمیدازولی آن نیز سبب آسیب پایدارتر به مکانیسم‌های ترمیمی DNA می‌گردد.",
-    "clinical_pearls": "قانون نجات لنفوم عودکننده: زمانی که سگ مبتلا به لنفوم به پروتکل CHOP مقاوم می‌شود، صاحب حیوان اغلب از ادامه درمان ناامید است؛ بنداموستین به عنوان یک پروتکل نجات سرپایی تک‌روزه یا دو روزه می‌تواند ظرف کمتر از ۴۸ ساعت غدد لنفاوی متورم را جمع کرده و حیوان را به چند ماه بهبودی باکیفیت و بدون درد بازگرداند."
+    "clinical_pearls": "قانون نجات لنفوم عودکننده: زمانی که سگ مبتلا به لنفوم به پروتکل CHOP مقاوم می‌شود، صاحب حیوان اغلب از ادامه درمان ناامید است؛ بنداموستین به عنوان یک پروتکل نجات سرپایی تک‌روزه یا دو روزه می‌تواند ظرف کمتر از ۴۸ ساعت غدد لنفاوی متورم را جمع کرده و حیوان را به چند ماه بهبودی باکیفیت و بدون درد بازگرداند.",
+    "brand_names_fa": [
+      "تراندا",
+      "ویال تزریقی تراندا ۱۰۰ میلی‌گرم (بنداموستین هیدروکلراید)"
+    ],
+    "brand_names_en": [
+      "Treanda (Bendamustine HCl) 100mg Lyophilized Powder"
+    ]
   },
   {
     "id": "benzocaine",
@@ -95685,7 +101028,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌ها و تامین‌کنندگان تخصصی شیلات کشور.",
     "pharmacology_mechanism": "بنزوکائین یک استر پارا-آمینوبنزوئیک اسید با حلالیت بسیار کم در آب است که به شکل غیریونیزه در غشای لیپیدی اعصاب نفوذ کرده و با مسدود ساختن کانال‌های ولتاژی سدیم از سمت داخل غشا، از دپلاریزاسیون نورونی و هدایت پتانسیل عمل درد جلوگیری می‌کند؛ در ماهیان با عبور از اپیتلیوم آبشش‌ها وارد خون شده و بصل‌النخاع را مهار می‌سازد.",
-    "clinical_pearls": "مروارید بیهوشی جراحی ماهی کوی (Koi): برای جراحی برداشت تومور یا خارج کردن قلاب از دهان ماهی کوی، ماهی را در وان حاوی 80 mg/L بنزوکائین قرار دهید؛ به محض این که ماهی تعادل شنا را از دست داد و به پهلو چرخید و حرکات باله‌ها متوقف شد (حدود ۲ تا ۳ دقیقه)، ماهی را روی اسفنج خیس جراحی قرار داده و آب تمیز اکسیژن‌دار را با سرنگ روی آبشش‌ها جاری نگه دارید."
+    "clinical_pearls": "مروارید بیهوشی جراحی ماهی کوی (Koi): برای جراحی برداشت تومور یا خارج کردن قلاب از دهان ماهی کوی، ماهی را در وان حاوی 80 mg/L بنزوکائین قرار دهید؛ به محض این که ماهی تعادل شنا را از دست داد و به پهلو چرخید و حرکات باله‌ها متوقف شد (حدود ۲ تا ۳ دقیقه)، ماهی را روی اسفنج خیس جراحی قرار داده و آب تمیز اکسیژن‌دار را با سرنگ روی آبشش‌ها جاری نگه دارید.",
+    "brand_names_fa": [
+      "ژل موضعی بنزوکائین ۲۰٪ (ژل بی‌حسی دندانپزشکی)",
+      "پودر خالص بنزوکائین گرید دارویی (جهت بیهوشی آبزیان)"
+    ],
+    "brand_names_en": [
+      "Benzocaine 20% Topical Oral Gel",
+      "Benzocaine Pure USP Powder"
+    ]
   },
   {
     "id": "bexarotene",
@@ -95787,7 +101138,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "توزیع بسیار محدود و اختصاصی در داروخانه‌های انکولوژی کشور.",
     "pharmacology_mechanism": "بکساروتن به عنوان یک رکسینوئید با فعال کردن هترودایمرهای گیرنده‌های RXR با گیرنده‌های PPAR، RAR و VDR نسخه برداری ژن‌هایی را که در توقف چرخه سلولی در فاز G1، القای آپوپتوز وابسته به کاسپاز و مهار آنژیوژنز توموری نقش دارند فعال می‌سازد و کلون‌های لنفوسیتی سرطانی را در پوست منهدم می‌کند.",
-    "clinical_pearls": "قانون مکمل لووتیروکسین در بکساروتن: هر سگی که بکساروتن دریافت می‌کند از همان روز اول درمان به طور ۱۰۰٪ دچار کم‌کاری تیروئید مرکزی ناشی از سرکوب ژن TSH در هیپوفیز می‌شود؛ هرگز منتظر آزمایش خون نمانید و از روز نخست درمان، روزانه لووتیروکسین با دوز کامل به برنامه درمانی اضافه کنید تا سگ دچار کما و لتارژی شدید نشود."
+    "clinical_pearls": "قانون مکمل لووتیروکسین در بکساروتن: هر سگی که بکساروتن دریافت می‌کند از همان روز اول درمان به طور ۱۰۰٪ دچار کم‌کاری تیروئید مرکزی ناشی از سرکوب ژن TSH در هیپوفیز می‌شود؛ هرگز منتظر آزمایش خون نمانید و از روز نخست درمان، روزانه لووتیروکسین با دوز کامل به برنامه درمانی اضافه کنید تا سگ دچار کما و لتارژی شدید نشود.",
+    "brand_names_fa": [
+      "تارگرتین",
+      "کپسول تارگرتین ۷۵ میلی‌گرم (بکساروتن)"
+    ],
+    "brand_names_en": [
+      "Targretin (Bexarotene) 75mg Soft Capsules"
+    ]
   },
   {
     "id": "bivalirudin",
@@ -95891,7 +101249,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های بیمارستان‌های قلب و مراکز ارجاعی کشور.",
     "pharmacology_mechanism": "بی‌والیرودین یک پپتید صناعی ۲۰ اسیدآمینه‌ای است که مستقیماً به هر دو جایگاه کاتالیتیک فعال و جایگاه شناسایی سوبسترا (Exosite-1) در مولکول ترومبین متصل می‌شود و فعالیت آنزیمی ترومبین را به طور کامل فلج می‌سازد؛ سپس پیوند توسط خود ترومبین به آرامی هیدرولیز شده و ترومبین مجدداً بازیابی می‌شود که این مکانیسم برگشت‌پذیر ایمنی دارو را دوچندان می‌کند.",
-    "clinical_pearls": "قانون نجات گربه دچار فلج پاهای خلفی (سندرم FATE): در گربه‌ای که به علت ترومبوز آئورت زین‌اسبی دچار فلج ناگهانی، سردی پنجه‌ها و فقدان نبض فمورال شده، استفاده از هپارین اغلب به دلیل افت شدید آنتی‌ترومبین سرم شکست می‌خورد؛ بی‌والیرودین مستقیم روی لخته نشسته و از پیشرفت آن به سمت عروق کلیوی جلوگیری می‌کند."
+    "clinical_pearls": "قانون نجات گربه دچار فلج پاهای خلفی (سندرم FATE): در گربه‌ای که به علت ترومبوز آئورت زین‌اسبی دچار فلج ناگهانی، سردی پنجه‌ها و فقدان نبض فمورال شده، استفاده از هپارین اغلب به دلیل افت شدید آنتی‌ترومبین سرم شکست می‌خورد؛ بی‌والیرودین مستقیم روی لخته نشسته و از پیشرفت آن به سمت عروق کلیوی جلوگیری می‌کند.",
+    "brand_names_fa": [
+      "آنجیومکس",
+      "ویال تزریقی آنجیومکس ۲۵۰ میلی‌گرم (بی‌والیرودین)"
+    ],
+    "brand_names_en": [
+      "Angiomax (Bivalirudin) 250mg Lyophilized Powder for Injection"
+    ]
   },
   {
     "id": "bortezomib",
@@ -95994,7 +101359,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام مراکز انکولوژی و داروخانه‌های بیمارستانی کشور.",
     "pharmacology_mechanism": "بورتزومیب به شکل برگشت‌پذیر به موتیف‌های کیموتریپسین‌مانند در پروتئازوم 26S سلولی متصل می‌شود؛ این مهار مانع تجزیه پروتئین‌های دارای برچسب یوبی‌کوئیتین از جمله مهارکننده IkB می‌شود، در نتیجه فاکتور رشد و بقای سلولی NF-kB غیرفعال مانده و سلول‌های تومورال وارد آپوپتوز وسیع می‌گردند.",
-    "clinical_pearls": "قانون استراحت ده روزه: الگوی درمانی بورتزومیب (روزهای ۱، ۴، ۸ و ۱۱) بسیار دقیق طراحی شده است؛ این دارو ترومبوسیتوپنی ایجاد می‌کند که نادیر آن در روز ۱۱ است، اما پلاکت‌ها ظرف ۱۰ روز استراحت کاملاً ریکاوری می‌شوند؛ هرگز نباید فاصله چرخه‌ها را کوتاه کرد تا مغز استخوان توان بازسازی داشته باشد."
+    "clinical_pearls": "قانون استراحت ده روزه: الگوی درمانی بورتزومیب (روزهای ۱، ۴، ۸ و ۱۱) بسیار دقیق طراحی شده است؛ این دارو ترومبوسیتوپنی ایجاد می‌کند که نادیر آن در روز ۱۱ است، اما پلاکت‌ها ظرف ۱۰ روز استراحت کاملاً ریکاوری می‌شوند؛ هرگز نباید فاصله چرخه‌ها را کوتاه کرد تا مغز استخوان توان بازسازی داشته باشد.",
+    "brand_names_fa": [
+      "ولکید",
+      "ویال تزریقی ولکید ۳.۵ میلی‌گرم (بورتزومیب)"
+    ],
+    "brand_names_en": [
+      "Velcade (Bortezomib) 3.5mg Lyophilized Powder for Injection"
+    ]
   },
   {
     "id": "bosentan",
@@ -96097,7 +101469,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی قلب و ریه کشور.",
     "pharmacology_mechanism": "اندوتلین-۱ (ET-1) قوی‌ترین پپتید منقبض‌کننده عروقی شناخته‌شده در بدن است که از سلول‌های اندوتلیال ریه ترشح می‌شود؛ بوزنتان با مهار رقابتی هر دو زیرگروه گیرنده‌های اندوتلین (ETA مسئول انقباض عروقی و تکثیر سلولی، و ETB مسئول کلیرنس و گشادی عروق) مقاومت عروقی بستر شریانی ریه را فرو می‌نشاند.",
-    "clinical_pearls": "قانون درمان سنکوپ قلبی ریوی: سگ‌های مبتلا به بیماری شدید دریچه میترال یا کرم قلب که دچار پرفشاری خون ریوی شده‌اند و با هر هیجان یا راه رفتن دچار غش و سنکوپ می‌شوند، به دلیل ناتوانی بطن راست در پمپاژ خون به ریه است؛ بوزنتان با باز کردن عروق ریوی بار کاری بطن راست را کاهش داده و حملات سنکوپ را قطع می‌کند."
+    "clinical_pearls": "قانون درمان سنکوپ قلبی ریوی: سگ‌های مبتلا به بیماری شدید دریچه میترال یا کرم قلب که دچار پرفشاری خون ریوی شده‌اند و با هر هیجان یا راه رفتن دچار غش و سنکوپ می‌شوند، به دلیل ناتوانی بطن راست در پمپاژ خون به ریه است؛ بوزنتان با باز کردن عروق ریوی بار کاری بطن راست را کاهش داده و حملات سنکوپ را قطع می‌کند.",
+    "brand_names_fa": [
+      "تراکلیر",
+      "قرص تراکلیر ۶۲.۵ و ۱۲۵ میلی‌گرم (بوزنتان)"
+    ],
+    "brand_names_en": [
+      "Tracleer (Bosentan) 62.5mg & 125mg Film-Coated Tablets"
+    ]
   },
   {
     "id": "brexpiprazole",
@@ -96199,7 +101578,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی روانپزشکی کشور.",
     "pharmacology_mechanism": "برکس‌پیپرازول به عنوان آگونیست نسبی در گیرنده‌های سروتونینی 5-HT1A و گیرنده‌های دوپامینی D2 و آنتاگونیست قوی در گیرنده‌های 5-HT2A و آلفا-1B/2C آدرنرژیک عمل می‌کند؛ این پروفایل اثر فارماکولوژیک باعث کاهش پاسخ سیستم عصبی سمپاتیک به استرسورهای محیطی شده و ترس مفرط را مهار می‌سازد.",
-    "clinical_pearls": "تفاوت کلیدی با آریپیپرازول در سگ: آریپیپرازول در برخی سگ‌ها به دلیل اثر برون‌گرایی دوپامینی، بی‌قراری و قدم زدن مکرر (Pacing) ایجاد می‌کند؛ اما برکس‌پیپرازول فعالیت ذاتی بسیار ملایم‌تری بر D2 داشته و فعالیت سروتونینی آن ارجح است، در نتیجه سگ دچار آرامش درونی عمیق بدون بی‌قراری فیزیکی می‌شود."
+    "clinical_pearls": "تفاوت کلیدی با آریپیپرازول در سگ: آریپیپرازول در برخی سگ‌ها به دلیل اثر برون‌گرایی دوپامینی، بی‌قراری و قدم زدن مکرر (Pacing) ایجاد می‌کند؛ اما برکس‌پیپرازول فعالیت ذاتی بسیار ملایم‌تری بر D2 داشته و فعالیت سروتونینی آن ارجح است، در نتیجه سگ دچار آرامش درونی عمیق بدون بی‌قراری فیزیکی می‌شود.",
+    "brand_names_fa": [
+      "رکسولتی",
+      "قرص رکسولتی ۰.۵، ۱ و ۲ میلی‌گرم (برکس‌پیپرازول)"
+    ],
+    "brand_names_en": [
+      "Rexulti (Brexpiprazole) 0.5mg, 1mg & 2mg Tablets"
+    ]
   },
   {
     "id": "brinzolamide_timolol",
@@ -96326,7 +101712,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های تخصصی چشم‌پزشکی کشور.",
     "pharmacology_mechanism": "برینزولامید با مهار ایزوآنزیم کربنیک انیدراز II در اپیتلیوم مژگانی، ساخت یون‌های بی‌کربنات را کند کرده و ترشح آب و سدیم به داخل اتاقک قدامی را می‌کاهد؛ تیمولول به عنوان یک مسدودکننده غیراختصاصی بتا-۱ و بتا-۲، ترشح مایع زلالیه را از طریق مهار سیستم آدنیلات سیکلاز و خون‌رسانی عروقی اجسام مژگانی مسدود می‌سازد.",
-    "clinical_pearls": "تکنیک انسداد مجرای اشکی (Punctal Occlusion): پس از چکاندن قطره آزارگا در چشم سگ یا گربه، گوشه داخلی چشم (زاویه مدیال پلک) را برای ۳۰ ثانیه با انگشت به آرامی فشار دهید؛ این مانع ورود دارو به مجرای بینی-اشکی شده، جذب سیستمیک به قلب و ریه را تا ۸۰ درصد کاهش می‌دهد و اثربخشی موضعی چشم را به اوج می‌رساند."
+    "clinical_pearls": "تکنیک انسداد مجرای اشکی (Punctal Occlusion): پس از چکاندن قطره آزارگا در چشم سگ یا گربه، گوشه داخلی چشم (زاویه مدیال پلک) را برای ۳۰ ثانیه با انگشت به آرامی فشار دهید؛ این مانع ورود دارو به مجرای بینی-اشکی شده، جذب سیستمیک به قلب و ریه را تا ۸۰ درصد کاهش می‌دهد و اثربخشی موضعی چشم را به اوج می‌رساند.",
+    "brand_names_fa": [
+      "آزارگا",
+      "قطره چشمی آزارگا ۵ میلی‌لیتر (برینزولامید + تیمولول)"
+    ],
+    "brand_names_en": [
+      "Azarga (Brinzolamide 10mg/mL & Timolol 5mg/mL) Eye Drops"
+    ]
   },
   {
     "id": "bromhexine_injectable",
@@ -96438,7 +101831,13 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "محلول تزریقی بروم‌هگزین دامی ۳ mg/mL (ویال‌های ۵۰ و ۱۰۰ میلی‌لیتر)"
+    ],
+    "brand_names_en": [
+      "Bromhexine 3mg/mL Veterinary Injection"
+    ]
   },
   {
     "id": "budesonide_nebulized",
@@ -96545,7 +101944,16 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت اسپری و ریسپول نبولایزر.",
     "pharmacology_mechanism": "بودزوناید پس از استنشاق با ورود به سلول‌های اپیتلیوم راه‌های هوایی با تمایل بالا به گیرنده‌های سیتوپلاسمی گلوکوکورتیکوئید متصل می‌شود؛ کمپلکس دارو-گیرنده به هسته منتقل شده و رونویسی ژن‌های سایتوکاین‌های التهابی (شامل IL-4, IL-5, IL-13 و GM-CSF) را خاموش و ائوزینوفیل‌ها و ماست‌سل‌های فعال را سرکوب می‌نماید.",
-    "clinical_pearls": "قانون طلایی گربه دیابتی مبتلا به آسم: تجویز پردنیزولون خوراکی در گربه‌ای که دچار آسم است مقاومت انسولینی شدید و دیابت مرگبار ایجاد می‌کند؛ جایگزینی پردنیزولون با پالمیکورت استنشاقی (بودزوناید) آسم را به طور ۱۰۰٪ کنترل کرده در حالی که قند خون گربه حتی ۱ واحد تکان نمی‌خورد!"
+    "clinical_pearls": "قانون طلایی گربه دیابتی مبتلا به آسم: تجویز پردنیزولون خوراکی در گربه‌ای که دچار آسم است مقاومت انسولینی شدید و دیابت مرگبار ایجاد می‌کند؛ جایگزینی پردنیزولون با پالمیکورت استنشاقی (بودزوناید) آسم را به طور ۱۰۰٪ کنترل کرده در حالی که قند خون گربه حتی ۱ واحد تکان نمی‌خورد!",
+    "brand_names_fa": [
+      "پالمیکورت",
+      "سوسپانسیون نبولایزر پالمیکورت ۰.۵ و ۱ میلی‌گرم/۲ میلی‌لیتر (بودزوناید)",
+      "اسپری استنشاقی بودزوناید ۱۰۰ و ۲۰۰ میکروگرم (MDI)"
+    ],
+    "brand_names_en": [
+      "Pulmicort Respules (Budesonide) 0.5mg/2mL & 1mg/2mL",
+      "Budesonide 100mcg & 200mcg Inhaler (200 Doses)"
+    ]
   },
   {
     "id": "bumetanide",
@@ -96658,7 +102066,16 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های بیمارستانی و اورژانس کشور.",
     "pharmacology_mechanism": "بومتانید با مهار هم‌انتقال‌دهنده سه‌گانه سدیم-پتاسیم-دوکلر (NKCC2) در غشای لومینال بخش ضخیم بازوی صعودی قوس هنله، بازجذب یون‌های سدیم و کلر را تا بیش از ۲۵ درصد بار فیلترشده مهار می‌سازد؛ این اثر دفع شدید آب و الکترولیت‌ها را به همراه داشته و فشار پرشدگی بطن‌ها را به سرعت پایین می‌آورد.",
-    "clinical_pearls": "قانون شکست درمانی فوروزماید: وقتی سگ نارسایی احتقانی قلبی با دوزهای بالای ۴ mg/kg فوروزماید باز هم دچار ادم ریه و سرفه خیس است، بیمار به فوروزماید مقاومت پاتولوژیک پیدا کرده است؛ تعویض فوروزماید با بومتانید با دوز 0.1 mg/kg به دلیل فراهمی زیستی ۸۰ درصدی و تمایل اتصالی قوی‌تر، بلافاصله پاسخ دیورتیک را احیا کرده و ادم ریه را پاک می‌کند."
+    "clinical_pearls": "قانون شکست درمانی فوروزماید: وقتی سگ نارسایی احتقانی قلبی با دوزهای بالای ۴ mg/kg فوروزماید باز هم دچار ادم ریه و سرفه خیس است، بیمار به فوروزماید مقاومت پاتولوژیک پیدا کرده است؛ تعویض فوروزماید با بومتانید با دوز 0.1 mg/kg به دلیل فراهمی زیستی ۸۰ درصدی و تمایل اتصالی قوی‌تر، بلافاصله پاسخ دیورتیک را احیا کرده و ادم ریه را پاک می‌کند.",
+    "brand_names_fa": [
+      "بومکس",
+      "قرص بومکس ۱ و ۲ میلی‌گرم (بومتانید)",
+      "آمپول تزریقی بومتانید ۰.۵ mg/2mL"
+    ],
+    "brand_names_en": [
+      "Bumex (Bumetanide) 1mg & 2mg Tablets",
+      "Bumetanide 0.5mg/2mL Injection Ampoules"
+    ]
   },
   {
     "id": "busulfan",
@@ -96761,7 +102178,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های پیوند مغز استخوان و هماتولوژی کشور.",
     "pharmacology_mechanism": "بوسولفان یک استر دی‌سولفونات آلکیله‌کننده دوعملکرده است که گروه‌های متان‌سولفونات آن با گوانیل‌های زنجیره DNA پیوندهای متقاطع کووالانسی پایدار (DNA-protein و DNA-DNA crosslinks) تشکیل می‌دهند؛ این اتصال به طور ترجیحی در سلول‌های بنیادی بدخیم رده میلوئیدی مغز استخوان تکثیر سلولی را متوقف و آپوپتوز را القا می‌کند.",
-    "clinical_pearls": "قانون تاخیر اثر در بوسولفان: هرگز با ندیدن افت سریع پلاکت‌ها در هفته اول دوز را بالا نبرید؛ بوسولفان روی سلول‌های بالغ در گردش خون اثری ندارد و روی سلول‌های بنیادی مغز استخوان عمل می‌کند، بنابراین پلاکت‌ها معمولاً از هفته دوم و سوم شروع به سقوط می‌کنند؛ اگر عجله کنید، سگ وارد آپلازی مهلک مغز استخوان خواهد شد."
+    "clinical_pearls": "قانون تاخیر اثر در بوسولفان: هرگز با ندیدن افت سریع پلاکت‌ها در هفته اول دوز را بالا نبرید؛ بوسولفان روی سلول‌های بالغ در گردش خون اثری ندارد و روی سلول‌های بنیادی مغز استخوان عمل می‌کند، بنابراین پلاکت‌ها معمولاً از هفته دوم و سوم شروع به سقوط می‌کنند؛ اگر عجله کنید، سگ وارد آپلازی مهلک مغز استخوان خواهد شد.",
+    "brand_names_fa": [
+      "میلرن",
+      "بوسیلوکس",
+      "قرص میلرن ۲ میلی‌گرم (بوسولفان)"
+    ],
+    "brand_names_en": [
+      "Myleran (Busulfan) 2mg Film-Coated Tablets"
+    ]
   },
   {
     "id": "cabozantinib",
@@ -96863,7 +102288,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی آنکولوژی بیمارستان‌های کشور.",
     "pharmacology_mechanism": "کابوزانتینیب یک مهارکننده کینازی کوچک‌مولکول است که با مهار فسفوریلاسیون کینازهای MET و AXL مانع تهاجم سلول‌های سرطانی و متاستاز به بافت‌های دوردست می‌شود؛ همزمان با مهار گیرنده‌های فاکتور رشد اندوتلیال عروقی (VEGFR2)، شبکه مویرگی تغذیه‌کننده تومور را قطع کرده و باعث نکروز ایسکمیک توده سرطانی می‌گردد.",
-    "clinical_pearls": "قانون توقف قبل از جراحی: کابوزانتینیب با مسدود کردن مسیر آنژیوژنز (VEGF)، تشکیل رگ‌های خونی جدید را متوقف می‌سازد؛ اگر سگ کاندید بیوپسی یا جراحی است، دارو باید حداقل ۲ تا ۳ هفته قبل از عمل قطع شود و تا زمان التیام کامل بخیه‌ها هرگز شروع مجدد نشود، در غیر این صورت لبه‌های زخم باز شده و پریتونیت یا خونریزی کشنده رخ می‌دهد."
+    "clinical_pearls": "قانون توقف قبل از جراحی: کابوزانتینیب با مسدود کردن مسیر آنژیوژنز (VEGF)، تشکیل رگ‌های خونی جدید را متوقف می‌سازد؛ اگر سگ کاندید بیوپسی یا جراحی است، دارو باید حداقل ۲ تا ۳ هفته قبل از عمل قطع شود و تا زمان التیام کامل بخیه‌ها هرگز شروع مجدد نشود، در غیر این صورت لبه‌های زخم باز شده و پریتونیت یا خونریزی کشنده رخ می‌دهد.",
+    "brand_names_fa": [
+      "کابومتیکس",
+      "قرص کابومتیکس ۲۰ و ۶۰ میلی‌گرم (کابوزانتینیب)"
+    ],
+    "brand_names_en": [
+      "Cabometyx (Cabozantinib) 20mg & 60mg Tablets"
+    ]
   },
   {
     "id": "calcipotriol",
@@ -96981,7 +102413,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به عنوان پماد انسانی.",
     "pharmacology_mechanism": "کلسی‌پوتریول به گیرنده‌های هسته‌ای ویتامین D (VDR) در کراتینوسیت‌ها متصل شده و تمایز سلولی طبیعی را تسریع و تکثیر مفرط را مهار می‌سازد؛ اما در صورت جذب سیستمیک، جذب روده‌ای کلسیم و بازجذب استخوانی را به شدت فعال ساخته و سطح کلسیم یونیزه پلاسما را به مقادیر کشنده (بالای ۱۵ mg/dL) می‌رساند.",
-    "clinical_pearls": "قانون طلایی نجات مسمومیت دایونکس در سگ: اگر سگی تیوب پماد دایونکس صاحبش را جویده و خورده است، فوراً حیوان را وادار به استفراغ کنید و شارکول فعال بدهید؛ حتی اگر سگ کاملاً سالم به نظر می‌رسد، کلسیم ظرف ۲۴ تا ۴۸ ساعت صعود وحشتناک خواهد کرد و تاخیر در درمان منجر به کلسیفیکاسیون غیرقابل برگشت کلیه‌ها و مرگ خواهد شد!"
+    "clinical_pearls": "قانون طلایی نجات مسمومیت دایونکس در سگ: اگر سگی تیوب پماد دایونکس صاحبش را جویده و خورده است، فوراً حیوان را وادار به استفراغ کنید و شارکول فعال بدهید؛ حتی اگر سگ کاملاً سالم به نظر می‌رسد، کلسیم ظرف ۲۴ تا ۴۸ ساعت صعود وحشتناک خواهد کرد و تاخیر در درمان منجر به کلسیفیکاسیون غیرقابل برگشت کلیه‌ها و مرگ خواهد شد!",
+    "brand_names_fa": [
+      "دایونکس",
+      "پماد موضعی دایونکس ۵۰ میکروگرم/گرم (کلسی‌پوتریول ۰.۰۰۵٪)"
+    ],
+    "brand_names_en": [
+      "Daivonex (Calcipotriol) 0.005% Topical Ointment"
+    ]
   },
   {
     "id": "cangrelor",
@@ -97085,7 +102524,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌های تخصصی قلب و عروق و مراکز مداخله‌ای کشور.",
     "pharmacology_mechanism": "کانگرلور یک آنالوگ غیرقابل هیدرولیز آدنوزین تری‌فسفات (ATP) است که مستقیماً و بدون نیاز به تبدیل زیستی کبدی، گیرنده مهارکننده آدنیلات سیکلاز پلاکتی P2Y12 را مسدود می‌سازد؛ این انسداد مانع فعال‌سازی و تغییر شکل ساختاری گیرنده‌های گلیکوپروتئینی GPIIb/IIIa روی سطح پلاکت شده و اتصال فیبرینوژن و تشکیل لخته را بلافاصله مسدود می‌سازد.",
-    "clinical_pearls": "مزیت استثنایی نیمه‌عمر ۳ دقیقه‌ای: در بیماری که داروی ضدپلاکتی دریافت کرده، اگر حیوان ناگهان دچار تصادف، پارگی عروق یا نیاز به جراحی اورژانسی شود، با کلوپیدوگرل یا آسپرین حیوان ۵ روز در خطر خونریزی کشنده است؛ اما با کانگرلور کافی است پمپ را خاموش کنید؛ ظرف ۶۰ دقیقه تمام پلاکت‌های بدن به طور کامل فعال شده و جراح می‌تواند با خیال راحت بدون خطر خونریزی جراحی را آغاز کند!"
+    "clinical_pearls": "مزیت استثنایی نیمه‌عمر ۳ دقیقه‌ای: در بیماری که داروی ضدپلاکتی دریافت کرده، اگر حیوان ناگهان دچار تصادف، پارگی عروق یا نیاز به جراحی اورژانسی شود، با کلوپیدوگرل یا آسپرین حیوان ۵ روز در خطر خونریزی کشنده است؛ اما با کانگرلور کافی است پمپ را خاموش کنید؛ ظرف ۶۰ دقیقه تمام پلاکت‌های بدن به طور کامل فعال شده و جراح می‌تواند با خیال راحت بدون خطر خونریزی جراحی را آغاز کند!",
+    "brand_names_fa": [
+      "کنگریال",
+      "ویال تزریقی کنگریال ۵۰ میلی‌گرم (کانگرلور)"
+    ],
+    "brand_names_en": [
+      "Kengreal (Cangrelor) 50mg Lyophilized Powder for Injection"
+    ]
   },
   {
     "id": "capecitabine",
@@ -97187,7 +102633,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های تخصصی آنکولوژی کشور.",
     "pharmacology_mechanism": "کاپسیتابین در کبد توسط کربوکسیل‌استراز به 5'-DFCR و سپس در کبد و بافت‌های تومور توسط سیتیدین دآمیناز به 5'-DFUR هیدرولیز می‌شود؛ در نهایت آنزیم تیمیدین فسفوریلاز در درون سلول‌های سرطانی آن را به ۵-فلوئورویوراسیل (5-FU) فعال تبدیل می‌کند که با مهار آنزیم تیمیدیلات سنتتاز، ساخت تیمیدین و سنتز DNA سلول بدخیم را مسدود می‌سازد.",
-    "clinical_pearls": "قانون طلایی سمیت فلوئوروپیریمیدین در گربه: اگر صاحب گربه‌ای تصادفاً قرص سلودا یا پماد 5-FU را در دهان گربه انداخته است، این یک اورژانس فوریتی با مرگ حتمی ظرف ۶ تا ۱۲ ساعت است؛ تنها امید نجات، شستشوی معده در ۲۰ دقیقه اول، شارکول فعال، تجویز وریدی اوریدین تری‌استات (در صورت دسترسی) و آرام‌بخشی سنگین با فنوباربیتال جهت کنترل تشنج‌های صاعقه‌آسا است."
+    "clinical_pearls": "قانون طلایی سمیت فلوئوروپیریمیدین در گربه: اگر صاحب گربه‌ای تصادفاً قرص سلودا یا پماد 5-FU را در دهان گربه انداخته است، این یک اورژانس فوریتی با مرگ حتمی ظرف ۶ تا ۱۲ ساعت است؛ تنها امید نجات، شستشوی معده در ۲۰ دقیقه اول، شارکول فعال، تجویز وریدی اوریدین تری‌استات (در صورت دسترسی) و آرام‌بخشی سنگین با فنوباربیتال جهت کنترل تشنج‌های صاعقه‌آسا است.",
+    "brand_names_fa": [
+      "سلودا",
+      "قرص سلودا ۵۰۰ میلی‌گرم (کاپسیتابین)"
+    ],
+    "brand_names_en": [
+      "Xeloda (Capecitabine) 500mg Film-Coated Tablets"
+    ]
   },
   {
     "id": "capsaicin_topical",
@@ -97317,7 +102770,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت بدون نسخه (OTC).",
     "pharmacology_mechanism": "کپسایسین آگونیست قوی گیرنده‌های پتانسیل گذرا وانیلوئید نوع ۱ (TRPV1) در پایانه‌های آکسونی فیبرهای عصبی بدون میلین حسی نوع C است؛ تحریک مداوم سبب ورود انبوه یون کلسیم و دپلاریزاسیون اولیه می‌شود که با رهایش شدید ماده P همراه است؛ به دنبال آن، ذخایر نروپپتیدی ماده P به طور کامل تهیه‌شده و تا زمان سنتز مجدد، هدایت پیام‌های درد مزمن به نخاع شوکی مسدود می‌گردد.",
-    "clinical_pearls": "قانون طلایی هفته اول: به صاحب سگ حتماً توضیح دهید که در ۳ تا ۵ روز اول ممکن است سگ احساس سوزش کند یا سعی کند موضع را لیس بزند؛ این علامت طبیعی فاز تخلیه ماده P است؛ اگر صاحب حیوان تسلیم نشود و درمان را تا پایان هفته اول ادامه دهد، پایانه‌های عصبی کرخت شده و درد مفصل سگ برای هفته‌ها تسکین می‌یابد."
+    "clinical_pearls": "قانون طلایی هفته اول: به صاحب سگ حتماً توضیح دهید که در ۳ تا ۵ روز اول ممکن است سگ احساس سوزش کند یا سعی کند موضع را لیس بزند؛ این علامت طبیعی فاز تخلیه ماده P است؛ اگر صاحب حیوان تسلیم نشود و درمان را تا پایان هفته اول ادامه دهد، پایانه‌های عصبی کرخت شده و درد مفصل سگ برای هفته‌ها تسکین می‌یابد.",
+    "brand_names_fa": [
+      "زوستریکس",
+      "کرم موضعی کپسایسین ۰.۰۲۵٪ و ۰.۰۷۵٪ (کرم فلفل / زوستریکس)"
+    ],
+    "brand_names_en": [
+      "Capsaicin 0.025% & 0.075% Topical Cream"
+    ]
   },
   {
     "id": "carbetocin",
@@ -97418,7 +102878,14 @@ const DRUGS_DATA = [
       "milk_fa": "کاهش چشمگیر شیوع احتباس جفت (Retained Placenta) و جلوگیری از متریت‌های حاد سپتیک پس از زایمان در گله‌های شیری.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "دکوموتون",
+      "محلول تزریقی دکوموتون ۰.۰۵ mg/mL (کاربتوسین دامی)"
+    ],
+    "brand_names_en": [
+      "Decomoton (Carbetocin) 0.05mg/mL Injection"
+    ]
   },
   {
     "id": "carfilzomib",
@@ -97520,7 +102987,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌های انکولوژی و مراکز ارجاعی کشور.",
     "pharmacology_mechanism": "کارفیلزومیب ساختار پپتیدی اپوکسی‌کتونی دارد که با پیوند کووالانسی دوگانه و غیرقابل برگشت به ریشه‌های ترئونین در زیرواحد بتا-۵ پروتئازوم 26S (جایگاه فعالیت شبه کیموتریپسین) متصل می‌شود؛ این اتصال دائم، مکانیسم هیدرولیز پروتئین‌ها را برای همیشه خاموش کرده و با ایجاد استرس کشنده در شبکه اندوپلاسمی سلول توموری، مسیرهای مرگ برنامه‌ریزی‌شده سلولی (Apoptosis) را به شدت تحریک می‌کند.",
-    "clinical_pearls": "برتری مطلق بر بورتزومیب در سگ: بورتزومیب به دلیل مهار کینازهای غیراختصاصی در اعصاب محیطی، در سگ‌های مبتلا به میلوما باعث درد شدید پاها، عدم تعادل و عدم تمایل به راه رفتن می‌شود؛ کارفیلزومیب ساختار فوق‌العاده اختصاصی دارد که اعصاب حسی را تحریک نمی‌کند و سگ در طول کل دوره درمان بدون درد به راحتی راه می‌رود."
+    "clinical_pearls": "برتری مطلق بر بورتزومیب در سگ: بورتزومیب به دلیل مهار کینازهای غیراختصاصی در اعصاب محیطی، در سگ‌های مبتلا به میلوما باعث درد شدید پاها، عدم تعادل و عدم تمایل به راه رفتن می‌شود؛ کارفیلزومیب ساختار فوق‌العاده اختصاصی دارد که اعصاب حسی را تحریک نمی‌کند و سگ در طول کل دوره درمان بدون درد به راحتی راه می‌رود.",
+    "brand_names_fa": [
+      "کایپرولیس",
+      "ویال تزریقی کایپرولیس ۶۰ میلی‌گرم (کارفیلزومیب)"
+    ],
+    "brand_names_en": [
+      "Kyprolis (Carfilzomib) 60mg Lyophilized Powder for Injection"
+    ]
   },
   {
     "id": "cetrorelix",
@@ -97627,7 +103101,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی ناباروری و غدد کشور.",
     "pharmacology_mechanism": "سترو رلیکس یک دکاپپتید سنتتیک اصلاح‌شده است که با تمایل اتصالی بسیار قوی گیرنده‌های غشایی GnRH در سلول‌های گنادوتروپ هیپوفیز قدامی را اشغال می‌کند؛ برخلاف آگونیست‌ها، سترو رلیکس گیرنده را فعال نمی‌سازد، بلکه مانع دسترسی GnRH آندروژنیک هیپوتالاموس شده و رهایش پالسی و ناگهانی هورمون‌های LH و FSH را در عرض کمتر از یک ساعت سرکوب می‌نماید.",
-    "clinical_pearls": "تفاوت نجات‌بخش با لوپرولید در سرطان پروستات: در سگ مبتلا به تومور بدخیم یا هیپرپلازی شدید پروستات با احتباس ادرار، اگر از آگونیست‌های GnRH استفاده کنید، در ۲ هفته اول تستوسترون ۵ برابر شده و سگ دچار احتباس ادرار کامل و پارگی مثانه می‌شود؛ اما سترو رلیکس به عنوان آنتاگونیست خالص، همان روز اول تستوسترون را مهار کرده و پروستات را منقبض و مسیر ادرار را باز می‌کند!"
+    "clinical_pearls": "تفاوت نجات‌بخش با لوپرولید در سرطان پروستات: در سگ مبتلا به تومور بدخیم یا هیپرپلازی شدید پروستات با احتباس ادرار، اگر از آگونیست‌های GnRH استفاده کنید، در ۲ هفته اول تستوسترون ۵ برابر شده و سگ دچار احتباس ادرار کامل و پارگی مثانه می‌شود؛ اما سترو رلیکس به عنوان آنتاگونیست خالص، همان روز اول تستوسترون را مهار کرده و پروستات را منقبض و مسیر ادرار را باز می‌کند!",
+    "brand_names_fa": [
+      "ستروتاید",
+      "ویال تزریقی ستروتاید ۰.۲۵ میلی‌گرم (سترو رلیکس استات)"
+    ],
+    "brand_names_en": [
+      "Cetrotide (Cetrorelix Acetate) 0.25mg Injection with Solvent Syringe"
+    ]
   },
   {
     "id": "cinacalcet",
@@ -97731,7 +103212,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های بیمارستانی و بیماران کلیوی کشور.",
     "pharmacology_mechanism": "سیناکالست یک فعال‌کننده آلوستریک گیرنده‌های حس‌گر کلسیم (CaSR) در غشای سلول‌های اصلی (Chief Cells) غده پاراتیروئید است؛ با اتصال به این گیرنده‌ها، میل ترکیبی گیرنده برای یون‌های کلسیم خارج سلولی را افزایش می‌دهد؛ این فریب مولکولی باعث می‌شود پاراتیروئید سطح کلسیم خون را بسیار بالاتر از مقدار واقعی ارزیابی کرده و فوراً ترشح هورمون PTH را مهار سازد.",
-    "clinical_pearls": "قانون درمان فک لاستیکی (Rubber Jaw): در سگ‌های جوانی که به دلیل نارسایی کلیه هورمون PTH آن‌ها بسیار بالاست و استخوان فک آن‌ها آن‌قدر نرم شده که با دست خم می‌شود، تجویز کلسیتریول خطر کلسیفیکاسیون ریه و کلیه دارد؛ سیناکالست تنها دارویی است که با فرونشاندن فوری PTH بدون انباشت فسفر، استخوان‌سازی مجدد فک را امکان‌پذیر می‌سازد."
+    "clinical_pearls": "قانون درمان فک لاستیکی (Rubber Jaw): در سگ‌های جوانی که به دلیل نارسایی کلیه هورمون PTH آن‌ها بسیار بالاست و استخوان فک آن‌ها آن‌قدر نرم شده که با دست خم می‌شود، تجویز کلسیتریول خطر کلسیفیکاسیون ریه و کلیه دارد؛ سیناکالست تنها دارویی است که با فرونشاندن فوری PTH بدون انباشت فسفر، استخوان‌سازی مجدد فک را امکان‌پذیر می‌سازد.",
+    "brand_names_fa": [
+      "سنسیپار",
+      "میمپارا",
+      "قرص سنسیپار ۳۰، ۶۰ و ۹۰ میلی‌گرم (سیناکالست)"
+    ],
+    "brand_names_en": [
+      "Sensipar / Mimpara (Cinacalcet) 30mg, 60mg & 90mg Tablets"
+    ]
   },
   {
     "id": "clofazimine",
@@ -97829,7 +103318,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در مراکز بیماری‌های عفونی و داروخانه‌های مرجع هلال احمر کشور.",
     "pharmacology_mechanism": "کلوفازیمین با تمایل بالا به توالی‌های گوانین در DNA مایکوباکتریوم‌ها متصل شده و رونویسی و تکثیر باکتری را مهار می‌سازد؛ علاوه بر این، با تولید رادیکال‌های فعال سیتوتوکسیک اکسیژن و اختلال در فسفوریلاسیون اکسیداتیو زنجیره انتقال الکترون غشای باکتری، اثر باکتریسیدی قوی ایجاد کرده و ترشح آنزیم‌های لیزوزومی ماکروفاژها را تقویت می‌نماید.",
-    "clinical_pearls": "قانون درمان جذام گربه‌های موش‌گیر: گربه‌هایی که در باغ‌ها موش شکار می‌کنند توسط گزش جوندگان آلوده دچار ندول‌های سفت و بدخیم گوشت‌مانند روی بینی، پلک و پاها می‌شوند که بیوپسی آن اسیدفست مثبت است؛ جراحی به دلیل عود مکرر شکست می‌خورد؛ کلوفازیمین خوراکی ظرف ۲ ماه تمام این ندول‌ها را خشک کرده و بدون نیاز به جراحی گربه را به زندگی بازمی‌گرداند."
+    "clinical_pearls": "قانون درمان جذام گربه‌های موش‌گیر: گربه‌هایی که در باغ‌ها موش شکار می‌کنند توسط گزش جوندگان آلوده دچار ندول‌های سفت و بدخیم گوشت‌مانند روی بینی، پلک و پاها می‌شوند که بیوپسی آن اسیدفست مثبت است؛ جراحی به دلیل عود مکرر شکست می‌خورد؛ کلوفازیمین خوراکی ظرف ۲ ماه تمام این ندول‌ها را خشک کرده و بدون نیاز به جراحی گربه را به زندگی بازمی‌گرداند.",
+    "brand_names_fa": [
+      "لمپرن",
+      "کپسول لمپرن ۵۰ و ۱۰۰ میلی‌گرم (کلوفازیمین)"
+    ],
+    "brand_names_en": [
+      "Lamprene (Clofazimine) 50mg & 100mg Soft Gelatin Capsules"
+    ]
   },
   {
     "id": "crotamiton",
@@ -97961,7 +103457,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های کشور به صورت داروی بدون نسخه.",
     "pharmacology_mechanism": "کروتامیتون (N-اتیل-N-اورتوتولیل‌کرتونامید) از طریق سوراخ کردن کوتیکول غشای جرب‌ها و اختلال در سیستم تنفسی و عصبی انگل‌های خارجی سبب مرگ سریع مایت‌های سارکوپتس می‌شود؛ اثر ضدخارش آن ناشی از اثر بی‌حس‌کنندگی موضعی ملایم بر روی پایانه‌های حسی فیبرهای خارش در لایه بازال اپیدرم و مهار رهایش هیستامین موضعی است.",
-    "clinical_pearls": "قانون خارش شبانه جرب سارکوپتس: سگ‌های مبتلا به گال سارکوپتیک شب‌ها به دلیل گرم شدن پوست و حرکت مایت‌ها در تونل‌های زیرجلدی چنان خارش شدیدی دارند که تا صبح زمین را چنگ می‌زنند؛ مالش کرم اوراکس قبل از خواب خارش را فوراً مهار کرده و به حیوان و صاحبش مهلت خواب راحت می‌دهد تا داروی سیستمیک ضدجرب (مانند فلوکسالانر یا آیورمکتین) اثر کند."
+    "clinical_pearls": "قانون خارش شبانه جرب سارکوپتس: سگ‌های مبتلا به گال سارکوپتیک شب‌ها به دلیل گرم شدن پوست و حرکت مایت‌ها در تونل‌های زیرجلدی چنان خارش شدیدی دارند که تا صبح زمین را چنگ می‌زنند؛ مالش کرم اوراکس قبل از خواب خارش را فوراً مهار کرده و به حیوان و صاحبش مهلت خواب راحت می‌دهد تا داروی سیستمیک ضدجرب (مانند فلوکسالانر یا آیورمکتین) اثر کند.",
+    "brand_names_fa": [
+      "اوراکس",
+      "کرم موضعی اوراکس ۱۰٪ (کروتامیتون)"
+    ],
+    "brand_names_en": [
+      "Eurax (Crotamiton) 10% Topical Cream / Lotion"
+    ]
   },
   {
     "id": "cladribine",
@@ -98063,7 +103566,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌های انکولوژی و داروخانه‌های تخصصی کشور.",
     "pharmacology_mechanism": "کلادریبین توسط کیناز دئوکسی‌سیتیدین درون لنفوسیت‌ها فسفوریله شده و به فرم سمی ۵'-تری‌فسفات (CdATP) تبدیل می‌شود؛ این متابولیت درون سلول تجمع یافته و با مهار آنزیم‌های DNA پلیمراز و ریبونوکلئوتید ردوکتاز مانع سنتز و ترمیم DNA می‌شود؛ همچنین شکست دوگانه در رشته‌های DNA ایجاد کرده و با فعال کردن آنزیم پولی-ADP ریبوز پلیمراز (PARP)، ذخایر انرژی ATP سلول سرطانی را تخلیه و مرگ لنفوسیت را تسریع می‌کند.",
-    "clinical_pearls": "قانون پاکسازی خون در CLL: سگ‌های مبتلا به لوسمی لنفوسیتی مزمن که شمارش گلبول‌های سفید آن‌ها به بالای ۱۵۰ هزار رسیده و خونشان غلیظ شده است، با یک دوره ۵ روزه کلادریبین زیرجلدی پاسخی شگفت‌انگیز نشان می‌دهند؛ ظرف ۲ هفته تعداد لکوسیت‌ها به محدوده نرمال بازگشته و طحال و کبد بزرگ‌شده به اندازه طبیعی برمی‌گردند."
+    "clinical_pearls": "قانون پاکسازی خون در CLL: سگ‌های مبتلا به لوسمی لنفوسیتی مزمن که شمارش گلبول‌های سفید آن‌ها به بالای ۱۵۰ هزار رسیده و خونشان غلیظ شده است، با یک دوره ۵ روزه کلادریبین زیرجلدی پاسخی شگفت‌انگیز نشان می‌دهند؛ ظرف ۲ هفته تعداد لکوسیت‌ها به محدوده نرمال بازگشته و طحال و کبد بزرگ‌شده به اندازه طبیعی برمی‌گردند.",
+    "brand_names_fa": [
+      "لئوستاتین",
+      "ویال تزریقی لئوستاتین ۱۰ میلی‌گرم/۱۰ میلی‌لیتر (کلادریبین ۱ mg/mL)"
+    ],
+    "brand_names_en": [
+      "Leustatin (Cladribine) 10mg/10mL Solution for Injection"
+    ]
   },
   {
     "id": "pemetrexed",
@@ -98165,7 +103675,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌های انکولوژی و مراکز پیوند کشور.",
     "pharmacology_mechanism": "پمترکسید توسط حامل فولات احیاشده (RFC) و سیستم‌های انتقال پروتئینی با تمایل بالا به درون سلول‌های سرطانی منتقل می‌شود؛ سپس توسط آنزیم فولی‌پلی‌گلوتامات سنتتاز (FPGS) به فرم‌های پلی‌گلوتامات پرقدرت با ماندگاری طولانی تبدیل شده و با مهار همزمان آنزیم‌های کلیدی سنتز تیمیدین و پورین‌ها (TS, DHFR, GARFT) چرخه سنتز DNA و میتوز سلول تومور را متوقف می‌سازد.",
-    "clinical_pearls": "قانون طلایی مکمل فولات: پمترکسید بدون اسید فولیک یک سم کشنده مغز استخوان است، اما با اسید فولیک یک داروی ملایم و فوق‌العاده اثربخش است؛ حتماً از ۱ هفته قبل از اولین تزریق، قرص اسید فولیک خوراکی و ویتامین B12 تزریقی را شروع کنید تا سگ کوچکترین افتی در نوتروفیل‌ها تجربه نکند."
+    "clinical_pearls": "قانون طلایی مکمل فولات: پمترکسید بدون اسید فولیک یک سم کشنده مغز استخوان است، اما با اسید فولیک یک داروی ملایم و فوق‌العاده اثربخش است؛ حتماً از ۱ هفته قبل از اولین تزریق، قرص اسید فولیک خوراکی و ویتامین B12 تزریقی را شروع کنید تا سگ کوچکترین افتی در نوتروفیل‌ها تجربه نکند.",
+    "brand_names_fa": [
+      "آلیمتا",
+      "ویال تزریقی آلیمتا ۱۰۰ و ۵۰۰ میلی‌گرم (پمترکسید دی‌سدیم)"
+    ],
+    "brand_names_en": [
+      "Alimta (Pemetrexed Disodium) 100mg & 500mg Powder for Injection"
+    ]
   },
   {
     "id": "abiraterone_acetate",
@@ -98267,7 +103784,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی آنکولوژی و بیمارستان‌های کشور.",
     "pharmacology_mechanism": "آبیراترون استات در بدن به آبیراترون فعال تبدیل شده و با مهار غیرقابل برگشت آنزیم سیتوکروم P450 نوع CYP17، هر دو واکنش متوالی ۱۷-آلفا هیدروکسیلاسیون و شکست باند C17-C20 را مسدود می‌سازد؛ این آنزیم مرحله کلیدی بیوسنتز تستوسترون از کلسترول در بافت‌های توموری، بیضه‌ها و غدد فوق‌کلیه است و مهار آن غلظت تستوسترون سرم را به مقادیر غیرقابل اندازه‌گیری می‌رساند.",
-    "clinical_pearls": "قانون معده خالی: فراهمی زیستی آبیراترون همراه با یک وعده غذای پرچرب تا ۱۰ برابر افزایش می‌یابد که می‌تواند به مسمومیت کبدی شدید منجر شود؛ به صاحب بیمار اکیداً تاکید کنید که قرص باید حداقل ۱ ساعت قبل از صبحانه یا ۲ ساعت پس از شام با معده کاملاً خالی خورانده شود."
+    "clinical_pearls": "قانون معده خالی: فراهمی زیستی آبیراترون همراه با یک وعده غذای پرچرب تا ۱۰ برابر افزایش می‌یابد که می‌تواند به مسمومیت کبدی شدید منجر شود؛ به صاحب بیمار اکیداً تاکید کنید که قرص باید حداقل ۱ ساعت قبل از صبحانه یا ۲ ساعت پس از شام با معده کاملاً خالی خورانده شود.",
+    "brand_names_fa": [
+      "زایتیگا",
+      "قرص زایتیگا ۲۵۰ و ۵۰۰ میلی‌گرم (آبیراترون استات)"
+    ],
+    "brand_names_en": [
+      "Zytiga (Abiraterone Acetate) 250mg & 500mg Tablets"
+    ]
   },
   {
     "id": "bicalutamide",
@@ -98369,7 +103893,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام داروخانه‌های انسانی کشور.",
     "pharmacology_mechanism": "بیکالوتامید به صورت رقابتی به گیرنده‌های آندروژن سیتوزولی در سلول‌های بافت هدف (پروستات، غدد سباسه و عضلات لواتور آنی) متصل می‌شود و از جابجایی کمپلکس گیرنده-آندروژن به درون هسته سلول جلوگیری می‌کند؛ در غیاب سیگنال‌های القایی تستوسترون، سنتز فاکتورهای رشد متوقف شده و بافت غده‌ای پروستات دچار آتروفی فیزیولوژیک می‌گردد.",
-    "clinical_pearls": "حفظ باروری پس از درمان: مزیت استثنایی بیکالوتامید نسبت به فیناستراید یا فلوتامید در سگ‌های نر مسابقه یا نمایشی این است که عوارض سیستمیک بر تستوسترون پلاسما ندارد و پس از قطع دوره ۴ تا ۶ هفته‌ای درمان، کیفیت اسپرم و توانایی جفت‌گیری حیوان ظرف ۱ تا ۲ ماه کاملاً به حالت باروری نرمال بازمی‌گردد."
+    "clinical_pearls": "حفظ باروری پس از درمان: مزیت استثنایی بیکالوتامید نسبت به فیناستراید یا فلوتامید در سگ‌های نر مسابقه یا نمایشی این است که عوارض سیستمیک بر تستوسترون پلاسما ندارد و پس از قطع دوره ۴ تا ۶ هفته‌ای درمان، کیفیت اسپرم و توانایی جفت‌گیری حیوان ظرف ۱ تا ۲ ماه کاملاً به حالت باروری نرمال بازمی‌گردد.",
+    "brand_names_fa": [
+      "کاسودکس",
+      "قرص کاسودکس ۵۰ و ۱۵۰ میلی‌گرم (بیکالوتامید)"
+    ],
+    "brand_names_en": [
+      "Casodex (Bicalutamide) 50mg & 150mg Film-Coated Tablets"
+    ]
   },
   {
     "id": "letrozole",
@@ -98480,7 +104011,14 @@ const DRUGS_DATA = [
       "milk_fa": "مطابق ضوابط فارماکوپه دامپزشکی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فمارا",
+      "قرص فمارا ۲.۵ میلی‌گرم (لتروزول)"
+    ],
+    "brand_names_en": [
+      "Femara (Letrozole) 2.5mg Film-Coated Tablets"
+    ]
   },
   {
     "id": "anidulafungin",
@@ -98577,7 +104115,14 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در بیمارستان‌های مرجع و داروخانه‌های تخصصی عفونی کشور.",
     "pharmacology_mechanism": "آنیدولافونژین یک مشتق لیپوپپتیدی نیمه‌سنتتیک کیندوکاندین است که به طور غیررقابتی آنزیم بتا-(۱،۳)-دی-گلوکان سنتتاز را در دیواره سلولی قارچ‌های حساس مهار می‌سازد؛ این آنزیم در سلول‌های پستانداران وجود ندارد، بنابراین با تخریب یکپارچگی دیواره پپتیدوگلیکانی، قارچ توان مقابله با فشار اسمزی را از دست داده و لیز اسموتیک می‌شود.",
-    "clinical_pearls": "قانون نجات حیوان هپاتیتی با عفونت قارچی: وقتی سگی دچار نارسایی شدید کبدی و زردی است و همزمان کشت خونش از نظر کاندیدا مثبت می‌شود، تجویز کتوکونازول یا ایتراکونازول کبد را به کلی نابود می‌کند و آمفوتریسین کلیه‌ها را از کار می‌اندازد؛ آنیدولافونژین تنها ضدقارچ تاریخ است که بدون نیاز به حتی ۱ سلول کبد یا کلیه، مستقیماً در خون تجزیه شده و عفونت را ریشه‌کن می‌کند."
+    "clinical_pearls": "قانون نجات حیوان هپاتیتی با عفونت قارچی: وقتی سگی دچار نارسایی شدید کبدی و زردی است و همزمان کشت خونش از نظر کاندیدا مثبت می‌شود، تجویز کتوکونازول یا ایتراکونازول کبد را به کلی نابود می‌کند و آمفوتریسین کلیه‌ها را از کار می‌اندازد؛ آنیدولافونژین تنها ضدقارچ تاریخ است که بدون نیاز به حتی ۱ سلول کبد یا کلیه، مستقیماً در خون تجزیه شده و عفونت را ریشه‌کن می‌کند.",
+    "brand_names_fa": [
+      "اراکسیس",
+      "ویال تزریقی اراکسیس ۱۰۰ میلی‌گرم (آنیدولافونژین)"
+    ],
+    "brand_names_en": [
+      "Eraxis (Anidulafungin) 100mg Powder for Concentrate for Solution for Infusion"
+    ]
   },
   {
     "id": "isavuconazonium",
@@ -98688,7 +104233,16 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در داروخانه‌های تخصصی عفونی و بیمارستان‌های فوق‌تخصصی کشور.",
     "pharmacology_mechanism": "ایزاووکونازونیوم در پلاسما توسط استرازهای خونی سریعاً به ایزاووکونازول فعال تبدیل می‌شود؛ مولکول فعال با اتصال محکم به جایگاه کاتالیتیک آنزیم سیتوکروم P450 قارچی (CYP51 / لانوسترول ۱۴-آلفا دمیتیلاز)، تبدیل لانوسترول به ارگوسترول را در غشای قارچ مسدود می‌سازد؛ این مهار با انباشت استرول‌های متیله سمی، نفوذپذیری غشا را برهم زده و رشد قارچ را متوقف می‌سازد.",
-    "clinical_pearls": "معجزه در آسپرژیلوزیس سینوسی ژمن شپرد: سگ‌های ژمن شپرد مستعد نفوذ آسپرژیلوس از سینوس‌های بینی به سمت لوب پیشانی مغز هستند؛ داروهای کلاسیک به دلیل عدم عبور از سد خونی-مغزی شکست می‌خورند؛ ایزاووکونازول با غلظت مغزی فوق‌العاده بالا به استخوان‌های درگیر نفوذ کرده و قارچ را در بستر جمجمه منهدم می‌کند."
+    "clinical_pearls": "معجزه در آسپرژیلوزیس سینوسی ژمن شپرد: سگ‌های ژمن شپرد مستعد نفوذ آسپرژیلوس از سینوس‌های بینی به سمت لوب پیشانی مغز هستند؛ داروهای کلاسیک به دلیل عدم عبور از سد خونی-مغزی شکست می‌خورند؛ ایزاووکونازول با غلظت مغزی فوق‌العاده بالا به استخوان‌های درگیر نفوذ کرده و قارچ را در بستر جمجمه منهدم می‌کند.",
+    "brand_names_fa": [
+      "کرسمبا",
+      "کپسول کرسمبا ۱۰۰ میلی‌گرم (ایزاووکونازونیوم سولفات)",
+      "ویال تزریقی کرسمبا ۲۰۰ میلی‌گرم (ایزاووکونازونیوم)"
+    ],
+    "brand_names_en": [
+      "Cresemba (Isavuconazonium Sulfate) 100mg Hard Capsules",
+      "Cresemba 200mg Powder for Concentrate for Solution for Infusion"
+    ]
   },
   {
     "id": "treprostinil",
@@ -98791,7 +104345,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در مراکز جراحی قلب و داروخانه‌های فوق‌تخصصی ارجاعی کشور.",
     "pharmacology_mechanism": "ترپروستینیل به عنوان آگونیست گیرنده‌های پروستاسیکلین (IP)، گیرنده‌های DP1 و EP2 در سلول‌های عضلات صاف شریانچه‌های ریوی عمل کرده و از طریق فعال‌سازی آدنیلات سیکلاز و افزایش سطح cAMP درون‌سلولی، باعث اتساع مستقیم و قوی شریان‌های ریوی و مهار فعال‌سازی و تجمع پلاکت‌ها می‌گردد.",
-    "clinical_pearls": "قانون نانوگرم در درمان قلب سگ: در محاسبات ترپروستینیل بی‌نهایت دقت کنید؛ واحد دوز دارو «نانوگرم در هر کیلوگرم در هر دقیقه» است نه میلی‌گرم یا میکروگرم! یک خطای اعشاری در تنظیم پمپ سرنگ می‌تواند سگ را وارد کلاپس عروقی کشنده کند؛ همیشه دو دامپزشک باید محاسبات رقیق‌سازی را مستقل از هم چک کنند."
+    "clinical_pearls": "قانون نانوگرم در درمان قلب سگ: در محاسبات ترپروستینیل بی‌نهایت دقت کنید؛ واحد دوز دارو «نانوگرم در هر کیلوگرم در هر دقیقه» است نه میلی‌گرم یا میکروگرم! یک خطای اعشاری در تنظیم پمپ سرنگ می‌تواند سگ را وارد کلاپس عروقی کشنده کند؛ همیشه دو دامپزشک باید محاسبات رقیق‌سازی را مستقل از هم چک کنند.",
+    "brand_names_fa": [
+      "رمدولین",
+      "تایواسو",
+      "ویال تزریقی رمدولین ۲۰ میلی‌گرم/۲۰ میلی‌لیتر (ترپروستینیل ۱ mg/mL)"
+    ],
+    "brand_names_en": [
+      "Remodulin (Treprostinil) 1mg/mL & 2.5mg/mL Injection"
+    ]
   },
   {
     "id": "tricaine_mesylate",
@@ -98919,7 +104481,15 @@ const DRUGS_DATA = [
     },
     "iran_pharma_status": "موجود در تمام مراکز تحقیقات شیلات، بیمارستان‌های دامپزشکی و مزارع آبزی‌پروری کشور.",
     "pharmacology_mechanism": "تریکائین متان‌سولفونات (اتیل ۳-آمینوبنزوات متان‌سولفونات) به دلیل محلولیت فوق‌العاده بالا به سرعت از سد اپیتلیال پرعروق آبشش‌ها عبور کرده و وارد جریان خون ماهی می‌شود؛ در سیستم اعصاب مرکزی و محیطی با مسدود کردن کانال‌های سریع سدیمی وابسته به ولتاژ مانع ورود یون سدیم و شروع پتانسیل عمل در اعصاب حرکتی و ساقه مغز شده و بیهوشی عمومی عمیق به همراه شلی کامل عضلات ایجاد می‌کند.",
-    "clinical_pearls": "قانون طلایی pH 7.4 در بیهوشی ماهی: بزرگترین اشتباه افراد تازه‌کار در شیلات این است که پودر MS-222 را مستقیماً در آب می‌ریزند و ماهی را درون آن می‌اندازند؛ محلول بدون بافر pH را به ۳ می‌رساند و آبشش‌ها را می‌سوزاند و ماهی خفه می‌شود! همیشه با کاغذ تورنسل یا pHسنج مطمئن شوید که با افزودن بی‌کربنات سدیم (جوش شیرین)، pH آب دقیقاً بین ۷.۰ تا ۷.۴ تنظیم شده باشد تا ماهی با کمال آرامش ظرف ۲ دقیقه به خواب رود و ظرف ۳ دقیقه در آب تازه بیدار شود."
+    "clinical_pearls": "قانون طلایی pH 7.4 در بیهوشی ماهی: بزرگترین اشتباه افراد تازه‌کار در شیلات این است که پودر MS-222 را مستقیماً در آب می‌ریزند و ماهی را درون آن می‌اندازند؛ محلول بدون بافر pH را به ۳ می‌رساند و آبشش‌ها را می‌سوزاند و ماهی خفه می‌شود! همیشه با کاغذ تورنسل یا pHسنج مطمئن شوید که با افزودن بی‌کربنات سدیم (جوش شیرین)، pH آب دقیقاً بین ۷.۰ تا ۷.۴ تنظیم شده باشد تا ماهی با کمال آرامش ظرف ۲ دقیقه به خواب رود و ظرف ۳ دقیقه در آب تازه بیدار شود.",
+    "brand_names_fa": [
+      "MS-222",
+      "فینکل",
+      "پودر بیهوشی MS-222 دامی (تریکائین متان‌سولفونات)"
+    ],
+    "brand_names_en": [
+      "Finquel / Tricaine-S (MS-222) Pure Powder"
+    ]
   },
   {
     "id": "enflicoxib",
@@ -99021,7 +104591,14 @@ const DRUGS_DATA = [
       "duration_days_default": 7,
       "administration_note": "همراه یا بلافاصله پس از غذا مصرف شود.",
       "scoring_info": "در صورت نیاز به تقسیم دوز، از قرص خط‌دار یا تبلت کاتر استفاده شود."
-    }
+    },
+    "brand_names_fa": [
+      "قرص‌های داکسوکاکس"
+    ],
+    "brand_names_en": [
+      "Enflicoxib Vet",
+      "Enflicoxib Brand"
+    ]
   },
   {
     "id": "ilunocitinib",
@@ -99123,7 +104700,13 @@ const DRUGS_DATA = [
       "duration_days_default": 7,
       "administration_note": "همراه یا بلافاصله پس از غذا مصرف شود.",
       "scoring_info": "در صورت نیاز به تقسیم دوز، از قرص خط‌دار یا تبلت کاتر استفاده شود."
-    }
+    },
+    "brand_names_fa": [
+      "قرص‌های زنرلیا"
+    ],
+    "brand_names_en": [
+      "Zenrelia - Elanco Animal Health"
+    ]
   },
   {
     "id": "gs_441524",
@@ -99238,7 +104821,16 @@ const DRUGS_DATA = [
       "duration_days_default": 7,
       "administration_note": "همراه یا بلافاصله پس از غذا مصرف شود.",
       "scoring_info": "در صورت نیاز به تقسیم دوز، از قرص خط‌دار یا تبلت کاتر استفاده شود."
-    }
+    },
+    "brand_names_fa": [
+      "جی‌اس-۴۴۱۵۲۴ خوراکی و تزریقی دامی",
+      "جی‌اس-۴۴۱۵۲۴ خوراکی و تزریقی نصر",
+      "جی‌اس-۴۴۱۵۲۴ خوراکی و تزریقی داملران رازک"
+    ],
+    "brand_names_en": [
+      "GS-441524 Vet",
+      "GS-441524 Brand"
+    ]
   },
   {
     "id": "vatinoxan_hydrochloride",
@@ -99323,7 +104915,14 @@ const DRUGS_DATA = [
     "withdrawal_times": "حیوان خانگی (سگ).",
     "iran_pharma_status": "معرفی شده در مراجع نوین بیهوشی بین‌المللی و مراکز جراحی حیوانات کوچک.",
     "pharmacology_mechanism": "بلوک اختصاصی گیرنده‌های آلفا-۲ آدرنرژیک پس‌سیناپسی عروقی در بافت‌های محیطی و عضلات صاف جدار عروق، مهار وازوکانستریکشن محیطی و در نتیجه مهار برادی‌کاردی رفلکسی ناشی از مدوتومیدین.",
-    "clinical_pearls": "ریکاوری سگ از سداسیون با این ترکیب بسیار یکنواخت و سریع‌تر بوده و رنگ مخاطات و پرشدگی مجدد مویرگی (CRT) در حد کاملاً طبیعی و صورتی حفظ می‌شود."
+    "clinical_pearls": "ریکاوری سگ از سداسیون با این ترکیب بسیار یکنواخت و سریع‌تر بوده و رنگ مخاطات و پرشدگی مجدد مویرگی (CRT) در حد کاملاً طبیعی و صورتی حفظ می‌شود.",
+    "brand_names_fa": [
+      "ویال‌های تزریقی Zenalpha"
+    ],
+    "brand_names_en": [
+      "Vatinoxan Hydrochloride Vet",
+      "Vatinoxan Hydrochloride Brand"
+    ]
   },
   {
     "id": "citalopram",
@@ -99420,7 +105019,15 @@ const DRUGS_DATA = [
     "withdrawal_times": "حیوانات غیر مصرفی (سگ و گربه).",
     "iran_pharma_status": "به وفور و با قیمت مناسب در تمامی داروخانه‌های انسانی و دامی کشور در دسترس است.",
     "pharmacology_mechanism": "مهار بسیار اختصاصی پمپ ناقل بازجذب سروتونین (SERT) در پایانه پیش‌سیناپسی، افزایش ماندگاری و غلظت سروتونین در شکاف سیناپسی سیستم لیمبیک و قشر مغز.",
-    "clinical_pearls": "همیشه باید به صاحب حیوان یادآوری شود که اثرات درمانی دارو ناگهانی نیست و برای مشاهده تغییر رفتار سگ یا گربه حداقل ۲ الی ۴ هفته زمان لازم است."
+    "clinical_pearls": "همیشه باید به صاحب حیوان یادآوری شود که اثرات درمانی دارو ناگهانی نیست و برای مشاهده تغییر رفتار سگ یا گربه حداقل ۲ الی ۴ هفته زمان لازم است.",
+    "brand_names_fa": [
+      "سیتالوپرام خوراکی دامی",
+      "سیتالوپرام خوراکی انسانی"
+    ],
+    "brand_names_en": [
+      "Citalopram Vet",
+      "Citalopram Brand"
+    ]
   },
   {
     "id": "atorvastatin",
@@ -99527,7 +105134,15 @@ const DRUGS_DATA = [
       "milk_fa": "حیوانات خانگی و پرندگان زینتی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "آتورواستاتین خوراکی دامی",
+      "آتورواستاتین خوراکی انسانی"
+    ],
+    "brand_names_en": [
+      "Atorvastatin Vet",
+      "Atorvastatin Brand"
+    ]
   },
   {
     "id": "gadopentetate_dimeglumine",
@@ -99614,7 +105229,13 @@ const DRUGS_DATA = [
     "withdrawal_times": "حیوان خانگی (سگ و گربه).",
     "iran_pharma_status": "در کلیه مراکز پیشرفته تصویربرداری و ام‌آر‌آی دامپزشکی ایران موجود و استاندارد است.",
     "pharmacology_mechanism": "یون پارامغناطیس گادولینیوم (Gd3+) گشتاور مغناطیسی بسیار بالایی دارد و سرعت انتقال انرژی مغناطیسی پروتون‌های هیدروژن آب بافتی را تسریع می‌کند.",
-    "clinical_pearls": "ضایعات التهابی فعال (مننژیت) و تومورهای اولیه سیستم عصبی مرکزی (گلیوما و مننژیوما) به وضوح پس از تزریق گادولینیوم هایپرانتنس و درخشان می‌شوند."
+    "clinical_pearls": "ضایعات التهابی فعال (مننژیت) و تومورهای اولیه سیستم عصبی مرکزی (گلیوما و مننژیوما) به وضوح پس از تزریق گادولینیوم هایپرانتنس و درخشان می‌شوند.",
+    "brand_names_fa": [
+      "ویال‌های تزریقی مگنویست"
+    ],
+    "brand_names_en": [
+      "Magnevist - Bayer"
+    ]
   },
   {
     "id": "butorphanol_midazolam",
@@ -99730,7 +105351,15 @@ const DRUGS_DATA = [
       "milk_fa": "حیوانات اگزوتیک و زینتی خانگی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ترکیب بوتورفانول و میدازولام تزریقی دامی",
+      "ترکیب بوتورفانول و میدازولام تزریقی انسانی"
+    ],
+    "brand_names_en": [
+      "Butorphanol + Midazolam Combination Vet",
+      "Butorphanol + Midazolam Combination Brand"
+    ]
   },
   {
     "id": "terbinafine_systemic",
@@ -99844,7 +105473,15 @@ const DRUGS_DATA = [
       "milk_fa": "حیوانات خانگی و پرندگان زینتی.",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "تربینافین خوراکی دامی",
+      "تربینافین خوراکی انسانی"
+    ],
+    "brand_names_en": [
+      "Terbinafine Hydrochloride Vet",
+      "Terbinafine Hydrochloride Brand"
+    ]
   },
   {
     "id": "oxytetracycline_long_acting",
@@ -99952,7 +105589,14 @@ const DRUGS_DATA = [
       "milk_fa": "گوشت گاو: ۲۸ روز، گوشت گوسفند: ۲۸ روز، شیر گاو: ۷ روز، گوشت طیور بومی: ۲۸ روز، تخم‌مرغ: ۷ روز (FARAD).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "تزریقی"
+    ],
+    "brand_names_en": [
+      "Oxytetracycline Long-Acting (LA) Vet",
+      "Oxytetracycline Long-Acting (LA) Brand"
+    ]
   },
   {
     "id": "midazolam_intranasal",
@@ -100044,7 +105688,14 @@ const DRUGS_DATA = [
     "withdrawal_times": "حیوانات غیر مصرفی (سگ و گربه).",
     "iran_pharma_status": "در ترالی کلیه اورژانس‌ها و بیمارستان‌های دامپزشکی ایران موجود است.",
     "pharmacology_mechanism": "اتصال به گیرنده‌های بنزودیازپینی GABAA، تسهیل جریان یون کلرید به داخل نورون، هایپرپلاریزاسیون غشای عصبی و فرونشاندن فوری امواج دشارژ تشنجی مغز.",
-    "clinical_pearls": "به صاحبان سگ‌های صرعی که تشنج‌های خوشه‌ای دارند آموزش دهید تا یک سرنگ آماده حاوی میدازولام در منزل داشته باشند تا به محض شروع حمله داخل بینی حیوان خالی کنند."
+    "clinical_pearls": "به صاحبان سگ‌های صرعی که تشنج‌های خوشه‌ای دارند آموزش دهید تا یک سرنگ آماده حاوی میدازولام در منزل داشته باشند تا به محض شروع حمله داخل بینی حیوان خالی کنند.",
+    "brand_names_fa": [
+      "اورژانس تشنج"
+    ],
+    "brand_names_en": [
+      "Midazolam Intranasal Formulation Vet",
+      "Midazolam Intranasal Formulation Brand"
+    ]
   },
   {
     "id": "propofol_ketamine",
@@ -100136,7 +105787,15 @@ const DRUGS_DATA = [
     "withdrawal_times": "حیوانات غیر مصرفی (سگ و گربه).",
     "iran_pharma_status": "در کلیه مراکز جراحی تخصصی و دانشگاهی دامپزشکی ایران روزانه ساخته و مصرف می‌شود.",
     "pharmacology_mechanism": "اثر همزمان بر دو سیستم مهاری و تحریکی مغز: اگونیسم گیرنده‌های GABAA توسط پروپوفول همراه با مهار غیررقابتی گیرنده‌های تحریکی N-متیل-D-آسپارتات (NMDA) توسط کتامین.",
-    "clinical_pearls": "در سگی که سوفل قلبی درجه ۴ دارد و از افت فشار پروپوفول می‌ترسید، کتوفول گزینه‌ای بی‌رقیب، آرام و پایدار است."
+    "clinical_pearls": "در سگی که سوفل قلبی درجه ۴ دارد و از افت فشار پروپوفول می‌ترسید، کتوفول گزینه‌ای بی‌رقیب، آرام و پایدار است.",
+    "brand_names_fa": [
+      "کتوفول",
+      "ویال‌های پروپوفول ۱٪"
+    ],
+    "brand_names_en": [
+      "Propofol + Ketamine (Ketofol) Vet",
+      "Propofol + Ketamine (Ketofol) Brand"
+    ]
   },
   {
     "id": "deslorelin_acetate",
@@ -100245,7 +105904,15 @@ const DRUGS_DATA = [
       "milk_fa": "حیوانات غیر مصرفی (خانگی و اگزوتیک).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "ایمپلنت",
+      "ایمپلنت‌های سوپرلورین"
+    ],
+    "brand_names_en": [
+      "Deslorelin Vet",
+      "Deslorelin Brand"
+    ]
   },
   {
     "id": "fentanyl_fluanisone",
@@ -100351,7 +106018,14 @@ const DRUGS_DATA = [
     "withdrawal_times": "حیوانات غیراقتصادی و آزمایشگاهی.",
     "iran_pharma_status": "در بخش پژوهشی دانشگاه‌های دامپزشکی و بیمارستان‌های فوق تخصصی حیوانات خاص.",
     "pharmacology_mechanism": "هم‌افزایی عمیق بی‌دردی با آگونیسم گیرنده‌های مو-اوپیوئیدی توسط فنتانیل (با توان ۱۰۰ برابر مورفین) و بلوک گیرنده‌های D2 دوپامینی توسط فلوآنیسون.",
-    "clinical_pearls": "ترکیب هایپنورم با میدازولام برای جراحی‌های شکمی خرگوش مانند عقیم‌سازی و برداشت سنگ مثانه، امن‌ترین گزینه بالینی است."
+    "clinical_pearls": "ترکیب هایپنورم با میدازولام برای جراحی‌های شکمی خرگوش مانند عقیم‌سازی و برداشت سنگ مثانه، امن‌ترین گزینه بالینی است.",
+    "brand_names_fa": [
+      "هایپنورم",
+      "محلول‌های تزریقی Hypnorm"
+    ],
+    "brand_names_en": [
+      "VetaPharma"
+    ]
   },
   {
     "id": "torsemide_oral",
@@ -100454,7 +106128,14 @@ const DRUGS_DATA = [
       "duration_days_default": 7,
       "administration_note": "همراه یا بلافاصله پس از غذا مصرف شود.",
       "scoring_info": "در صورت نیاز به تقسیم دوز، از قرص خط‌دار یا تبلت کاتر استفاده شود."
-    }
+    },
+    "brand_names_fa": [
+      "آپ‌کارد",
+      "قرص‌های جویدنی طعم‌دار آپ‌کارد"
+    ],
+    "brand_names_en": [
+      "Upcard - Vetoquinol"
+    ]
   },
   {
     "id": "ademetionine_same",
@@ -100548,7 +106229,14 @@ const DRUGS_DATA = [
     "withdrawal_times": "حیوانات غیر مصرفی (سگ و گربه).",
     "iran_pharma_status": "در بخش داروهای مکمل و درمانی تخصصی بیمارستان‌های دامپزشکی معتبر موجود است.",
     "pharmacology_mechanism": "آدنوزیل متیونین در چرخه ترانس‌سولفوراسیون کبد به سیستئین و سپس گلوتاتیون درون‌سلولی تبدیل شده و با مهار آپوپتوز هپاتوسیت‌ها و پایداری غشای سلولی، جریان ترشح صفرا را بازیابی می‌کند.",
-    "clinical_pearls": "در گربه‌های بیماری که به علت بی‌اشتهایی مستعد کبد چرب حاد شده‌اند، شروع زودهنگام SAMe نرخ بقای بیمار را دو برابر افزایش می‌دهد."
+    "clinical_pearls": "در گربه‌های بیماری که به علت بی‌اشتهایی مستعد کبد چرب حاد شده‌اند، شروع زودهنگام SAMe نرخ بقای بیمار را دو برابر افزایش می‌دهد.",
+    "brand_names_fa": [
+      "سام-ای",
+      "قرص‌های دامی دنوزیل"
+    ],
+    "brand_names_en": [
+      "Denosyl - Nutramax"
+    ]
   },
   {
     "id": "silybin_phospholipid",
@@ -100641,7 +106329,14 @@ const DRUGS_DATA = [
     "withdrawal_times": "حیوانات غیر مصرفی (خانگی).",
     "iran_pharma_status": "در دسترس در داروخانه‌های دامپزشکی و بیمارستان‌های تخصصی.",
     "pharmacology_mechanism": "اتصال به غشای هپاتوسیت‌ها و مهار نفوذ توکسین‌ها، خنثی‌سازی رادیکال‌های آزاد هیدروکسیل، تحریک سنتز RNA پلی‌مراز I و تحریک بازسازی پروتئین سلول‌های پارانشیمال کبد.",
-    "clinical_pearls": "سیلیمارین معمولی در روده سگ به سختی جذب می‌شود؛ حتماً از فرم متصل به فسفاتیدیل‌کولین (Siliphos/Denamarin) استفاده کنید تا اثربخشی واقعی در آزمایش خون دیده شود."
+    "clinical_pearls": "سیلیمارین معمولی در روده سگ به سختی جذب می‌شود؛ حتماً از فرم متصل به فسفاتیدیل‌کولین (Siliphos/Denamarin) استفاده کنید تا اثربخشی واقعی در آزمایش خون دیده شود.",
+    "brand_names_fa": [
+      "عصاره خار مریم کمپلکس",
+      "قرص‌های دنامارین"
+    ],
+    "brand_names_en": [
+      "Denamarin - Nutramax"
+    ]
   },
   {
     "id": "fenbendazole_backyard_poultry",
@@ -100735,7 +106430,16 @@ const DRUGS_DATA = [
       "milk_fa": "تخم‌مرغ ماکیان: صفر روز (0 days)، گوشت ماکیان: ۶ روز (FARAD/FDA).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "فنبندازول ماکیان و طیور بومی دامی",
+      "فنبندازول ماکیان و طیور بومی نصر",
+      "فنبندازول ماکیان و طیور بومی داملران رازک"
+    ],
+    "brand_names_en": [
+      "Fenbendazole (Backyard Poultry) Vet",
+      "Fenbendazole (Backyard Poultry) Brand"
+    ]
   },
   {
     "id": "tiamulin_hydrogen_fumarate",
@@ -100834,7 +106538,16 @@ const DRUGS_DATA = [
       "milk_fa": "گوشت ماکیان: ۳ تا ۵ روز، تخم‌مرغ: ۵ روز (FARAD).",
       "meat_days": 0,
       "milk_days": 0
-    }
+    },
+    "brand_names_fa": [
+      "تیامولین هیدروژن فومارات دامی",
+      "تیامولین هیدروژن فومارات نصر",
+      "تیامولین هیدروژن فومارات داملران رازک"
+    ],
+    "brand_names_en": [
+      "Tiamulin Hydrogen Fumarate Vet",
+      "Tiamulin Hydrogen Fumarate Brand"
+    ]
   },
   {
     "id": "sarolaner_moxidectin_pyrantel",
@@ -100924,14 +106637,54 @@ const DRUGS_DATA = [
     "withdrawal_times": "حیوان خانگی (سگ).",
     "iran_pharma_status": "در تمامی داروخانه‌های حیوانات خانگی و پت‌شاپ‌های کلینیکی ایران به عنوان پرفروش‌ترین داروی انگل سگ شناخته می‌شود.",
     "pharmacology_mechanism": "مهار کانال‌های کلریدی وابسته به گابا و گلوتامات توسط سارولانر (فلج کک و کنه)، فعال‌سازی کانال‌های کلریدی گلوتامات در نماتودها توسط موکسیدکتین (مهار لارو کرم قلب) و تحریک گیرنده‌های کولینرژیک نیکوتینی و فلج اسپاستیک کرم‌های روده توسط پیرانتل.",
-    "clinical_pearls": "با تجویز یک قرص سیمپاریکا تریو در ماه، دیگر نیازی به خرید جداگانه قلاده ضد کک، قطره پشت گردنی، قرص انگل درنتال و آمپول کرم قلب نخواهد بود."
+    "clinical_pearls": "با تجویز یک قرص سیمپاریکا تریو در ماه، دیگر نیازی به خرید جداگانه قلاده ضد کک، قطره پشت گردنی، قرص انگل درنتال و آمپول کرم قلب نخواهد بود.",
+    "brand_names_fa": [
+      "سیمپاریکا تریو",
+      "قرص‌های جویدنی سیمپاریکا تریو"
+    ],
+    "brand_names_en": [
+      "Simparica Trio - Zoetis"
+    ]
   },
   {
     "id": "bupivacaine_liposomal",
     "generic_name_fa": "بوپیواکائین لیپوزومال نوسیتا",
     "generic_name_en": "Bupivacaine Liposomal Injectable Suspension",
-    "brand_names_fa": "نوسیتا، بوپیواکائین پیوسته رهش",
-    "brand_names_en": "Nocita (13.3 mg/mL)",
+    "brand_names_fa": [
+      "ن",
+      "و",
+      "س",
+      "ی",
+      "ت",
+      "ا",
+      "،",
+      " ",
+      "ب",
+      "پ",
+      "ک",
+      "ئ",
+      "ه",
+      "ر",
+      "ش"
+    ],
+    "brand_names_en": [
+      "N",
+      "o",
+      "c",
+      "i",
+      "t",
+      "a",
+      " ",
+      "(",
+      "1",
+      "3",
+      ".",
+      "m",
+      "g",
+      "/",
+      "L",
+      ")"
+    ],
     "therapeutic_class": "بی‌حس‌کننده موضعی طولانی‌اثر (آمید)",
     "primary_category": "بیهوشی و آرام‌بخشی",
     "secondary_categories": [
@@ -101071,8 +106824,49 @@ const DRUGS_DATA = [
     "id": "ceftiofur_crystalline_free_acid",
     "generic_name_fa": "سفتیوفور کریستالین اسید آزاد اکسید",
     "generic_name_en": "Ceftiofur Crystalline Free Acid (CCFA)",
-    "brand_names_fa": "اکسید، سفتیوفور ۷ روزه دامی",
-    "brand_names_en": "Excede Sterile Suspension (200 mg/mL)",
+    "brand_names_fa": [
+      "ا",
+      "ک",
+      "س",
+      "ی",
+      "د",
+      "،",
+      " ",
+      "ف",
+      "ت",
+      "و",
+      "ر",
+      "۷",
+      "ز",
+      "ه",
+      "م"
+    ],
+    "brand_names_en": [
+      "E",
+      "x",
+      "c",
+      "e",
+      "d",
+      " ",
+      "S",
+      "t",
+      "r",
+      "i",
+      "l",
+      "u",
+      "s",
+      "p",
+      "n",
+      "o",
+      "(",
+      "2",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      ")"
+    ],
     "therapeutic_class": "سفالوسپورین نسل سوم طولانی‌اثر",
     "primary_category": "آنتی‌بیوتیک‌ها و ضد باکتری",
     "secondary_categories": [
@@ -101211,8 +107005,28 @@ const DRUGS_DATA = [
     "id": "clodronate_disodium",
     "generic_name_fa": "کلودرونات دی‌سدیم اوسفوس",
     "generic_name_en": "Clodronate Disodium",
-    "brand_names_fa": "اوسفوس",
-    "brand_names_en": "Osphos (60 mg/mL)",
+    "brand_names_fa": [
+      "ا",
+      "و",
+      "س",
+      "ف"
+    ],
+    "brand_names_en": [
+      "O",
+      "s",
+      "p",
+      "h",
+      "o",
+      " ",
+      "(",
+      "6",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      ")"
+    ],
     "therapeutic_class": "بیس‌فسفونات مهارکننده تحلیل استخوان",
     "primary_category": "ارتوپدی و درد",
     "secondary_categories": [
@@ -101350,8 +107164,46 @@ const DRUGS_DATA = [
     "id": "dimercaprol_bal",
     "generic_name_fa": "دیمرکاپرول بال روغنی",
     "generic_name_en": "Dimercaprol (British Anti-Lewisite - BAL in Oil)",
-    "brand_names_fa": "بال در روغن، آنتی‌لوئیسیت",
-    "brand_names_en": "BAL in Oil (100 mg/mL in Peanut Oil)",
+    "brand_names_fa": [
+      "ب",
+      "ا",
+      "ل",
+      " ",
+      "د",
+      "ر",
+      "و",
+      "غ",
+      "ن",
+      "،",
+      "آ",
+      "ت",
+      "ی",
+      "‌",
+      "ئ",
+      "س"
+    ],
+    "brand_names_en": [
+      "B",
+      "A",
+      "L",
+      " ",
+      "i",
+      "n",
+      "O",
+      "l",
+      "(",
+      "1",
+      "0",
+      "m",
+      "g",
+      "/",
+      "P",
+      "e",
+      "a",
+      "u",
+      "t",
+      ")"
+    ],
     "therapeutic_class": "شلاتور فلزات سنگین و پادزهر اورژانس",
     "primary_category": "سم‌شناسی و پادزهرها",
     "secondary_categories": [
@@ -101493,8 +107345,55 @@ const DRUGS_DATA = [
     "id": "diphenoxylate_atropine",
     "generic_name_fa": "دیفنوکسیلات + آتروپین لوموتیل",
     "generic_name_en": "Diphenoxylate HCl + Atropine Sulfate",
-    "brand_names_fa": "لوموتیل، دیفنوکسیلات ایرانی ۲.۵ میلی‌گرم",
-    "brand_names_en": "Lomotil, Lonox (2.5 mg Diphenoxylate + 0.025 mg Atropine)",
+    "brand_names_fa": [
+      "ل",
+      "و",
+      "م",
+      "ت",
+      "ی",
+      "،",
+      " ",
+      "د",
+      "ف",
+      "ن",
+      "ک",
+      "س",
+      "ا",
+      "ر",
+      "۲",
+      ".",
+      "۵",
+      "‌",
+      "گ"
+    ],
+    "brand_names_en": [
+      "L",
+      "o",
+      "m",
+      "t",
+      "i",
+      "l",
+      ",",
+      " ",
+      "n",
+      "x",
+      "(",
+      "2",
+      ".",
+      "5",
+      "g",
+      "D",
+      "p",
+      "h",
+      "e",
+      "y",
+      "a",
+      "+",
+      "0",
+      "A",
+      "r",
+      ")"
+    ],
     "therapeutic_class": "ضد اسهال اوپیوئیدی و آنتی‌اسپاسمودیک",
     "primary_category": "دستگاه گوارش",
     "secondary_categories": [
@@ -101636,8 +107535,52 @@ const DRUGS_DATA = [
     "id": "diclofenac_topical",
     "generic_name_fa": "دیکلوفناک سدیم موضعی سورپاس",
     "generic_name_en": "Diclofenac Sodium Topical Cream / Gel 1%",
-    "brand_names_fa": "سورپاس، ژل دیکلوفناک دامی و انسانی",
-    "brand_names_en": "Surpass 1% Topical Cream (Vet-approved), Voltaren Gel",
+    "brand_names_fa": [
+      "س",
+      "و",
+      "ر",
+      "پ",
+      "ا",
+      "،",
+      " ",
+      "ژ",
+      "ل",
+      "د",
+      "ی",
+      "ک",
+      "ف",
+      "ن",
+      "م"
+    ],
+    "brand_names_en": [
+      "S",
+      "u",
+      "r",
+      "p",
+      "a",
+      "s",
+      " ",
+      "1",
+      "%",
+      "T",
+      "o",
+      "i",
+      "c",
+      "l",
+      "C",
+      "e",
+      "m",
+      "(",
+      "V",
+      "t",
+      "-",
+      "v",
+      "d",
+      ")",
+      ",",
+      "n",
+      "G"
+    ],
     "therapeutic_class": "ضدالتهاب غیرکورتونی موضعی (NSAID)",
     "primary_category": "ارتوپدی و درد",
     "secondary_categories": [
@@ -101761,8 +107704,52 @@ const DRUGS_DATA = [
     "id": "calcium_acetate",
     "generic_name_fa": "کلسیم استات فوس‌لو",
     "generic_name_en": "Calcium Acetate",
-    "brand_names_fa": "فوس‌لو، کلسیم استات خوراکی ۶۶۷ میلی‌گرم",
-    "brand_names_en": "PhosLo, Calphron (667 mg Tablets / Capsules)",
+    "brand_names_fa": [
+      "ف",
+      "و",
+      "س",
+      "‌",
+      "ل",
+      "،",
+      " ",
+      "ک",
+      "ی",
+      "م",
+      "ا",
+      "ت",
+      "خ",
+      "ر",
+      "۶",
+      "۷",
+      "گ"
+    ],
+    "brand_names_en": [
+      "P",
+      "h",
+      "o",
+      "s",
+      "L",
+      ",",
+      " ",
+      "C",
+      "a",
+      "l",
+      "p",
+      "r",
+      "n",
+      "(",
+      "6",
+      "7",
+      "m",
+      "g",
+      "T",
+      "b",
+      "e",
+      "t",
+      "/",
+      "u",
+      ")"
+    ],
     "therapeutic_class": "بایندر فسفات گوارشی و مکمل کلسیم",
     "primary_category": "کلیه و مجاری ادراری",
     "secondary_categories": [
@@ -101905,8 +107892,46 @@ const DRUGS_DATA = [
     "id": "cromolyn_sodium_inhalation",
     "generic_name_fa": "کرومولین سدیم استنشاقی",
     "generic_name_en": "Cromolyn Sodium Inhalation Solution",
-    "brand_names_fa": "کرومولین، سدیم کروموگلیکات نبولایزر",
-    "brand_names_en": "Intal Inhalation Solution (20 mg/2 mL)",
+    "brand_names_fa": [
+      "ک",
+      "ر",
+      "و",
+      "م",
+      "ل",
+      "ی",
+      "ن",
+      "،",
+      " ",
+      "س",
+      "د",
+      "گ",
+      "ا",
+      "ت",
+      "ب",
+      "ز",
+      "10 mg/mL"
+    ],
+    "brand_names_en": [
+      "I",
+      "n",
+      "t",
+      "a",
+      "l",
+      " ",
+      "h",
+      "i",
+      "o",
+      "S",
+      "u",
+      "(",
+      "2",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      ")"
+    ],
     "therapeutic_class": "تثبیت‌کننده ماست‌سل‌ها و ضدآسم غیرکورتونی",
     "primary_category": "دستگاه تنفس",
     "secondary_categories": [
@@ -102045,8 +108070,44 @@ const DRUGS_DATA = [
     "id": "chlorambucil_oral",
     "generic_name_fa": "کلرامبوسیل خوراکی لئوکران",
     "generic_name_en": "Chlorambucil Oral",
-    "brand_names_fa": "لئوکران، کلرامبوسیل ۲ میلی‌گرم",
-    "brand_names_en": "Leukeran (2 mg Tablets)",
+    "brand_names_fa": [
+      "ل",
+      "ئ",
+      "و",
+      "ک",
+      "ر",
+      "ا",
+      "ن",
+      "،",
+      " ",
+      "م",
+      "ب",
+      "س",
+      "ی",
+      "۲",
+      "‌",
+      "گ"
+    ],
+    "brand_names_en": [
+      "L",
+      "e",
+      "u",
+      "k",
+      "r",
+      "a",
+      "n",
+      " ",
+      "(",
+      "2",
+      "m",
+      "g",
+      "T",
+      "b",
+      "l",
+      "t",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "شیمی‌درمانی آلکیلان و سرکوب‌کننده ایمنی",
     "primary_category": "انکولوژی و سرطان",
     "secondary_categories": [
@@ -102172,8 +108233,47 @@ const DRUGS_DATA = [
     "id": "maropitant_oral_tablet",
     "generic_name_fa": "ماروپیتانت خوراکی سرنیا",
     "generic_name_en": "Maropitant Citrate Oral Tablets",
-    "brand_names_fa": "سرنیا قرص، ماروپیتانت خوراکی",
-    "brand_names_en": "Cerenia Tablets (16 mg, 24 mg, 60 mg, 160 mg)",
+    "brand_names_fa": [
+      "س",
+      "ر",
+      "ن",
+      "ی",
+      "ا",
+      " ",
+      "ق",
+      "ص",
+      "،",
+      "م",
+      "و",
+      "پ",
+      "ت",
+      "خ",
+      "ک"
+    ],
+    "brand_names_en": [
+      "C",
+      "e",
+      "r",
+      "n",
+      "i",
+      "a",
+      " ",
+      "T",
+      "b",
+      "l",
+      "t",
+      "s",
+      "(",
+      "1",
+      "6",
+      "m",
+      "g",
+      ",",
+      "2",
+      "4",
+      "0",
+      ")"
+    ],
     "therapeutic_class": "آنتاگونیست گیرنده نوروکینین-۱ (NK1) ضد استفراغ",
     "primary_category": "دستگاه گوارش",
     "secondary_categories": [
@@ -102316,8 +108416,52 @@ const DRUGS_DATA = [
     "id": "dexchlorpheniramine",
     "generic_name_fa": "دکس‌کلرفنیرامین مالئات",
     "generic_name_en": "Dexchlorpheniramine Maleate",
-    "brand_names_fa": "پولارامین، دکس‌کلرفنیرامین ۲ میلی‌گرم",
-    "brand_names_en": "Polaramine (2 mg Tablets / Syrup 2 mg/5 mL)",
+    "brand_names_fa": [
+      "پ",
+      "و",
+      "ل",
+      "ا",
+      "ر",
+      "م",
+      "ی",
+      "ن",
+      "،",
+      " ",
+      "د",
+      "ک",
+      "س",
+      "‌",
+      "ف",
+      "۲",
+      "گ"
+    ],
+    "brand_names_en": [
+      "P",
+      "o",
+      "l",
+      "a",
+      "r",
+      "m",
+      "i",
+      "n",
+      "e",
+      " ",
+      "(",
+      "2",
+      "g",
+      "T",
+      "b",
+      "t",
+      "s",
+      "/",
+      "S",
+      "y",
+      "u",
+      "p",
+      "5",
+      "L",
+      ")"
+    ],
     "therapeutic_class": "آنتی‌هیستامین نسل اول (مهارکننده H1)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -102461,8 +108605,46 @@ const DRUGS_DATA = [
     "id": "pentosan_polysulfate_sodium",
     "generic_name_fa": "پنتوسان پلی‌سولفات سدیم کارتروفن",
     "generic_name_en": "Pentosan Polysulfate Sodium (PPS)",
-    "brand_names_fa": "کارتروفن وت، زولیدل",
-    "brand_names_en": "Cartrophen Vet (100 mg/mL), Elmiron",
+    "brand_names_fa": [
+      "ک",
+      "ا",
+      "ر",
+      "ت",
+      "و",
+      "ف",
+      "ن",
+      " ",
+      "،",
+      "ز",
+      "ل",
+      "ی",
+      "د"
+    ],
+    "brand_names_en": [
+      "C",
+      "a",
+      "r",
+      "t",
+      "o",
+      "p",
+      "h",
+      "e",
+      "n",
+      " ",
+      "V",
+      "(",
+      "1",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      ")",
+      ",",
+      "E",
+      "l",
+      "i"
+    ],
     "therapeutic_class": "داروی اصلاح‌کننده بیماری آرتروز (DMOAD)",
     "primary_category": "ارتوپدی و درد",
     "secondary_categories": [
@@ -102601,8 +108783,44 @@ const DRUGS_DATA = [
     "id": "famotidine_injectable",
     "generic_name_fa": "فاموتیدین تزریقی وریدی",
     "generic_name_en": "Famotidine Injectable Solution",
-    "brand_names_fa": "فاموتیدین تزریقی، پپسید",
-    "brand_names_en": "Pepcid IV (10 mg/mL)",
+    "brand_names_fa": [
+      "ف",
+      "ا",
+      "م",
+      "و",
+      "ت",
+      "ی",
+      "د",
+      "ن",
+      " ",
+      "ز",
+      "ر",
+      "ق",
+      "،",
+      "پ",
+      "س",
+      "20 mg/2 mL",
+      "ویال یا آمپول تزریقی 10 mg/mL"
+    ],
+    "brand_names_en": [
+      "P",
+      "e",
+      "p",
+      "c",
+      "i",
+      "d",
+      " ",
+      "I",
+      "V",
+      "(",
+      "1",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      ")"
+    ],
     "therapeutic_class": "آنتاگونیست گیرنده H2 معده (ضد اسید)",
     "primary_category": "دستگاه گوارش",
     "secondary_categories": [
@@ -102741,8 +108959,45 @@ const DRUGS_DATA = [
     "id": "amikacin_liposomal_inhalation",
     "generic_name_fa": "آمیکاسین استنشاقی لیپوزومال",
     "generic_name_en": "Amikacin Liposome Inhalation Suspension (ALIS)",
-    "brand_names_fa": "آریکایس، آمیکاسین نبولایزر نانو",
-    "brand_names_en": "Arikayce (590 mg/8.4 mL)",
+    "brand_names_fa": [
+      "آ",
+      "ر",
+      "ی",
+      "ک",
+      "ا",
+      "س",
+      "،",
+      " ",
+      "م",
+      "ن",
+      "ب",
+      "و",
+      "ل",
+      "ز"
+    ],
+    "brand_names_en": [
+      "A",
+      "r",
+      "i",
+      "k",
+      "a",
+      "y",
+      "c",
+      "e",
+      " ",
+      "(",
+      "5",
+      "9",
+      "0",
+      "m",
+      "g",
+      "/",
+      "8",
+      ".",
+      "4",
+      "L",
+      ")"
+    ],
     "therapeutic_class": "آمینوگلیکوزید استنشاقی لیپوزومال هدفمند",
     "primary_category": "آنتی‌بیوتیک‌ها و ضد باکتری",
     "secondary_categories": [
@@ -102869,8 +109124,48 @@ const DRUGS_DATA = [
     "id": "alfaxalone_multidose",
     "generic_name_fa": "آلفاکسالون مولتی‌دوز آلفاکسان",
     "generic_name_en": "Alfaxalone Multidose with Preservative",
-    "brand_names_fa": "آلفاکسان مولتی‌دوز",
-    "brand_names_en": "Alfaxan Multidose (10 mg/mL)",
+    "brand_names_fa": [
+      "آ",
+      "ل",
+      "ف",
+      "ا",
+      "ک",
+      "س",
+      "ن",
+      " ",
+      "م",
+      "و",
+      "ت",
+      "ی",
+      "‌",
+      "د",
+      "ز"
+    ],
+    "brand_names_en": [
+      "A",
+      "l",
+      "f",
+      "a",
+      "x",
+      "n",
+      " ",
+      "M",
+      "u",
+      "t",
+      "i",
+      "d",
+      "o",
+      "s",
+      "e",
+      "(",
+      "1",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      ")"
+    ],
     "therapeutic_class": "بیهوشی‌دهنده عصبی استروئیدی (Neurosteroid)",
     "primary_category": "بیهوشی و آرام‌بخشی",
     "secondary_categories": [
@@ -103012,8 +109307,45 @@ const DRUGS_DATA = [
     "id": "pradofloxacin_oral_suspension",
     "generic_name_fa": "پرادوفلوکساسین سوسپانسیون خوراکی ورافلوکس",
     "generic_name_en": "Pradofloxacin Oral Suspension 2.5%",
-    "brand_names_fa": "ورافلوکس گربه و سگ",
-    "brand_names_en": "Veraflox Oral Suspension (25 mg/mL)",
+    "brand_names_fa": [
+      "و",
+      "ر",
+      "ا",
+      "ف",
+      "ل",
+      "ک",
+      "س",
+      " ",
+      "گ",
+      "ب",
+      "ه"
+    ],
+    "brand_names_en": [
+      "V",
+      "e",
+      "r",
+      "a",
+      "f",
+      "l",
+      "o",
+      "x",
+      " ",
+      "O",
+      "S",
+      "u",
+      "s",
+      "p",
+      "n",
+      "i",
+      "(",
+      "2",
+      "5",
+      "m",
+      "g",
+      "/",
+      "L",
+      ")"
+    ],
     "therapeutic_class": "فلوروکینولون نسل سوم پیشرفته (8-Fluoroquinolone)",
     "primary_category": "آنتی‌بیوتیک‌ها و ضد باکتری",
     "secondary_categories": [
@@ -103139,8 +109471,52 @@ const DRUGS_DATA = [
     "id": "fomepizole_4mp",
     "generic_name_fa": "فومپیزول ۴-متیل‌پیرازول آنتی‌زول",
     "generic_name_en": "Fomepizole (4-Methylpyrazole / 4-MP)",
-    "brand_names_fa": "آنتی‌زول وت، فومپیزول دامی و انسانی",
-    "brand_names_en": "Antizol-Vet (1 g/vial Lyophilized Powder)",
+    "brand_names_fa": [
+      "آ",
+      "ن",
+      "ت",
+      "ی",
+      "‌",
+      "ز",
+      "و",
+      "ل",
+      " ",
+      "،",
+      "ف",
+      "م",
+      "پ",
+      "د",
+      "ا",
+      "س"
+    ],
+    "brand_names_en": [
+      "A",
+      "n",
+      "t",
+      "i",
+      "z",
+      "o",
+      "l",
+      "-",
+      "V",
+      "e",
+      " ",
+      "(",
+      "1",
+      "g",
+      "/",
+      "v",
+      "a",
+      "L",
+      "y",
+      "p",
+      "h",
+      "d",
+      "P",
+      "w",
+      "r",
+      ")"
+    ],
     "therapeutic_class": "مهارکننده اختصاصی الکل دهیدروژناز و پادزهر اورژانس",
     "primary_category": "سم‌شناسی و پادزهرها",
     "secondary_categories": [
@@ -103268,8 +109644,49 @@ const DRUGS_DATA = [
     "id": "lomustine_ccnu",
     "generic_name_fa": "لوموستین سی‌سی‌ان‌یو لئوکران",
     "generic_name_en": "Lomustine (CCNU)",
-    "brand_names_fa": "سی‌سی‌ان‌یو، لوموستین ۱۰، ۴۰ و ۱۰۰ میلی‌گرم",
-    "brand_names_en": "CeeNU, Gleostine (10 mg, 40 mg, 100 mg Capsules)",
+    "brand_names_fa": [
+      "س",
+      "ی",
+      "‌",
+      "ا",
+      "ن",
+      "و",
+      "،",
+      " ",
+      "ل",
+      "م",
+      "ت",
+      "۱",
+      "۰",
+      "۴",
+      "گ",
+      "ر"
+    ],
+    "brand_names_en": [
+      "C",
+      "e",
+      "N",
+      "U",
+      ",",
+      " ",
+      "G",
+      "l",
+      "o",
+      "s",
+      "t",
+      "i",
+      "n",
+      "(",
+      "1",
+      "0",
+      "m",
+      "g",
+      "4",
+      "a",
+      "p",
+      "u",
+      ")"
+    ],
     "therapeutic_class": "شیمی‌درمانی آلکیلان نیتروزواوره (عبور از سد خونی-مغزی)",
     "primary_category": "انکولوژی و سرطان",
     "secondary_categories": [
@@ -103412,8 +109829,46 @@ const DRUGS_DATA = [
     "id": "bethanechol_chloride",
     "generic_name_fa": "بتانکول کلراید اورکولین",
     "generic_name_en": "Bethanechol Chloride",
-    "brand_names_fa": "اورکولین، بتانکول خوراکی",
-    "brand_names_en": "Urecholine (5 mg, 10 mg, 25 mg Tablets)",
+    "brand_names_fa": [
+      "ا",
+      "و",
+      "ر",
+      "ک",
+      "ل",
+      "ی",
+      "ن",
+      "،",
+      " ",
+      "ب",
+      "ت",
+      "خ"
+    ],
+    "brand_names_en": [
+      "U",
+      "r",
+      "e",
+      "c",
+      "h",
+      "o",
+      "l",
+      "i",
+      "n",
+      " ",
+      "(",
+      "5",
+      "m",
+      "g",
+      ",",
+      "1",
+      "0",
+      "2",
+      "T",
+      "a",
+      "b",
+      "t",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "آگونیست کولینرژیک پاراسمپاتومیمتیک",
     "primary_category": "کلیه و مجاری ادراری",
     "secondary_categories": [
@@ -103558,8 +110013,49 @@ const DRUGS_DATA = [
     "id": "penicillamine_d",
     "generic_name_fa": "دی-پنی‌سیلامین کوپریمین",
     "generic_name_en": "D-Penicillamine",
-    "brand_names_fa": "کوپریمین، پنی‌سیلامین ۱۲۵ و ۲۵۰ میلی‌گرم",
-    "brand_names_en": "Cuprimine, Depen (125 mg, 250 mg Capsules)",
+    "brand_names_fa": [
+      "ک",
+      "و",
+      "پ",
+      "ر",
+      "ی",
+      "م",
+      "ن",
+      "،",
+      " ",
+      "‌",
+      "س",
+      "ل",
+      "ا",
+      "۱",
+      "۲",
+      "۵",
+      "۰",
+      "گ"
+    ],
+    "brand_names_en": [
+      "C",
+      "u",
+      "p",
+      "r",
+      "i",
+      "m",
+      "n",
+      "e",
+      ",",
+      " ",
+      "D",
+      "(",
+      "1",
+      "2",
+      "5",
+      "g",
+      "0",
+      "a",
+      "s",
+      "l",
+      ")"
+    ],
     "therapeutic_class": "شلاتور مس و فلزات سنگین / ضد سنگ‌های سیستینی",
     "primary_category": "سم‌شناسی و پادزهرها",
     "secondary_categories": [
@@ -103704,8 +110200,53 @@ const DRUGS_DATA = [
     "generic_name_en": "Buparvaquone",
     "name_fa": "بوپارواکون (بوتالکس)",
     "name_en": "Buparvaquone",
-    "brand_names_fa": "بوتالکس، بوپارشید، بوپاروتِک",
-    "brand_names_en": "Butalex, Buparvone (50 mg/mL Injection)",
+    "brand_names_fa": [
+      "ب",
+      "و",
+      "ت",
+      "ا",
+      "ل",
+      "ک",
+      "س",
+      "،",
+      " ",
+      "پ",
+      "ر",
+      "ش",
+      "ی",
+      "د",
+      "ِ",
+      "بوتالکس",
+      "ویال تزریقی عضلانی 50 mg/mL"
+    ],
+    "brand_names_en": [
+      "B",
+      "u",
+      "t",
+      "a",
+      "l",
+      "e",
+      "x",
+      ",",
+      " ",
+      "p",
+      "r",
+      "v",
+      "o",
+      "n",
+      "(",
+      "5",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      "I",
+      "j",
+      "c",
+      "i",
+      ")"
+    ],
     "therapeutic_class": "داروی اختصاصی ضدپروتوزوآ و ضدمحرک تیلریوز دامپزشکی (هیدروکسی‌نفتوکینون)",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -103848,8 +110389,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Masitinib Mesylate",
     "name_fa": "ماسیتینیب مزیلات (ماسیوِت)",
     "name_en": "Masitinib Mesylate",
-    "brand_names_fa": "ماسیوِت، کیناوِت",
-    "brand_names_en": "Masivet, Kinavet-CA1 (50 mg & 150 mg Tablets)",
+    "brand_names_fa": [
+      "م",
+      "ا",
+      "س",
+      "ی",
+      "و",
+      "ِ",
+      "ت",
+      "،",
+      " ",
+      "ک",
+      "ن",
+      "ماسیوِت"
+    ],
+    "brand_names_en": [
+      "M",
+      "a",
+      "s",
+      "i",
+      "v",
+      "e",
+      "t",
+      ",",
+      " ",
+      "K",
+      "n",
+      "-",
+      "C",
+      "A",
+      "1",
+      "(",
+      "5",
+      "0",
+      "m",
+      "g",
+      "&",
+      "T",
+      "b",
+      "l",
+      ")"
+    ],
     "therapeutic_class": "مهارکننده اختصاصی تیروزین کیناز c-KIT ضدتومور دامپزشکی",
     "primary_category": "شیمی‌درمانی و انکولوژی",
     "secondary_categories": [
@@ -103980,8 +110560,44 @@ const DRUGS_DATA = [
     "generic_name_en": "Rabacfosadine",
     "name_fa": "راباکفوسادین (تانووِآ)",
     "name_en": "Rabacfosadine",
-    "brand_names_fa": "تانووِآ",
-    "brand_names_en": "Tanovea (16.4 mg/vial Lyophilized Powder)",
+    "brand_names_fa": [
+      "ت",
+      "ا",
+      "ن",
+      "و",
+      "ِ",
+      "آ",
+      "تانووِآ"
+    ],
+    "brand_names_en": [
+      "T",
+      "a",
+      "n",
+      "o",
+      "v",
+      "e",
+      " ",
+      "(",
+      "1",
+      "6",
+      ".",
+      "4",
+      "m",
+      "g",
+      "/",
+      "i",
+      "l",
+      "L",
+      "y",
+      "p",
+      "h",
+      "z",
+      "d",
+      "P",
+      "w",
+      "r",
+      ")"
+    ],
     "therapeutic_class": "پیش‌داروی نوکلئوتیدی ضدلنفوم اختصاصی سگ",
     "primary_category": "شیمی‌درمانی و انکولوژی",
     "secondary_categories": [
@@ -104111,8 +110727,32 @@ const DRUGS_DATA = [
     "generic_name_en": "Remifentanil",
     "name_fa": "رمی‌فنتانیل (اولتیوا)",
     "name_en": "Remifentanil",
-    "brand_names_fa": "اولتیوا",
-    "brand_names_en": "Ultiva (1 mg & 2 mg Vials)",
+    "brand_names_fa": [
+      "ا",
+      "و",
+      "ل",
+      "ت",
+      "ی",
+      "اولتیوا"
+    ],
+    "brand_names_en": [
+      "U",
+      "l",
+      "t",
+      "i",
+      "v",
+      "a",
+      " ",
+      "(",
+      "1",
+      "m",
+      "g",
+      "&",
+      "2",
+      "V",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "اوپیوئید صناعی فوق‌کوتاه‌اثر آگونیست مو و ضددرد بی‌هوشی مداوم (CRI)",
     "primary_category": "بیهوشی و آرام‌بخشی",
     "secondary_categories": [
@@ -104245,8 +110885,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Tadalafil",
     "name_fa": "تادالافیل (سیالیس)",
     "name_en": "Tadalafil",
-    "brand_names_fa": "سیالیس، آپوکالیس، تاداگرا",
-    "brand_names_en": "Cialis, Adcirca (5 mg, 10 mg & 20 mg Tablets)",
+    "brand_names_fa": [
+      "س",
+      "ی",
+      "ا",
+      "ل",
+      "،",
+      " ",
+      "آ",
+      "پ",
+      "و",
+      "ک",
+      "ت",
+      "د",
+      "گ",
+      "ر",
+      "سیالیس"
+    ],
+    "brand_names_en": [
+      "C",
+      "i",
+      "a",
+      "l",
+      "s",
+      ",",
+      " ",
+      "A",
+      "d",
+      "c",
+      "r",
+      "(",
+      "5",
+      "m",
+      "g",
+      "1",
+      "0",
+      "&",
+      "2",
+      "T",
+      "b",
+      "e",
+      "t",
+      ")"
+    ],
     "therapeutic_class": "مهارکننده پرتوان و طولانی‌اثر فسفودی‌استراز تیپ ۵ (PDE5) و وازودیلاتور ریوی",
     "primary_category": "قلب و عروق",
     "secondary_categories": [
@@ -104377,8 +111058,44 @@ const DRUGS_DATA = [
     "generic_name_en": "Dichlorphenamide",
     "name_fa": "دی‌کلرفنامید دارانید",
     "name_en": "Dichlorphenamide",
-    "brand_names_fa": "دارانید، کپیست",
-    "brand_names_en": "Daranide, Keveyis (50 mg Tablets)",
+    "brand_names_fa": [
+      "د",
+      "ا",
+      "ر",
+      "ن",
+      "ی",
+      "،",
+      " ",
+      "ک",
+      "پ",
+      "س",
+      "ت"
+    ],
+    "brand_names_en": [
+      "D",
+      "a",
+      "r",
+      "n",
+      "i",
+      "d",
+      "e",
+      ",",
+      " ",
+      "K",
+      "v",
+      "y",
+      "s",
+      "(",
+      "5",
+      "0",
+      "m",
+      "g",
+      "T",
+      "b",
+      "l",
+      "t",
+      ")"
+    ],
     "therapeutic_class": "مهارکننده پرتوان کربنیک انیدراز چشمی",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -104509,8 +111226,43 @@ const DRUGS_DATA = [
     "generic_name_en": "Dicloxacillin Sodium",
     "name_fa": "دیکلوگزاسیلین سدیم",
     "name_en": "Dicloxacillin Sodium",
-    "brand_names_fa": "دایناپن، دیکلوکسا",
-    "brand_names_en": "Dynapen, Dycill (250 mg & 500 mg Capsules)",
+    "brand_names_fa": [
+      "د",
+      "ا",
+      "ی",
+      "ن",
+      "پ",
+      "،",
+      " ",
+      "ک",
+      "ل",
+      "و",
+      "س"
+    ],
+    "brand_names_en": [
+      "D",
+      "y",
+      "n",
+      "a",
+      "p",
+      "e",
+      ",",
+      " ",
+      "c",
+      "i",
+      "l",
+      "(",
+      "2",
+      "5",
+      "0",
+      "m",
+      "g",
+      "&",
+      "C",
+      "s",
+      "u",
+      ")"
+    ],
     "therapeutic_class": "آنتی‌بیوتیک بتا-لاکتام ایزوکسازولیل پنی‌سیلین پایدار در برابر بتالاکتاماز",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -104642,8 +111394,53 @@ const DRUGS_DATA = [
     "generic_name_en": "Fenofibrate",
     "name_fa": "فنوفیبرات (تریکور)",
     "name_en": "Fenofibrate",
-    "brand_names_fa": "تریکور، لیپانتین، لوفیبرا",
-    "brand_names_en": "Tricor, Lipanthyl (48 mg, 145 mg & 200 mg Tablets)",
+    "brand_names_fa": [
+      "ت",
+      "ر",
+      "ی",
+      "ک",
+      "و",
+      "،",
+      " ",
+      "ل",
+      "پ",
+      "ا",
+      "ن",
+      "ف",
+      "ب",
+      "تریکور"
+    ],
+    "brand_names_en": [
+      "T",
+      "r",
+      "i",
+      "c",
+      "o",
+      ",",
+      " ",
+      "L",
+      "p",
+      "a",
+      "n",
+      "t",
+      "h",
+      "y",
+      "l",
+      "(",
+      "4",
+      "8",
+      "m",
+      "g",
+      "1",
+      "5",
+      "&",
+      "2",
+      "0",
+      "b",
+      "e",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "آگونیست گیرنده PPAR-آلفا و داروی خط اول درمان هیپرتری‌گلیسیریدمی شدید",
     "primary_category": "غدد و متابولیسم",
     "secondary_categories": [
@@ -104773,8 +111570,45 @@ const DRUGS_DATA = [
     "generic_name_en": "Glucosamine and Chondroitin Sulfate",
     "name_fa": "گلوکزآمین و کندرویتین سولفات",
     "name_en": "Glucosamine & Chondroitin Sulfate",
-    "brand_names_fa": "کوزوکین، داسوکین، گلوکزآمین کندرویتین ام‌اس‌ام",
-    "brand_names_en": "Cosequin, Dasuquin, GlycoFlex",
+    "brand_names_fa": [
+      "ک",
+      "و",
+      "ز",
+      "ی",
+      "ن",
+      "،",
+      " ",
+      "د",
+      "ا",
+      "س",
+      "گ",
+      "ل",
+      "آ",
+      "م",
+      "ر",
+      "ت",
+      "‌"
+    ],
+    "brand_names_en": [
+      "C",
+      "o",
+      "s",
+      "e",
+      "q",
+      "u",
+      "i",
+      "n",
+      ",",
+      " ",
+      "D",
+      "a",
+      "G",
+      "l",
+      "y",
+      "c",
+      "F",
+      "x"
+    ],
     "therapeutic_class": "مکمل غضروف‌ساز و کندروپروتکتیو محافظ مفصل",
     "primary_category": "عضلانی و اسکلتی",
     "secondary_categories": [
@@ -104908,8 +111742,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Hydrochlorothiazide",
     "name_fa": "هیدروکلروتیازید",
     "name_en": "Hydrochlorothiazide",
-    "brand_names_fa": "هیدروکلروتیازید، ازیدکس",
-    "brand_names_en": "Microzide, Esidrix (25 mg & 50 mg Tablets)",
+    "brand_names_fa": [
+      "ه",
+      "ی",
+      "د",
+      "ر",
+      "و",
+      "ک",
+      "ل",
+      "ت",
+      "ا",
+      "ز",
+      "،",
+      " ",
+      "س"
+    ],
+    "brand_names_en": [
+      "M",
+      "i",
+      "c",
+      "r",
+      "o",
+      "z",
+      "d",
+      "e",
+      ",",
+      " ",
+      "E",
+      "s",
+      "x",
+      "(",
+      "2",
+      "5",
+      "m",
+      "g",
+      "&",
+      "0",
+      "T",
+      "a",
+      "b",
+      "l",
+      "t",
+      ")"
+    ],
     "therapeutic_class": "دیورتیک تیازیدی مهارکننده انتقال سدیم-کلر در لوله پیچ‌خورده دور",
     "primary_category": "قلب و عروق",
     "secondary_categories": [
@@ -105042,8 +111917,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Hydroxyethyl Starch (Hetastarch / HES)",
     "name_fa": "هیدروکسی‌اتیل استارچ (هتااستارچ)",
     "name_en": "Hydroxyethyl Starch (Hetastarch / HES)",
-    "brand_names_fa": "هسبان، ولولایت، هتااستارچ ۶٪",
-    "brand_names_en": "Hespan, Voluven, Tetraspan (6% in 0.9% NaCl)",
+    "brand_names_fa": [
+      "ه",
+      "س",
+      "ب",
+      "ا",
+      "ن",
+      "،",
+      " ",
+      "و",
+      "ل",
+      "ی",
+      "ت",
+      "ر",
+      "چ",
+      "۶",
+      "٪",
+      "هتااستارچ"
+    ],
+    "brand_names_en": [
+      "H",
+      "e",
+      "s",
+      "p",
+      "a",
+      "n",
+      ",",
+      " ",
+      "V",
+      "o",
+      "l",
+      "u",
+      "v",
+      "T",
+      "t",
+      "r",
+      "(",
+      "6",
+      "%",
+      "i",
+      "0",
+      ".",
+      "9",
+      "N",
+      "C",
+      ")"
+    ],
     "therapeutic_class": "محلول کلوئیدی صناعی انکوتیک افزاینده سریع حجم داخل عروقی",
     "primary_category": "سرم‌ها و الکترولیت‌ها",
     "secondary_categories": [
@@ -105177,8 +112096,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Insulin Glargine",
     "name_fa": "انسولین گلارژین (لانتوس)",
     "name_en": "Insulin Glargine",
-    "brand_names_fa": "لانتوس، بازاگلار، لانتینوس",
-    "brand_names_en": "Lantus, Basaglar, Toujeo (100 U/mL U-100 Solution)",
+    "brand_names_fa": [
+      "ل",
+      "ا",
+      "ن",
+      "ت",
+      "و",
+      "س",
+      "،",
+      " ",
+      "ب",
+      "ز",
+      "گ",
+      "ر",
+      "ی",
+      "لانتوس"
+    ],
+    "brand_names_en": [
+      "L",
+      "a",
+      "n",
+      "t",
+      "u",
+      "s",
+      ",",
+      " ",
+      "B",
+      "g",
+      "l",
+      "r",
+      "T",
+      "o",
+      "j",
+      "e",
+      "(",
+      "1",
+      "0",
+      "U",
+      "/",
+      "m",
+      "-",
+      "S",
+      "i",
+      ")"
+    ],
     "therapeutic_class": "آنالوگ طولانی‌اثر بدون قله انسولین نوترکیب انسانی (Peakless Basal Insulin)",
     "primary_category": "غدد و متابولیسم",
     "secondary_categories": [
@@ -105307,8 +112268,36 @@ const DRUGS_DATA = [
     "generic_name_en": "Insulin Detemir",
     "name_fa": "انسولین دتمیر (لومیر)",
     "name_en": "Insulin Detemir",
-    "brand_names_fa": "لومیر",
-    "brand_names_en": "Levemir (100 U/mL U-100 Solution)",
+    "brand_names_fa": [
+      "ل",
+      "و",
+      "م",
+      "ی",
+      "ر",
+      "لومیر"
+    ],
+    "brand_names_en": [
+      "L",
+      "e",
+      "v",
+      "m",
+      "i",
+      "r",
+      " ",
+      "(",
+      "1",
+      "0",
+      "U",
+      "/",
+      "-",
+      "S",
+      "o",
+      "l",
+      "u",
+      "t",
+      "n",
+      ")"
+    ],
     "therapeutic_class": "آنالوگ طولانی‌اثر انسولین پیوندشونده با اسید چرب به آلبومین",
     "primary_category": "غدد و متابولیسم",
     "secondary_categories": [
@@ -105437,8 +112426,46 @@ const DRUGS_DATA = [
     "generic_name_en": "Insulin Regular (Crystalline)",
     "name_fa": "انسولین رگولار (کریستال کوتاه‌اثر)",
     "name_en": "Insulin Regular (Crystalline)",
-    "brand_names_fa": "نوورپید، هومولین R، رگولار انسانی",
-    "brand_names_en": "Humulin R, Novolin R (100 U/mL U-100)",
+    "brand_names_fa": [
+      "ن",
+      "و",
+      "ر",
+      "پ",
+      "ی",
+      "د",
+      "،",
+      " ",
+      "ه",
+      "م",
+      "ل",
+      "R",
+      "گ",
+      "ا",
+      "س",
+      "کریستال کوتاه‌اثر"
+    ],
+    "brand_names_en": [
+      "H",
+      "u",
+      "m",
+      "l",
+      "i",
+      "n",
+      " ",
+      "R",
+      ",",
+      "N",
+      "o",
+      "v",
+      "(",
+      "1",
+      "0",
+      "U",
+      "/",
+      "L",
+      "-",
+      ")"
+    ],
     "therapeutic_class": "انسولین کریستال کوتاه‌اثر سریع و داروی طلایی اورژانس کتواسیدوز دیابتی (DKA)",
     "primary_category": "غدد و متابولیسم",
     "secondary_categories": [
@@ -105567,8 +112594,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Isoflupredone Acetate",
     "name_fa": "ایزوفلوپردون استات (پردف ۲ ایکس)",
     "name_en": "Isoflupredone Acetate",
-    "brand_names_fa": "پردف ۲ ایکس، ایزوفلوپردون دامی",
-    "brand_names_en": "Predef 2X (2 mg/mL Suspension)",
+    "brand_names_fa": [
+      "پ",
+      "ر",
+      "د",
+      "ف",
+      " ",
+      "۲",
+      "ا",
+      "ی",
+      "ک",
+      "س",
+      "،",
+      "ز",
+      "و",
+      "ل",
+      "ن",
+      "م",
+      "پردف ۲ ایکس",
+      "سوسپانسیون استریل تزریقی 2 mg/mL"
+    ],
+    "brand_names_en": [
+      "P",
+      "r",
+      "e",
+      "d",
+      "f",
+      " ",
+      "2",
+      "X",
+      "(",
+      "m",
+      "g",
+      "/",
+      "L",
+      "S",
+      "u",
+      "s",
+      "p",
+      "n",
+      "i",
+      "o",
+      ")"
+    ],
     "therapeutic_class": "کورتیکواستروئید پرتوان دوگانه گلوکوکورتیکوئیدی و مینرالوکورتیکوئیدی اختصاصی دامپزشکی",
     "primary_category": "هورمون و ضدالتهاب استروئیدی",
     "secondary_categories": [
@@ -105713,8 +112781,37 @@ const DRUGS_DATA = [
     "generic_name_en": "Isoproterenol Hydrochloride",
     "name_fa": "ایزوپروترنول (ایزوپرل)",
     "name_en": "Isoproterenol HCl",
-    "brand_names_fa": "ایزوپرل",
-    "brand_names_en": "Isuprel (0.2 mg/mL Ampules)",
+    "brand_names_fa": [
+      "ا",
+      "ی",
+      "ز",
+      "و",
+      "پ",
+      "ر",
+      "ل",
+      "ایزوپرل",
+      "آمپول تزریقی 0.2 mg/mL ایزوپروترنول"
+    ],
+    "brand_names_en": [
+      "I",
+      "s",
+      "u",
+      "p",
+      "r",
+      "e",
+      "l",
+      " ",
+      "(",
+      "0",
+      ".",
+      "2",
+      "m",
+      "g",
+      "/",
+      "L",
+      "A",
+      ")"
+    ],
     "therapeutic_class": "آگونیست خالص و قوی غیرانتخابی گیرنده‌های بتا-آدرنرژیک (بتا-۱ و بتا-۲)",
     "primary_category": "قلب و عروق",
     "secondary_categories": [
@@ -105858,8 +112955,44 @@ const DRUGS_DATA = [
     "generic_name_en": "Isotretinoin (13-cis-Retinoic Acid)",
     "name_fa": "ایزوترتینوئین (آکوتان)",
     "name_en": "Isotretinoin",
-    "brand_names_fa": "آکوتان، دکوتان، روآکوتان",
-    "brand_names_en": "Accutane, Roaccutane (10 mg & 20 mg Capsules)",
+    "brand_names_fa": [
+      "آ",
+      "ک",
+      "و",
+      "ت",
+      "ا",
+      "ن",
+      "،",
+      " ",
+      "د",
+      "ر",
+      "آکوتان"
+    ],
+    "brand_names_en": [
+      "A",
+      "c",
+      "u",
+      "t",
+      "a",
+      "n",
+      "e",
+      ",",
+      " ",
+      "R",
+      "o",
+      "(",
+      "1",
+      "0",
+      "m",
+      "g",
+      "&",
+      "2",
+      "C",
+      "p",
+      "s",
+      "l",
+      ")"
+    ],
     "therapeutic_class": "رتینوئید صناعی نسل اول و تعدیل‌کننده تکثیر اپیتلیوم و ترشح غدد سباسه",
     "primary_category": "پوست و گوش",
     "secondary_categories": [
@@ -105990,8 +113123,55 @@ const DRUGS_DATA = [
     "generic_name_en": "Ketorolac Tromethamine",
     "name_fa": "کتورولاک ترومتامین (تورادول)",
     "name_en": "Ketorolac Tromethamine",
-    "brand_names_fa": "تورادول، کتورولاک",
-    "brand_names_en": "Toradol, Acular (30 mg/mL Injection & 0.5% Eye Drops)",
+    "brand_names_fa": [
+      "ت",
+      "و",
+      "ر",
+      "ا",
+      "د",
+      "ل",
+      "،",
+      " ",
+      "ک",
+      "تورادول",
+      "آمپول تزریقی 30 mg/mL عضلانی/وریدی"
+    ],
+    "brand_names_en": [
+      "T",
+      "o",
+      "r",
+      "a",
+      "d",
+      "l",
+      ",",
+      " ",
+      "A",
+      "c",
+      "u",
+      "(",
+      "3",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      "I",
+      "n",
+      "j",
+      "e",
+      "t",
+      "i",
+      "&",
+      ".",
+      "5",
+      "%",
+      "E",
+      "y",
+      "D",
+      "p",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "ضدالتهاب غیراستروئیدی (NSAID) فوق‌العاده پرتوان با خاصیت ضددرد معادل اوپیوئیدها",
     "primary_category": "ضدالتهاب و مسکن",
     "secondary_categories": [
@@ -106134,8 +113314,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Isoniazid",
     "name_fa": "ایزونیازید (INH)",
     "name_en": "Isoniazid",
-    "brand_names_fa": "ایزونیازید، INH",
-    "brand_names_en": "Nydrazid, Laniazid (100 mg & 300 mg Tablets)",
+    "brand_names_fa": [
+      "ا",
+      "ی",
+      "ز",
+      "و",
+      "ن",
+      "د",
+      "،",
+      " ",
+      "I",
+      "N",
+      "H",
+      "INH"
+    ],
+    "brand_names_en": [
+      "N",
+      "y",
+      "d",
+      "r",
+      "a",
+      "z",
+      "i",
+      ",",
+      " ",
+      "L",
+      "n",
+      "(",
+      "1",
+      "0",
+      "m",
+      "g",
+      "&",
+      "3",
+      "T",
+      "b",
+      "l",
+      "e",
+      "t",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "آنتی‌مایکوباکتریال خط اول و مهارکننده سنتز اسید مایکولیک دیواره باکتری",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -106268,8 +113487,44 @@ const DRUGS_DATA = [
     "generic_name_en": "Probenecid",
     "name_fa": "پروبنسید (بنمید)",
     "name_en": "Probenecid",
-    "brand_names_fa": "بنمید، پروبنسید",
-    "brand_names_en": "Benemid, Probalan (500 mg Tablets)",
+    "brand_names_fa": [
+      "ب",
+      "ن",
+      "م",
+      "ی",
+      "د",
+      "،",
+      " ",
+      "پ",
+      "ر",
+      "و",
+      "س",
+      "بنمید"
+    ],
+    "brand_names_en": [
+      "B",
+      "e",
+      "n",
+      "m",
+      "i",
+      "d",
+      ",",
+      " ",
+      "P",
+      "r",
+      "o",
+      "b",
+      "a",
+      "l",
+      "(",
+      "5",
+      "0",
+      "g",
+      "T",
+      "t",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "اوریکوزوریک و مهارکننده اختصاصی ناقل آنیونی آلی کلیه (OAT-1 / OAT-3)",
     "primary_category": "کلیه و مجاری ادراری",
     "secondary_categories": [
@@ -106400,8 +113655,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Medetomidine HCl and Vatinoxan HCl",
     "name_fa": "مدتومیدین و واتینوکسان (ذن‌آلفا)",
     "name_en": "Medetomidine and Vatinoxan",
-    "brand_names_fa": "ذن‌آلفا",
-    "brand_names_en": "Zenalpha (0.5 mg/mL Medetomidine + 10 mg/mL Vatinoxan Injection)",
+    "brand_names_fa": [
+      "ذ",
+      "ن",
+      "‌",
+      "آ",
+      "ل",
+      "ف",
+      "ا",
+      "ذن‌آلفا"
+    ],
+    "brand_names_en": [
+      "Z",
+      "e",
+      "n",
+      "a",
+      "l",
+      "p",
+      "h",
+      " ",
+      "(",
+      "0",
+      ".",
+      "5",
+      "m",
+      "g",
+      "/",
+      "L",
+      "M",
+      "d",
+      "t",
+      "o",
+      "i",
+      "+",
+      "1",
+      "V",
+      "x",
+      "I",
+      "j",
+      "c",
+      ")"
+    ],
     "therapeutic_class": "آگونیست مرکزی گیرنده آلفا-۲ آدرنرژیک همراه با آنتاگونیست محیطی آلفا-۲ اختصاصی سگ",
     "primary_category": "بیهوشی و آرام‌بخشی",
     "secondary_categories": [
@@ -106543,8 +113837,46 @@ const DRUGS_DATA = [
     "generic_name_en": "Rivaroxaban",
     "name_fa": "ریواروکسابان (زارلتو)",
     "name_en": "Rivaroxaban",
-    "brand_names_fa": "زارلتو، ریواروکسابان، ریواکس",
-    "brand_names_en": "Xarelto (2.5 mg, 10 mg, 15 mg & 20 mg Tablets)",
+    "brand_names_fa": [
+      "ز",
+      "ا",
+      "ر",
+      "ل",
+      "ت",
+      "و",
+      "،",
+      " ",
+      "ی",
+      "ک",
+      "س",
+      "ب",
+      "ن",
+      "زارلتو"
+    ],
+    "brand_names_en": [
+      "X",
+      "a",
+      "r",
+      "e",
+      "l",
+      "t",
+      "o",
+      " ",
+      "(",
+      "2",
+      ".",
+      "5",
+      "m",
+      "g",
+      ",",
+      "1",
+      "0",
+      "&",
+      "T",
+      "b",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "ضدانعقاد نوین خوراکی مهارکننده مستقیم و انتخابی فاکتور انعقادی فعال دهم (Direct Factor Xa Inhibitor)",
     "primary_category": "قلب و عروق",
     "secondary_categories": [
@@ -106675,8 +114007,38 @@ const DRUGS_DATA = [
     "generic_name_en": "Sufentanil Citrate",
     "name_fa": "سوفنتانیل سیترات (سوفنتا)",
     "name_en": "Sufentanil Citrate",
-    "brand_names_fa": "سوفنتا",
-    "brand_names_en": "Sufenta (50 mcg/mL Injection)",
+    "brand_names_fa": [
+      "س",
+      "و",
+      "ف",
+      "ن",
+      "ت",
+      "ا",
+      "سوفنتا"
+    ],
+    "brand_names_en": [
+      "S",
+      "u",
+      "f",
+      "e",
+      "n",
+      "t",
+      "a",
+      " ",
+      "(",
+      "5",
+      "0",
+      "m",
+      "c",
+      "g",
+      "/",
+      "L",
+      "I",
+      "j",
+      "i",
+      "o",
+      ")"
+    ],
     "therapeutic_class": "اوپیوئید صناعی پرتوان آگونیست مو و ضددرد بی‌هوشی فوق‌تخصصی",
     "primary_category": "بیهوشی و آرام‌بخشی",
     "secondary_categories": [
@@ -106809,8 +114171,37 @@ const DRUGS_DATA = [
     "generic_name_en": "Succimer (DMSA / Meso-dimercaptosuccinic acid)",
     "name_fa": "ساکسیمر DMSA (چمت)",
     "name_en": "Succimer (DMSA)",
-    "brand_names_fa": "چمت، ساکسیمر",
-    "brand_names_en": "Chemet (100 mg Capsules)",
+    "brand_names_fa": [
+      "چ",
+      "م",
+      "ت",
+      "،",
+      " ",
+      "س",
+      "ا",
+      "ک",
+      "ی",
+      "ر",
+      "چمت"
+    ],
+    "brand_names_en": [
+      "C",
+      "h",
+      "e",
+      "m",
+      "t",
+      " ",
+      "(",
+      "1",
+      "0",
+      "g",
+      "a",
+      "p",
+      "s",
+      "u",
+      "l",
+      ")"
+    ],
     "therapeutic_class": "عامل شلاتور خوراکی فلزات سنگین با پیوند دوگانه سولفیدریل (دی‌مرکاپتو)",
     "primary_category": "سم‌شناسی و پادزهرها",
     "secondary_categories": [
@@ -106946,8 +114337,51 @@ const DRUGS_DATA = [
     "generic_name_en": "Isometamidium Chloride",
     "name_fa": "ایزومتامیدیوم کلراید (سامورین)",
     "name_en": "Isometamidium Chloride",
-    "brand_names_fa": "سامورین، تریپامیدیوم، سِکوئسترین",
-    "brand_names_en": "Samorin, Trypamidium (1 g & 2 g Sachets)",
+    "brand_names_fa": [
+      "س",
+      "ا",
+      "م",
+      "و",
+      "ر",
+      "ی",
+      "ن",
+      "،",
+      " ",
+      "ت",
+      "پ",
+      "د",
+      "ِ",
+      "ک",
+      "ئ",
+      "سامورین"
+    ],
+    "brand_names_en": [
+      "S",
+      "a",
+      "m",
+      "o",
+      "r",
+      "i",
+      "n",
+      ",",
+      " ",
+      "T",
+      "y",
+      "p",
+      "d",
+      "u",
+      "(",
+      "1",
+      "g",
+      "&",
+      "2",
+      "c",
+      "h",
+      "e",
+      "t",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "داروی اختصاصی ضدپروتوزوآ و ضدمحرک تریپانوزومیازیس دام‌های بزرگ (فنانتریدین)",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -107079,8 +114513,68 @@ const DRUGS_DATA = [
     "generic_name_en": "Fipronil",
     "name_fa": "فیپرونیل (فرانت‌لاین)",
     "name_en": "Fipronil",
-    "brand_names_fa": "فرانت‌لاین، فیپروتک، فیپرونیست",
-    "brand_names_en": "Frontline Top Spot, Frontline Plus, Effipro (9.7%–10% w/v Spot-on & 0.25% Spray)",
+    "brand_names_fa": [
+      "ف",
+      "ر",
+      "ا",
+      "ن",
+      "ت",
+      "‌",
+      "ل",
+      "ی",
+      "،",
+      " ",
+      "پ",
+      "و",
+      "ک",
+      "س",
+      "فرانت‌لاین",
+      "فرانت لاین",
+      "فیپرونیل هیمالیا",
+      "فیپرولیک"
+    ],
+    "brand_names_en": [
+      "F",
+      "r",
+      "o",
+      "n",
+      "t",
+      "l",
+      "i",
+      "e",
+      " ",
+      "T",
+      "p",
+      "S",
+      ",",
+      "P",
+      "u",
+      "s",
+      "E",
+      "f",
+      "(",
+      "9",
+      ".",
+      "7",
+      "%",
+      "–",
+      "1",
+      "0",
+      "w",
+      "/",
+      "v",
+      "-",
+      "&",
+      "2",
+      "5",
+      "a",
+      "y",
+      ")",
+      "Frontline",
+      "Frontline Plus",
+      "Fiproline",
+      "Effipro"
+    ],
     "therapeutic_class": "ضدانگل خارجی فنیل‌پیرازول مسدودکننده کانال‌های کلریدی وابسته به گابا (GABA)",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -107211,8 +114705,55 @@ const DRUGS_DATA = [
     "generic_name_en": "Pyrilamine Maleate",
     "name_fa": "پیریلامین مالئات (هیستال)",
     "name_en": "Pyrilamine Maleate",
-    "brand_names_fa": "هیستال، آنتی‌هیست، پیریلامین",
-    "brand_names_en": "Histall, Antihist (20 mg/mL Injection & Powder)",
+    "brand_names_fa": [
+      "ه",
+      "ی",
+      "س",
+      "ت",
+      "ا",
+      "ل",
+      "،",
+      " ",
+      "آ",
+      "ن",
+      "‌",
+      "پ",
+      "ر",
+      "م",
+      "هیستال",
+      "ویال تزریقی 20 mg/mL عضلانی/وریدی آهسته"
+    ],
+    "brand_names_en": [
+      "H",
+      "i",
+      "s",
+      "t",
+      "a",
+      "l",
+      ",",
+      " ",
+      "A",
+      "n",
+      "h",
+      "(",
+      "2",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      "I",
+      "j",
+      "e",
+      "c",
+      "o",
+      "&",
+      "P",
+      "w",
+      "d",
+      "r",
+      ")"
+    ],
     "therapeutic_class": "آنتی‌هیستامین نسل اول مهارکننده اختصاصی گیرنده H1 آدرنرژیک مشتق اتیلن‌دی‌آمین",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -107358,8 +114899,45 @@ const DRUGS_DATA = [
     "generic_name_en": "Quinacrine Hydrochloride",
     "name_fa": "کویناکرین هیدروکلراید (آتابرین)",
     "name_en": "Quinacrine HCl",
-    "brand_names_fa": "آتابرین، مپاکرین",
-    "brand_names_en": "Atabrine, Mepacrine (100 mg Tablets)",
+    "brand_names_fa": [
+      "آ",
+      "ت",
+      "ا",
+      "ب",
+      "ر",
+      "ی",
+      "ن",
+      "،",
+      " ",
+      "م",
+      "پ",
+      "ک",
+      "آتابرین"
+    ],
+    "brand_names_en": [
+      "A",
+      "t",
+      "a",
+      "b",
+      "r",
+      "i",
+      "n",
+      "e",
+      ",",
+      " ",
+      "M",
+      "p",
+      "c",
+      "(",
+      "1",
+      "0",
+      "m",
+      "g",
+      "T",
+      "l",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "ضدپروتوزوآ و ضدانگل مشتق آکریدین با مهار اتصال DNA باکتریایی و تک‌یاخته",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -107492,8 +115070,44 @@ const DRUGS_DATA = [
     "generic_name_en": "Glycerin Oral (Glycerol)",
     "name_fa": "گلیسیرین خوراکی (گلیسرول)",
     "name_en": "Glycerin Oral (Glycerol)",
-    "brand_names_fa": "گلیسیرین خوراکی، گلیسرول خالص",
-    "brand_names_en": "Osmoglyn, Glycerol Oral Liquid",
+    "brand_names_fa": [
+      "گ",
+      "ل",
+      "ی",
+      "س",
+      "ر",
+      "ن",
+      " ",
+      "خ",
+      "و",
+      "ا",
+      "ک",
+      "،",
+      "ص",
+      "گلیسرول"
+    ],
+    "brand_names_en": [
+      "O",
+      "s",
+      "m",
+      "o",
+      "g",
+      "l",
+      "y",
+      "n",
+      ",",
+      " ",
+      "G",
+      "c",
+      "e",
+      "r",
+      "a",
+      "L",
+      "i",
+      "q",
+      "u",
+      "d"
+    ],
     "therapeutic_class": "محلول هایپراسموتیک قوی خوراکی کاهنده سریع فشار داخل چشم و مغز",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -107624,8 +115238,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Guaifenesin Intravenous (Guaiphenesin / GG)",
     "name_fa": "گوای‌فنزین وریدی (گوایلاکسین)",
     "name_en": "Guaifenesin IV (Guailaxin)",
-    "brand_names_fa": "گوایلاکسین، گوای‌فنزین دامی",
-    "brand_names_en": "Guailaxin, Gecolate (50 g / 500 mL 5% & 10% Solution)",
+    "brand_names_fa": [
+      "گ",
+      "و",
+      "ا",
+      "ی",
+      "ل",
+      "ک",
+      "س",
+      "ن",
+      "،",
+      " ",
+      "‌",
+      "ف",
+      "ز",
+      "د",
+      "م",
+      "گوایلاکسین",
+      "GG"
+    ],
+    "brand_names_en": [
+      "G",
+      "u",
+      "a",
+      "i",
+      "l",
+      "x",
+      "n",
+      ",",
+      " ",
+      "e",
+      "c",
+      "o",
+      "t",
+      "(",
+      "5",
+      "0",
+      "g",
+      "/",
+      "m",
+      "L",
+      "%",
+      "&",
+      "1",
+      "S",
+      ")"
+    ],
     "therapeutic_class": "شل‌کننده مرکزی عضلات اسکلتی و کاهنده انتقال تکانه در نورون‌های رابط ساقه مغز و نخاع",
     "primary_category": "بیهوشی و آرام‌بخشی",
     "secondary_categories": [
@@ -107758,8 +115416,35 @@ const DRUGS_DATA = [
     "generic_name_en": "Ropinirole Ophthalmic Solution",
     "name_fa": "روپینیرول چشمی (کلوور)",
     "name_en": "Ropinirole Ophthalmic",
-    "brand_names_fa": "کلوور",
-    "brand_names_en": "Clevor (30 mg/mL Eye Drops)",
+    "brand_names_fa": [
+      "ک",
+      "ل",
+      "و",
+      "ر",
+      "کلوور"
+    ],
+    "brand_names_en": [
+      "C",
+      "l",
+      "e",
+      "v",
+      "o",
+      "r",
+      " ",
+      "(",
+      "3",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      "E",
+      "y",
+      "D",
+      "p",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "آگونیست اختصاصی و پرتوان گیرنده‌های دوپامینی D2 و القاکننده سریع تهوع",
     "primary_category": "سم‌شناسی و پادزهرها",
     "secondary_categories": [
@@ -107890,8 +115575,53 @@ const DRUGS_DATA = [
     "generic_name_en": "Florfenicol and Flunixin Meglumine",
     "name_fa": "فلورفنیکل و فلونیکسین (رِسفلور)",
     "name_en": "Florfenicol & Flunixin Meglumine",
-    "brand_names_fa": "رِسفلور گلد، فلورفلوکسین، فلوفلو",
-    "brand_names_en": "Resflor Gold (300 mg/mL Florfenicol + 16.5 mg/mL Flunixin)",
+    "brand_names_fa": [
+      "ر",
+      "ِ",
+      "س",
+      "ف",
+      "ل",
+      "و",
+      " ",
+      "گ",
+      "د",
+      "،",
+      "ک",
+      "ی",
+      "ن",
+      "رِسفلور گلد"
+    ],
+    "brand_names_en": [
+      "R",
+      "e",
+      "s",
+      "f",
+      "l",
+      "o",
+      "r",
+      " ",
+      "G",
+      "d",
+      "(",
+      "3",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      "F",
+      "n",
+      "i",
+      "c",
+      "+",
+      "1",
+      "6",
+      ".",
+      "5",
+      "u",
+      "x",
+      ")"
+    ],
     "therapeutic_class": "ترکیب ضدمیکروب وسیع‌الطیف مهارکننده سنتز پروتئین با ضدالتهاب غیراستروئیدی پرتوان تب‌بر",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -108034,8 +115764,40 @@ const DRUGS_DATA = [
     "generic_name_en": "Afoxolaner and Milbemycin Oxime",
     "name_fa": "آفوکسولانر و میلبمایسین (نکس‌گارد اسپکترا)",
     "name_en": "Afoxolaner & Milbemycin Oxime",
-    "brand_names_fa": "نکس‌گارد اسپکترا",
-    "brand_names_en": "NexGard Spectra Chewables",
+    "brand_names_fa": [
+      "ن",
+      "ک",
+      "س",
+      "‌",
+      "گ",
+      "ا",
+      "ر",
+      "د",
+      " ",
+      "پ",
+      "ت",
+      "نکس‌گارد اسپکترا"
+    ],
+    "brand_names_en": [
+      "N",
+      "e",
+      "x",
+      "G",
+      "a",
+      "r",
+      "d",
+      " ",
+      "S",
+      "p",
+      "c",
+      "t",
+      "C",
+      "h",
+      "w",
+      "b",
+      "l",
+      "s"
+    ],
     "therapeutic_class": "ضدانگل وسیع‌الطیف اندکتوسید ترکیبی ایزوکسازولین + لاکتون ماکروسیکلیک خوراکی",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -108163,8 +115925,60 @@ const DRUGS_DATA = [
     "generic_name_en": "Fluralaner Topical (Bravecto Plus)",
     "name_fa": "فلورالانر تاپیکال موضعی (براوکتو پلاس)",
     "name_en": "Fluralaner Topical (Bravecto Plus)",
-    "brand_names_fa": "براوکتو پلاس گربه، براوکتو اسپات-آن",
-    "brand_names_en": "Bravecto Plus for Cats (Fluralaner 280 mg/mL + Moxidectin 14 mg/mL)",
+    "brand_names_fa": [
+      "ب",
+      "ر",
+      "ا",
+      "و",
+      "ک",
+      "ت",
+      " ",
+      "پ",
+      "ل",
+      "س",
+      "گ",
+      "ه",
+      "،",
+      "-",
+      "آ",
+      "ن",
+      "براوکتو پلاس گربه"
+    ],
+    "brand_names_en": [
+      "B",
+      "r",
+      "a",
+      "v",
+      "e",
+      "c",
+      "t",
+      "o",
+      " ",
+      "P",
+      "l",
+      "u",
+      "s",
+      "f",
+      "C",
+      "(",
+      "F",
+      "n",
+      "2",
+      "8",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      "+",
+      "M",
+      "x",
+      "i",
+      "d",
+      "1",
+      "4",
+      ")"
+    ],
     "therapeutic_class": "ضدانگل خارجی و داخلی ۱۲ هفته‌ای موضعی ایزوکسازولین + موکسیدکتین",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -108293,8 +116107,51 @@ const DRUGS_DATA = [
     "generic_name_en": "Ceftiofur Hydrochloride Suspension (Ready-to-Use)",
     "name_fa": "سفتیوفور آماده (اکسنل RTU)",
     "name_en": "Ceftiofur HCl RTU",
-    "brand_names_fa": "اکسنل آر تی یو، سفتیوسل، سفتیوتک",
-    "brand_names_en": "Excenel RTU, Naxcel (50 mg/mL Suspension)",
+    "brand_names_fa": [
+      "ا",
+      "ک",
+      "س",
+      "ن",
+      "ل",
+      " ",
+      "آ",
+      "ر",
+      "ت",
+      "ی",
+      "و",
+      "،",
+      "ف",
+      "اکسنل RTU"
+    ],
+    "brand_names_en": [
+      "E",
+      "x",
+      "c",
+      "e",
+      "n",
+      "l",
+      " ",
+      "R",
+      "T",
+      "U",
+      ",",
+      "N",
+      "a",
+      "(",
+      "5",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      "S",
+      "u",
+      "s",
+      "p",
+      "i",
+      "o",
+      ")"
+    ],
     "therapeutic_class": "سفالوسپورین نسل سوم بتالاکتام سوسپانسیون آماده مصرف روغنی اختصاصی دامپزشکی",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -108438,8 +116295,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Ammonium Tetrathiomolybdate (ATTM)",
     "name_fa": "آمونیوم تتراسیومولیبدات (ATTM)",
     "name_en": "Ammonium Tetrathiomolybdate",
-    "brand_names_fa": "تتراسیومولیبدات، مولیبدات آمونیوم",
-    "brand_names_en": "ATTM (Injectable / Oral Compounded)",
+    "brand_names_fa": [
+      "ت",
+      "ر",
+      "ا",
+      "س",
+      "ی",
+      "و",
+      "م",
+      "ل",
+      "ب",
+      "د",
+      "،",
+      " ",
+      "آ",
+      "ن",
+      "ATTM"
+    ],
+    "brand_names_en": [
+      "A",
+      "T",
+      "M",
+      " ",
+      "(",
+      "I",
+      "n",
+      "j",
+      "e",
+      "c",
+      "t",
+      "a",
+      "b",
+      "l",
+      "/",
+      "O",
+      "r",
+      "C",
+      "o",
+      "m",
+      "p",
+      "u",
+      "d",
+      ")"
+    ],
     "therapeutic_class": "شلاتور فوق‌العاده اختصاصی و قوی مس با تشکیل کمپلکس چهارگانه مس-مولیبدن نامحلول",
     "primary_category": "سم‌شناسی و پادزهرها",
     "secondary_categories": [
@@ -108585,8 +116483,51 @@ const DRUGS_DATA = [
     "generic_name_en": "Inactivated Parapoxvirus Ovis Immunomodulator",
     "name_fa": "پاراپوکس اویس غیرفعال (زایلکسیس)",
     "name_en": "Parapoxvirus Ovis (Zylexis)",
-    "brand_names_fa": "زایلکسیس، بایپامون",
-    "brand_names_en": "Zylexis, Baypamun (Lyophilized Powder with Diluent)",
+    "brand_names_fa": [
+      "ز",
+      "ا",
+      "ی",
+      "ل",
+      "ک",
+      "س",
+      "،",
+      " ",
+      "ب",
+      "پ",
+      "م",
+      "و",
+      "ن",
+      "زایلکسیس"
+    ],
+    "brand_names_en": [
+      "Z",
+      "y",
+      "l",
+      "e",
+      "x",
+      "i",
+      "s",
+      ",",
+      " ",
+      "B",
+      "a",
+      "p",
+      "m",
+      "u",
+      "n",
+      "(",
+      "L",
+      "o",
+      "h",
+      "z",
+      "d",
+      "P",
+      "w",
+      "r",
+      "t",
+      "D",
+      ")"
+    ],
     "therapeutic_class": "تعدیل‌کننده و محرک غیراختصاصی سیستم ایمنی ذاتی و القاکننده اینترفرون‌ها",
     "primary_category": "واکسن و بیولوژیک",
     "secondary_categories": [
@@ -108718,8 +116659,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Zinc Acetate Oral",
     "name_fa": "زینک استات خوراکی (گالزین)",
     "name_en": "Zinc Acetate Oral",
-    "brand_names_fa": "گالزین، زینک استات دارویی",
-    "brand_names_en": "Galzin (25 mg & 50 mg Elemental Zinc Capsules)",
+    "brand_names_fa": [
+      "گ",
+      "ا",
+      "ل",
+      "ز",
+      "ی",
+      "ن",
+      "،",
+      " ",
+      "ک",
+      "س",
+      "ت",
+      "د",
+      "ر",
+      "و",
+      "گالزین"
+    ],
+    "brand_names_en": [
+      "G",
+      "a",
+      "l",
+      "z",
+      "i",
+      "n",
+      " ",
+      "(",
+      "2",
+      "5",
+      "m",
+      "g",
+      "&",
+      "0",
+      "E",
+      "e",
+      "t",
+      "Z",
+      "c",
+      "C",
+      "p",
+      "s",
+      "u",
+      ")"
+    ],
     "therapeutic_class": "القاگر ترشح متالوتئونین روده و مهارکننده اختصاصی جذب روده‌ای مس",
     "primary_category": "غدد و متابولیسم",
     "secondary_categories": [
@@ -108850,8 +116832,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Halofuginone Lactate",
     "name_fa": "هالوفوژینون لاکتات (هالوکر)",
     "name_en": "Halofuginone Lactate",
-    "brand_names_fa": "هالوکر، هالوفوجینون دامی",
-    "brand_names_en": "Halocur (0.5 mg/mL Oral Solution)",
+    "brand_names_fa": [
+      "ه",
+      "ا",
+      "ل",
+      "و",
+      "ک",
+      "ر",
+      "،",
+      " ",
+      "ف",
+      "ج",
+      "ی",
+      "ن",
+      "د",
+      "م",
+      "هالوکر"
+    ],
+    "brand_names_en": [
+      "H",
+      "a",
+      "l",
+      "o",
+      "c",
+      "u",
+      "r",
+      " ",
+      "(",
+      "0",
+      ".",
+      "5",
+      "m",
+      "g",
+      "/",
+      "L",
+      "O",
+      "S",
+      "t",
+      "i",
+      "n",
+      ")"
+    ],
     "therapeutic_class": "ضدپروتوزوآ کینازولینونی اختصاصی مهارکننده تکثیر کریپتوسپوریدیوم",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -108981,8 +117002,56 @@ const DRUGS_DATA = [
     "generic_name_en": "Tricaine Methanesulfonate (MS-222)",
     "name_fa": "تریکائین متان‌سولفونات (MS-222)",
     "name_en": "Tricaine Methanesulfonate (MS-222)",
-    "brand_names_fa": "فینکوئل، ام اس ۲۲۲، تریکائین-اس",
-    "brand_names_en": "Finquel, Tricaine-S, TMS (Powder for immersion bath)",
+    "brand_names_fa": [
+      "ف",
+      "ی",
+      "ن",
+      "ک",
+      "و",
+      "ئ",
+      "ل",
+      "،",
+      " ",
+      "ا",
+      "م",
+      "س",
+      "۲",
+      "ت",
+      "ر",
+      "-",
+      "فینکوئل",
+      "MS-222"
+    ],
+    "brand_names_en": [
+      "F",
+      "i",
+      "n",
+      "q",
+      "u",
+      "e",
+      "l",
+      ",",
+      " ",
+      "T",
+      "r",
+      "c",
+      "a",
+      "-",
+      "S",
+      "M",
+      "(",
+      "P",
+      "o",
+      "w",
+      "d",
+      "f",
+      "m",
+      "s",
+      "b",
+      "t",
+      "h",
+      ")"
+    ],
     "therapeutic_class": "بیهوش‌کننده عمومی و بی‌حس‌کننده موضعی مسدودکننده کانال سدیم اختصاصی آبزیان و دوزیستان",
     "primary_category": "بیهوشی و آرام‌بخشی",
     "secondary_categories": [
@@ -109112,8 +117181,38 @@ const DRUGS_DATA = [
     "generic_name_en": "Tigilanol Tiglate",
     "name_fa": "تیگیلانول تیگلات (استلفونتا)",
     "name_en": "Tigilanol Tiglate",
-    "brand_names_fa": "استلفونتا",
-    "brand_names_en": "Stelfonta (1 mg/mL Injection)",
+    "brand_names_fa": [
+      "ا",
+      "س",
+      "ت",
+      "ل",
+      "ف",
+      "و",
+      "ن",
+      "استلفونتا"
+    ],
+    "brand_names_en": [
+      "S",
+      "t",
+      "e",
+      "l",
+      "f",
+      "o",
+      "n",
+      "a",
+      " ",
+      "(",
+      "1",
+      "m",
+      "g",
+      "/",
+      "L",
+      "I",
+      "j",
+      "c",
+      "i",
+      ")"
+    ],
     "therapeutic_class": "استر دی‌ترپنوئیدی ضدتومور القاکننده پروتئین کیناز C و نکروز توموری داخل ضایعه اختصاصی سگ",
     "primary_category": "شیمی‌درمانی و انکولوژی",
     "secondary_categories": [
@@ -109256,8 +117355,41 @@ const DRUGS_DATA = [
     "generic_name_en": "Verdinexor",
     "name_fa": "وردینکسور (لاوردیا)",
     "name_en": "Verdinexor",
-    "brand_names_fa": "لاوردیا",
-    "brand_names_en": "Laverdia-CA1 (10 mg & 50 mg Tablets)",
+    "brand_names_fa": [
+      "ل",
+      "ا",
+      "و",
+      "ر",
+      "د",
+      "ی",
+      "لاوردیا"
+    ],
+    "brand_names_en": [
+      "L",
+      "a",
+      "v",
+      "e",
+      "r",
+      "d",
+      "i",
+      "-",
+      "C",
+      "A",
+      "1",
+      " ",
+      "(",
+      "0",
+      "m",
+      "g",
+      "&",
+      "5",
+      "T",
+      "b",
+      "l",
+      "t",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "مهارکننده اختصاصی انتقال هسته‌ای اکسپورتین-۱ (SINE / XPO1 Inhibitor) ضدلنفوم سگ",
     "primary_category": "شیمی‌درمانی و انکولوژی",
     "secondary_categories": [
@@ -109386,8 +117518,53 @@ const DRUGS_DATA = [
     "generic_name_en": "Zoledronic Acid (Zoledronate)",
     "name_fa": "زولدرونیک اسید (زومتا)",
     "name_en": "Zoledronic Acid",
-    "brand_names_fa": "زومتا، آکلاستا، زولدرونیک",
-    "brand_names_en": "Zometa, Reclast (4 mg/5 mL Concentrate for IV Infusion)",
+    "brand_names_fa": [
+      "ز",
+      "و",
+      "م",
+      "ت",
+      "ا",
+      "،",
+      " ",
+      "آ",
+      "ک",
+      "ل",
+      "س",
+      "د",
+      "ر",
+      "ن",
+      "ی",
+      "زومتا"
+    ],
+    "brand_names_en": [
+      "Z",
+      "o",
+      "m",
+      "e",
+      "t",
+      "a",
+      ",",
+      " ",
+      "R",
+      "c",
+      "l",
+      "s",
+      "(",
+      "4",
+      "g",
+      "/",
+      "5",
+      "L",
+      "C",
+      "n",
+      "r",
+      "f",
+      "I",
+      "V",
+      "u",
+      "i",
+      ")"
+    ],
     "therapeutic_class": "بیس‌فسفونات نیتروژن‌دار نسل سوم فوق‌العاده پرتوان مهارکننده استئوکلاست‌ها",
     "primary_category": "عضلانی و اسکلتی",
     "secondary_categories": [
@@ -109524,8 +117701,53 @@ const DRUGS_DATA = [
     "generic_name_en": "Selamectin and Sarolaner",
     "name_fa": "سلامکتین و سارولانر (روولوشن پلاس)",
     "name_en": "Selamectin & Sarolaner",
-    "brand_names_fa": "روولوشن پلاس، استرانگ‌هلد پلاس",
-    "brand_names_en": "Revolution Plus, Stronghold Plus (Topical Spot-on for Cats)",
+    "brand_names_fa": [
+      "ر",
+      "و",
+      "ل",
+      "ش",
+      "ن",
+      " ",
+      "پ",
+      "ا",
+      "س",
+      "،",
+      "ت",
+      "گ",
+      "‌",
+      "ه",
+      "د",
+      "روولوشن پلاس گربه"
+    ],
+    "brand_names_en": [
+      "R",
+      "e",
+      "v",
+      "o",
+      "l",
+      "u",
+      "t",
+      "i",
+      "n",
+      " ",
+      "P",
+      "s",
+      ",",
+      "S",
+      "r",
+      "g",
+      "h",
+      "d",
+      "(",
+      "T",
+      "p",
+      "c",
+      "a",
+      "-",
+      "f",
+      "C",
+      ")"
+    ],
     "therapeutic_class": "ضدانگل خارجی و داخلی وسیع‌الطیف دوگانه لاکتون ماکروسیکلیک + ایزوکسازولین موضعی",
     "primary_category": "ضدانگل و ضدمیکروب",
     "secondary_categories": [
@@ -109654,8 +117876,48 @@ const DRUGS_DATA = [
     "generic_name_en": "Bimatoprost Ophthalmic",
     "name_fa": "بیماتوپروست چشمی (لومیگان)",
     "name_en": "Bimatoprost Ophthalmic",
-    "brand_names_fa": "لومیگان، بینابروست",
-    "brand_names_en": "Lumigan (0.01% & 0.03% Ophthalmic Solution)",
+    "brand_names_fa": [
+      "ل",
+      "و",
+      "م",
+      "ی",
+      "گ",
+      "ا",
+      "ن",
+      "،",
+      " ",
+      "ب",
+      "ر",
+      "س",
+      "ت",
+      "لومیگان"
+    ],
+    "brand_names_en": [
+      "L",
+      "u",
+      "m",
+      "i",
+      "g",
+      "a",
+      "n",
+      " ",
+      "(",
+      "0",
+      ".",
+      "1",
+      "%",
+      "&",
+      "3",
+      "O",
+      "p",
+      "h",
+      "t",
+      "l",
+      "c",
+      "S",
+      "o",
+      ")"
+    ],
     "therapeutic_class": "آنالوگ سنتتیک پروستامید افزاینده خروج مایع زلالیه از مسیر یووه‌اسکلرال",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -109784,8 +118046,44 @@ const DRUGS_DATA = [
     "generic_name_en": "Brinzolamide Ophthalmic",
     "name_fa": "برینزولامید چشمی (آزوپت)",
     "name_en": "Brinzolamide Ophthalmic",
-    "brand_names_fa": "آزوپت، برینزوپت",
-    "brand_names_en": "Azopt (1% Ophthalmic Suspension)",
+    "brand_names_fa": [
+      "آ",
+      "ز",
+      "و",
+      "پ",
+      "ت",
+      "،",
+      " ",
+      "ب",
+      "ر",
+      "ی",
+      "ن",
+      "آزوپت"
+    ],
+    "brand_names_en": [
+      "A",
+      "z",
+      "o",
+      "p",
+      "t",
+      " ",
+      "(",
+      "1",
+      "%",
+      "O",
+      "h",
+      "a",
+      "l",
+      "m",
+      "i",
+      "c",
+      "S",
+      "u",
+      "s",
+      "e",
+      "n",
+      ")"
+    ],
     "therapeutic_class": "مهارکننده موضعی فوق‌العاده اختصاصی آنزیم کربنیک انیدراز چشمی (تیپ ۲)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -109916,8 +118214,54 @@ const DRUGS_DATA = [
     "generic_name_en": "Brimonidine Tartrate Ophthalmic",
     "name_fa": "بریمونیدین چشمی (آلفاگان)",
     "name_en": "Brimonidine Tartrate",
-    "brand_names_fa": "آلفاگان، بریموتک، بریمونیدین",
-    "brand_names_en": "Alphagan, Alphagan-P (0.1%, 0.15% & 0.2% Eye Drops)",
+    "brand_names_fa": [
+      "آ",
+      "ل",
+      "ف",
+      "ا",
+      "گ",
+      "ن",
+      "،",
+      " ",
+      "ب",
+      "ر",
+      "ی",
+      "م",
+      "و",
+      "ت",
+      "ک",
+      "د",
+      "آلفاگان"
+    ],
+    "brand_names_en": [
+      "A",
+      "l",
+      "p",
+      "h",
+      "a",
+      "g",
+      "n",
+      ",",
+      " ",
+      "-",
+      "P",
+      "(",
+      "0",
+      ".",
+      "1",
+      "%",
+      "5",
+      "&",
+      "2",
+      "E",
+      "y",
+      "e",
+      "D",
+      "r",
+      "o",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "آگونیست انتخابی قوی گیرنده‌های آلفا-۲ آدرنرژیک چشمی با اثر محافظت از عصب بینایی (نوروپروتکتیو)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -110046,8 +118390,58 @@ const DRUGS_DATA = [
     "generic_name_en": "Acetylcysteine Ophthalmic (NAC)",
     "name_fa": "استیل‌سیستئین چشمی (قطره NAC)",
     "name_en": "Acetylcysteine Ophthalmic",
-    "brand_names_fa": "قطره ان استیل سیستئین، موکومست چشمی",
-    "brand_names_en": "Mucomyst Ophthalmic, NAC 5% & 10% Compounded Drops",
+    "brand_names_fa": [
+      "ق",
+      "ط",
+      "ر",
+      "ه",
+      " ",
+      "ا",
+      "ن",
+      "س",
+      "ت",
+      "ی",
+      "ل",
+      "ئ",
+      "،",
+      "م",
+      "و",
+      "ک",
+      "چ",
+      "ش",
+      "قطره NAC"
+    ],
+    "brand_names_en": [
+      "M",
+      "u",
+      "c",
+      "o",
+      "m",
+      "y",
+      "s",
+      "t",
+      " ",
+      "O",
+      "p",
+      "h",
+      "a",
+      "l",
+      "i",
+      ",",
+      "N",
+      "A",
+      "C",
+      "5",
+      "%",
+      "&",
+      "1",
+      "0",
+      "n",
+      "d",
+      "e",
+      "D",
+      "r"
+    ],
     "therapeutic_class": "مهارکننده پرتوان آنزیم‌های کلاژناز و متالوپروتئیناز بافتی (MMP) و مالتیک موکوس",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -110177,8 +118571,53 @@ const DRUGS_DATA = [
     "generic_name_en": "Bromfenac Sodium Ophthalmic",
     "name_fa": "برومفناک چشمی (زیبروم)",
     "name_en": "Bromfenac Ophthalmic",
-    "brand_names_fa": "زیبروم، بروم‌دی، برومفناک",
-    "brand_names_en": "Xibrom, Bromday, Prolensa (0.07% & 0.09% Eye Drops)",
+    "brand_names_fa": [
+      "ز",
+      "ی",
+      "ب",
+      "ر",
+      "و",
+      "م",
+      "،",
+      " ",
+      "‌",
+      "د",
+      "ف",
+      "ن",
+      "ا",
+      "ک",
+      "زیبروم"
+    ],
+    "brand_names_en": [
+      "X",
+      "i",
+      "b",
+      "r",
+      "o",
+      "m",
+      ",",
+      " ",
+      "B",
+      "d",
+      "a",
+      "y",
+      "P",
+      "l",
+      "e",
+      "n",
+      "s",
+      "(",
+      "0",
+      ".",
+      "7",
+      "%",
+      "&",
+      "9",
+      "E",
+      "D",
+      "p",
+      ")"
+    ],
     "therapeutic_class": "ضدالتهاب غیراستروئیدی (NSAID) چشمی فوق‌العاده نفوذپذیر و طولانی‌اثر",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -110307,8 +118746,38 @@ const DRUGS_DATA = [
     "generic_name_en": "Apraclonidine Ophthalmic",
     "name_fa": "آپراکلونیدین چشمی (آیوپیدین)",
     "name_en": "Apraclonidine Ophthalmic",
-    "brand_names_fa": "آیوپیدین",
-    "brand_names_en": "Iopidine (0.5% & 1% Eye Drops)",
+    "brand_names_fa": [
+      "آ",
+      "ی",
+      "و",
+      "پ",
+      "د",
+      "ن",
+      "آیوپیدین"
+    ],
+    "brand_names_en": [
+      "I",
+      "o",
+      "p",
+      "i",
+      "d",
+      "n",
+      "e",
+      " ",
+      "(",
+      "0",
+      ".",
+      "5",
+      "%",
+      "&",
+      "1",
+      "E",
+      "y",
+      "D",
+      "r",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "آگونیست انتخابی آلفا-۲ آدرنرژیک کاهنده جهشی فشار داخل چشم",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -110436,8 +118905,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Alteplase Intracameral (tPA)",
     "name_fa": "آلتپلاز چشمی (tPA)",
     "name_en": "Alteplase Ophthalmic (tPA)",
-    "brand_names_fa": "اکتیواز چشمی، آلتپلاز",
-    "brand_names_en": "Activase tPA (Intracameral 25 mcg Injection)",
+    "brand_names_fa": [
+      "ا",
+      "ک",
+      "ت",
+      "ی",
+      "و",
+      "ز",
+      " ",
+      "چ",
+      "ش",
+      "م",
+      "،",
+      "آ",
+      "ل",
+      "پ",
+      "tPA داخل چشمی"
+    ],
+    "brand_names_en": [
+      "A",
+      "c",
+      "t",
+      "i",
+      "v",
+      "a",
+      "s",
+      "e",
+      " ",
+      "P",
+      "(",
+      "I",
+      "n",
+      "r",
+      "m",
+      "l",
+      "2",
+      "5",
+      "g",
+      "j",
+      "o",
+      ")"
+    ],
     "therapeutic_class": "فعال‌کننده نوترکیب پلاسمینوژن بافتی و فیبرینولیتیک اختصاصی حل‌کننده لخته خون",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -110569,8 +119077,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Amphotericin B Ophthalmic",
     "name_fa": "آمفوتریسین B چشمی",
     "name_en": "Amphotericin B Ophthalmic",
-    "brand_names_fa": "آمفوتریسین چشمی، فوتریسین چشمی",
-    "brand_names_en": "Amphotericin B 0.15%–0.5% Compounded Ophthalmic Drops",
+    "brand_names_fa": [
+      "آ",
+      "م",
+      "ف",
+      "و",
+      "ت",
+      "ر",
+      "ی",
+      "س",
+      "ن",
+      " ",
+      "چ",
+      "ش",
+      "،"
+    ],
+    "brand_names_en": [
+      "A",
+      "m",
+      "p",
+      "h",
+      "o",
+      "t",
+      "e",
+      "r",
+      "i",
+      "c",
+      "n",
+      " ",
+      "B",
+      "0",
+      ".",
+      "1",
+      "5",
+      "%",
+      "–",
+      "C",
+      "u",
+      "d",
+      "O",
+      "a",
+      "l",
+      "D",
+      "s"
+    ],
     "therapeutic_class": "ضدقارچ پرتوان پلی‌ان اتصالی به ارگوسترول غشای قارچی موضعی چشمی",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -110701,8 +119251,41 @@ const DRUGS_DATA = [
     "generic_name_en": "Besifloxacin Ophthalmic",
     "name_fa": "بسی‌فلوکساسین چشمی (بسیوانس)",
     "name_en": "Besifloxacin Ophthalmic",
-    "brand_names_fa": "بسیوانس",
-    "brand_names_en": "Besivance (0.6% Ophthalmic Suspension)",
+    "brand_names_fa": [
+      "ب",
+      "س",
+      "ی",
+      "و",
+      "ا",
+      "ن",
+      "بسیوانس"
+    ],
+    "brand_names_en": [
+      "B",
+      "e",
+      "s",
+      "i",
+      "v",
+      "a",
+      "n",
+      "c",
+      " ",
+      "(",
+      "0",
+      ".",
+      "6",
+      "%",
+      "O",
+      "p",
+      "h",
+      "t",
+      "l",
+      "m",
+      "S",
+      "u",
+      "o",
+      ")"
+    ],
     "therapeutic_class": "فلوروکینولون کلردار نسل چهارم مهارکننده دوگانه DNA ژیراز و توپوایزومراز IV",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -110831,8 +119414,44 @@ const DRUGS_DATA = [
     "generic_name_en": "Betaxolol Hydrochloride Ophthalmic",
     "name_fa": "بتاکسولول چشمی (بتوپتیک)",
     "name_en": "Betaxolol Ophthalmic",
-    "brand_names_fa": "بتوپتیک، بتولول",
-    "brand_names_en": "Betoptic, Betoptic-S (0.25% & 0.5% Eye Drops)",
+    "brand_names_fa": [
+      "ب",
+      "ت",
+      "و",
+      "پ",
+      "ی",
+      "ک",
+      "،",
+      " ",
+      "ل",
+      "بتوپتیک"
+    ],
+    "brand_names_en": [
+      "B",
+      "e",
+      "t",
+      "o",
+      "p",
+      "i",
+      "c",
+      ",",
+      " ",
+      "-",
+      "S",
+      "(",
+      "0",
+      ".",
+      "2",
+      "5",
+      "%",
+      "&",
+      "E",
+      "y",
+      "D",
+      "r",
+      "s",
+      ")"
+    ],
     "therapeutic_class": "آنتاگونیست کاردیوسلکتیو گیرنده بتا-۱ آدرنرژیک کاهنده ترشح مایع زلالیه",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -110960,8 +119579,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Medium-Chain Triglycerides Oil (MCT Oil)",
     "name_fa": "روغن تری‌گلیسیرید زنجیره متوسط (MCT)",
     "name_en": "Medium-Chain Triglycerides (MCT Oil)",
-    "brand_names_fa": "روغن ام سی تی، کتوول",
-    "brand_names_en": "Purina NeuroCare MCT, MCT Oil (Caprylic C8 & Capric C10)",
+    "brand_names_fa": [
+      "ر",
+      "و",
+      "غ",
+      "ن",
+      " ",
+      "ا",
+      "م",
+      "س",
+      "ی",
+      "ت",
+      "،",
+      "ک",
+      "ل",
+      "روغن MCT"
+    ],
+    "brand_names_en": [
+      "P",
+      "u",
+      "r",
+      "i",
+      "n",
+      "a",
+      " ",
+      "N",
+      "e",
+      "o",
+      "C",
+      "M",
+      "T",
+      ",",
+      "O",
+      "l",
+      "(",
+      "p",
+      "y",
+      "c",
+      "8",
+      "&",
+      "1",
+      "0",
+      ")"
+    ],
     "therapeutic_class": "مکمل رژیمی کتوژنیک نوروپروتکتیو تامین‌کننده سوخت اجسام کتونی برای مغز",
     "primary_category": "اعصاب و روان",
     "secondary_categories": [
@@ -111092,8 +119752,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Hemoglobin Glutamer-200 Bovine (HBOC)",
     "name_fa": "هموگلوبین گلوتامر ۲۰۰ (اکسی‌گلوبین)",
     "name_en": "Hemoglobin Glutamer-200 (Oxyglobin)",
-    "brand_names_fa": "اکسی‌گلوبین",
-    "brand_names_en": "Oxyglobin (13 g/dL Polymerized Bovine Hemoglobin Solution)",
+    "brand_names_fa": [
+      "ا",
+      "ک",
+      "س",
+      "ی",
+      "‌",
+      "گ",
+      "ل",
+      "و",
+      "ب",
+      "ن",
+      "اکسی‌گلوبین"
+    ],
+    "brand_names_en": [
+      "O",
+      "x",
+      "y",
+      "g",
+      "l",
+      "o",
+      "b",
+      "i",
+      "n",
+      " ",
+      "(",
+      "1",
+      "3",
+      "/",
+      "d",
+      "L",
+      "P",
+      "m",
+      "e",
+      "r",
+      "z",
+      "B",
+      "v",
+      "H",
+      "S",
+      "u",
+      "t",
+      ")"
+    ],
     "therapeutic_class": "محلول ناقل اکسیژن مبتنی بر هموگلوبین پلیمریزه گاوی (خون مصنوعی)",
     "primary_category": "خون و انکولوژی",
     "secondary_categories": [
@@ -111224,8 +119925,56 @@ const DRUGS_DATA = [
     "generic_name_en": "Black Widow Spider Antivenin (Latrodectus mactans)",
     "name_fa": "پادزهر عنکبوت بیوه سیاه",
     "name_en": "Latrodectus Antivenin",
-    "brand_names_fa": "پادزهر لاترودکتوس، آنتی‌ونوم بیوه سیاه",
-    "brand_names_en": "Antivenin (Latrodectus mactans) Equine Origin (6000 Units/vial)",
+    "brand_names_fa": [
+      "پ",
+      "ا",
+      "د",
+      "ز",
+      "ه",
+      "ر",
+      " ",
+      "ل",
+      "ت",
+      "و",
+      "ک",
+      "س",
+      "،",
+      "آ",
+      "ن",
+      "ی",
+      "‌",
+      "م",
+      "ب"
+    ],
+    "brand_names_en": [
+      "A",
+      "n",
+      "t",
+      "i",
+      "v",
+      "e",
+      " ",
+      "(",
+      "L",
+      "a",
+      "r",
+      "o",
+      "d",
+      "c",
+      "u",
+      "s",
+      "m",
+      ")",
+      "E",
+      "q",
+      "O",
+      "g",
+      "6",
+      "0",
+      "U",
+      "/",
+      "l"
+    ],
     "therapeutic_class": "پادزهر بیولوژیک ایمونوگلوبولین خنثی‌کننده آلفا-لاتروتوکسین",
     "primary_category": "سم‌شناسی و پادزهرها",
     "secondary_categories": [
@@ -111353,8 +120102,54 @@ const DRUGS_DATA = [
     "generic_name_en": "Mycobacterial Cell Wall Fraction (MCWF)",
     "name_fa": "فراکشن دیواره سلولی مایکوباکتریوم (رگرسین)",
     "name_en": "Mycobacterial Cell Wall Fraction",
-    "brand_names_fa": "رگرسین-V، ایمونوفورته",
-    "brand_names_en": "Regressin-V, Sarcodyn (0.4 mg/mL Emulsion)",
+    "brand_names_fa": [
+      "ر",
+      "گ",
+      "س",
+      "ی",
+      "ن",
+      "-",
+      "V",
+      "،",
+      " ",
+      "ا",
+      "م",
+      "و",
+      "ف",
+      "ت",
+      "ه",
+      "رگرسین-V"
+    ],
+    "brand_names_en": [
+      "R",
+      "e",
+      "g",
+      "r",
+      "s",
+      "i",
+      "n",
+      "-",
+      "V",
+      ",",
+      " ",
+      "S",
+      "a",
+      "c",
+      "o",
+      "d",
+      "y",
+      "(",
+      "0",
+      ".",
+      "4",
+      "m",
+      "/",
+      "L",
+      "E",
+      "u",
+      "l",
+      ")"
+    ],
     "therapeutic_class": "ایمونوتراپی بیولوژیک ضدتومور فعال‌کننده ماکروفاژها و لنفوسیت‌های سیتوتوکسیک",
     "primary_category": "شیمی‌درمانی و انکولوژی",
     "secondary_categories": [
@@ -111498,8 +120293,44 @@ const DRUGS_DATA = [
     "generic_name_en": "Dog Appeasing Pheromone (DAP)",
     "name_fa": "فرومون آرام‌بخش سگ (آداپتیل)",
     "name_en": "Dog Appeasing Pheromone (Adaptil)",
-    "brand_names_fa": "آداپتیل، دی ای پی",
-    "brand_names_en": "Adaptil, DAP (Diffuser, Spray & Collar)",
+    "brand_names_fa": [
+      "آ",
+      "د",
+      "ا",
+      "پ",
+      "ت",
+      "ی",
+      "ل",
+      "،",
+      " ",
+      "آداپتیل",
+      "DAP"
+    ],
+    "brand_names_en": [
+      "A",
+      "d",
+      "a",
+      "p",
+      "t",
+      "i",
+      "l",
+      ",",
+      " ",
+      "D",
+      "P",
+      "(",
+      "f",
+      "u",
+      "s",
+      "e",
+      "r",
+      "S",
+      "y",
+      "&",
+      "C",
+      "o",
+      ")"
+    ],
     "therapeutic_class": "فرومون تعدیل‌کننده رفتار مشتق اسیدهای چرب مترشحه از غدد بین پستانی سگ ماده",
     "primary_category": "اعصاب و روان",
     "secondary_categories": [
@@ -111629,8 +120460,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Feline Facial Pheromone (Feliway F3 / F4)",
     "name_fa": "فرومون صورت گربه (فلی‌وی)",
     "name_en": "Feline Facial Pheromone (Feliway)",
-    "brand_names_fa": "فلی‌وی، فلی‌وی کلاسیک، فلی‌وی فرندز",
-    "brand_names_en": "Feliway Classic (F3 fraction), Feliway Friends (F4 fraction)",
+    "brand_names_fa": [
+      "ف",
+      "ل",
+      "ی",
+      "‌",
+      "و",
+      "،",
+      " ",
+      "ک",
+      "ا",
+      "س",
+      "ر",
+      "ن",
+      "د",
+      "ز",
+      "فلی‌وی کلاسیک و فرندز"
+    ],
+    "brand_names_en": [
+      "F",
+      "e",
+      "l",
+      "i",
+      "w",
+      "a",
+      "y",
+      " ",
+      "C",
+      "s",
+      "c",
+      "(",
+      "3",
+      "f",
+      "r",
+      "t",
+      "o",
+      "n",
+      ")",
+      ",",
+      "d",
+      "4"
+    ],
     "therapeutic_class": "فرومون محیطی آرام‌بخش سنتتیک کپی فراکسیون F3 و F4 ترشحات صورت گربه",
     "primary_category": "اعصاب و روان",
     "secondary_categories": [
@@ -111759,8 +120629,55 @@ const DRUGS_DATA = [
     "generic_name_en": "Cidofovir Ophthalmic 0.5%",
     "name_fa": "سیدوفوویر چشمی ۰.۵٪ (ویستاید)",
     "name_en": "Cidofovir Ophthalmic 0.5%",
-    "brand_names_fa": "ویستاید، قطره ترکیبی سیدوفوویر چشمی",
-    "brand_names_en": "Vistide Ophthalmic 0.5%, Cidofovir Compounded Drops",
+    "brand_names_fa": [
+      "و",
+      "ی",
+      "س",
+      "ت",
+      "ا",
+      "د",
+      "،",
+      " ",
+      "ق",
+      "ط",
+      "ر",
+      "ه",
+      "ک",
+      "ب",
+      "ف",
+      "چ",
+      "ش",
+      "م"
+    ],
+    "brand_names_en": [
+      "V",
+      "i",
+      "s",
+      "t",
+      "d",
+      "e",
+      " ",
+      "O",
+      "p",
+      "h",
+      "a",
+      "l",
+      "m",
+      "c",
+      "0",
+      ".",
+      "5",
+      "%",
+      ",",
+      "C",
+      "o",
+      "f",
+      "v",
+      "r",
+      "u",
+      "n",
+      "D"
+    ],
     "therapeutic_class": "آنتی‌ویروس نوکلئوتیدی موضعی اختصاصی چشم (مهارکننده پرتوان DNA پلی‌مراز ویروس هرپس)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -111883,8 +120800,53 @@ const DRUGS_DATA = [
     "generic_name_en": "Idoxuridine Ophthalmic 0.1%",
     "name_fa": "ایدی‌اکسوریدین چشمی ۰.۱٪ (هرپلکس)",
     "name_en": "Idoxuridine Ophthalmic 0.1%",
-    "brand_names_fa": "هرپلکس، دندرید، قطره و پماد چشمی ایدی‌اکسوریدین",
-    "brand_names_en": "Herplex 0.1%, Dendrid, Stoxil Ophthalmic",
+    "brand_names_fa": [
+      "ه",
+      "ر",
+      "پ",
+      "ل",
+      "ک",
+      "س",
+      "،",
+      " ",
+      "د",
+      "ن",
+      "ی",
+      "ق",
+      "ط",
+      "و",
+      "م",
+      "ا",
+      "چ",
+      "ش",
+      "‌"
+    ],
+    "brand_names_en": [
+      "H",
+      "e",
+      "r",
+      "p",
+      "l",
+      "x",
+      " ",
+      "0",
+      ".",
+      "1",
+      "%",
+      ",",
+      "D",
+      "n",
+      "d",
+      "i",
+      "S",
+      "t",
+      "o",
+      "O",
+      "h",
+      "a",
+      "m",
+      "c"
+    ],
     "therapeutic_class": "آنتی‌ویروس پیریمیدینی چشمی (آنالوگ هالوژنه تیمیدین)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -112009,8 +120971,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Ganciclovir Ophthalmic Gel 0.15%",
     "name_fa": "گانسیکلوویر ژل چشمی ۰.۱۵٪ (زیرگان)",
     "name_en": "Ganciclovir Ophthalmic Gel 0.15%",
-    "brand_names_fa": "زیرگان، ویرگان، ژل چشمی گانسیکلوویر",
-    "brand_names_en": "Zirgan 0.15% Ophthalmic Gel, Virgan Gel",
+    "brand_names_fa": [
+      "ز",
+      "ی",
+      "ر",
+      "گ",
+      "ا",
+      "ن",
+      "،",
+      " ",
+      "و",
+      "ژ",
+      "ل",
+      "چ",
+      "ش",
+      "م",
+      "س",
+      "ک"
+    ],
+    "brand_names_en": [
+      "Z",
+      "i",
+      "r",
+      "g",
+      "a",
+      "n",
+      " ",
+      "0",
+      ".",
+      "1",
+      "5",
+      "%",
+      "O",
+      "p",
+      "h",
+      "t",
+      "l",
+      "m",
+      "c",
+      "G",
+      "e",
+      ",",
+      "V"
+    ],
     "therapeutic_class": "آنتی‌ویروس نوکلئوزیدی موضعی قرنیه (مهارکننده اختصاصی DNA پلی‌مراز هرپس)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -112133,8 +121136,58 @@ const DRUGS_DATA = [
     "generic_name_en": "Moxifloxacin 0.5% Ophthalmic",
     "name_fa": "موکسی‌فلوکساسین چشمی ۰.۵٪ (ویگاموکس)",
     "name_en": "Moxifloxacin 0.5% Ophthalmic",
-    "brand_names_fa": "ویگاموکس، موکسیزا، سیناموکس، قطره چشمی موکسی‌فلوکساسین",
-    "brand_names_en": "Vigamox 0.5%, Moxeza, Cynamox Ophthalmic Drops",
+    "brand_names_fa": [
+      "و",
+      "ی",
+      "گ",
+      "ا",
+      "م",
+      "ک",
+      "س",
+      "،",
+      " ",
+      "ز",
+      "ن",
+      "ق",
+      "ط",
+      "ر",
+      "ه",
+      "چ",
+      "ش",
+      "‌",
+      "ف",
+      "ل"
+    ],
+    "brand_names_en": [
+      "V",
+      "i",
+      "g",
+      "a",
+      "m",
+      "o",
+      "x",
+      " ",
+      "0",
+      ".",
+      "5",
+      "%",
+      ",",
+      "M",
+      "e",
+      "z",
+      "C",
+      "y",
+      "n",
+      "O",
+      "p",
+      "h",
+      "t",
+      "l",
+      "c",
+      "D",
+      "r",
+      "s"
+    ],
     "therapeutic_class": "فلوروکینولون نسل چهارم موضعی چشمی با نفوذ عمیق استرومال و زلالیه",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -112262,8 +121315,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Difluprednate 0.05% Ophthalmic Emulsion",
     "name_fa": "دیفلوپردنات چشمی ۰.۰۵٪ (دورزول)",
     "name_en": "Difluprednate 0.05% Ophthalmic",
-    "brand_names_fa": "دورزول، دیفلوپردنات امولسیون چشمی",
-    "brand_names_en": "Durezol 0.05% Ophthalmic Emulsion",
+    "brand_names_fa": [
+      "د",
+      "و",
+      "ر",
+      "ز",
+      "ل",
+      "،",
+      " ",
+      "ی",
+      "ف",
+      "پ",
+      "ن",
+      "ا",
+      "ت",
+      "م",
+      "س",
+      "چ",
+      "ش"
+    ],
+    "brand_names_en": [
+      "D",
+      "u",
+      "r",
+      "e",
+      "z",
+      "o",
+      "l",
+      " ",
+      "0",
+      ".",
+      "5",
+      "%",
+      "O",
+      "p",
+      "h",
+      "t",
+      "a",
+      "m",
+      "i",
+      "c",
+      "E",
+      "s",
+      "n"
+    ],
     "therapeutic_class": "کورتیکواستروئید فلوئورینه پرتوان چشمی (فرمولاسیون امولسیونی با نفوذ عمیق)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -112388,8 +121483,56 @@ const DRUGS_DATA = [
     "generic_name_en": "Loteprednol Etabonate 0.5% Ophthalmic",
     "name_fa": "لوتپردنول اتابونات چشمی ۰.۵٪ (لوتماکس)",
     "name_en": "Loteprednol Etabonate 0.5% Ophthalmic",
-    "brand_names_fa": "لوتماکس، لوتپرد، قطره و سوسپانسیون چشمی لوتپردنول",
-    "brand_names_en": "Lotemax 0.5% Suspension / Gel, Inveltys, Alrex",
+    "brand_names_fa": [
+      "ل",
+      "و",
+      "ت",
+      "م",
+      "ا",
+      "ک",
+      "س",
+      "،",
+      " ",
+      "پ",
+      "ر",
+      "د",
+      "ق",
+      "ط",
+      "ه",
+      "ن",
+      "ی",
+      "چ",
+      "ش"
+    ],
+    "brand_names_en": [
+      "L",
+      "o",
+      "t",
+      "e",
+      "m",
+      "a",
+      "x",
+      " ",
+      "0",
+      ".",
+      "5",
+      "%",
+      "S",
+      "u",
+      "s",
+      "p",
+      "n",
+      "i",
+      "/",
+      "G",
+      "l",
+      ",",
+      "I",
+      "v",
+      "y",
+      "A",
+      "r"
+    ],
     "therapeutic_class": "کورتیکواستروئید استری رترومتابولیک با ایمنی فوق‌العاده بالا (Soft Steroid)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -112513,8 +121656,46 @@ const DRUGS_DATA = [
     "generic_name_en": "Natamycin 5% Ophthalmic Suspension",
     "name_fa": "ناتامایسین چشمی ۵٪ (ناتاسین)",
     "name_en": "Natamycin 5% Ophthalmic",
-    "brand_names_fa": "ناتاسین، پیمافوسین، سوسپانسیون چشمی ناتامایسین",
-    "brand_names_en": "Natacyn 5% Ophthalmic Suspension, Pimafucin",
+    "brand_names_fa": [
+      "ن",
+      "ا",
+      "ت",
+      "س",
+      "ی",
+      "،",
+      " ",
+      "پ",
+      "م",
+      "ف",
+      "و",
+      "چ",
+      "ش"
+    ],
+    "brand_names_en": [
+      "N",
+      "a",
+      "t",
+      "c",
+      "y",
+      "n",
+      " ",
+      "5",
+      "%",
+      "O",
+      "p",
+      "h",
+      "l",
+      "m",
+      "i",
+      "S",
+      "u",
+      "s",
+      "e",
+      "o",
+      ",",
+      "P",
+      "f"
+    ],
     "therapeutic_class": "ضدقارچ پلی‌ان ماکرولیدی چشمی اختصاصی کراتومایکوزیس",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -112639,8 +121820,59 @@ const DRUGS_DATA = [
     "generic_name_en": "Proparacaine HCl 0.5% Ophthalmic",
     "name_fa": "پروپاراکائین چشمی ۰.۵٪ (آلکائین)",
     "name_en": "Proparacaine HCl 0.5% Ophthalmic",
-    "brand_names_fa": "آلکائین، اوفتائین، قطره بی‌حسی موضعی پروپاراکائین",
-    "brand_names_en": "Alcaine 0.5%, Ophthaine, Proparacaine Hydrochloride Drops",
+    "brand_names_fa": [
+      "آ",
+      "ل",
+      "ک",
+      "ا",
+      "ئ",
+      "ی",
+      "ن",
+      "،",
+      " ",
+      "و",
+      "ف",
+      "ت",
+      "ق",
+      "ط",
+      "ر",
+      "ه",
+      "ب",
+      "‌",
+      "ح",
+      "س",
+      "م",
+      "ض",
+      "ع",
+      "پ"
+    ],
+    "brand_names_en": [
+      "A",
+      "l",
+      "c",
+      "a",
+      "i",
+      "n",
+      "e",
+      " ",
+      "0",
+      ".",
+      "5",
+      "%",
+      ",",
+      "O",
+      "p",
+      "h",
+      "t",
+      "P",
+      "r",
+      "o",
+      "H",
+      "y",
+      "d",
+      "D",
+      "s"
+    ],
     "therapeutic_class": "بی‌حس‌کننده موضعی فوق‌العاده سریع قرنیه و ملتحمه (مسدودکننده کانال سدیم)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -112768,8 +122000,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Cyclopentolate HCl 1% Ophthalmic",
     "name_fa": "سیکلوپنتولات چشمی ۱٪ (سیکلوژیل)",
     "name_en": "Cyclopentolate HCl 1% Ophthalmic",
-    "brand_names_fa": "سیکلوژیل، قطره چشمی سیکلوپنتولات",
-    "brand_names_en": "Cyclogyl 1% Ophthalmic Drops, Pentolair",
+    "brand_names_fa": [
+      "س",
+      "ی",
+      "ک",
+      "ل",
+      "و",
+      "ژ",
+      "،",
+      " ",
+      "ق",
+      "ط",
+      "ر",
+      "ه",
+      "چ",
+      "ش",
+      "م",
+      "پ",
+      "ن",
+      "ت",
+      "ا"
+    ],
+    "brand_names_en": [
+      "C",
+      "y",
+      "c",
+      "l",
+      "o",
+      "g",
+      " ",
+      "1",
+      "%",
+      "O",
+      "p",
+      "h",
+      "t",
+      "a",
+      "m",
+      "i",
+      "D",
+      "r",
+      "s",
+      ",",
+      "P",
+      "e",
+      "n"
+    ],
     "therapeutic_class": "آنتی‌کولینرژیک سیکلوپلژیک و میدریاتیک با شروع اثر سریع و طول اثر متوسط",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -112892,8 +122168,51 @@ const DRUGS_DATA = [
     "generic_name_en": "Flurbiprofen Sodium 0.03% Ophthalmic",
     "name_fa": "فلوربی‌پروفن چشمی ۰.۰۳٪ (اوکوفن)",
     "name_en": "Flurbiprofen Sodium 0.03% Ophthalmic",
-    "brand_names_fa": "اوکوفن، قطره چشمی فلوربی‌پروفن",
-    "brand_names_en": "Ocufen 0.03% Ophthalmic Drops",
+    "brand_names_fa": [
+      "ا",
+      "و",
+      "ک",
+      "ف",
+      "ن",
+      "،",
+      " ",
+      "ق",
+      "ط",
+      "ر",
+      "ه",
+      "چ",
+      "ش",
+      "م",
+      "ی",
+      "ل",
+      "ب",
+      "‌",
+      "پ"
+    ],
+    "brand_names_en": [
+      "O",
+      "c",
+      "u",
+      "f",
+      "e",
+      "n",
+      " ",
+      "0",
+      ".",
+      "3",
+      "%",
+      "p",
+      "h",
+      "t",
+      "a",
+      "l",
+      "m",
+      "i",
+      "D",
+      "r",
+      "o",
+      "s"
+    ],
     "therapeutic_class": "داروی ضدالتهاب غیراستروئیدی موضعی چشم (مهارکننده سنتز پروستاگلاندین‌های عنبیه)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -113018,8 +122337,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Miconazole 1% Ophthalmic Drops",
     "name_fa": "میکونازول چشمی ۱٪ (محلول ترکیبی)",
     "name_en": "Miconazole 1% Ophthalmic Drops",
-    "brand_names_fa": "قطره چشمی ترکیبی میکونازول ۱٪",
-    "brand_names_en": "Compounded Miconazole 1% Ophthalmic Solution",
+    "brand_names_fa": [
+      "ق",
+      "ط",
+      "ر",
+      "ه",
+      " ",
+      "چ",
+      "ش",
+      "م",
+      "ی",
+      "ت",
+      "ک",
+      "ب",
+      "و",
+      "ن",
+      "ا",
+      "ز",
+      "ل",
+      "۱",
+      "٪"
+    ],
+    "brand_names_en": [
+      "C",
+      "o",
+      "m",
+      "p",
+      "u",
+      "n",
+      "d",
+      "e",
+      " ",
+      "M",
+      "i",
+      "c",
+      "a",
+      "z",
+      "l",
+      "1",
+      "%",
+      "O",
+      "h",
+      "t",
+      "S"
+    ],
     "therapeutic_class": "ضدقارچ ایمیدازولی موضعی چشمی با نفوذ استرومال مناسب",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -113144,8 +122505,55 @@ const DRUGS_DATA = [
     "generic_name_en": "Pimecrolimus 1% Ophthalmic",
     "name_fa": "پیمکرولیموس چشمی ۱٪ (الیدل چشمی)",
     "name_en": "Pimecrolimus 1% Ophthalmic",
-    "brand_names_fa": "الیدل چشمی، پماد/قطره ترکیبی پیمکرولیموس ۱٪",
-    "brand_names_en": "Compounded Pimecrolimus 1% Ophthalmic, Elidel",
+    "brand_names_fa": [
+      "ا",
+      "ل",
+      "ی",
+      "د",
+      " ",
+      "چ",
+      "ش",
+      "م",
+      "،",
+      "پ",
+      "/",
+      "ق",
+      "ط",
+      "ر",
+      "ه",
+      "ت",
+      "ک",
+      "ب",
+      "و",
+      "س",
+      "۱",
+      "٪"
+    ],
+    "brand_names_en": [
+      "C",
+      "o",
+      "m",
+      "p",
+      "u",
+      "n",
+      "d",
+      "e",
+      " ",
+      "P",
+      "i",
+      "c",
+      "r",
+      "l",
+      "s",
+      "1",
+      "%",
+      "O",
+      "h",
+      "t",
+      "a",
+      ",",
+      "E"
+    ],
     "therapeutic_class": "مهارکننده موضعی کلسی‌نورین و تنظیم‌کننده ایمنی خط اول کراتوکونژونکتیویت خشک",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -113269,8 +122677,60 @@ const DRUGS_DATA = [
     "generic_name_en": "Sodium Chloride 5% Hypertonic Ophthalmic",
     "name_fa": "سدیم کلراید هایپرتونیک چشمی ۵٪ (مورو ۱۲۸)",
     "name_en": "Sodium Chloride 5% Hypertonic Ophthalmic",
-    "brand_names_fa": "مورو ۱۲۸، قطره و پماد چشمی نمکی ۵٪ سینادارو",
-    "brand_names_en": "Muro 128 5% Ophthalmic Drops / Ointment, Sodium Chloride 5%",
+    "brand_names_fa": [
+      "م",
+      "و",
+      "ر",
+      " ",
+      "۱",
+      "۲",
+      "۸",
+      "،",
+      "ق",
+      "ط",
+      "ه",
+      "پ",
+      "ا",
+      "د",
+      "چ",
+      "ش",
+      "ی",
+      "ن",
+      "ک",
+      "۵",
+      "٪",
+      "س"
+    ],
+    "brand_names_en": [
+      "M",
+      "u",
+      "r",
+      "o",
+      " ",
+      "1",
+      "2",
+      "8",
+      "5",
+      "%",
+      "O",
+      "p",
+      "h",
+      "t",
+      "a",
+      "l",
+      "m",
+      "i",
+      "c",
+      "D",
+      "s",
+      "/",
+      "n",
+      "e",
+      ",",
+      "S",
+      "d",
+      "C"
+    ],
     "therapeutic_class": "عامل هایپراسموتیک کاهنده ادم قرنیه (Osmotic Dehydrating Agent)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -113398,8 +122858,57 @@ const DRUGS_DATA = [
     "generic_name_en": "Levofloxacin 0.5% Ophthalmic",
     "name_fa": "لووفلوکساسین چشمی ۰.۵٪ (کراویت)",
     "name_en": "Levofloxacin 0.5% Ophthalmic",
-    "brand_names_fa": "کراویت، کوئیکسین، ایکوئیکس، قطره چشمی لووفلوکساسین",
-    "brand_names_en": "Cravit 0.5%, Quixin, Iquix, Levofloxacin Ophthalmic",
+    "brand_names_fa": [
+      "ک",
+      "ر",
+      "ا",
+      "و",
+      "ی",
+      "ت",
+      "،",
+      " ",
+      "ئ",
+      "س",
+      "ن",
+      "ق",
+      "ط",
+      "ه",
+      "چ",
+      "ش",
+      "م",
+      "ل",
+      "ف"
+    ],
+    "brand_names_en": [
+      "C",
+      "r",
+      "a",
+      "v",
+      "i",
+      "t",
+      " ",
+      "0",
+      ".",
+      "5",
+      "%",
+      ",",
+      "Q",
+      "u",
+      "x",
+      "n",
+      "I",
+      "q",
+      "L",
+      "e",
+      "o",
+      "f",
+      "l",
+      "c",
+      "O",
+      "p",
+      "h",
+      "m"
+    ],
     "therapeutic_class": "فلوروکینولون نسل سوم چشمی با انحلال‌پذیری بالا و طیف وسیع",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -113526,8 +123035,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Protamine Zinc Recombinant Human / Bovine Insulin (PZI)",
     "name_fa": "انسولین پروتامین زینک PZI دامی (پروزینک)",
     "name_en": "Protamine Zinc Insulin (ProZinc)",
-    "brand_names_fa": "پروزینک، انسولین PZI اختصاصی سگ و گربه",
-    "brand_names_en": "ProZinc 40 IU/mL, PZI VET",
+    "brand_names_fa": [
+      "پ",
+      "ر",
+      "و",
+      "ز",
+      "ی",
+      "ن",
+      "ک",
+      "،",
+      " ",
+      "ا",
+      "س",
+      "ل",
+      "P",
+      "Z",
+      "I",
+      "خ",
+      "ت",
+      "ص",
+      "گ",
+      "ب",
+      "ه"
+    ],
+    "brand_names_en": [
+      "P",
+      "r",
+      "o",
+      "Z",
+      "i",
+      "n",
+      "c",
+      " ",
+      "4",
+      "0",
+      "I",
+      "U",
+      "/",
+      "m",
+      "L",
+      ",",
+      "V",
+      "E",
+      "T"
+    ],
     "therapeutic_class": "انسولین طولانی‌اثر اختصاصی دامپزشکی با تاییدیه FDA (طراحی‌شده ویژه گربه و سگ)",
     "primary_category": "غدد و متابولیسم",
     "secondary_categories": [
@@ -113654,8 +123205,44 @@ const DRUGS_DATA = [
     "generic_name_en": "Porcine Insulin Zinc Suspension (Caninsulin / Vetsulin)",
     "name_fa": "کانیزولین / وت‌سولین (انسولین اختصاصی دامی)",
     "name_en": "Porcine Insulin Zinc Suspension (Caninsulin)",
-    "brand_names_fa": "کانیزولین، وت‌سولین، انسولین لنته خوک",
-    "brand_names_en": "Caninsulin 40 IU/mL, Vetsulin 40 IU/mL",
+    "brand_names_fa": [
+      "ک",
+      "ا",
+      "ن",
+      "ی",
+      "ز",
+      "و",
+      "ل",
+      "،",
+      " ",
+      "ت",
+      "‌",
+      "س",
+      "ه",
+      "خ",
+      "کانیزولین"
+    ],
+    "brand_names_en": [
+      "C",
+      "a",
+      "n",
+      "i",
+      "s",
+      "u",
+      "l",
+      " ",
+      "4",
+      "0",
+      "I",
+      "U",
+      "/",
+      "m",
+      "L",
+      ",",
+      "V",
+      "e",
+      "t"
+    ],
     "therapeutic_class": "انسولین متوسط‌الاثر دارای تاییدیه اختصاصی دامی با توالی اسیدآمینه‌ای همسان با سگ",
     "primary_category": "غدد و متابولیسم",
     "secondary_categories": [
@@ -113782,8 +123369,48 @@ const DRUGS_DATA = [
     "generic_name_en": "Insulin Lispro (Humalog)",
     "name_fa": "انسولین لیسپرو ۱۰۰ واحد (هومالوگ)",
     "name_en": "Insulin Lispro 100 IU/mL",
-    "brand_names_fa": "هومالوگ، انسولین اولترا رپید لیسپرو",
-    "brand_names_en": "Humalog 100 IU/mL, Admelog, Insulin Lispro",
+    "brand_names_fa": [
+      "ه",
+      "و",
+      "م",
+      "ا",
+      "ل",
+      "گ",
+      "،",
+      " ",
+      "ن",
+      "س",
+      "ی",
+      "ت",
+      "ر",
+      "پ",
+      "د"
+    ],
+    "brand_names_en": [
+      "H",
+      "u",
+      "m",
+      "a",
+      "l",
+      "o",
+      "g",
+      " ",
+      "1",
+      "0",
+      "I",
+      "U",
+      "/",
+      "L",
+      ",",
+      "A",
+      "d",
+      "e",
+      "n",
+      "s",
+      "i",
+      "p",
+      "r"
+    ],
     "therapeutic_class": "آنالوگ نوترکیب انسولین با شروع اثر فوق‌العاده سریع (Ultra-Rapid-Acting Analogue)",
     "primary_category": "غدد و متابولیسم",
     "secondary_categories": [
@@ -113910,8 +123537,46 @@ const DRUGS_DATA = [
     "generic_name_en": "Mesna (Sodium 2-Mercaptoethanesulfonate)",
     "name_fa": "مسنا ۱۰۰ میلی‌گرم (اورومیتکسان)",
     "name_en": "Mesna 100 mg/mL",
-    "brand_names_fa": "اورومیتکسan، مسنکس، آمپول مسنا",
-    "brand_names_en": "Uromitexan 100 mg/mL, Mesnex",
+    "brand_names_fa": [
+      "ا",
+      "و",
+      "ر",
+      "م",
+      "ی",
+      "ت",
+      "ک",
+      "س",
+      "a",
+      "n",
+      "،",
+      " ",
+      "ن",
+      "آ",
+      "پ",
+      "ل",
+      "سدیم ۲-مرکاپتواتان‌سولفونات"
+    ],
+    "brand_names_en": [
+      "U",
+      "r",
+      "o",
+      "m",
+      "i",
+      "t",
+      "e",
+      "x",
+      "a",
+      "n",
+      " ",
+      "1",
+      "0",
+      "g",
+      "/",
+      "L",
+      ",",
+      "M",
+      "s"
+    ],
     "therapeutic_class": "داروی سم‌زدای مجاری ادراری و محافظت‌کننده کلیه و مثانه در شیمی‌درمانی (Uroprotective Agent)",
     "primary_category": "آنکولوژی و شیمی‌درمانی",
     "secondary_categories": [
@@ -114037,8 +123702,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Pegfilgrastim (Pegylated G-CSF)",
     "name_fa": "پگ‌فیلگراستیم ۶ میلی‌گرم (نئولاستا)",
     "name_en": "Pegfilgrastim (Neulasta)",
-    "brand_names_fa": "نئولاستا، پگاستیم، زیولفای",
-    "brand_names_en": "Neulasta 6 mg / 0.6 mL, Pegastim, Ziextenzo",
+    "brand_names_fa": [
+      "ن",
+      "ئ",
+      "و",
+      "ل",
+      "ا",
+      "س",
+      "ت",
+      "،",
+      " ",
+      "پ",
+      "گ",
+      "ی",
+      "م",
+      "ز",
+      "ف",
+      "فاکتور طولانی‌اثر محرک کلونی گرانولوسیت"
+    ],
+    "brand_names_en": [
+      "N",
+      "e",
+      "u",
+      "l",
+      "a",
+      "s",
+      "t",
+      " ",
+      "6",
+      "m",
+      "g",
+      "/",
+      "0",
+      ".",
+      "L",
+      ",",
+      "P",
+      "i",
+      "Z",
+      "x",
+      "n",
+      "z",
+      "o"
+    ],
     "therapeutic_class": "فاکتور رشد خونساز طولانی‌اثر اختصاصی خط میلوئید و نوتروفیل‌ها",
     "primary_category": "آنکولوژی و شیمی‌درمانی",
     "secondary_categories": [
@@ -114175,8 +123881,43 @@ const DRUGS_DATA = [
     "generic_name_en": "Flubendazole",
     "name_fa": "فلبندازول ۵٪ (فلوبنول)",
     "name_en": "Flubendazole (Flubenol)",
-    "brand_names_fa": "فلوبنول، سولوبنول، پودر و سوسپانسیون فلبندازول",
-    "brand_names_en": "Flubenol 5%, Solubenol 100 mg/g, Flubenvet",
+    "brand_names_fa": [
+      "ف",
+      "ل",
+      "و",
+      "ب",
+      "ن",
+      "،",
+      " ",
+      "س",
+      "پ",
+      "د",
+      "ر",
+      "ا",
+      "ی",
+      "ز"
+    ],
+    "brand_names_en": [
+      "F",
+      "l",
+      "u",
+      "b",
+      "e",
+      "n",
+      "o",
+      " ",
+      "5",
+      "%",
+      ",",
+      "S",
+      "1",
+      "0",
+      "m",
+      "g",
+      "/",
+      "v",
+      "t"
+    ],
     "therapeutic_class": "ضدانگل بنزایمیدازول وسیع‌الطیف اختصاصی صنعت طیور و خوک با دوره پرهیز صفر روز تخم‌مرغ",
     "primary_category": "ضدانگل و ضدکرم",
     "secondary_categories": [
@@ -114307,8 +124048,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Tranexamic Acid (TXA)",
     "name_fa": "ترانگزامیک اسید ۵۰۰ میلی‌گرم (ترانکسپین)",
     "name_en": "Tranexamic Acid (TXA)",
-    "brand_names_fa": "ترانکسپین، سیترانکس، آمپول و قرص ترانگزامیک اسید",
-    "brand_names_en": "Tranexam, Cyklokapron, Lysteda, Transamin",
+    "brand_names_fa": [
+      "ت",
+      "ر",
+      "ا",
+      "ن",
+      "ک",
+      "س",
+      "پ",
+      "ی",
+      "،",
+      " ",
+      "آ",
+      "م",
+      "و",
+      "ل",
+      "ق",
+      "ص",
+      "گ",
+      "ز",
+      "د",
+      "TXA"
+    ],
+    "brand_names_en": [
+      "T",
+      "r",
+      "a",
+      "n",
+      "e",
+      "x",
+      "m",
+      ",",
+      " ",
+      "C",
+      "y",
+      "k",
+      "l",
+      "o",
+      "p",
+      "L",
+      "s",
+      "t",
+      "d",
+      "i"
+    ],
     "therapeutic_class": "داروی آنتی‌فیبرینولیتیک و هموستاتیک سیستمیک (مهارکننده رقابتی فعال‌سازی پلاسمینوژن)",
     "primary_category": "خون و خونساز",
     "secondary_categories": [
@@ -114443,8 +124226,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Emodepside",
     "name_fa": "امودپسید (پروفندر)",
     "name_en": "Emodepside (Profender)",
-    "brand_names_fa": "پروفندر، پروسنس، محلول موضعی امودپسید/پرازیکوانتل",
-    "brand_names_en": "Profender Spot-on, Procox Oral, Emodepside",
+    "brand_names_fa": [
+      "پ",
+      "ر",
+      "و",
+      "ف",
+      "ن",
+      "د",
+      "،",
+      " ",
+      "س",
+      "م",
+      "ح",
+      "ل",
+      "ض",
+      "ع",
+      "ی",
+      "ا",
+      "/",
+      "ز",
+      "ک",
+      "ت"
+    ],
+    "brand_names_en": [
+      "P",
+      "r",
+      "o",
+      "f",
+      "e",
+      "n",
+      "d",
+      " ",
+      "S",
+      "p",
+      "t",
+      "-",
+      ",",
+      "c",
+      "x",
+      "O",
+      "a",
+      "l",
+      "E",
+      "m",
+      "s",
+      "i"
+    ],
     "therapeutic_class": "ضدانگل نوین از رده اکسی‌دپسی‌پپتیدهای حلقوی (Cyclooctadepsipeptide)",
     "primary_category": "ضدانگل و ضدکرم",
     "secondary_categories": [
@@ -114572,8 +124399,48 @@ const DRUGS_DATA = [
     "generic_name_en": "Enilconazole Topical Emulsion (Imaverol)",
     "name_fa": "انیلکونازول امولسیون ۱۰۰ میلی‌گرم (ایماورول)",
     "name_en": "Enilconazole (Imaverol)",
-    "brand_names_fa": "ایماورول، انیلکونازول امولسیون موضعی دامی",
-    "brand_names_en": "Imaverol 100 mg/mL, Clinafarm, Enilconazole",
+    "brand_names_fa": [
+      "ا",
+      "ی",
+      "م",
+      "و",
+      "ر",
+      "ل",
+      "،",
+      " ",
+      "ن",
+      "ک",
+      "ز",
+      "س",
+      "ض",
+      "ع",
+      "د",
+      "ایماورول"
+    ],
+    "brand_names_en": [
+      "I",
+      "m",
+      "a",
+      "v",
+      "e",
+      "r",
+      "o",
+      "l",
+      " ",
+      "1",
+      "0",
+      "g",
+      "/",
+      "L",
+      ",",
+      "C",
+      "i",
+      "n",
+      "f",
+      "E",
+      "c",
+      "z"
+    ],
     "therapeutic_class": "ضدقارچ ایمیدازولی موضعی و محیطی فوق‌العاده موثر بر درماتوفیتوزیس",
     "primary_category": "پوست و آلرژی",
     "secondary_categories": [
@@ -114703,8 +124570,54 @@ const DRUGS_DATA = [
     "generic_name_en": "Indoxacarb",
     "name_fa": "ایندکساکارب موضعی (اکتیویل)",
     "name_en": "Indoxacarb (Activyl)",
-    "brand_names_fa": "اکتیویل، اکتیویل پلاس، ایندکساکارب قطره پشت گردنی",
-    "brand_names_en": "Activyl Spot-on, Activyl Tick Plus, Indoxacarb",
+    "brand_names_fa": [
+      "ا",
+      "ک",
+      "ت",
+      "ی",
+      "و",
+      "ل",
+      "،",
+      " ",
+      "پ",
+      "س",
+      "ن",
+      "د",
+      "ر",
+      "ب",
+      "ق",
+      "ط",
+      "ه",
+      "ش",
+      "گ"
+    ],
+    "brand_names_en": [
+      "A",
+      "c",
+      "t",
+      "i",
+      "v",
+      "y",
+      "l",
+      " ",
+      "S",
+      "p",
+      "o",
+      "-",
+      "n",
+      ",",
+      "T",
+      "k",
+      "P",
+      "u",
+      "s",
+      "I",
+      "d",
+      "x",
+      "a",
+      "r",
+      "b"
+    ],
     "therapeutic_class": "حشره‌کش بیواکتیو اختصاصی ضدکک از رده اکسادیازین‌ها (Bioactivated Voltage-Gated Sodium Channel Blocker)",
     "primary_category": "ضدانگل و ضدکرم",
     "secondary_categories": [
@@ -114829,8 +124742,48 @@ const DRUGS_DATA = [
     "generic_name_en": "Dinotefuran",
     "name_fa": "دینوتفوران موضعی (وکترا ۳D)",
     "name_en": "Dinotefuran (Vectra 3D)",
-    "brand_names_fa": "وکترا، وکترا ۳D، دینوتفوران قطره پشت گردنی",
-    "brand_names_en": "Vectra 3D, Vectra Felis, FirstShield Trio",
+    "brand_names_fa": [
+      "و",
+      "ک",
+      "ت",
+      "ر",
+      "ا",
+      "،",
+      " ",
+      "۳",
+      "D",
+      "د",
+      "ی",
+      "ن",
+      "ف",
+      "ق",
+      "ط",
+      "ه",
+      "پ",
+      "ش",
+      "گ"
+    ],
+    "brand_names_en": [
+      "V",
+      "e",
+      "c",
+      "t",
+      "r",
+      "a",
+      " ",
+      "3",
+      "D",
+      ",",
+      "F",
+      "l",
+      "i",
+      "s",
+      "S",
+      "h",
+      "d",
+      "T",
+      "o"
+    ],
     "therapeutic_class": "حشره‌کش نئونیکوتینوئیدی نسل سوم تماسی با اثر ناک‌داون برق‌آسا (3rd Generation Neonicotinoid)",
     "primary_category": "ضدانگل و ضدکرم",
     "secondary_categories": [
@@ -114954,8 +124907,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Flumethrin",
     "name_fa": "فلومترین (قلاده سرستو)",
     "name_en": "Flumethrin (Seresto)",
-    "brand_names_fa": "سرستو، بای‌تیکول، فلومترین دامی",
-    "brand_names_en": "Seresto Collar, Bayticol 1%, Flumethrin Pour-on",
+    "brand_names_fa": [
+      "س",
+      "ر",
+      "ت",
+      "و",
+      "،",
+      " ",
+      "ب",
+      "ا",
+      "ی",
+      "‌",
+      "ک",
+      "ل",
+      "ف",
+      "م",
+      "ن",
+      "د"
+    ],
+    "brand_names_en": [
+      "S",
+      "e",
+      "r",
+      "s",
+      "t",
+      "o",
+      " ",
+      "C",
+      "l",
+      "a",
+      ",",
+      "B",
+      "y",
+      "i",
+      "c",
+      "1",
+      "%",
+      "F",
+      "u",
+      "m",
+      "h",
+      "n",
+      "P",
+      "-"
+    ],
     "therapeutic_class": "پیرتروئید مصنوعی نوع ۲ پرتوان ضدکنه و ضدکک (Type II Synthetic Pyrethroid)",
     "primary_category": "ضدانگل و ضدکرم",
     "secondary_categories": [
@@ -115084,8 +125079,48 @@ const DRUGS_DATA = [
     "generic_name_en": "Olopatadine HCl 0.1% / 0.2% Ophthalmic",
     "name_fa": "اولپاتادین چشمی (پاتانول / پاتادی)",
     "name_en": "Olopatadine HCl Ophthalmic",
-    "brand_names_fa": "پاتانول، پاتادی، قطره چشمی اولپاتادین",
-    "brand_names_en": "Patanol 0.1%, Pataday 0.2%, Pazeo 0.7%, Olopatadine",
+    "brand_names_fa": [
+      "پ",
+      "ا",
+      "ت",
+      "ن",
+      "و",
+      "ل",
+      "،",
+      " ",
+      "د",
+      "ی",
+      "ق",
+      "ط",
+      "ر",
+      "ه",
+      "چ",
+      "ش",
+      "م"
+    ],
+    "brand_names_en": [
+      "P",
+      "a",
+      "t",
+      "n",
+      "o",
+      "l",
+      " ",
+      "0",
+      ".",
+      "1",
+      "%",
+      ",",
+      "d",
+      "y",
+      "2",
+      "z",
+      "e",
+      "7",
+      "O",
+      "p",
+      "i"
+    ],
     "therapeutic_class": "تثبیت‌کننده دوگانه ماست‌سل‌ها و آنتاگونیست اختصاصی گیرنده H1 هیستامین چشمی",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -115212,8 +125247,54 @@ const DRUGS_DATA = [
     "generic_name_en": "Ketotifen Fumarate 0.025% Ophthalmic",
     "name_fa": "کتوتیفن چشمی ۰.۰۲۵٪ (زادتور)",
     "name_en": "Ketotifen Fumarate 0.025%",
-    "brand_names_fa": "زادتور، آلاوی، قطره چشمی کتوتیفن",
-    "brand_names_en": "Zaditor 0.025%, Alaway, Claritin Eye, Ketotifen",
+    "brand_names_fa": [
+      "ز",
+      "ا",
+      "د",
+      "ت",
+      "و",
+      "ر",
+      "،",
+      " ",
+      "آ",
+      "ل",
+      "ی",
+      "ق",
+      "ط",
+      "ه",
+      "چ",
+      "ش",
+      "م",
+      "ک",
+      "ف",
+      "ن"
+    ],
+    "brand_names_en": [
+      "Z",
+      "a",
+      "d",
+      "i",
+      "t",
+      "o",
+      "r",
+      " ",
+      "0",
+      ".",
+      "2",
+      "5",
+      "%",
+      ",",
+      "A",
+      "l",
+      "w",
+      "y",
+      "C",
+      "n",
+      "E",
+      "e",
+      "K",
+      "f"
+    ],
     "therapeutic_class": "آنتی‌هیستامین H1 نسل دوم و پایدارکننده غشای ماست‌سل‌های ملتحمه",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -115335,8 +125416,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Cromolyn Sodium 4% Ophthalmic",
     "name_fa": "کرومولین سدیم چشمی ۴٪ (کرولوم)",
     "name_en": "Cromolyn Sodium 4% Ophthalmic",
-    "brand_names_fa": "کرولوم، اپتی‌کروم، قطره چشمی کرومولین سدیم",
-    "brand_names_en": "Crolom 4%, Opticrom, Cromolyn Sodium",
+    "brand_names_fa": [
+      "ک",
+      "ر",
+      "و",
+      "ل",
+      "م",
+      "،",
+      " ",
+      "ا",
+      "پ",
+      "ت",
+      "ی",
+      "‌",
+      "ق",
+      "ط",
+      "ه",
+      "چ",
+      "ش",
+      "ن",
+      "س",
+      "د"
+    ],
+    "brand_names_en": [
+      "C",
+      "r",
+      "o",
+      "l",
+      "m",
+      " ",
+      "4",
+      "%",
+      ",",
+      "O",
+      "p",
+      "t",
+      "i",
+      "c",
+      "y",
+      "n",
+      "S",
+      "d",
+      "u"
+    ],
     "therapeutic_class": "تثبیت‌کننده غشای ماست‌سل‌ها و پیشگیری‌کننده از رهایش واسطه‌های آلرژی (Mast Cell Stabilizer)",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -115460,8 +125582,51 @@ const DRUGS_DATA = [
     "generic_name_en": "Alcaftadine 0.25% Ophthalmic",
     "name_fa": "آلکافتادین چشمی ۰.۲۵٪ (لاستاکافت)",
     "name_en": "Alcaftadine 0.25% Ophthalmic",
-    "brand_names_fa": "لاستاکافت، قطره چشمی آلکافتادین",
-    "brand_names_en": "Lastacaft 0.25% Ophthalmic Solution",
+    "brand_names_fa": [
+      "ل",
+      "ا",
+      "س",
+      "ت",
+      "ک",
+      "ف",
+      "،",
+      " ",
+      "ق",
+      "ط",
+      "ر",
+      "ه",
+      "چ",
+      "ش",
+      "م",
+      "ی",
+      "آ",
+      "د",
+      "ن"
+    ],
+    "brand_names_en": [
+      "L",
+      "a",
+      "s",
+      "t",
+      "c",
+      "f",
+      " ",
+      "0",
+      ".",
+      "2",
+      "5",
+      "%",
+      "O",
+      "p",
+      "h",
+      "l",
+      "m",
+      "i",
+      "S",
+      "o",
+      "u",
+      "n"
+    ],
     "therapeutic_class": "آنتاگونیست اختصاصی گیرنده H1 هیستامین با میل پیوندی فوق‌العاده بالا و ماندگاری ۲۴ ساعته",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -115583,8 +125748,48 @@ const DRUGS_DATA = [
     "generic_name_en": "Azelastine HCl 0.05% Ophthalmic",
     "name_fa": "آزلاستین چشمی ۰.۰۵٪ (اپتیوار)",
     "name_en": "Azelastine HCl 0.05%",
-    "brand_names_fa": "اپتیوار، قطره چشمی آزلاستین",
-    "brand_names_en": "Optivar 0.05% Ophthalmic Drops",
+    "brand_names_fa": [
+      "ا",
+      "پ",
+      "ت",
+      "ی",
+      "و",
+      "ر",
+      "،",
+      " ",
+      "ق",
+      "ط",
+      "ه",
+      "چ",
+      "ش",
+      "م",
+      "آ",
+      "ز",
+      "ل",
+      "س",
+      "ن"
+    ],
+    "brand_names_en": [
+      "O",
+      "p",
+      "t",
+      "i",
+      "v",
+      "a",
+      "r",
+      " ",
+      "0",
+      ".",
+      "5",
+      "%",
+      "h",
+      "l",
+      "m",
+      "c",
+      "D",
+      "o",
+      "s"
+    ],
     "therapeutic_class": "آنتی‌هیستامین نسل دوم سریع‌الاثر و مهارکننده آزادسازی لکوترین‌ها در ملتحمه",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -115706,8 +125911,54 @@ const DRUGS_DATA = [
     "generic_name_en": "Antivenin (Micrurus fulvius) North American Coral Snake",
     "name_fa": "پادزهر مار مرجانی (میکروروس فولویوس)",
     "name_en": "Antivenin Coral Snake (Micrurus fulvius)",
-    "brand_names_fa": "آنتی‌ونوم میکروروس، پادزهر اسبی مار مرجانی",
-    "brand_names_en": "Antivenin (Micrurus fulvius), North American Coral Snake Antivenin",
+    "brand_names_fa": [
+      "آ",
+      "ن",
+      "ت",
+      "ی",
+      "‌",
+      "و",
+      "م",
+      " ",
+      "ک",
+      "ر",
+      "س",
+      "،",
+      "پ",
+      "ا",
+      "د",
+      "ز",
+      "ه",
+      "ب",
+      "ج"
+    ],
+    "brand_names_en": [
+      "A",
+      "n",
+      "t",
+      "i",
+      "v",
+      "e",
+      " ",
+      "(",
+      "M",
+      "c",
+      "r",
+      "u",
+      "s",
+      "f",
+      "l",
+      ")",
+      ",",
+      "N",
+      "o",
+      "h",
+      "m",
+      "a",
+      "C",
+      "S",
+      "k"
+    ],
     "therapeutic_class": "ایمونوگلوبولین خنثی‌کننده سم نورتوکسیک مار مرجانی (Equine-Derived Neurotoxin Antivenom)",
     "primary_category": "سم‌شناسی و پادزهرها",
     "secondary_categories": [
@@ -115832,8 +126083,55 @@ const DRUGS_DATA = [
     "generic_name_en": "Insulin Aspart (NovoLog)",
     "name_fa": "انسولین آسپارت ۱۰۰ واحد (نوورپید / نوولوگ)",
     "name_en": "Insulin Aspart 100 IU/mL",
-    "brand_names_fa": "نوورپید، نوولوگ، قلم فلکس‌پن انسولین آسپارت",
-    "brand_names_en": "NovoLog 100 IU/mL, NovoRapid, Fiasp, Insulin Aspart",
+    "brand_names_fa": [
+      "ن",
+      "و",
+      "ر",
+      "پ",
+      "ی",
+      "د",
+      "،",
+      " ",
+      "ل",
+      "گ",
+      "ق",
+      "م",
+      "ف",
+      "ک",
+      "س",
+      "‌",
+      "ا",
+      "آ",
+      "ت"
+    ],
+    "brand_names_en": [
+      "N",
+      "o",
+      "v",
+      "L",
+      "g",
+      " ",
+      "1",
+      "0",
+      "I",
+      "U",
+      "/",
+      "m",
+      ",",
+      "R",
+      "a",
+      "p",
+      "i",
+      "d",
+      "F",
+      "s",
+      "n",
+      "u",
+      "l",
+      "A",
+      "r",
+      "t"
+    ],
     "therapeutic_class": "آنالوگ نوترکیب انسولین با اثر فوق سریع (Ultra-Rapid-Acting Analogue)",
     "primary_category": "غدد و متابولیسم",
     "secondary_categories": [
@@ -115960,8 +126258,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Propionibacterium acnes Injection (Immunoregulin)",
     "name_fa": "ایمونورگولین (پروپیونی‌باکتریوم آکنس غیرفعال)",
     "name_en": "Propionibacterium acnes (Immunoregulin)",
-    "brand_names_fa": "ایمونورگولین، باکتریوسین دامی",
-    "brand_names_en": "Immunoregulin, Eqstim (Mycobacterium equivalent)",
+    "brand_names_fa": [
+      "ا",
+      "ی",
+      "م",
+      "و",
+      "ن",
+      "ر",
+      "گ",
+      "ل",
+      "،",
+      " ",
+      "ب",
+      "ک",
+      "ت",
+      "س",
+      "د"
+    ],
+    "brand_names_en": [
+      "I",
+      "m",
+      "u",
+      "n",
+      "o",
+      "r",
+      "e",
+      "g",
+      "l",
+      "i",
+      ",",
+      " ",
+      "E",
+      "q",
+      "s",
+      "t",
+      "(",
+      "M",
+      "y",
+      "c",
+      "b",
+      "a",
+      "v",
+      ")"
+    ],
     "therapeutic_class": "تعدیل‌کننده و محرک بیولوژیک غیراختصاصی سیستم ایمنی سلولی و ماکروفاژها",
     "primary_category": "تعدیل‌کننده سیستم ایمنی",
     "secondary_categories": [
@@ -116105,8 +126444,48 @@ const DRUGS_DATA = [
     "generic_name_en": "Staphylococcus Phage Lysate (SPL)",
     "name_fa": "استافیلوکوکوس فاژ لیزات (اس‌پی‌ال)",
     "name_en": "Staphylococcus Phage Lysate (SPL)",
-    "brand_names_fa": "اس‌پی‌ال، استافاژ لیزات، واکسن ایمونوتراپی استافیلوکوک",
-    "brand_names_en": "Staphage Lysate (SPL), Delmont SPL",
+    "brand_names_fa": [
+      "ا",
+      "س",
+      "‌",
+      "پ",
+      "ی",
+      "ل",
+      "،",
+      " ",
+      "ت",
+      "ف",
+      "ژ",
+      "ز",
+      "و",
+      "ک",
+      "ن",
+      "م",
+      "ر",
+      "SPL"
+    ],
+    "brand_names_en": [
+      "S",
+      "t",
+      "a",
+      "p",
+      "h",
+      "g",
+      "e",
+      " ",
+      "L",
+      "y",
+      "s",
+      "(",
+      "P",
+      ")",
+      ",",
+      "D",
+      "l",
+      "m",
+      "o",
+      "n"
+    ],
     "therapeutic_class": "ایمونوتراپوتیک بیولوژیک اختصاصی مشتق از لیز باکتریوفاژی استافیلوکوکوس اورئوس",
     "primary_category": "تعدیل‌کننده سیستم ایمنی",
     "secondary_categories": [
@@ -116228,8 +126607,41 @@ const DRUGS_DATA = [
     "generic_name_en": "Thyrotropin Alfa (Recombinant Human TSH / rhTSH)",
     "name_fa": "تیروتروپین آلفا ۰.۹ میلی‌گرم (تیروژن)",
     "name_en": "Thyrotropin Alfa (Thyrogen)",
-    "brand_names_fa": "تیروژن، تی‌اس‌اچ نوترکیب",
-    "brand_names_en": "Thyrogen 0.9 mg, rhTSH",
+    "brand_names_fa": [
+      "ت",
+      "ی",
+      "ر",
+      "و",
+      "ژ",
+      "ن",
+      "،",
+      " ",
+      "‌",
+      "ا",
+      "س",
+      "چ",
+      "ک",
+      "ب",
+      "هورمون TSH نوترکیب انسانی"
+    ],
+    "brand_names_en": [
+      "T",
+      "h",
+      "y",
+      "r",
+      "o",
+      "g",
+      "e",
+      "n",
+      " ",
+      "0",
+      ".",
+      "9",
+      "m",
+      ",",
+      "S",
+      "H"
+    ],
     "therapeutic_class": "هورمون محرک تیروئید نوترکیب خالص جهت آزمون‌های تشخیصی عملکرد تیروئید",
     "primary_category": "داروهای تشخیصی و کمکی",
     "secondary_categories": [
@@ -116356,8 +126768,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Thyrotropin-Releasing Hormone (TRH / Protirelin)",
     "name_fa": "هورمون آزادکننده تیروتروپین (تی‌آر‌اچ / پروتیرلین)",
     "name_en": "Thyrotropin-Releasing Hormone (TRH)",
-    "brand_names_fa": "پروتیرلین، رلفکت، تی‌آر‌اچ تزریقی",
-    "brand_names_en": "Protirelin, Relefact TRH, Thyrefact",
+    "brand_names_fa": [
+      "پ",
+      "ر",
+      "و",
+      "ت",
+      "ی",
+      "ل",
+      "ن",
+      "،",
+      " ",
+      "ف",
+      "ک",
+      "‌",
+      "آ",
+      "ا",
+      "چ",
+      "ز",
+      "ق",
+      "TRH",
+      "پروتیرلین"
+    ],
+    "brand_names_en": [
+      "P",
+      "r",
+      "o",
+      "t",
+      "i",
+      "e",
+      "l",
+      "n",
+      ",",
+      " ",
+      "R",
+      "f",
+      "a",
+      "c",
+      "T",
+      "H",
+      "h",
+      "y"
+    ],
     "therapeutic_class": "تری‌پپتید هیپوتالاموسی تشخیصی جهت آزمون‌های محور هیپوفیز-تیروئید و هیپوفیز اسب (PPID)",
     "primary_category": "داروهای تشخیصی و کمکی",
     "secondary_categories": [
@@ -116497,8 +126948,55 @@ const DRUGS_DATA = [
     "generic_name_en": "Pyridoxine HCl (Vitamin B6)",
     "name_fa": "پیریدوکسین ۱۰۰ میلی‌گرم / ویتامین B6 (پادزهر ایزونیازید)",
     "name_en": "Pyridoxine HCl (Vitamin B6)",
-    "brand_names_fa": "ویتامین ب۶، آمپول پیریدوکسین ۱۰۰ میلی‌گرم، ب۶ خوراکی",
-    "brand_names_en": "Vitamin B6, Pyridoxine Hydrochloride, Beesix",
+    "brand_names_fa": [
+      "و",
+      "ی",
+      "ت",
+      "ا",
+      "م",
+      "ن",
+      " ",
+      "ب",
+      "۶",
+      "،",
+      "آ",
+      "پ",
+      "ل",
+      "ر",
+      "د",
+      "ک",
+      "س",
+      "۱",
+      "۰",
+      "‌",
+      "گ",
+      "خ",
+      "ویتامین B6"
+    ],
+    "brand_names_en": [
+      "V",
+      "i",
+      "t",
+      "a",
+      "m",
+      "n",
+      " ",
+      "B",
+      "6",
+      ",",
+      "P",
+      "y",
+      "r",
+      "d",
+      "o",
+      "x",
+      "e",
+      "H",
+      "c",
+      "h",
+      "l",
+      "s"
+    ],
     "therapeutic_class": "کوآنزیم سنتز انتقال‌دهنده‌های عصبی و پادزهر اختصاصی مسمومیت با ایزونیازید و اتیلن گلیکول",
     "primary_category": "سم‌شناسی و پادزهرها",
     "secondary_categories": [
@@ -116631,8 +127129,51 @@ const DRUGS_DATA = [
     "generic_name_en": "Potassium Phosphates IV Injection",
     "name_fa": "فسفات پتاسیم تزریقی (پتاسیم فسفات)",
     "name_en": "Potassium Phosphates Injection",
-    "brand_names_fa": "آمپول فسفات پتاسیم، پتاسیم فسفات تزریقی",
-    "brand_names_en": "Potassium Phosphates IV (3 mmol/mL Phosphate + 4.4 mEq/mL K)",
+    "brand_names_fa": [
+      "آ",
+      "م",
+      "پ",
+      "و",
+      "ل",
+      " ",
+      "ف",
+      "س",
+      "ا",
+      "ت",
+      "ی",
+      "،",
+      "ز",
+      "ر",
+      "ق"
+    ],
+    "brand_names_en": [
+      "P",
+      "o",
+      "t",
+      "a",
+      "s",
+      "i",
+      "u",
+      "m",
+      " ",
+      "h",
+      "p",
+      "e",
+      "I",
+      "V",
+      "(",
+      "3",
+      "l",
+      "/",
+      "L",
+      "+",
+      "4",
+      ".",
+      "E",
+      "q",
+      "K",
+      ")"
+    ],
     "therapeutic_class": "الکترولیت تزریقی اورژانس جهت اصلاح هایپوفسفاتمی بحرانی و کشنده",
     "primary_category": "مایع‌درمانی و الکترولیت‌ها",
     "secondary_categories": [
@@ -116758,8 +127299,51 @@ const DRUGS_DATA = [
     "generic_name_en": "Rasburicase (Recombinant Urate Oxidase)",
     "name_fa": "راسبوریکاز ۱.۵ میلی‌گرم (الیتک / فستورتک)",
     "name_en": "Rasburicase (Elitek / Fasturtec)",
-    "brand_names_fa": "الیتک، فستورتک، آنزیم نوترکیب راسبوریکاز",
-    "brand_names_en": "Elitek 1.5 mg, Fasturtec, Recombinant Uricase",
+    "brand_names_fa": [
+      "ا",
+      "ل",
+      "ی",
+      "ت",
+      "ک",
+      "،",
+      " ",
+      "ف",
+      "س",
+      "و",
+      "ر",
+      "آ",
+      "ن",
+      "ز",
+      "م",
+      "ب",
+      "آنزیم اورات اکسیداز نوترکیب"
+    ],
+    "brand_names_en": [
+      "E",
+      "l",
+      "i",
+      "t",
+      "e",
+      "k",
+      " ",
+      "1",
+      ".",
+      "5",
+      "m",
+      "g",
+      ",",
+      "F",
+      "a",
+      "s",
+      "u",
+      "r",
+      "c",
+      "R",
+      "o",
+      "b",
+      "n",
+      "U"
+    ],
     "therapeutic_class": "آنزیم نوترکیب اوریکاز تجزیه‌کننده اسید اوریک و مهارکننده سندرم لیز توموری (Tumor Lysis Syndrome)",
     "primary_category": "آنکولوژی و شیمی‌درمانی",
     "secondary_categories": [
@@ -116886,8 +127470,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Bupivacaine Liposome Injectable Suspension (Nocita)",
     "name_fa": "بوپیواکائین لیپوزومال ۱۳.۳ میلی‌گرم (نوسیتا)",
     "name_en": "Bupivacaine Liposome (Nocita)",
-    "brand_names_fa": "نوسیتا، بوپیواکائین لیپوزومی دامی",
-    "brand_names_en": "Nocita 13.3 mg/mL, Exparel",
+    "brand_names_fa": [
+      "ن",
+      "و",
+      "س",
+      "ی",
+      "ت",
+      "ا",
+      "،",
+      " ",
+      "ب",
+      "پ",
+      "ک",
+      "ئ",
+      "ل",
+      "ز",
+      "م",
+      "د"
+    ],
+    "brand_names_en": [
+      "N",
+      "o",
+      "c",
+      "i",
+      "t",
+      "a",
+      " ",
+      "1",
+      "3",
+      ".",
+      "m",
+      "g",
+      "/",
+      "L",
+      ",",
+      "E",
+      "x",
+      "p",
+      "r",
+      "e",
+      "l"
+    ],
     "therapeutic_class": "بی‌حس‌کننده موضعی چندوزیکولی طولانی‌اثر (۷۲ ساعته) تاییدشده FDA",
     "primary_category": "بیهوشی، آرام‌بخشی و ضددرد",
     "secondary_categories": [
@@ -117025,8 +127648,46 @@ const DRUGS_DATA = [
     "generic_name_en": "Recombinant Feline Interferon Omega (rFeIFN-omega)",
     "name_fa": "اینترفرون امگا ۱۰ میلیون واحد (ویرباژن امگا)",
     "name_en": "Feline Interferon Omega (Virbagen Omega)",
-    "brand_names_fa": "ویرباژن امگا، اینترفرون دامی ویرباک",
-    "brand_names_en": "Virbagen Omega 10 MU, rFeIFN-omega",
+    "brand_names_fa": [
+      "و",
+      "ی",
+      "ر",
+      "ب",
+      "ا",
+      "ژ",
+      "ن",
+      " ",
+      "م",
+      "گ",
+      "،",
+      "ت",
+      "ف",
+      "د",
+      "ک"
+    ],
+    "brand_names_en": [
+      "V",
+      "i",
+      "r",
+      "b",
+      "a",
+      "g",
+      "e",
+      "n",
+      " ",
+      "O",
+      "m",
+      "1",
+      "0",
+      "M",
+      "U",
+      ",",
+      "F",
+      "I",
+      "N",
+      "-",
+      "o"
+    ],
     "therapeutic_class": "سیتوکین ضد ویروس و تعدیل‌کننده ایمنی نوترکیب اختصاصی گربه و سگ",
     "primary_category": "تعدیل‌کننده سیستم ایمنی",
     "secondary_categories": [
@@ -117152,8 +127813,41 @@ const DRUGS_DATA = [
     "generic_name_en": "Interferon Alfa-2a / 2b Recombinant Human",
     "name_fa": "اینترفرون آلفا انسانی (روفرون-آ / اینترون-آ)",
     "name_en": "Interferon Alfa-2a / 2b (Roferon-A / Intron-A)",
-    "brand_names_fa": "روفرون-آ، اینترون-آ، پی‌دی‌فرون، اینترفرون آلفا",
-    "brand_names_en": "Roferon-A, Intron-A, Interferon Alfa-2b",
+    "brand_names_fa": [
+      "ر",
+      "و",
+      "ف",
+      "ن",
+      "-",
+      "آ",
+      "،",
+      " ",
+      "ا",
+      "ی",
+      "ت",
+      "پ",
+      "‌",
+      "د",
+      "ل"
+    ],
+    "brand_names_en": [
+      "R",
+      "o",
+      "f",
+      "e",
+      "r",
+      "n",
+      "-",
+      "A",
+      ",",
+      " ",
+      "I",
+      "t",
+      "l",
+      "a",
+      "2",
+      "b"
+    ],
     "therapeutic_class": "سیتوکین بیولوژیک ضدویروس و آنتی‌پروپریفراتیو جهت تعدیل موضعی و خوراکی ایمنی",
     "primary_category": "تعدیل‌کننده سیستم ایمنی",
     "secondary_categories": [
@@ -117280,8 +127974,59 @@ const DRUGS_DATA = [
     "generic_name_en": "Potassium Iodide (SSKI / Saturated Solution of Potassium Iodide)",
     "name_fa": "پتاسیم یدید (محلول اشباع اس‌اس‌کی‌آی)",
     "name_en": "Potassium Iodide (SSKI)",
-    "brand_names_fa": "اس‌اس‌کی‌آی، محلول اشباع پتاسیم یدید، یدید پتاسیم خوراکی",
-    "brand_names_en": "SSKI (1 g/mL), Potassium Iodide Saturated Solution, ThyroSafe",
+    "brand_names_fa": [
+      "ا",
+      "س",
+      "‌",
+      "ک",
+      "ی",
+      "آ",
+      "،",
+      " ",
+      "م",
+      "ح",
+      "ل",
+      "و",
+      "ش",
+      "ب",
+      "ع",
+      "پ",
+      "ت",
+      "د",
+      "خ",
+      "ر",
+      "محلول اشباع SSKI"
+    ],
+    "brand_names_en": [
+      "S",
+      "K",
+      "I",
+      " ",
+      "(",
+      "1",
+      "g",
+      "/",
+      "m",
+      "L",
+      ")",
+      ",",
+      "P",
+      "o",
+      "t",
+      "a",
+      "s",
+      "i",
+      "u",
+      "d",
+      "e",
+      "r",
+      "l",
+      "n",
+      "T",
+      "h",
+      "y",
+      "f"
+    ],
     "therapeutic_class": "داروی ضدقارچ گرانولوماتوز، آنتی‌تیروئید مهارکننده طوفان تیروئیدی و اکسپکتورانت",
     "primary_category": "داروهای ضدقارچ",
     "secondary_categories": [
@@ -117415,8 +128160,46 @@ const DRUGS_DATA = [
     "generic_name_en": "Hydrocodone Bitartrate",
     "name_fa": "هیدروکودون ۵ میلی‌گرم (هایکودان)",
     "name_en": "Hydrocodone Bitartrate (Hycodan)",
-    "brand_names_fa": "هایکودان، توسیگان، هیدروکودون شربت و قرص",
-    "brand_names_en": "Hycodan 5 mg, Tussigon, Hydromet, Hydrocodone",
+    "brand_names_fa": [
+      "ه",
+      "ا",
+      "ی",
+      "ک",
+      "و",
+      "د",
+      "ن",
+      "،",
+      " ",
+      "ت",
+      "س",
+      "گ",
+      "ر",
+      "ش",
+      "ب",
+      "ق",
+      "ص"
+    ],
+    "brand_names_en": [
+      "H",
+      "y",
+      "c",
+      "o",
+      "d",
+      "a",
+      "n",
+      " ",
+      "5",
+      "m",
+      "g",
+      ",",
+      "T",
+      "u",
+      "s",
+      "i",
+      "r",
+      "e",
+      "t"
+    ],
     "therapeutic_class": "ضدسرفه مخدر مرکزی پرتوان (Centrally-Acting Opioid Antitussive)",
     "primary_category": "دستگاه تنفس",
     "secondary_categories": [
@@ -117544,8 +128327,60 @@ const DRUGS_DATA = [
     "generic_name_en": "F10 Veterinary Antiseptic / Disinfectant (F10SC)",
     "name_fa": "اف‌۱۰ دامپزشکی (محلول نبولایزاسیون F10SC)",
     "name_en": "F10SC Veterinary Disinfectant / Antiseptic",
-    "brand_names_fa": "اف‌۱۰، اف‌۱۰ اس‌سی، محلول ضدعفونی و نبولایزر پرندگان F10",
-    "brand_names_en": "F10SC Veterinary Disinfectant, F10 Antiseptic Solution",
+    "brand_names_fa": [
+      "ا",
+      "ف",
+      "‌",
+      "۱",
+      "۰",
+      "،",
+      " ",
+      "س",
+      "ی",
+      "م",
+      "ح",
+      "ل",
+      "و",
+      "ض",
+      "د",
+      "ع",
+      "ن",
+      "ب",
+      "ز",
+      "ر",
+      "پ",
+      "گ",
+      "F",
+      "1",
+      "0",
+      "اف‌۱۰"
+    ],
+    "brand_names_en": [
+      "F",
+      "1",
+      "0",
+      "S",
+      "C",
+      " ",
+      "V",
+      "e",
+      "t",
+      "r",
+      "i",
+      "n",
+      "a",
+      "y",
+      "D",
+      "s",
+      "f",
+      "c",
+      ",",
+      "A",
+      "p",
+      "o",
+      "l",
+      "u"
+    ],
     "therapeutic_class": "آنتی‌سپتیک تنفسی و بافتی با طیف کامل اسپوروسیدال، باکتریسیدال و ویروسیدال",
     "primary_category": "پرندگان و اگزوتیک",
     "secondary_categories": [
@@ -117667,8 +128502,45 @@ const DRUGS_DATA = [
     "generic_name_en": "Cimicoxib",
     "name_fa": "سیمیکوکسیب (سیمالژکس)",
     "name_en": "Cimicoxib (Cimalgex)",
-    "brand_names_fa": "سیمالژکس، قرص‌های جویدنی سیمیکوکسیب",
-    "brand_names_en": "Cimalgex 8 mg, 30 mg, 80 mg, Cimicoxib",
+    "brand_names_fa": [
+      "س",
+      "ی",
+      "م",
+      "ا",
+      "ل",
+      "ژ",
+      "ک",
+      "،",
+      " ",
+      "ق",
+      "ر",
+      "ص",
+      "‌",
+      "ه",
+      "ج",
+      "و",
+      "د",
+      "ن",
+      "ب"
+    ],
+    "brand_names_en": [
+      "C",
+      "i",
+      "m",
+      "a",
+      "l",
+      "g",
+      "e",
+      "x",
+      " ",
+      "8",
+      ",",
+      "3",
+      "0",
+      "c",
+      "o",
+      "b"
+    ],
     "therapeutic_class": "داروی ضدالتهاب غیراستروئیدی مهارکننده فوق‌العاده اختصاصی COX-2 (Coxib NSAID)",
     "primary_category": "عضلانی و اسکلتی",
     "secondary_categories": [
@@ -117791,8 +128663,60 @@ const DRUGS_DATA = [
     "generic_name_en": "Posaconazole Systemic Oral",
     "name_fa": "پوزاکونازول خوراکی (نوکافل)",
     "name_en": "Posaconazole (Noxafil)",
-    "brand_names_fa": "نوکافل، پوزاکونازول سوسپانسیون و قرص آهسته‌رهش",
-    "brand_names_en": "Noxafil 40 mg/mL Suspension, Noxafil 100 mg Delayed-Release Tablets",
+    "brand_names_fa": [
+      "ن",
+      "و",
+      "ک",
+      "ا",
+      "ف",
+      "ل",
+      "،",
+      " ",
+      "پ",
+      "ز",
+      "س",
+      "ی",
+      "ق",
+      "ر",
+      "ص",
+      "آ",
+      "ه",
+      "ت",
+      "‌",
+      "ش"
+    ],
+    "brand_names_en": [
+      "N",
+      "o",
+      "x",
+      "a",
+      "f",
+      "i",
+      "l",
+      " ",
+      "4",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      "S",
+      "u",
+      "s",
+      "p",
+      "e",
+      "n",
+      ",",
+      "1",
+      "D",
+      "y",
+      "d",
+      "-",
+      "R",
+      "T",
+      "b",
+      "t"
+    ],
     "therapeutic_class": "ضدقارچ تریازولی وسیع‌الطیف نسل جدید با نفوذ عالی بافتی",
     "primary_category": "داروهای ضدقارچ",
     "secondary_categories": [
@@ -117925,8 +128849,41 @@ const DRUGS_DATA = [
     "generic_name_en": "Micafungin Sodium IV",
     "name_fa": "میکافونژین ۵۰ میلی‌گرم (میکامین)",
     "name_en": "Micafungin Sodium (Mycamine)",
-    "brand_names_fa": "میکامین، میکافونژین ویال تزریقی",
-    "brand_names_en": "Mycamine 50 mg, Mycamine 100 mg, Micafungin",
+    "brand_names_fa": [
+      "م",
+      "ی",
+      "ک",
+      "ا",
+      "ن",
+      "،",
+      " ",
+      "ف",
+      "و",
+      "ژ",
+      "ل",
+      "ت",
+      "ز",
+      "ر",
+      "ق"
+    ],
+    "brand_names_en": [
+      "M",
+      "y",
+      "c",
+      "a",
+      "m",
+      "i",
+      "n",
+      "e",
+      " ",
+      "5",
+      "0",
+      "g",
+      ",",
+      "1",
+      "f",
+      "u"
+    ],
     "therapeutic_class": "ضدقارچ اکینوکاندین مهارکننده بیوسنتز بتا-دی-گلوکان دیواره قارچ",
     "primary_category": "داروهای ضدقارچ",
     "secondary_categories": [
@@ -118054,8 +129011,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Tapentadol",
     "name_fa": "تاپنتادول ۵۰ میلی‌گرم (نوسینتا)",
     "name_en": "Tapentadol (Nucynta)",
-    "brand_names_fa": "نوسینتا، پالدکس، قرص تاپنتادول",
-    "brand_names_en": "Nucynta 50 mg, Palexia, Tapentadol",
+    "brand_names_fa": [
+      "ن",
+      "و",
+      "س",
+      "ی",
+      "ت",
+      "ا",
+      "،",
+      " ",
+      "پ",
+      "ل",
+      "د",
+      "ک",
+      "ق",
+      "ر",
+      "ص"
+    ],
+    "brand_names_en": [
+      "N",
+      "u",
+      "c",
+      "y",
+      "n",
+      "t",
+      "a",
+      " ",
+      "5",
+      "0",
+      "m",
+      "g",
+      ",",
+      "P",
+      "l",
+      "e",
+      "x",
+      "i",
+      "T",
+      "p",
+      "d",
+      "o"
+    ],
     "therapeutic_class": "ضددرد مرکزی با مکانیسم دوگانه آگونیست مو-اوپیوئید و مهارکننده بازجذب نوراپی‌نفرین (MOR-NRI)",
     "primary_category": "بیهوشی، آرام‌بخشی و ضددرد",
     "secondary_categories": [
@@ -118181,8 +129177,56 @@ const DRUGS_DATA = [
     "generic_name_en": "Dexmedetomidine Oromucosal Gel (Sileo)",
     "name_fa": "دکسمدتومازین ژل دهانی ۰.۱ میلی‌گرم (سیلئو)",
     "name_en": "Dexmedetomidine Oromucosal Gel (Sileo)",
-    "brand_names_fa": "سیلئو، ژل آرام‌بخش ضدترس و فوبیا سیلئو",
-    "brand_names_en": "Sileo 0.1 mg/mL Oromucosal Gel, Dexmedetomidine Gel",
+    "brand_names_fa": [
+      "س",
+      "ی",
+      "ل",
+      "ئ",
+      "و",
+      "،",
+      " ",
+      "ژ",
+      "آ",
+      "ر",
+      "ا",
+      "م",
+      "‌",
+      "ب",
+      "خ",
+      "ش",
+      "ض",
+      "د",
+      "ت",
+      "ف"
+    ],
+    "brand_names_en": [
+      "S",
+      "i",
+      "l",
+      "e",
+      "o",
+      " ",
+      "0",
+      ".",
+      "1",
+      "m",
+      "g",
+      "/",
+      "L",
+      "O",
+      "r",
+      "u",
+      "c",
+      "s",
+      "a",
+      "G",
+      ",",
+      "D",
+      "x",
+      "d",
+      "t",
+      "n"
+    ],
     "therapeutic_class": "آگونیست انتخابی گیرنده‌های آلفا-۲ آدرنرژیک با فرمولاسیون مخاطی ضدترس و فوبیای صدا",
     "primary_category": "بیهوشی، آرام‌بخشی و ضددرد",
     "secondary_categories": [
@@ -118306,8 +129350,53 @@ const DRUGS_DATA = [
     "generic_name_en": "Tafluprost 0.0015% Preservative-Free Ophthalmic",
     "name_fa": "تافلوپروست چشمی ۰.۰۰۱۵٪ (زیوپتان / سافلوتان)",
     "name_en": "Tafluprost 0.0015% (Zioptan)",
-    "brand_names_fa": "زیوپتان، سافلوتان، قطره چشمی تافلوپروست بدون نگهدارنده",
-    "brand_names_en": "Zioptan 0.0015%, Saflutan, Tafluprost",
+    "brand_names_fa": [
+      "ز",
+      "ی",
+      "و",
+      "پ",
+      "ت",
+      "ا",
+      "ن",
+      "،",
+      " ",
+      "س",
+      "ف",
+      "ل",
+      "ق",
+      "ط",
+      "ر",
+      "ه",
+      "چ",
+      "ش",
+      "م",
+      "ب",
+      "د",
+      "گ"
+    ],
+    "brand_names_en": [
+      "Z",
+      "i",
+      "o",
+      "p",
+      "t",
+      "a",
+      "n",
+      " ",
+      "0",
+      ".",
+      "1",
+      "5",
+      "%",
+      ",",
+      "S",
+      "f",
+      "l",
+      "u",
+      "T",
+      "r",
+      "s"
+    ],
     "therapeutic_class": "آنالوگ فلوئورینه‌شده پروستاگلاندین F2-alpha با خلوص بالا فاقد مواد نگهدارنده",
     "primary_category": "چشم و آلرژی",
     "secondary_categories": [
@@ -118426,8 +129515,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Lactated Ringer's Solution (LRS)",
     "name_fa": "سرم رینگر لاکتات (هارتمن)",
     "name_en": "Lactated Ringer's Solution (Hartmann's Solution)",
-    "brand_names_fa": "رینگر لاکتات، سرم هارتمن، ال‌آر‌اس تزریقی",
-    "brand_names_en": "Lactated Ringer's Solution, Hartmann's Solution, LRS",
+    "brand_names_fa": [
+      "ر",
+      "ی",
+      "ن",
+      "گ",
+      " ",
+      "ل",
+      "ا",
+      "ک",
+      "ت",
+      "،",
+      "س",
+      "م",
+      "ه",
+      "‌",
+      "آ",
+      "ز",
+      "ق",
+      "LRS"
+    ],
+    "brand_names_en": [
+      "L",
+      "a",
+      "c",
+      "t",
+      "e",
+      "d",
+      " ",
+      "R",
+      "i",
+      "n",
+      "g",
+      "r",
+      "'",
+      "s",
+      "S",
+      "o",
+      "l",
+      "u",
+      ",",
+      "H",
+      "m"
+    ],
     "therapeutic_class": "محلول کریستالوئیدی ایزوتونیک بالانس‌شده جایگزین حفرات خارج‌سلولی (Balanced Replacement Crystalloid)",
     "primary_category": "مایع‌درمانی و الکترولیت‌ها",
     "secondary_categories": [
@@ -118563,8 +129693,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Plasma-Lyte 148 / Normosol-R Injection",
     "name_fa": "سرم پلاسما-لایت ۱۴۸ (نورموسول)",
     "name_en": "Plasma-Lyte 148 (Normosol-R)",
-    "brand_names_fa": "پلاسما-لایت، نورموسول-آر، سرم چندالکترولیتی بالانس",
-    "brand_names_en": "Plasma-Lyte 148, Normosol-R, Plasma-Lyte A",
+    "brand_names_fa": [
+      "پ",
+      "ل",
+      "ا",
+      "س",
+      "م",
+      "-",
+      "ی",
+      "ت",
+      "،",
+      " ",
+      "ن",
+      "و",
+      "ر",
+      "آ",
+      "چ",
+      "د",
+      "ک",
+      "ب",
+      "نورموسول-آر"
+    ],
+    "brand_names_en": [
+      "P",
+      "l",
+      "a",
+      "s",
+      "m",
+      "-",
+      "L",
+      "y",
+      "t",
+      "e",
+      " ",
+      "1",
+      "4",
+      "8",
+      ",",
+      "N",
+      "o",
+      "r",
+      "R",
+      "A"
+    ],
     "therapeutic_class": "محلول کریستالوئیدی بالانس‌شده نوین فاقد کلسیم با بافرهای استات و گلوکونات",
     "primary_category": "مایع‌درمانی و الکترولیت‌ها",
     "secondary_categories": [
@@ -118693,8 +129864,48 @@ const DRUGS_DATA = [
     "generic_name_en": "Dextrose 5% in Water (D5W)",
     "name_fa": "سرم دکستروز ۵٪ در آب (قندی خالص D5W)",
     "name_en": "Dextrose 5% in Water (D5W)",
-    "brand_names_fa": "سرم قندی ۵٪، دکستروز ۵ درصد، D5W",
-    "brand_names_en": "Dextrose 5% in Water, D5W, 5% Dextrose Injection",
+    "brand_names_fa": [
+      "س",
+      "ر",
+      "م",
+      " ",
+      "ق",
+      "ن",
+      "د",
+      "ی",
+      "۵",
+      "٪",
+      "،",
+      "ک",
+      "ت",
+      "و",
+      "ز",
+      "ص",
+      "D",
+      "5",
+      "W",
+      "D5W"
+    ],
+    "brand_names_en": [
+      "D",
+      "e",
+      "x",
+      "t",
+      "r",
+      "o",
+      "s",
+      " ",
+      "5",
+      "%",
+      "i",
+      "n",
+      "W",
+      "a",
+      ",",
+      "I",
+      "j",
+      "c"
+    ],
     "therapeutic_class": "محلول هایپوتونیک تامین آب خالص آزاد و حامل دارویی انفوزیون مداوم (Free Water Replacement)",
     "primary_category": "مایع‌درمانی و الکترولیت‌ها",
     "secondary_categories": [
@@ -118832,8 +130043,48 @@ const DRUGS_DATA = [
     "generic_name_en": "Prucalopride",
     "name_fa": "پروکالپرید ۱ و ۲ میلی‌گرم (رزولور)",
     "name_en": "Prucalopride (Resolor)",
-    "brand_names_fa": "رزولور، موتیگریتی، قرص پروکالپرید",
-    "brand_names_en": "Resolor 1 mg, 2 mg, Motegrity, Prucalopride",
+    "brand_names_fa": [
+      "ر",
+      "ز",
+      "و",
+      "ل",
+      "،",
+      " ",
+      "م",
+      "ت",
+      "ی",
+      "گ",
+      "ق",
+      "ص",
+      "پ",
+      "ک",
+      "ا",
+      "د"
+    ],
+    "brand_names_en": [
+      "R",
+      "e",
+      "s",
+      "o",
+      "l",
+      "r",
+      " ",
+      "1",
+      "m",
+      "g",
+      ",",
+      "2",
+      "M",
+      "t",
+      "i",
+      "y",
+      "P",
+      "u",
+      "c",
+      "a",
+      "p",
+      "d"
+    ],
     "therapeutic_class": "آگونیست فوق‌العاده انتخابی گیرنده‌های 5-HT4 سروتونین با اثر پروکینتیک اختصاصی کولون",
     "primary_category": "دستگاه گوارش",
     "secondary_categories": [
@@ -118958,8 +130209,46 @@ const DRUGS_DATA = [
     "generic_name_en": "Esomeprazole Magnesium / Sodium (Nexium)",
     "name_fa": "اس‌امپرازول ۲۰ و ۴۰ میلی‌گرم (نکسیوم)",
     "name_en": "Esomeprazole (Nexium)",
-    "brand_names_fa": "نکسیوم، اس‌ورال، اس‌امپرازول کپسول و ویال",
-    "brand_names_en": "Nexium 20 mg, 40 mg, Nexium IV, Esomeprazole",
+    "brand_names_fa": [
+      "ن",
+      "ک",
+      "س",
+      "ی",
+      "و",
+      "م",
+      "،",
+      " ",
+      "ا",
+      "‌",
+      "ر",
+      "ل",
+      "پ",
+      "ز"
+    ],
+    "brand_names_en": [
+      "N",
+      "e",
+      "x",
+      "i",
+      "u",
+      "m",
+      " ",
+      "2",
+      "0",
+      "g",
+      ",",
+      "4",
+      "I",
+      "V",
+      "E",
+      "s",
+      "o",
+      "p",
+      "r",
+      "a",
+      "z",
+      "l"
+    ],
     "therapeutic_class": "مهارکننده پرتوان پمپ پروتون اسید معده (S-Enantiomer Proton Pump Inhibitor)",
     "primary_category": "دستگاه گوارش",
     "secondary_categories": [
@@ -119093,8 +130382,44 @@ const DRUGS_DATA = [
     "generic_name_en": "Difloxacin HCl",
     "name_fa": "دیفلوکساسین (دیکورال)",
     "name_en": "Difloxacin (Dicural)",
-    "brand_names_fa": "دیکورال، دیفلوکساسین قرص و سوسپانسیون دامی",
-    "brand_names_en": "Dicural 15 mg, 50 mg, 100 mg, 150 mg, Difloxacin",
+    "brand_names_fa": [
+      "د",
+      "ی",
+      "ک",
+      "و",
+      "ر",
+      "ا",
+      "ل",
+      "،",
+      " ",
+      "ف",
+      "س",
+      "ن",
+      "ق",
+      "ص",
+      "پ",
+      "م"
+    ],
+    "brand_names_en": [
+      "D",
+      "i",
+      "c",
+      "u",
+      "r",
+      "a",
+      "l",
+      " ",
+      "1",
+      "5",
+      "m",
+      "g",
+      ",",
+      "0",
+      "f",
+      "o",
+      "x",
+      "n"
+    ],
     "therapeutic_class": "فلوروکینولون اختصاصی دامپزشکی با دفع غالب کبدی (Hepatic Clearance Fluoroquinolone)",
     "primary_category": "آنتی‌بیوتیک‌ها",
     "secondary_categories": [
@@ -119220,8 +130545,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Potassium Gluconate Oral",
     "name_fa": "پتاسیم گلوکونات خوراکی (تومیل-کی)",
     "name_en": "Potassium Gluconate (Tumil-K)",
-    "brand_names_fa": "تومیل-کی، پودر و ژل خوراکی پتاسیم گلوکونات",
-    "brand_names_en": "Tumil-K Powder, Gel, Tablets, Potassium Gluconate",
+    "brand_names_fa": [
+      "ت",
+      "و",
+      "م",
+      "ی",
+      "ل",
+      "-",
+      "ک",
+      "،",
+      " ",
+      "پ",
+      "د",
+      "ر",
+      "ژ",
+      "خ",
+      "ا",
+      "س",
+      "گ",
+      "ن"
+    ],
+    "brand_names_en": [
+      "T",
+      "u",
+      "m",
+      "i",
+      "l",
+      "-",
+      "K",
+      " ",
+      "P",
+      "o",
+      "w",
+      "d",
+      "e",
+      "r",
+      ",",
+      "G",
+      "a",
+      "b",
+      "t",
+      "s",
+      "c",
+      "n"
+    ],
     "therapeutic_class": "مکمل خوراکی ارگانیک پتاسیم جهت درمان هایپوکالمی و نفروپاتی مزمن",
     "primary_category": "مایع‌درمانی و الکترولیت‌ها",
     "secondary_categories": [
@@ -119348,8 +130715,42 @@ const DRUGS_DATA = [
     "generic_name_en": "L-Carnitine (Levocarnitine)",
     "name_fa": "ال-کارنیتین (کارنیتور)",
     "name_en": "L-Carnitine (Carnitor)",
-    "brand_names_fa": "کارنیتور، ال-کارنیتین محلول و قرص",
-    "brand_names_en": "Carnitor 330 mg, 1 g, L-Carnitine",
+    "brand_names_fa": [
+      "ک",
+      "ا",
+      "ر",
+      "ن",
+      "ی",
+      "ت",
+      "و",
+      "،",
+      " ",
+      "ل",
+      "-",
+      "م",
+      "ح",
+      "ق",
+      "ص"
+    ],
+    "brand_names_en": [
+      "C",
+      "a",
+      "r",
+      "n",
+      "i",
+      "t",
+      "o",
+      " ",
+      "3",
+      "0",
+      "m",
+      "g",
+      ",",
+      "1",
+      "L",
+      "-",
+      "e"
+    ],
     "therapeutic_class": "کوفاکتور متابولیک انتقال اسیدهای چرب به درون میتوکندری و محافظ سلول‌های میوکارد و هپاتوسیت‌ها",
     "primary_category": "قلب و عروق",
     "secondary_categories": [
@@ -119481,8 +130882,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Prussian Blue (Insoluble Ferric Hexacyanoferrate)",
     "name_fa": "پروسین بلو ۵۰۰ میلی‌گرم (رادیوگارداز)",
     "name_en": "Prussian Blue (Radiogardase)",
-    "brand_names_fa": "رادیوگارداز، هگزاسیانوفرات فریک نامحلول",
-    "brand_names_en": "Radiogardase, Prussian Blue Insoluble, Antidote Thallium",
+    "brand_names_fa": [
+      "ر",
+      "ا",
+      "د",
+      "ی",
+      "و",
+      "گ",
+      "ز",
+      "،",
+      " ",
+      "ه",
+      "س",
+      "ن",
+      "ف",
+      "ت",
+      "ک",
+      "م",
+      "ح",
+      "ل",
+      "فریک هگزاسیانوفرات"
+    ],
+    "brand_names_en": [
+      "R",
+      "a",
+      "d",
+      "i",
+      "o",
+      "g",
+      "r",
+      "s",
+      "e",
+      ",",
+      " ",
+      "P",
+      "u",
+      "n",
+      "B",
+      "l",
+      "I",
+      "b",
+      "A",
+      "t",
+      "T",
+      "h",
+      "m"
+    ],
     "therapeutic_class": "پادزهر اختصاصی، بایندر گوارشی و کی‌لیتور رادیونوکلئیدها و فلزات سنگین",
     "primary_category": "پادزهرها و سم‌شناسی بالینی",
     "secondary_categories": [
@@ -119613,8 +131058,51 @@ const DRUGS_DATA = [
     "generic_name_en": "Potassium Permanganate (KMnO4)",
     "name_fa": "پرمنگنات پتاسیم دارویی",
     "name_en": "Potassium Permanganate USP",
-    "brand_names_fa": "پرمنگنات دارویی، بلورهای ضدعفونی KMnO4",
-    "brand_names_en": "Potassium Permanganate, Permanganate crystals",
+    "brand_names_fa": [
+      "پ",
+      "ر",
+      "م",
+      "ن",
+      "گ",
+      "ا",
+      "ت",
+      " ",
+      "د",
+      "و",
+      "ی",
+      "،",
+      "ب",
+      "ل",
+      "ه",
+      "ض",
+      "ع",
+      "ف",
+      "K",
+      "M",
+      "n",
+      "O",
+      "4",
+      "پرمنگنات پتاسیم"
+    ],
+    "brand_names_en": [
+      "P",
+      "o",
+      "t",
+      "a",
+      "s",
+      "i",
+      "u",
+      "m",
+      " ",
+      "e",
+      "r",
+      "n",
+      "g",
+      ",",
+      "c",
+      "y",
+      "l"
+    ],
     "therapeutic_class": "ضدعفونی‌کننده اکسیدکننده، ضدقارچ موضعی، ضدانگل و هموستاتیک شیمیایی",
     "primary_category": "داروهای ضدعفونی‌کننده و موضعی",
     "secondary_categories": [
@@ -119746,8 +131234,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Halothane Inhalation Anesthetic",
     "name_fa": "هالوتان ۲۵۰ میلی‌لیتر (فلوئوتان)",
     "name_en": "Halothane (Fluothane)",
-    "brand_names_fa": "فلوئوتان، هالوتان داروپخش، هالوتان نیکولاس",
-    "brand_names_en": "Fluothane, Halothane Liquid for Inhalation",
+    "brand_names_fa": [
+      "ف",
+      "ل",
+      "و",
+      "ئ",
+      "ت",
+      "ا",
+      "ن",
+      "،",
+      " ",
+      "ه",
+      "د",
+      "ر",
+      "پ",
+      "خ",
+      "ش",
+      "ی",
+      "ک",
+      "س"
+    ],
+    "brand_names_en": [
+      "F",
+      "l",
+      "u",
+      "o",
+      "t",
+      "h",
+      "a",
+      "n",
+      "e",
+      ",",
+      " ",
+      "H",
+      "L",
+      "i",
+      "q",
+      "d",
+      "f",
+      "r",
+      "I"
+    ],
     "therapeutic_class": "بیهوش‌کننده استنشاقی هیدروکربن هالوژنه",
     "primary_category": "بیهوشی و بی‌حسی",
     "secondary_categories": [
@@ -119885,8 +131412,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Ethosuximide (T-type Calcium Channel Blocker)",
     "name_fa": "اتوسوکسیمید ۲۵۰ میلی‌گرم (زارونتین)",
     "name_en": "Ethosuximide (Zarontin)",
-    "brand_names_fa": "زارونتین، اتوسوکسیمید داروپخش",
-    "brand_names_en": "Zarontin 250 mg capsules, Ethosuximide syrup",
+    "brand_names_fa": [
+      "ز",
+      "ا",
+      "ر",
+      "و",
+      "ن",
+      "ت",
+      "ی",
+      "،",
+      " ",
+      "س",
+      "ک",
+      "م",
+      "د",
+      "پ",
+      "خ",
+      "ش",
+      "ضدتشنج ساکسینیمیدی"
+    ],
+    "brand_names_en": [
+      "Z",
+      "a",
+      "r",
+      "o",
+      "n",
+      "t",
+      "i",
+      " ",
+      "2",
+      "5",
+      "0",
+      "m",
+      "g",
+      "c",
+      "p",
+      "s",
+      "u",
+      "l",
+      "e",
+      ",",
+      "E",
+      "h",
+      "x",
+      "d",
+      "y"
+    ],
     "therapeutic_class": "ضدتشنج ساکسینیمیدی، مسدودکننده کانال‌های کلسیمی نوع T تالاموس",
     "primary_category": "سیستم عصبی و نورولوژی",
     "secondary_categories": [
@@ -120015,8 +131586,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Aztreonam (Synthetic Monobactam)",
     "name_fa": "آزترئونام ۱ گرم (آزاکتام / کایستون)",
     "name_en": "Aztreonam (Azactam / Cayston)",
-    "brand_names_fa": "آزاکتام، کایستون، آزترئونام جابر ابن حیان",
-    "brand_names_en": "Azactam 500mg/1g vial, Cayston inhalation",
+    "brand_names_fa": [
+      "آ",
+      "ز",
+      "ا",
+      "ک",
+      "ت",
+      "م",
+      "،",
+      " ",
+      "ی",
+      "س",
+      "و",
+      "ن",
+      "ر",
+      "ئ",
+      "ج",
+      "ب",
+      "ح",
+      "مونوباکتام"
+    ],
+    "brand_names_en": [
+      "A",
+      "z",
+      "a",
+      "c",
+      "t",
+      "m",
+      " ",
+      "5",
+      "0",
+      "g",
+      "/",
+      "1",
+      "v",
+      "i",
+      "l",
+      ",",
+      "C",
+      "y",
+      "s",
+      "o",
+      "n",
+      "h"
+    ],
     "therapeutic_class": "آنتی‌بیوتیک باکتریسیدال مونوباکتام، ضدباسیل‌های گرم منفی هوازی",
     "primary_category": "آنتی‌بیوتیک و ضدباکتری",
     "secondary_categories": [
@@ -120159,8 +131772,46 @@ const DRUGS_DATA = [
     "generic_name_en": "Thiamphenicol (Amphenicol Antibiotic)",
     "name_fa": "تیامفنیکل تزریقی و خوراکی (اورفامایسین)",
     "name_en": "Thiamphenicol (Urfamycin)",
-    "brand_names_fa": "اورفامایسین، تیامفنیکل رازک، تیامفنیکل وت",
-    "brand_names_en": "Urfamycin, Thiamphenicol injectable/oral",
+    "brand_names_fa": [
+      "ا",
+      "و",
+      "ر",
+      "ف",
+      "م",
+      "ی",
+      "س",
+      "ن",
+      "،",
+      " ",
+      "ت",
+      "ک",
+      "ل",
+      "ز",
+      "آنالوگ متیل‌سولفونیل کلرامفنیکل"
+    ],
+    "brand_names_en": [
+      "U",
+      "r",
+      "f",
+      "a",
+      "m",
+      "y",
+      "c",
+      "i",
+      "n",
+      ",",
+      " ",
+      "T",
+      "h",
+      "p",
+      "e",
+      "o",
+      "l",
+      "j",
+      "t",
+      "b",
+      "/"
+    ],
     "therapeutic_class": "آنتی‌بیوتیک وسیع‌الطیف رده آمفنیکول‌ها مهارکننده سنتز پروتئین 50S",
     "primary_category": "آنتی‌بیوتیک و ضدباکتری",
     "secondary_categories": [
@@ -120295,8 +131946,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Dihydrostreptomycin Sulfate",
     "name_fa": "دی‌هیدرو استرپتومایسین تزریقی دامی",
     "name_en": "Dihydrostreptomycin Sulfate Injection",
-    "brand_names_fa": "پن‌استرپ، پنسیلین دی‌هیدرو استرپتومایسین نصر / داملران / رازک",
-    "brand_names_en": "Pen-Strep, Dihydrostreptomycin Veterinary, Streptopen",
+    "brand_names_fa": [
+      "پ",
+      "ن",
+      "‌",
+      "ا",
+      "س",
+      "ت",
+      "ر",
+      "،",
+      " ",
+      "ی",
+      "ل",
+      "د",
+      "ه",
+      "و",
+      "م",
+      "ص",
+      "/",
+      "ز",
+      "ک"
+    ],
+    "brand_names_en": [
+      "P",
+      "e",
+      "n",
+      "-",
+      "S",
+      "t",
+      "r",
+      "p",
+      ",",
+      " ",
+      "D",
+      "i",
+      "h",
+      "y",
+      "d",
+      "o",
+      "s",
+      "m",
+      "c",
+      "V",
+      "a"
+    ],
     "therapeutic_class": "آنتی‌بیوتیک باکتریسیدال آمینوگلیکوزید، مهارکننده زیرواحد 30S ریبوزومی",
     "primary_category": "آنتی‌بیوتیک و ضدباکتری",
     "secondary_categories": [
@@ -120443,8 +132136,54 @@ const DRUGS_DATA = [
     "generic_name_en": "Lasalocid Sodium (Polyether Ionophore)",
     "name_fa": "لاسالوسید سدیم پری‌میکس (بواتک)",
     "name_en": "Lasalocid Sodium (Bovatec)",
-    "brand_names_fa": "بواتک، آواسیت، لاسالوسید ۱۵٪ و ۲۰٪ دامی",
-    "brand_names_en": "Bovatec, Avatec, Lasalocid 15% / 20% premix",
+    "brand_names_fa": [
+      "ب",
+      "و",
+      "ا",
+      "ت",
+      "ک",
+      "،",
+      " ",
+      "آ",
+      "س",
+      "ی",
+      "ل",
+      "د",
+      "۱",
+      "۵",
+      "٪",
+      "۲",
+      "۰",
+      "م",
+      "یونوفور پلی‌اتر دوظرفیتی"
+    ],
+    "brand_names_en": [
+      "B",
+      "o",
+      "v",
+      "a",
+      "t",
+      "e",
+      "c",
+      ",",
+      " ",
+      "A",
+      "L",
+      "s",
+      "l",
+      "i",
+      "d",
+      "1",
+      "5",
+      "%",
+      "/",
+      "2",
+      "0",
+      "p",
+      "r",
+      "m",
+      "x"
+    ],
     "therapeutic_class": "ضدکوکسیدیوز یونوفوری پلی‌اتر دوظرفیتی و محرک رشد و تخمیر شکمبه",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -120574,8 +132313,45 @@ const DRUGS_DATA = [
     "generic_name_en": "Salinomycin Sodium (Monovalent Polyether Ionophore)",
     "name_fa": "سالینومایسین سدیم ۱۲٪ (کوکسی‌استاک / ساکوکس)",
     "name_en": "Salinomycin (Coxistac / Sacox)",
-    "brand_names_fa": "ساکوکس، کوکسی‌استاک، سالینووت، سالینومایسین ۱۲٪",
-    "brand_names_en": "Sacox 120, Coxistac, Salinomycin 12%",
+    "brand_names_fa": [
+      "س",
+      "ا",
+      "ک",
+      "و",
+      "،",
+      " ",
+      "ی",
+      "‌",
+      "ت",
+      "ل",
+      "ن",
+      "م",
+      "۱",
+      "۲",
+      "٪",
+      "یونوفور پلی‌اتر یک‌ظرفیتی"
+    ],
+    "brand_names_en": [
+      "S",
+      "a",
+      "c",
+      "o",
+      "x",
+      " ",
+      "1",
+      "2",
+      "0",
+      ",",
+      "C",
+      "i",
+      "s",
+      "t",
+      "l",
+      "n",
+      "m",
+      "y",
+      "%"
+    ],
     "therapeutic_class": "ضدکوکسیدیوز یونوفوری قوی ماکیان و محرک رشد نشخوارکنندگان",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -120702,8 +132478,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Pentamidine Isethionate",
     "name_fa": "پنتامیدین ۳۰۰ میلی‌گرم (پنتام / نبوپنت)",
     "name_en": "Pentamidine (Pentam 300 / NebuPent)",
-    "brand_names_fa": "پنتام ۳۰۰، نبوپنت استنشاقی، پنتامیدین تزریقی",
-    "brand_names_en": "Pentam 300, NebuPent, Pentamidine isethionate vial",
+    "brand_names_fa": [
+      "پ",
+      "ن",
+      "ت",
+      "ا",
+      "م",
+      " ",
+      "۳",
+      "۰",
+      "،",
+      "ب",
+      "و",
+      "س",
+      "ش",
+      "ق",
+      "ی",
+      "د",
+      "ز",
+      "ر",
+      "ضدانگل آروماتیک"
+    ],
+    "brand_names_en": [
+      "P",
+      "e",
+      "n",
+      "t",
+      "a",
+      "m",
+      " ",
+      "3",
+      "0",
+      ",",
+      "N",
+      "b",
+      "u",
+      "i",
+      "d",
+      "s",
+      "h",
+      "o",
+      "v",
+      "l"
+    ],
     "therapeutic_class": "ضدپروتوزوآ و ضدمایکوتیک دی‌آمیدین آروماتیک",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -120831,8 +132648,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Diethylcarbamazine Citrate (DEC)",
     "name_fa": "دی‌اتیل‌کاربامازین خوراکی (فیلاری‌بیتس)",
     "name_en": "Diethylcarbamazine (Filaribits / Hetrazan)",
-    "brand_names_fa": "فیلاری‌بیتس، هترزان، DEC خوراکی سگ",
-    "brand_names_en": "Filaribits chewable, Hetrazan, DEC tablets",
+    "brand_names_fa": [
+      "ف",
+      "ی",
+      "ل",
+      "ا",
+      "ر",
+      "‌",
+      "ب",
+      "ت",
+      "س",
+      "،",
+      " ",
+      "ه",
+      "ز",
+      "ن",
+      "D",
+      "E",
+      "C",
+      "خ",
+      "و",
+      "ک",
+      "گ",
+      "DEC"
+    ],
+    "brand_names_en": [
+      "F",
+      "i",
+      "l",
+      "a",
+      "r",
+      "b",
+      "t",
+      "s",
+      " ",
+      "c",
+      "h",
+      "e",
+      "w",
+      ",",
+      "H",
+      "z",
+      "n",
+      "D",
+      "E",
+      "C"
+    ],
     "therapeutic_class": "ضدانگل پیپرازینی، ضدمیکروفیلار و پروفیلاکسی کرم قلب",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -120960,8 +132821,54 @@ const DRUGS_DATA = [
     "generic_name_en": "Amitraz (Formamidine Ectoparasiticide)",
     "name_fa": "آمی Razor کنسانتره حمام شستشو (می‌تابان / تاکتیک)",
     "name_en": "Amitraz (Mitaban / Taktic / Amitraz dip)",
-    "brand_names_fa": "می‌تابان، تاکتیک، آمیترل، آمیتراز ۱۲.۵٪ دامی",
-    "brand_names_en": "Mitaban 19.9%, Taktic 12.5%, Amitraz EC",
+    "brand_names_fa": [
+      "م",
+      "ی",
+      "‌",
+      "ت",
+      "ا",
+      "ب",
+      "ن",
+      "،",
+      " ",
+      "ک",
+      "آ",
+      "ر",
+      "ل",
+      "ز",
+      "۱",
+      "۲",
+      ".",
+      "۵",
+      "٪",
+      "د",
+      "فرمامیدین ضدجرب و کنه‌کش"
+    ],
+    "brand_names_en": [
+      "M",
+      "i",
+      "t",
+      "a",
+      "b",
+      "n",
+      " ",
+      "1",
+      "9",
+      ".",
+      "%",
+      ",",
+      "T",
+      "k",
+      "c",
+      "2",
+      "5",
+      "A",
+      "m",
+      "r",
+      "z",
+      "E",
+      "C"
+    ],
     "therapeutic_class": "اکتوپارازیتوسید فرمامیدینی، آگونیست گیرنده اکتاپامین و مهارکننده MAO",
     "primary_category": "داروهای ضداکتوپارازیت و حشره‌کش",
     "secondary_categories": [
@@ -121088,8 +132995,56 @@ const DRUGS_DATA = [
     "generic_name_en": "Deltamethrin (Type II Synthetic Pyrethroid)",
     "name_fa": "دلتامترین قلاده و پورآن (اسکالیبور / بوتوکس)",
     "name_en": "Deltamethrin (Scalibor / Butox)",
-    "brand_names_fa": "اسکالیبور، بوتوکس، دلتامترین ۱٪ و ۵٪ سم‌پاشی",
-    "brand_names_en": "Scalibor Protector Band 4%, Butox pour-on, Deltamethrin dip",
+    "brand_names_fa": [
+      "ا",
+      "س",
+      "ک",
+      "ل",
+      "ی",
+      "ب",
+      "و",
+      "ر",
+      "،",
+      " ",
+      "ت",
+      "د",
+      "م",
+      "ن",
+      "۱",
+      "٪",
+      "۵",
+      "‌",
+      "پ",
+      "ش",
+      "پیرتروئید نوع ۲ پرتوان"
+    ],
+    "brand_names_en": [
+      "S",
+      "c",
+      "a",
+      "l",
+      "i",
+      "b",
+      "o",
+      "r",
+      " ",
+      "P",
+      "t",
+      "e",
+      "B",
+      "n",
+      "d",
+      "4",
+      "%",
+      ",",
+      "u",
+      "x",
+      "p",
+      "-",
+      "D",
+      "m",
+      "h"
+    ],
     "therapeutic_class": "اکتوپارازیتوسید پیرتروئیدی نوع ۲ آلفا-سیانو، حشره‌کش و دافع بندپایان",
     "primary_category": "داروهای ضداکتوپارازیت و حشره‌کش",
     "secondary_categories": [
@@ -121219,8 +133174,53 @@ const DRUGS_DATA = [
     "generic_name_en": "S-Methoprene (Insect Growth Regulator)",
     "name_fa": "اس-متوپرن موضعی (جزء ضدتخم فرانت‌لاین پلاس)",
     "name_en": "S-Methoprene (Frontline Plus component / Precor)",
-    "brand_names_fa": "فرانت‌لاین پلاس، پریکور، قطره پشت گردنی ضدکک پلاس",
-    "brand_names_en": "Frontline Plus, Precor IGR, Certifect component",
+    "brand_names_fa": [
+      "ف",
+      "ر",
+      "ا",
+      "ن",
+      "ت",
+      "‌",
+      "ل",
+      "ی",
+      " ",
+      "پ",
+      "س",
+      "،",
+      "ک",
+      "و",
+      "ق",
+      "ط",
+      "ه",
+      "ش",
+      "گ",
+      "د",
+      "ض",
+      "تنظیم‌کننده رشد حشرات - IGR"
+    ],
+    "brand_names_en": [
+      "F",
+      "r",
+      "o",
+      "n",
+      "t",
+      "l",
+      "i",
+      "e",
+      " ",
+      "P",
+      "u",
+      "s",
+      ",",
+      "c",
+      "I",
+      "G",
+      "R",
+      "C",
+      "f",
+      "m",
+      "p"
+    ],
     "therapeutic_class": "تنظیم‌کننده رشد حشرات (IGR)، آنالوگ هورمون جوانی حشرات (Juvenile Hormone Mimic)",
     "primary_category": "داروهای ضداکتوپارازیت و حشره‌کش",
     "secondary_categories": [
@@ -121347,8 +133347,45 @@ const DRUGS_DATA = [
     "generic_name_en": "Maduramicin Ammonium (Glycoside Polyether Ionophore)",
     "name_fa": "مادورامایسین آمونیوم ۱٪ (سیگرو)",
     "name_en": "Maduramicin (Cygro)",
-    "brand_names_fa": "سیگرو، مادورامایسین ۱٪، ماداکس",
-    "brand_names_en": "Cygro 1%, Maduramicin ammonium premix",
+    "brand_names_fa": [
+      "س",
+      "ی",
+      "گ",
+      "ر",
+      "و",
+      "،",
+      " ",
+      "م",
+      "ا",
+      "د",
+      "ن",
+      "۱",
+      "٪",
+      "ک",
+      "یونوفور گلیکوزیدی قوی"
+    ],
+    "brand_names_en": [
+      "C",
+      "y",
+      "g",
+      "r",
+      "o",
+      " ",
+      "1",
+      "%",
+      ",",
+      "M",
+      "a",
+      "d",
+      "u",
+      "m",
+      "i",
+      "c",
+      "n",
+      "p",
+      "e",
+      "x"
+    ],
     "therapeutic_class": "ضدکوکسیدیوز یونوفوری گلیکوزیدی بسیار پرتوان طیور",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -121470,8 +133507,45 @@ const DRUGS_DATA = [
     "generic_name_en": "Narasin (Polyether Ionophore Coccidiostat)",
     "name_fa": "ناراسین پری‌میکس (مونتبان / ماکسیبان)",
     "name_en": "Narasin (Monteban / Maxiban component)",
-    "brand_names_fa": "مونتبان، ماکسیبان، ناراسین دامی",
-    "brand_names_en": "Monteban 100, Maxiban (Narasin + Nicarbazin)",
+    "brand_names_fa": [
+      "م",
+      "و",
+      "ن",
+      "ت",
+      "ب",
+      "ا",
+      "،",
+      " ",
+      "ک",
+      "س",
+      "ی",
+      "ر",
+      "د",
+      "یونوفور پلی‌اتر طیور و خوک"
+    ],
+    "brand_names_en": [
+      "M",
+      "o",
+      "n",
+      "t",
+      "e",
+      "b",
+      "a",
+      " ",
+      "1",
+      "0",
+      ",",
+      "x",
+      "i",
+      "(",
+      "N",
+      "r",
+      "s",
+      "+",
+      "c",
+      "z",
+      ")"
+    ],
     "therapeutic_class": "ضدکوکسیدیوز یونوفوری ماکیان و محرک رشد",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -121593,8 +133667,43 @@ const DRUGS_DATA = [
     "generic_name_en": "Suramin Sodium (Polysulfonated Naphthylamine)",
     "name_fa": "سورامین ۱ گرم (ژرمانین / نگانول)",
     "name_en": "Suramin (Germanin / Naganol)",
-    "brand_names_fa": "نگانول، ژرمانین، سورامین بایر",
-    "brand_names_en": "Naganol, Germanin 1g vial for injection",
+    "brand_names_fa": [
+      "ن",
+      "گ",
+      "ا",
+      "و",
+      "ل",
+      "،",
+      " ",
+      "ژ",
+      "ر",
+      "م",
+      "ی",
+      "س",
+      "ب",
+      "ضدتریپانوزوم پلی‌سولفوناته"
+    ],
+    "brand_names_en": [
+      "N",
+      "a",
+      "g",
+      "n",
+      "o",
+      "l",
+      ",",
+      " ",
+      "G",
+      "e",
+      "r",
+      "m",
+      "i",
+      "1",
+      "v",
+      "f",
+      "j",
+      "c",
+      "t"
+    ],
     "therapeutic_class": "ضدانگل خونی ضدتریپانوزومیازیس (سورا و بیماری خواب)",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -121725,8 +133834,55 @@ const DRUGS_DATA = [
     "generic_name_en": "Calcium Disodium EDTA (Edetate Calcium Disodium)",
     "name_fa": "کلسیم دی‌سدیم ادتا تزریقی (ورسئات)",
     "name_en": "Calcium Disodium Versenate",
-    "brand_names_fa": "ورسنات کلسیم، ادتا دی‌سدیم کلسیم ۲۰۰ mg/mL",
-    "brand_names_en": "Calcium Disodium Versenate, Ca-EDTA injection",
+    "brand_names_fa": [
+      "و",
+      "ر",
+      "س",
+      "ن",
+      "ا",
+      "ت",
+      " ",
+      "ک",
+      "ل",
+      "ی",
+      "م",
+      "،",
+      "د",
+      "‌",
+      "۲",
+      "۰",
+      "m",
+      "g",
+      "/",
+      "L",
+      "کی‌لیتور سرب و روی",
+      "200 mg/mL"
+    ],
+    "brand_names_en": [
+      "C",
+      "a",
+      "l",
+      "c",
+      "i",
+      "u",
+      "m",
+      " ",
+      "D",
+      "s",
+      "o",
+      "d",
+      "V",
+      "e",
+      "r",
+      "n",
+      "t",
+      ",",
+      "-",
+      "E",
+      "T",
+      "A",
+      "j"
+    ],
     "therapeutic_class": "پادزهر کی‌لیت‌کننده فلزات سنگین (سرب و روی)",
     "primary_category": "پادزهرها و سم‌شناسی بالینی",
     "secondary_categories": [
@@ -121883,8 +134039,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Diatrizoate Meglumine & Diatrizoate Sodium",
     "name_fa": "گاستروگرافین خوراکی و رکتال (مگلومین دیاتریزوات)",
     "name_en": "Gastrografin (Diatrizoate Meglumine and Sodium Solution)",
-    "brand_names_fa": "گاستروگرافین، آمینودیاتریزوات، هایپک",
-    "brand_names_en": "Gastrografin, Hypaque, Urografin",
+    "brand_names_fa": [
+      "گ",
+      "ا",
+      "س",
+      "ت",
+      "ر",
+      "و",
+      "ف",
+      "ی",
+      "ن",
+      "،",
+      " ",
+      "آ",
+      "م",
+      "د",
+      "ز",
+      "ه",
+      "پ",
+      "ک"
+    ],
+    "brand_names_en": [
+      "G",
+      "a",
+      "s",
+      "t",
+      "r",
+      "o",
+      "g",
+      "f",
+      "i",
+      "n",
+      ",",
+      " ",
+      "H",
+      "y",
+      "p",
+      "q",
+      "u",
+      "e",
+      "U"
+    ],
     "therapeutic_class": "ماده حاجب رادیولوژی یددار محلول در آب و هایپراسمولار",
     "primary_category": "مواد حاجب و تشخیص رادیولوژی",
     "secondary_categories": [
@@ -122012,8 +134207,48 @@ const DRUGS_DATA = [
     "generic_name_en": "Triprolidine Hydrochloride",
     "name_fa": "تری‌پرولیدین شربت و قرص (اکتیفد)",
     "name_en": "Triprolidine (Actifed component)",
-    "brand_names_fa": "تری‌پرولیدین، شربت ترایدین، قرص و شربت اکتیفد انسانی",
-    "brand_names_en": "Actifed, Triprolidine HCl, Triafed",
+    "brand_names_fa": [
+      "ت",
+      "ر",
+      "ی",
+      "‌",
+      "پ",
+      "و",
+      "ل",
+      "د",
+      "ن",
+      "،",
+      " ",
+      "ش",
+      "ب",
+      "ا",
+      "ق",
+      "ص",
+      "ک",
+      "ف",
+      "س",
+      "آنتی‌هیستامین آلکیل‌آمینی"
+    ],
+    "brand_names_en": [
+      "A",
+      "c",
+      "t",
+      "i",
+      "f",
+      "e",
+      "d",
+      ",",
+      " ",
+      "T",
+      "r",
+      "p",
+      "o",
+      "l",
+      "n",
+      "H",
+      "C",
+      "a"
+    ],
     "therapeutic_class": "آنتی‌هیستامین ضد H1 نسل اول کلاس آلکیل‌آمین‌ها با شروع اثر بسیار سریع",
     "primary_category": "داروهای گوش، حلق، بینی و آلرژی",
     "secondary_categories": [
@@ -122142,8 +134377,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Clorsulon (Benzenesulfonamide Flukicide)",
     "name_fa": "کلورسولون سوسپانسیون خوراکی (کوراترم / آیومک پلاس)",
     "name_en": "Clorsulon (Curatrem / Ivomec Plus component)",
-    "brand_names_fa": "کوراترم، آیومک پلاس دامی، فاسیولین کلو",
-    "brand_names_en": "Curatrem 8.5%, Ivomec Plus (Ivermectin + Clorsulon)",
+    "brand_names_fa": [
+      "ک",
+      "و",
+      "ر",
+      "ا",
+      "ت",
+      "م",
+      "،",
+      " ",
+      "آ",
+      "ی",
+      "پ",
+      "ل",
+      "س",
+      "د",
+      "ف",
+      "ن",
+      "بنزن‌سولفونامید ضد فاسیولا"
+    ],
+    "brand_names_en": [
+      "C",
+      "u",
+      "r",
+      "a",
+      "t",
+      "e",
+      "m",
+      " ",
+      "8",
+      ".",
+      "5",
+      "%",
+      ",",
+      "I",
+      "v",
+      "o",
+      "c",
+      "P",
+      "l",
+      "s",
+      "(",
+      "i",
+      "n",
+      "+",
+      ")"
+    ],
     "therapeutic_class": "ضدانگل کبدی بنزن‌سولفونامیدی، مهارکننده آنزیم‌های مسیر گلیکولیز فاسیولا",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -122271,8 +134550,57 @@ const DRUGS_DATA = [
     "generic_name_en": "Triclabendazole (Benzimidazole Flukicide)",
     "name_fa": "تریکلابندازول سوسپانسیون خوراکی (فاسینکس)",
     "name_en": "Triclabendazole (Fasinex)",
-    "brand_names_fa": "فاسینکس، تریکلاوت ۵٪ و ۱۰٪، تریکلابندازول داملران / رازک",
-    "brand_names_en": "Fasinex 5% / 10% drench, Triclabendazole oral suspension",
+    "brand_names_fa": [
+      "ف",
+      "ا",
+      "س",
+      "ی",
+      "ن",
+      "ک",
+      "،",
+      " ",
+      "ت",
+      "ر",
+      "ل",
+      "و",
+      "۵",
+      "٪",
+      "۱",
+      "۰",
+      "ب",
+      "د",
+      "ز",
+      "م",
+      "/",
+      "فاسیولیسید بنزایمیدازولی نسل نوین"
+    ],
+    "brand_names_en": [
+      "F",
+      "a",
+      "s",
+      "i",
+      "n",
+      "e",
+      "x",
+      " ",
+      "5",
+      "%",
+      "/",
+      "1",
+      "0",
+      "d",
+      "r",
+      "c",
+      "h",
+      ",",
+      "T",
+      "l",
+      "b",
+      "z",
+      "o",
+      "u",
+      "p"
+    ],
     "therapeutic_class": "ضدانگل فاسیولیسید تخصصی رده بنزایمیدازول‌ها مهارکننده توبولین ترماتود",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -122401,8 +134729,49 @@ const DRUGS_DATA = [
     "generic_name_en": "Rafoxanide (Salicylanilide Flukicide)",
     "name_fa": "رافوکسانید سوسپانسیون خوراکی (فلوکانید)",
     "name_en": "Rafoxanide (Flukanide)",
-    "brand_names_fa": "فلوکانید، رافوکسانید ۲.۵٪ و ۳٪ دامی، رانید",
-    "brand_names_en": "Flukanide 3%, Ranide, Rafoxanide drench",
+    "brand_names_fa": [
+      "ف",
+      "ل",
+      "و",
+      "ک",
+      "ا",
+      "ن",
+      "ی",
+      "د",
+      "،",
+      " ",
+      "ر",
+      "س",
+      "۲",
+      ".",
+      "۵",
+      "٪",
+      "۳",
+      "م",
+      "سالیسیل‌آنیلید فاسیولیسید"
+    ],
+    "brand_names_en": [
+      "F",
+      "l",
+      "u",
+      "k",
+      "a",
+      "n",
+      "i",
+      "d",
+      "e",
+      " ",
+      "3",
+      "%",
+      ",",
+      "R",
+      "f",
+      "o",
+      "x",
+      "r",
+      "c",
+      "h"
+    ],
     "therapeutic_class": "ضدانگل سالیسیل‌آنیلیدی، جداکننده جفت‌شدگی فسفوریلاسیون اکسیداتیو",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -122528,8 +134897,59 @@ const DRUGS_DATA = [
     "generic_name_en": "Oxyclozanide (Salicylanilide Flukicide)",
     "name_fa": "اکسی‌کلوزانید سوسپانسیون خوراکی (زانیل)",
     "name_en": "Oxyclozanide (Zanil)",
-    "brand_names_fa": "زانیل، اکسی‌کلوزانید ۳.۴٪، لوامیزول اکسی‌کلوزانید ترکیبی",
-    "brand_names_en": "Zanil 3.4%, Oxyclozanide drench, Levacide Low-Volume",
+    "brand_names_fa": [
+      "ز",
+      "ا",
+      "ن",
+      "ی",
+      "ل",
+      "،",
+      " ",
+      "ک",
+      "س",
+      "‌",
+      "و",
+      "د",
+      "۳",
+      ".",
+      "۴",
+      "٪",
+      "م",
+      "ت",
+      "ر",
+      "ب",
+      "ضد فاسیولا و پارامفیستوموم"
+    ],
+    "brand_names_en": [
+      "Z",
+      "a",
+      "n",
+      "i",
+      "l",
+      " ",
+      "3",
+      ".",
+      "4",
+      "%",
+      ",",
+      "O",
+      "x",
+      "y",
+      "c",
+      "o",
+      "z",
+      "d",
+      "e",
+      "r",
+      "h",
+      "L",
+      "v",
+      "w",
+      "-",
+      "V",
+      "u",
+      "m"
+    ],
     "therapeutic_class": "ضدانگل فاسیولیسید سالیسیل‌آنیلیدی با فعالیت اختصاصی بر ترماتودهای شکمبه",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -122655,8 +135075,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Niclosamide (Taeniacide Anthelmintic)",
     "name_fa": "نیکلوزاماید بولوس و سوسپانسیون (یومزان)",
     "name_en": "Niclosamide (Yomesan / Mansil)",
-    "brand_names_fa": "یومزان، نیکلوزاماید ۱.۲۵ گرم دامی، مانسیل",
-    "brand_names_en": "Yomesan, Niclosamide 500mg/1.25g bolus",
+    "brand_names_fa": [
+      "ی",
+      "و",
+      "م",
+      "ز",
+      "ا",
+      "ن",
+      "،",
+      " ",
+      "ک",
+      "ل",
+      "د",
+      "۱",
+      ".",
+      "۲",
+      "۵",
+      "گ",
+      "ر",
+      "س",
+      "سستودیسید سالیسیل‌آنیلیدی"
+    ],
+    "brand_names_en": [
+      "Y",
+      "o",
+      "m",
+      "e",
+      "s",
+      "a",
+      "n",
+      ",",
+      " ",
+      "N",
+      "i",
+      "c",
+      "l",
+      "d",
+      "5",
+      "0",
+      "g",
+      "/",
+      "1",
+      ".",
+      "2",
+      "b",
+      "u"
+    ],
     "therapeutic_class": "ضدانگل کرم‌های نواری (سستودیسید)، مهارکننده فسفوریلاسیون بیهوازی ADP",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -122792,8 +135256,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Tetramisole Hydrochloride (Imidazothiazole Anthelmintic)",
     "name_fa": "تترامیزول پودر و قرص دامی",
     "name_en": "Tetramisole HCl Veterinary",
-    "brand_names_fa": "تترامیزول ۲۰٪ پودر، قرص تترامیزول داملران / رازک / ایران‌داروک",
-    "brand_names_en": "Tetramisole 20% water soluble powder, Tetramisole bolus",
+    "brand_names_fa": [
+      "ت",
+      "ر",
+      "ا",
+      "م",
+      "ی",
+      "ز",
+      "و",
+      "ل",
+      " ",
+      "۲",
+      "۰",
+      "٪",
+      "پ",
+      "د",
+      "،",
+      "ق",
+      "ص",
+      "ن",
+      "/",
+      "ک",
+      "‌",
+      "ایمیدازوتیازول ضدانگل"
+    ],
+    "brand_names_en": [
+      "T",
+      "e",
+      "t",
+      "r",
+      "a",
+      "m",
+      "i",
+      "s",
+      "o",
+      "l",
+      " ",
+      "2",
+      "0",
+      "%",
+      "w",
+      "u",
+      "b",
+      "p",
+      "d",
+      ","
+    ],
     "therapeutic_class": "ضدانگل وسیع‌الطیف رده ایمیدازوتیازول‌ها آگونیست گیرنده نیکوتینی",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -122925,8 +135433,53 @@ const DRUGS_DATA = [
     "generic_name_en": "Nitroxynil (Substituted Nitrophenol Flukicide)",
     "name_fa": "نیتروکسینیل محلول تزریقی (دوونیکس)",
     "name_en": "Nitroxynil (Dovenix)",
-    "brand_names_fa": "دوونیکس، نیتروکسینیل ۳۴٪ دامی، ترومافلوک",
-    "brand_names_en": "Dovenix 34%, Trodax, Nitroxynil injectable",
+    "brand_names_fa": [
+      "د",
+      "و",
+      "ن",
+      "ی",
+      "ک",
+      "س",
+      "،",
+      " ",
+      "ت",
+      "ر",
+      "ل",
+      "۳",
+      "۴",
+      "٪",
+      "ا",
+      "م",
+      "ف",
+      "فاسیولیسید تزریقی",
+      "340 mg/mL",
+      "محلول تزریقی استریل ۳۴٪ نیتروکسینیل"
+    ],
+    "brand_names_en": [
+      "D",
+      "o",
+      "v",
+      "e",
+      "n",
+      "i",
+      "x",
+      " ",
+      "3",
+      "4",
+      "%",
+      ",",
+      "T",
+      "r",
+      "d",
+      "a",
+      "N",
+      "t",
+      "y",
+      "l",
+      "j",
+      "c",
+      "b"
+    ],
     "therapeutic_class": "ضدانگل فاسیولیسید تزریقی رده نتروفنول‌ها، مهارکننده فسفوریلاسیون اکسیداتیو",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -123065,8 +135618,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Robenidine Hydrochloride (Guanidine Derivative)",
     "name_fa": "روبنیدین هیدروکلراید ۶.۶٪ (سایکواستات)",
     "name_en": "Robenidine (Cycostat / Robenz)",
-    "brand_names_fa": "سایکواستات، روبنز، روبنیدین ۶.۶٪ دامی",
-    "brand_names_en": "Cycostat 66G, Robenz, Robenidine hydrochloride premix",
+    "brand_names_fa": [
+      "س",
+      "ا",
+      "ی",
+      "ک",
+      "و",
+      "ت",
+      "،",
+      " ",
+      "ر",
+      "ب",
+      "ن",
+      "ز",
+      "د",
+      "۶",
+      ".",
+      "٪",
+      "م",
+      "کوکسیدیواستات گوانیدینی"
+    ],
+    "brand_names_en": [
+      "C",
+      "y",
+      "c",
+      "o",
+      "s",
+      "t",
+      "a",
+      " ",
+      "6",
+      "G",
+      ",",
+      "R",
+      "b",
+      "e",
+      "n",
+      "z",
+      "i",
+      "d",
+      "h",
+      "r",
+      "l",
+      "p",
+      "m",
+      "x"
+    ],
     "therapeutic_class": "ضدکوکسیدیوز شیمیایی صناعی رده مشتقات گوانیدین",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -123201,8 +135798,45 @@ const DRUGS_DATA = [
     "generic_name_en": "Ethopabate (Folate Synthesis Antagonist)",
     "name_fa": "اتوپابات پری‌میکس (جزء آمپرول پلاس)",
     "name_en": "Ethopabate (Amprol Plus component)",
-    "brand_names_fa": "آمپرول پلاس، اتوپابات طیوری، آمپرولیوم + اتوپابات",
-    "brand_names_en": "Amprol Plus, Ethopabate premix",
+    "brand_names_fa": [
+      "آ",
+      "م",
+      "پ",
+      "ر",
+      "و",
+      "ل",
+      " ",
+      "ا",
+      "س",
+      "،",
+      "ت",
+      "ب",
+      "ط",
+      "ی",
+      "+",
+      "سینرژیست کوکسیدیواستات"
+    ],
+    "brand_names_en": [
+      "A",
+      "m",
+      "p",
+      "r",
+      "o",
+      "l",
+      " ",
+      "P",
+      "u",
+      "s",
+      ",",
+      "E",
+      "t",
+      "h",
+      "a",
+      "b",
+      "e",
+      "i",
+      "x"
+    ],
     "therapeutic_class": "ضدکوکسیدیوز سنتتیک، آنتاگونیست رقابتی پارا-آمینوبنزوئیک اسید (PABA)",
     "primary_category": "داروهای ضداینتروپارازیت و پروتوزوآ",
     "secondary_categories": [
@@ -123323,8 +135957,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Danazol (Synthetic Steroid / Isoxazole Derivative)",
     "name_fa": "دانازول کپسول ۱۰۰ و ۲۰۰ میلی‌گرم (داناکرین)",
     "name_en": "Danazol (Danocrine)",
-    "brand_names_fa": "داناکرین، دانازول ۱۰۰ و ۲۰۰ داروپخش / البرز دارو",
-    "brand_names_en": "Danocrine, Danazol capsules 100mg, 200mg",
+    "brand_names_fa": [
+      "د",
+      "ا",
+      "ن",
+      "ک",
+      "ر",
+      "ی",
+      "،",
+      " ",
+      "ز",
+      "و",
+      "ل",
+      "۱",
+      "۰",
+      "۲",
+      "پ",
+      "خ",
+      "ش",
+      "/",
+      "ب",
+      "آندروژن ضعیف سنتتیک"
+    ],
+    "brand_names_en": [
+      "D",
+      "a",
+      "n",
+      "o",
+      "c",
+      "r",
+      "i",
+      "e",
+      ",",
+      " ",
+      "z",
+      "l",
+      "p",
+      "s",
+      "u",
+      "1",
+      "0",
+      "m",
+      "g",
+      "2"
+    ],
     "therapeutic_class": "تعدیل‌کننده سیستم ایمنی هورمونی، مهارکننده فاگوسیتوز ماکروفاژها",
     "primary_category": "تعدیل‌کننده سیستم ایمنی",
     "secondary_categories": [
@@ -123452,8 +136128,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Buserelin Acetate (Synthetic GnRH Superagonist)",
     "name_fa": "بوسرلین تزریقی دامی (رسپتال)",
     "name_en": "Buserelin (Receptal)",
-    "brand_names_fa": "رسپتال، بوسرلین وت، گنادورلین سوپر",
-    "brand_names_en": "Receptal 0.0042 mg/mL, Buserelin injectable",
+    "brand_names_fa": [
+      "ر",
+      "س",
+      "پ",
+      "ت",
+      "ا",
+      "ل",
+      "،",
+      " ",
+      "ب",
+      "و",
+      "ی",
+      "ن",
+      "گ",
+      "د",
+      "سوپراگونیست GnRH"
+    ],
+    "brand_names_en": [
+      "R",
+      "e",
+      "c",
+      "p",
+      "t",
+      "a",
+      "l",
+      " ",
+      "0",
+      ".",
+      "4",
+      "2",
+      "m",
+      "g",
+      "/",
+      "L",
+      ",",
+      "B",
+      "u",
+      "s",
+      "r",
+      "i",
+      "n",
+      "j",
+      "b"
+    ],
     "therapeutic_class": "هورمون آزادکننده گنادوتروپین سنتتیک نانوپپتیدی با قدرت ۵۰ برابر GnRH طبیعی",
     "primary_category": "هورمون‌ها و تولیدمثل",
     "secondary_categories": [
@@ -123608,8 +136326,45 @@ const DRUGS_DATA = [
     "generic_name_en": "Lecirelin Acetate (Synthetic GnRH Nonapeptide)",
     "name_fa": "لسیرلین استات تزریقی (دالمارلین)",
     "name_en": "Lecirelin (Dalmarelin)",
-    "brand_names_fa": "دالمارلین، لسیرلین دامی، گنادورلین طولانی‌اثر",
-    "brand_names_en": "Dalmarelin 25 mcg/mL, Lecirelin injectable",
+    "brand_names_fa": [
+      "د",
+      "ا",
+      "ل",
+      "م",
+      "ر",
+      "ی",
+      "ن",
+      "،",
+      " ",
+      "س",
+      "گ",
+      "و",
+      "ط",
+      "‌",
+      "ث",
+      "آنالوگ GnRH گاو و خرگوش"
+    ],
+    "brand_names_en": [
+      "D",
+      "a",
+      "l",
+      "m",
+      "r",
+      "e",
+      "i",
+      "n",
+      " ",
+      "2",
+      "5",
+      "c",
+      "g",
+      "/",
+      "L",
+      ",",
+      "j",
+      "t",
+      "b"
+    ],
     "therapeutic_class": "آنالوگ سنتتیک نانوپپتیدی هورمون آزادکننده گنادوتروپین (GnRH)",
     "primary_category": "هورمون‌ها و تولیدمثل",
     "secondary_categories": [
@@ -123747,8 +136502,51 @@ const DRUGS_DATA = [
     "generic_name_en": "Peforelin (Synthetic GnRH Analog for Swine)",
     "name_fa": "پفورلین محلول تزریقی (ماپرلین)",
     "name_en": "Peforelin (Maprelin)",
-    "brand_names_fa": "ماپرلین، پفورلین دامی، محرک استروس خوک",
-    "brand_names_en": "Maprelin 75 mcg/mL, Peforelin injectable",
+    "brand_names_fa": [
+      "م",
+      "ا",
+      "پ",
+      "ر",
+      "ل",
+      "ی",
+      "ن",
+      "،",
+      " ",
+      "ف",
+      "و",
+      "د",
+      "ح",
+      "ک",
+      "س",
+      "ت",
+      "خ",
+      "آنالوگ محرک انتخابی FSH در خوک"
+    ],
+    "brand_names_en": [
+      "M",
+      "a",
+      "p",
+      "r",
+      "e",
+      "l",
+      "i",
+      "n",
+      " ",
+      "7",
+      "5",
+      "m",
+      "c",
+      "g",
+      "/",
+      "L",
+      ",",
+      "P",
+      "f",
+      "o",
+      "j",
+      "t",
+      "b"
+    ],
     "therapeutic_class": "آنالوگ صناعی GnRH با تحریک انتخابی ترشح هورمون FSH در خوک‌سانان",
     "primary_category": "هورمون‌ها و تولیدمثل",
     "secondary_categories": [
@@ -123869,8 +136667,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Trenbolone Acetate (Synthetic Anabolic Steroid)",
     "name_fa": "ترنبولون استات ایمپلنت گوش (فیناپلیکس)",
     "name_en": "Trenbolone Acetate (Finaplix)",
-    "brand_names_fa": "فیناپلیکس، رولور، ترنبولون استات دامی",
-    "brand_names_en": "Finaplix-H, Revalor, Component T-H",
+    "brand_names_fa": [
+      "ف",
+      "ی",
+      "ن",
+      "ا",
+      "پ",
+      "ل",
+      "ک",
+      "س",
+      "،",
+      " ",
+      "ر",
+      "و",
+      "ت",
+      "ب",
+      "د",
+      "م",
+      "استروئید آنابولیک دام بزرگ"
+    ],
+    "brand_names_en": [
+      "F",
+      "i",
+      "n",
+      "a",
+      "p",
+      "l",
+      "x",
+      "-",
+      "H",
+      ",",
+      " ",
+      "R",
+      "e",
+      "v",
+      "o",
+      "r",
+      "C",
+      "m",
+      "t",
+      "T"
+    ],
     "therapeutic_class": "استروئید آنابولیک صناعی مشتق ۱۹-نورتستوسترون با قدرت ۳ تا ۵ برابر تستوسترون",
     "primary_category": "هورمون‌ها و تولیدمثل",
     "secondary_categories": [
@@ -123992,8 +136829,47 @@ const DRUGS_DATA = [
     "generic_name_en": "Zeranol (Non-steroidal Estrogenic Growth Promotant)",
     "name_fa": "زرانول ایمپلنت گوش (رالگرو)",
     "name_en": "Zeranol (Ralgro)",
-    "brand_names_fa": "رالگرو، زرانول ۳۶ میلی‌گرم، ایمپلنت پرواربندی",
-    "brand_names_en": "Ralgro 36 mg ear implant, Zeranol pellets",
+    "brand_names_fa": [
+      "ر",
+      "ا",
+      "ل",
+      "گ",
+      "و",
+      "،",
+      " ",
+      "ز",
+      "ن",
+      "۳",
+      "۶",
+      "م",
+      "ی",
+      "‌",
+      "پ",
+      "ت",
+      "ب",
+      "د",
+      "محرک رشد استروژنیک غیر استروئیدی"
+    ],
+    "brand_names_en": [
+      "R",
+      "a",
+      "l",
+      "g",
+      "r",
+      "o",
+      " ",
+      "3",
+      "6",
+      "m",
+      "e",
+      "i",
+      "p",
+      "n",
+      "t",
+      ",",
+      "Z",
+      "s"
+    ],
     "therapeutic_class": "محرک رشد استروژنیک غیر استروئیدی مشتق لاکتون بتا-رزورسیلیک اسید",
     "primary_category": "هورمون‌ها و تولیدمثل",
     "secondary_categories": [
@@ -124119,8 +136995,59 @@ const DRUGS_DATA = [
     "generic_name_en": "Melengestrol Acetate (MGA Progestin Feed Additive)",
     "name_fa": "ملنگسترول استات خوراکی گاو (MGA)",
     "name_en": "Melengestrol Acetate (MGA 200 / MGA 500)",
-    "brand_names_fa": "MGA، ملنگسترول دامی، هورمون مهار فحلی تلیسه‌های پرواری",
-    "brand_names_en": "MGA 200, MGA 500 Liquid / Dry Premix, Melengestrol",
+    "brand_names_fa": [
+      "M",
+      "G",
+      "A",
+      "،",
+      " ",
+      "م",
+      "ل",
+      "ن",
+      "گ",
+      "س",
+      "ت",
+      "ر",
+      "و",
+      "د",
+      "ا",
+      "ی",
+      "ه",
+      "ف",
+      "ح",
+      "‌",
+      "پ",
+      "MGA پروژستین خوراکی"
+    ],
+    "brand_names_en": [
+      "M",
+      "G",
+      "A",
+      " ",
+      "2",
+      "0",
+      ",",
+      "5",
+      "L",
+      "i",
+      "q",
+      "u",
+      "d",
+      "/",
+      "D",
+      "r",
+      "y",
+      "P",
+      "e",
+      "m",
+      "x",
+      "l",
+      "n",
+      "g",
+      "s",
+      "t",
+      "o"
+    ],
     "therapeutic_class": "پروژستین خوراکی سنتتیک پرتوان، سرکوب‌کننده فحلی و محرک رشد تلیسه‌ها",
     "primary_category": "هورمون‌ها و تولیدمثل",
     "secondary_categories": [
@@ -124243,8 +137170,50 @@ const DRUGS_DATA = [
     "generic_name_en": "Terazosin Hydrochloride (Selective Alpha-1 Blocker)",
     "name_fa": "ترازوسین قرص ۲ و ۵ میلی‌گرم (هیترین)",
     "name_en": "Terazosin (Hytrin)",
-    "brand_names_fa": "هیترین، ترازوسین ۲ و ۵ داروپخش / سها / روزدارو",
-    "brand_names_en": "Hytrin, Terazosin tablets 1mg, 2mg, 5mg",
+    "brand_names_fa": [
+      "ه",
+      "ی",
+      "ت",
+      "ر",
+      "ن",
+      "،",
+      " ",
+      "ا",
+      "ز",
+      "و",
+      "س",
+      "۲",
+      "۵",
+      "د",
+      "پ",
+      "خ",
+      "ش",
+      "/",
+      "آلفا-۱ بلوکر مجاری ادرار"
+    ],
+    "brand_names_en": [
+      "H",
+      "y",
+      "t",
+      "r",
+      "i",
+      "n",
+      ",",
+      " ",
+      "T",
+      "e",
+      "a",
+      "z",
+      "o",
+      "s",
+      "b",
+      "l",
+      "1",
+      "m",
+      "g",
+      "2",
+      "5"
+    ],
     "therapeutic_class": "آنتاگونیست انتخابی و رقابتی گیرنده‌های آلفا-۱ آدرنرژیک با اثر طولانی‌مدت",
     "primary_category": "کلیه و مجاری ادراری",
     "secondary_categories": [
@@ -124372,8 +137341,52 @@ const DRUGS_DATA = [
     "generic_name_en": "Doxazosin Mesylate (Long-acting Alpha-1 Blocker)",
     "name_fa": "دوکسازوسین قرص ۲ و ۴ میلی‌گرم (کاردورا)",
     "name_en": "Doxazosin (Cardura)",
-    "brand_names_fa": "کاردورا، دوکسازوسین ۲ و ۴ داروپخش / خوارزمی",
-    "brand_names_en": "Cardura, Doxazosin tablets 1mg, 2mg, 4mg",
+    "brand_names_fa": [
+      "ک",
+      "ا",
+      "ر",
+      "د",
+      "و",
+      "،",
+      " ",
+      "س",
+      "ز",
+      "ی",
+      "ن",
+      "۲",
+      "۴",
+      "پ",
+      "خ",
+      "ش",
+      "/",
+      "م",
+      "آلفا-۱ بلوکر طولانی‌اثر ۲۴ ساعته"
+    ],
+    "brand_names_en": [
+      "C",
+      "a",
+      "r",
+      "d",
+      "u",
+      ",",
+      " ",
+      "D",
+      "o",
+      "x",
+      "z",
+      "s",
+      "i",
+      "n",
+      "t",
+      "b",
+      "l",
+      "e",
+      "1",
+      "m",
+      "g",
+      "2",
+      "4"
+    ],
     "therapeutic_class": "مسدودکننده گیرنده‌های آلفا-۱ آدرنرژیک رده کینازولین با اثر فوق‌العاده طولانی ۲۴ ساعته",
     "primary_category": "کلیه و مجاری ادراری",
     "secondary_categories": [
@@ -124501,8 +137514,58 @@ const DRUGS_DATA = [
     "generic_name_en": "Hyoscine Butylbromide (Scopolamine Butylbromide)",
     "name_fa": "هیوسین ان-بوتیل‌بروماید تزریقی دامی (بوسکوپان)",
     "name_en": "Hyoscine Butylbromide (Buscopan Compositum)",
-    "brand_names_fa": "بوسکوپان، هیوسین دامی، بوسکوپان کمپوزیتوم دامی (هیوسین + دی‌پیرون)",
-    "brand_names_en": "Buscopan 20 mg/mL, Buscopan Compositum (Hyoscine + Dipyrone)",
+    "brand_names_fa": [
+      "ب",
+      "و",
+      "س",
+      "ک",
+      "پ",
+      "ا",
+      "ن",
+      "،",
+      " ",
+      "ه",
+      "ی",
+      "د",
+      "م",
+      "ز",
+      "ت",
+      "(",
+      "+",
+      "‌",
+      "ر",
+      ")",
+      "بوسکوپان ضداسپاسم"
+    ],
+    "brand_names_en": [
+      "B",
+      "u",
+      "s",
+      "c",
+      "o",
+      "p",
+      "a",
+      "n",
+      " ",
+      "2",
+      "0",
+      "m",
+      "g",
+      "/",
+      "L",
+      ",",
+      "C",
+      "i",
+      "t",
+      "(",
+      "H",
+      "y",
+      "e",
+      "+",
+      "D",
+      "r",
+      ")"
+    ],
     "therapeutic_class": "آنتی‌کولینرژیک ضداسپاسم آمونیوم چهارظرفیتی با اثر اختصاصی بر دستگاه گوارش و ادراری",
     "primary_category": "سیستم گوارش و متابولیسم",
     "secondary_categories": [
@@ -124649,8 +137712,59 @@ const DRUGS_DATA = [
     "generic_name_en": "Dornase Alfa (Recombinant Human DNase I)",
     "name_fa": "دورناز آلفا محلول نبولایزر ۲.۵ میلی‌گرم (پالموزایم)",
     "name_en": "Dornase Alfa (Pulmozyme)",
-    "brand_names_fa": "پالموزایم، دورناز آلفا استنشاقی، rhDNase",
-    "brand_names_en": "Pulmozyme 2.5 mg/2.5 mL ampoule for nebulization",
+    "brand_names_fa": [
+      "پ",
+      "ا",
+      "ل",
+      "م",
+      "و",
+      "ز",
+      "ی",
+      "،",
+      " ",
+      "د",
+      "ر",
+      "ن",
+      "آ",
+      "ف",
+      "س",
+      "ت",
+      "ش",
+      "ق",
+      "r",
+      "h",
+      "D",
+      "N",
+      "a",
+      "s",
+      "e",
+      "دزوکسی‌ریبونوکلئاز نوترکیب انسانی"
+    ],
+    "brand_names_en": [
+      "P",
+      "u",
+      "l",
+      "m",
+      "o",
+      "z",
+      "y",
+      "e",
+      " ",
+      "2",
+      ".",
+      "5",
+      "g",
+      "/",
+      "L",
+      "a",
+      "p",
+      "f",
+      "r",
+      "n",
+      "b",
+      "i",
+      "t"
+    ],
     "therapeutic_class": "موکولیتیک آنزیمی اختصاصی، هیدرولیزکننده فیبرهای DNA مخاط چرکی",
     "primary_category": "داروهای تنفسی",
     "secondary_categories": [
@@ -126190,7 +139304,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "ام‌اس ۲۲۲",
       "فینکوئل",
-      "تریکائین وت"
+      "تریکائین وت",
+      "ام‌اس-۲۲۲"
     ],
     "brand_names_en": [
       "MS-222",
@@ -126322,7 +139437,9 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "آکی-اس",
       "روغن میخک دامی",
-      "اوژنول بیهوشی ماهی"
+      "اوژنول بیهوشی ماهی",
+      "اوژنول",
+      "ایزو اوژنول"
     ],
     "brand_names_en": [
       "Aqui-S",
@@ -127323,7 +140440,8 @@ const DRUGS_DATA = [
       "هس‌پان",
       "هکستند",
       "هتستارچ در سالین ۰.۹٪",
-      "ولوون"
+      "ولوون",
+      "هتستارچ ۶٪"
     ],
     "brand_names_en": [
       "Hespan",
@@ -127455,7 +140573,9 @@ const DRUGS_DATA = [
       "وت‌استارچ",
       "ولولایت",
       "ولوون ۱۳۰",
-      "تتراستارچ ۶٪"
+      "تتراستارچ ۶٪",
+      "هتستارچ نسل سوم ۱۳۰",
+      "۰.۴۲"
     ],
     "brand_names_en": [
       "VetStarch",
@@ -127585,7 +140705,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "فینادین ترنس‌درمال",
       "بانامین پور-آن",
-      "فلونیکسین موضعی دامی"
+      "فلونیکسین موضعی دامی",
+      "پور-آن"
     ],
     "brand_names_en": [
       "Finadyne Transdermal",
@@ -127708,7 +140829,8 @@ const DRUGS_DATA = [
       "آکوافلوور",
       "پودر فلورفنیکل ۱۰٪",
       "پری‌میکس فلورفنیکل ۲۰٪",
-      "فلوروت خوراکی"
+      "فلوروت خوراکی",
+      "پودر و پری‌میکس"
     ],
     "brand_names_en": [
       "Aquaflor",
@@ -127845,7 +140967,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "هایتاکرول",
       "دی‌اچ‌تی",
-      "دی‌هیدروتاکی‌استرول"
+      "دی‌هیدروتاکی‌استرول",
+      "DHT"
     ],
     "brand_names_en": [
       "Hytakerol",
@@ -127970,7 +141093,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "قطره ویتامین D3",
       "قرص کوله‌کلسیفرول",
-      "ویتامین D3 دامی"
+      "ویتامین D3 دامی",
+      "ویتامین D3 خوراکی"
     ],
     "brand_names_en": [
       "Vitamin D3",
@@ -128109,7 +141233,8 @@ const DRUGS_DATA = [
       "پدرکس",
       "پی‌دی‌پویتین",
       "اپوژن",
-      "اپوئتین آلفا ۲ هزار و ۴ هزار"
+      "اپوئتین آلفا ۲ هزار و ۴ هزار",
+      "اریتروپویتین نوترکیب انسانی r-HuEPO"
     ],
     "brand_names_en": [
       "Epogen",
@@ -128598,7 +141723,8 @@ const DRUGS_DATA = [
       "کرونوژست",
       "اسفنج اف‌جی‌ای",
       "کرونولون",
-      "اسفنج فلوئوروژستون ۲۰ و ۴۰ میلی‌گرم"
+      "اسفنج فلوئوروژستون ۲۰ و ۴۰ میلی‌گرم",
+      "FGA"
     ],
     "brand_names_en": [
       "Chronogest 20 mg / 40 mg Sponges",
@@ -128847,7 +141973,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "ترامایسین ماهی",
       "پری‌میکس اکسی‌تتراسایکلین ۲۰٪ آبزیان",
-      "آکواتت"
+      "آکواتت",
+      "ترامایسین ۲۰٪ ماهی"
     ],
     "brand_names_en": [
       "Terramycin 200 for Fish",
@@ -129959,7 +143086,9 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "چمت",
       "دی‌ام‌اس‌ای خوراکی",
-      "سوکسیمر ۱۰۰ میلی‌گرم"
+      "سوکسیمر ۱۰۰ میلی‌گرم",
+      "دی‌ام‌اس‌ای",
+      "DMSA"
     ],
     "brand_names_en": [
       "Chemet",
@@ -130226,7 +143355,9 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "دی‌اس‌اس خوراکی",
       "دوکوزات سدیم دامی",
-      "کولیس دامی"
+      "کولیس دامی",
+      "دوکوزات سدیم",
+      "DSS"
     ],
     "brand_names_en": [
       "DSS 5%",
@@ -130351,7 +143482,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "نمک اپسوم دامی",
       "منیزیم سولفات پودر خوراکی",
-      "نمک تلخ"
+      "نمک تلخ",
+      "نمک اپسوم"
     ],
     "brand_names_en": [
       "Epsom Salt",
@@ -131589,7 +144721,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "هیدره",
       "هیدروکسی‌اوره ۵۰۰ میلی‌گرم",
-      "هیدروکسی‌کاربامید"
+      "هیدروکسی‌کاربامید",
+      "هیدروکسی‌اوره"
     ],
     "brand_names_en": [
       "Hydrea",
@@ -132619,7 +145752,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "اوبرتید",
       "دیستیگمین ۵ میلی‌گرم",
-      "اوبرتید آمپول"
+      "اوبرتید آمپول",
+      "Ubretid Injection 0.5 mg/mL"
     ],
     "brand_names_en": [
       "Ubretid Tablets 5 mg",
@@ -133271,7 +146405,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "رسکیو",
       "پریویل",
-      "پراکسید تقویت‌شده دامی"
+      "پراکسید تقویت‌شده دامی",
+      "AHP"
     ],
     "brand_names_en": [
       "Rescue Disinfectant",
@@ -133395,7 +146530,9 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "دتل مایع ضدعفونی",
       "کلروکسیلنول ۴.۸٪",
-      "پی‌سی‌ام‌ایکس"
+      "پی‌سی‌ام‌ایکس",
+      "دتل",
+      "PCMX"
     ],
     "brand_names_en": [
       "Dettol Liquid 4.8%",
@@ -133517,7 +146654,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "ترایز ادتا",
       "فلاش گوش ترایز ادتا دامی",
-      "تراسمول دامی"
+      "تراسمول دامی",
+      "ترایز-ادتا"
     ],
     "brand_names_en": [
       "TrizEDTA Aqueous Flush",
@@ -133639,7 +146777,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "سیلوادین",
       "فلامازین",
-      "پماد سوختگی سیلور ۱٪ سینادارو"
+      "پماد سوختگی سیلور ۱٪ سینادارو",
+      "سولفادیازین نقره"
     ],
     "brand_names_en": [
       "Silvadene 1%",
@@ -134128,7 +147267,8 @@ const DRUGS_DATA = [
       "اکسی‌دکس",
       "پایوبن",
       "شامپو بنزوئیل پراکسید دامی ۲.۵٪",
-      "ژل پان‌اوکسیل"
+      "ژل پان‌اوکسیل",
+      "شامپو و ژل"
     ],
     "brand_names_en": [
       "Oxydex Shampoo 2.5%",
@@ -134374,7 +147514,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "لایم دیپ",
       "گوگرد آهکی دامی",
-      "لایم سولفور کنسانتره"
+      "لایم سولفور کنسانتره",
+      "گوگرد آهکی محلول"
     ],
     "brand_names_en": [
       "LymDyp Concentrate",
@@ -134497,7 +147638,8 @@ const DRUGS_DATA = [
       "نولواسان",
       "هیبی‌اسکراب دامی",
       "شامپو کلرهگزیدین ۴٪ دامی",
-      "کلرهگزیدین ۲٪"
+      "کلرهگزیدین ۲٪",
+      "شامپو و اسکراب ۲٪ و ۴٪"
     ],
     "brand_names_en": [
       "Nolvasan Skin and Wound Cleanser 2%",
@@ -134621,7 +147763,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "بتادین دامی",
       "پوویدون آیوداین ۱۰٪ محلول",
-      "اسکراب جراحی ۷.۵٪"
+      "اسکراب جراحی ۷.۵٪",
+      "بتادین دامی ۷.۵٪ و ۱۰٪"
     ],
     "brand_names_en": [
       "Betadine Veterinary",
@@ -138309,7 +151452,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "پتیدین ۵۰ و ۱۰۰ میلی‌گرم",
       "دمرول",
-      "مپریدین آمپول"
+      "مپریدین آمپول",
+      "مپریدین"
     ],
     "brand_names_en": [
       "Demerol",
@@ -141014,7 +154158,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "مارزین",
       "قرص سیکلیزین ۵۰ میلی‌گرم",
-      "آمپول والوئید"
+      "آمپول والوئید",
+      "Cyclizine Lactate 50 mg/mL Injection"
     ],
     "brand_names_en": [
       "Marezine",
@@ -142002,7 +155147,9 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "تراندات",
       "آمپول لابتالول ۵ میلی‌گرم در میلی‌لیتر",
-      "قرص لابتالول ۱۰۰ میلی‌گرم"
+      "قرص لابتالول ۱۰۰ میلی‌گرم",
+      "20 mL ampoules",
+      "Labetalol HCl 5 mg/mL Injection"
     ],
     "brand_names_en": [
       "Trandate",
@@ -143524,7 +156671,10 @@ const DRUGS_DATA = [
       "دیژستووِت دامی",
       "دیتاوت",
       "منبوتون نصر",
-      "منبوتون داملران رازک"
+      "منبوتون داملران رازک",
+      "ژنابیل دامی",
+      "100 mg/mL - ژنابیل نصر/داملران/سوا",
+      "ویال تزریقی ۱۰٪ دامی"
     ],
     "brand_names_en": [
       "Genabil",
@@ -143872,7 +157022,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "پارافین مایع خوراکی",
       "مینرال اویل دامی",
-      "روغن پارافین لوله‌گذاری"
+      "روغن پارافین لوله‌گذاری",
+      "روغن معدنی"
     ],
     "brand_names_en": [
       "Liquid Paraffin Vet",
@@ -145260,7 +158411,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "آساکول",
       "مزسالازین ۵۰۰",
-      "پنتاسا"
+      "پنتاسا",
+      "۵-آمینو سالیسیلیک اسید"
     ],
     "brand_names_en": [
       "Asacol",
@@ -145652,7 +158804,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "تاسک دامی",
       "واپونا",
-      "دیکلرووس رزین"
+      "دیکلرووس رزین",
+      "DDVP"
     ],
     "brand_names_en": [
       "Task",
@@ -146046,7 +159199,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "سیانوکیت",
       "هیدروکسوکوبالامین تزریقی",
-      "ویتامین B12a دامی"
+      "ویتامین B12a دامی",
+      "ویتامین B12a"
     ],
     "brand_names_en": [
       "Cyanokit",
@@ -146180,7 +159334,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "کلسیم ادتا",
       "کلاتور سرب دامی",
-      "ورسنات کلسیم"
+      "ورسنات کلسیم",
+      "Ca-EDTA"
     ],
     "brand_names_en": [
       "Calcium EDTA",
@@ -146442,7 +159597,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "لیبراکس",
       "کلیدینیوم سی",
-      "کلیدینیوم-بنزودیازپین"
+      "کلیدینیوم-بنزودیازپین",
+      "کلیدینیوم + کلردیازپوکساید"
     ],
     "brand_names_en": [
       "Librax",
@@ -147845,7 +161001,9 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "سیتانست",
       "پریلوکائین آمپول",
-      "پریلوکائین-فلی‌پرسین"
+      "پریلوکائین-فلی‌پرسین",
+      "20 mg/mL",
+      "محلول تزریقی ۲٪"
     ],
     "brand_names_en": [
       "Citanest",
@@ -148115,7 +161273,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "بی‌ام‌دی دامی",
       "باسیتراسین خوراکی طیور",
-      "پری‌میکس BMD"
+      "پری‌میکس BMD",
+      "BMD"
     ],
     "brand_names_en": [
       "BMD",
@@ -148864,7 +162023,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "بیلِوون",
       "نیکلوفولان دامی",
-      "بیلوون تزریقی و درنچ"
+      "بیلوون تزریقی و درنچ",
+      "منیکلورفولان"
     ],
     "brand_names_en": [
       "Bilevon",
@@ -149121,7 +162281,9 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "دیامپرون",
       "آمیکاربالید تزریقی",
-      "ضدبابزیا دیامپرون"
+      "ضدبابزیا دیامپرون",
+      "500 mg/mL",
+      "محلول تزریقی ۵۰٪ استریل"
     ],
     "brand_names_en": [
       "Diampron",
@@ -149261,7 +162423,9 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "فنامیدین تزریقی",
       "ضدبابزیا فنامیدین",
-      "آمپول فنامیدین"
+      "آمپول فنامیدین",
+      "400 mg/mL",
+      "محلول تزریقی ۴۰٪ استریل"
     ],
     "brand_names_en": [
       "Phenamidine",
@@ -150043,7 +163207,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "فوادین دامی",
       "استیبوفن تزریقی",
-      "آنتیموان دامی"
+      "آنتیموان دامی",
+      "فوادین"
     ],
     "brand_names_en": [
       "Fuadin",
@@ -151652,7 +164817,8 @@ const DRUGS_DATA = [
     "brand_names_fa": [
       "گامکسان دامی",
       "لیندان دامی",
-      "سم حمام ضدجرب"
+      "سم حمام ضدجرب",
+      "گاما-BHC"
     ],
     "brand_names_en": [
       "Gammexane",
@@ -161667,12 +174833,6 @@ const THERAPEUTIC_CATEGORIES_DATA = {
     "target_count": 71
   }
 };
-
-if (typeof window !== 'undefined') {
-  window.DRUGS_DATA = DRUGS_DATA;
-  window.PLUMBS_INTERACTION_MATRIX = PLUMBS_INTERACTION_MATRIX;
-  window.THERAPEUTIC_CATEGORIES_DATA = THERAPEUTIC_CATEGORIES_DATA;
-}
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {

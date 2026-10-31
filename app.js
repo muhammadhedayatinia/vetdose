@@ -1364,6 +1364,157 @@ function stepGlobalWeight(delta) {
   setGlobalWeight(w);
 }
 
+// =======================================================
+// موتور پیشرفته جستجوی جامع پلامبز ایرانی (Universal Multi-Attribute Search Engine)
+// پشتیبانی کامل از تمام اسامی تجاری ایرانی/خارجی، مدل‌های بازار، فرمولاسیون‌ها و نویسه‌های فارسی/عربی
+// =======================================================
+
+function normalizeSearchText(str) {
+  if (!str) return '';
+  return String(str)
+    .toLowerCase()
+    .replace(/[۰٠]/g, '0')
+    .replace(/[۱١]/g, '1')
+    .replace(/[۲٢]/g, '2')
+    .replace(/[۳٣]/g, '3')
+    .replace(/[۴٤]/g, '4')
+    .replace(/[۵٥]/g, '5')
+    .replace(/[۶٦]/g, '6')
+    .replace(/[۷٧]/g, '7')
+    .replace(/[۸٨]/g, '8')
+    .replace(/[۹٩]/g, '9')
+    .replace(/٪/g, '%')
+    .replace(/ي/g, 'ی')
+    .replace(/ك/g, 'ک')
+    .replace(/[آأإ]/g, 'ا')
+    .replace(/ة/g, 'ه')
+    .replace(/ؤ/g, 'و')
+    .replace(/ئ/g, 'ی')
+    .replace(/[\u064B-\u065F\u0670]/g, '')
+    .replace(/[\u200c\u200b\u200e\u200f]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// استخراج تمام اصطلاحات جستجو، اسامی تجاری، فرمولاسیون‌ها و مدل‌های بازار برای هر دارو
+function getDrugSearchableTerms(drug) {
+  if (drug._searchableText && drug._searchableTextCollapsed) {
+    return drug._searchableText;
+  }
+
+  const parts = [];
+  if (drug.generic_name_fa) parts.push(drug.generic_name_fa);
+  if (drug.generic_name_en) parts.push(drug.generic_name_en);
+  if (drug.name_fa) parts.push(drug.name_fa);
+  if (drug.name_en) parts.push(drug.name_en);
+  if (drug.drug_class_fa) parts.push(drug.drug_class_fa);
+  if (drug.drug_class_en) parts.push(drug.drug_class_en);
+  if (drug.therapeutic_category_fa) parts.push(drug.therapeutic_category_fa);
+  if (drug.organ_system_fa) parts.push(drug.organ_system_fa);
+  if (Array.isArray(drug.clinical_tags)) parts.push(drug.clinical_tags.join(' '));
+
+  if (Array.isArray(drug.brand_names_fa)) parts.push(drug.brand_names_fa.join(' '));
+  if (Array.isArray(drug.brand_names_en)) parts.push(drug.brand_names_en.join(' '));
+
+  if (drug.iranian_market_products) {
+    if (typeof drug.iranian_market_products === 'string') {
+      parts.push(drug.iranian_market_products);
+    } else if (Array.isArray(drug.iranian_market_products)) {
+      drug.iranian_market_products.forEach(item => {
+        if (typeof item === 'string') {
+          parts.push(item);
+        } else if (item && typeof item === 'object') {
+          Object.values(item).forEach(v => {
+            if (typeof v === 'string') parts.push(v);
+            else if (Array.isArray(v)) parts.push(v.filter(x => typeof x === 'string').join(' '));
+          });
+        }
+      });
+    } else if (typeof drug.iranian_market_products === 'object') {
+      Object.values(drug.iranian_market_products).forEach(val => {
+        if (Array.isArray(val)) {
+          val.forEach(item => {
+            if (typeof item === 'string') parts.push(item);
+            else if (item && typeof item === 'object') parts.push(Object.values(item).join(' '));
+          });
+        } else if (typeof val === 'string') {
+          parts.push(val);
+        }
+      });
+    }
+  }
+
+  if (drug.iranian_products && typeof drug.iranian_products === 'object') {
+    Object.values(drug.iranian_products).forEach(val => {
+      if (Array.isArray(val)) parts.push(val.join(' '));
+      else if (typeof val === 'string') parts.push(val);
+    });
+  }
+
+  if (Array.isArray(drug.available_formulations)) {
+    drug.available_formulations.forEach(f => {
+      if (f && typeof f === 'object') {
+        if (f.name) parts.push(f.name);
+        if (f.form_type) parts.push(f.form_type);
+        if (f.instructions) parts.push(f.instructions);
+        if (f.rule_of_thumb) parts.push(f.rule_of_thumb);
+      }
+    });
+  }
+
+  if (Array.isArray(drug.formulations)) {
+    drug.formulations.forEach(f => {
+      if (typeof f === 'string') parts.push(f);
+      else if (f && typeof f === 'object') parts.push(Object.values(f).join(' '));
+    });
+  }
+
+  const normalized = normalizeSearchText(parts.join(' '));
+  drug._searchableText = normalized;
+  drug._searchableTextCollapsed = normalized.replace(/\s+/g, '');
+  return normalized;
+}
+
+// استخراج و فرمت زیبای اسامی تجاری و برندهای شاخص برای نمایش در کارت دارو
+function getDrugCardDisplayBrands(drug) {
+  const brandList = [];
+  const seen = new Set();
+
+  const addBrand = (b) => {
+    if (!b || typeof b !== 'string') return;
+    const clean = b.trim();
+    if (clean.length < 2 || seen.has(clean.toLowerCase())) return;
+    seen.add(clean.toLowerCase());
+    brandList.push(clean);
+  };
+
+  if (Array.isArray(drug.brand_names_fa)) {
+    drug.brand_names_fa.slice(0, 3).forEach(addBrand);
+  }
+  if (Array.isArray(drug.brand_names_en)) {
+    drug.brand_names_en.slice(0, 2).forEach(addBrand);
+  }
+
+  if (brandList.length === 0 && drug.generic_name_fa && drug.generic_name_fa.includes('(')) {
+    const m = drug.generic_name_fa.match(/\(([^)]+)\)/);
+    if (m) {
+      m[1].split(/[\/،,]/).forEach(p => addBrand(p.trim()));
+    }
+  }
+
+  return brandList.slice(0, 4);
+}
+
+// استخراج خلاصه مدل‌های موجود در بازار (اشکال دارویی)
+function getDrugMarketModelsSummary(drug) {
+  if (Array.isArray(drug.available_formulations) && drug.available_formulations.length > 0) {
+    const names = drug.available_formulations.map(f => f.name).filter(Boolean);
+    if (names.length > 0) return names.slice(0, 2).join(' • ');
+  }
+  if (drug.dosage_form) return drug.dosage_form;
+  return '';
+}
+
 // فیلتر جستجو با پشتیبانی از دکمه پاک‌کردن و استایل مدرن Google Stitch
 function handleSearch() {
   const input = document.getElementById('searchInput');
@@ -2411,28 +2562,16 @@ function renderDrugs(reset = true) {
         }
       }
 
-      // ۴. فیلتر جستجوی چندوجهی
+      // ۴. فیلتر جستجوی فوق‌پیشرفته چندوجهی (اسامی ژنریک، تمام اسامی تجاری ایرانی/خارجی، مدل‌های بازار، فرمولاسیون‌ها)
       if (searchQuery) {
-        const matchEn = (drug.generic_name_en || drug.name_en || '').toLowerCase().includes(searchQuery);
-        const matchFa = (drug.generic_name_fa || drug.name_fa || '').includes(searchQuery);
-        const matchClass = ((drug.drug_class_fa || '') + ' ' + (drug.drug_class_en || '')).toLowerCase().includes(searchQuery);
-        const matchCategory = (drug.therapeutic_category_fa || '').toLowerCase().includes(searchQuery);
-        const matchOrgan = (drug.organ_system_fa || '').toLowerCase().includes(searchQuery);
-        const matchTags = (drug.clinical_tags || []).join(' ').toLowerCase().includes(searchQuery);
-        
-        // جستجو در برندهای ایران
-        let matchBrand = false;
-        if (drug.iranian_market_products) {
-          if (Array.isArray(drug.iranian_market_products)) {
-            matchBrand = drug.iranian_market_products.join(' ').toLowerCase().includes(searchQuery);
-          } else {
-            const vetB = (drug.iranian_market_products.veterinary_brands || []).map(b => b.brand_name).join(' ');
-            const humB = (drug.iranian_market_products.human_brands || []).map(b => b.brand_name).join(' ');
-            matchBrand = (vetB + ' ' + humB).toLowerCase().includes(searchQuery);
-          }
-        }
+        const normQuery = normalizeSearchText(searchQuery);
+        const collapsedQuery = normQuery.replace(/\s+/g, '');
 
-        if (!matchEn && !matchFa && !matchClass && !matchBrand && !matchCategory && !matchOrgan && !matchTags) {
+        getDrugSearchableTerms(drug);
+        const isMatch = drug._searchableText.includes(normQuery) || 
+                        drug._searchableTextCollapsed.includes(collapsedQuery);
+
+        if (!isMatch) {
           return false;
         }
       }
@@ -2744,18 +2883,20 @@ function renderSingleDrugCardHtml(drug) {
 
   const isExpanded = expandedCards.has(drug.id);
   const speciesIconsPreview = getSpeciesIconsPreviewHtml(drug);
+  const displayBrands = getDrugCardDisplayBrands(drug);
+  const marketModels = getDrugMarketModelsSummary(drug);
 
   return `
     <div id="card_${drug.id}" class="drug-card bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-5 border ${isExpanded ? 'border-[#0590D5] shadow-md ring-2 ring-[#00CAE0]/20' : 'border-[#D0D7E8] shadow-2xs hover:border-[#0590D5] hover:shadow-sm'} transition-all duration-200 flex flex-col justify-between">
       <div>
-        <!-- هدر کلیک‌پذیر کارت: در موبایل یک ردیف خلوت و خوانا، در دسکتاپ کامل -->
+        <!-- هدر کلیک‌پذیر کارت: در موبایل یک ردیف خلوت و خوانا، در دسکتاپ کامل و با تیترهای درشت و باکنتراست -->
         <div class="cursor-pointer select-none group" onclick="toggleDrugCard('${drug.id}', event)">
           
-          <!-- ردیف اصلی عنوان و اطلاعات کلیدی دارو (تک‌ردیف خلوت و باوقار) -->
-          <div class="flex items-center justify-between gap-2">
+          <!-- ردیف اصلی عنوان و اطلاعات کلیدی دارو (بزرگ، باکنتراست و فوق‌العاده خوانا در دسکتاپ و موبایل) -->
+          <div class="flex items-start justify-between gap-2">
             <div class="flex-1 min-w-0">
-              <div class="flex items-center gap-1.5 sm:gap-2 flex-nowrap">
-                <h3 class="text-sm sm:text-base md:text-lg font-black text-[#0A2447] group-hover:text-[#0590D5] transition truncate">
+              <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                <h3 class="text-sm sm:text-base md:text-lg lg:text-xl font-black text-[#0A2447] group-hover:text-[#0590D5] transition leading-tight break-words">
                   ${drug.generic_name_fa}
                 </h3>
                 <span class="text-[9px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-lg font-bold whitespace-nowrap shrink-0 ${badgeClass}">
@@ -2763,15 +2904,15 @@ function renderSingleDrugCardHtml(drug) {
                 </span>
                 ${xylitolBadge}
               </div>
-              <div class="flex items-center gap-1.5 text-[11px] sm:text-xs text-slate-500 mt-0.5 truncate">
-                <span class="text-[#0590D5] latin-text font-mono font-bold truncate shrink-0"><bdi dir="ltr">&lrm;${drug.generic_name_en || ''}&lrm;</bdi></span>
-                <span class="text-slate-300 shrink-0">•</span>
-                <span class="text-[11px] text-slate-600 font-medium truncate">${drug.therapeutic_category_fa || drug.drug_class_fa}</span>
+              <div class="flex items-center gap-1.5 text-xs sm:text-sm text-slate-500 mt-1 flex-wrap">
+                <span class="text-[#0590D5] latin-text font-mono font-bold tracking-wide"><bdi dir="ltr">&lrm;${drug.generic_name_en || ''}&lrm;</bdi></span>
+                <span class="text-slate-300">•</span>
+                <span class="text-xs text-slate-600 font-medium">${drug.therapeutic_category_fa || drug.drug_class_fa}</span>
               </div>
             </div>
 
             <!-- سمت چپ: ستاره نشان + دکمه باز کردن -->
-            <div class="flex items-center gap-1 sm:gap-2 shrink-0 no-card-toggle">
+            <div class="flex items-center gap-1 sm:gap-2 shrink-0 no-card-toggle pt-0.5">
               <button type="button" onclick="toggleFavoriteDrug('${drug.id}', event)" class="p-1 sm:p-1.5 rounded-xl hover:bg-amber-50 transition" title="نشان کردن در علاقه‌مندی‌ها">
                 ${isFavoriteDrug(drug.id) 
                   ? '<i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-400 transition-transform hover:scale-110"></i>' 
@@ -2783,8 +2924,26 @@ function renderSingleDrugCardHtml(drug) {
             </div>
           </div>
 
-          <!-- جزئیات پیش‌نمایش تکمیلی: در دسکتاپ نمایش داده می‌شود و در موبایل خلوت می‌ماند تا ردیف‌ها شلوغ نشوند -->
-          <div class="hidden sm:block mt-2 pt-2 border-t border-slate-100">
+          <!-- جزئیات پیش‌نمایش تکمیلی: در دسکتاپ و لپ‌تاپ اسامی تجاری و مدل‌های بازار را فوراً نمایش می‌دهد -->
+          <div class="hidden sm:block mt-2.5 pt-2 border-t border-slate-100">
+            ${displayBrands.length > 0 ? `
+              <div class="flex items-center gap-1.5 flex-wrap mb-2">
+                <span class="inline-flex items-center gap-1 text-[11px] font-bold text-amber-900 bg-amber-50/90 border border-amber-200/80 px-2 py-0.5 rounded-lg shadow-2xs">
+                  <i data-lucide="tag" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+                  <span>برندهای تجاری / بازار:</span>
+                  <span class="font-normal text-amber-950">${displayBrands.join(' • ')}</span>
+                </span>
+              </div>
+            ` : ''}
+
+            ${marketModels ? `
+              <div class="mb-2 text-[11px] text-slate-600 flex items-center gap-1.5">
+                <i data-lucide="package" class="w-3.5 h-3.5 text-slate-400 shrink-0"></i>
+                <span class="font-bold text-slate-700">فرم‌های موجود در بازار:</span>
+                <span class="truncate text-slate-500">${marketModels}</span>
+              </div>
+            ` : ''}
+
             <div class="flex items-center gap-1.5 flex-wrap mb-1.5">
               <span class="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80">
                 <i data-lucide="${drug.therapeutic_icon || 'pill'}" class="w-3.5 h-3.5 text-teal-600"></i>
