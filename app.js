@@ -1958,13 +1958,24 @@ function getSpeciesIconsPreviewHtml(drug) {
 function toggleDrugCard(drugId, event) {
   if (event) {
     const target = event.target;
-    if (target.closest('.no-card-toggle') || target.closest('button[onclick*="openMonographModal"]') || target.closest('button[onclick*="toggleFavoriteDrug"]') || target.closest('button[onclick*="openCocktailsModal"]') || target.closest('button[onclick*="quickCalculateForDrug"]') || target.closest('button[onclick*="toggleCardDoseInline"]') || target.closest('button[onclick*="toggleDrugCocktailsSection"]') || target.closest('button[onclick*="toggleDrugInteractionsSection"]') || target.closest('button[onclick*="toggleDrugSpecialtySection"]') || target.closest('button[onclick*="openSingleDrugInteractions"]')) {
+    // اگر روی ستاره نشان یا دکمه‌های خاص داخل کارت کلیک شده، کارت تاگل نشود
+    if (target.closest('.no-card-toggle') || 
+        target.closest('button[onclick*="openMonographModal"]') || 
+        target.closest('button[onclick*="toggleFavoriteDrug"]') || 
+        target.closest('button[onclick*="openCocktailsModal"]') || 
+        target.closest('button[onclick*="quickCalculateForDrug"]') || 
+        target.closest('button[onclick*="toggleCardDoseInline"]') || 
+        target.closest('button[onclick*="toggleDrugCocktailsSection"]') || 
+        target.closest('button[onclick*="toggleDrugInteractionsSection"]') || 
+        target.closest('button[onclick*="toggleDrugSpecialtySection"]') || 
+        target.closest('button[onclick*="openSingleDrugInteractions"]')) {
       return;
     }
   }
 
   const detailsEl = document.getElementById(`card_details_${drugId}`);
   const toggleIcon = document.getElementById(`card_toggle_icon_${drugId}`);
+  const toggleBtn = document.getElementById(`btn_toggle_card_${drugId}`);
   const toggleText = document.getElementById(`card_toggle_text_${drugId}`);
   const cardEl = document.getElementById(`card_${drugId}`);
 
@@ -1974,25 +1985,39 @@ function toggleDrugCard(drugId, event) {
   if (isCurrentlyHidden) {
     detailsEl.classList.remove('hidden');
     expandedCards.add(drugId);
-    if (toggleIcon) toggleIcon.setAttribute('data-lucide', 'chevron-up');
-    if (toggleText) toggleText.textContent = 'بستن توضیحات و دوزها';
+    if (toggleIcon) {
+      toggleIcon.classList.add('rotate-180');
+    }
+    if (toggleBtn) {
+      toggleBtn.title = 'بستن توضیحات و دوزها';
+      toggleBtn.classList.add('bg-[#0590D5]', 'text-white');
+      toggleBtn.classList.remove('bg-[#E6F7FC]', 'text-[#0070A8]');
+    }
+    if (toggleText) toggleText.innerHTML = '<i data-lucide="layers" class="w-3.5 h-3.5 text-teal-600"></i><span>بستن دوزها و سرنگ</span>';
     if (cardEl) {
-      cardEl.classList.add('border-teal-500/50', 'shadow-md', 'ring-2', 'ring-teal-500/20');
-      cardEl.classList.remove('border-slate-200/90', 'shadow-2xs');
+      cardEl.classList.add('border-[#0590D5]', 'shadow-md', 'ring-2', 'ring-[#00CAE0]/20');
+      cardEl.classList.remove('border-[#D0D7E8]', 'shadow-2xs');
     }
   } else {
     detailsEl.classList.add('hidden');
     expandedCards.delete(drugId);
-    if (toggleIcon) toggleIcon.setAttribute('data-lucide', 'chevron-down');
-    if (toggleText) toggleText.textContent = 'مشاهده دوزها، سرنگ و جزئیات';
+    if (toggleIcon) {
+      toggleIcon.classList.remove('rotate-180');
+    }
+    if (toggleBtn) {
+      toggleBtn.title = 'مشاهده دوزها و سرنگ';
+      toggleBtn.classList.remove('bg-[#0590D5]', 'text-white');
+      toggleBtn.classList.add('bg-[#E6F7FC]', 'text-[#0070A8]');
+    }
+    if (toggleText) toggleText.innerHTML = '<i data-lucide="layers" class="w-3.5 h-3.5 text-teal-600"></i><span>مشاهده دوزها و حجم سرنگ</span>';
     if (cardEl) {
-      cardEl.classList.remove('border-teal-500/50', 'shadow-md', 'ring-2', 'ring-teal-500/20');
-      cardEl.classList.add('border-slate-200/90', 'shadow-2xs');
+      cardEl.classList.remove('border-[#0590D5]', 'shadow-md', 'ring-2', 'ring-[#00CAE0]/20');
+      cardEl.classList.add('border-[#D0D7E8]', 'shadow-2xs');
     }
   }
 
-  if (window.lucide) {
-    lucide.createIcons();
+  if (typeof safeCreateIcons === 'function') {
+    safeCreateIcons();
   }
 }
 
@@ -2917,16 +2942,16 @@ function renderSingleDrugCardHtml(drug) {
               </div>
             </div>
 
-            <!-- سمت چپ: ستاره نشان + دکمه باز کردن -->
-            <div class="flex items-center gap-1 sm:gap-2 shrink-0 no-card-toggle pt-0.5">
-              <button type="button" onclick="toggleFavoriteDrug('${drug.id}', event)" class="p-1 sm:p-1.5 rounded-xl hover:bg-amber-50 transition" title="نشان کردن در علاقه‌مندی‌ها">
+            <!-- سمت چپ: ستاره نشان + دکمه فلش باز و بسته کردن دوزها -->
+            <div class="flex items-center gap-1 sm:gap-2 shrink-0 pt-0.5">
+              <button type="button" onclick="toggleFavoriteDrug('${drug.id}', event)" class="no-card-toggle p-1 sm:p-1.5 rounded-xl hover:bg-amber-50 transition cursor-pointer" title="نشان کردن در علاقه‌مندی‌ها">
                 ${isFavoriteDrug(drug.id) 
                   ? '<i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-400 transition-transform hover:scale-110"></i>' 
                   : '<i data-lucide="star" class="w-4 h-4 text-slate-300 hover:text-amber-500 transition-colors"></i>'}
               </button>
-              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E6F7FC] border border-[#B2E7F7] flex items-center justify-center text-[#0070A8] transition group-hover:bg-[#D4F2FB]">
-                <i id="card_toggle_icon_${drug.id}" data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-4 h-4"></i>
-              </div>
+              <button type="button" onclick="toggleDrugCard('${drug.id}', event)" id="btn_toggle_card_${drug.id}" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full ${isExpanded ? 'bg-[#0590D5] text-white shadow-sm' : 'bg-[#E6F7FC] text-[#0070A8] hover:bg-[#0590D5] hover:text-white'} border border-[#B2E7F7] flex items-center justify-center transition-all duration-200 cursor-pointer active:scale-90" title="${isExpanded ? 'بستن توضیحات و دوزها' : 'مشاهده دوزها و سرنگ'}">
+                <i id="card_toggle_icon_${drug.id}" data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}"></i>
+              </button>
             </div>
           </div>
 
